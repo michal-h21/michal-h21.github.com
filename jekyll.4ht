@@ -1,0 +1,25 @@
+\usepackage[english]{isodate}
+
+\Configure{PROLOG}{}
+\Configure{@HEAD}{}
+\Configure{HEAD}{}{}
+\Configure{TITLE}{}{}
+\Configure{TITLE+}{}{}
+\Configure{HTML}{}{}
+\Configure{BODY}{%
+\TeXdate%
+\bgroup\def\\{\Hnewline}%
+\HCode{---\Hnewline%
+\GetLayout%
+\GetTitle%
+\yamltoks%
+---\Hnewline
+}\egroup}{% copied from html4.4ht
+\ifvmode \IgnorePar\fi\EndP
+\ifvoid \fn:box\else
+   \HCode{<div class="footnotes">}\box\fn:box\HCode{</div>}
+   \IgnorePar\EndP
+\fi
+}
+%\Configure{footnotemark}{\NoFonts\Link{fn\FNnum-fw}{fn\FNnum-bk}}{\EndLink\EndNoFonts}
+%\Configure{footnotetext}{\NoFonts\HCode{<span class="footnote">\Hnewline}\Link{fn\FNnum-bk}{fn\FNnum-fw}}{\EndLink\EndNoFonts}{\HCode{</span>}}
