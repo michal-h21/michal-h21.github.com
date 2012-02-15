@@ -1,6 +1,7 @@
 \ProvidesPackage{jekyll}
 \RequirePackage{etoolbox}
 %\newtoks\yamltoks
+\gdef\yamltoks{}
 \newcommand\AddToHeader[1]{%
 \gdef\yamltoks{#1\\}
 }
@@ -12,6 +13,22 @@ layout: \jekyll@layout\\%
 }
 \newcommand\GetTitle{%
 title: \@title\\%
+}
+
+\newcommand\GetLang{%
+\@ifpackageloaded{babel}{%
+%language: \bbl@main@language\\%
+}{\@ifpackageloaded{polyglossia}{%
+%language: \bbl@main@language\\%
+}{}
+}}
+\newcommand\GetLanguage{%
+\ifx\bbl@main@language\@undefined 
+\else
+language: \bbl@main@language\\%
+}
+\newcommand\GetStyle{%
+style:\jobname.css\\%
 }
 \SetLayout{default}
 %\AddToHeader{title=\@title}
