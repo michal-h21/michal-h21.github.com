@@ -12,9 +12,13 @@ title: Blog
   {% for post in site.posts %}
  
   <li>
-    <a href="{{ post.url }}">
-      <img src="{{ post.image }}" />
-      <h3>{{ post.title }}</h3>
+    <a href="{{ post.url }}"> <img src="{{ post.image }}" /></a>
+    <div class="entry-info">
+    <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+    <div class="abstract">
+    {{ post.abstract }}
+    </div>
+    <div>
     </a>
   </li>
  
