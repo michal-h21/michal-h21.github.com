@@ -1,5 +1,19 @@
 \usepackage[english]{isodate}
-
+\NewConfigure{AbstractPar}{2}
+\Configure{AbstractPar}{\Tg<p>}{\Tg</p>}
+\renewcommand\GetAbstract{%
+\bgroup%
+\let\oldpar\par%
+\def\par{%
+\b:AbstractPar%
+\oldpar%
+\HCode{\Hnewline}\ \ %
+\a:AbstractPar
+}%
+abstract: \HCode{|}\\
+\ \ \a:AbstractPar\the\my@Abstract\b:AbstractPar
+\egroup%
+}
 \Configure{PROLOG}{}
 \Configure{@HEAD}{}
 \Configure{HEAD}{}{}
@@ -7,20 +21,23 @@
 \Configure{TITLE+}{}{}
 \Configure{HTML}{}{}
 \Configure{BODY}{%
-\bgroup\def\\{\Hnewline}%
-\HCode{---\Hnewline%
+\bgroup\def\\{\HCode{\Hnewline}}%
+\HCode{---}\\%
 \GetLayout%
 \GetTitle%
 \GetLanguage%
 \GetStyle%
-\GetAbstract%
+\GetAbstract\\%
 \yamltoks%
----\Hnewline
-}\egroup}{% copied from html4.4ht
+\HCode{---}\\
+\egroup}
+{% copied from html4.4ht
+\:CheckOption{fn-in} \if:Option
 \ifvmode \IgnorePar\fi\EndP
 \ifvoid \fn:box\else
    \HCode{<div class="footnotes">}\box\fn:box\HCode{</div>}
    \IgnorePar\EndP
+\fi
 \fi
 }
 %\Configure{footnotemark}{\NoFonts\Link{fn\FNnum-fw}{fn\FNnum-bk}}{\EndLink\EndNoFonts}
