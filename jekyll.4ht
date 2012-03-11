@@ -10,7 +10,7 @@
 \HCode{\Hnewline}\ \ %
 \a:AbstractPar
 }%
-abstract: \HCode{|}
+abstract: \HChar{124}
 \ \ \a:AbstractPar\the\my@Abstract\b:AbstractPar
 \egroup%
 }
@@ -21,6 +21,7 @@ abstract: \HCode{|}
 \Configure{TITLE+}{}{}
 \Configure{HTML}{}{}
 \Configure{BODY}{%
+\NoFonts
 \bgroup\def\\{\HCode{\Hnewline}}%
 \HCode{---}\\%
 \GetLayout%
@@ -30,7 +31,9 @@ abstract: \HCode{|}
 \GetAbstract\\%
 \yamltoks%
 \HCode{---}\\
-\egroup}
+\egroup
+\EndNoFonts
+}
 {% copied from html4.4ht
 \:CheckOption{fn-in} \if:Option
 \ifvmode \IgnorePar\fi\EndP
@@ -40,5 +43,7 @@ abstract: \HCode{|}
 \fi
 \fi
 }
+\Configure{textit}{\Tg<i>}{\Tg</i>}
+%\Configure{textit}{\HCode{<i>}}{\HCode{</i>}}
 %\Configure{footnotemark}{\NoFonts\Link{fn\FNnum-fw}{fn\FNnum-bk}}{\EndLink\EndNoFonts}
 %\Configure{footnotetext}{\NoFonts\HCode{<span class="footnote">\Hnewline}\Link{fn\FNnum-bk}{fn\FNnum-fw}}{\EndLink\EndNoFonts}{\HCode{</span>}}
