@@ -11,9 +11,14 @@
 \HCode{\Hnewline}\twospace%
 \a:AbstractPar%
 }%
+<<<<<<< HEAD
 \IgnorePar
 abstract: \HChar{124}\HCode{\Hnewline}%
 \twospace\a:AbstractPar\the\my@Abstract\b:AbstractPar%
+=======
+abstract: \HChar{124}
+\ \ \a:AbstractPar\the\my@Abstract\b:AbstractPar
+>>>>>>> 8c2a19ed1bd05f1e52dc67e6826f98a9bbfd233a
 \egroup%
 }
 \Configure{PROLOG}{}
@@ -23,9 +28,14 @@ abstract: \HChar{124}\HCode{\Hnewline}%
 \Configure{TITLE+}{}{}
 \Configure{HTML}{}{}
 \Configure{BODY}{%
+<<<<<<< HEAD
 \bgroup%
 \HtmlParOff
 \def\\{\HCode{\Hnewline}}%
+=======
+\NoFonts
+\bgroup\def\\{\HCode{\Hnewline}}%
+>>>>>>> 8c2a19ed1bd05f1e52dc67e6826f98a9bbfd233a
 \HCode{---}\\%
 \GetLayout%
 \GetTitle%
@@ -34,9 +44,16 @@ abstract: \HChar{124}\HCode{\Hnewline}%
 \GetAbstract\\%
 \yamltoks%
 \HCode{---}\\
+<<<<<<< HEAD
 \HtmlParOn
 \egroup}{%
 % copied from html4.4ht
+=======
+\egroup
+\EndNoFonts
+}
+{% copied from html4.4ht
+>>>>>>> 8c2a19ed1bd05f1e52dc67e6826f98a9bbfd233a
 \:CheckOption{fn-in} \if:Option
 \ifvmode \IgnorePar\fi\EndP
 \ifvoid \fn:box\else
@@ -46,5 +63,7 @@ abstract: \HChar{124}\HCode{\Hnewline}%
 \fi
 \fi
 }
+\Configure{textit}{\Tg<i>}{\Tg</i>}
+%\Configure{textit}{\HCode{<i>}}{\HCode{</i>}}
 %\Configure{footnotemark}{\NoFonts\Link{fn\FNnum-fw}{fn\FNnum-bk}}{\EndLink\EndNoFonts}
 %\Configure{footnotetext}{\NoFonts\HCode{<span class="footnote">\Hnewline}\Link{fn\FNnum-bk}{fn\FNnum-fw}}{\EndLink\EndNoFonts}{\HCode{</span>}}
