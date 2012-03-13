@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<header>
+<h1>{{ page.title }}</h1>
+<div class="post-date"> 
+{% if page.language == "czech" %}
+{{ page.date | date: "%d. %m. %Y" }}
+{% else %}
+{{ page.date  | date_to_long_string }} 
+{% endif %}
+</div>
+<div >
+</header>
+{{ content }}
+

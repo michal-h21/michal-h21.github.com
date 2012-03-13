@@ -1,5 +1,10 @@
 \ProvidesPackage{jekyll}
 \RequirePackage{etoolbox,environ}
+
+% We must set \textwidth to a big value, otherwise we can get unwanted linebreaks, 
+% resulting in onvalid yaml header
+\textwidth=1000em
+
 %\newtoks\yamltoks
 \gdef\yamltoks{}
 \newcommand\AddToHeader[1]{%
