@@ -1,3 +1,4 @@
+
 body{
 margin:0 auto;
 width:33em;
@@ -11,6 +12,40 @@ body:after { clear:both; }
 article {
   display:inline;
   float:left;
-  width:700px;
-  margin:0 auto;
+  border: 1px solid black;
+}
+
+/*z tvorby webu - media queries */
+
+a{
+text-decoration:underline;
+}
+.margnote{
+        float:none;
+        margin-left:0em;
+}
+
+li{
+    list-style: circle outside none;
+    margin-left:-40px;
+    padding-left:0px;
+    text-indent:0px
+}
+
+@media all and (min-width:59em){
+    .margnote{
+    width:10em;
+    float:left;
+    margin:0;
+    margin-left:-12em;
+    }
+}
+@media all and (max-width:37em){
+    body{
+        margin:0;
+        width:100%;
+    }
+    li{
+    margin-left:-20px;
+}
 }

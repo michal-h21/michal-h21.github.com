@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[]{jekyll,listings}
+\Abstract{%
+TeX a jeho makro nadstavba LaTeX jsou tradičně považovány za nástroje, které jsou sice mocné, ale složité na používání a naučení, které produkují typograficky výborný výstup pro tisk, ale jsou nevhodné pro konverzi do formátů vhodných na web nebo pro elektronických knihy.
+}
+\title{Blogujeme s LaTeXem}
+\begin{document}
+\section*{Úvod}
+
+
+
+\begin{lstlisting}[language={[LaTeX]TeX}, caption={Minimální dokument pro použití s jekyllem}]
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage[]{jekyll}
+\Abstract{%
+Zde je perex dokumentu - jeho obsah se 
+objevi na hlavni strance blogu a v hlavicce prispevku.
+
+Tento prikaz musite pouzit pouze v \verb|Preamble| 
+dokumentu, jinak nebude fungovat.
+
+Jak vidite, pisi bez diakritiky - balicek \verb|listings| 
+nepodporuje texty v kodovani utf8. 
+}
+\title{Blogujeme s LaTeXem}
+\begin{document}
+Zde nasleduje text prispevku
+\end{document}
+\end{lstlisting}
+
+Tento dokument můžete přeložit pomocí příkazu:
+\begin{lstlisting}[language=sh]
+htlatex filename "xhtml, fn-in, charset=utf-8" " -cunihtf -utf8"
+\end{lstlisting}
+
+
+\end{document}
