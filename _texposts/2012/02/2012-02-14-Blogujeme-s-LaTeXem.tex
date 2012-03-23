@@ -1,7 +1,9 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage[czech]{babel}
-\usepackage[]{jekyll,listings}
+\usepackage[]{jekyll}
+\usepackage[]{listings,todo}
 \Abstract{%
 TeX a jeho makro nadstavba LaTeX jsou tradičně považovány za nástroje, které jsou sice mocné, ale složité na používání a naučení, které produkují typograficky výborný výstup pro tisk, ale jsou nevhodné pro konverzi do formátů vhodných na web nebo pro elektronických knihy.
 }
@@ -24,16 +26,16 @@ Tento prikaz musite pouzit pouze v \verb|Preamble|
 dokumentu, jinak nebude fungovat.
 
 Jak vidite, pisi bez diakritiky - balicek \verb|listings| 
-nepodporuje texty v kodovani utf8. 
+nepodporuje texty v kodovani utf8. V beznem dokumentu samozrejme diakritika v abstraktu funguje
 }
 \title{Blogujeme s LaTeXem}
 \begin{document}
 Zde nasleduje text prispevku
 \end{document}
 \end{lstlisting}
-
+\lstset{showstringspaces=false}
 Tento dokument můžete přeložit pomocí příkazu:
-\begin{lstlisting}[language=sh]
+\begin{lstlisting}[language=sh, showspaces=false]
 htlatex filename "xhtml, fn-in, charset=utf-8" " -cunihtf -utf8"
 \end{lstlisting}
 
