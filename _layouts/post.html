@@ -6,7 +6,9 @@ layout: default
 <div class="post-date"> 
 {% if page.language == "czech" %}
 {{ page.date | date: "%d. %m. %Y" }}
+<div class="lang">Jazyk: čeština</div>
 {% else %}
+<div class="lang">Language: english</div>
 {{ page.date  | date_to_long_string }} 
 {% endif %}
 </div>
