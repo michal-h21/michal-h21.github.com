@@ -1,0 +1,1583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>TeX4ht: Seeded Hooks</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"> 
+<!-- html --> 
+<meta name="src" content="mktex4ht.tex"> 
+<meta name="date" content="2014-02-19 17:33:00"> 
+<link rel="stylesheet" type="text/css" href="mktex4ht.css"> 
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+
+<h2 class="titleHead">TeX4ht: Seeded Hooks</h2>
+<div class="author" ></div><br />
+<div class="date" ><span 
+class="cmr-12">February 19, 2014</span></div>
+
+   </div>
+<!--l. 272--><p class="noindent" >[<a 
+ href="mktex4ht2.html"  id="mktex4ht2.html" >index</a>]
+<!--l. 360--><p class="indent" >   See <span 
+class="cmtt-10">index =&#x003E; mktex4ht </span>for directions on how to create configuration files with
+&#8216;mktex4t.4ht&apos;.
+<!--l. 362--><p class="indent" >   WARNING: Missing definition for <span 
+class="cmtt-10">\HTML</span>
+<!--l. 377--><p class="indent" >   WARNING: Missing definition for <span 
+class="cmtt-10">\CONFIG</span>
+
+<!--l. 393--><p class="indent" >
+
+   <h2 class="likechapterHead"><a 
+  id="x1-1000"></a>Contents</h2> <div class="tableofcontents">
+   <span class="chapterToc" >1 <a 
+ href="#x1-20001"  id="QQ2-1-2">Utilities</a></span>
+<br />   <span class="chapterToc" >2 <a 
+ href="#x1-30002"  id="QQ2-1-3">Containers for the Configurations</a></span>
+<br />   &#x00A0;<span class="sectionToc" >2.1 <a 
+ href="#x1-40002.1"  id="QQ2-1-4">Container of replace-with-file-name.4ht</a></span>
+   </div>
+
+<!--l. 395--><p class="indent" >
+
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;1</span><br /><a 
+  id="x1-20001"></a>Utilities</h2>
+
+   <p></p><div class="ShowCode" id="ShowCode-1"><div class="head">
+       <a 
+ id="PrTx2001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2001"  id="QPrTx1"><span 
+class="cmtt-10">Hinclude plain</span></a><a 
+ id="PrTx2002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\contextversion\Un:def</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{plain}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{t}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\eplain\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{eplain}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx2003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx2019"><span 
+class="cmtt-10">include mex</span></a><a 
+ id="PrTx2004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\d@nger\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\leftheadline\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\rightheadline\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{manmac}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{context}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-2"><div class="head">
+       <a 
+ id="PrTx2005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2005"  id="QPrTx2"><span 
+class="cmtt-10">Hinclude latex</span></a><a 
+ id="PrTx2006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{latex}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-3"><div class="head">
+       <a 
+ id="PrTx2007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2007"  id="QPrTx3"><span 
+class="cmtt-10">Hinclude plain lib</span></a><a 
+ id="PrTx2008"  href="#PrTx2024"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx2009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx2021"><span 
+class="cmtt-10">Hinclude util</span></a><a 
+ id="PrTx2010"  href="#PrTx2014"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-4"><div class="head">
+       <a 
+ id="PrTx2011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2011"  id="QPrTx4"><span 
+class="cmtt-10">Hinclude latex lib</span></a><a 
+ id="PrTx2012"  href="#PrTx2026"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx2013"  href="#PrTx2009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx2021"><span 
+class="cmtt-10">Hinclude util</span></a><a 
+ id="PrTx2014"  href="#PrTx2018"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-5"><div class="head">
+       <a 
+ id="PrTx2015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2015"  id="QPrTx5"><span 
+class="cmtt-10">Hinclude plain + latex lib</span></a><a 
+ id="PrTx2016"  href="#PrTx2028"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx2017"  href="#PrTx2013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx2021"><span 
+class="cmtt-10">Hinclude util</span></a><a 
+ id="PrTx2018"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-6"><div class="head">
+       <a 
+ id="PrTx2019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2003"  id="QPrTx6"><span 
+class="cmtt-10">include</span><span 
+class="cmtt-10">&#x00A0;mex</span></a><a 
+ id="PrTx2020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{M\kern-.111em\lower.6ex\hbox{E}\kern-.075emX}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\nM@X\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\ifx\csname</span><span 
+class="cmtt-10">&#x00A0;emulateplain\endcsname\relax</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{mex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 445--><p class="indent" >   Style files, like xy, may be loaded in latex with <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\usepackage</span></span></span> or <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\input</span></span></span>. The
+latter case doesn&apos;t leave footprints, hence we need for it an explicitly check. On the
+other hand, we should avoid duplications.
+
+   <p></p><div class="ShowCode" id="ShowCode-7"><div class="head">
+       <a 
+ id="PrTx2021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2009"  id="QPrTx7"><span 
+class="cmtt-10">Hinclude</span><span 
+class="cmtt-10">&#x00A0;util</span></a><a 
+ id="PrTx2022"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span><span 
+class="cmtt-10">&#x00A0;tex4ht:4ht\endcsname\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\no:dupl#1#2{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;#1:4ht\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\let</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;#1:4ht\endcsname\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{#2}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-8"><div class="head">
+       <a 
+ href="#PrTx2007"  id="PrTx2023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2023"  id="QPrTx8"><span 
+class="cmtt-10">Hinclude plain lib</span></a><a 
+ id="PrTx2024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\def\:temp{\ht:everypar={\setbox0=\lastbox\ht:everypar={}}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\NoindentAfter\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{osudeG}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\ifx\amstexloaded@\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Space@\:UnDef</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}</span><span 
+class="cmtt-10">&#x00A0;%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\input</span><span 
+class="cmtt-10">&#x00A0;vanilla.4ht</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{amstex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;amsppt.sty\endcsname\relax</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{amsppt}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\ifx</span><span 
+class="cmtt-10">&#x00A0;\texinfoversion\:UnDef\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;texinfo.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{texinfo}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\ifx</span><span 
+class="cmtt-10">&#x00A0;\thistubstyle\:UnDef\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;tugboat.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{tugboat}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-9"><div class="head">
+       <a 
+ href="#PrTx2011"  id="PrTx2025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2025"  id="QPrTx9"><span 
+class="cmtt-10">Hinclude latex lib</span></a><a 
+ id="PrTx2026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}{fontmath}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\@ifpackageloaded{colortbl}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{array}{\input</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;array.4ht}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{color}{\input</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;color.4ht}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{colortbl}{\input</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;colortbl.4ht}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}{}}{colortbl}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\h:input#1.#2.#3!*?:</span><span 
+class="cmtt-10">&#x00A0;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{no_#1}\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\openin15</span><span 
+class="cmtt-10">&#x00A0;#1.4ht</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifeof15</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{debug}\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:warning{No</span><span 
+class="cmtt-10">&#x00A0;configuration</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;for</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#1.\if</span><span 
+class="cmtt-10">&#x00A0;.#2.tex\else</span><span 
+class="cmtt-10">&#x00A0;#2\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\closein15</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:temp}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\Hinclude</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\noexpand\h:input</span><span 
+class="cmtt-10">&#x00A0;##1..!*?:</span><span 
+class="cmtt-10">&#x00A0;}{\@filelist}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:temp</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-10"><div class="head">
+       <a 
+ href="#PrTx2015"  id="PrTx2027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2027"  id="QPrTx10"><span 
+class="cmtt-10">Hinclude plain + latex lib</span></a><a 
+ id="PrTx2028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\ifx</span><span 
+class="cmtt-10">&#x00A0;\PsfigVersion\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;psfig.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{psfig}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\:CheckOption{#1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{pictex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;PSTricksLoaded\endcsname\relax\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{pstricks}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\:DraCatCodes\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{dratex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\xyloaded\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{xy}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\epsfsetgraph\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{epsf}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\diagram@help@messages\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{diagrams}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\figvisu\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{fig4tex}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{pctable}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{xhtml}\if:Option</span><span 
+class="cmtt-10">&#x00A0;\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{xhtml}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\:CheckOption{#1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{ShowFont}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{frames-}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{frames}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{image-maps}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{java}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{javascript}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{th4}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinclude{\ifx</span><span 
+class="cmtt-10">&#x00A0;\sethebrew\:UnDef\else</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\ArabTeX\:UnDef\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\expand:after{\input</span><span 
+class="cmtt-10">&#x00A0;hebtex.4ht}}\fi</span><span 
+class="cmtt-10">&#x00A0;\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{hebtex}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-11"><div class="head">
+       <a 
+ id="PrTx2029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx2029"  id="QPrTx11"><span 
+class="cmtt-10">pctex table 4ht</span></a><a 
+ id="PrTx2030"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\BeginTable\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else\ifx</span><span 
+class="cmtt-10">&#x00A0;\EndTable\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;!ttBeginTable\endcsname\relax\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\no:dupl{#1}{\input</span><span 
+class="cmtt-10">&#x00A0;#1.4ht}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;2</span><br /><a 
+  id="x1-30002"></a>Containers for the Configurations</h2>
+   <h3 class="sectionHead"><span class="titlemark">2.1   </span> <a 
+  id="x1-40002.1"></a>Container of replace-with-file-name.4ht</h3>
+   <div class="sectionTOCS">
+   </div>
+
+   <p></p><div class="ShowCode" id="ShowCode-12"><div class="head">
+       <a 
+ id="PrTx4001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4001"  id="QPrTx12"><span 
+class="cmtt-10">replace-with-file-name</span></a><a 
+ id="PrTx4002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+<!--l. 174--><p class="indent" >   <a 
+ href="mktex4ht3.html"  id="mktex4ht3.html" >Preamble</a>
+<!--l. 1380--><p class="indent" >   <a 
+ href="mktex4ht4.html"  id="mktex4ht4.html" >tex4ht</a>
+<!--l. 1973--><p class="indent" >   <a 
+ href="mktex4ht5.html"  id="mktex4ht5.html" >latex</a>
+<!--l. 2247--><p class="indent" >   <a 
+ href="mktex4ht6.html"  id="mktex4ht6.html" >book</a>
+<!--l. 2513--><p class="indent" >   <a 
+ href="mktex4ht7.html"  id="mktex4ht7.html" >report</a>
+<!--l. 2790--><p class="indent" >   <a 
+ href="mktex4ht8.html"  id="mktex4ht8.html" >article</a>
+<!--l. 2820--><p class="indent" >   <a 
+ href="mktex4ht9.html"  id="mktex4ht9.html" >fontmath</a>
+<!--l. 2920--><p class="indent" >   <a 
+ href="mktex4ht10.html"  id="mktex4ht10.html" >graphics</a>
+<!--l. 3045--><p class="indent" >   <a 
+ href="mktex4ht11.html"  id="mktex4ht11.html" >amsart</a>
+<!--l. 3163--><p class="indent" >   <a 
+ href="mktex4ht12.html"  id="mktex4ht12.html" >amsbook</a>
+<!--l. 3277--><p class="indent" >   <a 
+ href="mktex4ht13.html"  id="mktex4ht13.html" >amsproc</a>
+<!--l. 3299--><p class="indent" >   <a 
+ href="mktex4ht14.html"  id="mktex4ht14.html" >amsthm</a>
+<!--l. 3347--><p class="indent" >   <a 
+ href="mktex4ht15.html"  id="mktex4ht15.html" >amsmath</a>
+<!--l. 3370--><p class="indent" >   <a 
+ href="mktex4ht16.html"  id="mktex4ht16.html" >amsfonts</a>
+<!--l. 3418--><p class="indent" >   <a 
+ href="mktex4ht17.html"  id="mktex4ht17.html" >amstex1</a>
+<!--l. 3465--><p class="indent" >   <a 
+ href="mktex4ht18.html"  id="mktex4ht18.html" >amsppt</a>
+<!--l. 3486--><p class="indent" >   <a 
+ href="mktex4ht19.html"  id="mktex4ht19.html" >babel</a>
+<!--l. 3530--><p class="indent" >   <a 
+ href="mktex4ht20.html"  id="mktex4ht20.html" >plain</a>
+<!--l. 3566--><p class="indent" >   <a 
+ href="mktex4ht21.html"  id="mktex4ht21.html" >url</a>
+<!--l. 3619--><p class="indent" >   <a 
+ href="mktex4ht22.html"  id="mktex4ht22.html" >hyperref</a>
+<!--l. 3694--><p class="indent" >   <a 
+ href="mktex4ht23.html"  id="mktex4ht23.html" >array</a>
+<!--l. 3717--><p class="indent" >   <a 
+ href="mktex4ht24.html"  id="mktex4ht24.html" >longtable</a>
+<!--l. 3744--><p class="indent" >   <a 
+ href="mktex4ht25.html"  id="mktex4ht25.html" >CJK</a>
+<!--l. 3777--><p class="indent" >   <a 
+ href="mktex4ht26.html"  id="mktex4ht26.html" >moreverb</a>
+<!--l. 3803--><p class="indent" >   <a 
+ href="mktex4ht27.html"  id="mktex4ht27.html" >fancyvrb</a>
+<!--l. 3822--><p class="indent" >   <a 
+ href="mktex4ht28.html"  id="mktex4ht28.html" >xy</a>
+<!--l. 3843--><p class="indent" >   <a 
+ href="mktex4ht29.html"  id="mktex4ht29.html" >psfig</a>
+<!--l. 3875--><p class="indent" >   <a 
+ href="mktex4ht30.html"  id="mktex4ht30.html" >epsfig</a>
+<!--l. 3896--><p class="indent" >   <a 
+ href="mktex4ht31.html"  id="mktex4ht31.html" >amscd</a>
+<!--l. 3925--><p class="indent" >   <a 
+ href="mktex4ht32.html"  id="mktex4ht32.html" >color</a>
+<!--l. 3949--><p class="indent" >   <a 
+ href="mktex4ht33.html"  id="mktex4ht33.html" >colortbl</a>
+<!--l. 3977--><p class="indent" >   <a 
+ href="mktex4ht34.html"  id="mktex4ht34.html" >minitoc</a>
+<!--l. 3996--><p class="indent" >   <a 
+ href="mktex4ht35.html"  id="mktex4ht35.html" >index</a>
+<!--l. 4019--><p class="indent" >   <a 
+ href="mktex4ht36.html"  id="mktex4ht36.html" >fancybox</a>
+<!--l. 4039--><p class="indent" >   <a 
+ href="mktex4ht37.html"  id="mktex4ht37.html" >alltt</a>
+<!--l. 4075--><p class="indent" >   <a 
+ href="mktex4ht38.html"  id="mktex4ht38.html" >vanilla</a>
+<!--l. 4137--><p class="indent" >   <a 
+ href="mktex4ht39.html"  id="mktex4ht39.html" >ntheorem</a>
+<!--l. 4188--><p class="indent" >   <a 
+ href="mktex4ht40.html"  id="mktex4ht40.html" >hebtex</a>
+<!--l. 4249--><p class="indent" >   <a 
+ href="mktex4ht41.html"  id="mktex4ht41.html" >emulateapj</a>
+<!--l. 4336--><p class="indent" >   <a 
+ href="mktex4ht42.html"  id="mktex4ht42.html" >aa</a>
+<!--l. 4371--><p class="indent" >   <a 
+ href="mktex4ht43.html"  id="mktex4ht43.html" >doc</a>
+<!--l. 4399--><p class="indent" >   <a 
+ href="mktex4ht44.html"  id="mktex4ht44.html" >elsart</a>
+<!--l. 4462--><p class="indent" >   <a 
+ href="mktex4ht45.html"  id="mktex4ht45.html" >seminar</a>
+<!--l. 4493--><p class="indent" >   <a 
+ href="mktex4ht46.html"  id="mktex4ht46.html" >slides</a>
+<!--l. 4553--><p class="indent" >   <a 
+ href="mktex4ht47.html"  id="mktex4ht47.html" >foils</a>
+<!--l. 4573--><p class="indent" >   <a 
+ href="mktex4ht48.html"  id="mktex4ht48.html" >slidesec</a>
+<!--l. 4593--><p class="indent" >   <a 
+ href="mktex4ht49.html"  id="mktex4ht49.html" >pictex</a>
+<!--l. 4619--><p class="indent" >   <a 
+ href="mktex4ht50.html"  id="mktex4ht50.html" >pb-diagram</a>
+<!--l. 4675--><p class="indent" >   <a 
+ href="mktex4ht51.html"  id="mktex4ht51.html" >ltugboat</a>
+<!--l. 4723--><p class="indent" >   <a 
+ href="mktex4ht52.html"  id="mktex4ht52.html" >listings</a>
+<!--l. 4759--><p class="indent" >   <a 
+ href="mktex4ht53.html"  id="mktex4ht53.html" >float</a>
+<!--l. 4789--><p class="indent" >   <a 
+ href="mktex4ht54.html"  id="mktex4ht54.html" >endnotes</a>
+<!--l. 4812--><p class="indent" >   <a 
+ href="mktex4ht55.html"  id="mktex4ht55.html" >web</a>
+<!--l. 4842--><p class="indent" >   <a 
+ href="mktex4ht56.html"  id="mktex4ht56.html" >exerquiz</a>
+<!--l. 4871--><p class="indent" >   <a 
+ href="mktex4ht57.html"  id="mktex4ht57.html" >ProTex</a>
+<!--l. 5169--><p class="indent" >   <a 
+ href="mktex4ht58.html"  id="mktex4ht58.html" >th4</a>
+<!--l. 5524--><p class="indent" >   <a 
+ href="mktex4ht59.html"  id="mktex4ht59.html" >mktex4ht</a>
+<!--l. 173--><p class="indent" >   <a 
+ href="mktex4ht60.html"  id="mktex4ht60.html" >tex4ht</a>
+<!--l. 216--><p class="indent" >   <a 
+ href="mktex4ht61.html"  id="mktex4ht61.html" >latex</a>
+<!--l. 261--><p class="indent" >   <a 
+ href="mktex4ht62.html"  id="mktex4ht62.html" >book</a>
+<!--l. 305--><p class="indent" >   <a 
+ href="mktex4ht63.html"  id="mktex4ht63.html" >report</a>
+<!--l. 348--><p class="indent" >   <a 
+ href="mktex4ht64.html"  id="mktex4ht64.html" >article</a>
+<!--l. 392--><p class="indent" >   <a 
+ href="mktex4ht65.html"  id="mktex4ht65.html" >amsart</a>
+<!--l. 92--><p class="indent" >   <a 
+ href="mktex4ht66.html"  id="mktex4ht66.html" >tex4ht</a>
+<!--l. 130--><p class="indent" >   <a 
+ href="mktex4ht67.html"  id="mktex4ht67.html" >latex</a>
+<!--l. 189--><p class="indent" >   <a 
+ href="mktex4ht68.html"  id="mktex4ht68.html" >plain</a>
+<!--l. 632--><p class="indent" >   //
+    
+</body></html> 
+
+
+
