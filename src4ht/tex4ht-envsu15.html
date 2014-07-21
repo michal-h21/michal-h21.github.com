@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Alternative Scripts</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,html --> 
+<meta name="src" content="tex4ht-env.tex" /> 
+<meta name="date" content="2014-05-24 11:49:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-env.css" /> 
+</head><body 
+>
+   <!--l. 996--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-envsu14.html" >prev</a>] [<a 
+ href="tex4ht-envsu14.html#tailtex4ht-envsu14.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-envsu15.html">tail</a>] [<a 
+ href="tex4ht-envse4.html#tex4ht-envsu15.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">4.11   </span> <a 
+  id="x20-190004.11"></a>Alternative Scripts</h4>
+     <ul class="itemize1">
+     <li class="itemize">
+
+     <div class="verbatim" id="verbatim-2">
+     &#x00A0;Gdvips&#x00A0;-T&#x00A0;14in,14in&#x00A0;-Ppdf&#x00A0;&#x00A0;-mode&#x00A0;&#x00A0;epstypro&#x00A0;-D&#x00A0;360&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;&#x003E;&#x00A0;zz%%4.ps
+</div>
+     <!--l. 1008--><p class="nopar" >
+     </p></li>
+     <li class="itemize">
+
+     <div class="verbatim" id="verbatim-3">
+     Gtest&#x00A0;!&#x00A0;-f&#x00A0;%%3
+     &#x00A0;<br />Gdvips&#x00A0;-pp&#x00A0;%%2&#x00A0;-R&#x00A0;-E&#x00A0;%%1&#x00A0;-o&#x00A0;-&#x00A0;|&#x00A0;convert&#x00A0;-transparent&#x00A0;&#8217;#FFFFFF&#8217;&#x00A0;-quality&#x00A0;100
+     &#x00A0;<br />-density&#x00A0;110&#x00A0;ps:-&#x00A0;%%3
+</div>
+     <!--l. 1015--><p class="nopar" >
+     </p></li>
+     <li class="itemize">A Netpbm-based script (<a 
+ href="ftp://ftp.x.org/R5contrib/netpbm-1mar1994.tar.gz" >src</a>)
+
+     <div class="verbatim" id="verbatim-4">
+     &#x00A0;Ggs&#x00A0;-sDEVICE=ppm&#x00A0;-sOutputFile=zz%%4.ppm&#x00A0;-q&#x00A0;-dbatch&#x00A0;-dNOPAUSE&#x00A0;zz%%4.ps&#x00A0;-c&#x00A0;quit
+     &#x00A0;<br />&#x00A0;Gmv&#x00A0;zz%%4.ppm&#x00A0;yz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gpnmcrop&#x00A0;&#x00A0;yz%%4.ppm&#x00A0;&#x003E;&#x00A0;zz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gppmtopng&#x00A0;-interlace&#x00A0;-transparent&#x00A0;1,1,1&#x00A0;zz%%4.ppm&#x00A0;&#x003E;&#x00A0;%%3
+</div>
+     <!--l. 1027--><p class="nopar" >
+     </p></li>
+     <li class="itemize">A PDF-based script (<a 
+ href="http://www.cs.wisc.edu/~ghost/doc/AFPL/6.50/Ps2pdf.htm" >ps2pdf</a>)
+
+     <div class="verbatim" id="verbatim-5">
+     Gdvips&#x00A0;-mode&#x00A0;ibmvga&#x00A0;-D&#x00A0;110&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;&#x003E;&#x00A0;zz%%4.ps
+     &#x00A0;<br />Gps2pdf&#x00A0;zz%%4.ps&#x00A0;zz%%4.pdf
+     &#x00A0;<br />Gconvert&#x00A0;zz%%4.pdf&#x00A0;-trim&#x00A0;-density&#x00A0;110x110&#x00A0;-transparent&#x00A0;&#8217;#FFFFFF&#8217;&#x00A0;%%3
+</div>
+     <!--l. 1038--><p class="nopar" >
+     </p></li>
+     <li class="itemize">
+                <!--l. 1051--><p class="noindent" ><a 
+ id="PrTx19001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-envsu6.html#PrTx10015"  id="QPrTx63"><span 
+class="cmtt-10">win</span>&#x00A0;<span 
+class="cmtt-10">gs</span></a><a 
+ id="PrTx19002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;gs&#x003E;</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;nul</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;nul</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gdvips</span>&#x00A0;<span 
+class="cmtt-10">-E</span>&#x00A0;<span 
+class="cmtt-10">-q</span>&#x00A0;<span 
+class="cmtt-10">-Ppdf</span>&#x00A0;<span 
+class="cmtt-10">-D</span>&#x00A0;<span 
+class="cmtt-10">110</span>&#x00A0;<span 
+class="cmtt-10">-mode</span>&#x00A0;<span 
+class="cmtt-10">ibmvga</span>&#x00A0;<span 
+class="cmtt-10">-f</span>&#x00A0;<span 
+class="cmtt-10">%%1</span>&#x00A0;<span 
+class="cmtt-10">-pp</span>&#x00A0;<span 
+class="cmtt-10">%%2</span>&#x00A0;<span 
+class="cmtt-10">-o</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Ggswin32c</span>&#x00A0;<span 
+class="cmtt-10">-dbatch</span>&#x00A0;<span 
+class="cmtt-10">-dNOPAUSE</span>&#x00A0;<span 
+class="cmtt-10">-sDEVICE=pngalpha</span>&#x00A0;<span 
+class="cmtt-10">-dEPSCrop</span>&#x00A0;<span 
+class="cmtt-10">&#8216;&#8216;-dBackgroundColor=16#ffffff&#8217;&#8217;</span>&#x00A0;<span 
+class="cmtt-10">-dTextAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-dGraphicsAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-r110x110</span>&#x00A0;<span 
+class="cmtt-10">-sOutputFile=%%3</span>&#x00A0;<span 
+class="cmtt-10">-q</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">-c</span>&#x00A0;<span 
+class="cmtt-10">quit</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;nul</span>
+          <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;/gs&#x003E;</span>
+          <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+     </li></ul>
+     <ul class="itemize1">
+     <li class="itemize">A variant of the given script
+
+     <div class="verbatim" id="verbatim-6">
+     GDEL&#x00A0;zz%%4.ps
+     &#x00A0;<br />Gdvips&#x00A0;-T&#x00A0;14in,14in&#x00A0;-Ppdf&#x00A0;-mode&#x00A0;&#x00A0;epstypro&#x00A0;-D&#x00A0;360&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;&#x003E;&#x00A0;zz%%4.ps
+     &#x00A0;<br />GDEL&#x00A0;%%3
+     &#x00A0;<br />Gc:/imagemagic/convert&#x00A0;zz%%4.ps&#x00A0;-trim&#x00A0;-density&#x00A0;110x110&#x00A0;-transparent&#x00A0;#FFFFFF&#x00A0;%%3
+</div>
+     <!--l. 1068--><p class="nopar" >
+     </p></li>
+     <li class="itemize">A Netpbm-based script (<a 
+ href="ftp://ftp.x.org/R5contrib/netpbm-1mar1994.tar.gz" >src</a> / binaries for Win 95/98/NT: <a 
+ href="http://sourceforge.net/projects/netpbm/" >Netpbm project</a>,
+     <a 
+ href="ftp://miktex.sourceforge.net/pub/miktex/util/" >MiK<span class="TEX">T<span 
+class="E">E</span>X</span></a>)
+
+     <div class="verbatim" id="verbatim-7">
+     &#x00A0;Gif&#x00A0;exist&#x00A0;&#x00A0;zz%%4.ps&#x00A0;DEL&#x00A0;zz%%4.ps
+     &#x00A0;<br />&#x00A0;Gif&#x00A0;exist&#x00A0;zz%%4.ppm&#x00A0;DEL&#x00A0;zz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gdvips&#x00A0;-T&#x00A0;14in,14in&#x00A0;-Ppdf&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;-o&#x00A0;zz%%4.ps
+     &#x00A0;<br />&#x00A0;Ggswin32c&#x00A0;-sDEVICE=ppm&#x00A0;-sOutputFile=zz%%4.ppm&#x00A0;-q&#x00A0;-dbatch&#x00A0;-dNOPAUSE&#x00A0;zz%%4.ps&#x00A0;-c&#x00A0;quit
+     &#x00A0;<br />&#x00A0;Gmove&#x00A0;zz%%4.ppm&#x00A0;yz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gpnmcrop&#x00A0;&#x00A0;yz%%4.ppm&#x00A0;&#x003E;&#x00A0;zz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gif&#x00A0;exist&#x00A0;%%3&#x00A0;DEL&#x00A0;%%3
+     &#x00A0;<br />&#x00A0;Gppmtopng&#x00A0;-interlace&#x00A0;-transparent&#x00A0;1,1,1&#x00A0;zz%%4.ppm&#x00A0;&#x003E;&#x00A0;%%3
+</div>
+     <!--l. 1086--><p class="nopar" >
+     </p><!--l. 1088--><p class="noindent" >or similarly
+
+</p>
+     <div class="verbatim" id="verbatim-8">
+     &#x00A0;Gif&#x00A0;exist&#x00A0;&#x00A0;zz%%4.ps&#x00A0;DEL&#x00A0;zz%%4.eps
+     &#x00A0;<br />&#x00A0;Gif&#x00A0;exist&#x00A0;zz%%4.ppm&#x00A0;DEL&#x00A0;zz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gdvips&#x00A0;-E&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;-o&#x00A0;zz%%4.eps
+     &#x00A0;<br />&#x00A0;Ggswin32c&#x00A0;-dEPSCrop&#x00A0;-dBATCH&#x00A0;-dNOPAUSE&#x00A0;-sDEVICE=pbm&#x00A0;-q&#x00A0;-sOutputFile=zz%%4.ppm&#x00A0;zz%%4.eps&#x00A0;-c&#x00A0;quit
+     &#x00A0;<br />&#x00A0;Gmove&#x00A0;zz%%4.ppm&#x00A0;yz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gpnmcrop&#x00A0;&#x00A0;yz%%4.ppm&#x00A0;&#x003E;&#x00A0;zz%%4.ppm
+     &#x00A0;<br />&#x00A0;Gppmtopng&#x00A0;-interlace&#x00A0;-transparent&#x00A0;1,1,1&#x00A0;zz%%4.ppm&#x00A0;&#x003E;&#x00A0;%%3
+</div>
+     <!--l. 1101--><p class="nopar" >
+     </p></li>
+     <li class="itemize">IrfanView <a 
+ href="http://www.irfanview.com" >IrfanView</a> offers a possible alternative for the <img 
+src="tex4ht-env0x.png" alt="`
+&#8217;  "  class="grave"  />convert&#8217; utility of
+     ImageMagick.
+     </li>
+     <li class="itemize">PDF-based script <a 
+  id="pdf-based"></a>A (<a 
+ href="http://www.cs.wisc.edu/~ghost/doc/AFPL/6.50/Ps2pdf.htm" >ps2pdf</a>)
+
+     <div class="verbatim" id="verbatim-9">
+     Gdvips&#x00A0;-mode&#x00A0;ibmvga&#x00A0;-D&#x00A0;110&#x00A0;-f&#x00A0;%%1&#x00A0;-pp&#x00A0;%%2&#x00A0;&#x00A0;&#x003E;&#x00A0;zz%%4.ps
+     &#x00A0;<br />Gps2pdf&#x00A0;zz%%4.ps&#x00A0;zz%%4.pdf
+     &#x00A0;<br />Gconvert&#x00A0;zz%%4.pdf&#x00A0;-trim&#x00A0;-density&#x00A0;110x110&#x00A0;-transparent&#x00A0;&#8217;#FFFFFF&#8217;&#x00A0;%%3
+</div>
+     <!--l. 1116--><p class="nopar" >
+</p>
+     </li></ul>
+   <!--l. 1124--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-envsu14.html" >prev</a>] [<a 
+ href="tex4ht-envsu14.html#tailtex4ht-envsu14.html" >prev-tail</a>] [<a 
+ href="tex4ht-envsu15.html" >front</a>] [<a 
+ href="tex4ht-envse4.html#tex4ht-envsu15.html" >up</a>] </p></div>
+<!--l. 1124--><p class="indent" >   <a 
+  id="tailtex4ht-envsu15.html"></a> </p> 
+</body></html> 

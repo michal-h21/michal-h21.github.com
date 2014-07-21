@@ -1,0 +1,2487 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Character Maps</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <!--l. 4809--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh6.html" >next</a>] [<a 
+ href="tex4ht-cCh4.html" >prev</a>] [<a 
+ href="tex4ht-cCh4.html#tailtex4ht-cCh4.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-cCh5.html">tail</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh5.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter
+5<br /><a 
+ href="tex4ht-c.html#QQ2-16-61"  name="QQ1-16-61">Character Maps</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.1&#x00A0;<a 
+ href="#QQ1-16-62"  name="QQ2-16-62">Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.2&#x00A0;<a 
+ href="#QQ1-16-63"  name="QQ2-16-63">Memory</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-16-64"  name="QQ2-16-64">Initialization</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.3&#x00A0;<a 
+ href="#QQ1-16-65"  name="QQ2-16-65">Fill
+Map</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-16-66"  name="QQ2-16-66">With Characters</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-16-67"  name="QQ2-16-67">With Rulers</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.4&#x00A0;<a 
+ href="#QQ1-16-68"  name="QQ2-16-68">Dump Map</a></span><br />
+    </div>
+    <h3 class="SectionHead">5.1 <a 
+ href="tex4ht-c.html#QQ2-16-62"  name="QQ1-16-62">Requests</a></h3>
+           <!--l. 4817--><p class="noindent" ><a 
+ name="PrTx62001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh4.html#PrTx48043"><span 
+class="cmtt-10">handle</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">mode</span></a><a 
+ name="PrTx62002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">!ch_map_flag;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch_map_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx62003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx64001"><span 
+class="cmtt-10">enter char map</span></a><a 
+ name="PrTx62004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx62005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx68001"><span 
+class="cmtt-10">exit char map</span></a><a 
+ name="PrTx62006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">5.2 <a 
+ href="tex4ht-c.html#QQ2-16-63"  name="QQ1-16-63">Memory</a></h3>
+<!--l. 4822--><p class="noindent" >The character map is a sequence of lines that are dynamically allocated. Each character is represented by a pair
+(str,design), where str is a possible empty string and design is a character holding a value 0, 1, 2, or
+3.
+</p>
+      <!--l. 4832--><p class="indent" ><a 
+ href="tex4ht-cCh4.html#PrTx60007"  name="PrTx63001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10005"><span 
+class="cmtt-10">types</span></a><a 
+ name="PrTx63002"  href="tex4ht-cCh8.html#PrTx97004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">ch_map_rec{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;<span 
+class="cmtt-10">line;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">max,</span>&#x00A0;<span 
+class="cmtt-10">chars;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4838--><p class="noindent" ><a 
+ href="tex4ht-cCh4.html#PrTx60009"  name="PrTx63003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx63004"  href="#PrTx63016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">ch_map_rec</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch_map[HEIGHT];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">max_map_line,</span>&#x00A0;<span 
+class="cmtt-10">min_map_line;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4840--><p class="noindent" >The following might be too high of a bound. The agreed def of html allows only 1024 characters in
+a map. However, with the permissible def of html, extra characters hopefully are ignored without
+causing problems. Also note that we probably going to have leading and trailing row that are not
+in use, and 120 line for a full page figure is not relly that big of a bound on the numer of lines per
+page.
+</p>
+      <!--l. 4849--><p class="indent" ><a 
+ href="tex4ht-cCh4.html#PrTx59031"  name="PrTx63005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10003"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx63006"  href="#PrTx63018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HEIGHT</span>&#x00A0;<span 
+class="cmtt-10">120</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4853--><p class="noindent" ><a 
+ name="PrTx63007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx67005"><span 
+class="cmtt-10">h ch</span></a><a 
+ name="PrTx63008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">1</span>-_-_-</span>
+           </p><!--l. 4856--><p class="noindent" ><a 
+ name="PrTx63009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx67007"><span 
+class="cmtt-10">v ch</span></a><a 
+ name="PrTx63010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">2</span>-_-_-</span>
+           </p><!--l. 4859--><p class="noindent" ><a 
+ name="PrTx63011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx67003"><span 
+class="cmtt-10">black ch</span></a><a 
+ name="PrTx63012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">3</span>-_-_-</span>
+           </p><!--l. 4862--><p class="noindent" ><a 
+ name="PrTx63013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66053"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx63014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">4</span>-_-_-</span>
+</p><!--l. 4866--><p class="noindent" >The str is a string holding the text that belongs to the corresponding position: representation for the character,
+specials, etc. The design hold a drawing content corresponding to space, horizontal line, vertical line, and filled area,
+respectively. If the str is empty, the design is assumed to be the content of the character. If the string is not empty,
+it is assumed to be the content of the character.
+</p><!--l. 4875--><p class="indent" >    The string holds character codes in the range of 32&#8211;255. Hence, we still have a room to get more sophisticated
+designs.
+</p>
+      <!--l. 4883--><p class="indent" ><a 
+ href="#PrTx63003"  name="PrTx63015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx63016"  href="#PrTx64010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">ch_map_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4891--><p class="noindent" ><a 
+ href="#PrTx63005"  name="PrTx63017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10003"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx63018"  href="#PrTx64012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">NULL_MAP</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">map_line_type*)</span>&#x00A0;<span 
+class="cmtt-10">0</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-16-64"  name="QQ1-16-64">Initialization</a></h3>
+<!--l. 4896--><p class="noindent" >
+</p><ul >
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht!}</span>&#8217; &#8212; Default. </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht!i}</span>&#8217;&#8212; Magnified by i/100. </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht!i,j}</span>&#8217;&#8212; Magnified by (i/100,j/100). </li></ul>
+      <!--l. 4919--><p class="indent" ><a 
+ name="PrTx64001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx62003"><span 
+class="cmtt-10">enter</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">map</span></a><a 
+ name="PrTx64002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">init_ch_map();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">special_n--</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;9&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;,&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!xresolution</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx64003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx64005"><span 
+class="cmtt-10">resolve boundary ch in maps</span></a><a 
+ name="PrTx64004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!xresolution</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!xresolution</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">XRESOLUTION;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">YRESOLUTION;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">(XRESOLUTION</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">100);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">(YRESOLUTION</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">100);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4922--><p class="noindent" >Resolution can be an integer number or a pair of integer numbers separated by a comma. The first for x-resolution,
+the second for y-resolution. Then we can have a map for boundary characters made up of pairs: character to be
+replaced followed by replcment.
+</p>
+      <!--l. 4930--><p class="indent" ><a 
+ name="PrTx64005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx64003"><span 
+class="cmtt-10">resolve</span>&#x00A0;<span 
+class="cmtt-10">boundary</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">maps</span></a><a 
+ name="PrTx64006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx64007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx254003"><span 
+class="cmtt-10">special resolution err</span></a><a 
+ name="PrTx64008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4938--><p class="noindent" ><a 
+ href="#PrTx63015"  name="PrTx64009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx64010"  href="#PrTx66022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">xresolution,</span>&#x00A0;<span 
+class="cmtt-10">yresolution;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4956--><p class="noindent" ><a 
+ href="#PrTx63017"  name="PrTx64011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10003"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx64012"  href="#PrTx66030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">XRESOLUTION</span>&#x00A0;<span 
+class="cmtt-10">MARGINSP</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">LONG</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">YRESOLUTION</span>&#x00A0;<span 
+class="cmtt-10">786432L</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">YRESOLUTION</span>&#x00A0;<span 
+class="cmtt-10">786432</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4961--><p class="noindent" ><a 
+ href="tex4ht-cCh4.html#PrTx48013"  name="PrTx64013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx64014"  href="#PrTx66006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">init_ch_map(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(void)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4971--><p class="noindent" ><a 
+ href="tex4ht-cCh4.html#PrTx48015"  name="PrTx64015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx64016"  href="#PrTx66008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">init_ch_map(MYVOID)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=0;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;HEIGHT;</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch_map[i].max</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch_map[i].chars</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch_map[i].line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">NULL;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">max_map_line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">min_map_line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">HEIGHT;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">5.3 <a 
+ href="tex4ht-c.html#QQ2-16-65"  name="QQ1-16-65">Fill Map</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-16-66"  name="QQ1-16-66">With Characters</a></h3>
+<!--l. 4979--><p class="noindent" >The 0.75 constant has been derived by trial and error by centering the nodes of &#8216;<span 
+class="cmtt-10">\TreeSpec(\SRectNode)()()</span>
+<span 
+class="cmtt-10">\Tree()( 3,dog// 0,boxer &amp; 0,cocker &amp; 3, schnauzer // 0,miniature~~schauzer &amp; 0,standard~~schnauzer</span>
+<span 
+class="cmtt-10">&amp; 0,giant~~schnauzer// )</span>&#8217;.
+</p>
+      <!--l. 4989--><p class="indent" ><a 
+ name="PrTx66001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh17.html#PrTx243021"><span 
+class="cmtt-10">insert ch to ch-map</span></a><a 
+ name="PrTx66002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">insert_ch_map((char)</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">TRUE);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4992--><p class="noindent" ><a 
+ name="PrTx66003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66009"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">tag</span>-_-_-</span>
+           </p><!--l. 4998--><p class="noindent" ><a 
+ href="#PrTx64013"  name="PrTx66005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx66006"  href="#PrTx68006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">insert_ch_map(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(char,BOOL)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5018--><p class="noindent" ><a 
+ href="#PrTx64015"  name="PrTx66007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx66008"  href="#PrTx68008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">insert_ch_map</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<a 
+ name="PrTx66009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66010"  href="#PrTx66012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">ch</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<a 
+ name="PrTx66011"  href="#PrTx66009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66012"  href="#PrTx66034"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">row,</span>&#x00A0;<span 
+class="cmtt-10">col;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx66013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66023"><span 
+class="cmtt-10">get row and col for ch</span></a><a 
+ name="PrTx66014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">10){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">MAX_MAP_LINE)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(col</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">MAX_MAP_LINE)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ok_map</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">warn_i_int_2(</span>&#x00A0;<span 
+class="cmtt-10">25,</span>&#x00A0;<span 
+class="cmtt-10">MAX_MAP_LINE,</span>&#x00A0;<span 
+class="cmtt-10">ch);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ok_map</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}else{</span>&#x00A0;&#x00A0;<a 
+ name="PrTx66015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66015"><span 
+class="cmtt-10">adjust boundary ch</span></a><a 
+ name="PrTx66016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">min_map_line</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">min_map_line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">row;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">max_map_line</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">max_map_line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">row;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx66017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66035"><span 
+class="cmtt-10">insert char to nonempty map line</span></a><a 
+ name="PrTx66018"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx66019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66031"><span 
+class="cmtt-10">insert char to empty map line</span></a><a 
+ name="PrTx66020"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5023--><p class="noindent" >Leave the following to the user responsibility of getting the char mappings rightly in the &#8216;.htf&#8217; fonts.
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;adjust</span><span 
+class="cmtt-10">&#x00A0;boundary</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;NO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">switch(</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;case</span><span 
+class="cmtt-10">&#x00A0;&#8217;&#x003E;&#8217;:</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;&#8217;x&#8217;;</span><span 
+class="cmtt-10">&#x00A0;break;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;case</span><span 
+class="cmtt-10">&#x00A0;&#8217;&amp;&#8217;:</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;&#8217;&#8217;;</span><span 
+class="cmtt-10">&#x00A0;break;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;case</span><span 
+class="cmtt-10">&#x00A0;&#8217;"&#8217;:</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;&#8217;&#8217;;</span><span 
+class="cmtt-10">&#x00A0;break;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 5038--><p class="indent" ><a 
+ href="#PrTx64009"  name="PrTx66021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx66022"  href="#PrTx66028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">ok_map</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5065--><p class="noindent" ><a 
+ name="PrTx66023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66013"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx66024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">double</span>&#x00A0;<span 
+class="cmtt-10">x;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">(y_val&#x003E;0?</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">0.0)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">(double)</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">0.5);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;=</span>&#x00A0;<span 
+class="cmtt-10">HEIGHT</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ok_map</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">warn_i_int_2(</span>&#x00A0;<span 
+class="cmtt-10">34,</span>&#x00A0;<span 
+class="cmtt-10">row,</span>&#x00A0;<span 
+class="cmtt-10">ch);</span>&#x00A0;<span 
+class="cmtt-10">ok_map</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">x</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(x_val&#x003E;0?</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">0.0</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">(double)</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">0.75;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">x;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;-&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;|&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">row</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">prevrow</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(col</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">prevcol</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(x</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">prev_x</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">0.5)</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">insert_ch_map(&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;,</span>&#x00A0;<span 
+class="cmtt-10">TRUE);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(col</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">prevcol</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(x</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">prev_x+0.2)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;&amp;&#8217;</span>&#x00A0;<span 
+class="cmtt-10">))</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">prevcol</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">prevrow</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">prev_x</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">x</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">(</span><a 
+ name="PrTx66025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx152011"><span 
+class="cmtt-10">(double) char_width( design_ch? design_ch : ch )</span></a><a 
+ name="PrTx66026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">(double)</span>&#x00A0;<span 
+class="cmtt-10">xresolution;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">prevcol</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">col;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">prevrow</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">prevrow</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">row;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5068--><p class="noindent" >The &#8216;<span 
+class="cmtt-10">( ch != &#8217;&amp;&#8217; )</span>&#8217; above is to avoid breaking indirect unicode characters &#8216;<span 
+class="cmtt-10">&amp;...;</span>&#8217; in character maps.
+</p>
+      <!--l. 5078--><p class="indent" ><a 
+ href="#PrTx66021"  name="PrTx66027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx66028"  href="tex4ht-cCh6.html#PrTx70002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">prevcol</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1,</span>&#x00A0;<span 
+class="cmtt-10">prevrow;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">double</span>&#x00A0;<span 
+class="cmtt-10">prev_x;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5083--><p class="noindent" ><a 
+ href="#PrTx64011"  name="PrTx66029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10003"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx66030"  href="tex4ht-cCh6.html#PrTx82014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">MAX_MAP_LINE</span>&#x00A0;<span 
+class="cmtt-10">500</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5096--><p class="noindent" ><a 
+ name="PrTx66031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66019"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx66032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;<span 
+class="cmtt-10">p;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(col</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">5)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">5</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">5)</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx66033"  href="#PrTx66011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66034"  href="#PrTx66044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">1;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">n);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">n--</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">*(p++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">*(ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">col)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;insert</span><span 
+class="cmtt-10">&#x00A0;char</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;empty</span><span 
+class="cmtt-10">&#x00A0;map</span><span 
+class="cmtt-10">&#x00A0;lineNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;int</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;n;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;char*</span><span 
+class="cmtt-10">&#x00A0;p;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(n</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;(col</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;2</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;5)</span><span 
+class="cmtt-10">&#x00A0;/</span><span 
+class="cmtt-10">&#x00A0;5</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;5)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;ch:</span><span 
+class="cmtt-10">&#x00A0;1,</span><span 
+class="cmtt-10">&#x00A0;ruler:</span><span 
+class="cmtt-10">&#x00A0;0&#8216;&#x003E;;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;1;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;m_alloc(char,</span><span 
+class="cmtt-10">&#x00A0;n);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;n--</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;*(p++)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">*(ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;col)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;filter_bound_ch(ch);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 5125--><p class="noindent" ><a 
+ name="PrTx66035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66017"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">nonempty</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx66036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;<span 
+class="cmtt-10">p;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx66037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66047"><span 
+class="cmtt-10">insert char within map line</span></a><a 
+ name="PrTx66038"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else{</span>&#x00A0;<a 
+ name="PrTx66039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66041"><span 
+class="cmtt-10">insert char beyond end of map line</span></a><a 
+ name="PrTx66040"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5127--><p class="noindent" >Below: 8 = 1 (col starts at 0) + 2 (new ch=ch+bound) + 5 (rounding)
+</p><!--l. 5129--><p class="indent" >    The rounding to 5 to (hopefully) help garbage collection.
+</p>
+
+      <!--l. 5143--><p class="indent" ><a 
+ name="PrTx66041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66039"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">beyond</span>&#x00A0;<span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx66042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(col</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">8)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">5</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">5;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx66043"  href="#PrTx66033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66044"  href="#PrTx66046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].line,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">n--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">n)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">*(ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">(ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">col)</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">!</span><a 
+ name="PrTx66045"  href="#PrTx66043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66046"  href="#PrTx66050"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;insert</span><span 
+class="cmtt-10">&#x00A0;char</span><span 
+class="cmtt-10">&#x00A0;beyond</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;map</span><span 
+class="cmtt-10">&#x00A0;lineNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">n</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;(col</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;8)</span><span 
+class="cmtt-10">&#x00A0;/</span><span 
+class="cmtt-10">&#x00A0;5</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;5;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;+=</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;ch:</span><span 
+class="cmtt-10">&#x00A0;1,</span><span 
+class="cmtt-10">&#x00A0;ruler:</span><span 
+class="cmtt-10">&#x00A0;0&#8216;&#x003E;;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;+=</span><span 
+class="cmtt-10">&#x00A0;n;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;(char</span><span 
+class="cmtt-10">&#x00A0;*)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;r_alloc((void</span><span 
+class="cmtt-10">&#x00A0;*)</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].line,</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(size_t)</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;1);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;n--</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*(ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;n)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">*(ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;(ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;col)</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;¡&#x003C;ch:</span><span 
+class="cmtt-10">&#x00A0;1,</span><span 
+class="cmtt-10">&#x00A0;ruler:</span><span 
+class="cmtt-10">&#x00A0;0&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;filter_bound_ch(ch);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 5186--><p class="noindent" ><a 
+ name="PrTx66047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66037"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">within</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx66048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<a 
+ name="PrTx66049"  href="#PrTx66045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx66050"  href="#PrTx67010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">1)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">1)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx66051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66057"><span 
+class="cmtt-10">get room for ch</span></a><a 
+ name="PrTx66052"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(ch_map[row].chars--)</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">col;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">unsigned</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">temp_ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">(*p))</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx66053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx66054"  href="#PrTx66056"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">col--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">temp_ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">*(--p);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">temp_ch;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">col;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">col</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">(*p))</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx66055"  href="#PrTx66053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx66056"  href="#PrTx68014"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">col--;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">p--;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">*(++p)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;insert</span><span 
+class="cmtt-10">&#x00A0;char</span><span 
+class="cmtt-10">&#x00A0;within</span><span 
+class="cmtt-10">&#x00A0;map</span><span 
+class="cmtt-10">&#x00A0;lineNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;ch:</span><span 
+class="cmtt-10">&#x00A0;1,</span><span 
+class="cmtt-10">&#x00A0;ruler:</span><span 
+class="cmtt-10">&#x00A0;0&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*(ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;1)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;||</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;1)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;get</span><span 
+class="cmtt-10">&#x00A0;room</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;ch&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;(ch_map[row].chars--)</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;col;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;while(</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;((unsigned</span><span 
+class="cmtt-10">&#x00A0;char)</span><span 
+class="cmtt-10">&#x00A0;(*p))</span><span 
+class="cmtt-10">&#x00A0;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;design</span><span 
+class="cmtt-10">&#x00A0;bound&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;col--;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*(p+1)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;*(--p);</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].chars</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;col;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].line</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;ch_map[row].max;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;while(</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;((unsigned</span><span 
+class="cmtt-10">&#x00A0;char)</span><span 
+class="cmtt-10">&#x00A0;(*p))</span><span 
+class="cmtt-10">&#x00A0;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;design</span><span 
+class="cmtt-10">&#x00A0;bound&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;col--;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;p--;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">*(++p)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;filter_bound_ch(ch);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 5223--><p class="noindent" ><a 
+ name="PrTx66057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx66051"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">room</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx66058"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">5;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].line,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">n&#x003C;5;</span>&#x00A0;<span 
+class="cmtt-10">n++</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(ch_map[row].line</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch_map[row].max</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">n)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch_map[row].chars</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">5;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5226--><p class="noindent" >REMOVE FILTER!!!!!!
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;header</span><span 
+class="cmtt-10">&#x00A0;functionsNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">INTEGER</span><span 
+class="cmtt-10">&#x00A0;filter_bound_ch(</span><span 
+class="cmtt-10">&#x00A0;ARG_I(INTEGER)</span><span 
+class="cmtt-10">&#x00A0;);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-16-67"  name="QQ1-16-67">With Rulers</a></h3>
+           <!--l. 5263--><p class="noindent" ><a 
+ name="PrTx67001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh3.html#PrTx43013"><span 
+class="cmtt-10">ruler</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">map</span></a><a 
+ name="PrTx67002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">sv_x_val,</span>&#x00A0;<span 
+class="cmtt-10">sv_y_val,</span>&#x00A0;<span 
+class="cmtt-10">sv_right,</span>&#x00A0;<span 
+class="cmtt-10">sv;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_x_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">x_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_y_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">y_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_right</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">right;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">y_val-=up;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">right;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-right;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">up</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">up;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">up</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-up;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">(right</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">xresolution)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(up</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">yresolution)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx67003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63011"><span 
+class="cmtt-10">black ch</span></a><a 
+ name="PrTx67004"  href="#PrTx68032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">up</span>&#x00A0;<span 
+class="cmtt-10">)?</span>&#x00A0;<a 
+ name="PrTx67005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63007"><span 
+class="cmtt-10">h ch</span></a><a 
+ name="PrTx67006"  href="#PrTx68028"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<a 
+ name="PrTx67007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63009"><span 
+class="cmtt-10">v ch</span></a><a 
+ name="PrTx67008"  href="#PrTx68030"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">x_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">up</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">sv</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">y_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">;</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">right;</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">xresolution</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv</span>&#x00A0;<span 
+class="cmtt-10">;</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">up;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">yresolution</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">insert_ch_map((char)</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">FALSE);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_x_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_y_val;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">sv_x_val</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">sv_right</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">max_x_val</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">max_x_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_x_val</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">sv_right;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<a 
+ name="PrTx67009"  href="#PrTx66049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx66003"><span 
+class="cmtt-10">ch: 1, ruler: 0</span></a><a 
+ name="PrTx67010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">sv_right;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">5.4 <a 
+ href="tex4ht-c.html#QQ2-16-68"  name="QQ1-16-68">Dump Map</a></h3>
+           <!--l. 5274--><p class="noindent" ><a 
+ name="PrTx68001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx62005"><span 
+class="cmtt-10">exit</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">map</span></a><a 
+ name="PrTx68002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">dump_ch_map();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5276--><p class="noindent" >We need memory of order 2 times the number of characters.
+</p>
+      <!--l. 5282--><p class="indent" ><a 
+ name="PrTx68003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh2.html#PrTx30011"><span 
+class="cmtt-10">dump</span>&#x00A0;<span 
+class="cmtt-10">ch-map</span>&#x00A0;<span 
+class="cmtt-10">at</span>&#x00A0;<span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">page</span></a><a 
+ name="PrTx68004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch_map_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">warn_i(27);</span>&#x00A0;&#x00A0;<i>&#x00A0;<span 
+class="cmtt-10">dump_ch_map();</span></i>&#x00A0;&#x00A0;<span 
+class="cmtt-10">init_ch_map();</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5284--><p class="noindent" >&#8216;<span 
+class="cmtt-10">dump_ch_map();</span>&#8217; creates overflow problems here.
+
+</p>
+      <!--l. 5288--><p class="indent" ><a 
+ href="#PrTx66005"  name="PrTx68005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx68006"  href="tex4ht-cCh6.html#PrTx76062"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">dump_ch_map(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(void)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5319--><p class="noindent" ><a 
+ href="#PrTx66007"  name="PrTx68007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx68008"  href="tex4ht-cCh6.html#PrTx76064"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">dump_ch_map(MYVOID)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">n,</span>&#x00A0;<span 
+class="cmtt-10">i,</span>&#x00A0;<span 
+class="cmtt-10">min,</span>&#x00A0;<span 
+class="cmtt-10">k,</span>&#x00A0;<span 
+class="cmtt-10">extra_sp;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i>&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">map_line_type</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*q;</span>&#x00A0;</i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx68009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx68019"><span 
+class="cmtt-10">min := start of bounding box</span></a><a 
+ name="PrTx68010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=min_map_line;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;=max_map_line;</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[i].max)</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[i].line;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">k</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">min;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">extra_sp</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx68011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx68021"><span 
+class="cmtt-10">ignore trailing spaces</span></a><a 
+ name="PrTx68012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">n--</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">--k</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">extra_sp</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">*p)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx68013"  href="#PrTx66055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx68014"  href="#PrTx68016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">*(p+1))</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx68015"  href="#PrTx68013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx68016"  href="#PrTx68024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">extra_sp--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx68017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx68025"><span 
+class="cmtt-10">dump ch</span></a><a 
+ name="PrTx68018"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch_map[i].line</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;max_map_line</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">put_char(&#8217;\n&#8217;);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">nomargin</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5334--><p class="noindent" ><a 
+ name="PrTx68019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68009"><span 
+class="cmtt-10">min</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">bounding</span>&#x00A0;<span 
+class="cmtt-10">box</span></a><a 
+ name="PrTx68020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">max;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">min</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">100;</span>&#x00A0;<span 
+class="cmtt-10">max</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=min_map_line;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;=max_map_line;</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[i].line;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch_map[i].max;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">max</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">max</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">k</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">n--</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">if(*(p++))</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">k++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch_map[i].max</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(k</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">min)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">min</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">k;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(max</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">78)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!nomargin</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">min</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5343--><p class="noindent" ><a 
+ name="PrTx68021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68011"><span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">trailing</span>&#x00A0;<span 
+class="cmtt-10">spaces</span></a><a 
+ name="PrTx68022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*s;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!(*s)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!(*(s-1))</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">n--;</span>&#x00A0;<span 
+class="cmtt-10">s--;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!(*s)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">*(s-1))</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx68023"  href="#PrTx68015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx68024"  href="#PrTx68038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">n--;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5352--><p class="noindent" ><a 
+ name="PrTx68025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68017"><span 
+class="cmtt-10">dump</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx68026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">0:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">put_char(&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;);</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx68027"  href="#PrTx67005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63007"><span 
+class="cmtt-10">h ch</span></a><a 
+ name="PrTx68028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">put_char(&#8217;-&#8217;);</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx68029"  href="#PrTx67007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63009"><span 
+class="cmtt-10">v ch</span></a><a 
+ name="PrTx68030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">put_char(&#8217;|&#8217;);</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx68031"  href="#PrTx67003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63011"><span 
+class="cmtt-10">black ch</span></a><a 
+ name="PrTx68032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">put_char(&#8217;#&#8217;);</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">extra_sp++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx68033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx68035"><span 
+class="cmtt-10">insert ch from map into file</span></a><a 
+ name="PrTx68034"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 5364--><p class="noindent" ><a 
+ name="PrTx68035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68033"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">map</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx68036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">tag;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">count;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">tag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">count</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">do{</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;&#x003C;&#8217;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">tag</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;&#x003E;&#8217;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">tag</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">count</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">tag;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">put_char(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">n--;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}while(</span>&#x00A0;<span 
+class="cmtt-10">((unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">*(++p))</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;=</span>&#x00A0;<a 
+ name="PrTx68037"  href="#PrTx68023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx63013"><span 
+class="cmtt-10">design bound</span></a><a 
+ name="PrTx68038"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!count</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">n++;</span>&#x00A0;<span 
+class="cmtt-10">p--;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5367--><p class="noindent" >COUNT the number of characters and issue a warning if over limit (1024 default).
+
+</p>
+    <!--l. 5371--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh6.html" >next</a>] [<a 
+ href="tex4ht-cCh4.html" >prev</a>] [<a 
+ href="tex4ht-cCh4.html#tailtex4ht-cCh4.html" >prev-tail</a>] [<a 
+ href="tex4ht-cCh5.html" >front</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh5.html" >up</a>] </p></div>
+<!--l. 5371--><p class="indent" >    <a 
+  name="tailtex4ht-cCh5.html"></a>  </p> 
+</body></html> 

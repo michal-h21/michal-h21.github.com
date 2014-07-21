@@ -1,0 +1,2249 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Javascript: Pop-ups On Mouse Over</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,sections+ --> 
+<meta name="src" content="tex4ht-html4.tex" /> 
+<meta name="date" content="2014-07-14 18:32:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-html4.css" /> 
+</head><body 
+>
+   <!--l. 6518--><div class="crosslinks"><p class="noindent">[<a 
+ href="#tailtex4ht-html4se25.html">tail</a>] [<a 
+ href="tex4ht-html4ch4.html#tex4ht-html4se25.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">4.1   </span> <a 
+ href="tex4ht-html4.html#QQ2-32-86"  id="x32-860004.1">Javascript: Pop-ups On Mouse Over</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.1 <a 
+ href="#x32-870004.1.1">Background</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.2 <a 
+ href="#x32-880004.1.2">End Points of the Jobname-js.tex File</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.3 <a 
+ href="#x32-890004.1.3">Configuration Commands</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.4 <a 
+ href="#x32-900004.1.4">Footnotes Contributions</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.5 <a 
+ href="#x32-910004.1.5">Overlib</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.6 <a 
+ href="#x32-920004.1.6">Boundary Cases for mouseover</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.1.7 <a 
+ href="#x32-930004.1.7">The Configuration File onmouseover.4ht</a></span>
+   </div>
+<!--l. 6523--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.1   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-87"  id="x32-870004.1.1">Background</a></h4>
+<!--l. 6527--><p class="noindent" >There are 6 supporting dvi variations of the &#8216;CopyTo to-file op group&#8217; dvi
+command:
+     </p><dl class="description"><dt class="description">
+<span 
+class="cmbx-10">From</span> </dt><dd 
+class="description">Start copying (at current address)
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Until</span> </dt><dd 
+class="description">End copying (at current address)
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Skip</span> </dt><dd 
+class="description">Start skipping (from current address)
+
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Cont</span> </dt><dd 
+class="description">End skipping (at current-address)
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Addr integer-label</span> </dt><dd 
+class="description">Associate current address with the integer-label of the
+     given group
+     </dd><dt class="description">
+<span 
+class="cmbx-10">Set integer-label</span> </dt><dd 
+class="description">Replace the &#8216;current address&#8217; in the following Skip/Cont
+     (and  From/Until  ?)  commands  with  the  address  associated  to  the
+     integer-label of the given group by an Addr command</dd></dl>
+<!--l. 6544--><p class="indent" >   The code
+
+</p>
+   <div class="verbatim" id="verbatim-9">
+B0
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;From&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B1
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Skip&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B2
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Addr1&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B3
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Addr2&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B4
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Set1&#x00A0;bib&#x00A0;}
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Cont&#x00A0;bib&#x00A0;}
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Set2&#x00A0;bib&#x00A0;}
+&#x00A0;<br />&#x00A0;\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Skip&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B5
+&#x00A0;<br />\ht:special&#x00A0;{t4ht@DCopyTo:&#x00A0;\jobname-js.tex&#x00A0;Until&#x00A0;bib&#x00A0;}
+&#x00A0;<br />B6
+</div>
+<!--l. 6562--><p class="nopar" >
+</p><!--l. 6564--><p class="indent" >   produces the string &#8216; B1 B3 &#8217;.
+</p><!--l. 6568--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.2   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-88"  id="x32-880004.1.2">End Points of the Jobname-js.tex File</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-433"><div class="head">
+       <a 
+ id="PrTx88001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se13.html#PrTx30015"  id="QPrTx433"><span 
+class="cmtt-10">start</span><span 
+class="cmtt-10">&#x00A0;js</span></a><a 
+ id="PrTx88002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\js:on</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-434"><div class="head">
+       <a 
+ id="PrTx88003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx434"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx88004"  href="#PrTx89002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\js:on{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\js:on=\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;!--}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88021"><span 
+class="cmtt-10">js From js</span></a><a 
+ id="PrTx88006"  href="#PrTx88018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\string\def\string\jstoday{\:today}</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\string\input\space</span><span 
+class="cmtt-10">&#x00A0;onmouseover.4ht</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{trace-onmo}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;js</span><span 
+class="cmtt-10">&#x00A0;trace="on"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;mouseover</span><span 
+class="cmtt-10">&#x00A0;tracing</span><span 
+class="cmtt-10">&#x00A0;of</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;compilation,</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;trace-onmo&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;js&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88023"><span 
+class="cmtt-10">js Until js</span></a><a 
+ id="PrTx88008"  href="#PrTx88020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{--&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88011"><span 
+class="cmtt-10">end js</span></a><a 
+ id="PrTx88010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-435"><div class="head">
+       <a 
+ id="PrTx88011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88009"  id="QPrTx435"><span 
+class="cmtt-10">end</span><span 
+class="cmtt-10">&#x00A0;js</span></a><a 
+ id="PrTx88012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-Needs\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.js</span><span 
+class="cmtt-10">&#x00A0;{text-indent:0;</span><span 
+class="cmtt-10">&#x00A0;background-color:aqua;</span><span 
+class="cmtt-10">&#x00A0;color:black;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;border:solid</span><span 
+class="cmtt-10">&#x00A0;1px</span><span 
+class="cmtt-10">&#x00A0;black;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;margin:2pt;</span><span 
+class="cmtt-10">&#x00A0;width:99\%;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.js</span><span 
+class="cmtt-10">&#x00A0;p,</span><span 
+class="cmtt-10">&#x00A0;.</span><a 
+ id="PrTx88013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se13.html#PrTx29057"><span 
+class="cmtt-10">js p.bibitem css</span></a><a 
+ id="PrTx88014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se13.html#PrTx29055"><span 
+class="cmtt-10">js p.bibitem-p css</span></a><a 
+ id="PrTx88016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;{text-indent:0;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;background-color:aqua;</span><span 
+class="cmtt-10">&#x00A0;color:black;</span><span 
+class="cmtt-10">&#x00A0;margin:2pt;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\AtEndDocument{{\HCode{&#x003C;!--}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88017"  href="#PrTx88005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88021"><span 
+class="cmtt-10">js From js</span></a><a 
+ id="PrTx88018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/js&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx88019"  href="#PrTx88007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88023"><span 
+class="cmtt-10">js Until js</span></a><a 
+ id="PrTx88020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{--&#x003E;}}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 6613--><p class="indent" >   Was <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\Css{.js</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;{margin:0;</span><span 
+class="cmtt-10">&#x00A0;text-indent:0;}}</span></span></span> but javascript under netscape
+had problems dealing with 0 left margins.
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-436"><div class="head">
+       <a 
+ id="PrTx88021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88005"  id="QPrTx436"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;js</span></a><a 
+ id="PrTx88022"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-437"><div class="head">
+       <a 
+ id="PrTx88023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88007"  id="QPrTx437"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;js</span></a><a 
+ id="PrTx88024"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 6632--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.3   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-89"  id="x32-890004.1.3">Configuration Commands</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-438"><div class="head">
+       <a 
+ href="#PrTx88003"  id="PrTx89001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx438"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx89002"  href="#PrTx89014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\MO:script</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{mouseover-script}[1]{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\MO:script</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\NextFile</span><span 
+class="cmtt-10">&#x00A0;\expandafter{\jobname\MO:script.tmp}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HPage{}\IgnorePar</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx89003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89009"><span 
+class="cmtt-10">js From var</span></a><a 
+ id="PrTx89004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\else</span><span 
+class="cmtt-10">&#x00A0;mouseover-script\fi&#x003E;#1\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\else</span><span 
+class="cmtt-10">&#x00A0;=\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\everyvbox{\IgnorePar\everyvbox{}\aftergroup\end:movar}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\end:movar{\everyvbox{}\HCode</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;/\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\else</span><span 
+class="cmtt-10">&#x00A0;mouseover-script\fi&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx89005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89011"><span 
+class="cmtt-10">js Until var</span></a><a 
+ id="PrTx89006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndHPage{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\vbox}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-439"><div class="head">
+       <a 
+ id="PrTx89007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se18.html#PrTx56175"  id="QPrTx439"><span 
+class="cmtt-10">ol-hauto</span><span 
+class="cmtt-10">&#x00A0;mouseover-script</span></a><a 
+ id="PrTx89008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure</span><span 
+class="cmtt-10">&#x00A0;{mouseover-script}{}{\HCode{ol\string_hauto</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;1;}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-440"><div class="head">
+       <a 
+ id="PrTx89009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx89003"  id="QPrTx440"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;var</span></a><a 
+ id="PrTx89010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;var</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-441"><div class="head">
+       <a 
+ id="PrTx89011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx89005"  id="QPrTx441"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;var</span></a><a 
+ id="PrTx89012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;var</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-442"><div class="head">
+       <a 
+ href="#PrTx89001"  id="PrTx89013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx442"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx89014"  href="#PrTx91018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;c:mouseover-vars:\endcsname#1#2{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;mouseover-#1-init\endcsname##1{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempc##1{\expandafter\append:defI\csname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;mouseover-#1-init\endcsname{tex4ht.##1=tex4ht.\expandafter\jsHash</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter{\expandafter</span><span 
+class="cmtt-10">&#x00A0;v####1.##1};}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Mo:vars#2,&#x003C;&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Mo:vars#1,#2&#x003C;&#x003E;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;mo#1\endcsname##1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;!--}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;#1-var&#x003E;\jsHash{v##1.#1}=}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Skip</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{--&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Cont</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;endmo#1\endcsname{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Skip</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;!--}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Cont</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/#1-var&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{--&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:tempc{#1}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#2!\else</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Mo:vars#2&#x003C;&#x003E;}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 6704--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.4   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-90"  id="x32-900004.1.4">Footnotes Contributions</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-443"><div class="head">
+       <a 
+ id="PrTx90001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se18.html#PrTx61017"  id="QPrTx443"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;fn</span></a><a 
+ id="PrTx90002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;From</span><span 
+class="cmtt-10">&#x00A0;fn</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-444"><div class="head">
+       <a 
+ id="PrTx90003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se18.html#PrTx61021"  id="QPrTx444"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;Skip</span><span 
+class="cmtt-10">&#x00A0;fn</span></a><a 
+ id="PrTx90004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Skip</span><span 
+class="cmtt-10">&#x00A0;fn</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-445"><div class="head">
+       <a 
+ id="PrTx90005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se18.html#PrTx61023"  id="QPrTx445"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;Cont</span><span 
+class="cmtt-10">&#x00A0;fn</span></a><a 
+ id="PrTx90006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Cont</span><span 
+class="cmtt-10">&#x00A0;fn</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-446"><div class="head">
+       <a 
+ id="PrTx90007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se18.html#PrTx61031"  id="QPrTx446"><span 
+class="cmtt-10">js</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;fn</span></a><a 
+ id="PrTx90008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special</span><span 
+class="cmtt-10">&#x00A0;{t4ht@DCopyTo:</span><span 
+class="cmtt-10">&#x00A0;\jobname-js.tex</span><span 
+class="cmtt-10">&#x00A0;Until</span><span 
+class="cmtt-10">&#x00A0;fn</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 6730--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.5   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-91"  id="x32-910004.1.5">Overlib</a></h4>
+<!--l. 6733--><p class="noindent" ><a 
+ href="http://www.egroups.com/group/overlib" >egroup for overlib</a>, <a 
+ href="http://www.bosrup.com/web/overlib/" >home over overlib</a>
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-447"><div class="head">
+       <a 
+ id="PrTx91001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se4.html#PrTx6003"  id="QPrTx447"><span 
+class="cmtt-10">overDiv</span></a><a 
+ id="PrTx91002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;id="overDiv"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;style="position:absolute;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;visibility:hidden;</span><span 
+class="cmtt-10">&#x00A0;z-index:1000;"&#x003E;&#x003C;/div&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-448"><div class="head">
+       <a 
+ id="PrTx91003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se1.html#PrTx3015"  id="QPrTx448"><span 
+class="cmtt-10">onmouseover</span><span 
+class="cmtt-10">&#x00A0;@HEAD</span></a><a 
+ id="PrTx91004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{@HEAD}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{%</span><i><span 
+class="cmtt-10">&#x00A0;natural</span><span 
+class="cmtt-10">&#x00A0;place</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;&#x003C;overlib</span><span 
+class="cmtt-10">&#x00A0;src&#x003E;,</span><span 
+class="cmtt-10">&#x00A0;but</span><span 
+class="cmtt-10">&#x00A0;netscape</span><span 
+class="cmtt-10">&#x00A0;4.7...</span></i>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;script</span><span 
+class="cmtt-10">&#x00A0;type="text/javascript"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;src="\jobname-js.js"&#x003E;&#x003C;/script&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx92003"><span 
+class="cmtt-10">overlib src</span></a><a 
+ id="PrTx91006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx91007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88003"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx91008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{info}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx91011"><span 
+class="cmtt-10">overlib info</span></a><a 
+ id="PrTx91010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-449"><div class="head">
+       <a 
+ id="PrTx91011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91009"  id="QPrTx449"><span 
+class="cmtt-10">overlib</span><span 
+class="cmtt-10">&#x00A0;info</span></a><a 
+ id="PrTx91012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Log:Note{Option</span><span 
+class="cmtt-10">&#x00A0;&#8216;mouseover&#8217;</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;powered</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;overlib.js</span><span 
+class="cmtt-10">&#x00A0;utility</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;Erik</span><span 
+class="cmtt-10">&#x00A0;Bosrup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(http://www.bosrup.com/web/overlib/).}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{The</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;requires</span><span 
+class="cmtt-10">&#x00A0;two</span><span 
+class="cmtt-10">&#x00A0;compilations</span><span 
+class="cmtt-10">&#x00A0;of</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;source</span><span 
+class="cmtt-10">&#x00A0;file.}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{Use</span><span 
+class="cmtt-10">&#x00A0;\string\Configure</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{mouseover-XXX}{...}</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;introduce</span><span 
+class="cmtt-10">&#x00A0;extra</span><span 
+class="cmtt-10">&#x00A0;arguments</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;overlib</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;function</span><span 
+class="cmtt-10">&#x00A0;call</span><span 
+class="cmtt-10">&#x00A0;&#8216;return</span><span 
+class="cmtt-10">&#x00A0;overlib(...)&#8217;.</span><span 
+class="cmtt-10">&#x00A0;XXX</span><span 
+class="cmtt-10">&#x00A0;stands</span><span 
+class="cmtt-10">&#x00A0;for</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8216;cite&#8217;,</span><span 
+class="cmtt-10">&#x00A0;&#8216;footnote&#8217;,</span><span 
+class="cmtt-10">&#x00A0;or</span><span 
+class="cmtt-10">&#x00A0;&#8217;gloss&#8217;.</span><span 
+class="cmtt-10">&#x00A0;The</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;body</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;at</span><span 
+class="cmtt-10">&#x00A0;tex4ht.body,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;caption</span><span 
+class="cmtt-10">&#x00A0;at</span><span 
+class="cmtt-10">&#x00A0;tex4ht.caption.</span><span 
+class="cmtt-10">&#x00A0;An</span><span 
+class="cmtt-10">&#x00A0;empty</span><span 
+class="cmtt-10">&#x00A0;parameter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;requests</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;sensitivity</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;mouse</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;specified</span><span 
+class="cmtt-10">&#x00A0;type</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;entries.}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{The</span><span 
+class="cmtt-10">&#x00A0;variant</span><span 
+class="cmtt-10">&#x00A0;\string\Configure</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{mouseover-XXX}[labels]{...}</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;above</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;restricts</span><span 
+class="cmtt-10">&#x00A0;the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;outcome</span><span 
+class="cmtt-10">&#x00A0;just</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;listed</span><span 
+class="cmtt-10">&#x00A0;labels</span><span 
+class="cmtt-10">&#x00A0;(i.e.,</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;values</span><span 
+class="cmtt-10">&#x00A0;listed</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;tex4ht.caption).}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{The</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-script}{variable-name}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{javascript-code}</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;may</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;used</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;introduce</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;javascript</span><span 
+class="cmtt-10">&#x00A0;file,</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;content</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;global</span><span 
+class="cmtt-10">&#x00A0;variable</span><span 
+class="cmtt-10">&#x00A0;when</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;is</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;given</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;bare</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;when</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;given.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;To</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;referenced,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;must</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;prefixed</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;tex4ht.&#8217;.}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{The</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-vars}{XXX}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{variable-list}</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;introduces</span><span 
+class="cmtt-10">&#x00A0;local</span><span 
+class="cmtt-10">&#x00A0;variables,</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;referenced</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;prefix</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;tex4ht.&#8217;</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;their</span><span 
+class="cmtt-10">&#x00A0;names.</span><span 
+class="cmtt-10">&#x00A0;In</span><span 
+class="cmtt-10">&#x00A0;addition,</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;each</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;variable</span><span 
+class="cmtt-10">&#x00A0;YYY</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;introduces</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;construct</span><span 
+class="cmtt-10">&#x00A0;\string\moYYY</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{label}...\string\endmoYYY\space</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;selecting</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;value</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;variable</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;at</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;specified</span><span 
+class="cmtt-10">&#x00A0;label.}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{Example:}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-script}{var}{\HCode{&#x003C;hr</span><span 
+class="cmtt-10">&#x00A0;/&#x003E;}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{</span><a 
+ id="PrTx91013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se13.html#PrTx28011"><span 
+class="cmtt-10">mouseover cite config</span></a><a 
+ id="PrTx91014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{</span><a 
+ id="PrTx91015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se13.html#PrTx28013"><span 
+class="cmtt-10">mouseover cite css</span></a><a 
+ id="PrTx91016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">.}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\moAuthor{bb}A</span><span 
+class="cmtt-10">&#x00A0;name\string\endmoAuthor</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{The</span><span 
+class="cmtt-10">&#x00A0;compilation</span><span 
+class="cmtt-10">&#x00A0;indirectly</span><span 
+class="cmtt-10">&#x00A0;invokes</span><span 
+class="cmtt-10">&#x00A0;the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;&#8217;xhtex</span><span 
+class="cmtt-10">&#x00A0;\string\jobname-js&#8217;.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;An</span><span 
+class="cmtt-10">&#x00A0;alternative</span><span 
+class="cmtt-10">&#x00A0;format</span><span 
+class="cmtt-10">&#x00A0;for</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;can</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;requested</span><span 
+class="cmtt-10">&#x00A0;within</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;configuration</span><span 
+class="cmtt-10">&#x00A0;of</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;form</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-Needs}{\string\Needs{"..."}}.</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;The</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;setting</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;due</span><span 
+class="cmtt-10">&#x00A0;to</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-Needs}{\string\Needs{"xhtex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\jobname-js"}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{In</span><span 
+class="cmtt-10">&#x00A0;case</span><span 
+class="cmtt-10">&#x00A0;\string\Configure{mouseover-Needs}</span><span 
+class="cmtt-10">&#x00A0;is</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;undefined,</span><span 
+class="cmtt-10">&#x00A0;introduce</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;instruction</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\NewConfigure{mouseover-Needs}{1}</span><span 
+class="cmtt-10">&#x00A0;before</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;command.</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-450"><div class="head">
+       <a 
+ href="#PrTx89013"  id="PrTx91017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx450"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx91018"  href="#PrTx93016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;mouseover-Needs\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\NewConfigure{mouseover-Needs}{1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{mouseover-Needs}{\Needs{"xhtex</span><span 
+class="cmtt-10">&#x00A0;\jobname-js"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\mo:args#1#2#3{\expandafter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-#1-#2\endcsname\empty\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-#1-#2\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx91023"><span 
+class="cmtt-10">global mouseover-type</span></a><a 
+ id="PrTx91020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx91027"><span 
+class="cmtt-10">private mouseover-type</span></a><a 
+ id="PrTx91022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-451"><div class="head">
+       <a 
+ id="PrTx91023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91019"  id="QPrTx451"><span 
+class="cmtt-10">global</span><span 
+class="cmtt-10">&#x00A0;mouseover-type</span></a><a 
+ id="PrTx91024"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-#1\endcsname\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;onmouseover="tex4ht.body=tex4ht.#3;</span><span 
+class="cmtt-10">&#x00A0;tex4ht.caption=&#8217;#2&#8217;;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx91031"><span 
+class="cmtt-10">init mouseover vars</span></a><a 
+ id="PrTx91026"  href="#PrTx91030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;return</span><span 
+class="cmtt-10">&#x00A0;overlib(\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-#1\endcsname);"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;onmouseout="nd();"\Hnewline\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-452"><div class="head">
+       <a 
+ id="PrTx91027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91021"  id="QPrTx452"><span 
+class="cmtt-10">private</span><span 
+class="cmtt-10">&#x00A0;mouseover-type</span></a><a 
+ id="PrTx91028"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;onmouseover="tex4ht.body=tex4ht.#3;</span><span 
+class="cmtt-10">&#x00A0;tex4ht.caption=&#8217;#2&#8217;;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx91029"  href="#PrTx91025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx91031"><span 
+class="cmtt-10">init mouseover vars</span></a><a 
+ id="PrTx91030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;return</span><span 
+class="cmtt-10">&#x00A0;overlib(\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-#1-#2\endcsname);"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hnewline</span><span 
+class="cmtt-10">&#x00A0;onmouseout="nd();"\Hnewline</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-453"><div class="head">
+       <a 
+ id="PrTx91031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91025"  id="QPrTx453"><span 
+class="cmtt-10">init</span><span 
+class="cmtt-10">&#x00A0;mouseover</span><span 
+class="cmtt-10">&#x00A0;vars</span></a><a 
+ id="PrTx91032"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;mouseover-#1-init\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;mouseover-#1-init\endcsname{#2}\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 6851--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.6   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-92"  id="x32-920004.1.6">Boundary Cases for mouseover</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-454"><div class="head">
+       <a 
+ id="PrTx92001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se3.html#PrTx5015"  id="QPrTx454"><span 
+class="cmtt-10">DOCTYPE</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;PROLOG</span><span 
+class="cmtt-10">&#x00A0;under</span><span 
+class="cmtt-10">&#x00A0;mouseover</span></a><a 
+ id="PrTx92002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{xhtml}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{DOCTYPE}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{to</span><span 
+class="cmtt-10">&#x00A0;request</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;DOCTYPE</span><span 
+class="cmtt-10">&#x00A0;declaration</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;DOCTYPE&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\edef\Preamble{\Preamble,no-DOCTYPE}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-455"><div class="head">
+       <a 
+ id="PrTx92003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91005"  id="QPrTx455"><span 
+class="cmtt-10">overlib</span><span 
+class="cmtt-10">&#x00A0;src</span></a><a 
+ id="PrTx92004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;script</span><span 
+class="cmtt-10">&#x00A0;type="text/javascript"</span><span 
+class="cmtt-10">&#x00A0;src="overlib.js"&#x003E;&#x003C;!--</span><span 
+class="cmtt-10">&#x00A0;overLIB</span><span 
+class="cmtt-10">&#x00A0;(c)</span><span 
+class="cmtt-10">&#x00A0;Erik</span><span 
+class="cmtt-10">&#x00A0;Bosrup</span><span 
+class="cmtt-10">&#x00A0;--&#x003E;&#x003C;/script&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;!--http://www.bosrup.com/web/overlib/--&#x003E;%</span></span></div><div class="tail">-_-_-
+   </div></div>
+     <ul class="itemize1">
+     <li class="itemize">
+
+     <div class="verbatim" id="verbatim-10">
+     THE&#x00A0;DOCUMENT&#x00A0;DECLARATION&#x00A0;GIVES&#x00A0;TROUBLE&#x00A0;IN&#x00A0;CONNECTION&#x00A0;WITH&#x00A0;OVERLIB.&#x00A0;&#x00A0;It
+     &#x00A0;<br />would&#x00A0;be&#x00A0;hardly&#x00A0;noticeable&#x00A0;in&#x00A0;small&#x00A0;pages,&#x00A0;requiring&#x00A0;no&#x00A0;scrolling&#x00A0;-
+     &#x00A0;<br />the&#x00A0;only&#x00A0;symptom&#x00A0;then&#x00A0;is&#x00A0;that&#x00A0;the&#x00A0;browser&#x00A0;suddenly&#x00A0;warns&#x00A0;about&#x00A0;errors
+     &#x00A0;<br />-&#x00A0;those&#x00A0;ones&#x00A0;in&#x00A0;overlib,&#x00A0;and&#x00A0;as&#x00A0;a&#x00A0;matter&#x00A0;of&#x00A0;fact,&#x00A0;apparently&#x00A0;in&#x00A0;the
+     &#x00A0;<br />part&#x00A0;of&#x00A0;the&#x00A0;script&#x00A0;that&#x00A0;ensures&#x00A0;compatibility&#x00A0;with&#x00A0;Netscape.&#x00A0;&#x00A0;However,
+     &#x00A0;<br />in&#x00A0;a&#x00A0;large&#x00A0;page,&#x00A0;the&#x00A0;pop-ups&#x00A0;seem&#x00A0;to&#x00A0;disappear&#x00A0;-&#x00A0;making&#x00A0;them&#x00A0;STICKY
+     &#x00A0;<br />and&#x00A0;scrolling&#x00A0;up,&#x00A0;one&#x00A0;can&#x00A0;find&#x00A0;them&#x00A0;in&#x00A0;the&#x00A0;upper&#x00A0;right&#x00A0;corner.&#x00A0;&#x00A0;One
+     &#x00A0;<br />has&#x00A0;only&#x00A0;to&#x00A0;remove&#x00A0;&#x003C;!DOCTYPE&#x00A0;html&#x00A0;PUBLIC&#x00A0;"-//W3C//DTD&#x00A0;HTML&#x00A0;4.01
+     &#x00A0;<br />Transitional//EN"&#x00A0;"http://www.w3.org/TR/html4/loose.dtd"&#x003E;&#x00A0;however,&#x00A0;to
+     &#x00A0;<br />put&#x00A0;an&#x00A0;end&#x00A0;to&#x00A0;the&#x00A0;browser&#x00A0;complaints&#x00A0;and&#x00A0;get&#x00A0;back&#x00A0;the&#x00A0;pop-ups&#x00A0;into
+     &#x00A0;<br />their&#x00A0;proper&#x00A0;places.&#x00A0;&#x00A0;
+</div>
+     <!--l. 6896--><p class="nopar" >
+     </p></li>
+     <li class="itemize">
+
+     <div class="verbatim" id="verbatim-11">
+     &#x00A0;I
+     &#x00A0;<br />have&#x00A0;just&#x00A0;found&#x00A0;a&#x00A0;reference&#x00A0;to&#x00A0;the&#x00A0;trouble,&#x00A0;together&#x00A0;with&#x00A0;a&#x00A0;very&#x00A0;easy
+     &#x00A0;<br />way&#x00A0;to&#x00A0;go&#x00A0;round&#x00A0;it:&#x00A0;it&#x00A0;is&#x00A0;enough&#x00A0;to&#x00A0;add&#x00A0;&#x003C;?xml&#x00A0;version="1.1"?&#x003E;&#x00A0;BEFORE
+     &#x00A0;<br />the&#x00A0;Document&#x00A0;declaration.&#x00A0;I&#x00A0;have&#x00A0;checked&#x00A0;it,&#x00A0;and&#x00A0;it&#x00A0;is&#x00A0;all&#x00A0;right&#x00A0;-
+     &#x00A0;<br />both&#x00A0;for&#x00A0;Explorer6&#x00A0;and&#x00A0;Netscape&#x00A0;4.7&#x00A0;and&#x00A0;6.
+     &#x00A0;<br />
+     &#x00A0;<br />By&#x00A0;the&#x00A0;way:&#x00A0;for&#x00A0;the&#x00A0;Mouseover&#x00A0;option&#x00A0;to&#x00A0;work&#x00A0;under&#x00A0;Netscape4.x,&#x00A0;the&#x00A0;call&#x00A0;to
+     &#x00A0;<br />&#x003C;script&#x00A0;type="text/JavaScript"&#x00A0;src="overlib.js"&#x003E;&#x003C;/script&#x003E;
+     &#x00A0;<br />&#x003C;!--http://www.bosrup.com/web/overlib/&#x00A0;(Erik&#x00A0;Bosrup)--&#x003E;
+     &#x00A0;<br />MUST&#x00A0;appear&#x00A0;in&#x00A0;the&#x00A0;&#x003C;BODY&#x003E;&#x00A0;section,&#x00A0;NOT&#x00A0;in&#x00A0;the&#x00A0;&#x003C;HEAD&#x003E;:&#x00A0;absurd,&#x00A0;but&#x00A0;true&#x00A0;(it
+     &#x00A0;<br />is&#x00A0;reported&#x00A0;in&#x00A0;Overlib&#8217;s&#x00A0;page).
+</div>
+     <!--l. 6911--><p class="nopar" >
+</p>
+     </li></ul>
+<!--l. 6917--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">4.1.7   </span> <a 
+ href="tex4ht-html4ch4.html#QQ2-32-93"  id="x32-930004.1.7">The Configuration File onmouseover.4ht</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-456"><div class="head">
+       <a 
+ id="PrTx93001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93001"  id="QPrTx456"><span 
+class="cmtt-10">onmouseover.4ht</span></a><a 
+ id="PrTx93002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum\the\catcode&#8216;\%=14\else\expandafter\edef\csname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string:RestoreCatcodes\endcsname{\catcode&#8216;\%=\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\%}\catcode&#8216;\%=14\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;onmouseover.4ht</span><span 
+class="cmtt-10">&#x00A0;(2014-07-14-18:32),</span><span 
+class="cmtt-10">&#x00A0;generated</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;tex4ht-html4.tex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2009-2010</span><span 
+class="cmtt-10">&#x00A0;TeX</span><span 
+class="cmtt-10">&#x00A0;Users</span><span 
+class="cmtt-10">&#x00A0;Group</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2001-2009</span><span 
+class="cmtt-10">&#x00A0;Eitan</span><span 
+class="cmtt-10">&#x00A0;M.</span><span 
+class="cmtt-10">&#x00A0;Gurari</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx93003"  href="tex4ht-html4ch1.html#PrTx1025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4.html#PrTx4"><span 
+class="cmtt-10">TeX4ht copywrite</span></a><a 
+ id="PrTx93004"  href="tex4ht-html4se110.html#PrTx273026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\hbadness=10000</span><span 
+class="cmtt-10">&#x00A0;\vbadness=10000</span><span 
+class="cmtt-10">&#x00A0;\hfuzz=99in</span><span 
+class="cmtt-10">&#x00A0;\vfuzz=\hfuzz</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\overfullrule=0pt</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\makefootline\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\special{t4ht.js}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\newcount\CodeNumber</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NoSpecials#1#2#3{\edef\temp{\the\CodeNumber}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\CodeNumber=#3</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\next{\catcode\CodeNumber=#1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\CodeNumber=#2</span><span 
+class="cmtt-10">&#x00A0;\let\next=\relax</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\advance\CodeNumber</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;-1</span><span 
+class="cmtt-10">&#x00A0;\next}\next</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\CodeNumber=\temp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;js\endcsname{\egroup</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@@}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tex4ht=new</span><span 
+class="cmtt-10">&#x00A0;Array()</span><span 
+class="cmtt-10">&#x00A0;;</span><span 
+class="cmtt-10">&#x00A0;//\jstoday}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;trace="on"\endcsname{\global</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\TagTrace=\empty</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;js\endcsname}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;/js\endcsname{\egroup</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@@}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;bye\endcsname\endinput}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx93005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx93017"><span 
+class="cmtt-10">hash for onmouseover.4ht</span></a><a 
+ id="PrTx93006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx93007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx93013"><span 
+class="cmtt-10">escape backslashes</span></a><a 
+ id="PrTx93008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\&#x003C;=13</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jselement#1{\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;#1\endcsname##1=##2&#x003C;/#1&#x003E;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\hfill\break</span><span 
+class="cmtt-10">&#x00A0;tex4ht.\jsHash{##1}=\hbox{"##2";}\egroup}}</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx93009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx93011"><span 
+class="cmtt-10">escape double quotes</span></a><a 
+ id="PrTx93010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;\endcsname#1&#x003C;/&#x003E;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\hfill\break</span><span 
+class="cmtt-10">&#x00A0;\hbox{#1}\egroup}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def&#x003C;#1&#x003E;{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;#1\endcsname</span><span 
+class="cmtt-10">&#x00A0;\relax</span><span 
+class="cmtt-10">&#x00A0;\jselement{#1}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def&#x003C;##1&#x003E;{\TagTrace{\def\x{##1}\def\y####1:-&#x003E;{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\write16{...\string&#x003C;\expandafter\y\meaning\x&#x003E;}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string&#x003C;\scan</span><span 
+class="cmtt-10">&#x00A0;##1"&#x003C;&#x003E;&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\NoSpecials{12}{0}{255}\NoSpecials{11}{65}{90}\NoSpecials{11}{97}{122}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\</span><span 
+class="cmtt-10">&#x00A0;=10</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\^^M=10</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\^^I=10</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\&#x003C;=13</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\\=13</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\tt</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;js</span><span 
+class="cmtt-10">&#x00A0;#1\endcsname}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\TagTrace#1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\&amp;=12</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\#=12</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-457"><div class="head">
+       <a 
+ id="PrTx93011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93009"  id="QPrTx457"><span 
+class="cmtt-10">escape</span><span 
+class="cmtt-10">&#x00A0;double</span><span 
+class="cmtt-10">&#x00A0;quotes</span></a><a 
+ id="PrTx93012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\scan#1"#2&#x003C;&#x003E;{#1\if</span><span 
+class="cmtt-10">&#x00A0;!#2!\expandafter\done\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\"\expandafter\scan</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi#2&#x003C;&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\done#1&#x003E;{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-458"><div class="head">
+       <a 
+ id="PrTx93013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93007"  id="QPrTx458"><span 
+class="cmtt-10">escape</span><span 
+class="cmtt-10">&#x00A0;backslashes</span></a><a 
+ id="PrTx93014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;/=0</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\\=13</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/def\{/string\/string\}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/\=0</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\/=12</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-459"><div class="head">
+       <a 
+ href="#PrTx91017"  id="PrTx93015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx459"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx93016"  href="#PrTx93020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jsHash#1{\jsHash:a</span><span 
+class="cmtt-10">&#x00A0;#1&#x003C;&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jsHash:a#1#2&#x003C;&#x003E;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;0</span><span 
+class="cmtt-10">&#x00A0;JjV\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;z</span><span 
+class="cmtt-10">&#x00A0;jJv\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;9</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;A</span><span 
+class="cmtt-10">&#x00A0;jJV\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;Z</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;a</span><span 
+class="cmtt-10">&#x00A0;jVV\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi\fi\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#2!\expandafter\done:hash</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else\expandafter\jsHash:a\fi#2&#x003C;&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\done:hash#1&#x003E;{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-460"><div class="head">
+       <a 
+ id="PrTx93017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93005"  id="QPrTx460"><span 
+class="cmtt-10">hash</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;onmouseover.4ht</span></a><a 
+ id="PrTx93018"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jsHash#1{\jsHasha</span><span 
+class="cmtt-10">&#x00A0;#1&#x003C;&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jsHasha#1#2&#x003C;&#x003E;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;0</span><span 
+class="cmtt-10">&#x00A0;JjV\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;z</span><span 
+class="cmtt-10">&#x00A0;jJv\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;9</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;A</span><span 
+class="cmtt-10">&#x00A0;jJV\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003E;&#8216;Z</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;&#8216;#1&#x003C;&#8216;a</span><span 
+class="cmtt-10">&#x00A0;jVV\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;#1\fi\fi\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#2!\expandafter\done</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else\expandafter\jsHasha\fi#2&#x003C;&#x003E;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-461"><div class="head">
+       <a 
+ href="#PrTx93015"  id="PrTx93019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx91007"  id="QPrTx461"><span 
+class="cmtt-10">onmouseover utilities</span></a><a 
+ id="PrTx93020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\Odef\csname</span><span 
+class="cmtt-10">&#x00A0;c:mouseover-?:\endcsname[#1]#2{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{#2}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\expandafter\let\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-\:tempb\endcsname=\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\om:type#1,</span><a 
+ id="PrTx93021"  href="tex4ht-html4se15.html#PrTx51007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4ch10.html#PrTx291001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx93022"  href="#PrTx93024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\om:type#1,#2</span><a 
+ id="PrTx93023"  href="#PrTx93021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4ch10.html#PrTx291001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx93024"  href="#PrTx93026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if</span><span 
+class="cmtt-10">&#x00A0;!#1!\else\expandafter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\csname</span><span 
+class="cmtt-10">&#x00A0;a:mouseover-\:tempb-#1\endcsname=\:temp\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;!#2!\else</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{\om:type#2</span><a 
+ id="PrTx93025"  href="#PrTx93023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4ch10.html#PrTx291001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx93026"  href="tex4ht-html4se26.html#PrTx104022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\expandafter\:tempa</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 7036--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html4se25.html" >front</a>] [<a 
+ href="tex4ht-html4ch4.html#tex4ht-html4se25.html" >up</a>] </p></div>
+<!--l. 7036--><p class="indent" >   <a 
+  id="tailtex4ht-html4se25.html"></a>  </p> 
+</body></html> 

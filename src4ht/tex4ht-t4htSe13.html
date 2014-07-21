@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Open Files</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <!--l. 3624--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe14.html" >next</a>] [<a 
+ href="tex4ht-t4htSe12.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe12.html#tailtex4ht-t4htSe12.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-t4htSe13.html">tail</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe13.html" >up</a>] </p></div>
+    <h3 class="SectionHead">13 <a 
+ href="tex4ht-t4ht.html#QQ2-14-47"  name="QQ1-14-47">Open Files</a></h3>
+    <div class="TableOfContents"><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-14-48"  name="QQ2-14-48">General</a></span><br />
+    </div>
+      <!--l. 3629--><p class="indent" ><a 
+ href="tex4ht-t4htSe12.html#PrTx41009"  name="PrTx47001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3067"><span 
+class="cmtt-10">header</span>&#x00A0;<span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx47002"  href="#PrTx47006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">f_open(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(const</span>&#x00A0;<span 
+class="cmtt-10">char*,const</span>&#x00A0;<span 
+class="cmtt-10">char*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3642--><p class="noindent" ><a 
+ href="tex4ht-t4htSe12.html#PrTx46007"  name="PrTx47003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3069"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx47004"  href="#PrTx47008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">f_open</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">name,</span>&#x00A0;<span 
+class="cmtt-10">flags</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">flags</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">fopen(name,flags)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">NULL</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">printf("(%s)\n",name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3650--><p class="noindent" ><a 
+ href="#PrTx47001"  name="PrTx47005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3067"><span 
+class="cmtt-10">header</span>&#x00A0;<span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx47006"  href="#PrTx48002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">f_home_open(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(const</span>&#x00A0;<span 
+class="cmtt-10">char*,const</span>&#x00A0;<span 
+class="cmtt-10">char*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3669--><p class="noindent" ><a 
+ href="#PrTx47003"  name="PrTx47007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3069"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx47008"  href="#PrTx48004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">f_home_open</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">name,</span>&#x00A0;<span 
+class="cmtt-10">flags</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">flags</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*str;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*name</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;~&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">HOME_DIR</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">str</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">HOME_DIR)+strlen(name));</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">sprintf(str,"%s%s",</span>&#x00A0;<span 
+class="cmtt-10">HOME_DIR,</span>&#x00A0;<span 
+class="cmtt-10">name+1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">f_open(str,flags);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">str);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">NULL;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">f_open(</span>&#x00A0;<span 
+class="cmtt-10">name,</span>&#x00A0;<span 
+class="cmtt-10">flags</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-14-48"  name="QQ1-14-48">General</a></h3>
+           <!--l. 3680--><p class="noindent" ><a 
+ href="#PrTx47005"  name="PrTx48001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3067"><span 
+class="cmtt-10">header</span>&#x00A0;<span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx48002"  href="tex4ht-t4htSe14.html#PrTx50012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">open_file(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(const</span>&#x00A0;<span 
+class="cmtt-10">C_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*,</span>&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">C_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3707--><p class="noindent" ><a 
+ href="#PrTx47007"  name="PrTx48003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3069"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx48004"  href="tex4ht-t4htSe14.html#PrTx50014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">open_file</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">name,ext)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">C_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*name</span><strong><span 
+class="cmtt-10">;</span></strong>&#x00A0;<span 
+class="cmtt-10">const</span>&#x00A0;<span 
+class="cmtt-10">C_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*ext</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">C_CHAR</span>&#x00A0;<span 
+class="cmtt-10">filename[255],</span>&#x00A0;<span 
+class="cmtt-10">*p;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">eq_str(</span>&#x00A0;<span 
+class="cmtt-10">ext,LG_EXT</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">filename,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">job_name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(filename,</span>&#x00A0;<span 
+class="cmtt-10">ext);</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">filename,</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">filename;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">TRUE</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;.&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">p,</span>&#x00A0;<span 
+class="cmtt-10">ext);</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">fopen(filename,</span>&#x00A0;<span 
+class="cmtt-10">READ_TEXT_FLAGS);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!file</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">warn_i_str(5,filename);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">printf</span>&#x00A0;<span 
+class="cmtt-10">("Entering</span>&#x00A0;<span 
+class="cmtt-10">%s\n",</span>&#x00A0;<span 
+class="cmtt-10">filename);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 3710--><p class="noindent" >We have here a little inconsistency with tex4ht.c. There the input file name is appended with the extension .dvi,
+allowing double extensions. Here, if an extension is present, we remove it before putting .lg on top of the name.
+Should we fix that?
+</p>
+      <!--l. 3720--><p class="indent" ><a 
+ href="tex4ht-t4htSe12.html#PrTx41021"  name="PrTx48005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx48006"  href="tex4ht-t4htSe14.html#PrTx50010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">LG_EXT</span>&#x00A0;<span 
+class="cmtt-10">".lg"</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3757--><p class="noindent" ><a 
+ name="PrTx48007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3005"><span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">lg</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx48008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">begin_lg_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ftell(lg_file);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3761--><p class="noindent" ><a 
+ name="PrTx48009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3007"><span 
+class="cmtt-10">rewind</span>&#x00A0;<span 
+class="cmtt-10">lg</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx48010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">fseek(lg_file,</span>&#x00A0;<span 
+class="cmtt-10">begin_lg_file,</span>&#x00A0;<a 
+ name="PrTx48011"  href="tex4ht-t4htSe7.html#PrTx25061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx48013"><span 
+class="cmtt-10">abs file addr</span></a><a 
+ name="PrTx48012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3764--><p class="noindent" ><a 
+ name="PrTx48013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe7.html#PrTx25045"><span 
+class="cmtt-10">abs</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx48014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">0</span>-_-_-</span>
+           </p><!--l. 3772--><p class="noindent" ><a 
+ href="tex4ht-t4htSe12.html#PrTx41015"  name="PrTx48015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3065"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx48016"  href="tex4ht-t4htSe14.html#PrTx50024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">lg_file;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">begin_lg_file;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 3778--><p class="noindent" ><span 
+class="cmtt-10">open(file, ..._FLAGS)</span>: All text files should be opened with &#8221;r&#8221; or &#8221;w&#8221;; all binary files with &#8221;rb&#8221; or &#8221;wb&#8221;. This is
+the portable way and will work both under Unix and DOS; as Unix doesn&#8217;t distinguish between text and binary
+files, its compilers will simply ignore the &#8221;b&#8221; part.
+</p><!--l. 3784--><p class="indent" >    On the subject of the .lg file: you open the tex4ht.env file in binary mode (&#8221;rb&#8221;), which results in strange line
+endings in the .lg file (CR/CR/LF). Changing the mode to &#8221;r&#8221; fixes this.
+</p>
+      <!--l. 3805--><p class="indent" ><a 
+ href="tex4ht-t4htSe3.html#PrTx9013"  name="PrTx48017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3061"><span 
+class="cmtt-10">t4ht.h</span></a><a 
+ name="PrTx48018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">defined(DOS_WIN32)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">defined(__MSDOS__)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">READ_BIN_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"rb"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">READ_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"r"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WRITE_BIN_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"wb"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WRITE_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"wb"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WRITE_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"w"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">READ_BIN_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"r"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">READ_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"r"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WRITE_BIN_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"w"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WRITE_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">"w"</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">I&#8217;ve</span><span 
+class="cmtt-10">&#x00A0;been</span><span 
+class="cmtt-10">&#x00A0;held</span><span 
+class="cmtt-10">&#x00A0;up</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;bit</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">bug</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;tex4ht.c</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;caused</span><span 
+class="cmtt-10">&#x00A0;emTeX</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;complain</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;created</span><span 
+class="cmtt-10">&#x00A0;.idv</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">was</span><span 
+class="cmtt-10">&#x00A0;corrupt:</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">***</span><span 
+class="cmtt-10">&#x00A0;Fatal</span><span 
+class="cmtt-10">&#x00A0;error</span><span 
+class="cmtt-10">&#x00A0;2106:</span><span 
+class="cmtt-10">&#x00A0;corrupt</span><span 
+class="cmtt-10">&#x00A0;DVI</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;(postamble</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;found)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;found</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;cause,</span><span 
+class="cmtt-10">&#x00A0;though:</span><span 
+class="cmtt-10">&#x00A0;you</span><span 
+class="cmtt-10">&#x00A0;open</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;mode</span><span 
+class="cmtt-10">&#x00A0;"w",</span><span 
+class="cmtt-10">&#x00A0;which</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;text</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">mode.</span><span 
+class="cmtt-10">&#x00A0;Changing</span><span 
+class="cmtt-10">&#x00A0;this</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;"wb"</span><span 
+class="cmtt-10">&#x00A0;solved</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;problem.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+    <!--l. 3828--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe14.html" >next</a>] [<a 
+ href="tex4ht-t4htSe12.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe12.html#tailtex4ht-t4htSe12.html" >prev-tail</a>] [<a 
+ href="tex4ht-t4htSe13.html" >front</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe13.html" >up</a>] </p></div>
+<!--l. 3828--><p class="indent" >    <a 
+  name="tailtex4ht-t4htSe13.html"></a>  </p> 
+</body></html> 

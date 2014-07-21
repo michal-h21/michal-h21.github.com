@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>
+
+    <title>tex4ht-sty.html</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <h1>A Literate View of tex4ht.sty</h1>
+    <div class="TableOfContents"><span class="ChapterToc" >1&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-1"  name="QQ2-2-1">Outline of the Code</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.1&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-2"  name="QQ2-2-2">TeX4ht</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.2&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-3"  name="QQ2-2-3">Support for ProTex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.3&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-4"  name="QQ2-2-4">Support for
+httex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.4&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-5"  name="QQ2-2-5">First Pass</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.5&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-9"  name="QQ2-2-9">LaTeX at First Pass</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.6&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-10"  name="QQ2-2-10">Second Pass</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.7&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-11"  name="QQ2-2-11">Copyright
+Note</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.8&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-12"  name="QQ2-2-12">Category Codes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.9&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-13"  name="QQ2-2-13">Ifs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.10&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-14"  name="QQ2-2-14">User File Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.11&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-15"  name="QQ2-2-15">Usepackage
+Interface for LaTeX</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.12&#x00A0;<a 
+ href="tex4ht-styCh1.html#QQ1-2-16"  name="QQ2-2-16">Utilities</a></span><br /><span class="ChapterToc" >2&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-17"  name="QQ2-3-17">Configurations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.1&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-18"  name="QQ2-3-18">Contributes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.2&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-19"  name="QQ2-3-19">Configurations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.3&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-22"  name="QQ2-3-22">Tracing
+Configurations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.4&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-23"  name="QQ2-3-23">Editing and Xml</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.5&#x00A0;<a 
+ href="tex4ht-styCh2.html#QQ1-3-24"  name="QQ2-3-24">Verify Elements</a></span><br /><span class="ChapterToc" >3&#x00A0;<a 
+ href="tex4ht-styCh3.html#QQ1-4-25"  name="QQ2-4-25">Html Environment</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.1&#x00A0;<a 
+ href="tex4ht-styCh3.html#QQ1-4-26"  name="QQ2-4-26">Initiating</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.2&#x00A0;<a 
+ href="tex4ht-styCh3.html#QQ1-4-27"  name="QQ2-4-27">TEX
+Parameters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.3&#x00A0;<a 
+ href="tex4ht-styCh3.html#QQ1-4-28"  name="QQ2-4-28">Paragraphs</a></span><br /><span class="ChapterToc" >4&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-29"  name="QQ2-5-29">Cross References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.1&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-30"  name="QQ2-5-30">The Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.2&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-34"  name="QQ2-5-34">Internal
+References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.3&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-36"  name="QQ2-5-36">External References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.4&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-39"  name="QQ2-5-39">Interpretation for Entries</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.5&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-40"  name="QQ2-5-40">Link</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.6&#x00A0;<a 
+ href="tex4ht-styCh4.html#QQ1-5-41"  name="QQ2-5-41">Utilities</a></span><br /><span class="ChapterToc" >5&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-45"  name="QQ2-6-45">Html
+Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.1&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-46"  name="QQ2-6-46">Open Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.2&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-47"  name="QQ2-6-47">Close Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.3&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-48"  name="QQ2-6-48">Cross References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.4&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-49"  name="QQ2-6-49">Root
+File</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.5&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-50"  name="QQ2-6-50">Document Head</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.6&#x00A0;<a 
+ href="tex4ht-styCh5.html#QQ1-6-51"  name="QQ2-6-51">Document Tail</a></span><br /><span class="ChapterToc" >6&#x00A0;<a 
+ href="tex4ht-styCh6.html#QQ1-7-52"  name="QQ2-7-52">HPages and Cut Points</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.1&#x00A0;<a 
+ href="tex4ht-styCh6.html#QQ1-7-53"  name="QQ2-7-53">HPages</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.2&#x00A0;<a 
+ href="tex4ht-styCh6.html#QQ1-7-58"  name="QQ2-7-58">Requests
+for Cutpoints</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.3&#x00A0;<a 
+ href="tex4ht-styCh6.html#QQ1-7-61"  name="QQ2-7-61">Prev/Next Cut Buttons</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.4&#x00A0;<a 
+ href="tex4ht-styCh6.html#QQ1-7-64"  name="QQ2-7-64">Grouping Mecahanism for
+CutAt</a></span><br /><span class="ChapterToc" >7&#x00A0;<a 
+ href="tex4ht-styCh7.html#QQ1-8-66"  name="QQ2-8-66">Coauthoring</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.1&#x00A0;<a 
+ href="tex4ht-styCh7.html#QQ1-8-67"  name="QQ2-8-67">The Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.2&#x00A0;<a 
+ href="tex4ht-styCh7.html#QQ1-8-69"  name="QQ2-8-69">Values in Variables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.3&#x00A0;<a 
+ href="tex4ht-styCh7.html#QQ1-8-73"  name="QQ2-8-73">Tables of
+Content</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.4&#x00A0;<a 
+ href="tex4ht-styCh7.html#QQ1-8-74"  name="QQ2-8-74">Load File and Link Xref of Relative</a></span><br /><span class="ChapterToc" >8&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-76"  name="QQ2-9-76">Subdivisions</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.1&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-77"  name="QQ2-9-77">Interface</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.2&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-79"  name="QQ2-9-79">Insertions
+at Boundaries of Logical Units</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.3&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-83"  name="QQ2-9-83">Building Blocks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.4&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-84"  name="QQ2-9-84">Title</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.5&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-85"  name="QQ2-9-85">Table of
+Contents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.6&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-86"  name="QQ2-9-86">Links</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.7&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-87"  name="QQ2-9-87">Control Links on Section Heads</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.8&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-88"  name="QQ2-9-88">Cut-Offs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.9&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-89"  name="QQ2-9-89">Hooks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.10&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-90"  name="QQ2-9-90">Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.11&#x00A0;<a 
+ href="tex4ht-styCh8.html#QQ1-9-91"  name="QQ2-9-91">Configurations
+for CutAt</a></span><br /><span class="ChapterToc" >9&#x00A0;<a 
+ href="tex4ht-styCh9.html#QQ1-10-92"  name="QQ2-10-92">Tables of Contents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.1&#x00A0;<a 
+ href="tex4ht-styCh9.html#QQ1-10-93"  name="QQ2-10-93">Archiving the Table</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.2&#x00A0;<a 
+ href="tex4ht-styCh9.html#QQ1-10-94"  name="QQ2-10-94">Invoked Tables of
+Contents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.3&#x00A0;<a 
+ href="tex4ht-styCh9.html#QQ1-10-98"  name="QQ2-10-98">Triggered Tables of Contents</a></span><br /><span class="ChapterToc" >10&#x00A0;<a 
+ href="tex4ht-styCh10.html#QQ1-11-103"  name="QQ2-11-103">halign-based tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.1&#x00A0;<a 
+ href="tex4ht-styCh10.html#QQ1-11-104"  name="QQ2-11-104">Taming of
+halign</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.2&#x00A0;<a 
+ href="tex4ht-styCh10.html#QQ1-11-105"  name="QQ2-11-105">Building Blocks for Accessing Halign Tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.3&#x00A0;<a 
+ href="tex4ht-styCh10.html#QQ1-11-111"  name="QQ2-11-111">A Realization for
+halign</a></span><br /><span class="ChapterToc" >11&#x00A0;<a 
+ href="tex4ht-styCh11.html#QQ1-16-121"  name="QQ2-16-121">Verbatim Enviroments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.1&#x00A0;<a 
+ href="tex4ht-styCh11.html#QQ1-16-122"  name="QQ2-16-122">Verbatim Text</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.2&#x00A0;<a 
+ href="tex4ht-styCh11.html#QQ1-16-124"  name="QQ2-16-124">JavaScript</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.3&#x00A0;<a 
+ href="tex4ht-styCh11.html#QQ1-16-125"  name="QQ2-16-125">Cascade
+Style Sheets</a></span><br /><span class="ChapterToc" >12&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-126"  name="QQ2-18-126">Ditto: Positioned Elements and Gifs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.1&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-127"  name="QQ2-18-127">Positioned Elements</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.2&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-128"  name="QQ2-18-128">/Picture
+Comamnd</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.3&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-129"  name="QQ2-18-129">Call to Specials of Gif</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.4&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-130"  name="QQ2-18-130">The Environment of Gif</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.5&#x00A0;<a 
+ href="tex4ht-styCh12.html#QQ1-18-136"  name="QQ2-18-136">Utilities
+for Gif</a></span><br /><span class="ChapterToc" >13&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-138"  name="QQ2-23-138">Math</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.1&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-139"  name="QQ2-23-139">End Points of Math Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.2&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-140"  name="QQ2-23-140">Math into
+Pictures</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.3&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-141"  name="QQ2-23-141">Non-Pictorial Math</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.4&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-144"  name="QQ2-23-144">Subscripts and Superscripts</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.5&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-147"  name="QQ2-23-147">Math
+Classes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.6&#x00A0;<a 
+ href="tex4ht-styCh13.html#QQ1-23-150"  name="QQ2-23-150">Renewed Commands</a></span><br /><span class="ChapterToc" >14&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-157"  name="QQ2-26-157">Decorated Symbols</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.1&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-158"  name="QQ2-26-158">Htf Classes:
+Requesting BackEnd Fonts through /specials</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.2&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-161"  name="QQ2-26-161">New Accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.3&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-163"  name="QQ2-26-163">Old
+Accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.4&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-167"  name="QQ2-26-167">End-of-Line Ch Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.5&#x00A0;<a 
+ href="tex4ht-styCh14.html#QQ1-26-168"  name="QQ2-26-168">Symbols</a></span><br /><span class="ChapterToc" >15&#x00A0;<a 
+ href="tex4ht-styCh15.html#QQ1-29-170"  name="QQ2-29-170">Dvi-Based
+Hooks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.1&#x00A0;<a 
+ href="tex4ht-styCh15.html#QQ1-29-171"  name="QQ2-29-171">Tracing Dvi</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.2&#x00A0;<a 
+ href="tex4ht-styCh15.html#QQ1-29-172"  name="QQ2-29-172">Sent to Dvi</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.3&#x00A0;<a 
+ href="tex4ht-styCh15.html#QQ1-29-173"  name="QQ2-29-173">Observations</a></span><br /><span class="ChapterToc" >16&#x00A0;<a 
+ href="tex4ht-styCh16.html#QQ1-30-174"  name="QQ2-30-174">Loose
+Ends</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.1&#x00A0;<a 
+ href="tex4ht-styCh16.html#QQ1-30-175"  name="QQ2-30-175">Hyphenation</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.2&#x00A0;<a 
+ href="tex4ht-styCh16.html#QQ1-30-176"  name="QQ2-30-176">String Encode</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.3&#x00A0;<a 
+ href="tex4ht-styCh16.html#QQ1-30-177"  name="QQ2-30-177">Moveright</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.4&#x00A0;<a 
+ href="tex4ht-styCh16.html#QQ1-30-178"  name="QQ2-30-178">Debugging
+Mode</a></span><br /><span class="ChapterToc" >17&#x00A0;<a 
+ href="tex4ht-styCh17.html#QQ1-31-179"  name="QQ2-31-179">e tex/latex</a></span><br /><span class="ChapterToc" >18&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-180"  name="QQ2-32-180">Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.1&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-181"  name="QQ2-32-181">Vertical Break Points</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.2&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-182"  name="QQ2-32-182">Counters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.3&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-183"  name="QQ2-32-183">Pushdowns</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.4&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-186"  name="QQ2-32-186">Catergory
+Codes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.5&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-187"  name="QQ2-32-187">/pend:def and /append:def</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.6&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-189"  name="QQ2-32-189">/Needs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.7&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-190"  name="QQ2-32-190">/HCommand
+and /LinkCommand</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.8&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-191"  name="QQ2-32-191">Loose Ends</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.9&#x00A0;<a 
+ href="tex4ht-styCh18.html#QQ1-32-193"  name="QQ2-32-193">Tags</a></span><br /><span class="ChapterToc" >19&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-197"  name="QQ2-35-197">wripro.tex: HTML
+Stuff Shared by TeX4ht and AlProTex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.1&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-198"  name="QQ2-35-198">Root Point</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.2&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-203"  name="QQ2-35-203">Html
+Commmands From Users</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.3&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-204"  name="QQ2-35-204">Cross References within Html</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.4&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-205"  name="QQ2-35-205">Html
+Addresses</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.5&#x00A0;<a 
+ href="tex4ht-styCh19.html#QQ1-35-210"  name="QQ2-35-210">Other</a></span><br /><span class="ChapterToc" >20&#x00A0;<a 
+ href="tex4ht-styCh20.html#QQ1-36-212"  name="QQ2-36-212">Background Material</a></span><br />
+    </div> 
+</body></html> 
+
+
+

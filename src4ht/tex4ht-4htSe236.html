@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>booktabs.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 29913--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe237.html" >next</a>] [<a 
+ href="tex4ht-4htSe235.html" >prev</a>] [<a 
+ href="tex4ht-4htSe235.html#tailtex4ht-4htSe235.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe236.html">tail</a>] [<a 
+ href="tex4ht-4htCh69.html#tex4ht-4htSe236.html" >up</a>] </p></div>
+    <h3 class="SectionHead">69.25 <a 
+ href="tex4ht-4htPa1.html#QQ2-477-439"  name="QQ1-477-439">booktabs.sty</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 29938--><p class="indent" ><a 
+ name="PrTx439001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439001"  name="QPrTx1547"><span 
+class="cmtt-10">booktabs.4ht</span></a><a 
+ name="PrTx439002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">booktabs.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1999--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx439003"  href="tex4ht-4htSe235.html#PrTx438003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx439004"  href="tex4ht-4htSe237.html#PrTx440004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@BTfnslthree\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx439005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx439025"><span 
+class="cmtt-10">pre booktabs 2003</span></a><a 
+ name="PrTx439006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{\hrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@height</span>&#x00A0;<span 
+class="cmtt-10">\@thisrulewidth\futurenonspacelet\@tempa\@BTendrule}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@BTnormal\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx439007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx439017"><span 
+class="cmtt-10">pre booktabs 2005</span></a><a 
+ name="PrTx439008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx439009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx439019"><span 
+class="cmtt-10">booktabs 2005</span></a><a 
+ name="PrTx439010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx439011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx439021"><span 
+class="cmtt-10">booktabs 2003</span></a><a 
+ name="PrTx439012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx439013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx439015"><span 
+class="cmtt-10">shared booktabs</span></a><a 
+ name="PrTx439014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{booktabs}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 29944--><p class="noindent" ><a 
+ name="PrTx439015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439013"  name="QPrTx1548"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">booktabs</span></a><a 
+ name="PrTx439016"  href="#PrTx439028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\@addspace}{\@addspace[\defaultaddspace]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\addlinespace=\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 29953--><p class="noindent" ><a 
+ name="PrTx439017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439007"  name="QPrTx1549"><span 
+class="cmtt-10">pre</span>&#x00A0;<span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2005</span></a><a 
+ name="PrTx439018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@BTnormal{\hbox{\cur:rule}\futurenonspacelet\@tempa\@BTendrule}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@cmidrulea{\multispan\@cmidla&amp;\multispan\@cmidlb</span>&#x00A0;<span 
+class="cmtt-10">\a:cmidrule</span>&#x00A0;<span 
+class="cmtt-10">\hfill</span>&#x00A0;<span 
+class="cmtt-10">\cr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@cmidruleb{\multispan\@cmidlb</span>&#x00A0;<span 
+class="cmtt-10">\a:cmidrule</span>&#x00A0;<span 
+class="cmtt-10">\hfill</span>&#x00A0;<span 
+class="cmtt-10">\cr}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 29974--><p class="noindent" ><a 
+ name="PrTx439019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439009"  name="QPrTx1550"><span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2005</span></a><a 
+ name="PrTx439020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%{\CT@arc@\hrule\@height\@thisrulewidth}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\cur:rule}\futurenonspacelet\@tempa\@BTendrule}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@BTnormal\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\multispan\@cmidla&amp;\multispan\@cmidlb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:cmidrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unskip\hskip\cmrkern@l%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%{\CT@arc@\leaders\hrule</span>&#x00A0;<span 
+class="cmtt-10">\@height\@thisrulewidth\hfill}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip\cmrkern@r\cr}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@cmidrulea\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\multispan\@cmidlb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:cmidrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unskip\hskip</span>&#x00A0;<span 
+class="cmtt-10">\cmrkern@l%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%{\CT@arc@\leaders\hrule</span>&#x00A0;<span 
+class="cmtt-10">\@height\@thisrulewidth\hfill}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip\cmrkern@r\cr}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@cmidruleb\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 30000--><p class="noindent" ><a 
+ name="PrTx439021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439011"  name="QPrTx1551"><span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2003</span></a><a 
+ name="PrTx439022"  href="#PrTx439024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gobble:if#1\fi{}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\toprule</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\cur:rule\a:toprule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gobble:if}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\toprule=\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{toprule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\midrule</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\cur:rule\a:midrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gobble:if}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\midrule=\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{midrule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\bottomrule</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\cur:rule\a:bottomrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gobble:if}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\bottomrule=\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bottomrule}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 30009--><p class="noindent" ><a 
+ href="#PrTx439021"  name="PrTx439023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439011"  name="QPrTx1552"><span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2003</span></a><a 
+ name="PrTx439024"  href="#PrTx439030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@@BLTrule(#1){\@setrulekerning{#1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\@cmidlb\LT@cols</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum0=&#8216;{\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\@cmidruleb</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\futurenonspacelet\@tempa\@BTendrule}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 30033--><p class="noindent" ><a 
+ name="PrTx439025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439005"  name="QPrTx1553"><span 
+class="cmtt-10">pre</span>&#x00A0;<span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2003</span></a><a 
+ name="PrTx439026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\A:midrule=\a:midrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\@midrule}{\@midrule[\lightrulewidth]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\midrule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp[#1]{\o:@midrule:[\z@\A:midrule]}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@midrule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{midrule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\@toprule}{\@toprule[\heavyrulewidth]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\toprule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp[#1]{\o:@toprule:[\z@\a:toprule]}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@toprule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{toprule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\A:midrule=\a:bottomrule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\@midrule}{\@midrule[\heavyrulewidth]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\bottomrule=\:temp</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bottomrule}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 30050--><p class="noindent" ><a 
+ href="#PrTx439015"  name="PrTx439027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439013"  name="QPrTx1554"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">booktabs</span></a><a 
+ name="PrTx439028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3{\o:noalign:{\a:specialrule}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\specialrule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{specialrule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\@cmidrule}{\@cmidrule[\cmidrulewidth]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\cmidrule=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{cmidrule}{1}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\o:noalign:{\relax}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\morecmidrules=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{morecmidrules}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 30064--><p class="noindent" ><a 
+ href="#PrTx439023"  name="PrTx439029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx439011"  name="QPrTx1555"><span 
+class="cmtt-10">booktabs</span>&#x00A0;<span 
+class="cmtt-10">2003</span></a><a 
+ name="PrTx439030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@@@cmidrule[#1-#2]#3#4{\global\@cmidla#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\@cmidla\m@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\@cmidla&#x003E;0\global\let\@gtempa\@cmidrulea\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\@gtempa\@cmidruleb\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@cmidlb#2\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\@cmidlb-\@cmidla</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@thisrulewidth=#3</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@setrulekerning{#4}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\@lastruleclass=\z@\vskip</span>&#x00A0;<span 
+class="cmtt-10">\aboverulesep\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum0=&#8216;{\fi}\@gtempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:noalign:{\ifnum0=&#8216;}\fi\futurenonspacelet\@tempa\@xcmidrule}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 30068--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe237.html" >next</a>] [<a 
+ href="tex4ht-4htSe235.html" >prev</a>] [<a 
+ href="tex4ht-4htSe235.html#tailtex4ht-4htSe235.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe236.html" >front</a>] [<a 
+ href="tex4ht-4htCh69.html#tex4ht-4htSe236.html" >up</a>] </p></div>
+<!--l. 30068--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe236.html"></a> </p> 
+</body></html> 

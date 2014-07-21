@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ref, label, newlabel: Usage</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 1324--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu3.html" >next</a>] [<a 
+ href="tex4ht-4htSu1.html" >prev</a>] [<a 
+ href="tex4ht-4htSu1.html#tailtex4ht-4htSu1.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu2.html">tail</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu2.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe3.html#QQ2-17-14"  name="QQ1-17-14">ref, label, newlabel: Usage</a></h3>
+           <!--l. 1339--><p class="noindent" ><a 
+ name="PrTx14001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx58"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx14002"  href="#PrTx14004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1{\a:pageref\o:pageref:{#1}\b:pageref}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\pageref\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{pageref}[3]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\a:pageref{#1\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\Configure{ref}{\Link}{\EndLink}{#3}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\b:pageref{\egroup</span>&#x00A0;<span 
+class="cmtt-10">#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{pageref}{}{}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1380--><p class="noindent" ><a 
+ href="#PrTx14001"  name="PrTx14003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx59"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx14004"  href="tex4ht-4htSu3.html#PrTx15002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@newlabel}[1]{\concat:config\a:@newlabel{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:@newlabel=\relax</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx14005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu3.html#PrTx15021"><span 
+class="cmtt-10">configure @newlabel</span></a><a 
+ name="PrTx14006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{newlabel}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\a:newlabel{#1}\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:newlabel\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\label:addr{\cur:th</span>&#x00A0;<span 
+class="cmtt-10">\:currentlabel}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\label:addr{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\a:newlabel##1{\expandafter\string\c:rEfLiNK{\label:addr}{#2}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{ref}[3]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\a:rEfLiNK{#1}\def\b:rEfLiNK{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\a:rEfLiNK\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\b:rEfLiNK\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\c:rEfLiNK##1##2{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\c:rEfLiNK##1##2{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\b:rEfLiNK\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\c:rEfLiNK##1##2{#1{##1}{}##2#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\c:rEfLiNK##1##2{#1{##1}{}#3#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\b:rEfLiNK{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{newlabel}{\cur:th</span>&#x00A0;<span 
+class="cmtt-10">\:currentlabel}{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{newlabel-ref}[1]{\def\c:rEfLiNK{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\at:startdoc\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\dflt:ref{#1}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\at:startdoc{\dflt:ref{#1}}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\dflt:ref#1{\if@filesw\immediate\write\@auxout{\string\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string#1\string\UnDef\gdef\string#1\#1\#2{\#2}\string\fi}\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{newlabel-ref}{\rEfLiNK}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:writefile=\@writefile</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@writefile#1{\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=11</span>&#x00A0;<span 
+class="cmtt-10">\:wrtfile{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:wrtfile#1#2{\egroup\:writefile{#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 1384--><p class="noindent" >
+</p><ul >
+<li>&#8216;<span 
+class="cmtt-10">\Configure{ref}{\Link}{\EndLink}{anchor}</span>&#8217; tells what <span 
+class="cmtt-10">\Link</span>-type command should be on insertions of <span 
+class="cmtt-10">\ref</span>.
+If the third parameter is empty, the anchor is the one provided by the system. If the first parameter is empty, no
+Link is assumed.
+<!--l. 1391--><p class="noindent" ></p></li>
+<li><span 
+class="cmtt-10">\Configure{newlabel}{\cur:th \:currentlabel}{#1} </span>supplies the target address and the anchor.
+</li>
+<li><span 
+class="cmtt-10">\Configure{newlabel}{}{#1} </span>is equivalent to <span 
+class="cmtt-10">\Configure{newlabel}{\cur:th \:currentlabel}{#1}</span>
+</li>
+<li>The <span 
+class="cmtt-10">\Configure{newlabel-ref}{\rEfLiNK} </span>command provides an intermediate link command for the
+aux command, which &#8216;<span 
+class="cmtt-10">\Configure{ref}{\Link}{\EndLink}{anchor}</span>&#8217; configures. If the first field
+of the last configuration command is empty, than the anchor is provided without its surrounding.
+</li></ul>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;One</span><span 
+class="cmtt-10">&#x00A0;more</span><span 
+class="cmtt-10">&#x00A0;thing.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;You</span><span 
+class="cmtt-10">&#x00A0;will</span><span 
+class="cmtt-10">&#x00A0;notice</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;&#8216;minitoc.tex&#8217;</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;HTML</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;anchors</span><span 
+class="cmtt-10">&#x00A0;given</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;sections</span><span 
+class="cmtt-10">&#x00A0;depend</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;value</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;\@currentlabel,</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;explicitely</span><span 
+class="cmtt-10">&#x00A0;or</span><span 
+class="cmtt-10">&#x00A0;implicitly</span><span 
+class="cmtt-10">&#x00A0;(e.g.,</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;previous</span><span 
+class="cmtt-10">&#x00A0;section).</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;Is</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;what</span><span 
+class="cmtt-10">&#x00A0;you</span><span 
+class="cmtt-10">&#x00A0;want</span><span 
+class="cmtt-10">&#x00A0;?</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Yes.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;believe</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;reason</span><span 
+class="cmtt-10">&#x00A0;was</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;avoid</span><span 
+class="cmtt-10">&#x00A0;ambiguities--unfortunately,</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">I</span><span 
+class="cmtt-10">&#x00A0;can&#8217;t</span><span 
+class="cmtt-10">&#x00A0;locate</span><span 
+class="cmtt-10">&#x00A0;now</span><span 
+class="cmtt-10">&#x00A0;where</span><span 
+class="cmtt-10">&#x00A0;they</span><span 
+class="cmtt-10">&#x00A0;could</span><span 
+class="cmtt-10">&#x00A0;occur.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">{\makeatletter</span><span 
+class="cmtt-10">&#x00A0;\gdef\@currentlabel{XxX}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\section*{first</span><span 
+class="cmtt-10">&#x00A0;section/First</span><span 
+class="cmtt-10">&#x00A0;chapter}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\section{second</span><span 
+class="cmtt-10">&#x00A0;section/First</span><span 
+class="cmtt-10">&#x00A0;chapter}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\section*{third</span><span 
+class="cmtt-10">&#x00A0;section/First</span><span 
+class="cmtt-10">&#x00A0;chapter}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+    <!--l. 1426--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu3.html" >next</a>] [<a 
+ href="tex4ht-4htSu1.html" >prev</a>] [<a 
+ href="tex4ht-4htSu1.html#tailtex4ht-4htSu1.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu2.html" >front</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu2.html" >up</a>] </p></div>
+<!--l. 1426--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu2.html"></a> </p> 
+</body></html> 

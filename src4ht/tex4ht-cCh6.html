@@ -1,0 +1,3810 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Extract Code of Figures</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <!--l. 5371--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh7.html" >next</a>] [<a 
+ href="tex4ht-cCh5.html" >prev</a>] [<a 
+ href="tex4ht-cCh5.html#tailtex4ht-cCh5.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-cCh6.html">tail</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh6.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 6<br /><a 
+ href="tex4ht-c.html#QQ2-17-69"  name="QQ1-17-69">Extract Code of Figures</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.1&#x00A0;<a 
+ href="#QQ1-17-70"  name="QQ2-17-70">Outline</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-71"  name="QQ2-17-71">Ignore in Main
+Pass</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.2&#x00A0;<a 
+ href="#QQ1-17-72"  name="QQ2-17-72">Preamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.3&#x00A0;<a 
+ href="#QQ1-17-73"  name="QQ2-17-73">Postamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.4&#x00A0;<a 
+ href="#QQ1-17-74"  name="QQ2-17-74">Body</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-75"  name="QQ2-17-75">Rules</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-76"  name="QQ2-17-76">Specials</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-77"  name="QQ2-17-77">Stack</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-78"  name="QQ2-17-78">Fonts
+Definition</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-79"  name="QQ2-17-79">Fonts Activation</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.5&#x00A0;<a 
+ href="#QQ1-17-80"  name="QQ2-17-80">Symbols from Fonts</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-81"  name="QQ2-17-81">Activate
+Font</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.6&#x00A0;<a 
+ href="#QQ1-17-82"  name="QQ2-17-82">Utilities</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-83"  name="QQ2-17-83">Advance Page</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-17-84"  name="QQ2-17-84">Set Store-Move Variables</a></span><br />
+    </div>
+    <h3 class="SectionHead">6.1 <a 
+ href="tex4ht-c.html#QQ2-17-70"  name="QQ1-17-70">Outline</a></h3>
+<!--l. 5379--><p class="noindent" >A figure is taken to be a chunck of dvi code enclosed between &#8216;<span 
+class="cmtt-10">+</span>&#8217; specials. They are to be translated to, for instance,
+gif code.
+</p>
+      <!--l. 5385--><p class="indent" ><a 
+ href="tex4ht-cCh5.html#PrTx66027"  name="PrTx70001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx70002"  href="#PrTx70024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE,</span>&#x00A0;<span 
+class="cmtt-10">dvi_page</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE</span>&#x00A0;<span 
+class="cmtt-10">*idv_file;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5394--><p class="noindent" ><a 
+ name="PrTx70003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx16021"><span 
+class="cmtt-10">open</span>&#x00A0;<span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx70004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">job_name[job_name_n-1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;v&#8217;;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">job_name[job_name_n-2]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;d&#8217;;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">job_name[job_name_n-3]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;i&#8217;;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(idv_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">fopen(job_name,</span>&#x00A0;<span 
+class="cmtt-10">WRITE_BIN_FLAGS))</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">NULL</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">bad_in_file(job_name);</span>
+      <br /><!--x-->&#x00A0;<i><span 
+class="cmtt-10">job_name[job_name_n-3]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span></i>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5400--><p class="noindent" ><a 
+ href="tex4ht-cCh2.html#PrTx27011"  name="PrTx70005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10015"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx70006"  href="tex4ht-cCh8.html#PrTx95020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">eof_op_n,</span>&#x00A0;<span 
+class="cmtt-10">begin_postamble;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">dis_pages;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5412--><p class="noindent" ><a 
+ name="PrTx70007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx11025"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">dvi</span>&#x00A0;<span 
+class="cmtt-10">chunks</span></a><a 
+ name="PrTx70008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">job_name[job_name_n-3]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx70009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx72001"><span 
+class="cmtt-10">extract preamble</span></a><a 
+ name="PrTx70010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx70011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx83001"><span 
+class="cmtt-10">start first idv page</span></a><a 
+ name="PrTx70012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">dis_pages</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx70013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx74001"><span 
+class="cmtt-10">extract pages</span></a><a 
+ name="PrTx70014"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx70015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx70021"><span 
+class="cmtt-10">error notice into lg</span></a><a 
+ name="PrTx70016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx70017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80001"><span 
+class="cmtt-10">extract symbols</span></a><a 
+ name="PrTx70018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx70019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx73001"><span 
+class="cmtt-10">extract postamble</span></a><a 
+ name="PrTx70020"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5421--><p class="noindent" ><a 
+ name="PrTx70021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70015"><span 
+class="cmtt-10">error</span>&#x00A0;<span 
+class="cmtt-10">notice</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">lg</span></a><a 
+ name="PrTx70022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">errCode</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(log_file,</span>&#x00A0;<span 
+class="cmtt-10">"tex4ht.c</span>&#x00A0;<span 
+class="cmtt-10">error:</span>&#x00A0;<span 
+class="cmtt-10">%d\n",</span>&#x00A0;<span 
+class="cmtt-10">errCode);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5425--><p class="noindent" ><a 
+ href="#PrTx70001"  name="PrTx70023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx70024"  href="#PrTx72014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">errCode</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-71"  name="QQ1-17-71">Ignore in Main Pass</a></h3>
+<!--l. 5434--><p class="noindent" >We had &#8216;<span 
+class="cmtt-10">case &#8217;+&#8217;: {;}</span>&#8217; before. However, this is wrong because we want to do nothing here with regarding to
+directives for the gif part.
+</p>
+      <!--l. 5439--><p class="indent" ><a 
+ name="PrTx71001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh4.html#PrTx48037"><span 
+class="cmtt-10">ivd</span>&#x00A0;<span 
+class="cmtt-10">code</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">main</span>&#x00A0;<span 
+class="cmtt-10">pass</span></a><a 
+ name="PrTx71002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">special_n--</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">6.2 <a 
+ href="tex4ht-c.html#QQ2-17-72"  name="QQ1-17-72">Preamble</a></h3>
+
+           <!--l. 5456--><p class="noindent" ><a 
+ name="PrTx72001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70009"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">preamble</span></a><a 
+ name="PrTx72002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">14;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">0L,</span>&#x00A0;<a 
+ name="PrTx72003"  href="tex4ht-cCh4.html#PrTx59025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25013"><span 
+class="cmtt-10">abs file addr</span></a><a 
+ name="PrTx72004"  href="#PrTx73008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">do{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}while(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<a 
+ name="PrTx72005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258005"><span 
+class="cmtt-10">no op</span></a><a 
+ name="PrTx72006"  href="#PrTx74016"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx72007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx72009"><span 
+class="cmtt-10">idv version</span></a><a 
+ name="PrTx72008"  href="#PrTx73022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=12;</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">;</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_copy();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5463--><p class="noindent" ><a 
+ name="PrTx72009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx72007"><span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">version</span></a><a 
+ name="PrTx72010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">id_version;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5480--><p class="noindent" ><a 
+ name="PrTx72011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx14045"><span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">version</span>&#x00A0;<span 
+class="cmtt-10">replacement</span>&#x00A0;<span 
+class="cmtt-10">num</span></a><a 
+ name="PrTx72012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*q;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(*q</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(*q</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;9&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">warn_i(53);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q++;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5484--><p class="noindent" ><a 
+ href="#PrTx70023"  name="PrTx72013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx72014"  href="#PrTx80020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">id_version</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">-1;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">6.3 <a 
+ href="tex4ht-c.html#QQ2-17-73"  name="QQ1-17-73">Postamble</a></h3>
+           <!--l. 5499--><p class="noindent" ><a 
+ name="PrTx73001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70019"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">postamble</span></a><a 
+ name="PrTx73002"  href="#PrTx73014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx73003"  href="tex4ht-cCh3.html#PrTx42011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258013"><span 
+class="cmtt-10">retrieve loc op</span></a><a 
+ name="PrTx73004"  href="#PrTx77006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<a 
+ name="PrTx73005"  href="tex4ht-cCh2.html#PrTx30007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258009"><span 
+class="cmtt-10">end page op</span></a><a 
+ name="PrTx73006"  href="#PrTx74014"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">begin_postamble,</span>&#x00A0;<a 
+ name="PrTx73007"  href="#PrTx72003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25013"><span 
+class="cmtt-10">abs file addr</span></a><a 
+ name="PrTx73008"  href="tex4ht-cCh8.html#PrTx95014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">begin_postamble</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">file_n;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<a 
+ name="PrTx73009"  href="tex4ht-cCh2.html#PrTx27003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258105"><span 
+class="cmtt-10">begin-postamble op</span></a><a 
+ name="PrTx73010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">5;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">5L,</span>&#x00A0;<a 
+ name="PrTx73011"  href="tex4ht-cCh2.html#PrTx27005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25015"><span 
+class="cmtt-10">relative file addr</span></a><a 
+ name="PrTx73012"  href="#PrTx73016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">20;</span>&#x00A0;<span 
+class="cmtt-10">i;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_copy();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5507--><p class="noindent" ><a 
+ href="#PrTx73001"  name="PrTx73013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70019"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">postamble</span></a><a 
+ name="PrTx73014"  href="#PrTx73018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">get_int(2)</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">8</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">stack</span>&#x00A0;<span 
+class="cmtt-10">depth</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0xFF</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!page_n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">page_n++;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">8</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">number</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0xFF</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">2L,</span>&#x00A0;<a 
+ name="PrTx73015"  href="#PrTx73011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25015"><span 
+class="cmtt-10">relative file addr</span></a><a 
+ name="PrTx73016"  href="#PrTx73020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5516--><p class="noindent" ><a 
+ href="#PrTx73013"  name="PrTx73017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70019"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">postamble</span></a><a 
+ name="PrTx73018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">eof_op_n</span>&#x00A0;<span 
+class="cmtt-10">-=</span>&#x00A0;<span 
+class="cmtt-10">32;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">fonts</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">--eof_op_n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_copy();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(begin_postamble);</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">postamble</span></i>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">4L,</span>&#x00A0;<a 
+ name="PrTx73019"  href="#PrTx73015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25015"><span 
+class="cmtt-10">relative file addr</span></a><a 
+ name="PrTx73020"  href="#PrTx74012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">4;</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx73021"  href="#PrTx72007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx72009"><span 
+class="cmtt-10">idv version</span></a><a 
+ name="PrTx73022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">8</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">4;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">i;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<a 
+ name="PrTx73023"  href="tex4ht-cCh2.html#PrTx25005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258073"><span 
+class="cmtt-10">eof op</span></a><a 
+ name="PrTx73024"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">6.4 <a 
+ href="tex4ht-c.html#QQ2-17-74"  name="QQ1-17-74">Body</a></h3>
+           <!--l. 5526--><p class="noindent" ><a 
+ name="PrTx74001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70013"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">pages</span></a><a 
+ name="PrTx74002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char())</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">128</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx74003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx74005"><span 
+class="cmtt-10">chars for idv</span></a><a 
+ name="PrTx74004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5536--><p class="noindent" ><a 
+ name="PrTx74005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx74006"  href="#PrTx74008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">128:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">129:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">130:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">131:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">133:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">134:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">135:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">136:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_string(</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">(ch&#x003E;132))</span>&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">4</span>&#x00A0;<span 
+class="cmtt-10">+1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5538--><p class="noindent" >Why the &#8216;<span 
+class="cmtt-10">cond_string</span>&#8217; above?
+</p>
+      <!--l. 5547--><p class="indent" ><a 
+ href="#PrTx74005"  name="PrTx74007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx74008"  href="#PrTx74018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx74009"  href="tex4ht-cCh2.html#PrTx30005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258007"><span 
+class="cmtt-10">start page op</span></a><a 
+ name="PrTx74010"  href="#PrTx83004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack_n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fseek(dvi_file,</span>&#x00A0;<span 
+class="cmtt-10">44L,</span>&#x00A0;<a 
+ name="PrTx74011"  href="#PrTx73019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx25015"><span 
+class="cmtt-10">relative file addr</span></a><a 
+ name="PrTx74012"  href="tex4ht-cCh8.html#PrTx96008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx74013"  href="#PrTx73005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258009"><span 
+class="cmtt-10">end page op</span></a><a 
+ name="PrTx74014"  href="#PrTx83016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">dis_pages--;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx74015"  href="#PrTx72005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258005"><span 
+class="cmtt-10">no op</span></a><a 
+ name="PrTx74016"  href="tex4ht-cCh17.html#PrTx245010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5559--><p class="noindent" ><a 
+ href="#PrTx74007"  name="PrTx74017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx74018"  href="#PrTx74028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74019"  href="tex4ht-cCh3.html#PrTx38025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258023"><span 
+class="cmtt-10">mv hor dist dx.1</span></a><a 
+ name="PrTx74020"  href="tex4ht-cCh8.html#PrTx105100"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dx_1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74021"  href="tex4ht-cCh3.html#PrTx38039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258033"><span 
+class="cmtt-10">mv hor dist dx.2</span></a><a 
+ name="PrTx74022"  href="tex4ht-cCh8.html#PrTx105102"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dx_2;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74023"  href="tex4ht-cCh3.html#PrTx39025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258051"><span 
+class="cmtt-10">mv ver dist dy.1</span></a><a 
+ name="PrTx74024"  href="tex4ht-cCh7.html#PrTx93020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dy_1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74025"  href="tex4ht-cCh3.html#PrTx39039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258061"><span 
+class="cmtt-10">mv ver dist dy.2</span></a><a 
+ name="PrTx74026"  href="tex4ht-cCh7.html#PrTx93030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dy_2;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5581--><p class="noindent" ><a 
+ href="#PrTx74017"  name="PrTx74027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx74028"  href="#PrTx74060"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74029"  href="tex4ht-cCh3.html#PrTx38011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258015"><span 
+class="cmtt-10">mv hor 1-byte</span></a><a 
+ name="PrTx74030"  href="#PrTx74038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74031"  href="tex4ht-cCh3.html#PrTx38005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258017"><span 
+class="cmtt-10">mv hor 2-byte</span></a><a 
+ name="PrTx74032"  href="tex4ht-cCh8.html#PrTx105040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74033"  href="tex4ht-cCh3.html#PrTx38007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258019"><span 
+class="cmtt-10">mv hor 3-byte</span></a><a 
+ name="PrTx74034"  href="tex4ht-cCh8.html#PrTx105042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74035"  href="tex4ht-cCh3.html#PrTx38009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258021"><span 
+class="cmtt-10">mv hor 4-byte</span></a><a 
+ name="PrTx74036"  href="#PrTx77012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74037"  href="#PrTx74029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258015"><span 
+class="cmtt-10">mv hor 1-byte</span></a><a 
+ name="PrTx74038"  href="#PrTx76056"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74039"  href="tex4ht-cCh3.html#PrTx38017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258025"><span 
+class="cmtt-10">dx.1 store and mv hor 1-byte</span></a><a 
+ name="PrTx74040"  href="#PrTx74048"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74041"  href="tex4ht-cCh3.html#PrTx38019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258027"><span 
+class="cmtt-10">dx.1 store and mv hor 2-byte</span></a><a 
+ name="PrTx74042"  href="tex4ht-cCh8.html#PrTx105050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74043"  href="tex4ht-cCh3.html#PrTx38021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258029"><span 
+class="cmtt-10">dx.1 store and mv hor 3-byte</span></a><a 
+ name="PrTx74044"  href="tex4ht-cCh8.html#PrTx105052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74045"  href="tex4ht-cCh3.html#PrTx38023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258031"><span 
+class="cmtt-10">dx.1 store and mv hor 4-byte</span></a><a 
+ name="PrTx74046"  href="#PrTx77014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dx_1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74047"  href="#PrTx74039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258025"><span 
+class="cmtt-10">dx.1 store and mv hor 1-byte</span></a><a 
+ name="PrTx74048"  href="tex4ht-cCh8.html#PrTx105048"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dx_1;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74049"  href="tex4ht-cCh3.html#PrTx38031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258035"><span 
+class="cmtt-10">dx.2 store and mv hor 1-byte</span></a><a 
+ name="PrTx74050"  href="#PrTx74058"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74051"  href="tex4ht-cCh3.html#PrTx38033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258037"><span 
+class="cmtt-10">dx.2 store and mv hor 2-byte</span></a><a 
+ name="PrTx74052"  href="tex4ht-cCh8.html#PrTx105060"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74053"  href="tex4ht-cCh3.html#PrTx38035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258039"><span 
+class="cmtt-10">dx.2 store and mv hor 3-byte</span></a><a 
+ name="PrTx74054"  href="tex4ht-cCh8.html#PrTx105062"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74055"  href="tex4ht-cCh3.html#PrTx38037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258041"><span 
+class="cmtt-10">dx.2 store and mv hor 4-byte</span></a><a 
+ name="PrTx74056"  href="#PrTx77016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dx_2</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74057"  href="#PrTx74049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258035"><span 
+class="cmtt-10">dx.2 store and mv hor 1-byte</span></a><a 
+ name="PrTx74058"  href="tex4ht-cCh8.html#PrTx105058"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dx_2;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 5603--><p class="noindent" ><a 
+ href="#PrTx74027"  name="PrTx74059"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx74060"  href="#PrTx75002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74061"  href="tex4ht-cCh3.html#PrTx39011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258043"><span 
+class="cmtt-10">mv ver 1-byte</span></a><a 
+ name="PrTx74062"  href="#PrTx74070"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74063"  href="tex4ht-cCh3.html#PrTx39005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258045"><span 
+class="cmtt-10">mv ver 2-byte</span></a><a 
+ name="PrTx74064"  href="tex4ht-cCh7.html#PrTx93014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74065"  href="tex4ht-cCh3.html#PrTx39007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258047"><span 
+class="cmtt-10">mv ver 3-byte</span></a><a 
+ name="PrTx74066"  href="tex4ht-cCh7.html#PrTx93016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74067"  href="tex4ht-cCh3.html#PrTx39009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258049"><span 
+class="cmtt-10">mv ver 4-byte</span></a><a 
+ name="PrTx74068"  href="#PrTx77018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74069"  href="#PrTx74061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258043"><span 
+class="cmtt-10">mv ver 1-byte</span></a><a 
+ name="PrTx74070"  href="#PrTx76058"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74071"  href="tex4ht-cCh3.html#PrTx39017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258053"><span 
+class="cmtt-10">dy.1 store and mv ver 1-byte</span></a><a 
+ name="PrTx74072"  href="#PrTx74080"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74073"  href="tex4ht-cCh3.html#PrTx39019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258055"><span 
+class="cmtt-10">dy.1 store and mv ver 2-byte</span></a><a 
+ name="PrTx74074"  href="tex4ht-cCh7.html#PrTx93024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74075"  href="tex4ht-cCh3.html#PrTx39021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258057"><span 
+class="cmtt-10">dy.1 store and mv ver 3-byte</span></a><a 
+ name="PrTx74076"  href="tex4ht-cCh7.html#PrTx93026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74077"  href="tex4ht-cCh3.html#PrTx39023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258059"><span 
+class="cmtt-10">dy.1 store and mv ver 4-byte</span></a><a 
+ name="PrTx74078"  href="#PrTx77020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dy_1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74079"  href="#PrTx74071"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258053"><span 
+class="cmtt-10">dy.1 store and mv ver 1-byte</span></a><a 
+ name="PrTx74080"  href="tex4ht-cCh7.html#PrTx93022"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dy_1;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74081"  href="tex4ht-cCh3.html#PrTx39031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258063"><span 
+class="cmtt-10">dy.2 store and mv ver 1-byte</span></a><a 
+ name="PrTx74082"  href="#PrTx74090"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74083"  href="tex4ht-cCh3.html#PrTx39033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258065"><span 
+class="cmtt-10">dy.2 store and mv ver 2-byte</span></a><a 
+ name="PrTx74084"  href="tex4ht-cCh7.html#PrTx93034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74085"  href="tex4ht-cCh3.html#PrTx39035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258067"><span 
+class="cmtt-10">dy.2 store and mv ver 3-byte</span></a><a 
+ name="PrTx74086"  href="tex4ht-cCh7.html#PrTx93036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx74087"  href="tex4ht-cCh3.html#PrTx39037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258069"><span 
+class="cmtt-10">dy.2 store and mv ver 4-byte</span></a><a 
+ name="PrTx74088"  href="#PrTx77022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dy_2</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">cond_int(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx74089"  href="#PrTx74081"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258063"><span 
+class="cmtt-10">dy.2 store and mv ver 1-byte</span></a><a 
+ name="PrTx74090"  href="tex4ht-cCh7.html#PrTx93032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">dy_2;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-75"  name="QQ1-17-75">Rules</a></h3>
+           <!--l. 5619--><p class="noindent" ><a 
+ href="#PrTx74059"  name="PrTx75001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx75002"  href="#PrTx76002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx75003"  href="tex4ht-cCh3.html#PrTx43003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258001"><span 
+class="cmtt-10">insert rule + move op</span></a><a 
+ name="PrTx75004"  href="tex4ht-cCh7.html#PrTx93040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;<span 
+class="cmtt-10">cond_string(</span>&#x00A0;<span 
+class="cmtt-10">ch,4</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">cond_int(4);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx75005"  href="tex4ht-cCh3.html#PrTx43005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258003"><span 
+class="cmtt-10">insert rule + nomove op</span></a><a 
+ name="PrTx75006"  href="tex4ht-cCh7.html#PrTx93042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;<span 
+class="cmtt-10">cond_string(</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">8</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-76"  name="QQ1-17-76">Specials</a></h3>
+<!--l. 5627--><p class="noindent" >Only &#8216;<span 
+class="cmtt-10">+</span>&#8217; tex4ht specials are significant here. The ones of the form &#8216;<span 
+class="cmtt-10">\special{t4ht++...}...\special{t4ht+}</span>&#8217; act
+as delimiters for segments of dvi code to be trasmitted to the dvi driver (probably dvips). The other ones of the
+form &#8216;<span 
+class="cmtt-10">\special{t4ht+...}</span>&#8217; are ignored outside such segments, and are replaced by sub-specilas &#8216;<span 
+class="cmtt-10">\special{...}</span>&#8217;
+within the segments. For instance, &#8216;<span 
+class="cmtt-10">\special{t4ht+ps:abc}</span>&#8217; translates to &#8216;<span 
+class="cmtt-10">\special{ps:abc}</span>&#8217; within
+these segments. That is, the latter ones are indirect transpoters for special code (why we need this
+transportes?).
+</p><!--l. 5637--><p class="indent" >    The non-tex4ht specials are introduced into the idv code. Those that are parts of the picture environment,
+are included there (<span 
+class="cmtt-10">dvi_page=TRUE</span>). Those that not, are included in separate pages. The latter ones
+might be definitions and directives for the pictures, as is the case for pstricks which sends them to
+dvips.
+</p>
+      <!--l. 5656--><p class="indent" ><a 
+ href="#PrTx75001"  name="PrTx76001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx76002"  href="#PrTx77002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx76003"  href="tex4ht-cCh4.html#PrTx48027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258087"><span 
+class="cmtt-10">special 1</span></a><a 
+ name="PrTx76004"  href="#PrTx76052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx76005"  href="tex4ht-cCh3.html#PrTx46005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258089"><span 
+class="cmtt-10">special 2</span></a><a 
+ name="PrTx76006"  href="tex4ht-cCh8.html#PrTx103006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx76007"  href="tex4ht-cCh3.html#PrTx46007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258091"><span 
+class="cmtt-10">special 3</span></a><a 
+ name="PrTx76008"  href="tex4ht-cCh8.html#PrTx103008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx76009"  href="tex4ht-cCh3.html#PrTx46009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258093"><span 
+class="cmtt-10">special 4</span></a><a 
+ name="PrTx76010"  href="#PrTx76032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">special_nr;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">special_nr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">tex4ht_special(</span>&#x00A0;<span 
+class="cmtt-10">&amp;ch,</span>&#x00A0;<span 
+class="cmtt-10">&amp;i</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;+&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx76011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76033"><span 
+class="cmtt-10">handle requests for dvi to gif code</span></a><a 
+ name="PrTx76012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx76013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76025"><span 
+class="cmtt-10">insert non-t4ht special into picture</span></a><a 
+ name="PrTx76014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx76015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76017"><span 
+class="cmtt-10">insert non-t4ht special on non-picture page</span></a><a 
+ name="PrTx76016"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5666--><p class="noindent" ><a 
+ name="PrTx76017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76015"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">non-t4ht</span>&#x00A0;<span 
+class="cmtt-10">special</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">non-picture</span>&#x00A0;<span 
+class="cmtt-10">page</span></a><a 
+ name="PrTx76018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_page</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">!page_n</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">dvi_page</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;&#x00A0;<a 
+ name="PrTx76019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76053"><span 
+class="cmtt-10">advance idv page</span></a><a 
+ name="PrTx76020"  href="#PrTx76042"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx76021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76029"><span 
+class="cmtt-10">insert non-t4ht special</span></a><a 
+ name="PrTx76022"  href="#PrTx76028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5670--><p class="noindent" ><a 
+ name="PrTx76023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76023"><span 
+class="cmtt-10">insert non-t4ht special on non-picture pageNO</span></a><a 
+ name="PrTx76024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5672--><p class="noindent" >Replace the last piece with a seek! (IGNORED) fseek(dvi&#x02D9;file, (long)i, &#8216;¡relative file addr&#8216;¿);
+</p>
+      <!--l. 5678--><p class="indent" ><a 
+ name="PrTx76025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76013"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">non-t4ht</span>&#x00A0;<span 
+class="cmtt-10">special</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">picture</span></a><a 
+ name="PrTx76026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx76027"  href="#PrTx76021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76029"><span 
+class="cmtt-10">insert non-t4ht special</span></a><a 
+ name="PrTx76028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5692--><p class="noindent" ><a 
+ name="PrTx76029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76021"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">non-t4ht</span>&#x00A0;<span 
+class="cmtt-10">special</span></a><a 
+ name="PrTx76030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">j;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">special_hd;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">(unsigned)</span>&#x00A0;<a 
+ name="PrTx76031"  href="#PrTx76009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258093"><span 
+class="cmtt-10">special 4</span></a><a 
+ name="PrTx76032"  href="tex4ht-cCh8.html#PrTx103010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(j=4;</span>&#x00A0;<span 
+class="cmtt-10">j--;</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">*ch,</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">*ch</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">*ch,</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">get_char(),</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5709--><p class="noindent" ><a 
+ name="PrTx76033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76011"><span 
+class="cmtt-10">handle</span>&#x00A0;<span 
+class="cmtt-10">requests</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">dvi</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">gif</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx76034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">i==0</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;<a 
+ name="PrTx76035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77025"><span 
+class="cmtt-10">end dvi page</span></a><a 
+ name="PrTx76036"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx76037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76049"><span 
+class="cmtt-10">make a special for dvi driver</span></a><a 
+ name="PrTx76038"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;+&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx76039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76047"><span 
+class="cmtt-10">out gif filename</span></a><a 
+ name="PrTx76040"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">dvi_page</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx76041"  href="#PrTx76019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76053"><span 
+class="cmtt-10">advance idv page</span></a><a 
+ name="PrTx76042"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;@&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx76043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76045"><span 
+class="cmtt-10">write to lg file</span></a><a 
+ name="PrTx76044"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">--i</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5716--><p class="noindent" ><a 
+ name="PrTx76045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76043"><span 
+class="cmtt-10">write</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">lg</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx76046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">--i</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">get_char(),</span>&#x00A0;<span 
+class="cmtt-10">log_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\n&#8217;,</span>&#x00A0;<span 
+class="cmtt-10">log_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;handle</span><span 
+class="cmtt-10">&#x00A0;requests</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;gif</span><span 
+class="cmtt-10">&#x00A0;codeNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;i==0</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;end</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;page&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">else{</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;make</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;special</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;driver&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;&#8217;+&#8217;==get_char()</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;out</span><span 
+class="cmtt-10">&#x00A0;gif</span><span 
+class="cmtt-10">&#x00A0;filename&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;1;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;advance</span><span 
+class="cmtt-10">&#x00A0;idv</span><span 
+class="cmtt-10">&#x00A0;page&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;while(</span><span 
+class="cmtt-10">&#x00A0;--i</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;(void)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;get_char();</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 5742--><p class="noindent" ><a 
+ name="PrTx76047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76039"><span 
+class="cmtt-10">out</span>&#x00A0;<span 
+class="cmtt-10">gif</span>&#x00A0;<span 
+class="cmtt-10">filename</span></a><a 
+ name="PrTx76048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">str[256],</span>&#x00A0;<span 
+class="cmtt-10">*ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">str;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">--i</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(ch++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">script(font_gif,</span>&#x00A0;<span 
+class="cmtt-10">job_name</span>&#x00A0;<span 
+class="cmtt-10">,page_n+1,</span>&#x00A0;<span 
+class="cmtt-10">str);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5744--><p class="noindent" >&#8216;<span 
+class="cmtt-10">printf("%s", str);</span>&#8217;&#8212; tooo much info for screen, and not that significant.
+</p><div class="Verbatim"><span 
+class="cmtt-10">\&#x003C;handle</span><span 
+class="cmtt-10">&#x00A0;requests</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;gif</span><span 
+class="cmtt-10">&#x00A0;codeNO\&#x003E;&#x003C;&#x003C;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;i</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;make</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;special</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;driver&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">else{</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;!dvi_flag;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;dvi_flag</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;advance</span><span 
+class="cmtt-10">&#x00A0;idv</span><span 
+class="cmtt-10">&#x00A0;page&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#x003C;end</span><span 
+class="cmtt-10">&#x00A0;dvi</span><span 
+class="cmtt-10">&#x00A0;page&#8216;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;&#x003E;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 5762--><p class="indent" ><a 
+ name="PrTx76049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76037"><span 
+class="cmtt-10">make</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">special</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">dvi</span>&#x00A0;<span 
+class="cmtt-10">driver</span></a><a 
+ name="PrTx76050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">special_nr</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_int(</span>&#x00A0;<span 
+class="cmtt-10">i,</span>&#x00A0;<span 
+class="cmtt-10">special_nr</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx76051"  href="#PrTx76003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258087"><span 
+class="cmtt-10">special 1</span></a><a 
+ name="PrTx76052"  href="tex4ht-cCh8.html#PrTx103004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5771--><p class="noindent" ><a 
+ name="PrTx76053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76019"><span 
+class="cmtt-10">advance</span>&#x00A0;<span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">page</span></a><a 
+ name="PrTx76054"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">advance_idv_page(</span>&#x00A0;<span 
+class="cmtt-10">bop_addr,</span>&#x00A0;<span 
+class="cmtt-10">cur_font</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack_depth</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">set_loc(</span>&#x00A0;<a 
+ name="PrTx76055"  href="#PrTx74037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258015"><span 
+class="cmtt-10">mv hor 1-byte</span></a><a 
+ name="PrTx76056"  href="#PrTx80006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">set_loc(</span>&#x00A0;<a 
+ name="PrTx76057"  href="#PrTx74069"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258043"><span 
+class="cmtt-10">mv ver 1-byte</span></a><a 
+ name="PrTx76058"  href="#PrTx80008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5777--><p class="noindent" ><a 
+ name="PrTx76059"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx11023"><span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx76060"  href="#PrTx77030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">bop_addr;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5782--><p class="noindent" ><a 
+ href="tex4ht-cCh5.html#PrTx68005"  name="PrTx76061"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx76062"  href="#PrTx82002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">set_loc(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(int,</span>&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5793--><p class="noindent" ><a 
+ href="tex4ht-cCh5.html#PrTx68007"  name="PrTx76063"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx76064"  href="#PrTx82004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">set_loc</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">op,</span>&#x00A0;<span 
+class="cmtt-10">d</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">op</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">d</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">op</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">3</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi(</span>&#x00A0;<span 
+class="cmtt-10">d,</span>&#x00A0;<span 
+class="cmtt-10">4</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">5;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-77"  name="QQ1-17-77">Stack</a></h3>
+           <!--l. 5812--><p class="noindent" ><a 
+ href="#PrTx76001"  name="PrTx77001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx77002"  href="#PrTx78002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx77003"  href="tex4ht-cCh3.html#PrTx42009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258011"><span 
+class="cmtt-10">sv loc op</span></a><a 
+ name="PrTx77004"  href="#PrTx77024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">push_stack();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack_depth++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx77005"  href="#PrTx73003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258013"><span 
+class="cmtt-10">retrieve loc op</span></a><a 
+ name="PrTx77006"  href="#PrTx77028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">cur_x,</span>&#x00A0;<span 
+class="cmtt-10">cur_y;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack_depth--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_x</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">x_val;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_y</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">y_val;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">pop_stack();</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">stack_depth&#x003C;0</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">warn_i_int(</span>&#x00A0;<span 
+class="cmtt-10">24,</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx77007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77009"><span 
+class="cmtt-10">push curr state</span></a><a 
+ name="PrTx77008"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5828--><p class="noindent" ><a 
+ name="PrTx77009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77007"><span 
+class="cmtt-10">push</span>&#x00A0;<span 
+class="cmtt-10">curr</span>&#x00A0;<span 
+class="cmtt-10">state</span></a><a 
+ name="PrTx77010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77011"  href="#PrTx74035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258021"><span 
+class="cmtt-10">mv hor 4-byte</span></a><a 
+ name="PrTx77012"  href="tex4ht-cCh8.html#PrTx105044"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">cur_x</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">dx_1</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">dx_2</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77013"  href="#PrTx74045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258031"><span 
+class="cmtt-10">dx.1 store and mv hor 4-byte</span></a><a 
+ name="PrTx77014"  href="#PrTx84004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">dx_1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77015"  href="#PrTx74055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258041"><span 
+class="cmtt-10">dx.2 store and mv hor 4-byte</span></a><a 
+ name="PrTx77016"  href="#PrTx84006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">dx_2</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77017"  href="#PrTx74067"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258049"><span 
+class="cmtt-10">mv ver 4-byte</span></a><a 
+ name="PrTx77018"  href="tex4ht-cCh7.html#PrTx93018"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">cur_y</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">dy_1</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">dy_2</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77019"  href="#PrTx74077"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258059"><span 
+class="cmtt-10">dy.1 store and mv ver 4-byte</span></a><a 
+ name="PrTx77020"  href="#PrTx84008"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">dy_1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77021"  href="#PrTx74087"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258069"><span 
+class="cmtt-10">dy.2 store and mv ver 4-byte</span></a><a 
+ name="PrTx77022"  href="#PrTx84010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">dy_2</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<a 
+ name="PrTx77023"  href="#PrTx77003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258011"><span 
+class="cmtt-10">sv loc op</span></a><a 
+ name="PrTx77024"  href="#PrTx83006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">24;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5837--><p class="noindent" ><a 
+ name="PrTx77025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76035"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">dvi</span>&#x00A0;<span 
+class="cmtt-10">page</span></a><a 
+ name="PrTx77026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!visible_cnt</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">str[256];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">sprintf(str,</span>&#x00A0;<span 
+class="cmtt-10">"---</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">picture</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">%sidv[%d]</span>&#x00A0;<span 
+class="cmtt-10">---\n",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">job_name,page_n);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">printf("%s",</span>&#x00A0;<span 
+class="cmtt-10">str);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(log_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",str);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">stack_depth--</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx77027"  href="#PrTx77005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258013"><span 
+class="cmtt-10">retrieve loc op</span></a><a 
+ name="PrTx77028"  href="#PrTx83014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5842--><p class="noindent" ><a 
+ href="#PrTx76059"  name="PrTx77029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx11023"><span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx77030"  href="#PrTx79024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">stack_depth=0;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-78"  name="QQ1-17-78">Fonts Definition</a></h3>
+           <!--l. 5860--><p class="noindent" ><a 
+ href="#PrTx77001"  name="PrTx78001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx78002"  href="#PrTx79002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx78003"  href="tex4ht-cCh3.html#PrTx45007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258101"><span 
+class="cmtt-10">def 4 byte font</span></a><a 
+ name="PrTx78004"  href="tex4ht-cCh8.html#PrTx104004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx78005"  href="tex4ht-cCh3.html#PrTx45009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258099"><span 
+class="cmtt-10">def 3 byte font</span></a><a 
+ name="PrTx78006"  href="tex4ht-cCh8.html#PrTx104006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx78007"  href="tex4ht-cCh3.html#PrTx45011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258097"><span 
+class="cmtt-10">def 2 byte font</span></a><a 
+ name="PrTx78008"  href="tex4ht-cCh8.html#PrTx104008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx78009"  href="tex4ht-cCh3.html#PrTx45013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258095"><span 
+class="cmtt-10">def 1 byte font</span></a><a 
+ name="PrTx78010"  href="tex4ht-cCh8.html#PrTx104010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=14;</span>&#x00A0;<span 
+class="cmtt-10">i;</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">i--</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">idv_copy();</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-79"  name="QQ1-17-79">Fonts Activation</a></h3>
+<!--l. 5867--><p class="noindent" >The following must be consisted with the usage &#8216;<span 
+class="cmtt-10">for( i=1; i&#x003C;=cur_font[0]; i++ ){</span>&#8217;.
+</p>
+      <!--l. 5882--><p class="indent" ><a 
+ href="#PrTx78001"  name="PrTx79001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx79002"  href="#PrTx79014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;<a 
+ name="PrTx79003"  href="tex4ht-cCh3.html#PrTx45055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258079"><span 
+class="cmtt-10">font 1-byte</span></a><a 
+ name="PrTx79004"  href="#PrTx79012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx79005"  href="tex4ht-cCh3.html#PrTx45049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258081"><span 
+class="cmtt-10">font 2-bytes</span></a><a 
+ name="PrTx79006"  href="#PrTx81012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx79007"  href="tex4ht-cCh3.html#PrTx45051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258083"><span 
+class="cmtt-10">font 3-bytes</span></a><a 
+ name="PrTx79008"  href="#PrTx81014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx79009"  href="tex4ht-cCh3.html#PrTx45053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258085"><span 
+class="cmtt-10">font int</span></a><a 
+ name="PrTx79010"  href="#PrTx81008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font[0]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<a 
+ name="PrTx79011"  href="#PrTx79003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258079"><span 
+class="cmtt-10">font 1-byte</span></a><a 
+ name="PrTx79012"  href="#PrTx81010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font[1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=2;</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;=</span>&#x00A0;<span 
+class="cmtt-10">cur_font[0];</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5895--><p class="noindent" ><a 
+ href="#PrTx79001"  name="PrTx79013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx74003"><span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">idv</span></a><a 
+ name="PrTx79014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<a 
+ name="PrTx79015"  href="tex4ht-cCh3.html#PrTx45041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258071"><span 
+class="cmtt-10">font 0</span></a><a 
+ name="PrTx79016"  href="#PrTx81006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<a 
+ name="PrTx79017"  href="tex4ht-cCh3.html#PrTx45039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258075"><span 
+class="cmtt-10">font 63</span></a><a 
+ name="PrTx79018"  href="tex4ht-cCh8.html#PrTx104028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<a 
+ name="PrTx79019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx132001"><span 
+class="cmtt-10">font defs for xdv&#8217;s idv?</span></a><a 
+ name="PrTx79020"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx79021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx132017"><span 
+class="cmtt-10">xdv font def for idv</span></a><a 
+ name="PrTx79022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">err_i(23);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font[0]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">1;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font[1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5900--><p class="noindent" ><a 
+ href="#PrTx77029"  name="PrTx79023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx11023"><span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx79024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">cur_font[6];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">visible_cnt=FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">6.5 <a 
+ href="tex4ht-c.html#QQ2-17-80"  name="QQ1-17-80">Symbols from Fonts</a></h3>
+           <!--l. 5930--><p class="noindent" ><a 
+ name="PrTx80001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70017"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">symbols</span></a><a 
+ name="PrTx80002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">i,</span>&#x00A0;<span 
+class="cmtt-10">mag;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">str[256];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(log_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",</span>&#x00A0;<span 
+class="cmtt-10">begin_char_gif);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">cur_fnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">font_tbl_size;</span>&#x00A0;<span 
+class="cmtt-10">cur_fnt--;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx80003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx128037"><span 
+class="cmtt-10">output to lg file</span></a><a 
+ name="PrTx80004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].char_l</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].char_f</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--;</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">get_bit(</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].gif_on,</span>&#x00A0;<span 
+class="cmtt-10">i)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">advance_idv_page(</span>&#x00A0;<span 
+class="cmtt-10">bop_addr,</span>&#x00A0;<span 
+class="cmtt-10">cur_font</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">set_loc(</span>&#x00A0;<a 
+ name="PrTx80005"  href="#PrTx76055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258015"><span 
+class="cmtt-10">mv hor 1-byte</span></a><a 
+ name="PrTx80006"  href="tex4ht-cCh8.html#PrTx105038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">(long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">mid_page_x</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">set_loc(</span>&#x00A0;<a 
+ name="PrTx80007"  href="#PrTx76057"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258043"><span 
+class="cmtt-10">mv ver 1-byte</span></a><a 
+ name="PrTx80008"  href="tex4ht-cCh7.html#PrTx93012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">(long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">mid_page_y</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx80009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx81001"><span 
+class="cmtt-10">get font of symbol</span></a><a 
+ name="PrTx80010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx80011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80013"><span 
+class="cmtt-10">insert the char code</span></a><a 
+ name="PrTx80012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">printf("Execute</span>&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">&#8216;%slg&#8217;\n",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">job_name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fclose(</span>&#x00A0;<span 
+class="cmtt-10">log_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5946--><p class="noindent" ><a 
+ name="PrTx80013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80011"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx80014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].char_f)</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">127</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">256</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">cond_idv_char(133);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">warn_i(23);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">mag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">((double)</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].scale</span>&#x00A0;<span 
+class="cmtt-10">/</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].design_sz</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx80015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh11.html#PrTx163009"><span 
+class="cmtt-10">insert gif symbol to lg file</span></a><a 
+ name="PrTx80016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">script(font_gif,</span>&#x00A0;<span 
+class="cmtt-10">job_name</span>&#x00A0;<span 
+class="cmtt-10">,page_n,</span>&#x00A0;<span 
+class="cmtt-10">str);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5948--><p class="noindent" >&#8216;<span 
+class="cmtt-10">printf("%s", str);</span>&#8217; &#8212; too mach info
+
+</p>
+      <!--l. 5959--><p class="indent" ><a 
+ name="PrTx80017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx11011"><span 
+class="cmtt-10">open</span>&#x00A0;<span 
+class="cmtt-10">log</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx80018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">str[256];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">str,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">job_name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">str[job_name_n-1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">str[job_name_n-2]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;g&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">str[job_name_n-3]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;l&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(log_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">fopen(str,</span>&#x00A0;<span 
+class="cmtt-10">WRITE_TEXT_FLAGS))</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">NULL</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">bad_in_file(str);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5963--><p class="noindent" ><a 
+ href="#PrTx72013"  name="PrTx80019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx80020"  href="#PrTx80024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">log_file;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5968--><p class="noindent" ><a 
+ name="PrTx80021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh2.html#PrTx27007"><span 
+class="cmtt-10">max</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">dimensions</span></a><a 
+ name="PrTx80022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">mid_page_y</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">get_unt(4)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">mid_page_x</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">get_unt(4)</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5972--><p class="noindent" ><a 
+ href="#PrTx80019"  name="PrTx80023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx80024"  href="#PrTx83008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">mid_page_y,</span>&#x00A0;<span 
+class="cmtt-10">mid_page_x;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-81"  name="QQ1-17-81">Activate Font</a></h3>
+           <!--l. 5992--><p class="noindent" ><a 
+ name="PrTx81001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80009"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">font</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">symbol</span></a><a 
+ name="PrTx81002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">num;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].num;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;=</span>&#x00A0;<a 
+ name="PrTx81003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258077"><span 
+class="cmtt-10">number of direct fonts</span></a><a 
+ name="PrTx81004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">(num</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<a 
+ name="PrTx81005"  href="#PrTx79015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258071"><span 
+class="cmtt-10">font 0</span></a><a 
+ name="PrTx81006"  href="tex4ht-cCh8.html#PrTx104026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(num</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">0)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(num</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">16777215L)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_int(</span><a 
+ name="PrTx81007"  href="#PrTx79009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258085"><span 
+class="cmtt-10">font int</span></a><a 
+ name="PrTx81008"  href="tex4ht-cCh7.html#PrTx93050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">256</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx81009"  href="#PrTx79011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258079"><span 
+class="cmtt-10">font 1-byte</span></a><a 
+ name="PrTx81010"  href="tex4ht-cCh7.html#PrTx93044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">65536L</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">int_to_dvi((long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<a 
+ name="PrTx81011"  href="#PrTx79005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258081"><span 
+class="cmtt-10">font 2-bytes</span></a><a 
+ name="PrTx81012"  href="tex4ht-cCh7.html#PrTx93046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,2);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi((long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<a 
+ name="PrTx81013"  href="#PrTx79007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258083"><span 
+class="cmtt-10">font 3-bytes</span></a><a 
+ name="PrTx81014"  href="tex4ht-cCh7.html#PrTx93048"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,3);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5994--><p class="noindent" >The above seems to be incorrect for big numbers!!!!!!!!!!!!!!
+</p>
+    <h3 class="SectionHead">6.6 <a 
+ href="tex4ht-c.html#QQ2-17-82"  name="QQ1-17-82">Utilities</a></h3>
+           <!--l. 6001--><p class="noindent" ><a 
+ href="#PrTx76061"  name="PrTx82001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82002"  href="#PrTx82006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6007--><p class="noindent" ><a 
+ href="#PrTx76063"  name="PrTx82003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82004"  href="#PrTx82008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">idv_char</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">n</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">n,</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6014--><p class="noindent" ><a 
+ href="#PrTx82001"  name="PrTx82005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82006"  href="#PrTx82010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6022--><p class="noindent" ><a 
+ href="#PrTx82003"  name="PrTx82007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82008"  href="#PrTx82012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_idv_char</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">n</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">n,</span>&#x00A0;<span 
+class="cmtt-10">idv_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6029--><p class="noindent" ><a 
+ href="#PrTx82005"  name="PrTx82009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82010"  href="#PrTx82016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">idv_copy(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(void)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6034--><p class="noindent" ><a 
+ href="#PrTx82007"  name="PrTx82011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82012"  href="#PrTx82018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">idv_copy(</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">MYVOID</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6037--><p class="noindent" ><a 
+ href="tex4ht-cCh5.html#PrTx66029"  name="PrTx82013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10003"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx82014"  href="tex4ht-cCh7.html#PrTx88004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">idv_int(val)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi((long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">val,4)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6044--><p class="noindent" ><a 
+ href="#PrTx82009"  name="PrTx82015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82016"  href="#PrTx82020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_idv_int(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(long</span>&#x00A0;<span 
+class="cmtt-10">int,</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6053--><p class="noindent" ><a 
+ href="#PrTx82011"  name="PrTx82017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82018"  href="#PrTx82022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_idv_int</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">val,</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">val</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">n</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi((long</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">val,</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">n;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6058--><p class="noindent" ><a 
+ href="#PrTx82015"  name="PrTx82019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82020"  href="#PrTx82024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(long</span>&#x00A0;<span 
+class="cmtt-10">int,</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6076--><p class="noindent" ><a 
+ href="#PrTx82017"  name="PrTx82021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82022"  href="#PrTx82026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int_to_dvi</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">val,</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">val</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">n</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">unsigned</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">ch2,</span>&#x00A0;<span 
+class="cmtt-10">ch3,</span>&#x00A0;<span 
+class="cmtt-10">ch4;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch4</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">(val</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0xFF);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">8;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch3</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">(val</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0xFF);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">8;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch2</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">char)</span>&#x00A0;<span 
+class="cmtt-10">(val</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0xFF);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">8;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">n</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">4:</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">3:</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch2</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">2:</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch3</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">1:</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch4</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<i>&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">&amp;</span>&#x00A0;<span 
+class="cmtt-10">0x80</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">val</span>&#x00A0;<span 
+class="cmtt-10">-=</span>&#x00A0;<span 
+class="cmtt-10">0x100;</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6080--><p class="noindent" ><a 
+ href="#PrTx82019"  name="PrTx82023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx82024"  href="#PrTx83010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_string(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(int,</span>&#x00A0;<span 
+class="cmtt-10">int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6089--><p class="noindent" ><a 
+ href="#PrTx82021"  name="PrTx82025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx82026"  href="#PrTx83012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">cond_string</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">n)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span><strong><span 
+class="cmtt-10">;</span></strong>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">n</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">n--</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-83"  name="QQ1-17-83">Advance Page</a></h3>
+           <!--l. 6101--><p class="noindent" ><a 
+ name="PrTx83001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx70011"><span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">idv</span>&#x00A0;<span 
+class="cmtt-10">page</span></a><a 
+ name="PrTx83002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">y_val</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack_n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<a 
+ name="PrTx83003"  href="#PrTx74009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258007"><span 
+class="cmtt-10">start page op</span></a><a 
+ name="PrTx83004"  href="#PrTx83018"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=36;</span>&#x00A0;<span 
+class="cmtt-10">i--;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">0);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">file_n;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">45;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx83005"  href="#PrTx77023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258011"><span 
+class="cmtt-10">sv loc op</span></a><a 
+ name="PrTx83006"  href="#PrTx83020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6105--><p class="noindent" ><a 
+ href="#PrTx80023"  name="PrTx83007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx83008"  href="tex4ht-cCh7.html#PrTx88002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">page_n,</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6110--><p class="noindent" ><a 
+ href="#PrTx82023"  name="PrTx83009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx83010"  href="#PrTx84012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">advance_idv_page(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(</span>&#x00A0;<span 
+class="cmtt-10">INTEGER,char*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6132--><p class="noindent" ><a 
+ href="#PrTx82025"  name="PrTx83011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx83012"  href="#PrTx84016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">advance_idv_page</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">bop_addr,</span>&#x00A0;<span 
+class="cmtt-10">cur_font</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">bop_addr</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cur_font</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">page_n++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx83013"  href="#PrTx77027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258013"><span 
+class="cmtt-10">retrieve loc op</span></a><a 
+ name="PrTx83014"  href="tex4ht-cCh8.html#PrTx101014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx83015"  href="#PrTx74013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258009"><span 
+class="cmtt-10">end page op</span></a><a 
+ name="PrTx83016"  href="tex4ht-cCh8.html#PrTx104030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<a 
+ name="PrTx83017"  href="#PrTx83003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258007"><span 
+class="cmtt-10">start page op</span></a><a 
+ name="PrTx83018"  href="tex4ht-cCh8.html#PrTx105032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">page_n</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=36;</span>&#x00A0;<span 
+class="cmtt-10">i--;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">0);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">bop_addr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">file_n;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">45;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span><a 
+ name="PrTx83019"  href="#PrTx83005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258011"><span 
+class="cmtt-10">sv loc op</span></a><a 
+ name="PrTx83020"  href="tex4ht-cCh7.html#PrTx93052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=1;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;=cur_font[0];</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_char(</span>&#x00A0;<span 
+class="cmtt-10">cur_font[i]</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84001"><span 
+class="cmtt-10">set dx-1, dx-2, dy-1, dy-2</span></a><a 
+ name="PrTx83022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">bop_addr;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6134--><p class="noindent" >What &#8216;<span 
+class="cmtt-10">cur_font[0]</span>&#8217; holds?
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-17-84"  name="QQ1-17-84">Set Store-Move Variables</a></h3>
+<!--l. 6141--><p class="noindent" >Dvips requires font definitions before the following code in the first dvi page.
+</p>
+      <!--l. 6149--><p class="indent" ><a 
+ name="PrTx84001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83021"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">dx-1,</span>&#x00A0;<span 
+class="cmtt-10">dx-2,</span>&#x00A0;<span 
+class="cmtt-10">dy-1,</span>&#x00A0;<span 
+class="cmtt-10">dy-2</span></a><a 
+ name="PrTx84002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">store_mv(</span><a 
+ name="PrTx84003"  href="#PrTx77013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258031"><span 
+class="cmtt-10">dx.1 store and mv hor 4-byte</span></a><a 
+ name="PrTx84004"  href="tex4ht-cCh8.html#PrTx105054"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">dx_1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">store_mv(</span><a 
+ name="PrTx84005"  href="#PrTx77015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258041"><span 
+class="cmtt-10">dx.2 store and mv hor 4-byte</span></a><a 
+ name="PrTx84006"  href="tex4ht-cCh8.html#PrTx105064"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">dx_2);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">store_mv(</span><a 
+ name="PrTx84007"  href="#PrTx77019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258059"><span 
+class="cmtt-10">dy.1 store and mv ver 4-byte</span></a><a 
+ name="PrTx84008"  href="tex4ht-cCh7.html#PrTx93028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">dy_1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">store_mv(</span><a 
+ name="PrTx84009"  href="#PrTx77021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx258069"><span 
+class="cmtt-10">dy.2 store and mv ver 4-byte</span></a><a 
+ name="PrTx84010"  href="tex4ht-cCh7.html#PrTx93038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">dy_2);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6153--><p class="noindent" ><a 
+ href="#PrTx83009"  name="PrTx84011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx84012"  href="tex4ht-cCh8.html#PrTx106026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">store_mv(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(</span>&#x00A0;<span 
+class="cmtt-10">int,</span>&#x00A0;<span 
+class="cmtt-10">INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6164--><p class="noindent" ><a 
+ name="PrTx84013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx84013"><span 
+class="cmtt-10">functionsNO-sep-9</span></a><a 
+ name="PrTx84014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">store_mv</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">op,</span>&#x00A0;<span 
+class="cmtt-10">d)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">op</span><strong><span 
+class="cmtt-10">;</span></strong>&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">d</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(op);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_int(</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">-d);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(op);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_int(</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">d);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6178--><p class="noindent" ><a 
+ href="#PrTx83011"  name="PrTx84015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx84016"  href="tex4ht-cCh8.html#PrTx106028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">store_mv</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">op,</span>&#x00A0;<span 
+class="cmtt-10">d)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">op</span><strong><span 
+class="cmtt-10">;</span></strong>&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">d</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">dvi_flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(op);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;<span 
+class="cmtt-10">-d);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cond_idv_char(op);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">idv_int(</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">d);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">file_n</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">8;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 6181--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh7.html" >next</a>] [<a 
+ href="tex4ht-cCh5.html" >prev</a>] [<a 
+ href="tex4ht-cCh5.html#tailtex4ht-cCh5.html" >prev-tail</a>] [<a 
+ href="tex4ht-cCh6.html" >front</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh6.html" >up</a>] </p></div>
+<!--l. 6181--><p class="indent" >    <a 
+  name="tailtex4ht-cCh6.html"></a>   </p> 
+</body></html> 

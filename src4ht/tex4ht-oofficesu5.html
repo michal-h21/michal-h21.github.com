@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>styles.xml (jobname-styles.xml)</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,4,sections+,html --> 
+<meta name="src" content="tex4ht-ooffice.tex" /> 
+<meta name="date" content="2014-05-24 22:41:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-ooffice.css" /> 
+</head><body 
+>
+   <!--l. 307--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oofficesu6.html" >next</a>] [<a 
+ href="tex4ht-oofficesu4.html" >prev</a>] [<a 
+ href="tex4ht-oofficesu4.html#tailtex4ht-oofficesu4.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oofficesu5.html">tail</a>] [<a 
+ href="tex4ht-oofficese2.html#tex4ht-oofficesu5.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">1.2.2   </span> <a 
+ href="tex4ht-ooffice.html#QQ2-11-8"  id="x11-80001.2.2">styles.xml (jobname-styles.xml)</a></h4>
+<!--l. 312--><p class="noindent" >The contents.xml file can contain only styles that are known ahead of time, before
+starting the processing of the content.
+</p><!--l. 315--><p class="indent" >   The styles.xml file allows us
+</p><!--l. 317--><p class="indent" >
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x11-8002x1">To collect styles as we go along the body of the document, and
+     </li>
+     <li 
+  class="enumerate" id="x11-8004x2">Introduce default built in styles that user may override</li></ol>
+<!--l. 324--><p class="indent" >   The content.xml must get the style information at the start of the compilation,
+before the body is processed.
+</p><!--l. 329--><p class="indent" >   <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\OOstyles</span></span></span> immediatey sends it content to the styles.xml file. In the case of
+<span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\ConfigureOO</span></span></span>, the last assignment to the hook is sent to the file upon reaching the
+end of the source.
+                                                                  
+
+                                                                  
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-33"><div class="head">
+       <a 
+ href="tex4ht-oofficesu2.html#PrTx4011"  id="PrTx8005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oofficesu3.html#PrTx5019"  id="QPrTx33"><span 
+class="cmtt-10">utilities</span></a><a 
+ id="PrTx8006"  href="#PrTx8034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:OOstyles=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\OOstyles#1{\edef\:OOstyles{\:OOstyles</span><span 
+class="cmtt-10">&#x00A0;#1}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\OOstyles{</span><a 
+ id="PrTx8007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8023"><span 
+class="cmtt-10">oo2 styles.xml</span></a><a 
+ id="PrTx8008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+                                                                  
+
+                                                                  
+   <p></p><div class="ShowCode" id="ShowCode-34"><div class="head">
+       <a 
+ id="PrTx8009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oofficesu12.html#PrTx15005"  id="QPrTx34"><span 
+class="cmtt-10">switch to main body OOstlyles</span></a><a 
+ id="PrTx8010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\OOstyles##1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003E;</span><a 
+ id="PrTx8011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8015"><span 
+class="cmtt-10">styles file name</span></a><a 
+ id="PrTx8012"  href="#PrTx8014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht=##1}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht*&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\OOstyles{\:OOstyles}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht*&#x003E;</span><a 
+ id="PrTx8013"  href="#PrTx8011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8015"><span 
+class="cmtt-10">styles file name</span></a><a 
+ id="PrTx8014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:OOstyles=\:UnDef</span></span></div><div class="tail">-_-_-
+   </div></div>
+                                                                  
+
+                                                                  
+   <p></p><div class="ShowCode" id="ShowCode-35"><div class="head">
+       <a 
+ id="PrTx8015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8011"  id="QPrTx35"><span 
+class="cmtt-10">styles</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;name</span></a><a 
+ id="PrTx8016"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\jobname-styles.4oy</span></span></div><div class="tail">-_-_-
+   </div></div>
+                                                                  
+
+                                                                  
+   <p></p><div class="ShowCode" id="ShowCode-36"><div class="head">
+       <a 
+ id="PrTx8017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oofficesu12.html#PrTx15013"  id="QPrTx36"><span 
+class="cmtt-10">oo2 styles at /@BODY</span></a><a 
+ id="PrTx8018"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\OOstyles{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\oo:style</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/office:styles&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;office:automatic-styles&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oofficesu77.html#PrTx99005"><span 
+class="cmtt-10">styles.xml: automatic-styles</span></a><a 
+ id="PrTx8020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/office:automatic-styles&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;office:master-styles&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oofficesu77.html#PrTx99003"><span 
+class="cmtt-10">styles.xml: master-styles</span></a><a 
+ id="PrTx8022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/office:master-styles&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/office:document-styles&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 374--><p class="indent" >   Writer2LaTeX (w2l) doesn&#8217;t currently allow line breaks with DOCTYPE
+                                                                  
+
+                                                                  
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-37"><div class="head">
+       <a 
+ id="PrTx8023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8007"  id="QPrTx37"><span 
+class="cmtt-10">oo2</span><span 
+class="cmtt-10">&#x00A0;styles.xml</span></a><a 
+ id="PrTx8024"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx8025"  href="tex4ht-oofficesu4.html#PrTx7011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oofficesu4.html#PrTx7037"><span 
+class="cmtt-10">VERSION</span></a><a 
+ id="PrTx8026"  href="tex4ht-oofficesu6.html#PrTx9006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;!DOCTYPE</span><span 
+class="cmtt-10">&#x00A0;office:document-styles</span><span 
+class="cmtt-10">&#x00A0;PUBLIC</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;"-//OpenOffice.org//DTD</span><span 
+class="cmtt-10">&#x00A0;OfficeDocument</span><span 
+class="cmtt-10">&#x00A0;\oo:dtd:ver//</span><a 
+ id="PrTx8027"  href="tex4ht-oofficesu4.html#PrTx7041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oofficesu4.html#PrTx7043"><span 
+class="cmtt-10">dtd lang</span></a><a 
+ id="PrTx8028"  href="tex4ht-oofficesu6.html#PrTx9020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;"office.dtd"&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;office:document-styles</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oofficesu4.html#PrTx7035"><span 
+class="cmtt-10">xml styles name spaces 2.0</span></a><a 
+ id="PrTx8030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;office:version="1.0"&#x003E;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;office:font-face-decls&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8031"><span 
+class="cmtt-10">oo2 fonts</span></a><a 
+ id="PrTx8032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/office:font-face-decls&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;office:styles&#x003E;\Hnewline</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 396--><p class="indent" >   [<a 
+ href="tex4ht-ooffice12.html"  id="tex4ht-ooffice12.html" >dirty trick for fonts</a>]
+                                                                  
+
+                                                                  
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-38"><div class="head">
+       <a 
+ href="#PrTx8005"  id="PrTx8033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oofficesu3.html#PrTx5019"  id="QPrTx38"><span 
+class="cmtt-10">utilities</span></a><a 
+ id="PrTx8034"  href="#PrTx8036"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\oo:style=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NewConfigureOO#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;c:#1:oo:style:\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\append:def\oo:style{\csname</span><span 
+class="cmtt-10">&#x00A0;a:#1:oo:style\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{info}\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{\string\NewConfigureOO{#1}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\NewConfigure{#1:oo:style}{1}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ConfigureOO#1#2{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\edef\:temp{\noexpand\Configure{#1:oo:style}{#2}}\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{info-oo}\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{\string\ConfigureOO{#1}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\expandafter\expandafter\:gobbleM</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\meaning\csname</span><span 
+class="cmtt-10">&#x00A0;a:#1:oo:style\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+                                                                  
+
+                                                                  
+   <p></p><div class="ShowCode" id="ShowCode-39"><div class="head">
+       <a 
+ href="#PrTx8033"  id="PrTx8035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oofficesu3.html#PrTx5019"  id="QPrTx39"><span 
+class="cmtt-10">utilities</span></a><a 
+ id="PrTx8036"  href="tex4ht-oofficesu7.html#PrTx10002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{info}\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{For</span><span 
+class="cmtt-10">&#x00A0;tracing</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;oo</span><span 
+class="cmtt-10">&#x00A0;configurations,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;&#8216;info-oo&#8217;</span><span 
+class="cmtt-10">&#x00A0;option}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+                                                                  
+
+                                                                  
+   <!--l. 447--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oofficesu6.html" >next</a>] [<a 
+ href="tex4ht-oofficesu4.html" >prev</a>] [<a 
+ href="tex4ht-oofficesu4.html#tailtex4ht-oofficesu4.html" >prev-tail</a>] [<a 
+ href="tex4ht-oofficesu5.html" >front</a>] [<a 
+ href="tex4ht-oofficese2.html#tex4ht-oofficesu5.html" >up</a>] </p></div>
+<!--l. 447--><p class="indent" >   <a 
+  id="tailtex4ht-oofficesu5.html"></a> </p> 
+</body></html> 

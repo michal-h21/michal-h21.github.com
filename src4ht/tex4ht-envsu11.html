@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Script: netpbm</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,html --> 
+<meta name="src" content="tex4ht-env.tex" /> 
+<meta name="date" content="2014-05-24 11:49:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-env.css" /> 
+</head><body 
+>
+   <!--l. 895--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-envsu12.html" >next</a>] [<a 
+ href="tex4ht-envsu10.html" >prev</a>] [<a 
+ href="tex4ht-envsu10.html#tailtex4ht-envsu10.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-envsu11.html">tail</a>] [<a 
+ href="tex4ht-envse4.html#tex4ht-envsu11.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">4.7   </span> <a 
+  id="x16-150004.7"></a>Script: netpbm</h4>
+           <!--l. 910--><p class="noindent" ><a 
+ id="PrTx15001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-envsu5.html#PrTx9011"  id="QPrTx57"><span 
+class="cmtt-10">unix</span>&#x00A0;<span 
+class="cmtt-10">netpbm</span></a><a 
+ id="PrTx15002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Gdvips</span>&#x00A0;<span 
+class="cmtt-10">-Ppdf</span>&#x00A0;<span 
+class="cmtt-10">-mode</span>&#x00A0;<span 
+class="cmtt-10">ibmvga</span>&#x00A0;<span 
+class="cmtt-10">-D</span>&#x00A0;<span 
+class="cmtt-10">110</span>&#x00A0;<span 
+class="cmtt-10">-f</span>&#x00A0;<span 
+class="cmtt-10">%%1</span>&#x00A0;<span 
+class="cmtt-10">-pp</span>&#x00A0;<span 
+class="cmtt-10">%%2</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Ggs</span>&#x00A0;<span 
+class="cmtt-10">-sDEVICE=ppm</span>&#x00A0;<span 
+class="cmtt-10">-r110</span>&#x00A0;<span 
+class="cmtt-10">-sOutputFile=zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">-q</span>&#x00A0;<span 
+class="cmtt-10">-dbatch</span>&#x00A0;<span 
+class="cmtt-10">-dTextAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-dGraphicsAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-dNOPAUSE</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">-c</span>&#x00A0;<span 
+class="cmtt-10">quit</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gmv</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gpnmcrop</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gpnmtopng</span>&#x00A0;<span 
+class="cmtt-10">-interlace</span>&#x00A0;<span 
+class="cmtt-10">-transparent</span>&#x00A0;<span 
+class="cmtt-10">1,1,1</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">Gppmtopng</span>&#x00A0;<span 
+class="cmtt-10">-interlace</span>&#x00A0;<span 
+class="cmtt-10">-transparent</span>&#x00A0;<span 
+class="cmtt-10">1,1,1</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Grm</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Grm</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Grm</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Gppmtogif</span>&#x00A0;<span 
+class="cmtt-10">-interlace</span>&#x00A0;<span 
+class="cmtt-10">-transparent</span>&#x00A0;<span 
+class="cmtt-10">1,1,1</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;-_-_-</span>
+           </p><!--l. 926--><p class="noindent" ><a 
+ id="PrTx15003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-envsu6.html#PrTx10011"  id="QPrTx58"><span 
+class="cmtt-10">dos</span>&#x00A0;<span 
+class="cmtt-10">netpbm</span></a><a 
+ id="PrTx15004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gdvips</span>&#x00A0;<span 
+class="cmtt-10">-Ppdf</span>&#x00A0;<span 
+class="cmtt-10">-mode</span>&#x00A0;<span 
+class="cmtt-10">ibmvga</span>&#x00A0;<span 
+class="cmtt-10">-D</span>&#x00A0;<span 
+class="cmtt-10">110</span>&#x00A0;<span 
+class="cmtt-10">-f</span>&#x00A0;<span 
+class="cmtt-10">%%1</span>&#x00A0;<span 
+class="cmtt-10">-pp</span>&#x00A0;<span 
+class="cmtt-10">%%2</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Ggswin32c</span>&#x00A0;<span 
+class="cmtt-10">-sDEVICE=ppm</span>&#x00A0;<span 
+class="cmtt-10">-r110</span>&#x00A0;<span 
+class="cmtt-10">-sOutputFile=zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">-q</span>&#x00A0;<span 
+class="cmtt-10">-dbatch</span>&#x00A0;<span 
+class="cmtt-10">-dTextAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-dGraphicsAlphaBits=4</span>&#x00A0;<span 
+class="cmtt-10">-dNOPAUSE</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">-c</span>&#x00A0;<span 
+class="cmtt-10">quit</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gmove</span>&#x00A0;<span 
+class="cmtt-10">/y</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gpnmcrop</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gppmtopng</span>&#x00A0;<span 
+class="cmtt-10">-interlace</span>&#x00A0;<span 
+class="cmtt-10">-transparent</span>&#x00A0;<span 
+class="cmtt-10">1,1,1</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ps</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Gif</span>&#x00A0;<span 
+class="cmtt-10">exist</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>&#x00A0;<span 
+class="cmtt-10">DEL</span>&#x00A0;<span 
+class="cmtt-10">temp.ppm</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Gppmtogif</span>&#x00A0;<span 
+class="cmtt-10">-interlace</span>&#x00A0;<span 
+class="cmtt-10">-transparent</span>&#x00A0;<span 
+class="cmtt-10">1,1,1</span>&#x00A0;<span 
+class="cmtt-10">zz%%4.ppm</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;&#x00A0;&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 929--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-envsu12.html" >next</a>] [<a 
+ href="tex4ht-envsu10.html" >prev</a>] [<a 
+ href="tex4ht-envsu10.html#tailtex4ht-envsu10.html" >prev-tail</a>] [<a 
+ href="tex4ht-envsu11.html" >front</a>] [<a 
+ href="tex4ht-envse4.html#tex4ht-envsu11.html" >up</a>] </p></div>
+<!--l. 929--><p class="indent" >   <a 
+  id="tailtex4ht-envsu11.html"></a> </p> 
+</body></html> 

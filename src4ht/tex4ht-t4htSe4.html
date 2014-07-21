@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Command-Line Options</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <!--l. 818--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe5.html" >next</a>] [<a 
+ href="tex4ht-t4htSe3.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe3.html#tailtex4ht-t4htSe3.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-t4htSe4.html">tail</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe4.html" >up</a>] </p></div>
+    <h3 class="SectionHead">4 <a 
+ href="tex4ht-t4ht.html#QQ2-5-13"  name="QQ1-5-13">Command-Line Options</a></h3>
+    <div class="TableOfContents"><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-5-14"  name="QQ2-5-14">Available Options</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-5-15"  name="QQ2-5-15">Scanning the Options</a></span><br />
+    </div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-5-14"  name="QQ1-5-14">Available Options</a></h3>
+<!--l. 823--><p class="noindent" >
+</p><ul type="disc" >
+<li>&#8216;<span 
+class="cmtt-10">.../</span>&#8217;&#8212;Directory where files should be sent </li>
+<li>&#8216;<span 
+class="cmtt-10">-mXXX</span>&#8217;&#8212;&#8216;<span 
+class="cmtt-10">chmod XXX</span>&#8217; for files </li>
+<li>&#8216;<span 
+class="cmtt-10">-e...</span>&#8217;&#8212;Name of invisible gif </li>
+<li>&#8216;<span 
+class="cmtt-10">-d</span>&#8217;&#8212;Directory for config files </li>
+<li>&#8216;<span 
+class="cmtt-10">-p</span>&#8217;&#8212;Ignore pictures (but not pictorial symbols) </li>
+<li>&#8216;<span 
+class="cmtt-10">-i</span>&#8217;&#8212;Debugging info </li>
+<li>Other&#8212;Name of dvi file </li></ul>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;dvips</span><span 
+class="cmtt-10">&#x00A0;-mode</span><span 
+class="cmtt-10">&#x00A0;ibmvga</span><span 
+class="cmtt-10">&#x00A0;-D</span><span 
+class="cmtt-10">&#x00A0;110</span><span 
+class="cmtt-10">&#x00A0;-f</span><span 
+class="cmtt-10">&#x00A0;foo.idv</span><span 
+class="cmtt-10">&#x00A0;-pp</span><span 
+class="cmtt-10">&#x00A0;92</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;tmp.ps</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;convert</span><span 
+class="cmtt-10">&#x00A0;-crop</span><span 
+class="cmtt-10">&#x00A0;0x0</span><span 
+class="cmtt-10">&#x00A0;-density</span><span 
+class="cmtt-10">&#x00A0;110x110</span><span 
+class="cmtt-10">&#x00A0;-transparent</span><span 
+class="cmtt-10">&#x00A0;&#8217;#FFFFFF&#8217;</span><span 
+class="cmtt-10">&#x00A0;tmp.ps</span><span 
+class="cmtt-10">&#x00A0;foo.gif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;mv</span><span 
+class="cmtt-10">&#x00A0;foo.gif</span><span 
+class="cmtt-10">&#x00A0;/WWW/temp/.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;cp</span><span 
+class="cmtt-10">&#x00A0;foo.html</span><span 
+class="cmtt-10">&#x00A0;/WWW/temp/.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;chmod</span><span 
+class="cmtt-10">&#x00A0;644</span><span 
+class="cmtt-10">&#x00A0;/WWW/temp/foo.*</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 863--><p class="indent" ><a 
+ name="PrTx14001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe14.html#PrTx50005"><span 
+class="cmtt-10">command line options</span></a><a 
+ name="PrTx14002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">"\n--------------------------------------------------------------------\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"t4ht</span>&#x00A0;<span 
+class="cmtt-10">[-f&#x003C;dir</span>&#x00A0;<span 
+class="cmtt-10">char&#x003E;]filename</span>&#x00A0;<span 
+class="cmtt-10">...\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-b</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">-d</span>&#x00A0;<span 
+class="cmtt-10">-m</span>&#x00A0;<span 
+class="cmtt-10">-M</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">bitmaps\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-c...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">choose</span>&#x00A0;<span 
+class="cmtt-10">named</span>&#x00A0;<span 
+class="cmtt-10">segment</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">env</span>&#x00A0;<span 
+class="cmtt-10">file\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-d...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">directory</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">output</span>&#x00A0;<span 
+class="cmtt-10">files</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(default:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">current)\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-e...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">location</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">tex4ht.env\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-i</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">debugging</span>&#x00A0;<span 
+class="cmtt-10">info\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-g</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">errors</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">system</span>&#x00A0;<span 
+class="cmtt-10">calls\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-m...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">chmod</span>&#x00A0;<span 
+class="cmtt-10">...</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">output</span>&#x00A0;<span 
+class="cmtt-10">files</span>&#x00A0;<span 
+class="cmtt-10">(reused</span>&#x00A0;<span 
+class="cmtt-10">bitmaps</span>&#x00A0;<span 
+class="cmtt-10">excluded)\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-p</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">don&#8217;t</span>&#x00A0;<span 
+class="cmtt-10">convert</span>&#x00A0;<span 
+class="cmtt-10">pictures</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(default:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">convert)\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-r</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">replace</span>&#x00A0;<span 
+class="cmtt-10">bitmaps</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">all</span>&#x00A0;<span 
+class="cmtt-10">glyphs</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(default:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">reuse</span>&#x00A0;<span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">ones)\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-M...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">chmod</span>&#x00A0;<span 
+class="cmtt-10">...</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">all</span>&#x00A0;<span 
+class="cmtt-10">output</span>&#x00A0;<span 
+class="cmtt-10">files\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-Q</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">quit,</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">tex4ht.c</span>&#x00A0;<span 
+class="cmtt-10">had</span>&#x00A0;<span 
+class="cmtt-10">problems\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-S...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">permission</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">system</span>&#x00A0;<span 
+class="cmtt-10">calls:</span>&#x00A0;<span 
+class="cmtt-10">*-always,</span>&#x00A0;<span 
+class="cmtt-10">filter\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-X...</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">content</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">field</span>&#x00A0;<span 
+class="cmtt-10">%%3</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">X</span>&#x00A0;<span 
+class="cmtt-10">scripts\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">-....</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">content</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">field</span>&#x00A0;<span 
+class="cmtt-10">%%2</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">.</span>&#x00A0;<span 
+class="cmtt-10">scripts\n\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"Example:</span>&#x00A0;<span 
+class="cmtt-10">\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">t4ht</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">-d/WWW/temp/</span>&#x00A0;<span 
+class="cmtt-10">-etex4ht-32.env</span>&#x00A0;<span 
+class="cmtt-10">-m644\n"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">"--------------------------------------------------------------------\n"</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 866--><p class="noindent" >If option &#8216;<span 
+class="cmtt-10">-e</span>&#8217; is present, empty pictures are replaced with the named file (e.g., &#8216;<span 
+class="cmtt-10">empty.gif</span>&#8217;).
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-5-15"  name="QQ1-5-15">Scanning the Options</a></h3>
+           <!--l. 889--><p class="noindent" ><a 
+ href="tex4ht-t4htSe2.html#PrTx6003"  name="PrTx15001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3065"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx15002"  href="#PrTx15044"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*ch_mod</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*debug</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*Xfield</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*Dotfield</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*dir</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*lg_name</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL,</span>&#x00A0;<span 
+class="cmtt-10">tmp_name[255],</span>&#x00A0;<span 
+class="cmtt-10">job_name[255];</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*nopict</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*bitmaps_no_dm</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">newchmod</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*noreuse</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Q_NULL;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 907--><p class="noindent" ><a 
+ name="PrTx15003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3083"><span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">job</span>&#x00A0;<span 
+class="cmtt-10">args</span></a><a 
+ name="PrTx15004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*p,</span>&#x00A0;<span 
+class="cmtt-10">*q;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15021"><span 
+class="cmtt-10">kpathsea arg 0</span></a><a 
+ name="PrTx15006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15007"><span 
+class="cmtt-10">default args</span></a><a 
+ name="PrTx15008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">argc</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">bad_arg;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(i=1;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;argc;</span>&#x00A0;<span 
+class="cmtt-10">i++){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*(</span>&#x00A0;<span 
+class="cmtt-10">p=argv[i]</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;-&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx15009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15023"><span 
+class="cmtt-10">scan flaged args</span></a><a 
+ name="PrTx15010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">lg_name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">argv[i];</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">lg_name</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">NULL</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">bad_arg;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15017"><span 
+class="cmtt-10">set tmp file name</span></a><a 
+ name="PrTx15012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15019"><span 
+class="cmtt-10">set job file name</span></a><a 
+ name="PrTx15014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 939--><p class="noindent" ><a 
+ name="PrTx15015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3089"><span 
+class="cmtt-10">handle</span>&#x00A0;<span 
+class="cmtt-10">quoted</span>&#x00A0;<span 
+class="cmtt-10">arguments</span></a><a 
+ name="PrTx15016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i,</span>&#x00A0;<span 
+class="cmtt-10">count</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(i=0;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;argc;</span>&#x00A0;<span 
+class="cmtt-10">i++){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">argv[i];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">count++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\&#8217;&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\"&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">cnt;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">len</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">cnt=i;</span>&#x00A0;<span 
+class="cmtt-10">cnt</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">argc;</span>&#x00A0;<span 
+class="cmtt-10">cnt++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">len</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">argv[cnt]);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*(argv[cnt]</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">argv[cnt])</span>&#x00A0;<span 
+class="cmtt-10">-1)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">arg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">len</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">cnt</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">toArg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">arg;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*pp;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">do</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">pp</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">argv[++i];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">*pp</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*pp</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">*(toArg++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">*pp;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">pp++;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(toArg++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">while</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">cnt</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(toArg-1)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">argv[count-1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">arg;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">argc</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">count;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 965--><p class="noindent" ><a 
+ name="PrTx15017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15011"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">tmp</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ name="PrTx15018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p,</span>&#x00A0;<span 
+class="cmtt-10">*q;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">tmp_name,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">lg_name);</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">tmp_name</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">tmp_name</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">tmp_name</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;.&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">eq_str(</span>&#x00A0;<span 
+class="cmtt-10">p+1,LG_EXT</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(</span>&#x00A0;<span 
+class="cmtt-10">tmp_name,</span>&#x00A0;<span 
+class="cmtt-10">LG_EXT);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">fopen(</span>&#x00A0;<span 
+class="cmtt-10">tmp_name,</span>&#x00A0;<span 
+class="cmtt-10">READ_TEXT_FLAGS</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fclose(file);</span>&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(tmp_name,</span>&#x00A0;<span 
+class="cmtt-10">".tmp");</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 971--><p class="noindent" ><a 
+ name="PrTx15019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15013"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">job</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ name="PrTx15020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">job_name,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">tmp_name);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">*(job_name</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">job_name)</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">4)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">I</span><span 
+class="cmtt-10">&#x00A0;found</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;couldn&#8217;t</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;t4ht.c</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;KPATHSEA</span><span 
+class="cmtt-10">&#x00A0;defined,</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;then</span><span 
+class="cmtt-10">&#x00A0;noticed</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">that</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;doesn&#8217;t</span><span 
+class="cmtt-10">&#x00A0;include</span><span 
+class="cmtt-10">&#x00A0;any</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;kpathsea</span><span 
+class="cmtt-10">&#x00A0;headers.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;So</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;have</span><span 
+class="cmtt-10">&#x00A0;patched</span><span 
+class="cmtt-10">&#x00A0;t4ht.c</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">to</span><span 
+class="cmtt-10">&#x00A0;create</span><span 
+class="cmtt-10">&#x00A0;two</span><span 
+class="cmtt-10">&#x00A0;versions:</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;one</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;necessary</span><span 
+class="cmtt-10">&#x00A0;kpathsea</span><span 
+class="cmtt-10">&#x00A0;headers</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;one</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">without.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;This</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;output</span><span 
+class="cmtt-10">&#x00A0;produced</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;&#8217;diff&#8217;.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Let</span><span 
+class="cmtt-10">&#x00A0;me</span><span 
+class="cmtt-10">&#x00A0;know</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;you</span><span 
+class="cmtt-10">&#x00A0;want</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">merge</span><span 
+class="cmtt-10">&#x00A0;my</span><span 
+class="cmtt-10">&#x00A0;changes</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;your</span><span 
+class="cmtt-10">&#x00A0;t4ht.c,</span><span 
+class="cmtt-10">&#x00A0;and/or</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;you</span><span 
+class="cmtt-10">&#x00A0;notice</span><span 
+class="cmtt-10">&#x00A0;any</span><span 
+class="cmtt-10">&#x00A0;errors!</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;have</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">changed</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;second</span><span 
+class="cmtt-10">&#x00A0;argument</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;&#8217;kpse_set_program_name&#8217;</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;NULL</span><span 
+class="cmtt-10">&#x00A0;(which</span><span 
+class="cmtt-10">&#x00A0;would</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">effectively</span><span 
+class="cmtt-10">&#x00A0;mean</span><span 
+class="cmtt-10">&#x00A0;argv[0])</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;&#8217;tex4ht&#8217;,</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;saves</span><span 
+class="cmtt-10">&#x00A0;having</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;add</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#8217;T4HTINPUTS&#8217;</span><span 
+class="cmtt-10">&#x00A0;(or</span><span 
+class="cmtt-10">&#x00A0;&#8217;T4HTKINPUTS&#8217;)</span><span 
+class="cmtt-10">&#x00A0;variable</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;kpathsea</span><span 
+class="cmtt-10">&#x00A0;configuration</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#8217;texmf.cnf&#8217;</span><span 
+class="cmtt-10">&#x00A0;pointing</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;same</span><span 
+class="cmtt-10">&#x00A0;place</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;&#8217;tex4ht.env&#8217;</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;&#8217;TEX4HTINPUTS&#8217;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">variable.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">For</span><span 
+class="cmtt-10">&#x00A0;t4ht.c,</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;kpathsea</span><span 
+class="cmtt-10">&#x00A0;library</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;only</span><span 
+class="cmtt-10">&#x00A0;useful</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;locating</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;tex4ht.env</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">configuration</span><span 
+class="cmtt-10">&#x00A0;file.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;But</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;can</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;used</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;this</span><span 
+class="cmtt-10">&#x00A0;purpose</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;tex4ht.c,</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">seems</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;pity</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;its</span><span 
+class="cmtt-10">&#x00A0;companion</span><span 
+class="cmtt-10">&#x00A0;program</span><span 
+class="cmtt-10">&#x00A0;too.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;94a99,102</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;#ifdef</span><span 
+class="cmtt-10">&#x00A0;KPATHSEA</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;kpathsea/progname.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;kpathsea/tex-file.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;943c951</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;kpse_set_program_name</span><span 
+class="cmtt-10">&#x00A0;(argv[0],</span><span 
+class="cmtt-10">&#x00A0;NULL);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;---</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;kpse_set_program_name</span><span 
+class="cmtt-10">&#x00A0;(argv[0],</span><span 
+class="cmtt-10">&#x00A0;"tex4ht");</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 1006--><p class="noindent" ><a 
+ name="PrTx15021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15005"><span 
+class="cmtt-10">kpathsea</span>&#x00A0;<span 
+class="cmtt-10">arg</span>&#x00A0;<span 
+class="cmtt-10">0</span></a><a 
+ name="PrTx15022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">kpse_set_program_name</span>&#x00A0;<span 
+class="cmtt-10">(argv[0],</span>&#x00A0;<span 
+class="cmtt-10">"tex4ht");</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1010--><p class="noindent" >If &#8216;<span 
+class="cmtt-10">strlen((char *) argv[i] ) == 2</span>&#8217; the switch is followed by a space to be deleted when more input is
+awaited.
+
+</p>
+      <!--l. 1038--><p class="indent" ><a 
+ name="PrTx15023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15009"><span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">flaged</span>&#x00A0;<span 
+class="cmtt-10">args</span></a><a 
+ name="PrTx15024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">argv[i]</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<a 
+ name="PrTx15025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15035"><span 
+class="cmtt-10">not a single char option?</span></a><a 
+ name="PrTx15026"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">++i</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">argc</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">bad_arg;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">argv[i];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p+2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;M&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">ch_mod</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">newchmod</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;S&#8217;:{</span>&#x00A0;<a 
+ name="PrTx15027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe10.html#PrTx28009"><span 
+class="cmtt-10">permission for system calls</span></a><a 
+ name="PrTx15028"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;X&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">Xfield</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;b&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">bitmaps_no_dm</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q-1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;c&#8217;:{</span>&#x00A0;<a 
+ name="PrTx15029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe8.html#PrTx26033"><span 
+class="cmtt-10">env blocks selector</span></a><a 
+ name="PrTx15030"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;d&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">dir</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(*q==&#8217;~&#8217;)?</span>&#x00A0;<span 
+class="cmtt-10">abs_addr(q,NULL)</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">q;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;e&#8217;:{</span>&#x00A0;<a 
+ name="PrTx15031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx45005"><span 
+class="cmtt-10">get .env directory from com ln</span></a><a 
+ name="PrTx15032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;f&#8217;:{</span>&#x00A0;<a 
+ name="PrTx15033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15037"><span 
+class="cmtt-10">get file name wo dir</span></a><a 
+ name="PrTx15034"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;i&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">debug</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q-1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;g&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">always_call_sys</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;m&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">ch_mod</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;p&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">nopict</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q-1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;Q&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">check_tex4ht_c_err</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;r&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">noreuse</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q-1;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;.&#8217;:{</span>&#x00A0;<span 
+class="cmtt-10">Dotfield</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:{</span>&#x00A0;<span 
+class="cmtt-10">bad_arg;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1048--><p class="noindent" ><a 
+ name="PrTx15035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15025"><span 
+class="cmtt-10">not</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">single</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">option?</span></a><a 
+ name="PrTx15036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;i&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;p&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;r&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;b&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;g&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(*(p+1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;Q&#8217;)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1052--><p class="noindent" >The following is to allow for commands &#8216;<span 
+class="cmtt-10">htlatex -f/../source/foo.tex</span>&#8217; which draw files from other directories
+for latex, but use the current directory for tex4ht.c (and t4ht.c). The character immediately after &#8216;<span 
+class="cmtt-10">-f</span>&#8217; is a directory
+indicator character.
+</p>
+      <!--l. 1063--><p class="indent" ><a 
+ name="PrTx15037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15033"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">wo</span>&#x00A0;<span 
+class="cmtt-10">dir</span></a><a 
+ name="PrTx15038"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">lg_name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">*lg_name</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">lg_name--;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">lg_name++;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1071--><p class="noindent" ><a 
+ href="tex4ht-t4htSe3.html#PrTx12003"  name="PrTx15039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3067"><span 
+class="cmtt-10">header</span>&#x00A0;<span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx15040"  href="tex4ht-t4htSe6.html#PrTx22012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">abs_addr(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*,</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1098--><p class="noindent" ><a 
+ href="tex4ht-t4htSe3.html#PrTx12005"  name="PrTx15041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3069"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx15042"  href="tex4ht-t4htSe6.html#PrTx22014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">abs_addr</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">dir,</span>&#x00A0;<span 
+class="cmtt-10">base)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*dir</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*base</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">dir</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(base?</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">):0)</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">HOME_DIR</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">));</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(*(dir+1)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;~&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*base</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;~&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">HOME_DIR);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">base+1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">base);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">dir+2);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">HOME_DIR);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strct(p,</span>&#x00A0;<span 
+class="cmtt-10">dir+1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">p;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1102--><p class="noindent" ><a 
+ href="#PrTx15001"  name="PrTx15043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3065"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx15044"  href="tex4ht-t4htSe8.html#PrTx26032"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*HOME_DIR;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1106--><p class="noindent" ><a 
+ name="PrTx15045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3081"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">init</span></a><a 
+ name="PrTx15046"  href="tex4ht-t4htSe14.html#PrTx52006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">HOME_DIR</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">getenv("HOME");</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 1111--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe5.html" >next</a>] [<a 
+ href="tex4ht-t4htSe3.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe3.html#tailtex4ht-t4htSe3.html" >prev-tail</a>] [<a 
+ href="tex4ht-t4htSe4.html" >front</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe4.html" >up</a>] </p></div>
+<!--l. 1111--><p class="indent" >    <a 
+  name="tailtex4ht-t4htSe4.html"></a>  </p> 
+</body></html> 

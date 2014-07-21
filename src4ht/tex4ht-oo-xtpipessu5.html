@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Remove Rows</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-oo-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:53:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-oo-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 401--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu6.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu4.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu4.html#tailtex4ht-oo-xtpipessu4.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oo-xtpipessu5.html">tail</a>] [<a 
+ href="tex4ht-oo-xtpipesse2.html#tex4ht-oo-xtpipessu5.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">2.2   </span> <a 
+  id="x8-80002.2"></a>Remove Rows</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-16"><div class="head">
+       <a 
+ id="PrTx8001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oo-xtpipessu4.html#PrTx7007"  id="QPrTx16"><span 
+class="cmtt-10">tblRow</span><span 
+class="cmtt-10">&#x00A0;-=</span><span 
+class="cmtt-10">&#x00A0;empty</span><span 
+class="cmtt-10">&#x00A0;trailing</span><span 
+class="cmtt-10">&#x00A0;rows</span></a><a 
+ id="PrTx8002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getLastChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;(tblRow</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;(tblRow.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.TEXT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;tblRow.getNodeValue().trim().equals("")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;tblRow.getTextContent().trim().equals("")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;node.removeChild(tblRow);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getLastChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 424--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu6.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu4.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu4.html#tailtex4ht-oo-xtpipessu4.html" >prev-tail</a>] [<a 
+ href="tex4ht-oo-xtpipessu5.html" >front</a>] [<a 
+ href="tex4ht-oo-xtpipesse2.html#tex4ht-oo-xtpipessu5.html" >up</a>] </p></div>
+<!--l. 424--><p class="indent" >   <a 
+  id="tailtex4ht-oo-xtpipessu5.html"></a> </p> 
+</body></html> 

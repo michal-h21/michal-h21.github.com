@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>
+
+    <title>tex4ht-4ht.html</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <h1>A `Literate' View of tex4ht.sty</h1>
+    <div class="TableOfContents"><div align="center"><a 
+ href="tex4ht-4htPa1.html#QQ1-2-1"  name="QQ2-2-1">Deeper Toc</a></div><div align="center"><a 
+ href="tex4ht-4htPa2.html#QQ1-3-2"  name="QQ2-3-2">Shared</a></div><span class="ChapterToc" >1&#x00A0;<a 
+ href="tex4ht-4htCh1.html#QQ1-4-3"  name="QQ2-4-3">Outline of the Code</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa3.html#QQ1-5-4"  name="QQ2-5-4">latex.ltx</a></div><span class="ChapterToc" >2&#x00A0;<a 
+ href="tex4ht-4htCh2.html#QQ1-7-5"  name="QQ2-7-5">Classes and Packages</a></span><br /><span class="ChapterToc" >3&#x00A0;<a 
+ href="tex4ht-4htCh3.html#QQ1-10-8"  name="QQ2-10-8">Common
+to Plain and LaTeX-Plain</a></span><br /><span class="ChapterToc" >4&#x00A0;<a 
+ href="tex4ht-4htCh4.html#QQ1-12-9"  name="QQ2-12-9">ltspace (Horizontal Spaces)</a></span><br /><span class="ChapterToc" >5&#x00A0;<a 
+ href="tex4ht-4htCh5.html#QQ1-13-10"  name="QQ2-13-10">ltlength</a></span><br /><span class="ChapterToc" >6&#x00A0;<a 
+ href="tex4ht-4htCh6.html#QQ1-14-11"  name="QQ2-14-11">Cross
+References</a></span><br /><span class="ChapterToc" >7&#x00A0;<a 
+ href="tex4ht-4htCh7.html#QQ1-51-43"  name="QQ2-51-43">Miscellaneous Environments</a></span><br /><span class="ChapterToc" >8&#x00A0;<a 
+ href="tex4ht-4htCh8.html#QQ1-69-53"  name="QQ2-69-53">Math Setup</a></span><br /><span class="ChapterToc" >9&#x00A0;<a 
+ href="tex4ht-4htCh9.html#QQ1-91-73"  name="QQ2-91-73">List Environments</a></span><br /><span class="ChapterToc" >10&#x00A0;<a 
+ href="tex4ht-4htCh10.html#QQ1-101-81"  name="QQ2-101-81">List-Based
+Environments</a></span><br /><span class="ChapterToc" >11&#x00A0;<a 
+ href="tex4ht-4htCh11.html#QQ1-108-88"  name="QQ2-108-88">Boxes</a></span><br /><span class="ChapterToc" >12&#x00A0;<a 
+ href="tex4ht-4htCh12.html#QQ1-113-93"  name="QQ2-113-93">Tabbing</a></span><br /><span class="ChapterToc" >13&#x00A0;<a 
+ href="tex4ht-4htCh13.html#QQ1-120-100"  name="QQ2-120-100">Tabular and Array Environments</a></span><br /><span class="ChapterToc" >14&#x00A0;<a 
+ href="tex4ht-4htCh14.html#QQ1-145-125"  name="QQ2-145-125">multirow</a></span><br /><span class="ChapterToc" >15&#x00A0;<a 
+ href="tex4ht-4htCh15.html#QQ1-146-126"  name="QQ2-146-126">Pictures</a></span><br /><span class="ChapterToc" >16&#x00A0;<a 
+ href="tex4ht-4htCh16.html#QQ1-147-127"  name="QQ2-147-127">Theorem
+Environments</a></span><br /><span class="ChapterToc" >17&#x00A0;<a 
+ href="tex4ht-4htCh17.html#QQ1-151-131"  name="QQ2-151-131">Sectioning Commands</a></span><br /><span class="ChapterToc" >18&#x00A0;<a 
+ href="tex4ht-4htCh18.html#QQ1-156-136"  name="QQ2-156-136">Footnotes, Floats, and Figures</a></span><br /><span class="ChapterToc" >19&#x00A0;<a 
+ href="tex4ht-4htCh19.html#QQ1-167-147"  name="QQ2-167-147">Index
+and Glossary</a></span><br /><span class="ChapterToc" >20&#x00A0;<a 
+ href="tex4ht-4htCh20.html#QQ1-180-160"  name="QQ2-180-160">Bibliography</a></span><br /><span class="ChapterToc" >21&#x00A0;<a 
+ href="tex4ht-4htCh21.html#QQ1-184-164"  name="QQ2-184-164">Page styles and related commands</a></span><br /><span class="ChapterToc" >22&#x00A0;<a 
+ href="tex4ht-4htCh22.html#QQ1-188-166"  name="QQ2-188-166">LaTeX
+Accents</a></span><br /><span class="ChapterToc" >23&#x00A0;<a 
+ href="tex4ht-4htCh23.html#QQ1-189-167"  name="QQ2-189-167">Output Routine</a></span><br /><span class="ChapterToc" >24&#x00A0;<a 
+ href="tex4ht-4htCh24.html#QQ1-191-169"  name="QQ2-191-169">Utilities</a></span><br /><span class="ChapterToc" >25&#x00A0;<a 
+ href="tex4ht-4htCh25.html#QQ1-192-170"  name="QQ2-192-170">TO BE ORGANIZED</a></span><br /><span class="ChapterToc" >26&#x00A0;<a 
+ href="tex4ht-4htCh26.html#QQ1-198-175"  name="QQ2-198-175">Display-Paragraph
+Environments of LaTeX</a></span><br /><span class="ChapterToc" >27&#x00A0;<a 
+ href="tex4ht-4htCh27.html#QQ1-201-176"  name="QQ2-201-176">Tables of Contents</a></span><br /><span class="ChapterToc" >28&#x00A0;<a 
+ href="tex4ht-4htCh28.html#QQ1-206-181"  name="QQ2-206-181">Content in Margins</a></span><br /><span class="ChapterToc" >29&#x00A0;<a 
+ href="tex4ht-4htCh29.html#QQ1-210-184"  name="QQ2-210-184">Other</a></span><br /><span class="ChapterToc" >30&#x00A0;<a 
+ href="tex4ht-4htCh30.html#QQ1-225-194"  name="QQ2-225-194">latex209.def</a></span><br /><span class="ChapterToc" >31&#x00A0;<a 
+ href="tex4ht-4htCh31.html#QQ1-226-195"  name="QQ2-226-195">Sectioning
+Commands</a></span><br /><span class="ChapterToc" >32&#x00A0;<a 
+ href="tex4ht-4htCh32.html#QQ1-241-208"  name="QQ2-241-208">Encodings</a></span><br /><span class="ChapterToc" >33&#x00A0;<a 
+ href="tex4ht-4htCh33.html#QQ1-246-213"  name="QQ2-246-213">More LaTeX</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa4.html#QQ1-254-220"  name="QQ2-254-220">LaTeX Classes</a></div><span class="ChapterToc" >34&#x00A0;<a 
+ href="tex4ht-4htCh34.html#QQ1-255-221"  name="QQ2-255-221">Book.cls, Report.cls,
+Article.cls</a></span><br /><span class="ChapterToc" >35&#x00A0;<a 
+ href="tex4ht-4htCh35.html#QQ1-256-222"  name="QQ2-256-222">memoir</a></span><br /><span class="ChapterToc" >36&#x00A0;<a 
+ href="tex4ht-4htCh36.html#QQ1-260-226"  name="QQ2-260-226">revtex</a></span><br /><span class="ChapterToc" >37&#x00A0;<a 
+ href="tex4ht-4htCh37.html#QQ1-261-227"  name="QQ2-261-227">Polish: mwart.cls, mwrep.cls, mwbk.cls</a></span><br /><span class="ChapterToc" >38&#x00A0;<a 
+ href="tex4ht-4htCh38.html#QQ1-265-231"  name="QQ2-265-231">aa.cls</a></span><br /><span class="ChapterToc" >39&#x00A0;<a 
+ href="tex4ht-4htCh39.html#QQ1-268-234"  name="QQ2-268-234">latex2man.cls</a></span><br /><span class="ChapterToc" >40&#x00A0;<a 
+ href="tex4ht-4htCh40.html#QQ1-269-235"  name="QQ2-269-235">texinfo.cls</a></span><br /><span class="ChapterToc" >41&#x00A0;<a 
+ href="tex4ht-4htCh41.html#QQ1-270-236"  name="QQ2-270-236">LaTeX
+Documentation</a></span><br /><span class="ChapterToc" >42&#x00A0;<a 
+ href="tex4ht-4htCh42.html#QQ1-273-239"  name="QQ2-273-239">src art/rep/book</a></span><br /><span class="ChapterToc" >43&#x00A0;<a 
+ href="tex4ht-4htCh43.html#QQ1-280-246"  name="QQ2-280-246">letter</a></span><br /><span class="ChapterToc" >44&#x00A0;<a 
+ href="tex4ht-4htCh44.html#QQ1-281-247"  name="QQ2-281-247">elseart</a></span><br /><span class="ChapterToc" >45&#x00A0;<a 
+ href="tex4ht-4htCh45.html#QQ1-282-248"  name="QQ2-282-248">American Psychological
+Association (APA)</a></span><br /><span class="ChapterToc" >46&#x00A0;<a 
+ href="tex4ht-4htCh46.html#QQ1-283-249"  name="QQ2-283-249">JHEP.cls</a></span><br /><span class="ChapterToc" >47&#x00A0;<a 
+ href="tex4ht-4htCh47.html#QQ1-284-250"  name="QQ2-284-250">TextBook</a></span><br /><span class="ChapterToc" >48&#x00A0;<a 
+ href="tex4ht-4htCh48.html#QQ1-285-251"  name="QQ2-285-251">combine</a></span><br /><span class="ChapterToc" >49&#x00A0;<a 
+ href="tex4ht-4htCh49.html#QQ1-286-252"  name="QQ2-286-252">letters</a></span><br /><span class="ChapterToc" >50&#x00A0;<a 
+ href="tex4ht-4htCh50.html#QQ1-288-254"  name="QQ2-288-254">ltxguide</a></span><br /><span class="ChapterToc" >51&#x00A0;<a 
+ href="tex4ht-4htCh51.html#QQ1-289-255"  name="QQ2-289-255">Ext
+article/book/report/proc/letter</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa5.html#QQ1-290-256"  name="QQ2-290-256">AMS</a></div><span class="ChapterToc" >52&#x00A0;<a 
+ href="tex4ht-4htCh52.html#QQ1-291-257"  name="QQ2-291-257">AMS ART, PROC, BOOK classes</a></span><br /><span class="ChapterToc" >53&#x00A0;<a 
+ href="tex4ht-4htCh53.html#QQ1-298-264"  name="QQ2-298-264">amsldoc.cls</a></span><br /><span class="ChapterToc" >54&#x00A0;<a 
+ href="tex4ht-4htCh54.html#QQ1-299-265"  name="QQ2-299-265">amsdtx.cls</a></span><br /><span class="ChapterToc" >55&#x00A0;<a 
+ href="tex4ht-4htCh55.html#QQ1-300-266"  name="QQ2-300-266">amsthm.sty</a></span><br /><span class="ChapterToc" >56&#x00A0;<a 
+ href="tex4ht-4htCh56.html#QQ1-301-267"  name="QQ2-301-267">ams....sty</a></span><br /><span class="ChapterToc" >57&#x00A0;<a 
+ href="tex4ht-4htCh57.html#QQ1-304-270"  name="QQ2-304-270">Ams
+Structures</a></span><br /><span class="ChapterToc" >58&#x00A0;<a 
+ href="tex4ht-4htCh58.html#QQ1-325-290"  name="QQ2-325-290">amstex.sty</a></span><br /><span class="ChapterToc" >59&#x00A0;<a 
+ href="tex4ht-4htCh59.html#QQ1-328-293"  name="QQ2-328-293">Other</a></span><br /><span class="ChapterToc" >60&#x00A0;<a 
+ href="tex4ht-4htCh60.html#QQ1-330-295"  name="QQ2-330-295">amstex.tex</a></span><br /><span class="ChapterToc" >61&#x00A0;<a 
+ href="tex4ht-4htCh61.html#QQ1-346-311"  name="QQ2-346-311">amsppt.sty</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa6.html#QQ1-359-324"  name="QQ2-359-324">Packages</a></div><span class="ChapterToc" >62&#x00A0;<a 
+ href="tex4ht-4htCh62.html#QQ1-360-325"  name="QQ2-360-325">Bibliography</a></span><br /><span class="ChapterToc" >63&#x00A0;<a 
+ href="tex4ht-4htCh63.html#QQ1-368-332"  name="QQ2-368-332">Languages</a></span><br /><span class="ChapterToc" >64&#x00A0;<a 
+ href="tex4ht-4htCh64.html#QQ1-385-348"  name="QQ2-385-348">Verbatim</a></span><br /><span class="ChapterToc" >65&#x00A0;<a 
+ href="tex4ht-4htCh65.html#QQ1-396-359"  name="QQ2-396-359">Slides</a></span><br /><span class="ChapterToc" >66&#x00A0;<a 
+ href="tex4ht-4htCh66.html#QQ1-408-371"  name="QQ2-408-371">Drawing
+Utilities and Colors</a></span><br /><span class="ChapterToc" >67&#x00A0;<a 
+ href="tex4ht-4htCh67.html#QQ1-438-400"  name="QQ2-438-400">DraTeX</a></span><br /><span class="ChapterToc" >68&#x00A0;<a 
+ href="tex4ht-4htCh68.html#QQ1-448-410"  name="QQ2-448-410">Curriculum Vitas</a></span><br /><span class="ChapterToc" >69&#x00A0;<a 
+ href="tex4ht-4htCh69.html#QQ1-452-414"  name="QQ2-452-414">Small Ones</a></span><br /><span class="ChapterToc" >70&#x00A0;<a 
+ href="tex4ht-4htCh70.html#QQ1-528-490"  name="QQ2-528-490">ProTex</a></span><br /><span class="ChapterToc" >71&#x00A0;<a 
+ href="tex4ht-4htCh71.html#QQ1-530-492"  name="QQ2-530-492">HT4
+STY</a></span><br /><span class="ChapterToc" >72&#x00A0;<a 
+ href="tex4ht-4htCh72.html#QQ1-576-536"  name="QQ2-576-536">OpenOffice</a></span><br /><span class="ChapterToc" >73&#x00A0;<a 
+ href="tex4ht-4htCh73.html#QQ1-578-538"  name="QQ2-578-538">mdwtools</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa7.html#QQ1-582-542"  name="QQ2-582-542">Latex and TeX</a></div><span class="ChapterToc" >74&#x00A0;<a 
+ href="tex4ht-4htCh74.html#QQ1-583-543"  name="QQ2-583-543">Symbol Decorations</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa8.html#QQ1-596-556"  name="QQ2-596-556">TeX
+Formats</a></div><span class="ChapterToc" >75&#x00A0;<a 
+ href="tex4ht-4htCh75.html#QQ1-597-557"  name="QQ2-597-557">Plain</a></span><br /><span class="ChapterToc" >76&#x00A0;<a 
+ href="tex4ht-4htCh76.html#QQ1-614-574"  name="QQ2-614-574">mex</a></span><br /><span class="ChapterToc" >77&#x00A0;<a 
+ href="tex4ht-4htCh77.html#QQ1-615-575"  name="QQ2-615-575">eplain</a></span><br /><span class="ChapterToc" >78&#x00A0;<a 
+ href="tex4ht-4htCh78.html#QQ1-616-576"  name="QQ2-616-576">ConTeXt</a></span><br /><div align="center"><a 
+ href="tex4ht-4htPa9.html#QQ1-637-597"  name="QQ2-637-597">Xhtml</a></div><div align="center"><a 
+ href="tex4ht-4htPa10.html#QQ1-645-605"  name="QQ2-645-605">The Template mktex4ht.4ht</a></div>
+    </div>
+<!--l. 41200--><p class="noindent" ><span class="next">[<a 
+ href="tex4ht-4htPa1.html"  name="tailtex4ht-4ht" >next</a>]</span></p> 
+</body></html> 
+
+
+

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Outline</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 4002--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu54.html" >next</a>] [<a 
+ href="xtpipessu52.html" >prev</a>] [<a 
+ href="xtpipessu52.html#tailxtpipessu52.html" >prev-tail</a>] [<a 
+ href="xtpipespa2.html#tailxtpipessu51.html">tail</a>] [<a 
+ href="xtpipessu52.html#xtpipessu53.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">11.1   </span> <a 
+  id="x68-7600011.1"></a>Outline</h4>
+           <!--l. 4043--><p class="noindent" ><a 
+ id="PrTx76001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76001"  id="QPrTx218"><span 
+class="cmtt-10">ScriptsManager.java</span></a><a 
+ id="PrTx76002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManager.java</span>&#x00A0;<span 
+class="cmtt-10">(2014-05-24-12:32),</span>&#x00A0;<span 
+class="cmtt-10">generated</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">xtpipes.tex</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2009-2010</span>&#x00A0;<span 
+class="cmtt-10">TeX</span>&#x00A0;<span 
+class="cmtt-10">Users</span>&#x00A0;<span 
+class="cmtt-10">Group</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2002-2009</span>&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>
+      <br /><!--x-->&#x00A0;<a 
+ id="PrTx76003"  href="xtpipessu50.html#PrTx73003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipes.html#PrTx2"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ id="PrTx76004"  href="xtpipesse12.html#PrTx82004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">*/</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">package</span>&#x00A0;<span 
+class="cmtt-10">xtpipes.util;</span>
+
+      <br /><!--x-->&#x00A0;<a 
+ id="PrTx76005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx76013"><span 
+class="cmtt-10">ScriptsManager imports</span></a><a 
+ id="PrTx76006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">extends</span>&#x00A0;<span 
+class="cmtt-10">DefaultHandler</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx76007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu52.html#PrTx77013"><span 
+class="cmtt-10">ScriptsManager fields</span></a><a 
+ id="PrTx76008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter</span>&#x00A0;<span 
+class="cmtt-10">out</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null,</span>&#x00A0;<span 
+class="cmtt-10">log</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">HashMap&#x003C;String,Object&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">scripts</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Method</span>&#x00A0;<span 
+class="cmtt-10">method</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">savemode=false;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">code="",</span>&#x00A0;<span 
+class="cmtt-10">match</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Stack&#x003C;Object[]&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">stack</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Stack&#x003C;Object[]&#x003E;();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManager(</span>&#x00A0;<span 
+class="cmtt-10">PrintWriter</span>&#x00A0;<span 
+class="cmtt-10">out,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">HashMap&#x003C;String,Object&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">scripts,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Method</span>&#x00A0;<span 
+class="cmtt-10">method,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter</span>&#x00A0;<span 
+class="cmtt-10">log,</span>&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.out</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">out;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.log</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(log==null)?</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">PrintWriter(</span>&#x00A0;<span 
+class="cmtt-10">System.err</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">log;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.scripts</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scripts;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.method</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">method;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">characters(char[]</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">start,</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">length){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">add(</span>&#x00A0;<span 
+class="cmtt-10">XtpipesUni.toUni(ch,</span>&#x00A0;<span 
+class="cmtt-10">start,</span>&#x00A0;<span 
+class="cmtt-10">length,</span>&#x00A0;<span 
+class="cmtt-10">"&#x003C;&#x003E;&amp;")</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx76009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu52.html#PrTx77001"><span 
+class="cmtt-10">ScriptsManager: void startElement(ns, sName, qName, atts)</span></a><a 
+ id="PrTx76010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx76011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu53.html#PrTx78001"><span 
+class="cmtt-10">ScriptsManager: void endElement(ns, sName, qName)</span></a><a 
+ id="PrTx76012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">protected</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">add(String</span>&#x00A0;<span 
+class="cmtt-10">s){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">savemode</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">code+=s;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">out.print(s);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4053--><p class="noindent" ><a 
+ id="PrTx76013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76005"  id="QPrTx219"><span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">imports</span></a><a 
+ id="PrTx76014"  href="xtpipessu54.html#PrTx79010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">org.xml.sax.helpers.DefaultHandler;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">org.xml.sax.*;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.io.*;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.lang.reflect.*;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.util.HashMap;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.util.Stack;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 4056--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu54.html" >next</a>] [<a 
+ href="xtpipessu52.html" >prev</a>] [<a 
+ href="xtpipessu52.html#tailxtpipessu52.html" >prev-tail</a>] [<a 
+ href="xtpipessu51.html" >front</a>] [<a 
+ href="xtpipessu52.html#xtpipessu53.html" >up</a>] </p></div>
+<!--l. 4056--><p class="indent" >   <a 
+  id="tailxtpipessu51.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>PsTricks</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 26365--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe187.html" >next</a>] [<a 
+ href="tex4ht-4htSe185.html" >prev</a>] [<a 
+ href="tex4ht-4htSe185.html#tailtex4ht-4htSe185.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe186.html">tail</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe186.html" >up</a>] </p></div>
+    <h3 class="SectionHead">66.4 <a 
+ href="tex4ht-4htPa1.html#QQ2-412-375"  name="QQ1-412-375">PsTricks</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 26389--><p class="indent" ><a 
+ name="PrTx375001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375001"  name="QPrTx1362"><span 
+class="cmtt-10">pstricks.4ht</span></a><a 
+ name="PrTx375002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">pstricks.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375003"  href="tex4ht-4htSe185.html#PrTx374003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx375004"  href="#PrTx375022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375025"><span 
+class="cmtt-10">pstricks pspicture</span></a><a 
+ name="PrTx375006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375041"><span 
+class="cmtt-10">rput pspicture</span></a><a 
+ name="PrTx375008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375023"><span 
+class="cmtt-10">pstricks configs</span></a><a 
+ name="PrTx375010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\psset@linecap\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375027"><span 
+class="cmtt-10">pre 2006 pstricks</span></a><a 
+ name="PrTx375012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375013"><span 
+class="cmtt-10">shared 2006/2008 pstricks</span></a><a 
+ name="PrTx375014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\pst@LaTeX@Setup\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375035"><span 
+class="cmtt-10">since 2008 pstricks</span></a><a 
+ name="PrTx375016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375031"><span 
+class="cmtt-10">since 2006 pstricks</span></a><a 
+ name="PrTx375018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{pstricks}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26402--><p class="noindent" ><a 
+ name="PrTx375019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375019"  name="QPrTx1363"><span 
+class="cmtt-10">pst-all.4ht</span></a><a 
+ name="PrTx375020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">pst-all.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2003--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375021"  href="#PrTx375003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx375022"  href="tex4ht-4htSe187.html#PrTx376004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{pst-all}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26411--><p class="noindent" ><a 
+ name="PrTx375023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375009"  name="QPrTx1364"><span 
+class="cmtt-10">pstricks</span>&#x00A0;<span 
+class="cmtt-10">configs</span></a><a 
+ name="PrTx375024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\psframebox@ii{\a:pspicture}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\psframebox@ii{\b:pspicture}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:tempc#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Picture+{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\pst@mathflag{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifpsmathbox\ifmmode\ifinner</span>&#x00A0;<span 
+class="cmtt-10">1\else</span>&#x00A0;<span 
+class="cmtt-10">2\fi\else</span>&#x00A0;<span 
+class="cmtt-10">\z@\fi\else</span>&#x00A0;<span 
+class="cmtt-10">\z@\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\pst@hbox=\hbox{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcase\pst@mathflag\or$\m@th\textstyle\or$\m@th\displaystyle\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\pst@thisbox\the\everypsbox#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\pst@mathflag&#x003E;\z@$\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\EndPicture}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\pst@makenotverbbox\:tempc</span>
+-_-_-</span>
+           </p><!--l. 26434--><p class="noindent" ><a 
+ name="PrTx375025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375005"  name="QPrTx1366"><span 
+class="cmtt-10">pstricks</span>&#x00A0;<span 
+class="cmtt-10">pspicture</span></a><a 
+ name="PrTx375026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\pst@picture{\global\let\pst:EndPicture\EndPicture</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\EndPicture=\empty}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\fi@star=}\csname</span>&#x00A0;<span 
+class="cmtt-10">fi\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{pspicture}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\ps:level=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26464--><p class="noindent" ><a 
+ name="PrTx375027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375011"  name="QPrTx1367"><span 
+class="cmtt-10">pre</span>&#x00A0;<span 
+class="cmtt-10">2006</span>&#x00A0;<span 
+class="cmtt-10">pstricks</span></a><a 
+ name="PrTx375028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endpspicture{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pst@killglue</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifdim\wd\pst@hbox=\z@\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Hidden</span>&#x00A0;<span 
+class="cmtt-10">\string\@pstrickserr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Extraneous</span>&#x00A0;<span 
+class="cmtt-10">space</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">pspicture</span>&#x00A0;<span 
+class="cmtt-10">environment}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht\pst@hbox=\pst@dimd</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\dp\pst@hbox=-\pst@dimb</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\setbox\pst@hbox=\hbox{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\kern-\pst@dima</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\pst@tempa\@empty\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\advance\pst@dimd-\pst@dimb</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pst@dimd=\pst@tempa\pst@dimd</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\advance\pst@dimd\pst@dimb</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\lower\pst@dimd</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\box\pst@hbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\kern\pst@dimc}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if@star\setbox\pst@hbox=\hbox{\clipbox@@\z@}\fi@star</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx375029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375039"><span 
+class="cmtt-10">pspicture img</span></a><a 
+ name="PrTx375030"  href="#PrTx375034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endgroup}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26492--><p class="noindent" ><a 
+ name="PrTx375031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375017"  name="QPrTx1368"><span 
+class="cmtt-10">since</span>&#x00A0;<span 
+class="cmtt-10">2006</span>&#x00A0;<span 
+class="cmtt-10">pstricks</span></a><a 
+ name="PrTx375032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endpspicture{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@killglue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\pst@shift=\psk@shift%</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">fact</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">following</span>&#x00A0;<span 
+class="cmtt-10">endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim\wd\pst@hbox=\z@\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Hidden</span>&#x00A0;<span 
+class="cmtt-10">\string\@pstrickserr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Extraneous</span>&#x00A0;<span 
+class="cmtt-10">space</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">pspicture</span>&#x00A0;<span 
+class="cmtt-10">environment}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht\pst@hbox=\pst@dimd</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\dp\pst@hbox=-\pst@dimb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\pst@hbox=\hbox{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\kern-\pst@dima</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@dimd-\pst@shift</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\pst@dimd\pst@dimb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\lower\pst@dimd%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\box\pst@hbox%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\kern\pst@dimc}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@star\setbox\pst@hbox=\hbox{\clipbox@@\z@}\fi@star</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375033"  href="#PrTx375029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375039"><span 
+class="cmtt-10">pspicture img</span></a><a 
+ name="PrTx375034"  href="#PrTx375038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\psk@shift\z@%</span>&#x00A0;<span 
+class="cmtt-10">restore</span>&#x00A0;<span 
+class="cmtt-10">value</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 26521--><p class="noindent" ><a 
+ name="PrTx375035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375015"  name="QPrTx1369"><span 
+class="cmtt-10">since</span>&#x00A0;<span 
+class="cmtt-10">2008</span>&#x00A0;<span 
+class="cmtt-10">pstricks</span></a><a 
+ name="PrTx375036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endpspicture{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@killglue</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\pst@shift=\psk@shift%</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">fact</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">following</span>&#x00A0;<span 
+class="cmtt-10">endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim\wd\pst@hbox=\z@\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Hidden</span>&#x00A0;<span 
+class="cmtt-10">\string\@pstrickserr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Extraneous</span>&#x00A0;<span 
+class="cmtt-10">space</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">pspicture</span>&#x00A0;<span 
+class="cmtt-10">environment}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht\pst@hbox=\pst@dimd</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\dp\pst@hbox=-\pst@dimb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\pst@hbox=\hbox{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\kern-\pst@dima</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@dimd-\pst@shift</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\pst@dimd\pst@dimb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\lower\pst@dimd%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\box\pst@hbox%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\kern\pst@dimc}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@star\setbox\pst@hbox=\hbox{\clipbox@@\z@}\fi@star</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375037"  href="#PrTx375033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375039"><span 
+class="cmtt-10">pspicture img</span></a><a 
+ name="PrTx375038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\psset@shift{0}%</span>&#x00A0;<span 
+class="cmtt-10">reset</span>&#x00A0;<span 
+class="cmtt-10">value</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\psk@shift\z@%</span>&#x00A0;<span 
+class="cmtt-10">restore</span>&#x00A0;<span 
+class="cmtt-10">value</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26544--><p class="noindent" ><a 
+ name="PrTx375039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375029"  name="QPrTx1370"><span 
+class="cmtt-10">pspicture</span>&#x00A0;<span 
+class="cmtt-10">img</span></a><a 
+ name="PrTx375040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ps:level=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\EndPicture\pst:EndPicture</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\pst:EndPicture=\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:pspicture\box\pst@hbox\b:pspicture</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\pspicture:dim{\the\wd\pst@hbox,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\the\ht\pst@hbox,</span>&#x00A0;<span 
+class="cmtt-10">\the\ht\pst@hbox}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\box\pst@hbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26567--><p class="noindent" ><a 
+ name="PrTx375041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375007"  name="QPrTx1371"><span 
+class="cmtt-10">rput</span>&#x00A0;<span 
+class="cmtt-10">pspicture</span></a><a 
+ name="PrTx375042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\rput@iv(#1){\pst@killglue</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\ps:level</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@makebox{\gHAdvance\ps:level</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">\rput@v{#1}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\rput@v#1{\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\use@par</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@star\pst@starbox\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@makesmall\pst@hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pst@rotate\psk@rot\pst@hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ps:level=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">pspicture:dim\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar{}\psput@{#1}\pst@hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375045"><span 
+class="cmtt-10">rput fix</span></a><a 
+ name="PrTx375044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\psput@{#1}\pst@hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endgroup</span>&#x00A0;<span 
+class="cmtt-10">\ignorespaces}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 26571--><p class="noindent" >A search on &#8216;<span 
+class="cmtt-10">\psput@{#1}\pst@hbox</span>&#8217; show a few other locations needing a similar code: <span 
+class="cmtt-10">\Rput</span>, <span 
+class="cmtt-10">\uput</span>, and
+<span 
+class="cmtt-10">\cput</span>. When it is coming to paragraph breaks, they are all problematic (because they move text
+around?).
+</p>
+      <!--l. 26589--><p class="indent" ><a 
+ name="PrTx375045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375043"  name="QPrTx1372"><span 
+class="cmtt-10">rput</span>&#x00A0;<span 
+class="cmtt-10">fix</span></a><a 
+ name="PrTx375046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\psput@cartesian##1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\pst@dimg{{\vbox</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\pst@dimh{\vss\box##1}\hss}}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\pspicture:dim=\:UnDef</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sv:leavevmode=\leavevmode</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\leavevmode{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\leavevmode=\sv:leavevmode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx375047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx375047"><span 
+class="cmtt-10">rput warning</span></a><a 
+ name="PrTx375048"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\EndPicture\pst:EndPicture</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\pst:EndPicture=\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:pspicture</span>&#x00A0;<span 
+class="cmtt-10">\leavevmode}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\psput@{#1}\pst@hbox\b:pspicture</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 26600--><p class="noindent" ><a 
+ name="PrTx375049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx375049"  name="QPrTx1373"><span 
+class="cmtt-10">rput warningNO</span></a><a 
+ name="PrTx375050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\pst@dimg&#x003C;2pt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{pspicture</span>&#x00A0;<span 
+class="cmtt-10">might</span>&#x00A0;<span 
+class="cmtt-10">fail</span>&#x00A0;<span 
+class="cmtt-10">within</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\rput</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(width=\the\pst@dimg\space</span>&#x00A0;<span 
+class="cmtt-10">height=\the\pst@dimh)}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\pst@dimh&#x003C;2pt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{pspicture</span>&#x00A0;<span 
+class="cmtt-10">might</span>&#x00A0;<span 
+class="cmtt-10">fail</span>&#x00A0;<span 
+class="cmtt-10">within</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\rput</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(width=\the\pst@dimg\space</span>&#x00A0;<span 
+class="cmtt-10">height=\the\pst@dimh)}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 26606--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe187.html" >next</a>] [<a 
+ href="tex4ht-4htSe185.html" >prev</a>] [<a 
+ href="tex4ht-4htSe185.html#tailtex4ht-4htSe185.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe186.html" >front</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe186.html" >up</a>] </p></div>
+<!--l. 26606--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe186.html"></a> </p> 
+</body></html> 

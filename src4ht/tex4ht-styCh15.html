@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Dvi-Based Hooks</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 10160--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh16.html" >next</a>] [<a 
+ href="tex4ht-styCh14.html" >prev</a>] [<a 
+ href="tex4ht-styCh14.html#tailtex4ht-styCh14.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh15.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh15.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter  15<br /><a 
+ href="tex4ht-sty.html#QQ2-29-170"  name="QQ1-29-170">Dvi-Based  Hooks</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.1&#x00A0;<a 
+ href="#QQ1-29-171"  name="QQ2-29-171">Tracing  Dvi</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.2&#x00A0;<a 
+ href="#QQ1-29-172"  name="QQ2-29-172">Sent  to
+Dvi</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.3&#x00A0;<a 
+ href="#QQ1-29-173"  name="QQ2-29-173">Observations</a></span><br />
+    </div>
+      <!--l. 10165--><p class="indent" ><a 
+ name="PrTx170001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10045"  name="QPrTx625"><span 
+class="cmtt-10">dvi-based</span>&#x00A0;<span 
+class="cmtt-10">hooks</span></a><a 
+ name="PrTx170002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx170003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx171001"><span 
+class="cmtt-10">tracing dvi</span></a><a 
+ name="PrTx170004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx170005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx172001"><span 
+class="cmtt-10">sent to dvi</span></a><a 
+ name="PrTx170006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">15.1 <a 
+ href="tex4ht-sty.html#QQ2-29-171"  name="QQ1-29-171">Tracing Dvi</a></h3>
+           <!--l. 10174--><p class="noindent" ><a 
+ name="PrTx171001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx626"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171002"  href="#PrTx171004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HTrace#1{\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:T\endcsname}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndHTrace#1{\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:t\endcsname}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10178--><p class="noindent" ><a 
+ href="#PrTx171001"  name="PrTx171003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx627"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171004"  href="#PrTx171008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RULE:T{\ht:special{t4ht@\%R}}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\RULE:t{\ht:special{t4ht@\%r}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10183--><p class="noindent" ><a 
+ href="tex4ht-styCh14.html#PrTx169001"  name="PrTx171005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx628"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx171006"  href="#PrTx171010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{RULE}[5]{\ht:special{t4ht@\%\%R#1#2#1#3}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht@\%\%r#1#4#1#5}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10187--><p class="noindent" ><a 
+ href="#PrTx171003"  name="PrTx171007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx629"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171008"  href="#PrTx171012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\GROUP:T{\ht:special{t4ht@\%P}}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\GROUP:t{\ht:special{t4ht@\%p}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10193--><p class="noindent" ><a 
+ href="#PrTx171005"  name="PrTx171009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx630"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx171010"  href="#PrTx171014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{GROUP}[5]{\ht:special{t4ht@\%\%P#1#2#1#3}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht@\%\%p#1#4#1#5}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10198--><p class="noindent" ><a 
+ href="#PrTx171007"  name="PrTx171011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx631"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171012"  href="#PrTx171016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\CHAR:T{\ht:special{t4ht@\%C}}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\CHAR:t{\ht:special{t4ht@\%c}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10203--><p class="noindent" ><a 
+ href="#PrTx171009"  name="PrTx171013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx632"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx171014"  href="#PrTx171018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{CHAR}[5]{\ht:special{t4ht@\%\%C#1#2#1#3}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht@\%\%c#1#4#1#5}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10207--><p class="noindent" ><a 
+ href="#PrTx171011"  name="PrTx171015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx633"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171016"  href="#PrTx171020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HSPACE:T{\ht:special{t4ht@\%H}}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\HSPACE:t{\ht:special{t4ht@\%h}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10211--><p class="noindent" ><a 
+ href="#PrTx171013"  name="PrTx171017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx634"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx171018"  href="#PrTx171022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HSPACE}[3]{\ht:special{t4ht@\%\%H#1#2#1#3}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10216--><p class="noindent" ><a 
+ href="#PrTx171015"  name="PrTx171019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170003"  name="QPrTx635"><span 
+class="cmtt-10">tracing</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx171020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\VSPACE:T{\ht:special{t4ht@\%V}}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\VSPACE:t{\ht:special{t4ht@\%v}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10220--><p class="noindent" ><a 
+ href="#PrTx171017"  name="PrTx171021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx636"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx171022"  href="#PrTx172004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{VSPACE}[3]{\ht:special{t4ht@\%\%V#1#2#1#3}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10224--><p class="noindent" >tex4ht.c has implicit <span 
+class="cmtt-10">\Configure{VSPACE}{.}{}{}</span>, etc. for the above.
+</p><!--l. 10228--><p class="indent" >    Comamnd line &#8216;-p&#8217; requests tracings of specials. <span 
+class="cmtt-10">\special{t4ht@/} </span>for flip-floping requests of such
+tracings.
+</p><!--l. 10231--><p class="indent" >    The switch &#8216;-c&#8217; in the command line asks for context dump into the log when dvi errors/ warning are
+provided.
+</p>
+    <h3 class="SectionHead">15.2 <a 
+ href="tex4ht-sty.html#QQ2-29-172"  name="QQ1-29-172">Sent to Dvi</a></h3>
+<!--l. 10236--><p class="noindent" >All the control flow commads should be located within the <span 
+class="cmtt-10">\Send </span>environment. The <span 
+class="cmtt-10">\send:special </span>takes care of
+killing casses not obeying this requirement.
+
+</p>
+      <!--l. 10254--><p class="indent" ><a 
+ name="PrTx172001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx170005"  name="QPrTx637"><span 
+class="cmtt-10">sent</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx172002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Send#1{\Configure{Send:#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\DviSend{\let\send:special=\ht:special</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht\string~}\EndPauseBACK\ht:special{t4ht\string~}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht\string~}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndDviSend{\send:special{t4ht\string~}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\send:special{t4ht\string~}\PauseBACK\send:special{t4ht\string~}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\send:special=\:gobble}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\PauseBACK{\send:special{t4ht\string~&#x003C;(}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndPauseBACK{\send:special{t4ht\string~&#x003C;)}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HideBACK{\send:special{t4ht\string~&#x003C;[}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndHideBACK{\send:special{t4ht\string~&#x003C;]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\MiniBACK{\send:special{t4ht\string~&#x003C;-}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndMiniBACK{\send:special{t4ht\string~&#x003C;+}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10261--><p class="noindent" ><a 
+ href="#PrTx171021"  name="PrTx172003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx638"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx172004"  href="tex4ht-styCh16.html#PrTx177002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\send:special=\:gobble</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Send:GROUP}[2]{\send:special{t4ht\string~&#x003C;#1#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Send:EndGROUP}[2]{\send:special{t4ht\string~&#x003E;#1#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Send:BACK}[1]{\send:special{t4ht\string~&#x003C;*#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10265--><p class="noindent" >What <span 
+class="cmtt-10">\MiniBACK...\EndMiniBACK </span>do here.
+</p><!--l. 10267--><p class="indent" >    <span 
+class="cmtt-10">{\special{t4ht=}} </span>&#8212;-forcing a group i.e. use <span 
+class="cmtt-10">{\special{t4ht=}}^x </span>instead of <span 
+class="cmtt-10">{}^x</span>.
+</p>
+    <h3 class="SectionHead">15.3 <a 
+ href="tex4ht-sty.html#QQ2-29-173"  name="QQ1-29-173">Observations</a></h3>
+<!--l. 10273--><p class="noindent" >
+</p><ul >
+<li><span 
+class="cmtt-10">\HChar{...} </span>sends forward a character to the next printable char (can be refined to specific characters). That is, it
+uses the character of the command, with the decoration of the character that follows. </li>
+<li><span 
+class="cmtt-10">\special{t4ht@+...} </span>sends forward a string to the next printable chr
+<!--l. 10283--><p class="noindent" ></p></li>
+<li>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+.</span><span 
+class="cmtt-10">&#x00A0;...string...}</span><span 
+class="cmtt-10">&#x00A0;configure</span><span 
+class="cmtt-10">&#x00A0;insertions</span><span 
+class="cmtt-10">&#x00A0;at</span><span 
+class="cmtt-10">&#x00A0;eoln</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+(}</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;spaces</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+)}</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;spaces</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+[}</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;chs</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;spaces</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+]}</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;chs</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;spaces</span><span 
+class="cmtt-10">&#x00A0;(but</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;content</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;some</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;specials)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\special{t4ht@+!}</span><span 
+class="cmtt-10">&#x00A0;get</span><span 
+class="cmtt-10">&#x00A0;last</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;ignored</span><span 
+class="cmtt-10">&#x00A0;space</span><span 
+class="cmtt-10">&#x00A0;(none,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;previous</span><span 
+class="cmtt-10">&#x00A0;lines).</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+    </li></ul>
+
+    <!--l. 10298--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh16.html" >next</a>] [<a 
+ href="tex4ht-styCh14.html" >prev</a>] [<a 
+ href="tex4ht-styCh14.html#tailtex4ht-styCh14.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh15.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh15.html" >up</a>] </p></div>
+<!--l. 10298--><p class="indent" >    <a 
+  name="tailtex4ht-styCh15.html"></a>  </p> 
+</body></html> 

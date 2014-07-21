@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Configuration for &#8216;section-&#8217; option</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 10057--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe56.html" >next</a>] [<a 
+ href="tex4ht-4htSe55.html" >prev</a>] [<a 
+ href="tex4ht-4htSe55.html#tailtex4ht-4htSe55.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu59.html">tail</a>] [<a 
+ href="tex4ht-4htSe55.html#tex4ht-4htSu59.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe55.html#QQ2-154-134"  name="QQ1-154-134">Configuration for &#8216;section-&#8217; option</a></h3>
+           <!--l. 10074--><p class="noindent" ><a 
+ href="tex4ht-4htSe55.html#PrTx133033"  name="PrTx134001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4045"  name="QPrTx490"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltsect</span></a><a 
+ name="PrTx134002"  href="tex4ht-4htSu74.html#PrTx168010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureSec#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Sc1\endcsname{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Sc2\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Sc3\endcsname{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Sc4\endcsname{#5}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Sc#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Missing</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{secType}{...}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sec:typ=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">:Sc#1\endcsname}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 10088--><p class="noindent" ><a 
+ href="tex4ht-4htSu21.html#PrTx50015"  name="PrTx134003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu21.html#PrTx50011"  name="QPrTx491"><span 
+class="cmtt-10">latex.ltx</span>&#x00A0;<span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">edit+</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx134004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Sc#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Missing</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{secType}{...}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sec:typ=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Sec(\sec:typ)#1\b:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">:Sc#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\c:trc</span>&#x00A0;<span 
+class="cmtt-10">Sec(\sec:typ)#1\d:trc\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10103--><p class="noindent" ><a 
+ href="tex4ht-4htSu21.html#PrTx50017"  name="PrTx134005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu21.html#PrTx50013"  name="QPrTx492"><span 
+class="cmtt-10">latex.ltx</span>&#x00A0;<span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">edit</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx134006"  href="tex4ht-4htSu72.html#PrTx163004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Sc#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Missing</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{secType}{...}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sec:typ=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">:Sc#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Sec(\sec:typ)#1\b:trc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:trc</span>&#x00A0;<span 
+class="cmtt-10">Sec(\sec:typ)#1\d:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">:Sc#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 10112--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe56.html" >next</a>] [<a 
+ href="tex4ht-4htSe55.html" >prev</a>] [<a 
+ href="tex4ht-4htSe55.html#tailtex4ht-4htSe55.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu59.html" >front</a>] [<a 
+ href="tex4ht-4htSe55.html#tex4ht-4htSu59.html" >up</a>] </p></div>
+<!--l. 10112--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu59.html"></a> </p> 
+</body></html> 

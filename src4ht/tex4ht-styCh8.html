@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Subdivisions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 4698--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh9.html" >next</a>] [<a 
+ href="tex4ht-styCh7.html" >prev</a>] [<a 
+ href="tex4ht-styCh7.html#tailtex4ht-styCh7.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh8.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh8.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 8<br /><a 
+ href="tex4ht-sty.html#QQ2-9-76"  name="QQ1-9-76">Subdivisions</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.1&#x00A0;<a 
+ href="#QQ1-9-77"  name="QQ2-9-77">Interface</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-9-78"  name="QQ2-9-78">/Configure</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.2&#x00A0;<a 
+ href="#QQ1-9-79"  name="QQ2-9-79">Insertions at
+Boundaries of Logical Units</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-9-80"  name="QQ2-9-80">Non Cut Ends</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-9-81"  name="QQ2-9-81">Cut Ends</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-9-82"  name="QQ2-9-82">Common
+Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.3&#x00A0;<a 
+ href="#QQ1-9-83"  name="QQ2-9-83">Building
+Blocks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.4&#x00A0;<a 
+ href="#QQ1-9-84"  name="QQ2-9-84">Title</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.5&#x00A0;<a 
+ href="#QQ1-9-85"  name="QQ2-9-85">Table of Contents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.6&#x00A0;<a 
+ href="#QQ1-9-86"  name="QQ2-9-86">Links</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.7&#x00A0;<a 
+ href="#QQ1-9-87"  name="QQ2-9-87">Control Links on Section
+Heads</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.8&#x00A0;<a 
+ href="#QQ1-9-88"  name="QQ2-9-88">Cut-Offs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.9&#x00A0;<a 
+ href="#QQ1-9-89"  name="QQ2-9-89">Hooks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.10&#x00A0;<a 
+ href="#QQ1-9-90"  name="QQ2-9-90">Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.11&#x00A0;<a 
+ href="#QQ1-9-91"  name="QQ2-9-91">Configurations for CutAt</a></span><br />
+    </div>
+      <!--l. 4710--><p class="indent" ><a 
+ name="PrTx76001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10019"  name="QPrTx317"><span 
+class="cmtt-10">divisions</span></a><a 
+ name="PrTx76002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx76003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77001"><span 
+class="cmtt-10">elements for divs</span></a><a 
+ name="PrTx76004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx76005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78001"><span 
+class="cmtt-10">no trace sec config</span></a><a 
+ name="PrTx76006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifHtml</span>&#x00A0;&#x00A0;<a 
+ name="PrTx76007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80007"><span 
+class="cmtt-10">html divs</span></a><a 
+ name="PrTx76008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks+}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks}</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;&#x00A0;<a 
+ name="PrTx76009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78005"><span 
+class="cmtt-10">trace sec config</span></a><a 
+ name="PrTx76010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx76011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84013"><span 
+class="cmtt-10">tex divisions</span></a><a 
+ name="PrTx76012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.1 <a 
+ href="tex4ht-sty.html#QQ2-9-77"  name="QQ1-9-77">Interface</a></h3>
+<!--l. 4716--><p class="noindent" >The first parameter of <span 
+class="cmtt-10">\Def:Section </span>provides the command name, the second gives a non-parametric code
+that produces the title number, and the third gives a single-parameter code for producing the title
+itself.
+</p>
+      <!--l. 4729--><p class="indent" ><a 
+ name="PrTx77001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx318"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx77002"  href="#PrTx77006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\NewSection#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Def:Section#1{#2}{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\expandafter\:gobble\string#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure:Sec\:temp{}{}{}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{\expandafter\:gobble\string#1}{\empty}{\empty}{}{}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4732--><p class="noindent" ><span 
+class="cmtt-10">\NewSection\DocChapter {counter}</span>
+</p><!--l. 4734--><p class="indent" >    The parameter <span 
+class="cmtt-10">##1 </span>holds the title head.
+</p>
+      <!--l. 4741--><p class="indent" ><a 
+ name="PrTx77003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77011"  name="QPrTx319"><span 
+class="cmtt-10">endsection config</span></a><a 
+ name="PrTx77004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{end#1}[1]{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\csname</span>&#x00A0;<span 
+class="cmtt-10">a:end#1\endcsname{##1}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{end#1}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4762--><p class="noindent" ><a 
+ href="#PrTx77001"  name="PrTx77005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx320"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx77006"  href="#PrTx84002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Def:Section#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:tempc{{\expandafter\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\string#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx77007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78015"><span 
+class="cmtt-10">Configure for sectioning command</span></a><a 
+ name="PrTx77008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\futurelet\:temp\ch:NewSec}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ch:NewSec{\if</span>&#x00A0;<span 
+class="cmtt-10">*\:temp\let\if:toc=\:gobble\expandafter\op:NewSec</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\if:toc=\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\op:NewSec+}\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\op:NewSec#1{\expandafter\:NewSec\:tempc}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx77009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89001"><span 
+class="cmtt-10">def /:Every</span></a><a 
+ name="PrTx77010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:NewSec#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx77011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77003"><span 
+class="cmtt-10">endsection config</span></a><a 
+ name="PrTx77012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\if:toc=}\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#1toc\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:StartSec{#1}{#2}}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx77013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88017"><span 
+class="cmtt-10">c:TITLE: for Sec</span></a><a 
+ name="PrTx77014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#1toc\endcsname=\if:toc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx77015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89003"><span 
+class="cmtt-10">initiate BeforeEvery/Every div</span></a><a 
+ name="PrTx77016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:ttl\endcsname##1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4764--><p class="noindent" ><span 
+class="cmtt-10">\Def:Section </span>+ <span 
+class="cmtt-10">\Configure </span>= <span 
+class="cmtt-10">\NewSection</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-9-78"  name="QQ1-9-78">/Configure</a></h3>
+           <!--l. 4781--><p class="noindent" ><a 
+ name="PrTx78001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76005"  name="QPrTx321"><span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">sec</span>&#x00A0;<span 
+class="cmtt-10">config</span></a><a 
+ name="PrTx78002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\Configure:Sec#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#4#5}\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:tempa\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx78003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78013"><span 
+class="cmtt-10">conf for sec boundaries</span></a><a 
+ name="PrTx78004"  href="#PrTx78008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#2#3}\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:tempa\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname##1{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#1\endcsname##1{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4783--><p class="noindent" >Note that in <span 
+class="cmtt-10">\Configure{Section}{before}{after}{before head}{after head} </span>a change occures only when
+before-after pair is not empty.
+</p>
+      <!--l. 4796--><p class="indent" ><a 
+ name="PrTx78005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76009"  name="QPrTx322"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">sec</span>&#x00A0;<span 
+class="cmtt-10">config</span></a><a 
+ name="PrTx78006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\Configure:Sec#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#4#5}\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:tempa\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx78007"  href="#PrTx78003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78013"><span 
+class="cmtt-10">conf for sec boundaries</span></a><a 
+ name="PrTx78008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#2#3}\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:tempa\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx78009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx78011"><span 
+class="cmtt-10">conf for sec heads</span></a><a 
+ name="PrTx78010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4812--><p class="noindent" ><a 
+ name="PrTx78011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx78009"  name="QPrTx323"><span 
+class="cmtt-10">conf</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">sec</span>&#x00A0;<span 
+class="cmtt-10">heads</span></a><a 
+ name="PrTx78012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">##1{\hbox{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">#13:4\b:trc}#2\hbox{\c:trc</span>&#x00A0;<span 
+class="cmtt-10">#14:4\d:trc}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname##1{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">##1{\hbox{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">#13:4\b:trc}#3\hbox{\c:trc</span>&#x00A0;<span 
+class="cmtt-10">#14:4\d:trc}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#1\endcsname##1{#3}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4817--><p class="noindent" ><a 
+ name="PrTx78013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx78003"  name="QPrTx324"><span 
+class="cmtt-10">conf</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">sec</span>&#x00A0;<span 
+class="cmtt-10">boundaries</span></a><a 
+ name="PrTx78014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\c:def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1\endcsname{#4}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\c:def\csname</span>&#x00A0;<span 
+class="cmtt-10">d:#1\endcsname{#5}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4828--><p class="noindent" ><a 
+ name="PrTx78015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77007"  name="QPrTx325"><span 
+class="cmtt-10">Configure</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">sectioning</span>&#x00A0;<span 
+class="cmtt-10">command</span></a><a 
+ name="PrTx78016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\long\def\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">c:\expandafter\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\string#1:\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">####1####2####3####4{\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure:Sec\:tempc{####3}{####4}{####1}{####2}}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\NewConfigure{CutAt\expandafter\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\string#1}2%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\NewConfigure{+CutAt\expandafter\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\string#1}2%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Configure\:tempc{\empty}{}{\empty}{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.2 <a 
+ href="tex4ht-sty.html#QQ2-9-79"  name="QQ1-9-79">Insertions at Boundaries of Logical Units</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-9-80"  name="QQ1-9-80">Non Cut Ends</a></h3>
+           <!--l. 4841--><p class="noindent" ><a 
+ name="PrTx80001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88005"  name="QPrTx326"><span 
+class="cmtt-10">boundaries of non-cut sections</span></a><a 
+ name="PrTx80002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#1}\noct:Close:Until</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb</span>&#x00A0;<span 
+class="cmtt-10">\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">d:\ifx</span>&#x00A0;<span 
+class="cmtt-10">\found:\empty</span>&#x00A0;<span 
+class="cmtt-10">#1\else</span>&#x00A0;<span 
+class="cmtt-10">\found:\fi\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx80003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84009"><span 
+class="cmtt-10">advance TitleCount</span></a><a 
+ name="PrTx80004"  href="#PrTx81004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4844--><p class="noindent" >Any need for <span 
+class="cmtt-10">\def\:tempa{#1}</span>?
+</p>
+      <!--l. 4851--><p class="indent" ><a 
+ name="PrTx80005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh6.html#PrTx55011"  name="QPrTx327"><span 
+class="cmtt-10">document</span>&#x00A0;<span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">non-cut</span>&#x00A0;<span 
+class="cmtt-10">logical</span>&#x00A0;<span 
+class="cmtt-10">units</span></a><a 
+ name="PrTx80006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Close:UntilEnd</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4853--><p class="noindent" >The following <span 
+class="cmtt-10">\Do:Close</span>&#8217;s deal with sectioning unit at levels deeper than one we are openning. The sectioning unit
+at the latter level is closed with the code <span 
+class="cmtt-10">\csname d:\ifx \found:\empty #1\else \found:\fi\endcsname </span>we
+just proccessed.
+</p>
+      <!--l. 4873--><p class="indent" ><a 
+ name="PrTx80007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx328"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx80008"  href="#PrTx80020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\noct:Close:Until{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempA=\sec:typ</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\found:=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempd=\:Sections</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noct:Check:Until</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\Do:Close</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sec:typ=\:tempA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\noct:Check:Until{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempd\empty</span>&#x00A0;&#x00A0;<a 
+ name="PrTx80009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80013"><span 
+class="cmtt-10">exit non-cut check-until</span></a><a 
+ name="PrTx80010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:tempd\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx80011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80015"><span 
+class="cmtt-10">search non-cut end</span></a><a 
+ name="PrTx80012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\noct:Check:Until</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4875--><p class="noindent" >We are about to open a new section unit, and we go as down as possible in the stack of already openned section
+units searching for the lowest unit in the stack that should be closed. The <span 
+class="cmtt-10">\found: </span>variable holds the lowest
+oppened unit to be closed.
+</p>
+      <!--l. 4884--><p class="indent" ><a 
+ name="PrTx80013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80009"  name="QPrTx329"><span 
+class="cmtt-10">exit</span>&#x00A0;<span 
+class="cmtt-10">non-cut</span>&#x00A0;<span 
+class="cmtt-10">check-until</span></a><a 
+ name="PrTx80014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\found:\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempb\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempb=\found:</span>&#x00A0;<span 
+class="cmtt-10">\let\sec:typ=\found:\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4892--><p class="noindent" ><a 
+ name="PrTx80015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80011"  name="QPrTx330"><span 
+class="cmtt-10">search</span>&#x00A0;<span 
+class="cmtt-10">non-cut</span>&#x00A0;<span 
+class="cmtt-10">end</span></a><a 
+ name="PrTx80016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempe{\:tempb,%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:end\:tempb\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:end\:tempb\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\fi,,}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\mod:typ\:tempe</span><a 
+ name="PrTx80017"  href="tex4ht-styCh7.html#PrTx75005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx80018"  href="#PrTx80022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4905--><p class="noindent" ><a 
+ href="#PrTx80007"  name="PrTx80019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx331"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx80020"  href="#PrTx81006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\mod:typ#1,#2</span><a 
+ name="PrTx80021"  href="#PrTx80017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx80022"  href="#PrTx80024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\expandafter\expandafter\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:gobble\expandafter\string</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\found:=\:tempb</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:temp=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{\mod:typ#2</span><a 
+ name="PrTx80023"  href="#PrTx80021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx80024"  href="tex4ht-styCh10.html#PrTx105004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-9-81"  name="QQ1-9-81">Cut Ends</a></h3>
+           <!--l. 4913--><p class="noindent" ><a 
+ name="PrTx81001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88007"  name="QPrTx332"><span 
+class="cmtt-10">boundaries of cut sections</span></a><a 
+ name="PrTx81002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{CutAt#1}{</span><a 
+ name="PrTx81003"  href="#PrTx80003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84009"><span 
+class="cmtt-10">advance TitleCount</span></a><a 
+ name="PrTx81004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}{\def\sec:typ{#1}\Close:Until</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">d:#1\endcsname}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4926--><p class="noindent" ><a 
+ href="#PrTx80019"  name="PrTx81005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx333"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx81006"  href="#PrTx82004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Close:Until{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempd=\:Sections</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Check:Until</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\Do:Close</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Check:Until{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempd\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempb=\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:tempd\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\Check:Until</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-9-82"  name="QQ1-9-82">Common Utilities</a></h3>
+           <!--l. 4933--><p class="noindent" ><a 
+ name="PrTx82001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88011"  name="QPrTx334"><span 
+class="cmtt-10">record sections hierarchy</span></a><a 
+ name="PrTx82002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\PushStack\:Sections{#1}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4946--><p class="noindent" ><a 
+ href="#PrTx81005"  name="PrTx82003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx335"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx82004"  href="#PrTx82006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\PushStack\:Sections{}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\PopStack\:Sections\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Do:Close{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:Sections\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\sec:typ\:tempb</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">d:\:tempb\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Do:Close</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4948--><p class="noindent" >The following is for closing logical units at the end of the file, when they don&#8217;t have hypertext pages of their
+own.
+</p>
+      <!--l. 4960--><p class="indent" ><a 
+ href="#PrTx82003"  name="PrTx82005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx336"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx82006"  href="#PrTx83002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Close:UntilEnd{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:Sections\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempb=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:Sections\:tempb</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">d:\:tempb\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Close:UntilEnd</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.3 <a 
+ href="tex4ht-sty.html#QQ2-9-83"  name="QQ1-9-83">Building Blocks</a></h3>
+
+<!--l. 4966--><p class="noindent" >The <span 
+class="cmtt-10">\ref</span>, <span 
+class="cmtt-10">\Tag</span>, <span 
+class="cmtt-10">\@currentlabel</span>, and <span 
+class="cmtt-10">\cur:th </span>are for latex. Also note that <span 
+class="cmtt-10">label </span>and <span 
+class="cmtt-10">\ref </span>can appear within
+titles, and there we nullify them except within the titles themselves and tocs. One problem with the <span 
+class="cmtt-10">\ref </span>is that
+they may cause nested links.
+</p>
+      <!--l. 4996--><p class="indent" ><a 
+ href="#PrTx82005"  name="PrTx83001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx337"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx83002"  href="#PrTx85012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:StartSec#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\title:chs##1##2{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\sec:typ{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89005"><span 
+class="cmtt-10">delayed TocAt</span></a><a 
+ name="PrTx83004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:NoSection</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx83015"><span 
+class="cmtt-10">round ids between sections</span></a><a 
+ name="PrTx83006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88001"><span 
+class="cmtt-10">button for cut at sect</span></a><a 
+ name="PrTx83008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89009"><span 
+class="cmtt-10">BeforeEvery hook</span></a><a 
+ name="PrTx83010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname\relax</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:NoSection</span>&#x00A0;<span 
+class="cmtt-10">\:Ttle{#1}{#2}{\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:ttl\endcsname{#3}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:NoSection</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#1\endcsname\relax</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#1\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx83011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx89011"><span 
+class="cmtt-10">Every hook</span></a><a 
+ name="PrTx83012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:AfterTitle\endcsname</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:NoSection</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\title:chs##1##2{##1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\title:chs#1#2{#1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5000--><p class="noindent" ><a 
+ href="tex4ht-styCh6.html#PrTx61019"  name="PrTx83013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx338"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx83014"  href="#PrTx87004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{NoSection}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5006--><p class="noindent" >The <span 
+class="cmtt-10">\par </span>before <span 
+class="cmtt-10">|&#x003C;Every hook|&#x003E; </span>is to ensure the use of <span 
+class="cmtt-10">\ShowPar</span>. Well, the <span 
+class="cmtt-10">\par </span>turned out to be a pain in cases
+we want no space at all. Hence, we took it out.
+</p><!--l. 5015--><p class="indent" >    On the other hands, we try to make sectioning commands fixed points for labels. Hence, we try to reduce
+sensitivity of tocs to changes.
+</p>
+      <!--l. 5020--><p class="indent" ><a 
+ name="PrTx83015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83005"  name="QPrTx339"><span 
+class="cmtt-10">round</span>&#x00A0;<span 
+class="cmtt-10">ids</span>&#x00A0;<span 
+class="cmtt-10">between</span>&#x00A0;<span 
+class="cmtt-10">sections</span></a><a 
+ name="PrTx83016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ro:nd\html:lbl{1000}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.4 <a 
+ href="tex4ht-sty.html#QQ2-9-84"  name="QQ1-9-84">Title</a></h3>
+           <!--l. 5049--><p class="noindent" ><a 
+ href="#PrTx77005"  name="PrTx84001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx340"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx84002"  href="#PrTx85004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Ttle#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\html:addr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx84003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86031"><span 
+class="cmtt-10">hook for ref/label</span></a><a 
+ name="PrTx84004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx84005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx85001"><span 
+class="cmtt-10">introduce &#8216;doTocEntry toc@1 (@2) (@3) (page no)&#8217; to toc</span></a><a 
+ name="PrTx84006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx84007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84017"><span 
+class="cmtt-10">typeset @3 and link to toc entry</span></a><a 
+ name="PrTx84008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAssign\TitleCount=0</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\mu:span=\TitleCount</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5056--><p class="noindent" ><a 
+ name="PrTx84009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80003"  name="QPrTx341"><span 
+class="cmtt-10">advance</span>&#x00A0;<span 
+class="cmtt-10">TitleCount</span></a><a 
+ name="PrTx84010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TitleCount</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\global\let\mu:span=\TitleCount</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\global</span>&#x00A0;<span 
+class="cmtt-10">\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Count\endcsname=\TitleCount</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 5059--><p class="noindent" >For some reason (what it is?) we can&#8217;t put the set TitleMark together with the TitleConunt within CutAt&#8211;e.g.,
+tex4ht-html32 screams at subsection about undefined TitleMark.
+</p>
+      <!--l. 5066--><p class="indent" ><a 
+ name="PrTx84011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88003"  name="QPrTx342"><span 
+class="cmtt-10">set TitleMark</span></a><a 
+ name="PrTx84012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\expandafter\TitleMark\csname</span>&#x00A0;<span 
+class="cmtt-10">#1HMark\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5071--><p class="noindent" ><a 
+ name="PrTx84013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76011"  name="QPrTx343"><span 
+class="cmtt-10">tex</span>&#x00A0;<span 
+class="cmtt-10">divisions</span></a><a 
+ name="PrTx84014"  href="#PrTx84022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ConfigureMark#1#2{\long\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1HMark\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5075--><p class="noindent" >We nulify <span 
+class="cmtt-10">\Link</span>, but this causes no problem because we are within a group.
+</p><!--l. 5078--><p class="indent" >    well,   <span 
+class="cmtt-10">\let\Link|=\no:lnk  </span>is a problem for <span 
+class="cmtt-10">\Configure{ref}</span>, so we introduced the latter
+comamnd.
+</p>
+      <!--l. 5084--><p class="indent" ><a 
+ name="PrTx84015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx86015"  name="QPrTx344"><span 
+class="cmtt-10">typeset the html sec title</span></a><a 
+ name="PrTx84016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:InsertTitle\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">InsertTitle\endcsname{#1}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5087--><p class="noindent" >Can&#8217;t use <span 
+class="cmtt-10">\Title</span>. Already in maple2e.tex.
+</p>
+      <!--l. 5097--><p class="indent" ><a 
+ name="PrTx84017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx84007"  name="QPrTx345"><span 
+class="cmtt-10">typeset</span>&#x00A0;<span 
+class="cmtt-10">@3</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">link</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">toc</span>&#x00A0;<span 
+class="cmtt-10">entry</span></a><a 
+ name="PrTx84018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx84019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx87007"><span 
+class="cmtt-10">href on sec head?</span></a><a 
+ name="PrTx84020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\no:lbl:idx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Modify#1Title\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\html:sectoc{#3}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5104--><p class="noindent" ><a 
+ href="#PrTx84013"  name="PrTx84021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76011"  name="QPrTx346"><span 
+class="cmtt-10">tex</span>&#x00A0;<span 
+class="cmtt-10">divisions</span></a><a 
+ name="PrTx84022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\no:lbl:idx=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\toc:lbl:idx=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.5 <a 
+ href="tex4ht-sty.html#QQ2-9-85"  name="QQ1-9-85">Table of Contents</a></h3>
+<!--l. 5108--><p class="noindent" >The <span 
+class="cmtt-10">\:writetoc </span>command outputs the expansion of its parameter, and the page number, into the file. The
+expanded definition <span 
+class="cmtt-10">\edef </span>provides records the parameter according to the conditions that exist when the command
+is encountered.
+</p>
+      <!--l. 5124--><p class="indent" ><a 
+ name="PrTx85001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx84005"  name="QPrTx347"><span 
+class="cmtt-10">introduce</span>&#x00A0;<span 
+class="cmtt-10">&#8216;doTocEntry</span>&#x00A0;<span 
+class="cmtt-10">toc@1</span>&#x00A0;<span 
+class="cmtt-10">(@2)</span>&#x00A0;<span 
+class="cmtt-10">(@3)</span>&#x00A0;<span 
+class="cmtt-10">(page</span>&#x00A0;<span 
+class="cmtt-10">no)&#8217;</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">toc</span></a><a 
+ name="PrTx85002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\escapechar=&#8216;\\%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protect:wrtoc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Modify#1ToToc\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:writetoc{\csname</span>&#x00A0;<span 
+class="cmtt-10">if:toc\endcsname{\the\:tokwrite</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\string\doTocEntry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\toc</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">toToc:#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">#1\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">toToc:#1\endcsname\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#2}{\html:tocsec{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\TocTitle\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">#3\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TocTitle\fi}}{\the\:tokpage}\relax}}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:writetoc</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\TocTitle=\:UnDef</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5143--><p class="noindent" ><a 
+ href="#PrTx84001"  name="PrTx85003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx348"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx85004"  href="#PrTx85006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{toToc}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">!#2!\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">toToc:#1\endcsname\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">!#1!%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">IF:#2toc\expandafter\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#2toc\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#2toc\endcsname\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\string</span>&#x00A0;<span 
+class="cmtt-10">@}\edef\:tempa{\string#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#2toc\endcsname\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\string</span>&#x00A0;<span 
+class="cmtt-10">?}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">if:#2toc\expandafter\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">IF:#2toc\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">toToc:#1\endcsname{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi\fi\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5153--><p class="noindent" ><a 
+ href="#PrTx85003"  name="PrTx85005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx349"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx85006"  href="#PrTx85010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tokwrite\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newtoks\endcsname\:tokwrite</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tokpage\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newtoks\endcsname\:tokpage</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tokpage={\folio}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5157--><p class="noindent" ><a 
+ name="PrTx85007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx85007"  name="QPrTx350"><span 
+class="cmtt-10">html latex divs</span></a><a 
+ name="PrTx85008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5161--><p class="noindent" ><a 
+ href="#PrTx85005"  name="PrTx85009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx351"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx85010"  href="#PrTx86034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tokwrite={\write\:tocout}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5168--><p class="noindent" ><a 
+ href="#PrTx83001"  name="PrTx85011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx352"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx85012"  href="#PrTx86002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\protect:wrtoc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx85013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh14.html#PrTx167003"><span 
+class="cmtt-10">no Hnewline</span></a><a 
+ name="PrTx85014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\PictureOff</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\%{\string\%}\a:writetoc}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5175--><p class="noindent" ><a 
+ href="tex4ht-styCh6.html#PrTx62025"  name="PrTx85015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx353"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx85016"  href="#PrTx89008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{writetoc}[1]{\concat:config\a:writetoc{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:writetoc=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5178--><p class="noindent" >The following might be solved with protect(?).
+</p><!--l. 5181--><p class="indent" >     <span 
+class="cmtt-10">\let\Link|=\no:lnk  </span>is a problem for <span 
+class="cmtt-10">\Configure{ref}</span>.
+</p>
+    <h3 class="SectionHead">8.6 <a 
+ href="tex4ht-sty.html#QQ2-9-86"  name="QQ1-9-86">Links</a></h3>
+           <!--l. 5204--><p class="noindent" ><a 
+ href="#PrTx85011"  name="PrTx86001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx354"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx86002"  href="#PrTx87002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:sectoc#1{\csname</span>&#x00A0;<span 
+class="cmtt-10">if:toc\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\CurSecHaddr{</span><a 
+ name="PrTx86003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86021"><span 
+class="cmtt-10">section html addr</span></a><a 
+ name="PrTx86004"  href="#PrTx86012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:attr{\noexpand\scp:Link{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifTag{</span><a 
+ name="PrTx86005"  href="tex4ht-styCh7.html#PrTx74007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh19.html#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx86006"  href="tex4ht-styCh19.html#PrTx204018"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ name="PrTx86007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86025"><span 
+class="cmtt-10">toc-section html addr</span></a><a 
+ name="PrTx86008"  href="#PrTx86010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx86009"  href="#PrTx86007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86025"><span 
+class="cmtt-10">toc-section html addr</span></a><a 
+ name="PrTx86010"  href="#PrTx86020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx86011"  href="#PrTx86003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86021"><span 
+class="cmtt-10">section html addr</span></a><a 
+ name="PrTx86012"  href="#PrTx86014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr{</span><a 
+ name="PrTx86013"  href="#PrTx86011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86021"><span 
+class="cmtt-10">section html addr</span></a><a 
+ name="PrTx86014"  href="#PrTx86018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndTitle:Link\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\if:toc{\scp:EndLink}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx86015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84015"><span 
+class="cmtt-10">typeset the html sec title</span></a><a 
+ name="PrTx86016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndTitle:Link{\if:toc{\scp:EndLink}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:tocsec#1{\string\csname\space</span>&#x00A0;<span 
+class="cmtt-10">a:TocLink\string\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\FileNumber</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}{</span><a 
+ name="PrTx86017"  href="#PrTx86013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86021"><span 
+class="cmtt-10">section html addr</span></a><a 
+ name="PrTx86018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{</span><a 
+ name="PrTx86019"  href="#PrTx86009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86025"><span 
+class="cmtt-10">toc-section html addr</span></a><a 
+ name="PrTx86020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\CurSecHaddr=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5206--><p class="noindent" >If option <span 
+class="cmtt-10">sections+ </span>is active, the full title is an anchor. Might be a problem, in particular when the title contains a
+footnote. If the option is not active, the anchor for access from the tocs is empty.
+
+</p><!--l. 5216--><p class="indent" >    The command <span 
+class="cmtt-10">\uppercase </span>is put outside the command <span 
+class="cmtt-10">\:toc </span>to convert the lower case character tokens to
+uppercase characters before they are inserted into the file. Within <span 
+class="cmtt-10">\:toc </span>the command <span 
+class="cmtt-10">\uppercase </span>is written as is
+into the auxiliary file, and takes effect only when the auxiliary file is imported.
+</p><!--l. 5225--><p class="indent" >    <span 
+class="cmtt-10">\Get:SecAnchor </span>should provide an anchor in <span 
+class="cmtt-10">\:SecAnchor </span>for the cross references. If none is
+provided, tex4ht will offer one. tex4ht doesn&#8217;t really need the address; the idea is to save on duplicated
+anchors.
+</p>
+      <!--l. 5232--><p class="indent" ><a 
+ name="PrTx86021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx86003"  name="QPrTx355"><span 
+class="cmtt-10">section</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx86022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:SecAnchor\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx86023"  href="tex4ht-styCh7.html#PrTx73003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86029"><span 
+class="cmtt-10">toc tag</span></a><a 
+ name="PrTx86024"  href="#PrTx86028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">1-\file:id-\TitleCount</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:SecAnchor</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;-_-_-</span>
+           </p><!--l. 5237--><p class="noindent" ><a 
+ name="PrTx86025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx86007"  name="QPrTx356"><span 
+class="cmtt-10">toc-section</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx86026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx86027"  href="#PrTx86023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx86029"><span 
+class="cmtt-10">toc tag</span></a><a 
+ name="PrTx86028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">2-\file:id-\TitleCount</span>&#x00A0;-_-_-</span>
+           </p><!--l. 5241--><p class="noindent" ><a 
+ name="PrTx86029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh7.html#PrTx67019"  name="QPrTx357"><span 
+class="cmtt-10">toc</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx86030"  href="tex4ht-styCh18.html#PrTx194002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Q</span>-_-_-</span>
+           </p><!--l. 5246--><p class="noindent" ><a 
+ name="PrTx86031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx84003"  name="QPrTx358"><span 
+class="cmtt-10">hook</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">ref/label</span></a><a 
+ name="PrTx86032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Get:SecAnchor{#1}{#2}{#3}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5251--><p class="noindent" ><a 
+ href="#PrTx85009"  name="PrTx86033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76003"  name="QPrTx359"><span 
+class="cmtt-10">elements</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx86034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Get:SecAnchor#1#2#3{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.7 <a 
+ href="tex4ht-sty.html#QQ2-9-87"  name="QQ1-9-87">Control Links on Section Heads</a></h3>
+<!--l. 5263--><p class="noindent" >Option for univerally no links from titles of sections.
+</p>
+      <!--l. 5275--><p class="indent" ><a 
+ href="#PrTx86001"  name="PrTx87001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx360"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx87002"  href="#PrTx87006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{sections+}\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\Title:Link{\Link}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\EndTitle:Link#1{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\Title:Link#1{\Link{}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\EndTitle:Link=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Log:Note{for</span>&#x00A0;<span 
+class="cmtt-10">back</span>&#x00A0;<span 
+class="cmtt-10">links</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">toc,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">use</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">&#8216;sections+&#8217;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5280--><p class="noindent" ><a 
+ href="#PrTx83013"  name="PrTx87003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx361"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx87004"  href="tex4ht-styCh9.html#PrTx96006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{toTocLink}[2]{\def\scp:Link{#1}\def\scp:EndLink{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{toTocLink}{\Title:Link}{\EndLink}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5283--><p class="noindent" >The above gives global control. The following local one. E.g., <span 
+class="cmtt-10">\NoLink{section} </span>asks that sections of type &#8216;section&#8217;
+will not act as hot buttons.
+</p>
+      <!--l. 5290--><p class="indent" ><a 
+ href="#PrTx87001"  name="PrTx87005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx362"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx87006"  href="#PrTx88020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NoLink#1{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Href-\endcsname{\let\EndTitle:Link=\:gobble}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5295--><p class="noindent" ><a 
+ name="PrTx87007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx84019"  name="QPrTx363"><span 
+class="cmtt-10">href</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">sec</span>&#x00A0;<span 
+class="cmtt-10">head?</span></a><a 
+ name="PrTx87008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Href-\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.8 <a 
+ href="tex4ht-sty.html#QQ2-9-88"  name="QQ1-9-88">Cut-Offs</a></h3>
+<!--l. 5300--><p class="noindent" >The following makes a call to, e.g., <span 
+class="cmtt-10">\cut:at{section}{title}-</span>
+</p>
+      <!--l. 5315--><p class="indent" ><a 
+ name="PrTx88001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83007"  name="QPrTx364"><span 
+class="cmtt-10">button</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">cut</span>&#x00A0;<span 
+class="cmtt-10">at</span>&#x00A0;<span 
+class="cmtt-10">sect</span></a><a 
+ name="PrTx88002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx88003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx84011"><span 
+class="cmtt-10">set TitleMark</span></a><a 
+ name="PrTx88004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Cut:#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx88005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80001"><span 
+class="cmtt-10">boundaries of non-cut sections</span></a><a 
+ name="PrTx88006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx88007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx81001"><span 
+class="cmtt-10">boundaries of cut sections</span></a><a 
+ name="PrTx88008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx88009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx88013"><span 
+class="cmtt-10">TITLE for Sec</span></a><a 
+ name="PrTx88010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Cut:#1\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\sec:lvl=\HPageDepth</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx88011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx82001"><span 
+class="cmtt-10">record sections hierarchy</span></a><a 
+ name="PrTx88012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5321--><p class="noindent" >The <span 
+class="cmtt-10">\let\sec:lvl|=\HPageDepth </span>is used to determine whether we have prev-next links with next HPage. As we
+out from hypertext pages, the value of <span 
+class="cmtt-10">\HPageDepth </span>decreases, and the values of <span 
+class="cmtt-10">\sec:lvl </span>are kept one value
+behind. If just before entering a hypertext page we have <span 
+class="cmtt-10">\sec:lvl&#x003E;\HPageDepth</span>, it means that the last HPage and
+the next one are at the same depth. Hence, we allow for prev-next links. We want the <span 
+class="cmtt-10">\global </span>because section
+titles can be within groups as is the case, for instance, for tables of contents of tables or figures in
+LaTeX. Without the global, will need to fix locally the values of <span 
+class="cmtt-10">\sec:lvl </span>for titles that are nested in
+groups.
+</p>
+      <!--l. 5338--><p class="indent" ><a 
+ name="PrTx88013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88009"  name="QPrTx365"><span 
+class="cmtt-10">TITLE</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">Sec</span></a><a 
+ name="PrTx88014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">TITLE\endcsname\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\a:CutAtTITLE</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">TITLE\endcsname\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5344--><p class="noindent" ><a 
+ name="PrTx88015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx88015"  name="QPrTx366"><span 
+class="cmtt-10">TITLE for SecNO</span></a><a 
+ name="PrTx88016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">TITLE\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\HCode</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\csname</span>&#x00A0;<span 
+class="cmtt-10">a:\sec:typ</span>&#x00A0;<span 
+class="cmtt-10">TITLE\endcsname\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5352--><p class="noindent" ><a 
+ name="PrTx88017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77013"  name="QPrTx367"><span 
+class="cmtt-10">c:TITLE:</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">Sec</span></a><a 
+ name="PrTx88018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1TITLE+:\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#1TITLE\endcsname####1}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5356--><p class="noindent" ><a 
+ href="#PrTx87005"  name="PrTx88019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx76007"  name="QPrTx368"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx88020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\sec:lvl=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.9 <a 
+ href="tex4ht-sty.html#QQ2-9-89"  name="QQ1-9-89">Hooks</a></h3>
+<!--l. 5360--><p class="noindent" >BeforEvery and Every are single-parameter macros.
+</p>
+      <!--l. 5369--><p class="indent" ><a 
+ name="PrTx89001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77009"  name="QPrTx369"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">/:Every</span></a><a 
+ name="PrTx89002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Every#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">Every#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:Every#1\endcsname####1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">BeforeEvery#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">:BeforeEvery#1\endcsname####1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5371--><p class="noindent" ><span 
+class="cmtt-10">\Every... </span>and not <span 
+class="cmtt-10">\AfterEvery...</span>, because we are not yet after the section, we are only after the
+title.
+</p><!--l. 5374--><p class="indent" >    Default hooks are set to tables of contents.
+</p>
+      <!--l. 5383--><p class="indent" ><a 
+ name="PrTx89003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77015"  name="QPrTx370"><span 
+class="cmtt-10">initiate</span>&#x00A0;<span 
+class="cmtt-10">BeforeEvery/Every</span>&#x00A0;<span 
+class="cmtt-10">div</span></a><a 
+ name="PrTx89004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:Every{#1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Every#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc:#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:TocAt</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc:#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\b:TocAt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ignorespaces}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 5388--><p class="noindent" ><a 
+ name="PrTx89005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83003"  name="QPrTx371"><span 
+class="cmtt-10">delayed</span>&#x00A0;<span 
+class="cmtt-10">TocAt</span></a><a 
+ name="PrTx89006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:dTocAt</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">TocAt*\endcsname</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:dTocAt</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\global\let}\csname</span>&#x00A0;<span 
+class="cmtt-10">TocAt*\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5398--><p class="noindent" ><a 
+ href="#PrTx85015"  name="PrTx89007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx372"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx89008"  href="tex4ht-styCh10.html#PrTx107010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TocAt*}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\a:dTocAt{#1}\c:def\b:dTocAt{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TocAt}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\a:TocAt{#1}\c:def\b:TocAt{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{TocAt*}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{TocAt}{}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5405--><p class="noindent" >The following occurs for sectioning commands without subdivisions.
+</p>
+      <!--l. 5413--><p class="indent" ><a 
+ name="PrTx89009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83009"  name="QPrTx373"><span 
+class="cmtt-10">BeforeEvery</span>&#x00A0;<span 
+class="cmtt-10">hook</span></a><a 
+ name="PrTx89010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:BeforeEvery#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:BeforeEvery#1\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5420--><p class="noindent" ><a 
+ name="PrTx89011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx83011"  name="QPrTx374"><span 
+class="cmtt-10">Every</span>&#x00A0;<span 
+class="cmtt-10">hook</span></a><a 
+ name="PrTx89012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:Every#1\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:Every#1\endcsname{#3}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">8.10 <a 
+ href="tex4ht-sty.html#QQ2-9-90"  name="QQ1-9-90">Utilities</a></h3>
+<!--l. 5426--><p class="noindent" >Normally, the leading paragraphs in chapters and sections start with no indentation, whereas the other paragraphs
+start with indentations. To achieve this effect, we can allow a contribution of an indentation to all the paragraphs,
+with provisions for removing the indentations from selected paragraphs.
+</p><!--l. 5434--><p class="indent" >    Without the <span 
+class="cmtt-10">\immediate </span>we can get problems on boundary between pages.
+</p>
+    <h3 class="SectionHead">8.11 <a 
+ href="tex4ht-sty.html#QQ2-9-91"  name="QQ1-9-91">Configurations for CutAt</a></h3>
+<!--l. 5443--><p class="noindent" >The <span 
+class="cmtt-10">\par\ShowPar </span>is to ensure that buttons at end of a page will not get into the last entry of the table in case of a
+cut-off situation.
+
+</p>
+    <!--l. 5454--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh9.html" >next</a>] [<a 
+ href="tex4ht-styCh7.html" >prev</a>] [<a 
+ href="tex4ht-styCh7.html#tailtex4ht-styCh7.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh8.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh8.html" >up</a>] </p></div>
+<!--l. 5454--><p class="indent" >    <a 
+  name="tailtex4ht-styCh8.html"></a>  </p> 
+</body></html> 

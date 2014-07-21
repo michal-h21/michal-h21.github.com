@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>fancybox.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 31811--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe262.html" >next</a>] [<a 
+ href="tex4ht-4htSe260.html" >prev</a>] [<a 
+ href="tex4ht-4htSe260.html#tailtex4ht-4htSe260.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe261.html">tail</a>] [<a 
+ href="tex4ht-4htCh69.html#tex4ht-4htSe261.html" >up</a>] </p></div>
+    <h3 class="SectionHead">69.50 <a 
+ href="tex4ht-4htPa1.html#QQ2-512-474"  name="QQ1-512-474">fancybox.sty</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 31825--><p class="indent" ><a 
+ name="PrTx474001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx474001"  name="QPrTx1671"><span 
+class="cmtt-10">fancybox.4ht</span></a><a 
+ name="PrTx474002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">fancybox.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1999--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx474003"  href="tex4ht-4htSe260.html#PrTx473003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx474004"  href="tex4ht-4htSe262.html#PrTx475004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx474005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx474007"><span 
+class="cmtt-10">fancybox hooks</span></a><a 
+ name="PrTx474006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{fancybox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 31843--><p class="noindent" ><a 
+ name="PrTx474007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx474005"  name="QPrTx1672"><span 
+class="cmtt-10">fancybox</span>&#x00A0;<span 
+class="cmtt-10">hooks</span></a><a 
+ name="PrTx474008"  href="#PrTx474010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1#2{\begingroup</span>&#x00A0;<span 
+class="cmtt-10">#1\relax</span>&#x00A0;<span 
+class="cmtt-10">\hbox{{#2}}\endgroup}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@ovalbox\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\doublebox=\ovalbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\shadowbox=\ovalbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\VerbBox{\a:VerbBox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\end@VerbBox{\b:VerbBox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{VerbBox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\shadowbox{\Configure{VerbBox}{\a:shadowbox}{\b:shadowbox}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{shadowbox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\ovalbox{\Configure{VerbBox}{\a:ovalbox}{\b:ovalbox}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{ovalbox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\Ovalbox{\Configure{VerbBox}{\a:Ovalbox}{\b:Ovalbox}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Ovalbox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\doublebox{\Configure{VerbBox}{\a:doublebox}{\b:doublebox}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{doublebox}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 31872--><p class="noindent" ><a 
+ href="#PrTx474007"  name="PrTx474009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx474005"  name="QPrTx1673"><span 
+class="cmtt-10">fancybox</span>&#x00A0;<span 
+class="cmtt-10">hooks</span></a><a 
+ name="PrTx474010"  href="#PrTx474012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Btrivlist#1{\@ifnextchar[{\@Btrivlist{#1}}{\@Btrivlist{#1}[]}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@Btrivlist#1[#2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@Blistrestore</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\\=\@Btrivlistcr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:Btrivlist</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">Btrivlist-dir\endcsname{\expandafter\noexpand\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if#1la\else\if#1rc\else</span>&#x00A0;<span 
+class="cmtt-10">b\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:Btrivlist-dir\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fb@beginvbox{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TeXhalign\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hfil</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:Btrivlist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ignorespaces##\unskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\d:Btrivlist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if#1r\@empty\else\hfil\fi\cr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endBtrivlist{\crcr\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup\b:Btrivlist\if@pboxsw$\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Btrivlist}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Btrivlist-dir}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">:#1:\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\Btrivlist:dir\fi</span>&#x00A0;<span 
+class="cmtt-10">{#1}}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Btrivlist:dir#1#2{\expandafter\def</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\if#1la\else\if#1rc\else</span>&#x00A0;<span 
+class="cmtt-10">b\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">:Btrivlist-dir\endcsname{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:Btrivlist-dir:\endcsname}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 31900--><p class="noindent" ><a 
+ href="#PrTx474009"  name="PrTx474011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx474005"  name="QPrTx1674"><span 
+class="cmtt-10">fancybox</span>&#x00A0;<span 
+class="cmtt-10">hooks</span></a><a 
+ name="PrTx474012"  href="#PrTx474014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@Blist#1#2[#3]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\@listdepth&#x003E;5</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@toodeep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\@listdepth\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\itemindent\z@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">@list\romannumeral\the\@listdepth\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@itemlabel{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\makelabel\@mklab</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@nmbrlistfalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@Blistrestore</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\\=\@Blistcr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\item\Bitem</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@Bitemswfalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\dd:Blist{\global\let\dd:Blist=\d:Blist}\a:Blist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fb@beginvbox{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TeXhalign\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\dd:Blist\c:Blist\e:Blist</span>&#x00A0;<span 
+class="cmtt-10">\ignorespaces##\f:Blist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;\e:Blist\ignorespaces##\unskip\hfil\f:Blist\cr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endBlist{\crcr\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup\dd:Blist\b:Blist\if@pboxsw$\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\@listdepth\m@ne}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Blist}{6}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 31905--><p class="noindent" ><a 
+ href="#PrTx474011"  name="PrTx474013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx474005"  name="QPrTx1675"><span 
+class="cmtt-10">fancybox</span>&#x00A0;<span 
+class="cmtt-10">hooks</span></a><a 
+ name="PrTx474014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Beqnarray=\eqnarray</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\endBeqnarray=\endeqnarray</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 31912--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe262.html" >next</a>] [<a 
+ href="tex4ht-4htSe260.html" >prev</a>] [<a 
+ href="tex4ht-4htSe260.html#tailtex4ht-4htSe260.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe261.html" >front</a>] [<a 
+ href="tex4ht-4htCh69.html#tex4ht-4htSe261.html" >up</a>] </p></div>
+<!--l. 31912--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe261.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,2498 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Lists</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,sections+ --> 
+<meta name="src" content="tex4ht-html4.tex" /> 
+<meta name="date" content="2014-07-14 18:32:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-html4.css" /> 
+</head><body 
+>
+   <!--l. 2786--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html4se15.html" >next</a>] [<a 
+ href="tex4ht-html4se13.html" >prev</a>] [<a 
+ href="tex4ht-html4se13.html#tailtex4ht-html4se13.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-html4se14.html">tail</a>] [<a 
+ href="tex4ht-html4ch3.html#tex4ht-html4se14.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">3.7   </span> <a 
+ href="tex4ht-html4.html#QQ2-20-33"  id="x20-330003.7">Lists</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.1 <a 
+ href="#x20-340003.7.1">LaTeX</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.2 <a 
+ href="#x20-350003.7.2">Prosper</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.3 <a 
+ href="#x20-360003.7.3">Jeep</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.4 <a 
+ href="#x20-370003.7.4">Description</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.5 <a 
+ href="#x20-380003.7.5">List Utilities</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.6 <a 
+ href="#x20-390003.7.6">mdwlist</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.7.7 <a 
+ href="#x20-400003.7.7">nomencl</a></span>
+   </div>
+<!--l. 2791--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.1   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-34"  id="x20-340003.7.1">LaTeX</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-177"><div class="head">
+       <a 
+ href="tex4ht-html4se11.html#PrTx19011"  id="PrTx34001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295011"  id="QPrTx177"><span 
+class="cmtt-10">configure html4 latex</span></a><a 
+ id="PrTx34002"  href="#PrTx34004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{li</span><span 
+class="cmtt-10">&#x00A0;p.indent</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;text-indent:</span><span 
+class="cmtt-10">&#x00A0;0em</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{li</span><span 
+class="cmtt-10">&#x00A0;p:first-child{</span><span 
+class="cmtt-10">&#x00A0;margin-top:0em;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{li</span><span 
+class="cmtt-10">&#x00A0;p:last-child,</span><span 
+class="cmtt-10">&#x00A0;li</span><span 
+class="cmtt-10">&#x00A0;div:last-child</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;margin-bottom:0.5em;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{li</span><span 
+class="cmtt-10">&#x00A0;p\string</span><span 
+class="cmtt-10">&#x00A0;~ul:last-child,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;li</span><span 
+class="cmtt-10">&#x00A0;p\string</span><span 
+class="cmtt-10">&#x00A0;~ol:last-child{</span><span 
+class="cmtt-10">&#x00A0;margin-bottom:0.5em;</span><span 
+class="cmtt-10">&#x00A0;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-178"><div class="head">
+       <a 
+ href="#PrTx34001"  id="PrTx34003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295011"  id="QPrTx178"><span 
+class="cmtt-10">configure html4 latex</span></a><a 
+ id="PrTx34004"  href="#PrTx34024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{trivlist}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{</span><a 
+ id="PrTx34005"  href="tex4ht-html4se12.html#PrTx25011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx34006"  href="#PrTx34012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{trivlist}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="trivlist"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx34008"  href="#PrTx34014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx34010"  href="#PrTx34016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="trivlist"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="trivlist"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{list}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{</span><a 
+ id="PrTx34011"  href="#PrTx34005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx34012"  href="#PrTx34018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{list}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="list\expandafter\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@listdepth\endcsname"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34013"  href="#PrTx34007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx34014"  href="#PrTx34020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34015"  href="#PrTx34009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx34016"  href="#PrTx34022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="list"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="list"&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{itemize}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP}{</span><a 
+ id="PrTx34017"  href="#PrTx34011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx34018"  href="#PrTx34026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{itemize}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;ul</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="\getClass{itemize}itemize\expandafter\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@itemdepth\endcsname"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\afterGetClass{itemize}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34019"  href="#PrTx34013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx34020"  href="#PrTx34062"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34021"  href="#PrTx34015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx34022"  href="#PrTx34066"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/li&#x003E;&#x003C;/ul&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/li&#x003E;}\DeleteMark}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;li</span><span 
+class="cmtt-10">&#x00A0;class="\getClass{li}itemize"&#x003E;}\afterGetClass{li}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{itemizeClass}{2}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{itemizeClass}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{liClass}{2}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{liClass}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-179"><div class="head">
+       <a 
+ href="#PrTx34003"  id="PrTx34023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295011"  id="QPrTx179"><span 
+class="cmtt-10">configure html4 latex</span></a><a 
+ id="PrTx34024"  href="#PrTx34074"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{enumerate}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{</span><a 
+ id="PrTx34025"  href="#PrTx34017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx34026"  href="#PrTx35004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{enumerate-}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ConfigureList{enumerate}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34059"><span 
+class="cmtt-10">enumerate I</span></a><a 
+ id="PrTx34028"  href="#PrTx34038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34063"><span 
+class="cmtt-10">enumerate II</span></a><a 
+ id="PrTx34030"  href="#PrTx34040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34067"><span 
+class="cmtt-10">enumerate III</span></a><a 
+ id="PrTx34032"  href="#PrTx34042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34069"><span 
+class="cmtt-10">enumerate IV</span></a><a 
+ id="PrTx34034"  href="#PrTx36012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{enumerate+}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34053"><span 
+class="cmtt-10">description-based enumerate list</span></a><a 
+ id="PrTx34036"  href="#PrTx34052"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ConfigureList{enumerate}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34037"  href="#PrTx34027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34059"><span 
+class="cmtt-10">enumerate I</span></a><a 
+ id="PrTx34038"  href="#PrTx39012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34039"  href="#PrTx34029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34063"><span 
+class="cmtt-10">enumerate II</span></a><a 
+ id="PrTx34040"  href="#PrTx36008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34041"  href="#PrTx34031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34067"><span 
+class="cmtt-10">enumerate III</span></a><a 
+ id="PrTx34042"  href="#PrTx36010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx34043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34071"><span 
+class="cmtt-10">enumerate IV-</span></a><a 
+ id="PrTx34044"  href="tex4ht-html4se71.html#PrTx188044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34055"><span 
+class="cmtt-10">description-based enumerate list note</span></a><a 
+ id="PrTx34046"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;enumerated</span><span 
+class="cmtt-10">&#x00A0;list</span><span 
+class="cmtt-10">&#x00A0;elements</span><span 
+class="cmtt-10">&#x00A0;li&#8217;s</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;value</span><span 
+class="cmtt-10">&#x00A0;attributes,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;enumerate-&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{css2}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx34047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34057"><span 
+class="cmtt-10">css2 itemize</span></a><a 
+ id="PrTx34048"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;CSS2</span><span 
+class="cmtt-10">&#x00A0;code,</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;css2&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-180"><div class="head">
+       <a 
+ id="PrTx34049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295255"  id="QPrTx180"><span 
+class="cmtt-10">configure html4 enumerate</span></a><a 
+ id="PrTx34050"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx34051"  href="#PrTx34035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34053"><span 
+class="cmtt-10">description-based enumerate list</span></a><a 
+ id="PrTx34052"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-181"><div class="head">
+       <a 
+ id="PrTx34053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34035"  id="QPrTx181"><span 
+class="cmtt-10">description-based</span><span 
+class="cmtt-10">&#x00A0;enumerate</span><span 
+class="cmtt-10">&#x00A0;list</span></a><a 
+ id="PrTx34054"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{enumerate}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="enumerate"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\PushMacro\end:itm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\PopMacro\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm</span><span 
+class="cmtt-10">&#x00A0;\end:itm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="enumerate"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\EndP\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="enumerate"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{dd.enumerate</span><span 
+class="cmtt-10">&#x00A0;{margin-left:</span><span 
+class="cmtt-10">&#x00A0;2em;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{dt.enumerate</span><span 
+class="cmtt-10">&#x00A0;{float:left;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;clear:left;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;margin-right:0.5em;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;margin-left:0.5em;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;text-align:right;</span><span 
+class="cmtt-10">&#x00A0;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-182"><div class="head">
+       <a 
+ id="PrTx34055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34045"  id="QPrTx182"><span 
+class="cmtt-10">description-based</span><span 
+class="cmtt-10">&#x00A0;enumerate</span><span 
+class="cmtt-10">&#x00A0;list</span><span 
+class="cmtt-10">&#x00A0;note</span></a><a 
+ id="PrTx34056"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;enumerated</span><span 
+class="cmtt-10">&#x00A0;list</span><span 
+class="cmtt-10">&#x00A0;elements</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;valued</span><span 
+class="cmtt-10">&#x00A0;data,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;enumerate+&#8217;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-183"><div class="head">
+       <a 
+ id="PrTx34057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34047"  id="QPrTx183"><span 
+class="cmtt-10">css2</span><span 
+class="cmtt-10">&#x00A0;itemize</span></a><a 
+ id="PrTx34058"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\textbullet{&amp;\#x2219;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\textasteriskcentered{&amp;\#x2217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize1</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:</span><span 
+class="cmtt-10">&#x00A0;none;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize1</span><span 
+class="cmtt-10">&#x00A0;li.itemize:before</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;display:</span><span 
+class="cmtt-10">&#x00A0;marker;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;marker-offset:</span><span 
+class="cmtt-10">&#x00A0;0.5em;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;content:</span><span 
+class="cmtt-10">&#x00A0;"\labelitemi\space"</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize2</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:</span><span 
+class="cmtt-10">&#x00A0;none;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize2</span><span 
+class="cmtt-10">&#x00A0;li.itemize:before</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;display:</span><span 
+class="cmtt-10">&#x00A0;marker;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;marker-offset:</span><span 
+class="cmtt-10">&#x00A0;0.5em;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;content:</span><span 
+class="cmtt-10">&#x00A0;"\labelitemii\space"</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize3</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:</span><span 
+class="cmtt-10">&#x00A0;none;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{ul.itemize3</span><span 
+class="cmtt-10">&#x00A0;li.itemize:before</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;display:</span><span 
+class="cmtt-10">&#x00A0;marker;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;marker-offset:</span><span 
+class="cmtt-10">&#x00A0;0.5em;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;content:</span><span 
+class="cmtt-10">&#x00A0;"\labelitemiii\space"</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-184"><div class="head">
+       <a 
+ id="PrTx34059"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34027"  id="QPrTx184"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;I</span></a><a 
+ id="PrTx34060"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\EndP\HCode{&#x003C;ol</span><span 
+class="cmtt-10">&#x00A0;\a:enumerate:\space</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="enumerate\expandafter\the\csname</span><span 
+class="cmtt-10">&#x00A0;@enumdepth\endcsname"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;}</span><a 
+ id="PrTx34061"  href="#PrTx34019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx34062"  href="#PrTx35006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-185"><div class="head">
+       <a 
+ id="PrTx34063"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34029"  id="QPrTx185"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;II</span></a><a 
+ id="PrTx34064"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx34065"  href="#PrTx34021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx34066"  href="#PrTx35008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\EndP\HCode{&#x003C;/li&#x003E;&#x003C;/ol&#x003E;}\ShowPar</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-186"><div class="head">
+       <a 
+ id="PrTx34067"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34031"  id="QPrTx186"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;III</span></a><a 
+ id="PrTx34068"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\end:itm</span><span 
+class="cmtt-10">&#x00A0;\gdef\end:itm{\EndP\Tg&#x003C;/li&#x003E;}\DeleteMark</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-187"><div class="head">
+       <a 
+ id="PrTx34069"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34033"  id="QPrTx187"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;IV</span></a><a 
+ id="PrTx34070"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;li</span><span 
+class="cmtt-10">&#x00A0;class="enumerate"</span><span 
+class="cmtt-10">&#x00A0;value="\expandafter\the\csname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;c@enum\romannumeral\the\@enumdepth\endcsname"\Hnewline&#x003E;}\AnchorLabel</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-188"><div class="head">
+       <a 
+ id="PrTx34071"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34043"  id="QPrTx188"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;IV-</span></a><a 
+ id="PrTx34072"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{\Configure{Link}{li}{}{</span><span 
+class="cmtt-10">&#x00A0;class="enumerate"</span><span 
+class="cmtt-10">&#x00A0;id=}{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;\let\EndLink=\empty</span><span 
+class="cmtt-10">&#x00A0;\AnchorLabel</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2960--><p class="indent" >   It is better to put the LI in the third field to avoid extra space to the following
+text.
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-189"><div class="head">
+       <a 
+ href="#PrTx34023"  id="PrTx34073"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295011"  id="QPrTx189"><span 
+class="cmtt-10">configure html4 latex</span></a><a 
+ id="PrTx34074"  href="#PrTx34080"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:enumerate:#1{\c:enu</span><span 
+class="cmtt-10">&#x00A0;#1</span><a 
+ id="PrTx34075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4ch10.html#PrTx291001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx34076"  href="#PrTx34078"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:enu#1#2#3#4#5</span><a 
+ id="PrTx34077"  href="#PrTx34075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4ch10.html#PrTx291001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx34078"  href="tex4ht-html4se15.html#PrTx51004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\a:enumerate:{\ifcase</span><span 
+class="cmtt-10">&#x00A0;\@enumdepth</span><span 
+class="cmtt-10">&#x00A0;\or</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#1\or</span><span 
+class="cmtt-10">&#x00A0;#2\or</span><span 
+class="cmtt-10">&#x00A0;#3\or</span><span 
+class="cmtt-10">&#x00A0;#4\else\fi</span><span 
+class="cmtt-10">&#x00A0;#5}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-190"><div class="head">
+       <a 
+ href="#PrTx34073"  id="PrTx34079"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295011"  id="QPrTx190"><span 
+class="cmtt-10">configure html4 latex</span></a><a 
+ id="PrTx34080"  href="tex4ht-html4se22.html#PrTx82034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{enumerate}{{}{}{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.enumerate1</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:decimal;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.enumerate2</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:lower-alpha;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.enumerate3</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:lower-roman;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.enumerate4</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{list-style-type:upper-alpha;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-191">
+      <div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{html+}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{enumerate}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{style="list-style-type:decimal"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{style="list-style-type:lower-alpha"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{style="list-style-type:lower-roman"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{style="list-style-type:upper-alpha"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;stricter</span><span 
+class="cmtt-10">&#x00A0;html</span><span 
+class="cmtt-10">&#x00A0;code,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;html+&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{enumerate}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{type="\theenumi"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{type="\theenumii"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{type="\theenumiii"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{type="\theenumiv"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span>
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-192"><div class="head">
+       <a 
+ id="PrTx34081"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se33.html#PrTx116009"  id="QPrTx192"><span 
+class="cmtt-10">roman enumeiii</span></a><a 
+ id="PrTx34082"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{enumiii}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="roman-numeral"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3010--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.2   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-35"  id="x20-350003.7.2">Prosper</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-193"><div class="head">
+       <a 
+ id="PrTx35001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se72.html#PrTx193005"  id="QPrTx193"><span 
+class="cmtt-10">prosper lists</span></a><a 
+ id="PrTx35002"  href="#PrTx35010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{Itemize}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP}{</span><a 
+ id="PrTx35003"  href="#PrTx34025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx35004"  href="#PrTx36004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{Itemize}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;ul</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="itemize\expandafter\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@itemdepth\endcsname"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx35005"  href="#PrTx34061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx35006"  href="#PrTx35012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx35007"  href="#PrTx34065"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx35008"  href="#PrTx35014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/li&#x003E;&#x003C;/ul&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/li&#x003E;}\DeleteMark}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;li</span><span 
+class="cmtt-10">&#x00A0;class="itemize"&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-194"><div class="head">
+       <a 
+ href="#PrTx35001"  id="PrTx35009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se72.html#PrTx193005"  id="QPrTx194"><span 
+class="cmtt-10">prosper lists</span></a><a 
+ id="PrTx35010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{itemstep}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;ul</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="itemstep\expandafter\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@itemdepth\endcsname"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx35011"  href="#PrTx35005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx35012"  href="#PrTx36016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx35013"  href="#PrTx35007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx35014"  href="#PrTx37006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi\EndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/li&#x003E;&#x003C;/ul&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{itemstep}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/li&#x003E;}\DeleteMark}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;li</span><span 
+class="cmtt-10">&#x00A0;class="itemize\ifnum</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\c@item@step&#x003E;\c@overlaysCount</span><span 
+class="cmtt-10">&#x00A0;-hide\fi"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{li.itemize-hide</span><span 
+class="cmtt-10">&#x00A0;{visibility:hidden;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3047--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.3   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-36"  id="x20-360003.7.3">Jeep</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-195"><div class="head">
+       <a 
+ id="PrTx36001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295139"  id="QPrTx195"><span 
+class="cmtt-10">configure html4 jeep</span></a><a 
+ id="PrTx36002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{outline}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{</span><a 
+ id="PrTx36003"  href="#PrTx35003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx36004"  href="#PrTx39004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{outline}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx36005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx36013"><span 
+class="cmtt-10">enumerate I jeep</span></a><a 
+ id="PrTx36006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx36007"  href="#PrTx34039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34063"><span 
+class="cmtt-10">enumerate II</span></a><a 
+ id="PrTx36008"  href="#PrTx39014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx36009"  href="#PrTx34041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34067"><span 
+class="cmtt-10">enumerate III</span></a><a 
+ id="PrTx36010"  href="#PrTx39016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx36011"  href="#PrTx34033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34069"><span 
+class="cmtt-10">enumerate IV</span></a><a 
+ id="PrTx36012"  href="#PrTx39018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-196"><div class="head">
+       <a 
+ id="PrTx36013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx36005"  id="QPrTx196"><span 
+class="cmtt-10">enumerate</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;jeep</span></a><a 
+ id="PrTx36014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\EndP\HCode{&#x003C;ol</span><span 
+class="cmtt-10">&#x00A0;type="1"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="enumerate\expandafter\the\csname</span><span 
+class="cmtt-10">&#x00A0;@enumdepth\endcsname"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;}</span><a 
+ id="PrTx36015"  href="#PrTx35011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx36016"  href="#PrTx37004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3072--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.4   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-37"  id="x20-370003.7.4">Description</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-197"><div class="head">
+       <a 
+ id="PrTx37001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx37015"  id="QPrTx197"><span 
+class="cmtt-10">description 4</span></a><a 
+ id="PrTx37002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{description}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx37003"  href="#PrTx36015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx37004"  href="#PrTx39006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx37005"  href="#PrTx35013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx37006"  href="#PrTx39008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\EndP\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-198"><div class="head">
+       <a 
+ id="PrTx37007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se31.html#PrTx114015"  id="QPrTx198"><span 
+class="cmtt-10">32,4 report,book</span></a><a 
+ id="PrTx37008"  href="tex4ht-html4se15.html#PrTx43002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{description}{\IgnorePar}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-199"><div class="head">
+       <a 
+ id="PrTx37009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295169"  id="QPrTx199"><span 
+class="cmtt-10">configure html4 scrbook</span></a><a 
+ id="PrTx37010"  href="tex4ht-html4se20.html#PrTx77002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{description}{\IgnorePar}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-200"><div class="head">
+       <a 
+ id="PrTx37011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295173"  id="QPrTx200"><span 
+class="cmtt-10">configure html4 scrreprt</span></a><a 
+ id="PrTx37012"  href="tex4ht-html4se20.html#PrTx77010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{description}{\IgnorePar}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-201"><div class="head">
+       <a 
+ id="PrTx37013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se34.html#PrTx118003"  id="QPrTx201"><span 
+class="cmtt-10">ams art,proc,book</span></a><a 
+ id="PrTx37014"  href="tex4ht-html4se18.html#PrTx58036"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx37015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx37001"><span 
+class="cmtt-10">description 4</span></a><a 
+ id="PrTx37016"  href="tex4ht-html4se33.html#PrTx116008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{description}{\IgnorePar}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3104--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.5   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-38"  id="x20-380003.7.5">List Utilities</a></h4>
+<!--l. 3109--><p class="noindent" >Latex allows groups like the following, so we need global <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\end:itm</span></span></span>
+
+</p>
+   <div class="verbatim" id="verbatim-4">
+\begin{enumerate}
+&#x00A0;<br />{\item&#x00A0;Line&#x00A0;1}
+&#x00A0;<br />{\item&#x00A0;Line&#x00A0;2}
+&#x00A0;<br />\end{enumerate}
+</div>
+<!--l. 3116--><p class="nopar" >
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-202"><div class="head">
+       <a 
+ id="PrTx38001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34007"  id="QPrTx202"><span 
+class="cmtt-10">save</span><span 
+class="cmtt-10">&#x00A0;end:itm</span></a><a 
+ id="PrTx38002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\PushMacro\end:itm</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-203"><div class="head">
+       <a 
+ id="PrTx38003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx34009"  id="QPrTx203"><span 
+class="cmtt-10">recall</span><span 
+class="cmtt-10">&#x00A0;end:itm</span></a><a 
+ id="PrTx38004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\PopMacro\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm</span><span 
+class="cmtt-10">&#x00A0;\end:itm</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3130--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.6   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-39"  id="x20-390003.7.6">mdwlist</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-204"><div class="head">
+       <a 
+ id="PrTx39001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295337"  id="QPrTx204"><span 
+class="cmtt-10">configure html4 mdwlist</span></a><a 
+ id="PrTx39002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{itemize*}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP}{</span><a 
+ id="PrTx39003"  href="#PrTx36003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx39004"  href="#PrTx39010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{itemize*}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;ul</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="itemize\expandafter\the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@itemdepth\endcsname"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx39005"  href="#PrTx37003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx39006"  href="#PrTx39020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39007"  href="#PrTx37005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx39008"  href="#PrTx39022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/li&#x003E;&#x003C;/ul&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/li&#x003E;}\DeleteMark}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;li</span><span 
+class="cmtt-10">&#x00A0;class="itemize"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{enumerate*}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{</span><a 
+ id="PrTx39009"  href="#PrTx39003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html4se118.html#PrTx281007"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx39010"  href="tex4ht-html4se26.html#PrTx101006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{enumerate*}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39011"  href="#PrTx34037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34059"><span 
+class="cmtt-10">enumerate I</span></a><a 
+ id="PrTx39012"  href="tex4ht-html4se43.html#PrTx132016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39013"  href="#PrTx36007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34063"><span 
+class="cmtt-10">enumerate II</span></a><a 
+ id="PrTx39014"  href="tex4ht-html4se43.html#PrTx132018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39015"  href="#PrTx36009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34067"><span 
+class="cmtt-10">enumerate III</span></a><a 
+ id="PrTx39016"  href="tex4ht-html4se43.html#PrTx132020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39017"  href="#PrTx36011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx34069"><span 
+class="cmtt-10">enumerate IV</span></a><a 
+ id="PrTx39018"  href="tex4ht-html4se43.html#PrTx132022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{description*}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx39019"  href="#PrTx39005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38001"><span 
+class="cmtt-10">save end:itm</span></a><a 
+ id="PrTx39020"  href="tex4ht-html4se52.html#PrTx145012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx39021"  href="#PrTx39007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx38003"><span 
+class="cmtt-10">recall end:itm</span></a><a 
+ id="PrTx39022"  href="tex4ht-html4se52.html#PrTx145014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\EndP\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="description"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{basedescript}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="basedescript"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\PushMacro\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\PopMacro\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm</span><span 
+class="cmtt-10">&#x00A0;\end:itm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="basedescript"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\EndP\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="basedescript"&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3170--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark">3.7.7   </span> <a 
+ href="tex4ht-html4ch3.html#QQ2-20-40"  id="x20-400003.7.7">nomencl</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-205"><div class="head">
+       <a 
+ id="PrTx40001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295155"  id="QPrTx205"><span 
+class="cmtt-10">configure html4 nomencl</span></a><a 
+ id="PrTx40002"  href="#PrTx40004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureList{thenomenclature}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndP\HCode{&#x003C;dl</span><span 
+class="cmtt-10">&#x00A0;\a:LRdir</span><span 
+class="cmtt-10">&#x00A0;class="thenomenclature"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\PushMacro\end:itm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\PopMacro\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\let\end:itm</span><span 
+class="cmtt-10">&#x00A0;\end:itm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:itm</span><span 
+class="cmtt-10">&#x00A0;\global\def\end:itm{\EndP\Tg&#x003C;/dd&#x003E;}\HCode{&#x003C;dt</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="thenomenclature"&#x003E;}\bgroup</span><span 
+class="cmtt-10">&#x00A0;\bf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup\EndP\HCode{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="thenomenclature"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{dt.thenomenclature{float:left;</span><span 
+class="cmtt-10">&#x00A0;clear:left;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-206"><div class="head">
+       <a 
+ href="#PrTx40001"  id="PrTx40003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html4se125.html#PrTx295155"  id="QPrTx206"><span 
+class="cmtt-10">configure html4 nomencl</span></a><a 
+ id="PrTx40004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{2}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{3}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{4}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{5}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{6}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{7}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\pend:def\thenomenclature{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if@intoc</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx40005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx40009"><span 
+class="cmtt-10">ignore addcontentsline in thenomenclature</span></a><a 
+ id="PrTx40006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx40007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx40011"><span 
+class="cmtt-10">sectioning statement within begin-end env</span></a><a 
+ id="PrTx40008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-207"><div class="head">
+       <a 
+ id="PrTx40009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx40005"  id="QPrTx207"><span 
+class="cmtt-10">ignore</span><span 
+class="cmtt-10">&#x00A0;addcontentsline</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;thenomenclature</span></a><a 
+ id="PrTx40010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span><span 
+class="cmtt-10">&#x00A0;if:intoc\expandafter\endcsname\csname</span><span 
+class="cmtt-10">&#x00A0;if@intoc\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span><span 
+class="cmtt-10">&#x00A0;if@intoc\endcsname{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\noexpand\csname</span><span 
+class="cmtt-10">&#x00A0;iftrue\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\expandafter\noexpand</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;if@intoc\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\noexpand</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;if:intoc\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\noexpand\csname</span><span 
+class="cmtt-10">&#x00A0;else\endcsname}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-208"><div class="head">
+       <a 
+ id="PrTx40011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx40007"  id="QPrTx208"><span 
+class="cmtt-10">sectioning</span><span 
+class="cmtt-10">&#x00A0;statement</span><span 
+class="cmtt-10">&#x00A0;within</span><span 
+class="cmtt-10">&#x00A0;begin-end</span><span 
+class="cmtt-10">&#x00A0;env</span></a><a 
+ id="PrTx40012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{thenomenclature}\ifx\:temp\@currenvir</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\RecallEverypar</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 3226--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html4se15.html" >next</a>] [<a 
+ href="tex4ht-html4se13.html" >prev</a>] [<a 
+ href="tex4ht-html4se13.html#tailtex4ht-html4se13.html" >prev-tail</a>] [<a 
+ href="tex4ht-html4se14.html" >front</a>] [<a 
+ href="tex4ht-html4ch3.html#tex4ht-html4se14.html" >up</a>] </p></div>
+<!--l. 3226--><p class="indent" >   <a 
+  id="tailtex4ht-html4se14.html"></a>  </p> 
+</body></html> 

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Reverse Index</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 11275--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu67.html" >next</a>] [<a 
+ href="tex4ht-4htSu65.html" >prev</a>] [<a 
+ href="tex4ht-4htSu65.html#tailtex4ht-4htSu65.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu66.html">tail</a>] [<a 
+ href="tex4ht-4htSe65.html#tex4ht-4htSu66.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe65.html#QQ2-173-153"  name="QQ1-173-153">Reverse Index</a></h3>
+           <!--l. 11309--><p class="noindent" ><a 
+ name="PrTx153001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu65.html#PrTx152021"  name="QPrTx550"><span 
+class="cmtt-10">reverse</span>&#x00A0;<span 
+class="cmtt-10">index</span></a><a 
+ name="PrTx153002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\newcount\GetentriesN</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\GetentriesN=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\indexentry{\string\indexentry}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Ganchor{\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\GetentriesN&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">0\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\GetentriesN&#x003C;100</span>&#x00A0;<span 
+class="cmtt-10">0\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\GetentriesN&#x003C;1000</span>&#x00A0;<span 
+class="cmtt-10">0\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\the\GetentriesN}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Beforeentry{\let\getentries=\Getentries</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\Beforeentry=\beforeentry</span>&#x00A0;<span 
+class="cmtt-10">\Beforeentry}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Getentries#1#2{\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\GetentriesN</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\parent=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bparent#1|(</span><a 
+ name="PrTx153003"  href="tex4ht-4htSu65.html#PrTx152017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx153004"  href="#PrTx153006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\parent\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\eparent#1|)</span><a 
+ name="PrTx153005"  href="#PrTx153003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx153006"  href="#PrTx153008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\parent\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\see#1|see|see</span><a 
+ name="PrTx153007"  href="#PrTx153005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx153008"  href="tex4ht-4htSu67.html#PrTx154006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\isSee\empty</span>&#x00A0;<a 
+ name="PrTx153009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153021"><span 
+class="cmtt-10">no see entry</span></a><a 
+ name="PrTx153010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx153011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153027"><span 
+class="cmtt-10">yes see entry</span></a><a 
+ name="PrTx153012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write\idx{\indexentry\the\split{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx153013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153014"  href="#PrTx153016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\string\erange{\csname</span>&#x00A0;<span 
+class="cmtt-10">\core|(\endcsname}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\core</span><a 
+ name="PrTx153015"  href="#PrTx153013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153016"  href="#PrTx153018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\string\comNum}{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write\idx{\indexentry\the\split{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx153017"  href="#PrTx153015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153018"  href="#PrTx153020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\string\brange{\Ganchor}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\core</span><a 
+ name="PrTx153019"  href="#PrTx153017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153020"  href="#PrTx153024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\string\comNum}{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">\core|(\endcsname{\Ganchor}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11315--><p class="noindent" ><a 
+ name="PrTx153021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx153009"  name="QPrTx551"><span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">see</span>&#x00A0;<span 
+class="cmtt-10">entry</span></a><a 
+ name="PrTx153022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write\idx{\indexentry\the\split{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx153023"  href="#PrTx153019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153024"  href="#PrTx153026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1</span><a 
+ name="PrTx153025"  href="#PrTx153023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx153029"><span 
+class="cmtt-10">alt ind nun</span></a><a 
+ name="PrTx153026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\string\comNum}{#2}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11322--><p class="noindent" ><a 
+ name="PrTx153027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx153011"  name="QPrTx552"><span 
+class="cmtt-10">yes</span>&#x00A0;<span 
+class="cmtt-10">see</span>&#x00A0;<span 
+class="cmtt-10">entry</span></a><a 
+ name="PrTx153028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write\idx{\indexentry\the\split{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\Ganchor}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\preSee\string\gobble|see{\isSee}}{#2}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11325--><p class="noindent" >We want two references to the index numbers like in &#8216;<span 
+class="cmtt-10">\indexentry{\indNum{0006}...\indNum{0006}\comNum}{1}</span>&#8217;
+because the &#8216;<span 
+class="cmtt-10">\item \indNum{0006}...\indNum{0006}\comNum</span>&#8217; sometimes appear as &#8216;<span 
+class="cmtt-10">\item...\indNum{0006}\comNum</span>&#8217;
+with the first index being lost due to &#8216;@&#8217; entries &#8216;<span 
+class="cmtt-10">\index{...@...}</span>&#8217;.
+</p>
+      <!--l. 11333--><p class="indent" ><a 
+ name="PrTx153029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx153013"  name="QPrTx553"><span 
+class="cmtt-10">alt</span>&#x00A0;<span 
+class="cmtt-10">ind</span>&#x00A0;<span 
+class="cmtt-10">nun</span></a><a 
+ name="PrTx153030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\string\indNum{\Ganchor}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 11338--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu67.html" >next</a>] [<a 
+ href="tex4ht-4htSu65.html" >prev</a>] [<a 
+ href="tex4ht-4htSu65.html#tailtex4ht-4htSu65.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu66.html" >front</a>] [<a 
+ href="tex4ht-4htSe65.html#tex4ht-4htSu66.html" >up</a>] </p></div>
+<!--l. 11338--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu66.html"></a> </p> 
+</body></html> 

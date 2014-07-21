@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ini (initialization) files in windows</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\Verbatim</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/***************</span><span 
+class="cmtt-10">&#x00A0;foo.c</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;*******************/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#include&#x003C;stdio.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#include&#x003C;string.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#include&#x003C;conio.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#include&#x003C;windows.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;Windows-specific</span><span 
+class="cmtt-10">&#x00A0;functions</span><span 
+class="cmtt-10">&#x00A0;used:</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;_fullpath</span><span 
+class="cmtt-10">&#x00A0;:</span><span 
+class="cmtt-10">&#x00A0;make</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;full</span><span 
+class="cmtt-10">&#x00A0;path</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;_splitpath</span><span 
+class="cmtt-10">&#x00A0;:</span><span 
+class="cmtt-10">&#x00A0;split</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;_fullpath</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;its</span><span 
+class="cmtt-10">&#x00A0;component</span><span 
+class="cmtt-10">&#x00A0;parts</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">//</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;GetPrivateProfileString:</span><span 
+class="cmtt-10">&#x00A0;handle</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;.ini</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">_fullpath(path,argv[0],250);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">_splitpath(path,drive,dir,filname,ext);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">char</span><span 
+class="cmtt-10">&#x00A0;TEXINAME[100],</span><span 
+class="cmtt-10">&#x00A0;NOBATCHNAME[MV2];</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">GetPrivateProfileString("Files",</span><span 
+class="cmtt-10">&#x00A0;"TEXINAME",</span><span 
+class="cmtt-10">&#x00A0;NOBATCHNAME,</span><span 
+class="cmtt-10">&#x00A0;TEXINAME,</span><span 
+class="cmtt-10">&#x00A0;100,</span><span 
+class="cmtt-10">&#x00A0;"foo.ini");</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">GetPrivateProfileString("Strings",</span><span 
+class="cmtt-10">&#x00A0;"SWPPACK",</span><span 
+class="cmtt-10">&#x00A0;dSWPPACK,</span><span 
+class="cmtt-10">&#x00A0;SWPPACK,</span><span 
+class="cmtt-10">&#x00A0;100,"foo.ini");</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">DEBFLAG=GetPrivateProfileInt("integers",</span><span 
+class="cmtt-10">&#x00A0;"DEBFLAG",0,</span><span 
+class="cmtt-10">&#x00A0;"foo.ini");</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/***************</span><span 
+class="cmtt-10">&#x00A0;foo.ini</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;********************/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">[integers]</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">;</span><span 
+class="cmtt-10">&#x00A0;DEBFLAG</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;1</span><span 
+class="cmtt-10">&#x00A0;prints</span><span 
+class="cmtt-10">&#x00A0;additional</span><span 
+class="cmtt-10">&#x00A0;details</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">DEBFLAG</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">[files]</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">;</span><span 
+class="cmtt-10">&#x00A0;texinfo</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">TexiName</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;texis.bat</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">[strings]</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">;</span><span 
+class="cmtt-10">&#x00A0;swp</span><span 
+class="cmtt-10">&#x00A0;package</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">SWPPACK</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;{swpht}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+     
+</body></html> 

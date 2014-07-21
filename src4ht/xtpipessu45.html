@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Tracing</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 3445--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu47.html" >next</a>] [<a 
+ href="xtpipesse9.html" >prev</a>] [<a 
+ href="xtpipesse9.html#tailxtpipesse9.html" >prev-tail</a>] [<a 
+ href="xtpipessu43.html#tailxtpipessu45.html">tail</a>] [<a 
+ href="xtpipessu43.html#xtpipessu46.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">8.4   </span> <a 
+  id="x58-660008.4"></a>Tracing</h4>
+           <!--l. 3451--><p class="noindent" ><a 
+ href="xtpipessu41.html#PrTx61015"  id="PrTx66001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu1.html#PrTx3009"  id="QPrTx186"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx66002"  href="xtpipessu46.html#PrTx68002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">trace;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3455--><p class="noindent" ><a 
+ href="xtpipessu41.html#PrTx61017"  id="PrTx66003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu2.html#PrTx4003"  id="QPrTx187"><span 
+class="cmtt-10">init fields</span></a><a 
+ id="PrTx66004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">false;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3471--><p class="noindent" ><a 
+ id="PrTx66005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu5.html#PrTx7003"  id="QPrTx188"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">element</span></a><a 
+ id="PrTx66006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.print(</span>&#x00A0;<span 
+class="cmtt-10">"[##]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">=&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">instruction</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">node.hasAttributes()</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">NamedNodeMap</span>&#x00A0;<span 
+class="cmtt-10">attributes</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getAttributes();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(int</span>&#x00A0;<span 
+class="cmtt-10">i=0;</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">attributes.getLength();</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Node</span>&#x00A0;<span 
+class="cmtt-10">attr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">attributes.item(i);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.print(</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">attr.getNodeName()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"=\""</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">attr.getNodeValue()</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"\""</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.println();</span>&#x00A0;<span 
+class="cmtt-10">logWriter.flush();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3477--><p class="noindent" ><a 
+ id="PrTx66007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu20.html#PrTx24011"  id="QPrTx189"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">true</span></a><a 
+ id="PrTx66008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.print(</span>&#x00A0;<span 
+class="cmtt-10">"--&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">true"</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3483--><p class="noindent" ><a 
+ id="PrTx66009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu20.html#PrTx24013"  id="QPrTx190"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">false</span></a><a 
+ id="PrTx66010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.print(</span>&#x00A0;<span 
+class="cmtt-10">"--&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">true"</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3490--><p class="noindent" ><a 
+ id="PrTx66011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu3.html#PrTx5017"  id="QPrTx191"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">open</span>&#x00A0;<span 
+class="cmtt-10">script</span></a><a 
+ id="PrTx66012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">logWriter.println(</span>&#x00A0;<span 
+class="cmtt-10">"("</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">scriptFile</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">")"</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+   <!--l. 3495--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu47.html" >next</a>] [<a 
+ href="xtpipesse9.html" >prev</a>] [<a 
+ href="xtpipesse9.html#tailxtpipesse9.html" >prev-tail</a>] [<a 
+ href="xtpipessu45.html" >front</a>] [<a 
+ href="xtpipessu43.html#xtpipessu46.html" >up</a>] </p></div>
+<!--l. 3495--><p class="indent" >   <a 
+  id="tailxtpipessu45.html"></a> </p> 
+</body></html> 

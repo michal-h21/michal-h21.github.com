@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>The Search Engine</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 3325--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu43.html" >next</a>] [<a 
+ href="xtpipesse8.html" >prev</a>] [<a 
+ href="xtpipesse8.html#tailxtpipesse8.html" >prev-tail</a>] [<a 
+ href="xtpipesse7.html#tailxtpipessu41.html">tail</a>] [<a 
+ href="xtpipessu41.html#xtpipessu42.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">7.2   </span> <a 
+  id="x53-610007.2"></a>The Search Engine</h4>
+           <!--l. 3340--><p class="noindent" ><a 
+ id="PrTx61001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx61001"  id="QPrTx178"><span 
+class="cmtt-10">xtpipes fields DELETED</span></a><a 
+ id="PrTx61002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span>&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">XtPipesSearch</span>&#x00A0;<span 
+class="cmtt-10">extends</span>&#x00A0;<span 
+class="cmtt-10">DefaultHandler</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">endElement(String</span>&#x00A0;<span 
+class="cmtt-10">uri,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">localName,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">qName){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx61003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx61007"><span 
+class="cmtt-10">extract root element name</span></a><a 
+ id="PrTx61004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">processingInstruction(String</span>&#x00A0;<span 
+class="cmtt-10">target,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">attrs)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!needScript</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">target.equals("xtpipes")</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx61005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx61009"><span 
+class="cmtt-10">extract script file name</span></a><a 
+ id="PrTx61006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 3343--><p class="noindent" >The input file is searched for an alternative script within a processing instruction of
+the form <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">&#x003C;?xtpipes</span><span 
+class="cmtt-10">&#x00A0;file="..."</span><span 
+class="cmtt-10">&#x00A0;?&#x003E;</span></span></span>.
+</p>
+           <!--l. 3350--><p class="noindent" ><a 
+ id="PrTx61007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx61003"  id="QPrTx179"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">root</span>&#x00A0;<span 
+class="cmtt-10">element</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ id="PrTx61008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">rootName</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">qName;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3374--><p class="noindent" ><a 
+ id="PrTx61009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx61005"  id="QPrTx180"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ id="PrTx61010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">try</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx61011"  href="xtpipessu40.html#PrTx60003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu23.html#PrTx37001"><span 
+class="cmtt-10">get sax reader</span></a><a 
+ id="PrTx61012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">saxReader.setContentHandler(new</span>&#x00A0;<span 
+class="cmtt-10">DefaultHandler()</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startElement(String</span>&#x00A0;<span 
+class="cmtt-10">uri,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">localName,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">qName,</span>&#x00A0;<span 
+class="cmtt-10">Attributes</span>&#x00A0;<span 
+class="cmtt-10">atts)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">filename</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">atts.getValue("file");</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">filename</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">null</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">scriptFile</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">filename;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx61013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu43.html#PrTx64001"><span 
+class="cmtt-10">show script file name in log file</span></a><a 
+ id="PrTx61014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">needScript</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">true;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">});</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">str</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"&#x003C;xtpipes</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">attrs</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"/&#x003E;";</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">StringReader</span>&#x00A0;<span 
+class="cmtt-10">reader</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">StringReader(str);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">InputSource</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">InputSource(reader);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">saxReader.parse(in);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">saxReaderStack.push(</span>&#x00A0;<span 
+class="cmtt-10">saxReader</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">catch(Exception</span>&#x00A0;<span 
+class="cmtt-10">e){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">System.err.println(</span>&#x00A0;<span 
+class="cmtt-10">"---</span>&#x00A0;<span 
+class="cmtt-10">Error</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">e</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 3384--><p class="noindent" ><a 
+ href="xtpipessu25.html#PrTx41013"  id="PrTx61015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu1.html#PrTx3009"  id="QPrTx181"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx61016"  href="xtpipessu45.html#PrTx66002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span>&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">rootName;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 3389--><p class="noindent" ><a 
+ href="xtpipessu23.html#PrTx37009"  id="PrTx61017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu2.html#PrTx4003"  id="QPrTx182"><span 
+class="cmtt-10">init fields</span></a><a 
+ id="PrTx61018"  href="xtpipessu45.html#PrTx66004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">rootName</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+   <!--l. 3395--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu43.html" >next</a>] [<a 
+ href="xtpipesse8.html" >prev</a>] [<a 
+ href="xtpipesse8.html#tailxtpipesse8.html" >prev-tail</a>] [<a 
+ href="xtpipessu41.html" >front</a>] [<a 
+ href="xtpipessu41.html#xtpipessu42.html" >up</a>] </p></div>
+<!--l. 3395--><p class="indent" >   <a 
+  id="tailxtpipessu41.html"></a> </p> 
+</body></html> 

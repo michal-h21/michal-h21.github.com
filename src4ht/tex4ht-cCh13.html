@@ -1,0 +1,1410 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Accents</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <!--l. 11979--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh14.html" >next</a>] [<a 
+ href="tex4ht-cCh12.html" >prev</a>] [<a 
+ href="tex4ht-cCh12.html#tailtex4ht-cCh12.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-cCh13.html">tail</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh13.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 13<br /><a 
+ href="tex4ht-c.html#QQ2-29-184"  name="QQ1-29-184">Accents</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.1&#x00A0;<a 
+ href="#QQ1-29-185"  name="QQ2-29-185">Htf Font Info</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.2&#x00A0;<a 
+ href="#QQ1-29-186"  name="QQ2-29-186">Integrated accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.3&#x00A0;<a 
+ href="#QQ1-29-187"  name="QQ2-29-187">Remote
+Accents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-29-188"  name="QQ2-29-188">Open Accent</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-29-189"  name="QQ2-29-189">Closure for Text Accent</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-29-190"  name="QQ2-29-190">Tailoring</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-29-191"  name="QQ2-29-191">Mark
+Accented Content</a></span><br />
+    </div>
+    <h3 class="SectionHead">13.1 <a 
+ href="tex4ht-c.html#QQ2-29-185"  name="QQ1-29-185">Htf Font Info</a></h3>
+<!--l. 11984--><p class="noindent" >Each htf font has between 2 to 4 fields per entry. The first field is the textual representation, the second is the
+textual and pictorial flags and decorations, the third is an the accent code, and the fourth is a pointer into an
+accented code table (tex4ht.htf).
+</p><!--l. 11990--><p class="indent" >    font.htf:
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#8217;text-rep&#8217;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8217;text/pic-deco&#8217;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8217;accent-code&#8217;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#8217;pointer</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;tex4ht.htf&#8217;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 11997--><p class="indent" >    The accent code uses universaly agreed upon codes for accent symbols. For instance, 18 for <span 
+class="cmtt-10">\&#8216;</span>, and 94 for <span 
+class="cmtt-10">\^</span>. 0
+signify no pointer.
+</p><!--l. 12000--><p class="indent" >    The accented code uses universaly agreed upon codes for accented symbols. We assume a unicode code-based
+system, but deviate from it when it is convinient.
+</p><!--l. 12005--><p class="indent" >    tex4ht.c makes move the third and fourt entries of each font into arrays, and puts into the entries
+index-pointers to the array. By doing so, we can allocate just one byte to an entry.
+
+</p><!--l. 12010--><p class="indent" >    <img 
+src="tex4ht-c0x.png" alt="|--------------|                 |---|  |---|  |---  |---|
+|--  --  -- -- |         ----    --A&#x02C6;   --&#x02C6;A&#x02C6;  |----  ----
+|--  -- ||| ||||         |---  |-|||  |||-|  |||-  |-|||
+|--  --  -||--||     |-||-A---|--&#x02C6;--||-&#x02C6;&#x02C6;--||-----|----
+|--  --  --||- ||    |   |---
+|--  --  -- || ||||  |   ----
+|--  --  -- -|||  || |
+|--  --  -- -- ||  |-|-|---|--|---|
+|--  --  -- -- ||| ---------------
+|--  --  -- -- | ||
+|--  --  -- -- |   ||
+|              |   |---|---|--|---|
+|---------------
+"   />
+</p><!--l. 12063--><p class="indent" >    The accented code matrix tex4ht.htf is the closest file to the font on the directory path from the root. Different
+paths may employ a different tex4ht.htf accent tables. An (accent-code,accented-code) pair maps to
+accented-code in the table, or the maping is undefined. Each accented-code in the matrix hold textual
+representation.
+</p>
+      <!--l. 12073--><p class="indent" ><a 
+ href="tex4ht-cCh11.html#PrTx156001"  name="PrTx185001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh10.html#PrTx126009"><span 
+class="cmtt-10">entries</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">font-tbl</span></a><a 
+ name="PrTx185002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">unsigned</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*accent,</span>&#x00A0;<span 
+class="cmtt-10">*accented;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">unsigned</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">*accent_array,</span>&#x00A0;<span 
+class="cmtt-10">*accented_array,</span>&#x00A0;<span 
+class="cmtt-10">accent_N,</span>&#x00A0;<span 
+class="cmtt-10">accented_N;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12084--><p class="noindent" ><a 
+ name="PrTx185003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx157007"><span 
+class="cmtt-10">initiate</span>&#x00A0;<span 
+class="cmtt-10">htf</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx185004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(unsigned</span>&#x00A0;<span 
+class="cmtt-10">char,</span>&#x00A0;<span 
+class="cmtt-10">n_gif</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accented</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(unsigned</span>&#x00A0;<span 
+class="cmtt-10">char,</span>&#x00A0;<span 
+class="cmtt-10">n_gif</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent_array</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accented_array</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent_N</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accented_N</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">i=n_gif;</span>&#x00A0;<span 
+class="cmtt-10">i--;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.accent[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accented[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12098--><p class="noindent" ><a 
+ name="PrTx185005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx160021"><span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">htf</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx185006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">((ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">get_html_ch(file))</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">del)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;9&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">warn_i_int(48,i);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent_array</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accent_N++?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">new_font.accent_array,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">(new_font.accent_N</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">sizeof(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int)))</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int,</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent_array[new_font.accent_N</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch1;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accent[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accent_N;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12112--><p class="noindent" ><a 
+ name="PrTx185007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx160023"><span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">htf</span>&#x00A0;<span 
+class="cmtt-10">accented</span></a><a 
+ name="PrTx185008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">((ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">get_html_ch(file))</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">del)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;9&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">warn_i_int(48,i);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch1</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">10</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accented_array</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accented_N++?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">new_font.accented_array,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">(new_font.accented_N</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">sizeof(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int)))</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(unsigned</span>&#x00A0;<span 
+class="cmtt-10">int,</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accented_array[new_font.accented_N</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch1;</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.accented[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new_font.accented_N;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">13.2 <a 
+ href="tex4ht-c.html#QQ2-29-186"  name="QQ1-29-186">Integrated accents</a></h3>
+    <h3 class="SectionHead">13.3 <a 
+ href="tex4ht-c.html#QQ2-29-187"  name="QQ1-29-187">Remote Accents</a></h3>
+<!--l. 12122--><p class="noindent" >If the accent character is for text (<span 
+class="cmtt-10">\accent</span>), we&#8217;ll be looking for the next character to be the accented character. If
+the accent character is for math (<span 
+class="cmtt-10">\mathaccent</span>), we&#8217;ll be looking for the next group of characters (i.e., subformula)
+to be the accented. If the subformula consists of a single character, we probably should assume an accented
+character instead of an accented subformula.
+</p><!--l. 12130--><p class="indent" >
+</p><ul >
+<li><span 
+class="cmtt-10">\special{t4ht*\string^t}</span>&#8212;requests to consume the next character, tailored to be placed just before an <span 
+class="cmtt-10">\accent</span>.
+In addition, if a template exists for text accents, the family-name and character-code of the accent are printed before
+the accented parameter together with the first three parts of the template. In such a case, the fourth part of the
+template is printed after the content. </li>
+<li><span 
+class="cmtt-10">\special{t4ht*\string^t#1 #2 #1 #3 #1 #4 #1 #5 #1 #6}</span>&#8212;provides template consisting of four parts, where
+<span 
+class="cmtt-10">#1 </span>is assumed to be a distinguished character separating the components. If the separators appears only twice or
+three times, the template is annihilated. </li>
+<li><span 
+class="cmtt-10">\special{t4ht*\string^m...}</span>&#8212;Variants of the above cases for <span 
+class="cmtt-10">\mathaccent</span>. However, the fourth part
+of the template is ignored, and assumed to be requested througth a <span 
+class="cmtt-10">Send{EndGroup}{1}{...} </span>(i.e.,
+<span 
+class="cmtt-10">\special{t4ht\string~&#x003E;1...}</span>). </li></ul>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-29-188"  name="QQ1-29-188">Open Accent</a></h3>
+           <!--l. 12173--><p class="noindent" ><a 
+ name="PrTx188001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh4.html#PrTx59009"><span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">specials</span></a><a 
+ name="PrTx188002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">special_n--;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">switch</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">get_char()</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;t&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">special_n</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx188003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx190001"><span 
+class="cmtt-10">text accent template</span></a><a 
+ name="PrTx188004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx188005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188017"><span 
+class="cmtt-10">text accent</span></a><a 
+ name="PrTx188006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;m&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">special_n</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx188007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx190003"><span 
+class="cmtt-10">math accent template</span></a><a 
+ name="PrTx188008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx188009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188019"><span 
+class="cmtt-10">math accent</span></a><a 
+ name="PrTx188010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;a&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx188011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx191009"><span 
+class="cmtt-10">accented template</span></a><a 
+ name="PrTx188012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;i&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx188013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx191013"><span 
+class="cmtt-10">accenting template</span></a><a 
+ name="PrTx188014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ name="PrTx188015"  href="tex4ht-cCh7.html#PrTx86013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh17.html#PrTx254005"><span 
+class="cmtt-10">consume unused specials</span></a><a 
+ name="PrTx188016"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12177--><p class="noindent" >A accent is a character from a given font. Given a content to be accented, the text/math accent marks it &#8216;<span 
+class="cmtt-10">#1 font</span>
+<span 
+class="cmtt-10">#2 char-no #3 content #4</span>&#8217; according to the accent/mathaccent template. Each character in the content is
+marked by &#8216;<span 
+class="cmtt-10">#1 font #2 char-no #3 character #4</span>&#8217; according to the accented template.
+</p><!--l. 12185--><p class="indent" >    Text accent can be on empty content or on character, and the accent itself is empty if it consists of a character
+code greater than 127. Math accent is placed on the center of a formula.
+</p>
+      <!--l. 12192--><p class="indent" ><a 
+ name="PrTx188017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188005"><span 
+class="cmtt-10">text</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx188018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12196--><p class="noindent" ><a 
+ name="PrTx188019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188009"><span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx188020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12200--><p class="noindent" ><a 
+ name="PrTx188021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188031"><span 
+class="cmtt-10">accented = true</span></a><a 
+ name="PrTx188022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accented_sym++;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12203--><p class="noindent" >The <span 
+class="cmtt-10">\special </span>tells tex4ht where the accent starts, and tex4ht consumes the following character for a accent. At
+that place, tex4ht also place the opening tag of the element.
+</p>
+      <!--l. 12238--><p class="indent" ><a 
+ name="PrTx188023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh3.html#PrTx35013"><span 
+class="cmtt-10">pre</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">symbol</span></a><a 
+ name="PrTx188024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">in_accenting</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx188025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188029"><span 
+class="cmtt-10">post accent symbol</span></a><a 
+ name="PrTx188026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<a 
+ name="PrTx188027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188041"><span 
+class="cmtt-10">is accent char?</span></a><a 
+ name="PrTx188028"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">TRUE);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">t_accent_template</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s%s%s%d%s%d%s",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">t_accent_first,</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].family_name,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">t_accent_second,</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">t_accent_third,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accent[ch]?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accent_array[font_tbl[cur_fnt].accent[ch]-1]</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">t_accent_fourth);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">m_accent_template</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s%s%s%d%s%d%s",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_accent_first,</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].family_name,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_accent_second,</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">m_accent_third,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accent[ch]?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accent_array[font_tbl[cur_fnt].accent[ch]-1]</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_accent_fourth);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">i_accent_template</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",</span>&#x00A0;<span 
+class="cmtt-10">i_accent_first);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">in_accenting</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12254--><p class="noindent" ><a 
+ name="PrTx188029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188025"><span 
+class="cmtt-10">post</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">symbol</span></a><a 
+ name="PrTx188030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">width;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">i_accent_template</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",</span>&#x00A0;<span 
+class="cmtt-10">i_accent_second);</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">TRUE);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">t_accent_template</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<a 
+ name="PrTx188031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188021"><span 
+class="cmtt-10">accented = true</span></a><a 
+ name="PrTx188032"  href="#PrTx188034"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">m_accent_template</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;<a 
+ name="PrTx188033"  href="#PrTx188031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx188021"><span 
+class="cmtt-10">accented = true</span></a><a 
+ name="PrTx188034"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n-1].accented</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">width</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(INTEGER)(</span>&#x00A0;<a 
+ name="PrTx188035"  href="tex4ht-cCh10.html#PrTx152025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx152017"><span 
+class="cmtt-10">(double) char_width( ch )</span></a><a 
+ name="PrTx188036"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">9</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">width</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">10;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">in_accenting</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12258--><p class="noindent" ><a 
+ href="tex4ht-cCh12.html#PrTx180005"  name="PrTx188037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10015"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx188038"  href="tex4ht-cCh15.html#PrTx202004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">in_accenting;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12262--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx177027"  name="PrTx188039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10025"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">init</span></a><a 
+ name="PrTx188040"  href="tex4ht-cCh14.html#PrTx195026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">in_accenting</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12264--><p class="noindent" >The following needs to be fixed for cases that ch is greater than 127.
+</p>
+      <!--l. 12268--><p class="indent" ><a 
+ name="PrTx188041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188027"><span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">char?</span></a><a 
+ name="PrTx188042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">128)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-29-189"  name="QQ1-29-189">Closure for Text Accent</a></h3>
+           <!--l. 12284--><p class="noindent" ><a 
+ name="PrTx189001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx17021"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">text</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx189002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">t_accent_template</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx189003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh2.html#PrTx31027"><span 
+class="cmtt-10">end accented span</span></a><a 
+ name="PrTx189004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",</span>&#x00A0;<span 
+class="cmtt-10">t_accent_fifth);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;<a 
+ name="PrTx189005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx191007"><span 
+class="cmtt-10">exit text accented</span></a><a 
+ name="PrTx189006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12292--><p class="noindent" >The following in needed for cases of text-accents on empty content, immeddiately followed by a character (e.g.,
+&#8216;<span 
+class="cmtt-10">\^{}Xx</span>&#8217;).
+</p>
+      <!--l. 12299--><p class="indent" ><a 
+ name="PrTx189007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161003"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">begin</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx189008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">x_val</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx189009"  href="tex4ht-cCh4.html#PrTx48003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx189001"><span 
+class="cmtt-10">end text accent</span></a><a 
+ name="PrTx189010"  href="#PrTx189014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12302--><p class="noindent" >The following takes care of closing a text accent after a character.
+</p>
+      <!--l. 12306--><p class="indent" ><a 
+ name="PrTx189011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161041"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx189012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx189013"  href="#PrTx189009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx189001"><span 
+class="cmtt-10">end text accent</span></a><a 
+ name="PrTx189014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-29-190"  name="QQ1-29-190">Tailoring</a></h3>
+<!--l. 12312--><p class="noindent" >before-family-name, between-family-char-number, after char-number
+</p>
+      <!--l. 12319--><p class="indent" ><a 
+ name="PrTx190001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188003"><span 
+class="cmtt-10">text</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">template</span></a><a 
+ name="PrTx190002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent(&amp;t_accent_template,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;t_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">&amp;t_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;t_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">&amp;t_accent_fourth,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;t_accent_fifth,</span>&#x00A0;<span 
+class="cmtt-10">&amp;special_n);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12326--><p class="noindent" ><a 
+ name="PrTx190003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188007"><span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">template</span></a><a 
+ name="PrTx190004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent(&amp;m_accent_template,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;m_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">&amp;m_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;m_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">&amp;m_accent_fourth,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;m_accent_fifth,</span>&#x00A0;<span 
+class="cmtt-10">&amp;special_n);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12339--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx177025"  name="PrTx190005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx190006"  href="#PrTx191012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">needs_accent_sym</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE,</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">needs_end_accent</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_template</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_fourth,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">t_accent_fifth,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_template</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_fourth,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">m_accent_fifth;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12347--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx168003"  name="PrTx190007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx190008"  href="tex4ht-cCh14.html#PrTx193022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent(</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ARG_VII(char**,</span>&#x00A0;<span 
+class="cmtt-10">char**,</span>&#x00A0;<span 
+class="cmtt-10">char**,</span>&#x00A0;<span 
+class="cmtt-10">char**,</span>&#x00A0;<span 
+class="cmtt-10">char**,</span>&#x00A0;<span 
+class="cmtt-10">char**,</span>&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int*));</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 12380--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx168005"  name="PrTx190009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx190010"  href="tex4ht-cCh14.html#PrTx193024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">all,first,second,third,fourth,fifth,n)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**all</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**first</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**second</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**third</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**fourth</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">**fifth</span><strong><span 
+class="cmtt-10">;</span></strong>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*n</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*p,</span>&#x00A0;<span 
+class="cmtt-10">*q;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">i;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*all</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">*all);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*all</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_str(</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">*n</span>&#x00A0;<span 
+class="cmtt-10">);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*n=0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*first</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">TRUE</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">i</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">2:{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*second</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q+1;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">3:{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*third</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q+1;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">4:{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*fourth</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q+1;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">5:{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*fifth</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">q+1;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">5</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!*q</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">*all);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*all</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q++;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-29-191"  name="QQ1-29-191">Mark Accented Content</a></h3>
+           <!--l. 12399--><p class="noindent" ><a 
+ name="PrTx191001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161013"><span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">accented</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx191002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">a_accent_template</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">needs_accented_sym</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s%s%s%d%s%d%s",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">a_accent_first,</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].family_name,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">a_accent_second,</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">a_accent_third,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accented[ch]?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].accented_array[font_tbl[cur_fnt].accented[ch]-1]</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">a_accent_fourth);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12406--><p class="noindent" ><a 
+ name="PrTx191003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161031"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">accented</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx191004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">a_accent_template</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">needs_accented_sym</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(cur_o_file,</span>&#x00A0;<span 
+class="cmtt-10">"%s",</span>&#x00A0;<span 
+class="cmtt-10">a_accent_fifth);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12408--><p class="noindent" >Accents can be embedde, for instance, &#8216;<span 
+class="cmtt-10">\hat{a\hat b}</span>&#8217;. Hence, <span 
+class="cmtt-10">needs_accented_sym </span>is treated as a
+number.
+</p><!--l. 12413--><p class="indent" >    The math accented end at the end of the group, sent there by &#8216;<span 
+class="cmtt-10">\special{t4ht~&#x003E;...}</span>&#8217; in the sty
+file.
+</p>
+
+      <!--l. 12418--><p class="indent" ><a 
+ name="PrTx191005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx191021"><span 
+class="cmtt-10">exit math accented</span></a><a 
+ name="PrTx191006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accented_sym--;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12423--><p class="noindent" ><a 
+ name="PrTx191007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx189005"><span 
+class="cmtt-10">exit</span>&#x00A0;<span 
+class="cmtt-10">text</span>&#x00A0;<span 
+class="cmtt-10">accented</span></a><a 
+ name="PrTx191008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">needs_accented_sym--;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12430--><p class="noindent" ><a 
+ name="PrTx191009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188011"><span 
+class="cmtt-10">accented</span>&#x00A0;<span 
+class="cmtt-10">template</span></a><a 
+ name="PrTx191010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent(&amp;a_accent_template,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;a_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">&amp;a_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;a_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">&amp;a_accent_fourth,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;a_accent_fifth,</span>&#x00A0;<span 
+class="cmtt-10">&amp;special_n);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12437--><p class="noindent" ><a 
+ href="#PrTx190005"  name="PrTx191011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx191012"  href="#PrTx191016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">needs_accented_sym</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_template</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_fourth,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">a_accent_fifth;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12446--><p class="noindent" ><a 
+ name="PrTx191013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx188013"><span 
+class="cmtt-10">accenting</span>&#x00A0;<span 
+class="cmtt-10">template</span></a><a 
+ name="PrTx191014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">get_open_accent(&amp;i_accent_template,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;i_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">&amp;i_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;i_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">&amp;i_accent_fourth,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;i_accent_fifth,</span>&#x00A0;<span 
+class="cmtt-10">&amp;special_n);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12452--><p class="noindent" ><a 
+ href="#PrTx191011"  name="PrTx191015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx191016"  href="tex4ht-cCh14.html#PrTx193014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_template</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_first,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_second,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_third,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_fourth,</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">i_accent_fifth;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12454--><p class="noindent" >&#8216;<span 
+class="cmtt-10">* i_accent_second, * i_accent_third, * i_accent_fourth;</span>&#8217; are dummy provided for consistency.
+</p>
+      <!--l. 12463--><p class="indent" ><a 
+ name="PrTx191017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx97005"><span 
+class="cmtt-10">BOOl</span>&#x00A0;<span 
+class="cmtt-10">stack</span>&#x00A0;<span 
+class="cmtt-10">accented</span></a><a 
+ name="PrTx191018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">accented</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12470--><p class="noindent" ><a 
+ name="PrTx191019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx106055"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">accented</span></a><a 
+ name="PrTx191020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n].accented</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx191021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx191005"><span 
+class="cmtt-10">exit math accented</span></a><a 
+ name="PrTx191022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].accented=FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12474--><p class="noindent" ><a 
+ name="PrTx191023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx106033"><span 
+class="cmtt-10">init</span>&#x00A0;<span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">accented</span></a><a 
+ name="PrTx191024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n].accented</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 12479--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh14.html" >next</a>] [<a 
+ href="tex4ht-cCh12.html" >prev</a>] [<a 
+ href="tex4ht-cCh12.html#tailtex4ht-cCh12.html" >prev-tail</a>] [<a 
+ href="tex4ht-cCh13.html" >front</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh13.html" >up</a>] </p></div>
+<!--l. 12479--><p class="indent" >    <a 
+  name="tailtex4ht-cCh13.html"></a>   </p> 
+</body></html> 

@@ -1,0 +1,1004 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>stackrel</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-mathltx.tex"> 
+<meta name="date" content="2014-05-24 11:52:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-mathltx.css"> 
+</head><body 
+>
+   <!--l. 2184--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mathltxse7.html" >next</a>] [<a 
+ href="tex4ht-mathltxse5.html" >prev</a>] [<a 
+ href="tex4ht-mathltxse5.html#tailtex4ht-mathltxse5.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-mathltxse6.html">tail</a>] [<a 
+ href="tex4ht-mathltxch2.html#tex4ht-mathltxse6.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.4   </span> <a 
+ href="tex4ht-mathltx.html#QQ2-11-16"  id="x11-160002.4">stackrel</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >2.4.1 <a 
+ href="#x11-170002.4.1">fontmath.ltx</a></span>
+   </div>
+
+   <p></p><div class="ShowCode" id="ShowCode-154"><div class="head">
+       <a 
+ href="tex4ht-mathltxse4.html#PrTx14001"  id="PrTx16001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse3.html#PrTx7045"  id="QPrTx154"><span 
+class="cmtt-10">mathltx latex</span></a><a 
+ id="PrTx16002"  href="tex4ht-mathltxse10.html#PrTx25014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2{{\a:stackrel{#1}\b:stackrel</span><span 
+class="cmtt-10">&#x00A0;{#2}\c:stackrel}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\stackrel=\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{stackrel-}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{stackrel}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\mathrel\bgroup</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;mglyph\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;alt="\string\stackrel}\afterassignment\put:arg\tmp:toks}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\afterassignment\put:arg\tmp:toks}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{"</span><span 
+class="cmtt-10">&#x00A0;/&#x003E;}\egroup}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\put:arg{\HCode{{\the\tmp:toks}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{stackrel}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{\string\stackrel\l:brace}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{\r:brace\l:brace}</span><a 
+ id="PrTx16003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx16005"><span 
+class="cmtt-10">mathop nested within stackrel</span></a><a 
+ id="PrTx16004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\mathop}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{\r:brace}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-155"><div class="head">
+       <a 
+ id="PrTx16005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx16003"  id="QPrTx155"><span 
+class="cmtt-10">mathop</span><span 
+class="cmtt-10">&#x00A0;nested</span><span 
+class="cmtt-10">&#x00A0;within</span><span 
+class="cmtt-10">&#x00A0;stackrel</span></a><a 
+ id="PrTx16006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{mathop*}{*}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\string\mathop\l:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{mathop}{}{}{}{}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2214--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.4.1   </span> <a 
+ href="tex4ht-mathltxch2.html#QQ2-11-17"  id="x11-170002.4.1">fontmath.ltx</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-156"><div class="head">
+       <a 
+ href="tex4ht-mathltxse3.html#PrTx7135"  id="PrTx17001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse20.html#PrTx53005"  id="QPrTx156"><span 
+class="cmtt-10">configure mathltx Preamble</span></a><a 
+ id="PrTx17002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\{=12</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\}=12</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\[=1</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\]=2</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\/=0</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\\=12</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/gdef/l:brace[{]</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/gdef/r:brace[}]</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/gdef/back:slash[\]</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/egroup</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-157"><div class="head">
+       <a 
+ href="tex4ht-mathltxse5.html#PrTx15003"  id="PrTx17003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse3.html#PrTx7051"  id="QPrTx157"><span 
+class="cmtt-10">mathltx</span><span 
+class="cmtt-10">&#x00A0;plain,fontmath</span></a><a 
+ id="PrTx17004"  href="#PrTx17006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{overbrace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{mathop*}{*}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\string\overbrace\l:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{mathop}{}{}{}{}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\o:overbrace:=\displaystyle}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{underbrace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{mathop*}{*}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\string\underbrace\l:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:brace}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{mathop}{}{}{}{}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\o:underbrace:=\displaystyle}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-158"><div class="head">
+       <a 
+ href="#PrTx17003"  id="PrTx17005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse3.html#PrTx7051"  id="QPrTx158"><span 
+class="cmtt-10">mathltx</span><span 
+class="cmtt-10">&#x00A0;plain,fontmath</span></a><a 
+ id="PrTx17006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{0}{*}{&#x003C;mi\Hnewline&#x003E;}{&#x003C;/mi&#x003E;}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{1}{*}{\string\mathop\l:brace}{\r:brace}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{2}{*}{&#x003C;mo\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\mml:class="MathClass-bin"&#x003E;}{&#x003C;/mo&#x003E;}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{3}{*}{&#x003C;mo\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\mml:class="MathClass-rel"&#x003E;}{&#x003C;/mo&#x003E;}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{mathltx-}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{4}{*}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{5}{*}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;sources</span><span 
+class="cmtt-10">&#x00A0;failing</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;produce</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;clean</span><span 
+class="cmtt-10">&#x00A0;mathltx</span><span 
+class="cmtt-10">&#x00A0;code,</span><span 
+class="cmtt-10">&#x00A0;try</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;mathltx-&#8217;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%\Configure{MathClass}{6}{*}{&#x003C;mo\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\mml:class="MathClass-punc"&#x003E;}{&#x003C;/mo&#x003E;}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;\Configure{MathClass}{7}{*}{&#x003C;mn&#x003E;}{&#x003C;/mn&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{0123456789}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{0}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{1}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{2}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{3}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{4}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{5}{}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{FormulaClass}{6}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-159"><div class="head">
+       <a 
+ id="PrTx17007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx17007"  id="QPrTx159"><span 
+class="cmtt-10">configure mathltx fontmathNO</span></a><a 
+ id="PrTx17008"  href="#PrTx17010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempa#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\HCode{\string\firstOfOne}\,\HCode{\string#1\space}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HLet#1\:temp</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigcap</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigcirc</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigcup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigodot</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigoplus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigotimes</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigsqcup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigtriangledown</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigtriangleup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\biguplus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigvee</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bigwedge</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\coprod</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\int</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\intop</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ointop</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\prod</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sum</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-160"><div class="head">
+       <a 
+ href="#PrTx17007"  id="PrTx17009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx17009"  id="QPrTx160"><span 
+class="cmtt-10">configure mathltx fontmathNO</span></a><a 
+ id="PrTx17010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempa#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\HCode{\string#1\space}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HLet#1\:temp</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Delta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Gamma</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Im</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Lambda</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Leftarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Leftrightarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Omega</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Phi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Pi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Psi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Re</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Rightarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Sigma</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Theta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Upsilon</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\Xi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\aleph</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\alpha</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\amalg</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\angle</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\approx</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ast</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\asymp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\beta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bot</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\bullet</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\cap</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\cdot</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\chi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\circ</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\clubsuit</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\coprod</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\cup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\dagger</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\dashv</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ddagger</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\delta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\diamond</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\diamondsuit</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\div</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ell</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\emptyset</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\epsilon</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\equiv</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\eta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\exists</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\flat</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\forall</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\frown</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\gamma</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ge</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\geq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\gg</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\hbar</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\heartsuit</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\imath</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\in</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\infty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\intop</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\iota</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\jmath</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\kappa</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\lambda</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\land</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\le</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\leftarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\leftharpoondown</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\leftharpoonup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\leftrightarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\leq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ll</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\lnot</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\lor</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\mapstochar</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\mid</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\mp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\mu</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\nabla</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\natural</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ne</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\nearrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\neg</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\neq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ni</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\not</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\nu</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\nwarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\odot</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\oint</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ointop</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\omega</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\ominus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\oplus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\oslash</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\otimes</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\parallel</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\partial</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\perp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\phi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\pi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\pm</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\prec</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\preceq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\prime</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\prod</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\propto</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\psi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\rho</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\rightarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\rightharpoondown</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\rightharpoonup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\searrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\setminus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sharp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sigma</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sim</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sim</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\simeq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\simeq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\smallint</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\smile</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\spadesuit</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sqcap</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sqcup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sqsubseteq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sqsupseteq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\star</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\subset</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\subseteq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\succ</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\succeq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\sum</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\supset</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\supseteq</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\surd</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\swarrow</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\tau</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\theta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\times</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\top</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\triangle</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\triangleleft</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\triangleright</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\uplus</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\upsilon</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varbigtriangledown</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varbigtriangleup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varepsilon</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varphi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varpi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varrho</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\varsigma</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\vartheta</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\vdash</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\vee</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\wedge</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\wp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\wr</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\xi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa\zeta</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-161"><div class="head">
+       <a 
+ href="tex4ht-mathltxse3.html#PrTx9127"  id="PrTx17011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse20.html#PrTx53015"  id="QPrTx161"><span 
+class="cmtt-10">configure mathltx amsmath</span></a><a 
+ id="PrTx17012"  href="tex4ht-mathltxse8.html#PrTx23004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\HCode{\string\firstOfOne}\,\HCode{\string\int</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\int\space}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\iint\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\HCode{\string\firstOfOne}\,\HCode{\string\int</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string\int\string\int\space}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\iiint\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\HCode{\string\Rightarrow</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\implies\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\HCode{\string\Leftarrow</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\impliedby\:temp</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 2492--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mathltxse7.html" >next</a>] [<a 
+ href="tex4ht-mathltxse5.html" >prev</a>] [<a 
+ href="tex4ht-mathltxse5.html#tailtex4ht-mathltxse5.html" >prev-tail</a>] [<a 
+ href="tex4ht-mathltxse6.html" >front</a>] [<a 
+ href="tex4ht-mathltxch2.html#tex4ht-mathltxse6.html" >up</a>] </p></div>
+<!--l. 2492--><p class="indent" >   <a 
+  id="tailtex4ht-mathltxse6.html"></a>   
+</body></html> 

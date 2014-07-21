@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ConfigureEnv</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 5366--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe20.html" >next</a>] [<a 
+ href="tex4ht-4htSu20.html" >prev</a>] [<a 
+ href="tex4ht-4htSu20.html#tailtex4ht-4htSu20.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu21.html">tail</a>] [<a 
+ href="tex4ht-4htSe19.html#tex4ht-4htSu21.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe19.html#QQ2-63-50"  name="QQ1-63-50">ConfigureEnv</a></h3>
+<!--l. 5370--><p class="noindent" >In the following, a list configuration is requested only if either the third or the fourth parameter is not
+empty.
+</p>
+      <!--l. 5385--><p class="indent" ><a 
+ name="PrTx50001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174023"  name="QPrTx241"><span 
+class="cmtt-10">config latex.ltx utilities</span></a><a 
+ name="PrTx50002"  href="tex4ht-4htSe20.html#PrTx51006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureEnv#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2#3#4#5}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\let\:temp=\null</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2#3}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">before:begin#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#2\def\after:end{#3}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2#3#4#5}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\let\:temp=\null</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#4#5}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ConfigureList{#1}{#4}{#5}{}{}\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5395--><p class="noindent" ><a 
+ name="PrTx50003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx50003"  name="QPrTx242"><span 
+class="cmtt-10">config latex.ltx utilitiesNO</span></a><a 
+ name="PrTx50004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TraceEnv}[4]{\def\trc:Bg{#1}\def\trc:eBg{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:Nd{#3}\def\trc:eNd{#4}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TraceList}[8]{\def\trc:Ls{#1}\def\trc:eLs{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:El{#3}\def\trc:eEl{#4}\def\trc:It{#5}\def\trc:eIt{#6}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:iT{#7}\def\trc:eiT{#8}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5406--><p class="noindent" ><a 
+ name="PrTx50005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174019"  name="QPrTx243"><span 
+class="cmtt-10">latex trace configurations</span></a><a 
+ name="PrTx50006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks+}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:wrt{\immediate\write16}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\trc:wrt=\:gobble</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5408--><p class="noindent" >XML as a backend for LaTeX
+</p>
+      <!--l. 5424--><p class="indent" ><a 
+ name="PrTx50007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174025"  name="QPrTx244"><span 
+class="cmtt-10">latex.ltx latex trace configurations</span></a><a 
+ name="PrTx50008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx50009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu72.html#PrTx163001"><span 
+class="cmtt-10">latex.ltx non trace configurations</span></a><a 
+ name="PrTx50010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks++}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx50011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx50015"><span 
+class="cmtt-10">latex.ltx latex edit+ commands</span></a><a 
+ name="PrTx50012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks+}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:wrt{\immediate\write16}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\trc:wrt=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:latex</span>&#x00A0;<a 
+ name="PrTx50013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx50017"><span 
+class="cmtt-10">latex.ltx latex edit commands</span></a><a 
+ name="PrTx50014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5439--><p class="noindent" ><a 
+ name="PrTx50015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx50011"  name="QPrTx245"><span 
+class="cmtt-10">latex.ltx</span>&#x00A0;<span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">edit+</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx50016"  href="tex4ht-4htSu59.html#PrTx134004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureEnv#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">before:begin#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)1\b:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\c:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)1\d:trc\fi</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\after:end{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">END(#1)2\b:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\c:trc</span>&#x00A0;<span 
+class="cmtt-10">END(#1)2\d:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureList{#1}{#4}{#5}{}{}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5457--><p class="noindent" ><a 
+ name="PrTx50017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx50013"  name="QPrTx246"><span 
+class="cmtt-10">latex.ltx</span>&#x00A0;<span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">edit</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx50018"  href="tex4ht-4htSu59.html#PrTx134006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureEnv#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">before:begin#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)1\b:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\c:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)1\d:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">#2\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\after:end{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)2\b:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef\c:trc</span>&#x00A0;<span 
+class="cmtt-10">Env(#1)2\d:trc\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">#3\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureList{#1}{#4}{#5}{}{}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5470--><p class="noindent" ><a 
+ name="PrTx50019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu18.html#PrTx47009"  name="QPrTx247"><span 
+class="cmtt-10">hooks+</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">ConfigureEnv</span></a><a 
+ name="PrTx50020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks+}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defI\begin{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">before:begin##1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">bfr:begin##1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write16{....\string\ConfigureEnv{##1}{}{}{}{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">bfr:begin##1\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 5475--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe20.html" >next</a>] [<a 
+ href="tex4ht-4htSu20.html" >prev</a>] [<a 
+ href="tex4ht-4htSu20.html#tailtex4ht-4htSu20.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu21.html" >front</a>] [<a 
+ href="tex4ht-4htSe19.html#tex4ht-4htSu21.html" >up</a>] </p></div>
+<!--l. 5475--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu21.html"></a> </p> 
+</body></html> 

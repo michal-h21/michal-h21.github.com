@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Verbatim Enviroments</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 7046--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh12.html" >next</a>] [<a 
+ href="tex4ht-styCh10.html" >prev</a>] [<a 
+ href="tex4ht-styCh10.html#tailtex4ht-styCh10.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh11.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh11.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 11<br /><a 
+ href="tex4ht-sty.html#QQ2-16-121"  name="QQ1-16-121">Verbatim Enviroments</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.1&#x00A0;<a 
+ href="#QQ1-16-122"  name="QQ2-16-122">Verbatim Text</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-16-123"  name="QQ2-16-123">Between
+Paragraphs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.2&#x00A0;<a 
+ href="#QQ1-16-124"  name="QQ2-16-124">JavaScript</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.3&#x00A0;<a 
+ href="#QQ1-16-125"  name="QQ2-16-125">Cascade Style Sheets</a></span><br />
+    </div>
+      <!--l. 7054--><p class="indent" ><a 
+ name="PrTx121001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10049"  name="QPrTx476"><span 
+class="cmtt-10">local</span>&#x00A0;<span 
+class="cmtt-10">env</span></a><a 
+ name="PrTx121002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx121003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx121003"><span 
+class="cmtt-10">blocs for local env</span></a><a 
+ name="PrTx121004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifHtml</span>&#x00A0;&#x00A0;<a 
+ name="PrTx121005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx121005"><span 
+class="cmtt-10">html local env</span></a><a 
+ name="PrTx121006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx121007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx123001"><span 
+class="cmtt-10">verbatim</span></a><a 
+ name="PrTx121008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">11.1 <a 
+ href="tex4ht-sty.html#QQ2-16-122"  name="QQ1-16-122">Verbatim Text</a></h3>
+<!--l. 7063--><p class="noindent" >NOTE: VERBATIM WAS THERE for javascript and the like????
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-16-123"  name="QQ1-16-123">Between Paragraphs</a></h3>
+<!--l. 7076--><p class="noindent" >For the option <span 
+class="cmtt-10">\Verbatim-</span>, it should be noted the requested special character should not come from the word
+<span 
+class="cmtt-10">EndVerbatim</span>. Letters within the environment carry categoty code 11, space, tab and end-of-line characters carry
+category code 13, and the other characters have category code 12. CHECK TABS
+</p>
+      <!--l. 7085--><p class="indent" ><a 
+ name="PrTx123001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx121007"  name="QPrTx477"><span 
+class="cmtt-10">verbatim</span></a><a 
+ name="PrTx123002"  href="#PrTx123008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\V:rbatim{\begingroup</span>&#x00A0;<span 
+class="cmtt-10">\begin:Verb</span>&#x00A0;<span 
+class="cmtt-10">\Verb:env</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:EndVerbatim{\end:Verb</span>&#x00A0;<span 
+class="cmtt-10">\endgroup</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7095--><p class="noindent" ><a 
+ name="PrTx123003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx123013"  name="QPrTx478"><span 
+class="cmtt-10">the /EndVerbatim delimiter</span></a><a 
+ name="PrTx123004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\Verb:atim#1\EndVerbatim{\noexpand\vrb:tt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\leavevmode#1\noexpand\:EndVerbatim}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\/=0</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/\=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/xdef/Ver:batim#1\EndVerbatim{/noexpand/vrb:tt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/leavevmode#1/noexpand/:EndVerbatim}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7097--><p class="noindent" >Without the <span 
+class="cmtt-10">/leavevmode </span>the header is lost when <span 
+class="cmtt-10">\Verbatim </span>is followed by empty line. [<a 
+ href="tex4ht-sty17.html"  name="tex4ht-sty17.html" >test</a>]
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;5.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Also,</span><span 
+class="cmtt-10">&#x00A0;why</span><span 
+class="cmtt-10">&#x00A0;did</span><span 
+class="cmtt-10">&#x00A0;you</span><span 
+class="cmtt-10">&#x00A0;go</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;first</span><span 
+class="cmtt-10">&#x00A0;place</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;&#8216;alltt&#8217;</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;&#8216;verbatim&#8217;?</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Verbatim</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;an</span><span 
+class="cmtt-10">&#x00A0;ugly</span><span 
+class="cmtt-10">&#x00A0;beast.</span><span 
+class="cmtt-10">&#x00A0;It</span><span 
+class="cmtt-10">&#x00A0;can&#8217;t</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;placed</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;argument</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;another</span><span 
+class="cmtt-10">&#x00A0;environment</span><span 
+class="cmtt-10">&#x00A0;-</span><span 
+class="cmtt-10">&#x00A0;e.g.,</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;can&#8217;t</span><span 
+class="cmtt-10">&#x00A0;create</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;new</span><span 
+class="cmtt-10">&#x00A0;environment</span><span 
+class="cmtt-10">&#x00A0;like</span><span 
+class="cmtt-10">&#x00A0;this:</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;\newenvironment{\test}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\fontsize{11}{12}\selectfont\begin{verbatim}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end{verbatim}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 7144--><p class="indent" ><a 
+ href="tex4ht-styCh10.html#PrTx119021"  name="PrTx123005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx479"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx123006"  href="#PrTx123022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{tt}[1]{\let\vrb:tt=#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\vrb:tt=\tt</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7166--><p class="noindent" ><a 
+ href="#PrTx123001"  name="PrTx123007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx121007"  name="QPrTx480"><span 
+class="cmtt-10">verbatim</span></a><a 
+ name="PrTx123008"  href="#PrTx123020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Verb:env{\no:catcodes0{64}{12}\no:catcodes{65}{90}{11}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:catcodes{91}{96}{12}\no:catcodes{97}{122}{11}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:catcodes{123}{255}{12}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^M=13</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\</span>&#x00A0;<span 
+class="cmtt-10">=13</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^I=13</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:Verbatim</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\::Verbatim</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::Verbatim{\futurelet\:temp\V:erbatim}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\V:erbatim{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">-\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Ve:rbatim</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\start:verb=\Ver:batim</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Ver:sp</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Ver:sp{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\ver:sp\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Ver:assg</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Ver:ln</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Ver:ln{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\ver:ln\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Ver:assg</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\start:verb</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Ver:assg{\afterassignment\start:verb\let\:temp=}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx123009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx123015"><span 
+class="cmtt-10">optional control char in /Verbatim</span></a><a 
+ name="PrTx123010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx123011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx123017"><span 
+class="cmtt-10">space and eoln chars in /Verbatim</span></a><a 
+ name="PrTx123012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx123013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx123003"><span 
+class="cmtt-10">the /EndVerbatim delimiter</span></a><a 
+ name="PrTx123014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7178--><p class="noindent" ><a 
+ name="PrTx123015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx123009"  name="QPrTx481"><span 
+class="cmtt-10">optional</span>&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">/Verbatim</span></a><a 
+ name="PrTx123016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\/=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/\=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/gdef/Ve:rbatim#1#2{/catcode&#8216;#2=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\/let/start:verb=/Verb:atim</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/let/start:verb=/Ver:batim</span>&#x00A0;<span 
+class="cmtt-10">/fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/futurelet/:temp/Ver:sp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7191--><p class="noindent" ><a 
+ name="PrTx123017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx123011"  name="QPrTx482"><span 
+class="cmtt-10">space</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">eoln</span>&#x00A0;<span 
+class="cmtt-10">chars</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">/Verbatim</span></a><a 
+ name="PrTx123018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^I=13</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\/=0</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\\=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/.=10</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/^^M=13</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/</span>&#x00A0;<span 
+class="cmtt-10">=13%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/gdef/:Verbatim{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">.../def^^M{/ht:everypar{/Verb:eoln}/Verb:boln/par/leavevmode}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">.../def</span>&#x00A0;<span 
+class="cmtt-10">{/Verb:sp}%</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">.../let/ver:sp=</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">.../let/ver:ln=^^M%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">.../def^^I{/leavevmode</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7193--><p class="noindent" >The following establishes a configurartion according to what should appear at the start, end, and each
+end-of-ln.
+</p>
+      <!--l. 7209--><p class="indent" ><a 
+ href="#PrTx123007"  name="PrTx123019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx121007"  name="QPrTx483"><span 
+class="cmtt-10">verbatim</span></a><a 
+ name="PrTx123020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{VerbatimEnv}[2]{\def\begin:Verb{#1}\def\end:Verb{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{VerbatimEnv}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\par</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\leftsk:p{\hskip\Verb:Left}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\leftskip=\z@</span>&#x00A0;<span 
+class="cmtt-10">\parindent=\z@</span>&#x00A0;<span 
+class="cmtt-10">\ht:everypar{\verb:config}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\aft:Verb\par}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\verb:config{\bef:Verb\csname</span>&#x00A0;<span 
+class="cmtt-10">leftsk:p\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\verb:config{\Verb:boln</span>&#x00A0;<span 
+class="cmtt-10">\def\Verb:eoln{\leavevmode\par}\leftsk:p}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7216--><p class="noindent" >The following uses the above vehicle to establish a configuration in accordance to what should appear at the start,
+end, and before each of the non-leading lines.
+</p>
+      <!--l. 7230--><p class="indent" ><a 
+ href="#PrTx123005"  name="PrTx123021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx484"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx123022"  href="tex4ht-styCh12.html#PrTx128004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HVerbatim}[4]{\c:def\bef:Verb{#1\Verb:eoln}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\aft:Verb{\ht:everypar{}#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\Verb:eoln{#3}\c:def\Verb:boln{#4}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HVerbatim+}[2]{\d:def\Verb:Left{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\Verb:sp{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7238--><p class="noindent" >The above has left margin of <span 
+class="cmtt-10">\Verb:Left </span>and typically has inappropriate space above and below the code. The
+following takes the left margin of the html code.
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{HVerbatim}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HtmlPar\HCode{&#x003C;NOBR&#x003E;&#x003C;CODE&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HChar{160}\HCode{&#x003C;/CODE&#x003E;&#x003C;/NOBR&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HChar{160}\HCode{&#x003C;/CODE&#x003E;&#x003C;/NOBR&#x003E;&#x003C;BR&#x003E;&#x003C;NOBR&#x003E;&#x003C;CODE&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 7259--><p class="indent" >    The <span 
+class="cmtt-10">\leavevmode </span>is needed for the case that the commands start paragrphs, to ensure that <span 
+class="cmtt-10">\everypar</span>
+operations would be performed outside the groups of the commands.
+</p>
+    <h3 class="SectionHead">11.2 <a 
+ href="tex4ht-sty.html#QQ2-16-124"  name="QQ1-16-124">JavaScript</a></h3>
+<!--l. 7272--><p class="noindent" >Note that the first parameter of <span 
+class="cmtt-10">\ScriptCommand </span>must be in braces, without surrounding spaces.
+</p>
+      <!--l. 7291--><p class="indent" ><a 
+ name="PrTx124001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10013"  name="QPrTx485"><span 
+class="cmtt-10">scripting</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx124002"  href="#PrTx124008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ScriptCommand{\begingroup</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\\=12</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:DefScript}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:DefScript#1{\endgroup</span>&#x00A0;<span 
+class="cmtt-10">\Def:Script#1</span><a 
+ name="PrTx124003"  href="tex4ht-styCh10.html#PrTx119015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx124004"  href="#PrTx124006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Def:Script#1#2</span><a 
+ name="PrTx124005"  href="#PrTx124003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx124006"  href="tex4ht-styCh12.html#PrTx129006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">:#2:\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\long\def\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">####1\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">End#2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{####1\noexpand\:EndVerbatim}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\expandafter\def\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">b:#2\endcsname##1#1End#2{##1\:EndVerbatim}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\DefScript:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">#2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">a:#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">b:#2\endcsname}}\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7293--><p class="noindent" >The <span 
+class="cmtt-10">\long </span>above is for cases that the new command is embeded in other commands as is the case, for instance, in
+<span 
+class="cmtt-10">\CssFile</span>.
+</p><!--l. 7298--><p class="indent" >    <span 
+class="cmtt-10">\begin{keep}-\ AAAAAAAAAAAAAAAAA BBBBB \end{keep} </span>or <span 
+class="cmtt-10">\begin{keep} AAAAAAAAAAAAAAAAA BBBBB</span>
+<span 
+class="cmtt-10">\end{keep}</span>
+</p>
+      <!--l. 7321--><p class="indent" ><a 
+ href="#PrTx124001"  name="PrTx124007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10013"  name="QPrTx486"><span 
+class="cmtt-10">scripting</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx124008"  href="#PrTx125002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\DefScript:#1#2#3#4#5{\def#1{\call:script{#2}{#3}{#4}{#5}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\call:script#1#2#3#4{\begingroup</span>&#x00A0;<span 
+class="cmtt-10">\vrb:tt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\leftskip=\z@</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\parindent=\z@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{HVerbatim}{\empty}{\empty}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\special{t4ht=}\empty}{\empty}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{HVerbatim+}{\z@}{\hbox{</span>&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3\ht:special{t4ht@@}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\Verb:atim=#1\let\Ver:batim=#2%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:EndVerbatim{\ht:special{t4ht@@}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#4\endgroup\ignorespaces}\Verb:env}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7328--><p class="noindent" >A <span 
+class="cmtt-10">\Configure{HVerbatim}{}{}{}{} </span>above will be problematic for the <span 
+class="cmtt-10">hooks </span>option. The <span 
+class="cmtt-10">\special{t4ht=}</span>is to
+ensure pseudo code at empty lines.
+</p>
+    <h3 class="SectionHead">11.3 <a 
+ href="tex4ht-sty.html#QQ2-16-125"  name="QQ1-16-125">Cascade Style Sheets</a></h3>
+           <!--l. 7346--><p class="noindent" ><a 
+ href="#PrTx124007"  name="PrTx125001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10013"  name="QPrTx487"><span 
+class="cmtt-10">scripting</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx125002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\a:rootfont:{-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{fonts+}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;<span 
+class="cmtt-10">\def\a:rootfont:{+}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Log:Note{for</span>&#x00A0;<span 
+class="cmtt-10">marking</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">font,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">use</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">&#8216;fonts+&#8217;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7348--><p class="noindent" >The above option requests css font information for the root font of the file.
+</p><!--l. 7365--><p class="indent" >    <span 
+class="cmtt-10">\xml:empty </span>is for inserting the <span 
+class="cmtt-10">/ </span>at end of tags by demand.
+</p><!--l. 7367--><p class="indent" >    The <span 
+class="cmtt-10">\edef\Preamble{\Preamble} </span>is needed for context where the command line arguments come indirectly
+through an <span 
+class="cmtt-10">\env </span>macro.
+</p>
+      <!--l. 7385--><p class="indent" ><a 
+ href="tex4ht-styCh5.html#PrTx46057"  name="PrTx125003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10007"  name="QPrTx488"><span 
+class="cmtt-10">utilities</span></a><a 
+ name="PrTx125004"  href="tex4ht-styCh13.html#PrTx144124"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\xml:empty\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\Preamble{\Preamble}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{xhtml}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{xml}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\xml:empty{</span>&#x00A0;<span 
+class="cmtt-10">/}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\def\:xhtml#1{#1}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Log:Note{for</span>&#x00A0;<span 
+class="cmtt-10">XML</span>&#x00A0;<span 
+class="cmtt-10">code,</span>&#x00A0;<span 
+class="cmtt-10">use</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#8216;xml&#8217;</span>&#x00A0;<span 
+class="cmtt-10">or</span>&#x00A0;<span 
+class="cmtt-10">&#8216;xhtml&#8217;}%</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:xhtml=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\xml:empty=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7391--><p class="noindent" >Default font (the extra code is neded in order to activate it within the dvi file before a change in font, e.g., for a
+title):
+</p>
+
+      <!--l. 7398--><p class="indent" ><a 
+ href="tex4ht-styCh5.html#PrTx50011"  name="PrTx125005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50007"  name="QPrTx489"><span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx125006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003E;\jobname.tmp}{\everyhbox{}\hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{x\ht:special{t4ht;\a:rootfont:}x}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003C;\jobname.tmp}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7419--><p class="noindent" ><a 
+ href="tex4ht-styCh1.html#PrTx15027"  name="PrTx125007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16007"  name="QPrTx490"><span 
+class="cmtt-10">early Configure</span></a><a 
+ name="PrTx125008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Css}[1]{\def\aa:Css{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7431--><p class="noindent" ><a 
+ name="PrTx125009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx125009"  name="QPrTx491"><span 
+class="cmtt-10">html utilitiesNO</span></a><a 
+ name="PrTx125010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=\time</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\divide\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">60</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\the\tmp:cnt}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\multiply\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-60</span>&#x00A0;<span 
+class="cmtt-10">\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">\time</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:today{\the\year-\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\month&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">0\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\the\month-\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\day&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">0\fi\the\day</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\space\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:temp&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">0\fi</span>&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">0\fi\the\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">:00}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 7435--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh12.html" >next</a>] [<a 
+ href="tex4ht-styCh10.html" >prev</a>] [<a 
+ href="tex4ht-styCh10.html#tailtex4ht-styCh10.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh11.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh11.html" >up</a>] </p></div>
+<!--l. 7435--><p class="indent" >    <a 
+  name="tailtex4ht-styCh11.html"></a>  </p> 
+</body></html> 

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Modifications for Continued Fractions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-jsml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:52:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-jsml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 3100--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipesse10.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu42.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu42.html#tailtex4ht-jsml-xtpipessu42.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-jsml-xtpipessu43.html">tail</a>] [<a 
+ href="tex4ht-jsml-xtpipesse9.html#tex4ht-jsml-xtpipessu43.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">9.5   </span> <a 
+  id="x54-530009.5"></a>Modifications for Continued Fractions</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-132"><div class="head">
+       <a 
+ id="PrTx53001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu39.html#PrTx49019"  id="QPrTx132"><span 
+class="cmtt-10">remove</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;non-tail</span><span 
+class="cmtt-10">&#x00A0;continued</span><span 
+class="cmtt-10">&#x00A0;frac</span></a><a 
+ id="PrTx53002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getLastChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if</span><span 
+class="cmtt-10">&#x00A0;(child.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;cls</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;child.getAttributes()</span><span 
+class="cmtt-10">&#x00A0;.getNamedItem("class");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(cls</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;clsName</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;cls.getNodeValue();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(</span><span 
+class="cmtt-10">&#x00A0;clsName.equals("begin-end"))</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;node.removeChild(</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-133"><div class="head">
+       <a 
+ id="PrTx53003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu39.html#PrTx49021"  id="QPrTx133"><span 
+class="cmtt-10">set</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;continued</span><span 
+class="cmtt-10">&#x00A0;fracs</span><span 
+class="cmtt-10">&#x00A0;mark</span></a><a 
+ id="PrTx53004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getLastChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if</span><span 
+class="cmtt-10">&#x00A0;(child.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;cls</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;child.getAttributes()</span><span 
+class="cmtt-10">&#x00A0;.getNamedItem("class");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(cls</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;clsName</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;cls.getNodeValue();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(</span><span 
+class="cmtt-10">&#x00A0;clsName.equals("begin-end"))</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;setContinuedNote(child);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-134"><div class="head">
+       <a 
+ id="PrTx53005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu39.html#PrTx49017"  id="QPrTx134"><span 
+class="cmtt-10">set</span><span 
+class="cmtt-10">&#x00A0;start</span><span 
+class="cmtt-10">&#x00A0;continued</span><span 
+class="cmtt-10">&#x00A0;fracs</span><span 
+class="cmtt-10">&#x00A0;mark</span></a><a 
+ id="PrTx53006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if</span><span 
+class="cmtt-10">&#x00A0;(child.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;cls</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;child.getAttributes()</span><span 
+class="cmtt-10">&#x00A0;.getNamedItem("class");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(cls</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;clsName</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;cls.getNodeValue();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(</span><span 
+class="cmtt-10">&#x00A0;clsName.equals("begin-end"))</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;setContinuedNote(child);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-135"><div class="head">
+       <a 
+ href="tex4ht-jsml-xtpipessu40.html#PrTx50003"  id="PrTx53007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipesse1.html#PrTx2129"  id="QPrTx135"><span 
+class="cmtt-10">HtJsml</span><span 
+class="cmtt-10">&#x00A0;utility</span><span 
+class="cmtt-10">&#x00A0;members</span></a><a 
+ id="PrTx53008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span><span 
+class="cmtt-10">&#x00A0;static</span><span 
+class="cmtt-10">&#x00A0;void</span><span 
+class="cmtt-10">&#x00A0;setContinuedNote(Node</span><span 
+class="cmtt-10">&#x00A0;node){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(node.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;node.getNodeName().equals(</span><span 
+class="cmtt-10">&#x00A0;"level"</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx53009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx53011"><span 
+class="cmtt-10">fix end continued note</span></a><a 
+ id="PrTx53010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;NodeList</span><span 
+class="cmtt-10">&#x00A0;children</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getChildNodes();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;(int</span><span 
+class="cmtt-10">&#x00A0;i</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span><span 
+class="cmtt-10">&#x00A0;i</span><span 
+class="cmtt-10">&#x00A0;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;children.getLength();</span><span 
+class="cmtt-10">&#x00A0;i++)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;children.item(i);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;setContinuedNote(child);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-136"><div class="head">
+       <a 
+ id="PrTx53011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx53009"  id="QPrTx136"><span 
+class="cmtt-10">fix</span><span 
+class="cmtt-10">&#x00A0;end</span><span 
+class="cmtt-10">&#x00A0;continued</span><span 
+class="cmtt-10">&#x00A0;note</span></a><a 
+ id="PrTx53012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span><span 
+class="cmtt-10">&#x00A0;attr</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getAttributes().getNamedItem("continued");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if</span><span 
+class="cmtt-10">&#x00A0;(attr</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;node</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;node</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;((org.w3c.dom.Text)</span><span 
+class="cmtt-10">&#x00A0;node).setData(</span><span 
+class="cmtt-10">&#x00A0;attr.getNodeValue()</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+   <!--l. 3163--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipesse10.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu42.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu42.html#tailtex4ht-jsml-xtpipessu42.html" >prev-tail</a>] [<a 
+ href="tex4ht-jsml-xtpipessu43.html" >front</a>] [<a 
+ href="tex4ht-jsml-xtpipesse9.html#tex4ht-jsml-xtpipessu43.html" >up</a>] </p></div>
+<!--l. 3163--><p class="indent" >   <a 
+  id="tailtex4ht-jsml-xtpipessu43.html"></a> </p> 
+</body></html> 

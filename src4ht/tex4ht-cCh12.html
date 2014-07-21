@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Cascade Style Sheets</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <!--l. 11830--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh13.html" >next</a>] [<a 
+ href="tex4ht-cCh11.html" >prev</a>] [<a 
+ href="tex4ht-cCh11.html#tailtex4ht-cCh11.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-cCh12.html">tail</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh12.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 12<br /><a 
+ href="tex4ht-c.html#QQ2-28-179"  name="QQ1-28-179">Cascade Style Sheets</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.1&#x00A0;<a 
+ href="#QQ1-28-180"  name="QQ2-28-180">Command Line</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.2&#x00A0;<a 
+ href="#QQ1-28-181"  name="QQ2-28-181">Retrieve
+Data</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.3&#x00A0;<a 
+ href="#QQ1-28-182"  name="QQ2-28-182">Copy CSS File</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.4&#x00A0;<a 
+ href="#QQ1-28-183"  name="QQ2-28-183">Duplicates Avoidance</a></span><br />
+    </div>
+    <h3 class="SectionHead">12.1 <a 
+ href="tex4ht-c.html#QQ2-28-180"  name="QQ1-28-180">Command Line</a></h3>
+           <!--l. 11844--><p class="noindent" ><a 
+ name="PrTx180001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx14039"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">cascade</span>&#x00A0;<span 
+class="cmtt-10">style</span>&#x00A0;<span 
+class="cmtt-10">sheet</span>&#x00A0;<span 
+class="cmtt-10">data</span></a><a 
+ name="PrTx180002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">css</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec,</span>&#x00A0;<span 
+class="cmtt-10">1);;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">css-&#x003E;name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">css-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css_ext;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">css_ext</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11853--><p class="noindent" ><a 
+ name="PrTx180003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx14009"><span 
+class="cmtt-10">post</span>&#x00A0;<span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">comm</span>&#x00A0;<span 
+class="cmtt-10">ln</span>&#x00A0;<span 
+class="cmtt-10">args</span></a><a 
+ name="PrTx180004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">css_ext</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">css</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec,</span>&#x00A0;<span 
+class="cmtt-10">1);;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">css-&#x003E;name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css_default;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">css-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css_ext;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">css_ext</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11858--><p class="noindent" ><a 
+ href="tex4ht-cCh8.html#PrTx95019"  name="PrTx180005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10015"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx180006"  href="tex4ht-cCh13.html#PrTx188038"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">css_ext</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">css_default[]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"4cs";</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11863--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx167009"  name="PrTx180007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10005"><span 
+class="cmtt-10">types</span></a><a 
+ name="PrTx180008"  href="#PrTx183010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">char*</span>&#x00A0;<span 
+class="cmtt-10">name;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*next;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">12.2 <a 
+ href="tex4ht-c.html#QQ2-28-181"  name="QQ1-28-181">Retrieve Data</a></h3>
+           <!--l. 11887--><p class="noindent" ><a 
+ name="PrTx181001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh10.html#PrTx127013"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">css</span>&#x00A0;<span 
+class="cmtt-10">entries</span></a><a 
+ name="PrTx181002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">search_css_ext;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">search_css_ext</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">css_ext;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">search_css_ext</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">css_ext_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">search_css_ext</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">search_css_ext-&#x003E;next</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">css_name_n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.name</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">css_file_name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">css_name_n</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">css_file_name,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">new_font.name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">;</span>&#x00A0;<span 
+class="cmtt-10">css_name_n;</span>&#x00A0;<span 
+class="cmtt-10">css_name_n--</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">FILE*</span>&#x00A0;<span 
+class="cmtt-10">file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">css_file_name[css_name_n]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx181003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx181005"><span 
+class="cmtt-10">file = .css file</span></a><a 
+ name="PrTx181004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">css_file_name);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11899--><p class="noindent" ><a 
+ name="PrTx181005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx181003"><span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">.css</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx181006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">name[256];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">sprintf(name,</span>&#x00A0;<span 
+class="cmtt-10">"%s.%s",</span>&#x00A0;<span 
+class="cmtt-10">css_file_name,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">search_css_ext-&#x003E;name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx181007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh15.html#PrTx213007"><span 
+class="cmtt-10">search file in htf locations</span></a><a 
+ name="PrTx181008"  href="tex4ht-cCh15.html#PrTx213004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">NULL</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx181009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx182001"><span 
+class="cmtt-10">write css file to lg file</span></a><a 
+ name="PrTx181010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fclose(file);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">12.3 <a 
+ href="tex4ht-c.html#QQ2-28-182"  name="QQ1-28-182">Copy CSS File</a></h3>
+           <!--l. 11927--><p class="noindent" ><a 
+ name="PrTx182001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx181009"><span 
+class="cmtt-10">write</span>&#x00A0;<span 
+class="cmtt-10">css</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">lg</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx182002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx182003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx183007"><span 
+class="cmtt-10">check visited</span></a><a 
+ name="PrTx182004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!is_visited</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx182005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx183005"><span 
+class="cmtt-10">mark visited</span></a><a 
+ name="PrTx182006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">do{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">getc(file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">while</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\n&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\t&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">EOF</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">do{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">log_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">getc(file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">while</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\n&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">EOF)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(void)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">putc(</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\n&#8217;,</span>&#x00A0;<span 
+class="cmtt-10">log_file</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">EOF</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">12.4 <a 
+ href="tex4ht-c.html#QQ2-28-183"  name="QQ1-28-183">Duplicates Avoidance</a></h3>
+           <!--l. 11938--><p class="noindent" ><a 
+ href="tex4ht-cCh11.html#PrTx159009"  name="PrTx183001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh2.html#PrTx28003"><span 
+class="cmtt-10">scan</span>&#x00A0;<span 
+class="cmtt-10">fonts</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx183002"  href="tex4ht-cCh15.html#PrTx210016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">visited_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11947--><p class="noindent" ><a 
+ name="PrTx183003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh2.html#PrTx28023"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">loading</span>&#x00A0;<span 
+class="cmtt-10">fonts</span></a><a 
+ name="PrTx183004"  href="tex4ht-cCh15.html#PrTx221016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">visited_file</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">v</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">visited_file;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">visited_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">visited_file-&#x003E;next;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">v-&#x003E;name);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">v);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11956--><p class="noindent" ><a 
+ name="PrTx183005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx182005"><span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">visited</span></a><a 
+ name="PrTx183006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">v</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec,</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">v-&#x003E;name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">v-&#x003E;name,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">name);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">v-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">visited_file;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">visited_file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">v;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11967--><p class="noindent" ><a 
+ name="PrTx183007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx182003"><span 
+class="cmtt-10">check</span>&#x00A0;<span 
+class="cmtt-10">visited</span></a><a 
+ name="PrTx183008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">is_visited</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">v</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">visited_file;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">v</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">eq_str(v-&#x003E;name,</span>&#x00A0;<span 
+class="cmtt-10">name)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">is_visited</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">v</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">v-&#x003E;next;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11973--><p class="noindent" ><a 
+ href="#PrTx180007"  name="PrTx183009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10005"><span 
+class="cmtt-10">types</span></a><a 
+ name="PrTx183010"  href="tex4ht-cCh15.html#PrTx210018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec{</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*name;</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">visited_file_rec</span>&#x00A0;<span 
+class="cmtt-10">*next;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 11979--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh13.html" >next</a>] [<a 
+ href="tex4ht-cCh11.html" >prev</a>] [<a 
+ href="tex4ht-cCh11.html#tailtex4ht-cCh11.html" >prev-tail</a>] [<a 
+ href="tex4ht-cCh12.html" >front</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh12.html" >up</a>] </p></div>
+<!--l. 11979--><p class="indent" >    <a 
+  name="tailtex4ht-cCh12.html"></a>  </p> 
+</body></html> 
