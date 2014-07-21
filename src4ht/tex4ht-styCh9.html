@@ -1,0 +1,1023 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Tables of Contents</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 5454--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh10.html" >next</a>] [<a 
+ href="tex4ht-styCh8.html" >prev</a>] [<a 
+ href="tex4ht-styCh8.html#tailtex4ht-styCh8.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh9.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh9.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 9<br /><a 
+ href="tex4ht-sty.html#QQ2-10-92"  name="QQ1-10-92">Tables of Contents</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.1&#x00A0;<a 
+ href="#QQ1-10-93"  name="QQ2-10-93">Archiving the Table</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.2&#x00A0;<a 
+ href="#QQ1-10-94"  name="QQ2-10-94">Invoked Tables
+of Contents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-95"  name="QQ2-10-95">Listing the Entries</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-96"  name="QQ2-10-96">Loading the Entries</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-97"  name="QQ2-10-97">Collecting the
+Entries</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.3&#x00A0;<a 
+ href="#QQ1-10-98"  name="QQ2-10-98">Triggered Tables of Contents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-99"  name="QQ2-10-99">Process the Request</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-100"  name="QQ2-10-100">Process
+the Request</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-101"  name="QQ2-10-101">Interpretation for Included Entry</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-10-102"  name="QQ2-10-102">End Points</a></span><br />
+    </div>
+    <h3 class="SectionHead">9.1 <a 
+ href="tex4ht-sty.html#QQ2-10-93"  name="QQ1-10-93">Archiving the Table</a></h3>
+<!--l. 5467--><p class="noindent" >For a source document that is stored in file named <span 
+class="cmtt-10">abc.xyz </span>the table is assumed to be stored in a file that carries
+the name <span 
+class="cmtt-10">abc.4tc</span>. It is archived into <span 
+class="cmtt-10">abc.4ct</span>.
+</p>
+      <!--l. 5481--><p class="indent" ><a 
+ name="PrTx93001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx375"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx93002"  href="#PrTx96004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\openin15=\jobname.4tc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifeof15</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\closein15</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:TableOfContents[#1]{\immediate\write16{No</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">\jobname.4tc}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx93003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95001"><span 
+class="cmtt-10">undef /TableOfContents</span></a><a 
+ name="PrTx93004"  href="#PrTx95006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifHtml</span>&#x00A0;&#x00A0;<a 
+ name="PrTx93005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95003"><span 
+class="cmtt-10">def html /TableOfContents</span></a><a 
+ name="PrTx93006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx93007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx93009"><span 
+class="cmtt-10">copy toc</span></a><a 
+ name="PrTx93008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5500--><p class="noindent" ><a 
+ name="PrTx93009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93007"  name="QPrTx376"><span 
+class="cmtt-10">copy</span>&#x00A0;<span 
+class="cmtt-10">toc</span></a><a 
+ name="PrTx93010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;^=7</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx93011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx93013"><span 
+class="cmtt-10">define /:copytoc</span></a><a 
+ name="PrTx93012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifHtml</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=12\relax</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:next{\catcode\tmp:cnt=12</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:next{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^M=5</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\openout15=\jobname.4ct</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:copytoc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\closeout15</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>&#x00A0;<span 
+class="cmtt-10">\closein15</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">\:next</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=255</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:next</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5510--><p class="noindent" ><a 
+ name="PrTx93013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93011"  name="QPrTx377"><span 
+class="cmtt-10">define</span>&#x00A0;<span 
+class="cmtt-10">/:copytoc</span></a><a 
+ name="PrTx93014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:copytoc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifeof15</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\read15</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\escapechar=&#8216;\\\immediate\write15{\:temp}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:copytoc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">9.2 <a 
+ href="tex4ht-sty.html#QQ2-10-94"  name="QQ1-10-94">Invoked Tables of Contents</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-95"  name="QQ1-10-95">Listing the Entries</a></h3>
+<!--l. 5520--><p class="noindent" >The following pair of definitions are a degenerated case of the &#8216;sty&#8217; option in which the parameters are required for a
+table to appear.
+
+</p>
+      <!--l. 5528--><p class="indent" ><a 
+ name="PrTx95001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93003"  name="QPrTx378"><span 
+class="cmtt-10">undef</span>&#x00A0;<span 
+class="cmtt-10">/TableOfContents</span></a><a 
+ name="PrTx95002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\TableOfContents\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\TableOfContents{\futurelet\:temp\:TOC}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:TOC{\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:TableOfContents\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5544--><p class="noindent" ><a 
+ name="PrTx95003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx93005"  name="QPrTx379"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">/TableOfContents</span></a><a 
+ name="PrTx95004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx95005"  href="#PrTx93003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95001"><span 
+class="cmtt-10">undef /TableOfContents</span></a><a 
+ name="PrTx95006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TableOfContents[#1]{\SaveEverypar{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\TocCount{0}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx95007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx96001"><span 
+class="cmtt-10">interpretation for entries</span></a><a 
+ name="PrTx95008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\InsertTitle##1##2##3{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hsize=4.5in</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\rightskip</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">\z@</span>&#x00A0;<span 
+class="cmtt-10">minus</span>&#x00A0;<span 
+class="cmtt-10">1in</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\linepenalty=1000</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=12</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=11</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=11</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx95009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95027"><span 
+class="cmtt-10">Configure HtmlPar for TOC</span></a><a 
+ name="PrTx95010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\everypar{\HtmlPar}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx95011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95019"><span 
+class="cmtt-10">before toc</span></a><a 
+ name="PrTx95012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\input</span>&#x00A0;<span 
+class="cmtt-10">\jobname.4ct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ht:everypar{}\leavevmode}</span><a 
+ name="PrTx95013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95021"><span 
+class="cmtt-10">bottom toc</span></a><a 
+ name="PrTx95014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\par</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\RecallEverypar</span>&#x00A0;<a 
+ name="PrTx95015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95017"><span 
+class="cmtt-10">after toc</span></a><a 
+ name="PrTx95016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5550--><p class="noindent" ><a 
+ name="PrTx95017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95015"  name="QPrTx380"><span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">toc</span></a><a 
+ name="PrTx95018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\c:tableofcontents\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:TableOfContents\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\c:tableofcontents</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5555--><p class="noindent" ><a 
+ name="PrTx95019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95011"  name="QPrTx381"><span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">toc</span></a><a 
+ name="PrTx95020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\a:tableofcontents\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:TableOfContents\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\a:tableofcontents</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5563--><p class="noindent" ><a 
+ name="PrTx95021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95013"  name="QPrTx382"><span 
+class="cmtt-10">bottom</span>&#x00A0;<span 
+class="cmtt-10">toc</span></a><a 
+ name="PrTx95022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\b:tableofcontents\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:TableOfContents\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\b:tableofcontents</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5571--><p class="noindent" ><a 
+ name="PrTx95023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95031"  name="QPrTx383"><span 
+class="cmtt-10">par toc</span></a><a 
+ name="PrTx95024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\d:tableofcontents\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">d:TableOfContents\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\d:tableofcontents</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5577--><p class="noindent" ><a 
+ name="PrTx95025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95029"  name="QPrTx384"><span 
+class="cmtt-10">noindent toc par</span></a><a 
+ name="PrTx95026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\e:tableofcontents\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">e:TableOfContents\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\e:tableofcontents</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5588--><p class="noindent" >The following might be a problem LaTeX, in particular with <span 
+class="cmtt-10">\IgnoreIndent/\ShowIndent </span>cases. A partial solution
+to the problem used the code <span 
+class="cmtt-10">\if:latex \if:nopar \else \Configure{HtmlPar}{}{\Configure</span>
+<span 
+class="cmtt-10">{HtmlPar}{|&#x003C;noindent toc par|&#x003E;}{|&#x003C;par toc|&#x003E;}{}{}}{}{}% \fi\fi</span>, but then we got problems
+elsewhere.
+</p>
+      <!--l. 5598--><p class="indent" ><a 
+ name="PrTx95027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95009"  name="QPrTx385"><span 
+class="cmtt-10">Configure</span>&#x00A0;<span 
+class="cmtt-10">HtmlPar</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">TOC</span></a><a 
+ name="PrTx95028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HtmlPar}{</span><a 
+ name="PrTx95029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95025"><span 
+class="cmtt-10">noindent toc par</span></a><a 
+ name="PrTx95030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{</span><a 
+ name="PrTx95031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx95023"><span 
+class="cmtt-10">par toc</span></a><a 
+ name="PrTx95032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{}{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-96"  name="QQ1-10-96">Loading the Entries</a></h3>
+           <!--l. 5612--><p class="noindent" ><a 
+ name="PrTx96001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx95007"  name="QPrTx386"><span 
+class="cmtt-10">interpretation</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">entries</span></a><a 
+ name="PrTx96002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tocPreamble#1,,%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\doTocEntry=\:doTocEntry</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\contentsline##1##2##3{##2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\no:lbl:idx</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5623--><p class="noindent" ><a 
+ href="#PrTx93001"  name="PrTx96003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx387"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx96004"  href="#PrTx96018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:doTocEntry#1#2#3#4{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Advance:\TocCount</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\string#1</span>&#x00A0;<span 
+class="cmtt-10">\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1{#2}{#3}{#4}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5627--><p class="noindent" ><a 
+ href="tex4ht-styCh8.html#PrTx87003"  name="PrTx96005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx388"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx96006"  href="tex4ht-styCh10.html#PrTx105014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TocLink}[1]{\def\a:TocLink##1##2##3##4{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5629--><p class="noindent" >A field <span 
+class="cmtt-10">[\ifnum \FileNumber=#1 \else \RefFileNumber{#1}\fi] </span>buys nothing as far as memory is
+concerned.
+</p>
+      <!--l. 5638--><p class="indent" ><a 
+ href="tex4ht-styCh2.html#PrTx21009"  name="PrTx96007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16005"  name="QPrTx389"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">Configure</span></a><a 
+ name="PrTx96008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureToc#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname##1##2##3{#5}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx96009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx96015"><span 
+class="cmtt-10">cond toc config</span></a><a 
+ name="PrTx96010"  href="#PrTx96014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5652--><p class="noindent" ><a 
+ href="tex4ht-styCh2.html#PrTx22015"  name="PrTx96011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh2.html#PrTx22005"  name="QPrTx390"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx96012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\ConfigureToc#1#2#3#4#5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname##1##2##3{#5}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edit:p\def\:temp{#2#3#4#5}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\pend:defIII\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname{\hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Toc(#1)1\b:trc}####1\hbox{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Toc(#1)2\b:trc}####2\hbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Toc(#1)3\b:trc}####3\hbox{\a:trc</span>&#x00A0;<span 
+class="cmtt-10">Toc(#1)4\b:trc}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx96013"  href="#PrTx96009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx96015"><span 
+class="cmtt-10">cond toc config</span></a><a 
+ name="PrTx96014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5666--><p class="noindent" ><a 
+ name="PrTx96015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx96009"  name="QPrTx391"><span 
+class="cmtt-10">cond</span>&#x00A0;<span 
+class="cmtt-10">toc</span>&#x00A0;<span 
+class="cmtt-10">config</span></a><a 
+ name="PrTx96016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{#4}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\pend:defIII\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname{#4####3}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\pend:defIII\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname{#3####2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\pend:defIII\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname{#2####1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5675--><p class="noindent" ><a 
+ href="#PrTx96003"  name="PrTx96017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx392"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx96018"  href="#PrTx97002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tocPreamble#1,{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\expandafter\string\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1</span>&#x00A0;<span 
+class="cmtt-10">\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\let</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\csname\:temp\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:tocPreamble\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-97"  name="QQ1-10-97">Collecting the Entries</a></h3>
+<!--l. 5692--><p class="noindent" >After producing the table of contents from the previous compilation, a file is opened for collecting the entries of the
+table from the current compilation.
+</p>
+
+      <!--l. 5704--><p class="indent" ><a 
+ href="#PrTx96017"  name="PrTx97001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx393"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx97002"  href="#PrTx98002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tocout\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newwrite\endcsname\:tocout</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx97003"  href="tex4ht-styCh4.html#PrTx35009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx43001"><span 
+class="cmtt-10">if latex then latex/write sol</span></a><a 
+ name="PrTx97004"  href="#PrTx97010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\openout\:tocout=\jobname.4tc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx97005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx97007"><span 
+class="cmtt-10">doTocEntry for dvi</span></a><a 
+ name="PrTx97006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5706--><p class="noindent" >In case we switch from html to dvi mode, without the presence of TeX4ht, we want to hide the <span 
+class="cmtt-10">\doTocEntry</span>.. The
+<span 
+class="cmtt-10">\escapechar </span>decides what is written out for escape character, no matter what the actual symbol is. texinfo changes
+that symbol to <span 
+class="cmtt-10">\escapechar=&#8216;\@</span>.
+</p>
+      <!--l. 5719--><p class="indent" ><a 
+ name="PrTx97007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx97005"  name="QPrTx394"><span 
+class="cmtt-10">doTocEntry</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">dvi</span></a><a 
+ name="PrTx97008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{\escapechar=&#8216;\\</span><a 
+ name="PrTx97009"  href="#PrTx97003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx43001"><span 
+class="cmtt-10">if latex then latex/write sol</span></a><a 
+ name="PrTx97010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\write</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tocout{\string\expandafter\string\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">doTocEntry\string\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\expandafter\string\endinput</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">9.3 <a 
+ href="tex4ht-sty.html#QQ2-10-98"  name="QQ1-10-98">Triggered Tables of Contents</a></h3>
+<!--l. 5726--><p class="noindent" >The <span 
+class="cmtt-10">\TocAt-{...} </span>command asks for no TOC, the <span 
+class="cmtt-10">TocAt*{...} </span>command asks for a TOC delayed until the next
+section, <span 
+class="cmtt-10">\TocAt{...} </span>asks for TOC in place, and a list of size one asks for no more local TOC&#8217;s for the given logical
+unit.
+</p>
+      <!--l. 5738--><p class="indent" ><a 
+ href="#PrTx97001"  name="PrTx98001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx395"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx98002"  href="#PrTx98008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\TocAt#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:next##1{\:TocAt##1,//}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#1}\def\:temp{-}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:temp=-%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{*}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\:temp</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:temp=*%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:next{\:TocAt#1,//}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:next</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5748--><p class="noindent" ><a 
+ name="PrTx98003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx98009"  name="QPrTx396"><span 
+class="cmtt-10">Toc:At&#x003E;</span></a><a 
+ name="PrTx98004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc:#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">TocAt*\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc#1\noexpand\endcsname</span>&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5753--><p class="noindent" ><a 
+ name="PrTx98005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx98011"  name="QPrTx397"><span 
+class="cmtt-10">Toc:At</span></a><a 
+ name="PrTx98006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc:#1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc#1\noexpand\endcsname</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5763--><p class="noindent" ><a 
+ href="#PrTx98001"  name="PrTx98007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx398"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx98008"  href="#PrTx100002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TocAt#1,#2//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">-\:temp</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">*\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx98009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx98003"><span 
+class="cmtt-10">Toc:At&#x003E;</span></a><a 
+ name="PrTx98010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx98011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx98005"><span 
+class="cmtt-10">Toc:At</span></a><a 
+ name="PrTx98012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc#1\endcsname=\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<a 
+ name="PrTx98013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx99001"><span 
+class="cmtt-10">extract the entries</span></a><a 
+ name="PrTx98014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-99"  name="QQ1-10-99">Process the Request</a></h3>
+<!--l. 5767--><p class="noindent" >For <span 
+class="cmtt-10">\TocAt{X,...,Y,...} </span>we define a <span 
+class="cmtt-10">\TocX </span>that includes the interpretations for the different <span 
+class="cmtt-10">\tocY </span>w of Xithin
+commands of the form <span 
+class="cmtt-10">X::tocY</span>.
+
+</p>
+      <!--l. 5782--><p class="indent" ><a 
+ name="PrTx99001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx98013"  name="QPrTx399"><span 
+class="cmtt-10">extract</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">entries</span></a><a 
+ name="PrTx99002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:include=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\::TocAt#1,/#1,#2,,//%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:include{\expandafter\:removecomma\:include}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">Toc#1\endcsname{{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\noexpand\TitleCount=\expandafter\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1:Count\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\:assgtoc\:include,//{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tocs[\:include]}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-100"  name="QQ1-10-100">Process the Request</a></h3>
+           <!--l. 5790--><p class="noindent" ><a 
+ href="#PrTx98007"  name="PrTx100001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx400"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx100002"  href="#PrTx100004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tocs{\noexpand\TableOfContents}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5801--><p class="noindent" ><a 
+ href="#PrTx100001"  name="PrTx100003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx401"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx100004"  href="#PrTx100006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:removecomma#1{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:assgtoc#1,#2//#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">=}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#3::toc#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:notempty{#2}{\:assgtoc#2//{#3}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5812--><p class="noindent" ><a 
+ href="#PrTx100003"  name="PrTx100005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx402"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx100006"  href="#PrTx102002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::TocAt#1,#2,#3//{\def\:temp{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">/\:firstch#2</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx100007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx102003"><span 
+class="cmtt-10">stop toc for @1 at @2</span></a><a 
+ name="PrTx100008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx100009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx101001"><span 
+class="cmtt-10">include @2 in toc for @1</span></a><a 
+ name="PrTx100010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\::TocAt#1,#3//}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-101"  name="QQ1-10-101">Interpretation for Included Entry</a></h3>
+<!--l. 5816--><p class="noindent" >Also for <span 
+class="cmtt-10">\TocAt{X,....,Y,...} </span>the interpretation is defined in <span 
+class="cmtt-10">X::tocY</span>.
+</p>
+      <!--l. 5829--><p class="indent" ><a 
+ name="PrTx101001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx100009"  name="QPrTx403"><span 
+class="cmtt-10">include</span>&#x00A0;<span 
+class="cmtt-10">@2</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">toc</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">@1</span></a><a 
+ name="PrTx101002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:include{\:include,#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">svtoc::#2\endcsname=}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">toc#2\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">#1::toc#2\endcsname##1##2##3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\ifnum</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\TitleCount&#x003C;\noexpand\TocCount</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\space</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">svtoc::#2\endcsname{##1}{##2}{##3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5832--><p class="noindent" >Tex4ht relies on two counters <span 
+class="cmtt-10">\TitleCount </span>and <span 
+class="cmtt-10">\TocCount </span>to decide which entries of the global TOC should go to
+the local TOC. The first counter is increased when sectioning commands are encountered. The second counter is
+increased when the global TOC is traversed.
+</p><!--l. 5838--><p class="indent" >    A discrepancy will occur when the contributions of the sectioning commands to the global TOC
+are not synchronized with the increments of the first counter. That will normally be the case when
+sectioning commands are introduced without tex4h being informed about their designation as sectioning
+commands.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-10-102"  name="QQ1-10-102">End Points</a></h3>
+
+<!--l. 5848--><p class="noindent" >Also for <span 
+class="cmtt-10">\TocAt{X,....,/Y,...} </span>the termination point that we get is defined in <span 
+class="cmtt-10">X::tocY</span>.
+</p>
+      <!--l. 5853--><p class="indent" ><a 
+ href="#PrTx100005"  name="PrTx102001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10029"  name="QPrTx404"><span 
+class="cmtt-10">blocs</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx102002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:firstch#1#2</span>&#x00A0;<span 
+class="cmtt-10">//{#1\def\:temp{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 5862--><p class="noindent" ><a 
+ name="PrTx102003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx100007"  name="QPrTx405"><span 
+class="cmtt-10">stop</span>&#x00A0;<span 
+class="cmtt-10">toc</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">@1</span>&#x00A0;<span 
+class="cmtt-10">at</span>&#x00A0;<span 
+class="cmtt-10">@2</span></a><a 
+ name="PrTx102004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:include{\:include,\:temp}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">#1::toc\:temp\endcsname##1##2##3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\TitleCount&#x003C;\TocCount</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Advance:\TocCount</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-100000</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5864--><p class="noindent" >The <span 
+class="cmtt-10">\endinput </span>is not required but it desired because it cuts off the reading of the toc file. The <span 
+class="cmtt-10">-100000 </span>is needed
+forhierarchical toc&#8217;s due to parent-child relashions.
+
+</p>
+    <!--l. 5873--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh10.html" >next</a>] [<a 
+ href="tex4ht-styCh8.html" >prev</a>] [<a 
+ href="tex4ht-styCh8.html#tailtex4ht-styCh8.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh9.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh9.html" >up</a>] </p></div>
+<!--l. 5873--><p class="indent" >    <a 
+  name="tailtex4ht-styCh9.html"></a>   </p> 
+</body></html> 

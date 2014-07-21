@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Identify the Empty Pictures</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <!--l. 1111--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe6.html" >next</a>] [<a 
+ href="tex4ht-t4htSe4.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe4.html#tailtex4ht-t4htSe4.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-t4htSe5.html">tail</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe5.html" >up</a>] </p></div>
+    <h3 class="SectionHead">5 <a 
+ href="tex4ht-t4ht.html#QQ2-6-16"  name="QQ1-6-16">Identify the Empty Pictures</a></h3>
+    <div class="TableOfContents">
+    </div>
+<!--l. 1114--><p class="indent" >    Messages about figures that don&#8217;t exist are treated as requests for empty figures. Typically, they shouldn&#8217;t be
+present unless they are programmed into <span 
+class="cmtt-10">\setbox</span>-like commands. tex4ht-c identifies in the <span 
+class="cmtt-10">.lg </span>file the empty
+figures it finds.
+</p><!--l. 1119--><p class="indent" >    The messages in the &#8220;.lg&#8221; file look like &#8216;<span 
+class="cmtt-10">--- empty picture --- aa.idv[1] ---</span>&#8217;.
+</p>
+      <!--l. 1138--><p class="indent" ><a 
+ name="PrTx16001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3025"><span 
+class="cmtt-10">identify</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">pictures</span></a><a 
+ name="PrTx16002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*last;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">last</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">empty_pic</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">TRUE</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_str("---</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">picture</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">",</span>&#x00A0;<span 
+class="cmtt-10">TRUE,</span>&#x00A0;<span 
+class="cmtt-10">lg_file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_until_str(</span>&#x00A0;<span 
+class="cmtt-10">".idv["</span>&#x00A0;<span 
+class="cmtt-10">,</span>&#x00A0;<span 
+class="cmtt-10">1,</span>&#x00A0;<span 
+class="cmtt-10">status,</span>&#x00A0;<span 
+class="cmtt-10">lg_file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_until_end_str("]</span>&#x00A0;<span 
+class="cmtt-10">---",</span>&#x00A0;<span 
+class="cmtt-10">1,</span>&#x00A0;<span 
+class="cmtt-10">status,</span>&#x00A0;<span 
+class="cmtt-10">lg_file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx16003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx16007"><span 
+class="cmtt-10">add empty pic</span></a><a 
+ name="PrTx16004"  href="#PrTx16006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">eoln_ch</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">EOF</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx16005"  href="#PrTx16003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx16007"><span 
+class="cmtt-10">add empty pic</span></a><a 
+ name="PrTx16006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">last-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">last-&#x003E;n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">100000;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1151--><p class="noindent" ><a 
+ name="PrTx16007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx16003"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">pic</span></a><a 
+ name="PrTx16008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">last</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">last</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">empty_pic</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct,</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">last</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">last-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">m_alloc(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct,</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">last-&#x003E;next</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">last-&#x003E;n</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_long_int(match[1]);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1156--><p class="noindent" ><a 
+ name="PrTx16009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3073"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx16010"  href="tex4ht-t4htSe12.html#PrTx46002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*empty_pic;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1163--><p class="noindent" ><a 
+ href="tex4ht-t4htSe3.html#PrTx12001"  name="PrTx16011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx16012"  href="tex4ht-t4htSe6.html#PrTx22030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">long</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">n;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">struct</span>&#x00A0;<span 
+class="cmtt-10">empty_pic_struct</span>&#x00A0;<span 
+class="cmtt-10">*next;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1167--><p class="noindent" >The list of empty pictures is stored in &#8216;<span 
+class="cmtt-10">emptypic</span>&#8217;.
+
+</p>
+    <!--l. 1170--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe6.html" >next</a>] [<a 
+ href="tex4ht-t4htSe4.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe4.html#tailtex4ht-t4htSe4.html" >prev-tail</a>] [<a 
+ href="tex4ht-t4htSe5.html" >front</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe5.html" >up</a>] </p></div>
+<!--l. 1170--><p class="indent" >    <a 
+  name="tailtex4ht-t4htSe5.html"></a> </p> 
+</body></html> 

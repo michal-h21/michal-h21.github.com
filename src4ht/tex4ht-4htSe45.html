@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>longtable.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 8788--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe46.html" >next</a>] [<a 
+ href="tex4ht-4htSe44.html" >prev</a>] [<a 
+ href="tex4ht-4htSe44.html#tailtex4ht-4htSe44.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe45.html">tail</a>] [<a 
+ href="tex4ht-4htCh13.html#tex4ht-4htSe45.html" >up</a>] </p></div>
+    <h3 class="SectionHead">13.5 <a 
+ href="tex4ht-4htPa1.html#QQ2-135-115"  name="QQ1-135-115">longtable.sty</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 8803--><p class="indent" ><a 
+ name="PrTx115001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115001"  name="QPrTx417"><span 
+class="cmtt-10">longtable.4ht</span></a><a 
+ name="PrTx115002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">longtable.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx115003"  href="tex4ht-4htSe44.html#PrTx114003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx115004"  href="tex4ht-4htSe46.html#PrTx116004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115011"><span 
+class="cmtt-10">longtable code</span></a><a 
+ name="PrTx115006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115057"><span 
+class="cmtt-10">longtable hline</span></a><a 
+ name="PrTx115008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115063"><span 
+class="cmtt-10">longtable captions</span></a><a 
+ name="PrTx115010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{longtable}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 8806--><p class="noindent" ><a 
+ href="file://localhost/n/candy/0/tex/teTeX/texmf/tex/latex/tools/longtable.sty" >longtable.sty</a> <span 
+class="cmtt-10">| </span><a 
+ href="http://www.fi.infn.it/pub/tex/doc/html/latex.html" >latex</a>
+</p>
+      <!--l. 8867--><p class="indent" ><a 
+ name="PrTx115011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx418"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115012"  href="#PrTx115036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu60.html#PrTx138007"><span 
+class="cmtt-10">tags for captions, empty</span></a><a 
+ name="PrTx115014"  href="tex4ht-4htSe58.html#PrTx139010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115049"><span 
+class="cmtt-10">init conds for longtable</span></a><a 
+ name="PrTx115016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\refstepcounter{table}\stepcounter{LT@tables}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">l#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LTleft\z@</span>&#x00A0;<span 
+class="cmtt-10">\LTright\fill</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\if</span>&#x00A0;<span 
+class="cmtt-10">r#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LTleft\fill</span>&#x00A0;<span 
+class="cmtt-10">\LTright\z@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\if</span>&#x00A0;<span 
+class="cmtt-10">c#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LTleft\fill</span>&#x00A0;<span 
+class="cmtt-10">\LTright\fill</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\LT@mcol\multicolumn</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\LT@@tabarray\@tabarray</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\LT@@hl\hline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@tabarray{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\hline\LT@@hl</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT@@tabarray}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\\\LT@tabularcr\let\tabularnewline\\%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115027"><span 
+class="cmtt-10">longtable page breaks</span></a><a 
+ name="PrTx115018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\hline\LT@hline</span>&#x00A0;<span 
+class="cmtt-10">\let\kill\LT@kill\let\caption\LT@caption</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@tempdima\ht\strutbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@endpbox\LT@endpbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\extrarowheight\@undefined</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@acol\@tabacol</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@classz\@tabclassz</span>&#x00A0;<span 
+class="cmtt-10">\let\@classiv\@tabclassiv</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@startpbox{\vtop\LT@startpbox}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@@startpbox\@startpbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@@endpbox\@endpbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\LT@LL@FM@cr\@tabularcr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\@tempdima\extrarowheight</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\col@sep\tabcolsep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@startpbox\LT@startpbox\let\LT@LL@FM@cr\@arraycr</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\@arstrutbox\hbox{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@sharp##\let\protect\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@mkpream{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\LT@bchunk{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\c@LT@chunks\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\LT@rows\z@\setbox\z@\vbox\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT@setprevdepth</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115045"><span 
+class="cmtt-10">ialign for html longtable</span></a><a 
+ name="PrTx115020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu49.html#PrTx106015"><span 
+class="cmtt-10">globalize HAlign and ar:cnt</span></a><a 
+ name="PrTx115022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115033"><span 
+class="cmtt-10">set LT@cols</span></a><a 
+ name="PrTx115024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT@make@row</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\m@th\let\par\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\everycr{}\lineskip\z@\baselineskip\z@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\SaveMkHalignConfig</span>&#x00A0;<a 
+ name="PrTx115025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115047"><span 
+class="cmtt-10">longtable configuration for MkHalign</span></a><a 
+ name="PrTx115026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@sharp=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\let\@sharp##\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT@bchunk}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@array\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8874--><p class="noindent" ><a 
+ name="PrTx115027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115017"  name="QPrTx419"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">breaks</span></a><a 
+ name="PrTx115028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\newpage\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\pagebreak\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\nopagebreak\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8880--><p class="noindent" ><a 
+ href="tex4ht-4htSu49.html#PrTx106015"  name="PrTx115029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115021"  name="QPrTx420"><span 
+class="cmtt-10">globalize HAlign and ar:cnt</span></a><a 
+ name="PrTx115030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:temp{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\HAlign{\HAlign}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\ar:cnt{\ar:cnt}}\aftergroup\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8887--><p class="noindent" ><a 
+ name="PrTx115031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe43.html#PrTx111021"  name="QPrTx421"><span 
+class="cmtt-10">globalize</span>&#x00A0;<span 
+class="cmtt-10">ar:cnt</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">array.sty</span></a><a 
+ name="PrTx115032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:temp{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\HAlign{\HAlign}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\ar:cnt{\ar:cnt}}\aftergroup\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8891--><p class="noindent" ><a 
+ name="PrTx115033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115023"  name="QPrTx422"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">LT@cols</span></a><a 
+ name="PrTx115034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\LT@cols=\ar:cnt</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8900--><p class="noindent" ><a 
+ href="#PrTx115011"  name="PrTx115035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx423"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115036"  href="#PrTx115042"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\crcr\LT@save@row\cr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115039"><span 
+class="cmtt-10">end longtable chunk</span></a><a 
+ name="PrTx115038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\@ne\lastbox</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@echunk\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8904--><p class="noindent" ><a 
+ name="PrTx115039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115037"  name="QPrTx424"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">chunk</span></a><a 
+ name="PrTx115040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\EndMkHalign\else</span>&#x00A0;<span 
+class="cmtt-10">\egroup\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8913--><p class="noindent" ><a 
+ href="#PrTx115035"  name="PrTx115041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx425"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115042"  href="#PrTx115044"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\LT@startpbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\:tempc{\everypar{\HtmlPar}\a:longtableparbox}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@startpbox\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{longtableparbox}{1}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8918--><p class="noindent" ><a 
+ href="#PrTx115041"  name="PrTx115043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx426"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115044"  href="#PrTx115054"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{longtable}{6}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8925--><p class="noindent" ><a 
+ name="PrTx115045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115019"  name="QPrTx427"><span 
+class="cmtt-10">ialign</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">longtable</span></a><a 
+ name="PrTx115046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\everycr{}\tabskip\LTleft\noexpand\MkHalign\noexpand\@sharp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\tabskip\z@</span>&#x00A0;<span 
+class="cmtt-10">\@arstrut</span>&#x00A0;<span 
+class="cmtt-10">\@preamble</span>&#x00A0;<span 
+class="cmtt-10">\tabskip\LTright}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8946--><p class="noindent" ><a 
+ name="PrTx115047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115025"  name="QPrTx428"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">configuration</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">MkHalign</span></a><a 
+ name="PrTx115048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\recall:ar\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\recall:ar{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\ifx</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\EndPicture\noexpand\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\arrayrulewidth\the\arrayrulewidth</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\doublerulesep\the\doublerulesep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\arraycolsep\the\arraycolsep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tabcolsep\the\tabcolsep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\arrayrulewidth\z@</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\doublerulesep\z@</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\arraycolsep\z@</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tabcolsep\z@</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{MkHalign}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\aa:longtable</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\bb:longtable</span>&#x00A0;<span 
+class="cmtt-10">\ProperTrTrue}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\a:putHBorder\InitHBorder</span>&#x00A0;<span 
+class="cmtt-10">\ifProperTr{\c:longtable}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifProperTr{\d:longtable}\a:putHBorder\InitHBorder}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifProperTr{\e:longtable}\RecallMkHalignConfig\recall:ar}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifProperTr{\f:longtable}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8961--><p class="noindent" ><a 
+ name="PrTx115049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115015"  name="QPrTx429"><span 
+class="cmtt-10">init</span>&#x00A0;<span 
+class="cmtt-10">conds</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">longtable</span></a><a 
+ name="PrTx115050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx115051"  href="tex4ht-4htSe43.html#PrTx111017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu52.html#PrTx109001"><span 
+class="cmtt-10">init conds for @mkpream</span></a><a 
+ name="PrTx115052"  href="tex4ht-4htSe50.html#PrTx124010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\aa:longtable{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\aa:longtable{\let\HRow=\lt:sv</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAdvance\HRow</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\global\let\:MkHalign:=\lt:MkHalign:}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\LT:box=\vbox{\a:longtable}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\lt:MkHalign:=\:MkHalign:}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\bb:longtable{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifHCond</span>&#x00A0;<span 
+class="cmtt-10">\global\let\bb:longtable=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\LT:ebox=\vbox{{\ht:everypar{}\leavevmode}\b:longtable}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\HCondfalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 8981--><p class="noindent" ><a 
+ href="#PrTx115043"  name="PrTx115053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx430"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115054"  href="#PrTx115056"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newbox\endcsname\LT:box</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newbox\endcsname\LT:ebox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\LT@start</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid\LT@head\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid\LT@firsthead</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\LT@firsthead=\hbox{\box\LT@head}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\tmp:bx=\hbox{\box\LT@head}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\box\LT:box}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@start\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\endlongtable</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\:tempc{\box\LT:ebox}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\global\HCondtrue}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\endlongtable\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9018--><p class="noindent" ><a 
+ href="#PrTx115053"  name="PrTx115055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx431"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx115056"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\LT@ntabularcr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\global\let\lt:sv=\HRow}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@ntabularcr\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\LT@end@hd@ft</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\:tempc{\global\let\lt:sv=\HRow}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@end@hd@ft\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%\def\:tempc{\global\let\lt:sv=\HRow}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%\HLet\LT@kill\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\LT@rebox#1\bgroup{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unskip</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\LT@kill</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempc{\global\let\lt:sv\HRow}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@kill\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\LT:argtabularcr=\LT@argtabularcr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{\global\let\lt:sv=\HRow</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT:argtabularcr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@argtabularcr\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\tmp:bx\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newbox\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\tmp:bx</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%\def\:tempc{\LT@end@hd@ft\tmp:bx}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%\HLet\endhead\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">\def\:tempc{\LT@end@hd@ft\tmp:bx}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">\HLet\endfoot\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\LT@output{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid\LT@foot\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid\LT@lastfoot</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\LT@lastfoot=\hbox{\box\LT@foot}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\tmp:bx=\hbox{\box\LT@foot}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{\global\HCondtrue</span>&#x00A0;<span 
+class="cmtt-10">\LT@end@hd@ft\LT@lastfoot}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\endlastfoot\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9040--><p class="noindent" ><a 
+ name="PrTx115057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115007"  name="QPrTx432"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">hline</span></a><a 
+ name="PrTx115058"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:noalign:{\ifnum0=&#8216;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\penalty\@M</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\futurelet\@let@token\LT@@hline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@hline\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\@let@token\hline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\@gtempa\@gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\LT@sep{\penalty-\@medpenalty\vskip\doublerulesep}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\@gtempa\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\LT@sep{\penalty-\@lowpenalty\vskip-\arrayrulewidth}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum0=&#8216;{\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx115059"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115061"><span 
+class="cmtt-10">put longtable hline</span></a><a 
+ name="PrTx115060"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:noalign:{\penalty\@M}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@gtempa}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@@hline\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9045--><p class="noindent" ><a 
+ name="PrTx115061"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115059"  name="QPrTx433"><span 
+class="cmtt-10">put</span>&#x00A0;<span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">hline</span></a><a 
+ name="PrTx115062"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:hline</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9057--><p class="noindent" ><a 
+ name="PrTx115063"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115009"  name="QPrTx434"><span 
+class="cmtt-10">longtable</span>&#x00A0;<span 
+class="cmtt-10">captions</span></a><a 
+ name="PrTx115064"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:noalign:\bgroup</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\TitleCount</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[{\egroup\LT@c@ption\@firstofone}\LT@capti@n}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@caption\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\LT@mcol\LT@cols</span>&#x00A0;<span 
+class="cmtt-10">c{\hbox{\parbox[t]\LTcapwidth{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\cptA:</span>&#x00A0;<span 
+class="cmtt-10">#1{\cap:ref{#2}}\cptB:\cptC:#3\cptD:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgraf\vskip\baselineskip}}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\LT@makecaption\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 9062--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe46.html" >next</a>] [<a 
+ href="tex4ht-4htSe44.html" >prev</a>] [<a 
+ href="tex4ht-4htSe44.html#tailtex4ht-4htSe44.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe45.html" >front</a>] [<a 
+ href="tex4ht-4htCh13.html#tex4ht-4htSe45.html" >up</a>] </p></div>
+<!--l. 9062--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe45.html"></a> </p> 
+</body></html> 

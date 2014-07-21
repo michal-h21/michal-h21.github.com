@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>I Script for xtpipes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-jsml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:52:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-jsml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 18--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipesse1.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html#tailtex4ht-jsml-xtpipes" >prev-tail</a>] [<a 
+ href="#tailtex4ht-jsml-xtpipespa1.html">tail</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html#tex4ht-jsml-xtpipespa1.html" >up</a>] </p></div>
+   <h1 class="partHead"><span class="titlemark">Part&#x00A0;I<br /></span><a 
+  id="x2-1000I"></a>Script for xtpipes</h1>
+   <div class="sectionTOCS">
+   <span class="sectionToc" >1 <a 
+ href="tex4ht-jsml-xtpipesse1.html#x3-20001">Outline</a></span>
+<br />   <span class="sectionToc" >2 <a 
+ href="tex4ht-jsml-xtpipesse2.html#x4-30002">Numbers in Math</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.1 <a 
+ href="tex4ht-jsml-xtpipessu1.html#x5-40002.1">Group MN / MO-Punctuation</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.2 <a 
+ href="tex4ht-jsml-xtpipessu2.html#x6-50002.2">Outline of Post Original Partition</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.3 <a 
+ href="tex4ht-jsml-xtpipessu3.html#x7-60002.3">Mark Partition of MN Group</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.4 <a 
+ href="tex4ht-jsml-xtpipessu4.html#x8-70002.4">Realize the Sub Partition</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.5 <a 
+ href="tex4ht-jsml-xtpipessu5.html#x9-80002.5">Reset MNs</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.6 <a 
+ href="tex4ht-jsml-xtpipessu6.html#x10-90002.6">Pronounced Letters</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.7 <a 
+ href="tex4ht-jsml-xtpipessu7.html#x11-100002.7">Pronounced Punctuation in math</a></span>
+<br />   <span class="sectionToc" >3 <a 
+ href="tex4ht-jsml-xtpipesse3.html#x12-110003">Process Characters</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.1 <a 
+ href="tex4ht-jsml-xtpipessu8.html#x13-120003.1">&#8217;minus&#8217; into &#8217;negative&#8217;</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.2 <a 
+ href="tex4ht-jsml-xtpipessu9.html#x14-130003.2">Capital Letters in Math</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.3 <a 
+ href="tex4ht-jsml-xtpipessu10.html#x15-140003.3">Right Apostrophes</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.4 <a 
+ href="tex4ht-jsml-xtpipessu11.html#x16-150003.4">Delimiters on List Marks</a></span>
+<br />   <span class="sectionToc" >4 <a 
+ href="tex4ht-jsml-xtpipesse4.html#x17-160004">Clean Up</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.1 <a 
+ href="tex4ht-jsml-xtpipessu12.html#x18-170004.1">Extra Math Pauses</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.2 <a 
+ href="tex4ht-jsml-xtpipessu13.html#x19-180004.2">Line Breaks</a></span>
+
+<br />   &#x00A0;<span class="subsectionToc" >4.3 <a 
+ href="tex4ht-jsml-xtpipessu14.html#x20-190004.3">Empty Elements</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.4 <a 
+ href="tex4ht-jsml-xtpipessu15.html#x21-200004.4">Empty Array Cells</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.5 <a 
+ href="tex4ht-jsml-xtpipessu16.html#x22-210004.5">Paragraphs (JsmlFilter.java)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.6 <a 
+ href="tex4ht-jsml-xtpipessu17.html#x23-220004.6">Remove Split Arrays</a></span>
+<br />   <span class="sectionToc" >5 <a 
+ href="tex4ht-jsml-xtpipesse5.html#x24-230005">Eliminate Inline Math Narrative</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.1 <a 
+ href="tex4ht-jsml-xtpipessu18.html#x25-240005.1">Core Content of One Element</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.2 <a 
+ href="tex4ht-jsml-xtpipessu19.html#x26-250005.2">Unary Op</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.3 <a 
+ href="tex4ht-jsml-xtpipessu20.html#x27-260005.3">Shallow Expression</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.4 <a 
+ href="tex4ht-jsml-xtpipessu21.html#x28-270005.4">Shallow Delimited Expression</a></span>
+<br />   <span class="sectionToc" >6 <a 
+ href="tex4ht-jsml-xtpipesse6.html#x29-280006">Superscripts and Subscripts</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.1 <a 
+ href="tex4ht-jsml-xtpipessu22.html#x30-290006.1">Insert Sub-Levels Info</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.2 <a 
+ href="tex4ht-jsml-xtpipessu23.html#x31-300006.2">Eliminate End Script Marks</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.3 <a 
+ href="tex4ht-jsml-xtpipessu24.html#x32-310006.3">Clean Script Marks</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.4 <a 
+ href="tex4ht-jsml-xtpipessu25.html#x33-320006.4">Replace Nested Baseline Script Marks</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.5 <a 
+ href="tex4ht-jsml-xtpipessu26.html#x34-330006.5">Eliminate Begin Script Marks</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.6 <a 
+ href="tex4ht-jsml-xtpipessu27.html#x35-340006.6">Undo Empty Scripts</a></span>
+<br />   <span class="sectionToc" >7 <a 
+ href="tex4ht-jsml-xtpipesse7.html#x36-350007">Special Subscripts and Superscripts</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.1 <a 
+ href="tex4ht-jsml-xtpipessu28.html#x37-360007.1">Squared</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.2 <a 
+ href="tex4ht-jsml-xtpipessu29.html#x38-370007.2">Numeric Subscripts (Rule 77)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.3 <a 
+ href="tex4ht-jsml-xtpipessu30.html#x39-380007.3">Primes</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.4 <a 
+ href="tex4ht-jsml-xtpipessu31.html#x40-390007.4">Degree</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.5 <a 
+ href="tex4ht-jsml-xtpipessu32.html#x41-400007.5">Logarithms</a></span>
+<br />   <span class="sectionToc" >8 <a 
+ href="tex4ht-jsml-xtpipesse8.html#x42-410008">Fractions (Stage 1)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.1 <a 
+ href="tex4ht-jsml-xtpipessu33.html#x43-420008.1">Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.2 <a 
+ href="tex4ht-jsml-xtpipessu34.html#x44-430008.2">Word Fractions</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.3 <a 
+ href="tex4ht-jsml-xtpipessu35.html#x45-440008.3">Mixed Fractions</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.4 <a 
+ href="tex4ht-jsml-xtpipessu36.html#x46-450008.4">Continued Fractions Conditions (Rule 69)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.5 <a 
+ href="tex4ht-jsml-xtpipessu37.html#x47-460008.5">Nucleous of Continued Fractions</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.6 <a 
+ href="tex4ht-jsml-xtpipessu38.html#x48-470008.6">Prepend Existing Continued Fractions</a></span>
+<br />   <span class="sectionToc" >9 <a 
+ href="tex4ht-jsml-xtpipesse9.html#x49-480009">Fractions (Stage 2)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.1 <a 
+ href="tex4ht-jsml-xtpipessu39.html#x50-490009.1">Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.2 <a 
+ href="tex4ht-jsml-xtpipessu40.html#x51-500009.2">Level Indicators for Nesting (Hyper Complex Fractions)</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.3 <a 
+ href="tex4ht-jsml-xtpipessu41.html#x52-510009.3">Level Terminators: Scripts, Word Fracs</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.4 <a 
+ href="tex4ht-jsml-xtpipessu42.html#x53-520009.4">Bookeeping for Continued Fractions</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.5 <a 
+ href="tex4ht-jsml-xtpipessu43.html#x54-530009.5">Modifications for Continued Fractions</a></span>
+<br />   <span class="sectionToc" >10 <a 
+ href="tex4ht-jsml-xtpipesse10.html#x55-5400010">Set Levels on Roots</a></span>
+<br />   <span class="sectionToc" >11 <a 
+ href="tex4ht-jsml-xtpipesse11.html#x56-5500011">Modifiers</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >11.1 <a 
+ href="tex4ht-jsml-xtpipessu44.html#x57-5600011.1">Over and Under Limit Scripts</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >11.2 <a 
+ href="tex4ht-jsml-xtpipessu45.html#x58-5700011.2">Short Cuts for Math Underline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >11.3 <a 
+ href="tex4ht-jsml-xtpipessu46.html#x59-5800011.3">Short Cuts for Math Overline</a></span>
+<br />   <span class="sectionToc" >12 <a 
+ href="tex4ht-jsml-xtpipesse12.html#x60-5900012">New Theorems</a></span>
+<br />   <span class="sectionToc" >13 <a 
+ href="tex4ht-jsml-xtpipesse13.html#x61-6000013">Shared</a></span>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--l. 3823--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipesse1.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html#tailtex4ht-jsml-xtpipes" >prev-tail</a>] [<a 
+ href="tex4ht-jsml-xtpipespa1.html" >front</a>] [<a 
+ href="tex4ht-jsml-xtpipes.html#tex4ht-jsml-xtpipespa1.html" >up</a>] </p></div>
+<!--l. 3823--><p class="indent" >   <a 
+  id="tailtex4ht-jsml-xtpipespa1.html"></a> </p> 
+</body></html> 

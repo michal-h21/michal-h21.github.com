@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>4 Etc</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-html32.tex"> 
+<meta name="date" content="2014-05-24 11:52:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-html32.css"> 
+</head><body 
+>
+   <!--l. 328--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html32ch5.html" >next</a>] [<a 
+ href="tex4ht-html32ch3.html" >prev</a>] [<a 
+ href="tex4ht-html32ch3.html#tailtex4ht-html32ch3.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-html32ch4.html">tail</a>] [<a 
+ href="tex4ht-html32.html#tex4ht-html32ch4.html" >up</a>] </p></div>
+   <h2 class="chapterHead"><span class="titlemark">Chapter&#x00A0;4</span><br /><a 
+ href="tex4ht-html32.html#QQ2-10-10"  id="x10-100004">Etc</a></h2>
+
+   <p></p><div class="ShowCode" id="ShowCode-27"><div class="head">
+       <a 
+ id="PrTx10001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html32se47.html#PrTx73007"  id="QPrTx27"><span 
+class="cmtt-10">0,32,4 preambles</span></a><a 
+ id="PrTx10002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx10003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx10029"><span 
+class="cmtt-10">date utility</span></a><a 
+ id="PrTx10004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx10005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx10011"><span 
+class="cmtt-10">cascade style sheets</span></a><a 
+ id="PrTx10006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Preamble}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx10007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx10009"><span 
+class="cmtt-10">default cascade style sheets</span></a><a 
+ id="PrTx10008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-28"><div class="head">
+       <a 
+ id="PrTx10009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx10007"  id="QPrTx28"><span 
+class="cmtt-10">default</span><span 
+class="cmtt-10">&#x00A0;cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx10010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{\ifdim</span><span 
+class="cmtt-10">&#x00A0;\lastskip&#x003E;\z@</span><span 
+class="cmtt-10">&#x00A0;\unskip\fi</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\parindent\z@</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\leavevmode}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write16{---</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;\aa:CssFile\space</span><span 
+class="cmtt-10">&#x00A0;---}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003E;\aa:CssFile}\ht:special{t4ht=\Hnewline</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;css.sty</span><span 
+class="cmtt-10">&#x00A0;*/}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003C;\aa:CssFile}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 360--><p class="indent" >   <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\special</span></span></span> are like <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\hbox</span></span></span>, and they so they may introduve empty lines in vertical
+mode. That might be a problem if we don&#8217;t want empty lines at the start of the files.
+Hence, in latex we give them special treatment.
+
+   <p></p><div class="ShowCode" id="ShowCode-29"><div class="head">
+       <a 
+ id="PrTx10011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx10005"  id="QPrTx29"><span 
+class="cmtt-10">cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx10012"  href="#PrTx10028"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ScriptCommand{\CssFile}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\write16{---</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;\aa:CssFile\space</span><span 
+class="cmtt-10">&#x00A0;---}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\FontSize##1##2{\:Context{##1}\ht:special{t4ht;\%##2}\%}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\FontName##1{\:Context{##1}\ht:special{t4ht;=}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:Context##1{\ht:special{t4ht&#x003E;\jobname.tmp}##1\ht:special</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{t4ht&#x003E;\aa:CssFile}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht&#x003E;\jobname.tmp}\ht:special{t4ht&#x003E;\aa:CssFile}\bb:CssFile</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\hfil\break\NoFonts}{\EndNoFonts</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht&#x003C;\aa:CssFile}\ht:special{t4ht&#x003C;\jobname.tmp}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Css:File=\CssFile</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\CssFile{\futurelet\:temp\Css:Fl}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css:Fl{\ifx</span><span 
+class="cmtt-10">&#x00A0;[\:temp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\Css:fl</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Css:File</span><span 
+class="cmtt-10">&#x00A0;\space}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css:fl[#1]{\Css:File\space</span><span 
+class="cmtt-10">&#x00A0;\css:files</span><span 
+class="cmtt-10">&#x00A0;#1,,</span><a 
+ id="PrTx10013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10014"  href="#PrTx10016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\css:files#1,#2</span><a 
+ id="PrTx10015"  href="#PrTx10013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10016"  href="#PrTx10018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#1}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\in:css#1.</span><a 
+ id="PrTx10017"  href="#PrTx10015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10018"  href="#PrTx10020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\css:files#2,,</span><a 
+ id="PrTx10019"  href="#PrTx10017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10020"  href="#PrTx10022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:temp</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\in:css#1.#2</span><a 
+ id="PrTx10021"  href="#PrTx10019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10022"  href="#PrTx10024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#2}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;\input</span><span 
+class="cmtt-10">&#x00A0;#1.css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\inc:ss#1.#2</span><a 
+ id="PrTx10023"  href="#PrTx10021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10024"  href="#PrTx10026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\inc:ss#1.</span><a 
+ id="PrTx10025"  href="#PrTx10023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-html32ch8.html#PrTx137001"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10026"  href="tex4ht-html32se20.html#PrTx39004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\input</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{CssFile}[2]{\def\aa:CssFile{#1}\def\bb:CssFile{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 390--><p class="indent" >   <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\CssFile[file-name,filename.ext,..]...\EndCssFile</span></span></span>.
+<!--l. 392--><p class="indent" >   Default file, just in case the user doesn&#8217;t provide one. If the user does, the
+following file will be overwritten.
+<!--l. 395--><p class="indent" >   Can&#8217;t use below <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\a:CssFile</span></span></span> and <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\b:CssFile</span></span></span>, because <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\ScriptFile{\CssFile}</span></span></span>
+also needs them.
+<!--l. 400--><p class="indent" >   <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\Css</span></span></span> changes its definition upon reachin <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\CssFile</span></span></span>. The first definition is needed
+within the sty files, and the info is sent to the lg file (where else it can be
+sent?).
+
+   <p></p><div class="ShowCode" id="ShowCode-30"><div class="head">
+       <a 
+ href="#PrTx10011"  id="PrTx10027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx10005"  id="QPrTx30"><span 
+class="cmtt-10">cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx10028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css#1{{\def\:temp{\Configure{Needs}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\:temp\expandafter{\aa:Css}\Needs{#1}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\send:css=\Css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ScriptCommand{\Css}{\HCode{&#x003C;style</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;type="text/css"&#x003E;\Hnewline}\NoFonts}{\EndNoFonts\HCode{&#x003C;/style&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\loc:css=\Css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css{\futurelet\:temp\:Css}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Css{\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\bgroup</span><span 
+class="cmtt-10">&#x00A0;\expandafter\send:css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\expandafter\loc:css\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-31"><div class="head">
+       <a 
+ id="PrTx10029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx10003"  id="QPrTx31"><span 
+class="cmtt-10">date</span><span 
+class="cmtt-10">&#x00A0;utility</span></a><a 
+ id="PrTx10030"  href="#PrTx10032"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=\time</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\divide\tmp:cnt</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;60</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\the\tmp:cnt}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\multiply\tmp:cnt</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;-60</span><span 
+class="cmtt-10">&#x00A0;\advance\tmp:cnt</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;\time</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:today{\the\year-\ifnum</span><span 
+class="cmtt-10">&#x00A0;\month&#x003C;10</span><span 
+class="cmtt-10">&#x00A0;0\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\the\month-\ifnum</span><span 
+class="cmtt-10">&#x00A0;\day&#x003C;10</span><span 
+class="cmtt-10">&#x00A0;0\fi\the\day</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\space\ifnum</span><span 
+class="cmtt-10">&#x00A0;\:temp&#x003C;10</span><span 
+class="cmtt-10">&#x00A0;0\fi</span><span 
+class="cmtt-10">&#x00A0;\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;:\ifnum</span><span 
+class="cmtt-10">&#x00A0;\tmp:cnt&#x003C;10</span><span 
+class="cmtt-10">&#x00A0;0\fi\the\tmp:cnt</span><span 
+class="cmtt-10">&#x00A0;:00}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-32"><div class="head">
+       <a 
+ href="#PrTx10029"  id="PrTx10031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx10003"  id="QPrTx32"><span 
+class="cmtt-10">date</span><span 
+class="cmtt-10">&#x00A0;utility</span></a><a 
+ id="PrTx10032"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks++}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{hooks+}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{hooks}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{hooks}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;strong</span><span 
+class="cmtt-10">&#x00A0;class="hooks"&#x003E;&amp;lt;}}{\HCode{&amp;gt;&#x003C;/strong&#x003E;}}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 446--><p class="indent" >   The following provides a faster version than <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\LinkCommand\Link{a,href,name,}</span></span></span>
+for the <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\Link</span></span></span> command
+
+   <p></p><div class="ShowCode" id="ShowCode-33"><div class="head">
+       <a 
+ id="PrTx10033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html32se74.html#PrTx107009"  id="QPrTx33"><span 
+class="cmtt-10">32,4 tex4ht</span></a><a 
+ id="PrTx10034"  href="tex4ht-html32se20.html#PrTx39002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Link}{a}{href=}{name=}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+   <div class="sectionTOCS">
+   &#x00A0;<span class="sectionToc" >4.1 <a 
+ href="tex4ht-html32se4.html#x11-110004.1">article</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.2 <a 
+ href="tex4ht-html32se5.html#x12-120004.2">alsart</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.3 <a 
+ href="tex4ht-html32se6.html#x13-130004.3">report</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.4 <a 
+ href="tex4ht-html32se7.html#x14-140004.4">book</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.5 <a 
+ href="tex4ht-html32se8.html#x15-150004.5">latex.ltx</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.1 <a 
+ href="tex4ht-html32se8.html#x15-160004.5.1"  id="QQ2-15-16">obeylines</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.2 <a 
+ href="tex4ht-html32se8.html#x15-170004.5.2"  id="QQ2-15-17">Spaces</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.3 <a 
+ href="tex4ht-html32se8.html#x15-180004.5.3"  id="QQ2-15-18">Logos</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.4 <a 
+ href="tex4ht-html32se8.html#x15-190004.5.4"  id="QQ2-15-19">accents from html4</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.5 <a 
+ href="tex4ht-html32se8.html#x15-200004.5.5"  id="QQ2-15-20">tt Font</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.6 <a 
+ href="tex4ht-html32se8.html#x15-210004.5.6"  id="QQ2-15-21">Cross References</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.7 <a 
+ href="tex4ht-html32se8.html#x15-220004.5.7"  id="QQ2-15-22">Miscellaneous Environments</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.8 <a 
+ href="tex4ht-html32se8.html#x15-230004.5.8"  id="QQ2-15-23">Math Setup</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.9 <a 
+ href="tex4ht-html32se8.html#x15-240004.5.9"  id="QQ2-15-24">Tabbing, Tabular and Array Environments</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.10 <a 
+ href="tex4ht-html32se8.html#x15-250004.5.10"  id="QQ2-15-25">The option @()</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.5.11 <a 
+ href="tex4ht-html32se8.html#x15-260004.5.11"  id="QQ2-15-26">to be placed</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.6 <a 
+ href="tex4ht-html32se9.html#x16-270004.6">Long Tables</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.7 <a 
+ href="tex4ht-html32se10.html#x17-280004.7">Ams Math</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.8 <a 
+ href="tex4ht-html32se11.html#x18-290004.8">Shared</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.9 <a 
+ href="tex4ht-html32se12.html#x19-300004.9">aa</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.9.1 <a 
+ href="tex4ht-html32se12.html#x19-310004.9.1"  id="QQ2-19-31">Sizes of Fonts</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.10 <a 
+ href="tex4ht-html32se13.html#x20-320004.10">plain</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.11 <a 
+ href="tex4ht-html32se14.html#x21-330004.11">amsart</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.12 <a 
+ href="tex4ht-html32se15.html#x22-340004.12">amsproc</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.13 <a 
+ href="tex4ht-html32se16.html#x23-350004.13">amsbook</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.14 <a 
+ href="tex4ht-html32se17.html#x24-360004.14">babel.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.15 <a 
+ href="tex4ht-html32se18.html#x25-370004.15">Scientific Word</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.16 <a 
+ href="tex4ht-html32se19.html#x26-380004.16">Babel</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.17 <a 
+ href="tex4ht-html32se20.html#x27-390004.17">babel.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.18 <a 
+ href="tex4ht-html32se21.html#x28-400004.18">moreverb</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.19 <a 
+ href="tex4ht-html32se22.html#x29-410004.19">color</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.1 <a 
+ href="tex4ht-html32se22.html#x29-420004.19.1"  id="QQ2-29-42">2: Binary Operations</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.2 <a 
+ href="tex4ht-html32se22.html#x29-430004.19.2"  id="QQ2-29-43">3: Relational Operations</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.3 <a 
+ href="tex4ht-html32se22.html#x29-440004.19.3"  id="QQ2-29-44">4/5: Delimiters</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.4 <a 
+ href="tex4ht-html32se22.html#x29-450004.19.4"  id="QQ2-29-45">6: Punctuation Marks</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.5 <a 
+ href="tex4ht-html32se22.html#x29-460004.19.5"  id="QQ2-29-46">Questions</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.19.6 <a 
+ href="tex4ht-html32se22.html#x29-470004.19.6"  id="QQ2-29-47">Type 4: Math Open</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.20 <a 
+ href="tex4ht-html32se23.html#x30-480004.20">fleqn.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.21 <a 
+ href="tex4ht-html32se24.html#x31-490004.21">amsppt.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.22 <a 
+ href="tex4ht-html32se25.html#x32-500004.22">amsmath.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.23 <a 
+ href="tex4ht-html32se26.html#x33-510004.23">amstex.sty (amstex1)</a></span>
+
+<br />   &#x00A0;<span class="sectionToc" >4.24 <a 
+ href="tex4ht-html32se27.html#x34-520004.24">amstex.tex</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.25 <a 
+ href="tex4ht-html32se28.html#x35-530004.25">vanilla</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.26 <a 
+ href="tex4ht-html32se29.html#x36-540004.26">slidesec</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.27 <a 
+ href="tex4ht-html32se30.html#x37-550004.27">ltugboat</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.28 <a 
+ href="tex4ht-html32se31.html#x38-560004.28">tex4ht</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.29 <a 
+ href="tex4ht-html32se32.html#x39-570004.29">th4</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.30 <a 
+ href="tex4ht-html32se33.html#x40-580004.30">seminar</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.31 <a 
+ href="tex4ht-html32se34.html#x41-590004.31">slides</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.32 <a 
+ href="tex4ht-html32se35.html#x42-600004.32">amsthm.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.33 <a 
+ href="tex4ht-html32se36.html#x43-610004.33">colortbl.sty</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.34 <a 
+ href="tex4ht-html32se37.html#x44-620004.34">epsfig</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.35 <a 
+ href="tex4ht-html32se38.html#x45-630004.35">psfig</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.36 <a 
+ href="tex4ht-html32se39.html#x46-640004.36">graphics</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.37 <a 
+ href="tex4ht-html32se40.html#x47-650004.37">foils</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.38 <a 
+ href="tex4ht-html32se41.html#x48-660004.38">index</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.39 <a 
+ href="tex4ht-html32se42.html#x49-670004.39"></a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.40 <a 
+ href="tex4ht-html32se43.html#x50-680004.40">ntheorem</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.41 <a 
+ href="tex4ht-html32se44.html#x51-690004.41">hyperref</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.42 <a 
+ href="tex4ht-html32se45.html#x52-700004.42">web</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.43 <a 
+ href="tex4ht-html32se46.html#x53-710004.43">exerquiz</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.43.1 <a 
+ href="tex4ht-html32se46.html#x53-720004.43.1"  id="QQ2-53-72">to be placed</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.44 <a 
+ href="tex4ht-html32se47.html#x54-730004.44">tex4ht</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.45 <a 
+ href="tex4ht-html32se48.html#x55-740004.45">Interpretation for the Entries</a></span>
+<br />   &#x00A0;<span class="sectionToc" >4.46 <a 
+ href="tex4ht-html32se49.html#x56-750004.46">amstex</a></span>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!--l. 5108--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html32ch5.html" >next</a>] [<a 
+ href="tex4ht-html32ch3.html" >prev</a>] [<a 
+ href="tex4ht-html32ch3.html#tailtex4ht-html32ch3.html" >prev-tail</a>] [<a 
+ href="tex4ht-html32ch4.html" >front</a>] [<a 
+ href="tex4ht-html32.html#tex4ht-html32ch4.html" >up</a>] </p></div>
+<!--l. 5108--><p class="indent" >   <a 
+  id="tailtex4ht-html32ch4.html"></a>  
+</body></html> 

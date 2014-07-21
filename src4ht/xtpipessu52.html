@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Start Elements</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 4056--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu55.html" >next</a>] [<a 
+ href="xtpipessu53.html" >prev</a>] [<a 
+ href="xtpipessu53.html#tailxtpipessu53.html" >prev-tail</a>] [<a 
+ href="xtpipesse11.html#tailxtpipessu52.html">tail</a>] [<a 
+ href="xtpipessu52.html#xtpipessu54.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">11.2   </span> <a 
+  id="x69-7700011.2"></a>Start Elements</h4>
+           <!--l. 4080--><p class="noindent" ><a 
+ id="PrTx77001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu51.html#PrTx76009"  id="QPrTx220"><span 
+class="cmtt-10">ScriptsManager:</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startElement(ns,</span>&#x00A0;<span 
+class="cmtt-10">sName,</span>&#x00A0;<span 
+class="cmtt-10">qName,</span>&#x00A0;<span 
+class="cmtt-10">atts)</span></a><a 
+ id="PrTx77002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startElement(String</span>&#x00A0;<span 
+class="cmtt-10">ns,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">sName,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">qName,</span>&#x00A0;<span 
+class="cmtt-10">Attributes</span>&#x00A0;<span 
+class="cmtt-10">atts)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx77003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81001"><span 
+class="cmtt-10">save status of xmlns above element</span></a><a 
+ id="PrTx77004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx77005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77015"><span 
+class="cmtt-10">flag := start new save?</span></a><a 
+ id="PrTx77006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">inBody</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">true;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">"&#x003C;"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">qName</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"\n";</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">for(int</span>&#x00A0;<span 
+class="cmtt-10">i=0;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;atts.getLength();</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">atts.getQName(i),</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">value</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">atts.getValue(i);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx77007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu54.html#PrTx79001"><span 
+class="cmtt-10">record xmlns</span></a><a 
+ id="PrTx77008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"=\""</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">XtpipesUni.toUni(value,</span>&#x00A0;<span 
+class="cmtt-10">"&#x003C;&#x003E;&amp;\"")</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"\"";</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ id="PrTx77009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu54.html#PrTx79005"><span 
+class="cmtt-10">add missing xmlns attributes</span></a><a 
+ id="PrTx77010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">"&#x003E;"</span>&#x00A0;<span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx77011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx77017"><span 
+class="cmtt-10">set start element</span></a><a 
+ id="PrTx77012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4085--><p class="noindent" ><a 
+ id="PrTx77013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu51.html#PrTx76007"  id="QPrTx221"><span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx77014"  href="xtpipessu54.html#PrTx79008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">inBody</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">false;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4098--><p class="noindent" ><a 
+ id="PrTx77015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77005"  id="QPrTx222"><span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">save?</span></a><a 
+ id="PrTx77016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">key</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(atts==null)?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">null</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">(qName</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"::"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">atts.getValue("class"));</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(key</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">null)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">scripts.containsKey(key);</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">key</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">qName;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scripts.containsKey(key);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4110--><p class="noindent" ><a 
+ id="PrTx77017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx77011"  id="QPrTx223"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">start</span>&#x00A0;<span 
+class="cmtt-10">element</span></a><a 
+ id="PrTx77018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Object</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">state</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Boolean(savemode),</span>&#x00A0;<span 
+class="cmtt-10">code,</span>&#x00A0;<span 
+class="cmtt-10">match</span>&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack.push(</span>&#x00A0;<span 
+class="cmtt-10">state</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">savemode=true;</span>&#x00A0;<span 
+class="cmtt-10">code="";</span>&#x00A0;<span 
+class="cmtt-10">match=</span>&#x00A0;<span 
+class="cmtt-10">key;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Object</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">state</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Boolean(savemode),</span>&#x00A0;<span 
+class="cmtt-10">null,</span>&#x00A0;<span 
+class="cmtt-10">null</span>&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack.push(</span>&#x00A0;<span 
+class="cmtt-10">state</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">add(</span>&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 4112--><p class="noindent" >The parsing of an XML string is similar to that of done by a left-to-right bottom up
+parser of a programming language. Specifically, the token are read and send on to the
+output stream, until an element whose name appears in the hash table of scripts is
+encountered. When such an element is encountered, its body is assembled and
+the corresponding script is applied on the body. The processing might be
+recursive, in the sense that enclosed elements might also have scripts to process
+them.
+</p><!--l. 4121--><p class="indent" >   The above applies also to an element name concatenated with its class attribute
+value, with the substring &#8216;::&#8217; as a separator.
+
+</p>
+   <!--l. 4125--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu55.html" >next</a>] [<a 
+ href="xtpipessu53.html" >prev</a>] [<a 
+ href="xtpipessu53.html#tailxtpipessu53.html" >prev-tail</a>] [<a 
+ href="xtpipessu52.html" >front</a>] [<a 
+ href="xtpipessu52.html#xtpipessu54.html" >up</a>] </p></div>
+<!--l. 4125--><p class="indent" >   <a 
+  id="tailxtpipessu52.html"></a> </p> 
+</body></html> 

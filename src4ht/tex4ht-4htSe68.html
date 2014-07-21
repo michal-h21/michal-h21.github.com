@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>LaTeX</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 11670--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu71.html" >next</a>] [<a 
+ href="tex4ht-4htCh20.html" >prev</a>] [<a 
+ href="tex4ht-4htCh20.html#tailtex4ht-4htCh20.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe68.html">tail</a>] [<a 
+ href="tex4ht-4htCh20.html#tex4ht-4htSe68.html" >up</a>] </p></div>
+    <h3 class="SectionHead">20.1 <a 
+ href="tex4ht-4htPa1.html#QQ2-181-161"  name="QQ1-181-161">LaTeX</a></h3>
+    <div class="TableOfContents">
+<br />    &#8212; <a 
+ href="tex4ht-4htSu71.html#QQ1-182-162"  name="QQ2-182-162">Chicago</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu72.html#QQ1-183-163"  name="QQ2-183-163">For XML</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu73.html#QQ1-185-165"  name="QQ2-185-165">Fussy and Sloppy</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu74.html#QQ1-190-168"  name="QQ2-190-168">Head and Foot Lines</a>
+    </div>
+<!--l. 11675--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltbibl.dtx" >ltbibl.dtx</a>
+</p><!--l. 11679--><p class="indent" >    &#8216;<span 
+class="cmtt-10">\Link</span>&#8217; must follow &#8216;<span 
+class="cmtt-10">\o:bibitem:</span>&#8217;; otherwise it will insert stuff before an &#8216;<span 
+class="cmtt-10">\item</span>&#8217;.
+</p>
+      <!--l. 11686--><p class="indent" ><a 
+ name="PrTx161001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4051"  name="QPrTx570"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltbibl</span></a><a 
+ name="PrTx161002"  href="#PrTx161030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{no-bib}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161007"><span 
+class="cmtt-10">cite in doc to bib</span></a><a 
+ name="PrTx161004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161045"><span 
+class="cmtt-10">listing of bib</span></a><a 
+ name="PrTx161006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11709--><p class="noindent" ><a 
+ name="PrTx161007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161003"  name="QPrTx571"><span 
+class="cmtt-10">cite</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">doc</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">bib</span></a><a 
+ name="PrTx161008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\o:@citex:\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\o:@citex:=\@citex\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@citex[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@citea\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161019"><span 
+class="cmtt-10">a cite</span></a><a 
+ name="PrTx161010"  href="tex4ht-4htSu71.html#PrTx162010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\@cite{\@for\@citeb:=#2\do</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\@citea\def\@citea{,\penalty\@m\</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx161011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161027"><span 
+class="cmtt-10">sub sup cite</span></a><a 
+ name="PrTx161012"  href="tex4ht-4htSe151.html#PrTx327012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\xdef\@citeb{\expandafter\@firstofone\@citeb}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifundefined{b@\@citeb}{\mbox{\reset@font\bfseries</span>&#x00A0;<span 
+class="cmtt-10">?}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\G@refundefinedtrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@latex@warning</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Citation</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\@citeb&#8217;</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">\thepage</span>&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<span 
+class="cmtt-10">undefined}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{{</span><a 
+ name="PrTx161013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161023"><span 
+class="cmtt-10">link cite</span></a><a 
+ name="PrTx161014"  href="tex4ht-4htSu71.html#PrTx162012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b@\@citeb\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161025"><span 
+class="cmtt-10">end link cite</span></a><a 
+ name="PrTx161016"  href="tex4ht-4htSu71.html#PrTx162014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}}}{#1}</span><a 
+ name="PrTx161017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161021"><span 
+class="cmtt-10">b cite</span></a><a 
+ name="PrTx161018"  href="tex4ht-4htSu71.html#PrTx162016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=11</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11714--><p class="noindent" ><a 
+ name="PrTx161019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161009"  name="QPrTx572"><span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">cite</span></a><a 
+ name="PrTx161020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:cite\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11718--><p class="noindent" ><a 
+ name="PrTx161021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161017"  name="QPrTx573"><span 
+class="cmtt-10">b</span>&#x00A0;<span 
+class="cmtt-10">cite</span></a><a 
+ name="PrTx161022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:cite\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11722--><p class="noindent" ><a 
+ name="PrTx161023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161013"  name="QPrTx574"><span 
+class="cmtt-10">link</span>&#x00A0;<span 
+class="cmtt-10">cite</span></a><a 
+ name="PrTx161024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\cIteLink</span>&#x00A0;<span 
+class="cmtt-10">{X\@citeb}{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11726--><p class="noindent" ><a 
+ name="PrTx161025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161015"  name="QPrTx575"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">link</span>&#x00A0;<span 
+class="cmtt-10">cite</span></a><a 
+ name="PrTx161026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\EndcIteLink</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11730--><p class="noindent" ><a 
+ name="PrTx161027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161011"  name="QPrTx576"><span 
+class="cmtt-10">sub</span>&#x00A0;<span 
+class="cmtt-10">sup</span>&#x00A0;<span 
+class="cmtt-10">cite</span></a><a 
+ name="PrTx161028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\SUBOff</span>&#x00A0;<span 
+class="cmtt-10">\SUPOff</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11733--><p class="noindent" >Was <span 
+class="cmtt-10">\x:SUBOff \x:SUPOff</span>&#8211;any problems?
+
+</p><!--l. 11736--><p class="indent" >    Had to remove <span 
+class="cmtt-10">\hbox </span>from &#8216;<span 
+class="cmtt-10">{\cIteLink {X\@citeb}{}\csname b@\@citeb\endcsname\EndcIteLink}</span>&#8217;
+because it created
+</p><!--l. 11739--><p class="indent" >    The following is treated in a similar manner to ref.
+</p>
+      <!--l. 11746--><p class="indent" ><a 
+ href="#PrTx161001"  name="PrTx161029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4051"  name="QPrTx577"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltbibl</span></a><a 
+ name="PrTx161030"  href="#PrTx161032"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{cite}[4]{\c:def\a:cite{#1}\c:def\b:cite{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\d:def\cIteLink{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\cIteLink\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\cIteLink=\:gobbleII\fi</span>&#x00A0;<span 
+class="cmtt-10">\c:def\EndcIteLink{#4}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{cite}{}{}{}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11785--><p class="noindent" ><a 
+ href="#PrTx161029"  name="PrTx161031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4051"  name="QPrTx578"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltbibl</span></a><a 
+ name="PrTx161032"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{bibtex2}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">bibliography2\endcsname{\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">a:bibliography2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link{YX\b:blabel}{}\csname</span>&#x00A0;<span 
+class="cmtt-10">b:bibliography2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\EndLink</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:bibliography2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\bibitem:ii\@bibitem</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@bibitem#1{\bibitem:ii{#1}\def\b:blabel{#1}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\lbibitem:ii=\@lbibitem</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@lbibitem[#1]#2{\lbibitem:ii[#1]{#2}\def\b:blabel{#2}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\bibliography:ii=\bibliography</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\bibliography#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\bibliography=\bibliography:ii</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\bibliography{#1}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureEnv{thebibliography}{}{}{}{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureList{thebibliography}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\let\en:bib=\empty}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\en:bib}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\en:bib</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\en:bib{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:bibitem2\endcsname\EndHPage{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HPage{}\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibitem2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">c:bibitem2\endcsname}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\section##1##2{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{bibanchor}{YX}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@fileswfalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@input@{\jobname</span>&#x00A0;<span 
+class="cmtt-10">j.bbl}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibliography2}{3}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibitem2}{3}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161043"><span 
+class="cmtt-10">bib2 warning</span></a><a 
+ name="PrTx161034"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161037"><span 
+class="cmtt-10">create aux j</span></a><a 
+ name="PrTx161036"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11787--><p class="noindent" >The &#8216;<span 
+class="cmtt-10">\bibliography{#1}</span>&#8217; may have <span 
+class="cmtt-10">\newcommand </span>instructions. Hnce, to avoid complaints about redefined
+commands, we put &#8216;<span 
+class="cmtt-10">\bibliography{#1}</span>&#8217; within a group.
+</p>
+      <!--l. 11798--><p class="indent" ><a 
+ name="PrTx161037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161035"  name="QPrTx579"><span 
+class="cmtt-10">create</span>&#x00A0;<span 
+class="cmtt-10">aux</span>&#x00A0;<span 
+class="cmtt-10">j</span></a><a 
+ name="PrTx161038"  href="#PrTx161040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\/=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\\=12</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/gdef/bib:style{\bibstyle}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/\=0</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;//=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11820--><p class="noindent" ><a 
+ href="#PrTx161037"  name="PrTx161039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161035"  name="QPrTx580"><span 
+class="cmtt-10">create</span>&#x00A0;<span 
+class="cmtt-10">aux</span>&#x00A0;<span 
+class="cmtt-10">j</span></a><a 
+ name="PrTx161040"  href="#PrTx161042"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\&amp;=12</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\get:aux{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\read15</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\line</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifeof15</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\scan:aux\line</span>&#x00A0;<span 
+class="cmtt-10">@@@@@@@@@&amp;&amp;&amp;&amp;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\get:aux</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\put:aux#1&amp;&amp;&amp;&amp;{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write15{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\first\bib:style</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibliographystyle2\endcsname\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\line</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bib:style{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibliographystyle2\endcsname}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\line\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\scan:aux#1#2#3#4#5#6#7#8#9{\def\first{#1#2#3#4#5#6#7#8#9}\put:aux}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibliographystyle2}{1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{bibliographystyle2}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11846--><p class="noindent" ><a 
+ href="#PrTx161039"  name="PrTx161041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161035"  name="QPrTx581"><span 
+class="cmtt-10">create</span>&#x00A0;<span 
+class="cmtt-10">aux</span>&#x00A0;<span 
+class="cmtt-10">j</span></a><a 
+ name="PrTx161042"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\j:aux{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\openin15=\jobname</span>&#x00A0;<span 
+class="cmtt-10">.aux</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifeof15</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:catcodes{0}{255}{12}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:catcodes{65}{90}{11}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:catcodes{97}{122}{11}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^M=5</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\openout15=\jobname</span>&#x00A0;<span 
+class="cmtt-10">j.aux</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\get:aux</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write15{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\closeout15</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\closein15</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\@enddocumenthook{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:dofilelist=\@dofilelist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@dofilelist{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@dofilelist=\:dofilelist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\j:aux</span>&#x00A0;<span 
+class="cmtt-10">\@dofilelist}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11859--><p class="noindent" ><a 
+ name="PrTx161043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161033"  name="QPrTx582"><span 
+class="cmtt-10">bib2</span>&#x00A0;<span 
+class="cmtt-10">warning</span></a><a 
+ name="PrTx161044"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{bibtex2}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Log:Note{Option</span>&#x00A0;<span 
+class="cmtt-10">&#8216;bibtex2&#8217;</span>&#x00A0;<span 
+class="cmtt-10">requires</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">compilation</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\jobname</span>&#x00A0;<span 
+class="cmtt-10">j.aux&#8217;</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">bibtex.}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{</span>&#x00A0;<span 
+class="cmtt-10">Employ</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{bibliographystyle2}{...}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">change</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">bibliography</span>&#x00A0;<span 
+class="cmtt-10">style.}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Log:Note{for</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">levels</span>&#x00A0;<span 
+class="cmtt-10">bibtex</span>&#x00A0;<span 
+class="cmtt-10">bibliography,</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">use</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">&#8216;bibtex2&#8217;}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11877--><p class="noindent" ><a 
+ name="PrTx161045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx583"><span 
+class="cmtt-10">listing</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">bib</span></a><a 
+ name="PrTx161046"  href="#PrTx161048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\o:@lbibitem:\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\o:@lbibitem:=\@lbibitem\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@lbibitem[#1]#2{{\:SUBOff\:SUPOff\edef\:tempb{{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\:tempb{\o:@lbibitem:[#1]}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\:temp=\:tempb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setb:anc{#2}\:temp\bib:anc</span>&#x00A0;<span 
+class="cmtt-10">\let\AnchorLabel=\sv:anc\ignorespaces}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11886--><p class="noindent" ><a 
+ href="#PrTx161045"  name="PrTx161047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx584"><span 
+class="cmtt-10">listing</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">bib</span></a><a 
+ name="PrTx161048"  href="#PrTx161052"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\o:@bibitem:\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\o:@bibitem:=\@bibitem</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@bibitem#1{{\:SUBOff\:SUPOff\edef\:temp{\noexpand\o:@bibitem:{#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\:temp=\:temp}\:temp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\@bibitem{\setb:anc{##1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\@bibitem{\bib:anc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\AnchorLabel=\sv:anc</span>&#x00A0;<span 
+class="cmtt-10">\ignorespaces}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11892--><p class="noindent" ><a 
+ href="tex4ht-4htCh1.html#PrTx3073"  name="PrTx161049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3015"  name="QPrTx585"><span 
+class="cmtt-10">book</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">report</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">article</span></a><a 
+ name="PrTx161050"  href="tex4ht-4htSe83.html#PrTx191052"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@openbib@code\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\@openbib@code{\labelsep=\z@}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11894--><p class="noindent" >Old versions of latex don&#8217;t have &#8216;<span 
+class="cmtt-10">\@openbib@code</span>&#8217; (article 1995/06/26 v1.3g).
+</p>
+      <!--l. 11907--><p class="indent" ><a 
+ href="#PrTx161047"  name="PrTx161051"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx586"><span 
+class="cmtt-10">listing</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">bib</span></a><a 
+ name="PrTx161052"  href="#PrTx161058"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\setb:anc#1{\let\sv:anc=\AnchorLabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\bib:anc{\def\bib:anc{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\bib:anc\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:bibitem{}{\a:bibanchor#1}\b:bibitem\fi</span>&#x00A0;<span 
+class="cmtt-10">\gdef\bib:anc{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\AnchorLabel{\bib:anc}</span><a 
+ name="PrTx161053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161055"><span 
+class="cmtt-10">config write bibcite</span></a><a 
+ name="PrTx161054"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibitem}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibanchor}{1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{bibanchor}{X}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11910--><p class="noindent" >The option <span 
+class="cmtt-10">/bib </span>puts the (normally long) keys in a separate lines.
+</p>
+      <!--l. 11917--><p class="indent" ><a 
+ name="PrTx161055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161053"  name="QPrTx587"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">write</span>&#x00A0;<span 
+class="cmtt-10">bibcite</span></a><a 
+ name="PrTx161056"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\cite:item=\item</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\item##1\if@filesw##2\fi{\let\item\cite:item</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\item##1\if@filesw</span>&#x00A0;<span 
+class="cmtt-10">{\a:bibcite</span>&#x00A0;<span 
+class="cmtt-10">##2}\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11922--><p class="noindent" ><a 
+ href="#PrTx161051"  name="PrTx161057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx588"><span 
+class="cmtt-10">listing</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">bib</span></a><a 
+ name="PrTx161058"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibcite}[1]{\concat:config\a:bibcite{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:bibcite\relax</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 12005--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu71.html" >next</a>] [<a 
+ href="tex4ht-4htCh20.html" >prev</a>] [<a 
+ href="tex4ht-4htCh20.html#tailtex4ht-4htCh20.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe68.html" >front</a>] [<a 
+ href="tex4ht-4htCh20.html#tex4ht-4htSe68.html" >up</a>] </p></div>
+<!--l. 12005--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe68.html"></a> </p> 
+</body></html> 

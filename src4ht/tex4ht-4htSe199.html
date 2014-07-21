@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>colortbl.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 27512--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu120.html" >next</a>] [<a 
+ href="tex4ht-4htSe198.html" >prev</a>] [<a 
+ href="tex4ht-4htSe198.html#tailtex4ht-4htSe198.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe199.html">tail</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe199.html" >up</a>] </p></div>
+    <h3 class="SectionHead">66.17 <a 
+ href="tex4ht-4htPa1.html#QQ2-428-390"  name="QQ1-428-390">colortbl.sty</a></h3>
+    <div class="TableOfContents">
+<br />    &#8212; <a 
+ href="tex4ht-4htSu120.html#QQ1-429-391"  name="QQ2-429-391">Rows</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu121.html#QQ1-430-392"  name="QQ2-430-392">Utilities</a>
+    </div>
+<!--l. 27515--><p class="indent" >    colortbl.sty invokes color.sty, if the last package is not loaded. The same is true for array.sty.
+</p>
+      <!--l. 27530--><p class="indent" ><a 
+ name="PrTx390001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390001"  name="QPrTx1419"><span 
+class="cmtt-10">colortbl.4ht</span></a><a 
+ name="PrTx390002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">colortbl.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx390003"  href="tex4ht-4htSe198.html#PrTx389003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx390004"  href="tex4ht-4htSe200.html#PrTx393004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx390005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx390009"><span 
+class="cmtt-10">fix colortbl</span></a><a 
+ name="PrTx390006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx390007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx390007"><span 
+class="cmtt-10">colortbl.sty shared config</span></a><a 
+ name="PrTx390008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{colortbl}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27537--><p class="noindent" ><a 
+ name="PrTx390009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390005"  name="QPrTx1420"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">colortbl</span></a><a 
+ name="PrTx390010"  href="#PrTx390012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\CT@everycr{\o:noalign:{\global\let\CT@row@color\relax}\the\everycr}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27591--><p class="noindent" ><a 
+ href="#PrTx390009"  name="PrTx390011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390005"  name="QPrTx1421"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">colortbl</span></a><a 
+ name="PrTx390012"  href="#PrTx390014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\columncolor#1{{\def\current@color{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:cell-colortbl\endcsname}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Odef\columncolor[#1]#2{{\if</span>&#x00A0;<span 
+class="cmtt-10">:#1:\def\current@color{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{tblcol:#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:cell-colortbl\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\futurelet\:temp\left:colcol}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\left:colcol{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\left::colcol</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\left::colcol[#1]{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\futurelet\:temp\right:colcol</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\right:colcol{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\right::colcol</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\right::colcol[#1]{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\tblcol:N</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{tblcol:gray}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\tblcol:N</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span>&#x00A0;<span 
+class="cmtt-10">##2//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:tempa{255}{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{HColor}{tblcol-\tblcol:N}{rgb(\:tempa,\:tempa,\:tempa)}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\:temp</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\current@color{tblcol-\tblcol:N}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{tblcol:rgb}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\tblcol:N</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span>&#x00A0;<span 
+class="cmtt-10">##2</span>&#x00A0;<span 
+class="cmtt-10">##3</span>&#x00A0;<span 
+class="cmtt-10">##4//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:tempa{255}{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:tempb{255}{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:tempc{255}{##3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{HColor}{tblcol-\tblcol:N}{rgb(\:tempa,\:tempb,\:tempc)}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\:temp</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\current@color{tblcol-\tblcol:N}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{tblcol:cmyk}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\tblcol:N</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span>&#x00A0;<span 
+class="cmtt-10">##2</span>&#x00A0;<span 
+class="cmtt-10">##3</span>&#x00A0;<span 
+class="cmtt-10">##4</span>&#x00A0;<span 
+class="cmtt-10">##5//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:Cyan{255}{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:Magenta{255}{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:Yellow{255}{##3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\int:of\:Black{255}{##4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:cmyk\:tempa\:Cyan</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:cmyk\:tempb\:Magenta</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:cmyk\:tempc\:Yellow</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{HColor}{tblcol-\tblcol:N}{rgb(\:tempa,\:tempb,\:tempc)}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\:temp</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\current@color{tblcol-\tblcol:N}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 27594--><p class="noindent" >The followning is a redefinition of a macro from array.sty
+</p>
+      <!--l. 27602--><p class="indent" ><a 
+ href="#PrTx390011"  name="PrTx390013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390005"  name="QPrTx1422"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">colortbl</span></a><a 
+ name="PrTx390014"  href="#PrTx390016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@classz}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\@classz{\pic:gobble\a:@classz}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\@classz{\pic:gobble\b:@classz}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\insert@column{\pic:gobble\c:@classz}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\insert@column{\pic:gobble\d:@classz}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 27605--><p class="noindent" >&#8216;<span 
+class="cmtt-10">\insert@column</span>&#8217; is used only in array.
+</p><!--l. 27607--><p class="indent" >    Used to have &#8216;<span 
+class="cmtt-10">\let\HRow|=\relax\let\HCol|=\relax</span>&#8217; in &#8216;<span 
+class="cmtt-10">\pend:def\@classz</span>&#8217;, but that caused a problem in
+<span 
+class="cmtt-10">\multicol</span>. Do we still need that protection in <span 
+class="cmtt-10">\@classz</span>?
+</p><!--l. 27612--><p class="indent" >    We take &#8216;<span 
+class="cmtt-10">\Configure{@classz} {before col}{after col} {before entry}{efter entry}</span>&#8217;, where the last
+two need protection if their content is to expand when the item is reached. Otherwise, everything expands when the
+Preamble is visited.
+</p><!--l. 27620--><p class="indent" >    The following is a reduced definition which removes the ruler used in painting the backrounds.
+</p>
+      <!--l. 27627--><p class="indent" ><a 
+ href="#PrTx390013"  name="PrTx390015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390005"  name="QPrTx1423"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">colortbl</span></a><a 
+ name="PrTx390016"  href="#PrTx390018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\global\let\CT@do@color=\relax}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\CT@@do@color=\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 27629--><p class="noindent" >The configuration:
+</p>
+      <!--l. 27640--><p class="indent" ><a 
+ href="#PrTx390015"  name="PrTx390017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx390005"  name="QPrTx1424"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">colortbl</span></a><a 
+ name="PrTx390018"  href="tex4ht-4htSu120.html#PrTx391002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\::maketitle=\o:maketitle:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\o:maketitle:{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@classz}{4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{@classz}{}{}{}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\::maketitle</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 27644--><p class="noindent" >Don&#8217;t <span 
+class="cmtt-10">\CT@setup</span>, <span 
+class="cmtt-10">\CT@row@color</span>, and <span 
+class="cmtt-10">\CT@do@color </span>need also a treatment similar to <span 
+class="cmtt-10">\CT@column@color</span>?
+
+</p>
+    <!--l. 27770--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu120.html" >next</a>] [<a 
+ href="tex4ht-4htSe198.html" >prev</a>] [<a 
+ href="tex4ht-4htSe198.html#tailtex4ht-4htSe198.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe199.html" >front</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe199.html" >up</a>] </p></div>
+<!--l. 27770--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe199.html"></a> </p> 
+</body></html> 

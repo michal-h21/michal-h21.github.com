@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Interpretation for the Entries</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-html32.tex"> 
+<meta name="date" content="2014-05-24 11:52:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-html32.css"> 
+</head><body 
+>
+   <!--l. 5010--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html32se49.html" >next</a>] [<a 
+ href="tex4ht-html32se47.html" >prev</a>] [<a 
+ href="tex4ht-html32se47.html#tailtex4ht-html32se47.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-html32se48.html">tail</a>] [<a 
+ href="tex4ht-html32ch4.html#tex4ht-html32se48.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">4.45   </span> <a 
+ href="tex4ht-html32.html#QQ2-55-74"  id="x55-740004.45">Interpretation for the Entries</a></h3>
+   <div class="sectionTOCS">
+   </div>
+<!--l. 5015--><p class="indent" >   Use <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\</span><span 
+class="cmtt-10">&#x00A0;</span></span></span>, and not <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">~</span></span></span>, in style files, because some users redefine the latter
+macro.
+
+   <p></p><div class="ShowCode" id="ShowCode-269"><div class="head">
+       <a 
+ id="PrTx74001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-html32se11.html#PrTx29003"  id="QPrTx269"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;tocs</span></a><a 
+ id="PrTx74002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tocpart#1#2#3{\par\toc:SPAN{partToc}{#2}\par}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\toclikepart#1#2#3{\par\toc:SPAN{likepartToc}{#2}\par}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;@chapter\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{sectionToc}{\def\:temp{#1}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesection#1#2#3{\par\toc:SPAN{likesectionToc}{#2}\par}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubsection#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subsection}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubsection#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubsectionToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubsubsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subsubsection}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubsubsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubsubsectionToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocparagraph#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{paragraph}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikeparagraph#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likeparagraphToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubparagraph#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subparagraph}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubparagraph#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubparagraphToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocchapter#1#2#3{\par\toc:SPAN{chapterToc}{#1</span><span 
+class="cmtt-10">&#x00A0;#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikechapter#1#2#3{\par\toc:SPAN{likechapterToc}{#2}\par}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocappendix#1#2#3{\par\toc:SPAN{appendixToc}{#1</span><span 
+class="cmtt-10">&#x00A0;#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsection#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{section}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesection#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesectionToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubsection#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subsection}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubsectionToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubsubsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subsubsection}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubsubsection#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubsubsectionToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocparagraph#1#2#3{\par\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{paragraph}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikeparagraph#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likeparagraphToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\tocsubparagraph#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:num{subparagraph}{#1}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\toclikesubparagraph#1#2#3{\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\</span><span 
+class="cmtt-10">&#x00A0;\toc:SPAN{likesubparagraphToc}{#2}\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\toc:num#1#2#3{\def\:temp{#1#2}\toc:SPAN{#1Toc}{\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#2</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;#3}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\toc:SPAN#1#2{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="#1"&#x003E;}#2\HCode{&#x003C;/span&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 5071--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html32se49.html" >next</a>] [<a 
+ href="tex4ht-html32se47.html" >prev</a>] [<a 
+ href="tex4ht-html32se47.html#tailtex4ht-html32se47.html" >prev-tail</a>] [<a 
+ href="tex4ht-html32se48.html" >front</a>] [<a 
+ href="tex4ht-html32ch4.html#tex4ht-html32se48.html" >up</a>] </p></div>
+<!--l. 5071--><p class="indent" >   <a 
+  id="tailtex4ht-html32se48.html"></a>  
+</body></html> 

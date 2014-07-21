@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Place Paragraphs into List Items</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="tex4ht-xhtmml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-xhtmml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 307--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-xhtmml-xtpipessu4.html" >next</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu2.html" >prev</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu2.html#tailtex4ht-xhtmml-xtpipessu2.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-xhtmml-xtpipessu3.html">tail</a>] [<a 
+ href="tex4ht-xhtmml-xtpipesse4.html#tex4ht-xhtmml-xtpipessu3.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">4.3   </span> <a 
+  id="x9-80004.3"></a>Place Paragraphs into List Items</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-18"><div class="head">
+       <a 
+ id="PrTx8001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-xhtmml-xtpipessu1.html#PrTx6009"  id="QPrTx18"><span 
+class="cmtt-10">insert</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;node</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;first</span><span 
+class="cmtt-10">&#x00A0;child</span></a><a 
+ id="PrTx8002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;liNode.hasChildNodes()</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liNode.insertBefore(</span><span 
+class="cmtt-10">&#x00A0;g,</span><span 
+class="cmtt-10">&#x00A0;liNode.getFirstChild()</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liNode.appendChild(</span><span 
+class="cmtt-10">&#x00A0;g</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-19"><div class="head">
+       <a 
+ id="PrTx8003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-xhtmml-xtpipessu2.html#PrTx7005"  id="QPrTx19"><span 
+class="cmtt-10">insert</span><span 
+class="cmtt-10">&#x00A0;p</span><span 
+class="cmtt-10">&#x00A0;node</span><span 
+class="cmtt-10">&#x00A0;after</span><span 
+class="cmtt-10">&#x00A0;block</span><span 
+class="cmtt-10">&#x00A0;node</span></a><a 
+ id="PrTx8004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;g.hasChildNodes()</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;nextChild</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;liChild.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;nextChild</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liNode.appendChild(</span><span 
+class="cmtt-10">&#x00A0;g</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liNode.insertBefore(</span><span 
+class="cmtt-10">&#x00A0;g,</span><span 
+class="cmtt-10">&#x00A0;nextChild</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;g</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;((Document)</span><span 
+class="cmtt-10">&#x00A0;dom).createElement("p");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;g.setAttribute("class",</span><span 
+class="cmtt-10">&#x00A0;"noindent");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 335--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-xhtmml-xtpipessu4.html" >next</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu2.html" >prev</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu2.html#tailtex4ht-xhtmml-xtpipessu2.html" >prev-tail</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu3.html" >front</a>] [<a 
+ href="tex4ht-xhtmml-xtpipesse4.html#tex4ht-xhtmml-xtpipessu3.html" >up</a>] </p></div>
+<!--l. 335--><p class="indent" >   <a 
+  id="tailtex4ht-xhtmml-xtpipessu3.html"></a> </p> 
+</body></html> 

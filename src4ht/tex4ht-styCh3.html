@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Html Environment</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 1663--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh4.html" >next</a>] [<a 
+ href="tex4ht-styCh2.html" >prev</a>] [<a 
+ href="tex4ht-styCh2.html#tailtex4ht-styCh2.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh3.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh3.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter        3<br /><a 
+ href="tex4ht-sty.html#QQ2-4-25"  name="QQ1-4-25">Html        Environment</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.1&#x00A0;<a 
+ href="#QQ1-4-26"  name="QQ2-4-26">Initiating</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.2&#x00A0;<a 
+ href="#QQ1-4-27"  name="QQ2-4-27">TEX
+Parameters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.3&#x00A0;<a 
+ href="#QQ1-4-28"  name="QQ2-4-28">Paragraphs</a></span><br />
+    </div>
+    <h3 class="SectionHead">3.1 <a 
+ href="tex4ht-sty.html#QQ2-4-26"  name="QQ1-4-26">Initiating</a></h3>
+<!--l. 1668--><p class="noindent" >The <span 
+class="cmtt-10">\special{t4ht.\:html} </span>gives the extension to the root file. To be recognized, Must appear before the
+openning of any file, and outputing of any content.
+</p>
+      <!--l. 1697--><p class="indent" ><a 
+ name="PrTx26001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10003"  name="QPrTx97"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">option</span></a><a 
+ name="PrTx26002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempa#1#2#3#4</span><a 
+ name="PrTx26003"  href="tex4ht-styCh2.html#PrTx24027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26004"  href="#PrTx26006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1#2#3}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{htm}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:html{\expandafter\:tempa\:html\empty\empty</span><a 
+ name="PrTx26005"  href="#PrTx26003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26006"  href="#PrTx26010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx26033"><span 
+class="cmtt-10">base 2 names for htm</span></a><a 
+ name="PrTx26008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{htm5}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:html{\expandafter\:tempa\:html\empty\empty</span><a 
+ name="PrTx26009"  href="#PrTx26005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26010"  href="#PrTx26014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx26051"><span 
+class="cmtt-10">base 5 names for htm</span></a><a 
+ name="PrTx26012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{htm4}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:html{\expandafter\:tempa\:html\empty\empty</span><a 
+ name="PrTx26013"  href="#PrTx26009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26014"  href="#PrTx26018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx26045"><span 
+class="cmtt-10">base 4 names for htm</span></a><a 
+ name="PrTx26016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{htm3}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:html{\expandafter\:tempa\:html\empty\empty</span><a 
+ name="PrTx26017"  href="#PrTx26013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26018"  href="#PrTx26030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx26039"><span 
+class="cmtt-10">base 3 names for htm</span></a><a 
+ name="PrTx26020"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{xhtml}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\j:bname=\jobname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{html}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\j:bname=\jobname</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht.\:html}</span>&#x00A0;</i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx27009"><span 
+class="cmtt-10">default html env</span></a><a 
+ name="PrTx26022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx28015"><span 
+class="cmtt-10">disregard html:par from protex</span></a><a 
+ name="PrTx26024"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx26025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh19.html#PrTx198001"><span 
+class="cmtt-10">html TeX4ht protex</span></a><a 
+ name="PrTx26026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1709--><p class="noindent" ><a 
+ href="tex4ht-styCh1.html#PrTx16015"  name="PrTx26027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx2013"  name="QPrTx98"><span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">pass</span></a><a 
+ name="PrTx26028"  href="#PrTx28010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{ext}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1ext=##2,##3</span><a 
+ name="PrTx26029"  href="#PrTx26017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26030"  href="#PrTx26032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">!##2!\edef\:html{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\edef\:html{##2}\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp\Preamble</span>&#x00A0;<span 
+class="cmtt-10">,ext=,</span><a 
+ name="PrTx26031"  href="#PrTx26029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26032"  href="#PrTx26036"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{ext}{html}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1714--><p class="noindent" ><a 
+ name="PrTx26033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26007"  name="QPrTx99"><span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">names</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">htm</span></a><a 
+ name="PrTx26034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3</span><a 
+ name="PrTx26035"  href="#PrTx26031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26036"  href="#PrTx26038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\j:bname{#1\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#2\else</span>&#x00A0;<span 
+class="cmtt-10">#2\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\jobname</span>&#x00A0;<span 
+class="cmtt-10">?</span><a 
+ name="PrTx26037"  href="#PrTx26035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26038"  href="#PrTx26042"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1720--><p class="noindent" ><a 
+ name="PrTx26039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26019"  name="QPrTx100"><span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">3</span>&#x00A0;<span 
+class="cmtt-10">names</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">htm</span></a><a 
+ name="PrTx26040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3#4</span><a 
+ name="PrTx26041"  href="#PrTx26037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26042"  href="#PrTx26044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\j:bname{#1\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#2\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#3\else</span>&#x00A0;<span 
+class="cmtt-10">#3\fi\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\jobname</span>&#x00A0;<span 
+class="cmtt-10">??</span><a 
+ name="PrTx26043"  href="#PrTx26041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26044"  href="#PrTx26048"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 1726--><p class="noindent" ><a 
+ name="PrTx26045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26015"  name="QPrTx101"><span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">4</span>&#x00A0;<span 
+class="cmtt-10">names</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">htm</span></a><a 
+ name="PrTx26046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3#4#5</span><a 
+ name="PrTx26047"  href="#PrTx26043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26048"  href="#PrTx26050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\j:bname{#1\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#2\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#3\else</span>&#x00A0;<span 
+class="cmtt-10">#3\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#4\else</span>&#x00A0;<span 
+class="cmtt-10">#4\fi\fi\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\jobname</span>&#x00A0;<span 
+class="cmtt-10">???</span><a 
+ name="PrTx26049"  href="#PrTx26047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26050"  href="#PrTx26054"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1733--><p class="noindent" ><a 
+ name="PrTx26051"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26011"  name="QPrTx102"><span 
+class="cmtt-10">base</span>&#x00A0;<span 
+class="cmtt-10">5</span>&#x00A0;<span 
+class="cmtt-10">names</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">htm</span></a><a 
+ name="PrTx26052"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3#4#5#6</span><a 
+ name="PrTx26053"  href="#PrTx26049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26054"  href="#PrTx26056"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\j:bname{#1\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#2\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#3\else</span>&#x00A0;<span 
+class="cmtt-10">#3\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#4\else</span>&#x00A0;<span 
+class="cmtt-10">#4\ifx</span>&#x00A0;<span 
+class="cmtt-10">?#5\else</span>&#x00A0;<span 
+class="cmtt-10">#5\fi\fi\fi\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\jobname</span>&#x00A0;<span 
+class="cmtt-10">????</span><a 
+ name="PrTx26055"  href="#PrTx26053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx26056"  href="tex4ht-styCh4.html#PrTx37026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">3.2 <a 
+ href="tex4ht-sty.html#QQ2-4-27"  name="QQ1-4-27"><span class="TEX">T<span 
+class="E">E</span>X</span> Parameters</a></h3>
+<!--l. 1743--><p class="noindent" ><span 
+class="cmtt-10">\html:rightskip </span>is already defined in AlProTex, but we need it early here.
+</p>
+      <!--l. 1755--><p class="indent" ><a 
+ name="PrTx27001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx27011"  name="QPrTx103"><span 
+class="cmtt-10">def /HtmlEnv</span></a><a 
+ name="PrTx27002"  href="#PrTx27006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:rightskip{\rightskip=\z@</span>&#x00A0;<span 
+class="cmtt-10">plus</span>&#x00A0;<span 
+class="cmtt-10">0.5\hsize</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">minus0.5\hsize</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HtmlEnv{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\html:rightskip</span>&#x00A0;&#x00A0;<a 
+ name="PrTx27003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx27007"><span 
+class="cmtt-10">html penalties</span></a><a 
+ name="PrTx27004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\magnification{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{\:warning{Insert</span>&#x00A0;<span 
+class="cmtt-10">\string\magnification</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=\the\tmp:cnt\space</span>&#x00A0;<span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">tex4ht}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\afterassignment\:temp\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar{\HtmlPar}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\HtmlPar=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1759--><p class="noindent" >The <span 
+class="cmtt-10">\output </span>variable might hold a script with a <span 
+class="cmtt-10">\par</span>, as is the case in LaTeX.
+</p>
+      <!--l. 1768--><p class="indent" ><a 
+ href="#PrTx27001"  name="PrTx27005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx27011"  name="QPrTx104"><span 
+class="cmtt-10">def /HtmlEnv</span></a><a 
+ name="PrTx27006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\output={\noexpand\SaveEverypar</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\ht:everypar{}\the\output</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\RecallEverypar}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1768--><p class="noindent" >¿
+</p><!--l. 1775--><p class="indent" >    Inhibit streching and shrinking of spaces between words to help tex4ht, and let flexibility in line length to
+compensate for fixed spaces and discouraged word breaks.
+</p>
+      <!--l. 1799--><p class="indent" ><a 
+ name="PrTx27007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx27003"  name="QPrTx105"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">penalties</span></a><a 
+ name="PrTx27008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\frenchspacing</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">extra</span>&#x00A0;<span 
+class="cmtt-10">space</span>&#x00A0;<span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">punctuation</span>&#x00A0;<span 
+class="cmtt-10">marks</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\nonfrenchspacing=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\spaceskip=\z@</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">override</span>&#x00A0;<span 
+class="cmtt-10">inter</span>&#x00A0;<span 
+class="cmtt-10">word</span>&#x00A0;<span 
+class="cmtt-10">glue</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xspaceskip=\z@</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">same</span>&#x00A0;<span 
+class="cmtt-10">but</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">words</span>&#x00A0;<span 
+class="cmtt-10">ending</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">punctuation</span>&#x00A0;<span 
+class="cmtt-10">marks</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\linepenalty=0</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">charged</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">each</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">break</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\adjdemerits=0</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">charged</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">adj</span>&#x00A0;<span 
+class="cmtt-10">lines</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">diff</span>&#x00A0;<span 
+class="cmtt-10">length</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pretolerance=10000</span>&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">max</span>&#x00A0;<span 
+class="cmtt-10">penalty</span>&#x00A0;<span 
+class="cmtt-10">pts</span>&#x00A0;<span 
+class="cmtt-10">per</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">without</span>&#x00A0;<span 
+class="cmtt-10">hyphenation</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\hyphenpenalty=10000</span>&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">within</span>&#x00A0;<span 
+class="cmtt-10">word</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\exhyphenpenalty=10000</span><i><span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">hyphen</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\clubpenalty=0</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">parag</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\widowpenalty=0</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">last</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">parag</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\interlinepenalty=50</span>&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">within</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">paragraph</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\displaywidowpenalty=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\predisplaypenalty=-10</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\postdisplaypenalty=1000</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\abovedisplayskip=30pt</span>&#x00A0;<span 
+class="cmtt-10">plus</span>&#x00A0;<span 
+class="cmtt-10">10pt</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\belowdisplayskip=\abovedisplayskip</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\abovedisplayshortskip=\abovedisplayskip</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\belowdisplayshortskip=\abovedisplayskip</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1801--><p class="noindent" >We don&#8217;t want a page break after a display, because the <span 
+class="cmtt-10">\aftergroup </span>material for the equation may be detached
+from the equation. A possible prolem for math into figures.
+</p>
+      <!--l. 1841--><p class="indent" ><a 
+ name="PrTx27009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26021"  name="QPrTx106"><span 
+class="cmtt-10">default</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">env</span></a><a 
+ name="PrTx27010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx27011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx27001"><span 
+class="cmtt-10">def /HtmlEnv</span></a><a 
+ name="PrTx27012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\meaning\everypar}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{\string\everypar}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\ht:everypar=\everypar</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{nonprimitive</span>&#x00A0;<span 
+class="cmtt-10">\string\everypar}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\NoHtmlEnv{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\.3000</span>&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">nonfrenchspacing</span></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\?3000</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\!3000</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\:2000</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\;1500</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sfcode</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\noexpand\noexpand\noexpand\,1250</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\rightskip=\the\rightskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\spaceskip=\the\spaceskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xspaceskip=\the\xspaceskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\linepenalty=\the\linepenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\adjdemerits=\the\adjdemerits</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pretolerance=\the\pretolerance</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyphenpenalty=\the\hyphenpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\exhyphenpenalty=\the\exhyphenpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\clubpenalty=\the\clubpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\widowpenalty=\the\widowpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\interlinepenalty=\the\interlinepenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\displaywidowpenalty=\the\displaywidowpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\predisplaypenalty=\the\predisplaypenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\postdisplaypenalty=\the\postdisplaypenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\abovedisplayskip=\the\abovedisplayskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\belowdisplayskip=\the\belowdisplayskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\abovedisplayshortskip=\the\abovedisplayshortskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\belowdisplayshortskip=\the\belowdisplayshortskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\ht:everypar{\noexpand\the\noexpand\ht:everypar}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1847--><p class="noindent" ><a 
+ name="PrTx27013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50005"  name="QPrTx107"><span 
+class="cmtt-10">activate html env</span></a><a 
+ name="PrTx27014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\NoHtmlEnv{\NoHtmlEnv}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\NoHtmlEnv{\SUBOff</span>&#x00A0;<span 
+class="cmtt-10">\SUPOff}\HtmlEnv</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1854--><p class="noindent" ><a 
+ href="tex4ht-styCh1.html#PrTx16045"  name="PrTx27015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16013"  name="QPrTx108"><span 
+class="cmtt-10">html utilities</span></a><a 
+ name="PrTx27016"  href="#PrTx28002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:noindent=\noindent</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\noindent{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvmode</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\IgnoreIndent\leavevmode\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:noindent</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">3.3 <a 
+ href="tex4ht-sty.html#QQ2-4-28"  name="QQ1-4-28">Paragraphs</a></h3>
+<!--l. 1858--><p class="noindent" >We want to push specials at start of lines, and merge the space before and after specials.
+
+</p>
+      <!--l. 1863--><p class="indent" ><a 
+ href="#PrTx27015"  name="PrTx28001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16013"  name="QPrTx109"><span 
+class="cmtt-10">html utilities</span></a><a 
+ name="PrTx28002"  href="tex4ht-styCh4.html#PrTx33008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\skip:Par=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1880--><p class="noindent" ><a 
+ name="PrTx28003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx7005"  name="QPrTx110"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">paragraph</span>&#x00A0;<span 
+class="cmtt-10">breaks</span>&#x00A0;<span 
+class="cmtt-10">at</span>&#x00A0;<span 
+class="cmtt-10">entry</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">file</span></a><a 
+ name="PrTx28004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HtmlPar{\HtmlPar:Off{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:nopar</span>&#x00A0;<span 
+class="cmtt-10">\ShowPar</span>&#x00A0;<span 
+class="cmtt-10">\ShowIndent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\skip:Par\empty\else</span>&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;<span 
+class="cmtt-10">-\parindent</span>&#x00A0;<span 
+class="cmtt-10">\skip:Par\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:removeindent</span>&#x00A0;<span 
+class="cmtt-10">\ShowIndent</span>&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;<span 
+class="cmtt-10">-\parindent</span>&#x00A0;<span 
+class="cmtt-10">\a:Par</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\parindent&#x003E;\z@</span>&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;<span 
+class="cmtt-10">-\parindent</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\html:par</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\parindent&#x003E;\z@</span>&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\parindent</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1897--><p class="noindent" ><a 
+ href="tex4ht-styCh1.html#PrTx16051"  name="PrTx28005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16011"  name="QPrTx111"><span 
+class="cmtt-10">general</span>&#x00A0;<span 
+class="cmtt-10">utilities</span></a><a 
+ name="PrTx28006"  href="#PrTx28022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\IgnorePar{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\Protect\gl:nopartrue</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ShowPar{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\Protect\gl:noparfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\IgnoreIndent{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Protect\gl:removeindenttrue</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ShowIndent{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Protect\gl:removeindentfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gl:nopartrue{\global\:nopartrue}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gl:noparfalse{\global\:noparfalse}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gl:removeindenttrue{\global\:removeindenttrue}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gl:removeindentfalse{\global\:removeindentfalse}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HtmlParOff{\global\let\HtmlPar:Off=\:gobble}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HtmlParOn{\gdef\HtmlPar:Off##1{##1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HtmlParOn</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1906--><p class="noindent" ><a 
+ href="tex4ht-styCh1.html#PrTx13007"  name="PrTx28007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx13003"  name="QPrTx112"><span 
+class="cmtt-10">new ifs</span></a><a 
+ name="PrTx28008"  href="tex4ht-styCh19.html#PrTx200002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa{if:removeindent}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa{if:nopar}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1924--><p class="noindent" ><a 
+ href="#PrTx26027"  name="PrTx28009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx2013"  name="QPrTx113"><span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">pass</span></a><a 
+ name="PrTx28010"  href="#PrTx28014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:HtmlPar:#1#2#3#4{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\c:def\a:Par{#1}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\a:Par{#1\Next:EndP{#3}}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#4}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\c:def\html:par{#2}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\html:par{#2\Next:EndP{#4}}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndP{\Protect\par:end}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\par:end=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Next:EndP{\Protect\next:endp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\next:endp#1{\gdef\par:end{#1\global\let\par:end=\empty}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\SaveHtmlPar{\PushMacro\a:Par</span>&#x00A0;<span 
+class="cmtt-10">\PushMacro\html:par}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RecallHtmlPar{\PopMacro\a:Par</span>&#x00A0;<span 
+class="cmtt-10">\PopMacro\html:par}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1927--><p class="noindent" >The following is neded for debugging, to detect skipped paragraps. Delete it, or just make it active for debugging
+mode!!!!!
+</p>
+      <!--l. 1935--><p class="indent" ><a 
+ name="PrTx28011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx114"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx28012"  href="tex4ht-styCh6.html#PrTx57014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HtmlPar*}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\c:def\skip:Par{#1}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\skip:Par{#1\Next:EndP{#2}}\fi}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1951--><p class="noindent" ><a 
+ href="#PrTx28009"  name="PrTx28013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx2013"  name="QPrTx115"><span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">pass</span></a><a 
+ name="PrTx28014"  href="tex4ht-styCh5.html#PrTx46052"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gl:let{\global\let}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndP:cnt{0}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\SaveEndP{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gl:let\csname</span>&#x00A0;<span 
+class="cmtt-10">\EndP:cnt</span>&#x00A0;<span 
+class="cmtt-10">:sv\endcsname</span>&#x00A0;<span 
+class="cmtt-10">=\par:end</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gl:let\par:end=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance</span>&#x00A0;<span 
+class="cmtt-10">\EndP:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RecallEndP{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\EndP:cnt&#x003E;0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance</span>&#x00A0;<span 
+class="cmtt-10">\EndP:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\gl:let\par:end=}\csname\EndP:cnt</span>&#x00A0;<span 
+class="cmtt-10">:sv\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{extra</span>&#x00A0;<span 
+class="cmtt-10">\string\RecallEndP}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1955--><p class="noindent" ><a 
+ name="PrTx28015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx26023"  name="QPrTx116"><span 
+class="cmtt-10">disregard</span>&#x00A0;<span 
+class="cmtt-10">html:par</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx28016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\html:par\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\html:par=\empty</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1957--><p class="noindent" >User&#8217;s input, and the following in case of no such input, determine how files will initially treat paragraphs.
+</p><!--l. 1965--><p class="indent" >    Display math formulas can be in-line or between paragraph. The &#8220;.nopar&#8221; is for forced paragraph starts after
+the end of in-line display paragraphs. HTML 4.0 requires opening of such paragraphs.
+</p>
+      <!--l. 1974--><p class="indent" ><a 
+ name="PrTx28017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx28017"  name="QPrTx117"><span 
+class="cmtt-10">html paragraph breaks at entry to fileNO</span></a><a 
+ name="PrTx28018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HtmlPar}{\sva:Par}{\svhtml:par}</span>&#x00A0;<span 
+class="cmtt-10">{}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1981--><p class="noindent" ><a 
+ name="PrTx28019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx28019"  name="QPrTx118"><span 
+class="cmtt-10">empty html paragraph breaks</span></a><a 
+ name="PrTx28020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HtmlPar}{}{}{}{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2017--><p class="noindent" ><a 
+ href="#PrTx28005"  name="PrTx28021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16011"  name="QPrTx119"><span 
+class="cmtt-10">general</span>&#x00A0;<span 
+class="cmtt-10">utilities</span></a><a 
+ name="PrTx28022"  href="tex4ht-styCh4.html#PrTx31008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\SaveEverypar{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">ht:everypar\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter\gdef\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">L\endcsname</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter{\expandafter\everypar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter{\the\everypar}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter\gdef\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">L\endcsname</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter{\expandafter\ht:everypar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter{\the\ht:everypar}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\xdef\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">X\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:removeindent</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\noexpand\:removeindenttrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\noexpand\:removeindentfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:nopar</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\noexpand\:nopartrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\noexpand\:noparfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HtmlEnv</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">X\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">L\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\n:list</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RecallEverypar{\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\n:list&#x003C;1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\noexpand\RecallEverypar</span>&#x00A0;<span 
+class="cmtt-10">without</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\SaveEverypar}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HtmlEnv</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\n:list</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">X\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\n:list</span>&#x00A0;<span 
+class="cmtt-10">L\endcsname</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\n:list{0}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 2023--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh4.html" >next</a>] [<a 
+ href="tex4ht-styCh2.html" >prev</a>] [<a 
+ href="tex4ht-styCh2.html#tailtex4ht-styCh2.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh3.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh3.html" >up</a>] </p></div>
+<!--l. 2023--><p class="indent" >    <a 
+  name="tailtex4ht-styCh3.html"></a>  </p> 
+</body></html> 

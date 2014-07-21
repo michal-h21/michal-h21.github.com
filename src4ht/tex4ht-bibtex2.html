@@ -1,0 +1,74 @@
+&#x22B3;&#x22B3; TeX4ht copyright &#x22B2;&#x22B2;
+                  %
+                  % This work may be distributed and/or modified under the
+                  % conditions of the LaTeX Project Public License, either
+                  % version 1.3c of this license or (at your option) any
+                  % later version. The latest version of this license is in
+                  %   http://www.latex-project.org/lppl.txt
+                  % and version 1.3c or later is part of all distributions
+                  % of LaTeX version 2005/12/01 or later.
+                  %
+                  % This work has the LPPL maintenance status "maintained".
+                  %
+                  % The Current Maintainer of this work
+                  % is the TeX4ht Project &#x003C;http://tug.org/tex4ht&#x003E;.
+                  %
+                  % If you modify this program, changing the
+                  % version identification would be appreciated.
+                                           &#x25C7;&#x25C7;&#x25C7;
+                                 &#x22B3;&#x22B3; TeX4ht copywrite &#x22B2;&#x22B2;
+                  &#x22B2;&#x22B2; TeX4ht copyright &#x22B3;&#x22B3;
+                  \immediate\write-1{version 2014-07-21-21:48}
+                                           &#x25C7;&#x25C7;&#x25C7;
+                                    &#x22B3;&#x22B3; bibtex2.4ht &#x22B2;&#x22B2;
+                  % bibtex2.4ht (2014-07-21-21:48), generated from tex4ht-bibtex2.tex
+                  % Copyright (C) 2009-2010 TeX Users Group
+                  % Copyright (C) 2001-2009 Eitan M. Gurari
+                  &#x22B2;&#x22B2; TeX4ht copywrite &#x22B3;&#x22B3;
+                  \catcode&#8216;\/=0
+                  \catcode&#8216;\\=12
+                  /edef/bibstyle{\bibstyle}
+                  /catcode&#8216;/\=0
+                  /catcode&#8216;//=12
+                  \catcode&#8216;\&amp;=12
+                  \def\get{%
+                    \immediate\read15 to \line
+                    \ifeof15 \else
+                       \expandafter\scan\line @@@@@@@@@&amp;&amp;&amp;&amp;
+                       \expandafter\get
+                    \fi
+                  }
+                  \def\scan#1#2#3#4#5#6#7#8#9{\def\first{#1#2#3#4#5#6#7#8#9}\put}
+                  \def\put#1&amp;&amp;&amp;&amp;{%
+                                            1
+
+                      \immediate\write15{\ifx \first\bibstyle
+                             \ifx \style\empty \line \else \bibstyle{\style}\fi
+                          \else  \line\fi}}
+                  \newcount\c
+                  \def\Cats#1#2#3{\edef\temp{\the\c}%
+                    \c=#3
+                    \def\next{\catcode\c=#1
+                      \ifnum \c=#2 \let\next=\relax \fi
+                      \advance\c by  -1 \next}\next
+                    \c=\temp  }
+                  \def\jaux#1#2{%
+                    \bgroup
+                      \def\style{#2}%
+                      \immediate\openin15=#1.aux
+                      \ifeof15 \else
+                        \Cats{12}{0}{255}%
+                        \Cats{11}{65}{90}%
+                        \Cats{11}{97}{122}%
+                        \catcode&#8216;\^^M=5
+                        \immediate\openout15=#1j.aux
+                        \get
+                        \immediate\write15{}
+                        \closeout15
+                      \fi
+                    \egroup
+                  }
+                                           &#x25C7;&#x25C7;&#x25C7;
+                                            2
+
+

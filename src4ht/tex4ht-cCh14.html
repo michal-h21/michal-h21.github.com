@@ -1,0 +1,1769 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Math Classes for Symbols</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <!--l. 12479--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh15.html" >next</a>] [<a 
+ href="tex4ht-cCh13.html" >prev</a>] [<a 
+ href="tex4ht-cCh13.html#tailtex4ht-cCh13.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-cCh14.html">tail</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh14.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 14<br /><a 
+ href="tex4ht-c.html#QQ2-30-192"  name="QQ1-30-192">Math Classes for Symbols</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.1&#x00A0;<a 
+ href="#QQ1-30-193"  name="QQ2-30-193">Scanning Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.2&#x00A0;<a 
+ href="#QQ1-30-194"  name="QQ2-30-194">Setting
+Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.3&#x00A0;<a 
+ href="#QQ1-30-195"  name="QQ2-30-195">Memory and Initialization</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.4&#x00A0;<a 
+ href="#QQ1-30-196"  name="QQ2-30-196">Delimiters Over Next
+Group</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-30-197"  name="QQ2-30-197">Requests</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-30-198"  name="QQ2-30-198">Insertions</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-30-199"  name="QQ2-30-199">Memory                     and
+Initialization</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.5&#x00A0;<a 
+ href="#QQ1-30-200"  name="QQ2-30-200">Delimiters Over Next Character</a></span><br />
+    </div>
+<!--l. 12482--><p class="indent" >    Tex assignes class numbers 0&#8211;7 to the atoms of math formulas: 0&#8211;ordinary symbol, 1&#8211;large operator, 2&#8211;binary
+operation, 3&#8211;relational operation, 4&#8211;math delimiter, 5&#8211;right delimiter, 6&#8211;punctuation mark, and 7&#8211;adjustable. We
+use classes 7, 8, 9 as extra free ones.
+</p>
+    <h3 class="SectionHead">14.1 <a 
+ href="tex4ht-c.html#QQ2-30-193"  name="QQ1-30-193">Scanning Requests</a></h3>
+<!--l. 12493--><p class="noindent" >&#8216;<span 
+class="cmtt-10">{\everypar{}\special{t4ht^i}$sym... i=0, 1, 2, 3, 4,..., a, b, ...., ~ $\special{t4ht^}}</span>&#8217;
+</p><!--l. 12497--><p class="indent" >    A right delimiter immediately after a math openimiter ammuses a matching pair.
+</p><!--l. 12500--><p class="indent" >
+</p><ul >
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^i}</span>&#8217; - on class i-&#8217;0&#8217; (i=&#8217;0&#8217;, &#8217;1&#8217;, ..., &#8216;<span 
+class="cmtt-10">~</span>&#8217; </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^-}</span>&#8217;&#8211;pause from processing delimiters </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^+}</span>&#8217;&#8211;continue processing delimiters </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^}</span>&#8217;&#8211;off, if in scan-mode of class values. on/off show-class, otherwise </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^i*...*...}</span>&#8217;&#8212;Configure delimiters for class i </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^ix}</span>&#8217;&#8211;put delimiters of class i on next group. If x=&#8216;<span 
+class="cmtt-10">&#x003E;</span>&#8217; ignore delimiters within the group.
+</li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^i)*...*...}</span>&#8217;&#8211;put the specified delimiters of class on next group, instead of the default ones.
+Ignore delimiters within the group. </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht^i(*...*...}</span>&#8217;&#8211;put the specified delimiters of class on next group, instead of the default ones.
+Don&#8217;t ignore delimiters within the group. </li></ul>
+      <!--l. 12544--><p class="indent" ><a 
+ name="PrTx193001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh4.html#PrTx48055"><span 
+class="cmtt-10">classes</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">symbols</span></a><a 
+ name="PrTx193002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">special_n</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">0:{</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">math_class_on</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">open_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">256;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">pause_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class_on</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;&#x00A0;<a 
+ name="PrTx193003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx193019"><span 
+class="cmtt-10">recall intrusive flags</span></a><a 
+ name="PrTx193004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">!show_class;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">1:{</span>&#x00A0;<a 
+ name="PrTx193005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx193017"><span 
+class="cmtt-10">save intrusive flags</span></a><a 
+ name="PrTx193006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">special_n--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_class(1))</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<a 
+ name="PrTx193007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx193008"  href="#PrTx193026"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">math_class_on</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">2:{</span>&#x00A0;&#x00A0;<a 
+ name="PrTx193009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx197001"><span 
+class="cmtt-10">class delimiters on group</span></a><a 
+ name="PrTx193010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:{</span>&#x00A0;<a 
+ name="PrTx193011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx194013"><span 
+class="cmtt-10">set config class dels</span></a><a 
+ name="PrTx193012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12553--><p class="noindent" ><a 
+ href="tex4ht-cCh13.html#PrTx191015"  name="PrTx193013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx193014"  href="#PrTx193016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">math_class_on</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE,</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">open_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">256,</span>&#x00A0;<span 
+class="cmtt-10">math_class,</span>&#x00A0;<span 
+class="cmtt-10">pause_class,</span>&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12555--><p class="noindent" >&#8216;<span 
+class="cmtt-10">open_del</span>&#8217; is used by close delimiter, if they are immediate neighbors.
+
+</p>
+      <!--l. 12561--><p class="indent" ><a 
+ href="#PrTx193013"  name="PrTx193015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx193016"  href="#PrTx195002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">sv_group_dvi,</span>&#x00A0;<span 
+class="cmtt-10">sv_trace_dvi_C,</span>&#x00A0;<span 
+class="cmtt-10">sv_in_trace_char,</span>&#x00A0;<span 
+class="cmtt-10">sv_span_on,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">sv_in_span_ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12569--><p class="noindent" ><a 
+ name="PrTx193017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193005"><span 
+class="cmtt-10">save</span>&#x00A0;<span 
+class="cmtt-10">intrusive</span>&#x00A0;<span 
+class="cmtt-10">flags</span></a><a 
+ name="PrTx193018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_group_dvi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">group_dvi;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_trace_dvi_C</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">trace_dvi_C;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_in_trace_char</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">in_trace_char;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_span_on</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">span_on;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">sv_in_span_ch</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">in_span_ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12578--><p class="noindent" ><a 
+ name="PrTx193019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193003"><span 
+class="cmtt-10">recall</span>&#x00A0;<span 
+class="cmtt-10">intrusive</span>&#x00A0;<span 
+class="cmtt-10">flags</span></a><a 
+ name="PrTx193020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">group_dvi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_group_dvi;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">trace_dvi_C</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_trace_dvi_C;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">in_trace_char</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_in_trace_char;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">span_on</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_span_on;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">in_span_ch</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">sv_in_span_ch;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12588--><p class="noindent" ><a 
+ href="tex4ht-cCh13.html#PrTx190007"  name="PrTx193021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx193022"  href="#PrTx194002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">scan_class(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12619--><p class="noindent" ><a 
+ href="tex4ht-cCh13.html#PrTx190009"  name="PrTx193023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx193024"  href="#PrTx194004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">scan_class</span><strong><span 
+class="cmtt-10">(</span></strong>&#x00A0;<span 
+class="cmtt-10">flag</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">flag</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">math_class;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<a 
+ name="PrTx193025"  href="#PrTx193007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx193026"  href="#PrTx193028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">-=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;0&#8217;;</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">flag==</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;-&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ name="PrTx193027"  href="#PrTx193025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx193028"  href="#PrTx193030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">pause_class++;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<span 
+class="cmtt-10">&#8217;+&#8217;:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ name="PrTx193029"  href="#PrTx193027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx193030"  href="#PrTx195018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">pause_class--;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">flag==</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx193031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195011"><span 
+class="cmtt-10">ignore sub dels ch</span></a><a 
+ name="PrTx193032"  href="#PrTx197004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ name="PrTx193033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195015"><span 
+class="cmtt-10">ignore sub dels val</span></a><a 
+ name="PrTx193034"  href="#PrTx197008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ name="PrTx193035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195013"><span 
+class="cmtt-10">end ignore sub dels ch</span></a><a 
+ name="PrTx193036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ name="PrTx193037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195019"><span 
+class="cmtt-10">end ignore sub dels val</span></a><a 
+ name="PrTx193038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">math_class;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.2 <a 
+ href="tex4ht-c.html#QQ2-30-194"  name="QQ1-30-194">Setting Requests</a></h3>
+           <!--l. 12628--><p class="noindent" ><a 
+ href="#PrTx193021"  name="PrTx194001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx194002"  href="#PrTx194028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">set_ch_class(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 12646--><p class="noindent" ><a 
+ href="#PrTx193023"  name="PrTx194003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx194004"  href="#PrTx194030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">INTEGER</span>&#x00A0;<span 
+class="cmtt-10">set_ch_class</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">ch)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">ch</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">r_ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">r_ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].char_f;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<a 
+ name="PrTx194005"  href="tex4ht-cCh8.html#PrTx108009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh8.html#PrTx108011"><span 
+class="cmtt-10">math close</span></a><a 
+ name="PrTx194006"  href="#PrTx194032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">store_bit_I(</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].math_closing,</span>&#x00A0;<span 
+class="cmtt-10">r_ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(font_tbl[cur_fnt].math</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">r_ch)</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(char)</span>&#x00A0;<span 
+class="cmtt-10">((open_del</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">256)?</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">open_del);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">store_bit_Z(</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].math_closing,</span>&#x00A0;<span 
+class="cmtt-10">r_ch</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(font_tbl[cur_fnt].math</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">r_ch)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">math_class;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">open_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<a 
+ name="PrTx194007"  href="tex4ht-cCh8.html#PrTx108007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh8.html#PrTx108013"><span 
+class="cmtt-10">math open</span></a><a 
+ name="PrTx194008"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">)?</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">256;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx194009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh10.html#PrTx152001"><span 
+class="cmtt-10">return char width</span></a><a 
+ name="PrTx194010"  href="tex4ht-cCh17.html#PrTx243010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12650--><p class="noindent" ><a 
+ name="PrTx194011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh3.html#PrTx35015"><span 
+class="cmtt-10">set-ch-class(ch-1)</span></a><a 
+ name="PrTx194012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">set_ch_class(ch_1)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12674--><p class="noindent" ><a 
+ name="PrTx194013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193011"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">dels</span></a><a 
+ name="PrTx194014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">str[256],</span>&#x00A0;<span 
+class="cmtt-10">*p,</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">**q;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_class(2);</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">special_n</span>&#x00A0;<span 
+class="cmtt-10">-=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">str;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">special_n--</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(*(p++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char())</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">p--;</span>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<a 
+ name="PrTx194015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195007"><span 
+class="cmtt-10">math classes 0..78</span></a><a 
+ name="PrTx194016"  href="#PrTx194020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)?</span>&#x00A0;<span 
+class="cmtt-10">&amp;(</span><a 
+ name="PrTx194017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx197011"><span 
+class="cmtt-10">push class del := ...</span></a><a 
+ name="PrTx194018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">&amp;(open_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">open_class[math_class],</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">strlen((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">str));</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">strcpy((char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">*q,</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">str);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<a 
+ name="PrTx194019"  href="#PrTx194015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195007"><span 
+class="cmtt-10">math classes 0..78</span></a><a 
+ name="PrTx194020"  href="#PrTx194024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">?</span>&#x00A0;<span 
+class="cmtt-10">&amp;(</span><a 
+ name="PrTx194021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx197009"><span 
+class="cmtt-10">pop class del := ...</span></a><a 
+ name="PrTx194022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;(close_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">*q</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">r_alloc((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">*q,</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">(size_t)</span>&#x00A0;<span 
+class="cmtt-10">special_n);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">special_n--</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">*(p++)</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">get_char();</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*p</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<a 
+ name="PrTx194023"  href="#PrTx194019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195007"><span 
+class="cmtt-10">math classes 0..78</span></a><a 
+ name="PrTx194024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">){</span>&#x00A0;<a 
+ name="PrTx194025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx197005"><span 
+class="cmtt-10">next delimiters on group</span></a><a 
+ name="PrTx194026"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12677--><p class="noindent" >When &#8216;<span 
+class="cmtt-10">math_class &#x003E; max math class</span>&#8217; is true, the delimiters are placed on the next group. In such a case a math
+class of &#8216;<span 
+class="cmtt-10">)</span>&#8217; also requests that no subdelimiter will be placed there.
+</p>
+      <!--l. 12683--><p class="indent" ><a 
+ href="#PrTx194001"  name="PrTx194027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10009"><span 
+class="cmtt-10">header functions</span></a><a 
+ name="PrTx194028"  href="tex4ht-cCh15.html#PrTx205002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">math_class_of(</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(int,int)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12694--><p class="noindent" ><a 
+ href="#PrTx194003"  name="PrTx194029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10011"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx194030"  href="tex4ht-cCh15.html#PrTx204004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">math_class_of</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">ch,cur_fnt)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">ch</span><strong><span 
+class="cmtt-10">;</span></strong>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">cur_fnt</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">math_class;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].char_f;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">((get_bit(</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].math_closing,</span>&#x00A0;<span 
+class="cmtt-10">math_class))?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx194031"  href="#PrTx194005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-cCh8.html#PrTx108011"><span 
+class="cmtt-10">math close</span></a><a 
+ name="PrTx194032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">*(</span>&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[cur_fnt].math));</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.3 <a 
+ href="tex4ht-c.html#QQ2-30-195"  name="QQ1-30-195">Memory and Initialization</a></h3>
+           <!--l. 12707--><p class="noindent" ><a 
+ href="#PrTx193015"  name="PrTx195001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10007"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx195002"  href="tex4ht-cCh15.html#PrTx203002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">U_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*open_class[</span><a 
+ name="PrTx195003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195023"><span 
+class="cmtt-10">mems for math classes (79 + 2 )</span></a><a 
+ name="PrTx195004"  href="#PrTx195006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">],</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*close_class[</span><a 
+ name="PrTx195005"  href="#PrTx195003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195023"><span 
+class="cmtt-10">mems for math classes (79 + 2 )</span></a><a 
+ name="PrTx195006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">];</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12709--><p class="noindent" >There are 79 characters in the range between the digit &#8216;0&#8217; and the character &#8216;<span 
+class="cmtt-10">~</span>&#8217;.
+</p>
+      <!--l. 12714--><p class="indent" ><a 
+ name="PrTx195007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx194015"><span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">classes</span>&#x00A0;<span 
+class="cmtt-10">0..78</span></a><a 
+ name="PrTx195008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">78</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12718--><p class="noindent" ><a 
+ name="PrTx195009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193007"><span 
+class="cmtt-10">num</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">classes:</span>&#x00A0;<span 
+class="cmtt-10">79</span></a><a 
+ name="PrTx195010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">79</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12721--><p class="noindent" >The following should be characters below the digit &#8216;0&#8217;
+</p>
+      <!--l. 12725--><p class="indent" ><a 
+ name="PrTx195011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193031"><span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">sub</span>&#x00A0;<span 
+class="cmtt-10">dels</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx195012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#8217;)&#8217;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12729--><p class="noindent" ><a 
+ name="PrTx195013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193035"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">sub</span>&#x00A0;<span 
+class="cmtt-10">dels</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx195014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#8217;(&#8217;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12733--><p class="noindent" ><a 
+ name="PrTx195015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193033"><span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">sub</span>&#x00A0;<span 
+class="cmtt-10">dels</span>&#x00A0;<span 
+class="cmtt-10">val</span></a><a 
+ name="PrTx195016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(</span><a 
+ name="PrTx195017"  href="#PrTx193029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx195018"  href="#PrTx195022"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">1)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12737--><p class="noindent" ><a 
+ name="PrTx195019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193037"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">ignore</span>&#x00A0;<span 
+class="cmtt-10">sub</span>&#x00A0;<span 
+class="cmtt-10">dels</span>&#x00A0;<span 
+class="cmtt-10">val</span></a><a 
+ name="PrTx195020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(</span><a 
+ name="PrTx195021"  href="#PrTx195017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx195022"  href="#PrTx195028"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2)</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12742--><p class="noindent" ><a 
+ name="PrTx195023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx195003"><span 
+class="cmtt-10">mems</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">classes</span>&#x00A0;<span 
+class="cmtt-10">(79</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">2</span>&#x00A0;<span 
+class="cmtt-10">)</span></a><a 
+ name="PrTx195024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">82</span>&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">one</span>&#x00A0;<span 
+class="cmtt-10">extra</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">needed?</span></i>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12756--><p class="noindent" ><a 
+ href="tex4ht-cCh13.html#PrTx188039"  name="PrTx195025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh1.html#PrTx10025"><span 
+class="cmtt-10">main&#8217;s</span>&#x00A0;<span 
+class="cmtt-10">init</span></a><a 
+ name="PrTx195026"  href="tex4ht-cCh15.html#PrTx216034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">for(</span>&#x00A0;<span 
+class="cmtt-10">math_class=0;</span>&#x00A0;<span 
+class="cmtt-10">math_class&#x003C;</span><a 
+ name="PrTx195027"  href="#PrTx195021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195009"><span 
+class="cmtt-10">num of math classes: 79</span></a><a 
+ name="PrTx195028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>&#x00A0;<span 
+class="cmtt-10">math_class++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">open_class[math_class]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">close_class[math_class]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*(open_class[math_class])</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">*(close_class[math_class])</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\0&#8217;;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12763--><p class="noindent" ><a 
+ name="PrTx195029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh10.html#PrTx126011"><span 
+class="cmtt-10">entries</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">classes</span></a><a 
+ name="PrTx195030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*math,</span>&#x00A0;<span 
+class="cmtt-10">*math_closing;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12768--><p class="noindent" ><a 
+ name="PrTx195031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx157019"><span 
+class="cmtt-10">memory</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">classes</span></a><a 
+ name="PrTx195032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.math_closing</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">n_gif_bytes</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.math</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">n_gif</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12773--><p class="noindent" ><a 
+ name="PrTx195033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx157021"><span 
+class="cmtt-10">init</span>&#x00A0;<span 
+class="cmtt-10">math-closing</span></a><a 
+ name="PrTx195034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.math_closing[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12777--><p class="noindent" ><a 
+ name="PrTx195035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx157023"><span 
+class="cmtt-10">init</span>&#x00A0;<span 
+class="cmtt-10">math</span></a><a 
+ name="PrTx195036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">new_font.math[i]</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12784--><p class="noindent" ><a 
+ name="PrTx195037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx159003"><span 
+class="cmtt-10">merge</span>&#x00A0;<span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">entries</span></a><a 
+ name="PrTx195038"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.math_closing</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.math_closing</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[</span>&#x00A0;<span 
+class="cmtt-10">k</span>&#x00A0;<span 
+class="cmtt-10">].math_closing;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">free((void</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.math</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">new_font.math</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">font_tbl[</span>&#x00A0;<span 
+class="cmtt-10">k</span>&#x00A0;<span 
+class="cmtt-10">].math;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.4 <a 
+ href="tex4ht-c.html#QQ2-30-196"  name="QQ1-30-196">Delimiters Over Next Group</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-30-197"  name="QQ1-30-197">Requests</a></h3>
+
+<!--l. 12794--><p class="noindent" >&#8216;<span 
+class="cmtt-10">\special{t4ht^ix}</span>&#8217;&#8211;put delimiters of class i on next group/token. If <span 
+class="cmtt-10">x=&#8216;)&#8217; </span>ignore delimiters within the
+group.
+</p>
+      <!--l. 12807--><p class="indent" ><a 
+ name="PrTx197001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx193009"><span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">delimiters</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">group</span></a><a 
+ name="PrTx197002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">special_n</span>&#x00A0;<span 
+class="cmtt-10">-=</span>&#x00A0;<span 
+class="cmtt-10">2;</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_class(0);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(</span><a 
+ name="PrTx197003"  href="#PrTx193031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195011"><span 
+class="cmtt-10">ignore sub dels ch</span></a><a 
+ name="PrTx197004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">get_char());</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].no_left_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].class_open</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">open_class[math_class];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].class_close</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">close_class[math_class];</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12810--><p class="noindent" >&#8216;<span 
+class="cmtt-10">\special{t4ht^)x*...*...}</span>&#8217;&#8211;put the specified delimiters of class on next group, instead of the default ones. If
+<span 
+class="cmtt-10">x=&#8216;)&#8217;</span>, ignore delimiters within the group.
+</p>
+      <!--l. 12822--><p class="indent" ><a 
+ name="PrTx197005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx194025"><span 
+class="cmtt-10">next</span>&#x00A0;<span 
+class="cmtt-10">delimiters</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">group</span></a><a 
+ name="PrTx197006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(math_class</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<a 
+ name="PrTx197007"  href="#PrTx193033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx195015"><span 
+class="cmtt-10">ignore sub dels val</span></a><a 
+ name="PrTx197008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12828--><p class="noindent" ><a 
+ name="PrTx197009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx194021"><span 
+class="cmtt-10">pop</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">...</span></a><a 
+ name="PrTx197010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_close</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12832--><p class="noindent" ><a 
+ name="PrTx197011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx194017"><span 
+class="cmtt-10">push</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">...</span></a><a 
+ name="PrTx197012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_open</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-30-198"  name="QQ1-30-198">Insertions</a></h3>
+           <!--l. 12848--><p class="noindent" ><a 
+ name="PrTx198001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx106023"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">push</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span></a><a 
+ name="PrTx198002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx198003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200033"><span 
+class="cmtt-10">print open del of group class</span></a><a 
+ name="PrTx198004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n].ignore_subclass_del;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].no_left_del=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12860--><p class="noindent" ><a 
+ name="PrTx198005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx106041"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">pop</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span></a><a 
+ name="PrTx198006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">-</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n].ignore_subclass_del;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx198007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200029"><span 
+class="cmtt-10">print right del of group class</span></a><a 
+ name="PrTx198008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-30-199"  name="QQ1-30-199">Memory and Initialization</a></h3>
+           <!--l. 12874--><p class="noindent" ><a 
+ href="tex4ht-cCh8.html#PrTx114001"  name="PrTx199001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx97007"><span 
+class="cmtt-10">struct stack_entry</span></a><a 
+ name="PrTx199002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">*class_open,</span>&#x00A0;<span 
+class="cmtt-10">*class_close,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*temp_class_open,</span>&#x00A0;<span 
+class="cmtt-10">*temp_class_close;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">temp_class_del,</span>&#x00A0;<span 
+class="cmtt-10">ignore_subclass_del,</span>&#x00A0;<span 
+class="cmtt-10">active_class_del,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">no_left_del,</span>&#x00A0;<span 
+class="cmtt-10">sv_no_left_del;</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12876--><p class="noindent" >The math class can be on a group or a token. Upon reaching the <span 
+class="cmtt-10">\special</span>, the <span 
+class="cmtt-10">no_left_del </span>is set to false. Upon
+reaching to the start of the next group (not token), the flag is set to true.
+</p>
+      <!--l. 12892--><p class="indent" ><a 
+ href="tex4ht-cCh8.html#PrTx114005"  name="PrTx199003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh8.html#PrTx98005"><span 
+class="cmtt-10">initialized entries for grouping stack</span></a><a 
+ name="PrTx199004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[i].class_open</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">stack[i].class_close</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(char</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">0;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[i].temp_class_open</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[i].temp_class_close</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">m_alloc(char,</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">stack[i].ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">stack[i].temp_class_del</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">stack[i].active_class_del</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.5 <a 
+ href="tex4ht-c.html#QQ2-30-200"  name="QQ1-30-200">Delimiters Over Next Character</a></h3>
+           <!--l. 12907--><p class="noindent" ><a 
+ name="PrTx200001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200001"><span 
+class="cmtt-10">left class delNO</span></a><a 
+ name="PrTx200002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(stack[stack_n+1].no_left_del</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200035"><span 
+class="cmtt-10">open del of group class on ch</span></a><a 
+ name="PrTx200004"  href="#PrTx200008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">math_class_of(</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">cur_fnt</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">open_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12920--><p class="noindent" ><a 
+ name="PrTx200005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161009"><span 
+class="cmtt-10">left</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span></a><a 
+ name="PrTx200006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!stack[stack_n].no_left_del</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200007"  href="#PrTx200003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200035"><span 
+class="cmtt-10">open del of group class on ch</span></a><a 
+ name="PrTx200008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!stack[stack_n+1].ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200013"><span 
+class="cmtt-10">left del of class on ch</span></a><a 
+ name="PrTx200010"  href="#PrTx200012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200011"  href="#PrTx200009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200013"><span 
+class="cmtt-10">left del of class on ch</span></a><a 
+ name="PrTx200012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12926--><p class="noindent" ><a 
+ name="PrTx200013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200009"><span 
+class="cmtt-10">left</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx200014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">math_class</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">math_class_of(</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">cur_fnt</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">open_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12929--><p class="noindent" >The &#8216;<span 
+class="cmtt-10">stack[stack_n].no_left_del</span>&#8217; is true if we have a request for math delimiters on next group/token, and no
+left delimiter had been placed on a group.
+</p>
+      <!--l. 12942--><p class="indent" ><a 
+ name="PrTx200015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200015"><span 
+class="cmtt-10">right class delNO</span></a><a 
+ name="PrTx200016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(stack[stack_n+1].no_left_del</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200031"><span 
+class="cmtt-10">right del of group class on ch</span></a><a 
+ name="PrTx200018"  href="#PrTx200024"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">close_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12957--><p class="noindent" ><a 
+ name="PrTx200019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-cCh11.html#PrTx161035"><span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">del</span></a><a 
+ name="PrTx200020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">show_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!pause_class</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!stack[stack_n].no_left_del</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!stack[stack_n+1].ignore_subclass_del</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200027"><span 
+class="cmtt-10">right del of class on ch</span></a><a 
+ name="PrTx200022"  href="#PrTx200026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200023"  href="#PrTx200017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200031"><span 
+class="cmtt-10">right del of group class on ch</span></a><a 
+ name="PrTx200024"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx200025"  href="#PrTx200021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200027"><span 
+class="cmtt-10">right del of class on ch</span></a><a 
+ name="PrTx200026"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].active_class_del</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">%%%%%%%NEW%%%%</span></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12961--><p class="noindent" ><a 
+ name="PrTx200027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200021"><span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx200028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">close_class[math_class]);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12970--><p class="noindent" ><a 
+ name="PrTx200029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198007"><span 
+class="cmtt-10">print</span>&#x00A0;<span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">group</span>&#x00A0;<span 
+class="cmtt-10">class</span></a><a 
+ name="PrTx200030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">(stack[stack_n].temp_class_del)?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].temp_class_close</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].class_close);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12976--><p class="noindent" ><a 
+ name="PrTx200031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200017"><span 
+class="cmtt-10">right</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">group</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx200032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">(stack[stack_n+1].temp_class_del)?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_close</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].class_close);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12983--><p class="noindent" ><a 
+ name="PrTx200033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"><span 
+class="cmtt-10">print</span>&#x00A0;<span 
+class="cmtt-10">open</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">group</span>&#x00A0;<span 
+class="cmtt-10">class</span></a><a 
+ name="PrTx200034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">(stack[stack_n].temp_class_del)?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].temp_class_open</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n].class_open);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12989--><p class="noindent" ><a 
+ name="PrTx200035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200003"><span 
+class="cmtt-10">open</span>&#x00A0;<span 
+class="cmtt-10">del</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">group</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx200036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">print_f(</span>&#x00A0;<span 
+class="cmtt-10">(stack[stack_n+1].temp_class_del)?</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].temp_class_open</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">stack[stack_n+1].class_open);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 12993--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-cCh15.html" >next</a>] [<a 
+ href="tex4ht-cCh13.html" >prev</a>] [<a 
+ href="tex4ht-cCh13.html#tailtex4ht-cCh13.html" >prev-tail</a>] [<a 
+ href="tex4ht-cCh14.html" >front</a>] [<a 
+ href="tex4ht-c.html#tex4ht-cCh14.html" >up</a>] </p></div>
+<!--l. 12993--><p class="indent" >    <a 
+  name="tailtex4ht-cCh14.html"></a>  </p> 
+</body></html> 

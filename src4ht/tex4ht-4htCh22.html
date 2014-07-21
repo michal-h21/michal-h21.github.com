@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>LaTeX Accents</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 12248--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh23.html" >next</a>] [<a 
+ href="tex4ht-4htSu73.html" >prev</a>] [<a 
+ href="tex4ht-4htSu73.html#tailtex4ht-4htSu73.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htCh22.html">tail</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh22.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 22<br /><a 
+ href="tex4ht-4ht.html#QQ2-188-166"  name="QQ1-188-166">LaTeX Accents</a></h2><div class="TableOfContents">
+    </div>
+<!--l. 12251--><p class="indent" >    Handles accents that reach <span 
+class="cmtt-10">\add@accent</span>. Currently just empty bases?
+</p>
+      <!--l. 12272--><p class="indent" ><a 
+ href="tex4ht-4htSe18.html#PrTx45003"  name="PrTx166001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4019"  name="QPrTx594"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltoutenc</span></a><a 
+ name="PrTx166002"  href="#PrTx166008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1#2{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">\cf@encoding</span>&#x00A0;<span 
+class="cmtt-10">:#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:add@accent:{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{\add:accent{#1}{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">\cf@encoding</span>&#x00A0;<span 
+class="cmtt-10">:#1\endcsname{}{}</span><a 
+ name="PrTx166003"  href="tex4ht-4htSu67.html#PrTx154041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx166004"  href="#PrTx166006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\add@accent\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\add:accent#1#2#3#4{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#3#4}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:add@accent:{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\gob:pardel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\def\:tempa{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#4\expandafter\expandafter\expandafter\gob:pardel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\expand:after{\add:accent{#1}{#2}}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\gob:pardel#1</span><a 
+ name="PrTx166005"  href="#PrTx166003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx166006"  href="tex4ht-4htSe70.html#PrTx172016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 12286--><p class="noindent" ><a 
+ href="#PrTx166001"  name="PrTx166007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4019"  name="QPrTx595"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltoutenc</span></a><a 
+ name="PrTx166008"  href="tex4ht-4htSe293.html#PrTx545008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{add</span>&#x00A0;<span 
+class="cmtt-10">accent}[3]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\scan:accents\csname</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname{#2}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\scan:accents#1#2#3{\def\:temp{#2#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def#1{{#2}{#3}}\expand:after{\scan:accents#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 12289--><p class="noindent" >The first argument should be an encoding:accent-number pair.
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{add</span><span 
+class="cmtt-10">&#x00A0;accent}{OT4:18}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{E}{\add:acc{00C8}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{e}{\add:acc{00E8}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+    <!--l. 12301--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh23.html" >next</a>] [<a 
+ href="tex4ht-4htSu73.html" >prev</a>] [<a 
+ href="tex4ht-4htSu73.html#tailtex4ht-4htSu73.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htCh22.html" >front</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh22.html" >up</a>] </p></div>
+<!--l. 12301--><p class="indent" >    <a 
+  name="tailtex4ht-4htCh22.html"></a> </p> 
+</body></html> 

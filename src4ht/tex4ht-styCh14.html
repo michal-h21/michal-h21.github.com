@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Decorated Symbols</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 9525--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh15.html" >next</a>] [<a 
+ href="tex4ht-styCh13.html" >prev</a>] [<a 
+ href="tex4ht-styCh13.html#tailtex4ht-styCh13.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh14.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh14.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 14<br /><a 
+ href="tex4ht-sty.html#QQ2-26-157"  name="QQ1-26-157">Decorated Symbols</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.1&#x00A0;<a 
+ href="#QQ1-26-158"  name="QQ2-26-158">Htf Classes: Requesting BackEnd
+Fonts through /specials</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-159"  name="QQ2-26-159">Pausing</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-160"  name="QQ2-26-160">Configurations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.2&#x00A0;<a 
+ href="#QQ1-26-161"  name="QQ2-26-161">New
+Accents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-162"  name="QQ2-26-162">Screening</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.3&#x00A0;<a 
+ href="#QQ1-26-163"  name="QQ2-26-163">Old Accents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-164"  name="QQ2-26-164">Accents through &#8216;accents&#8217;
+Configurations</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-165"  name="QQ2-26-165">Foundation  for  Accents</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-166"  name="QQ2-26-166">Getting  the  Html
+Replacement</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.4&#x00A0;<a 
+ href="#QQ1-26-167"  name="QQ2-26-167">End-of-Line Ch Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.5&#x00A0;<a 
+ href="#QQ1-26-168"  name="QQ2-26-168">Symbols</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-26-169"  name="QQ2-26-169">Symbols</a></span><br />
+    </div>
+    <h3 class="SectionHead">14.1 <a 
+ href="tex4ht-sty.html#QQ2-26-158"  name="QQ1-26-158">Htf Classes: Requesting BackEnd Fonts through /specials</a></h3>
+           <!--l. 9540--><p class="noindent" ><a 
+ name="PrTx158001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50033"  name="QPrTx596"><span 
+class="cmtt-10">font</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx158002"  href="#PrTx159002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{htf}[9]{{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=#1</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt&#x003E;255</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Code</span>&#x00A0;<span 
+class="cmtt-10">larger</span>&#x00A0;<span 
+class="cmtt-10">than</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">255</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{htf}}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht;|\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt&#x003C;10</span>&#x00A0;<span 
+class="cmtt-10">00\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt&#x003C;100</span>&#x00A0;<span 
+class="cmtt-10">0\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\the\tmp:cnt#2#3#2#4#2#5#2#6#2#7#2#8#2#9#2\the\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9543--><p class="noindent" >A <span 
+class="cmtt-10">\%x </span>requests character code in hexadecimal representation.
+</p><!--l. 9546--><p class="indent" >    <span 
+class="cmtt-10">\Configure{htf} </span>is essentially a configuration on fonts, where even cases, for instance, the
+<span 
+class="cmtt-10">\special{t4ht;|004...} </span>extra independent information for characters. Odd cases like <span 
+class="cmtt-10">\special{t4ht;|003...}</span>,
+on the other hand, are addition to the <span 
+class="cmtt-10">IMG </span>and not an independent info !!!
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-159"  name="QQ1-26-159">Pausing</a></h3>
+           <!--l. 9557--><p class="noindent" ><a 
+ href="#PrTx158001"  name="PrTx159001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50033"  name="QPrTx597"><span 
+class="cmtt-10">font</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx159002"  href="#PrTx160002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NoFonts{\ht:special{t4ht;8}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndNoFonts{\ht:special{t4ht;9}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9560--><p class="noindent" >Nesting is allowed.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-160"  name="QQ1-26-160">Configurations</a></h3>
+<!--l. 9564--><p class="noindent" >Code for calls made from htf fonts. Should start with three digits defining a number smaller than 256. Odd numbers
+apply to gifs, and even to text. The odd are intended for insertion into IMG marks, the odd are not used
+yet.
+</p><!--l. 9569--><p class="indent" >    The character part is prented for codes that are not given in cases of characters and image-characters,
+respectively. Code 000 is created to groups of non image characters, and the codes 002, 004, 006, add extras to
+individual characters. The od codes deal only with specific characters, not groups.
+</p><!--l. 9575--><p class="indent" >    The corresponding formatting instructions in the css file are determined in the &#8216;Font&#8217; option within the perl
+script.
+</p>
+      <!--l. 9583--><p class="indent" ><a 
+ href="#PrTx159001"  name="PrTx160001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50033"  name="QPrTx598"><span 
+class="cmtt-10">font</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx160002"  href="#PrTx160004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{FontCss}[2]{\def\a:FontCss:{#1}\def\a:FontCssPlus:{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9598--><p class="noindent" ><a 
+ href="#PrTx160001"  name="PrTx160003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50033"  name="QPrTx599"><span 
+class="cmtt-10">font</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx160004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{htf-css}[2]{{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span><a 
+ name="PrTx160005"  href="tex4ht-styCh13.html#PrTx148005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx160006"  href="#PrTx160008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:tempa{##1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\afterassignment\:temp\tmp:cnt=0#1</span><a 
+ name="PrTx160007"  href="#PrTx160005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx160008"  href="#PrTx162004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{\Configure{Needs}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp\expandafter{\a:FontCss:}\Needs{("#1"):</span>&#x00A0;<span 
+class="cmtt-10">#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp\expandafter{\a:FontCssPlus:}\Needs{#1</span>&#x00A0;<span 
+class="cmtt-10">#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{htf-attr}[2]{{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{Needs}{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Needs{Font\string_css\string_base:</span>&#x00A0;<span 
+class="cmtt-10">#1Font\string_css\string_mag:</span>&#x00A0;<span 
+class="cmtt-10">#2}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9601--><p class="noindent" ><span 
+class="cmtt-10">\NewConfigure{htf-css}{number}{...} </span>for a class; <span 
+class="cmtt-10">\NewConfigure{htf-css}{not-number}{...} </span>for a htf
+font.
+</p><!--l. 9607--><p class="indent" >    <span 
+class="cmtt-10">\Configure{htf}{even}{+}{open}{name}{size}{mag}{ord}{ch}{end}{gif-id}</span>
+</p><!--l. 9611--><p class="indent" >    <span 
+class="cmtt-10">\Configure{htf}{odd}{+}{open}{alt}{class}{size}{mag}{ord}{end}</span>: mag and ord must be integer
+patterns.
+</p><!--l. 9615--><p class="indent" >    <span 
+class="cmtt-10">\Configure{htf-css}{4}{.underline{text-decoration:underline; }} </span>is alredy covered.
+</p><!--l. 9620--><p class="indent" >    HOW <span 
+class="cmtt-10">\Configure{htf-css}{4}{.small-caps{font-variant: small-caps; }} </span>differs from
+<span 
+class="cmtt-10">\Css{.small-caps{font-variant: small-caps; }}</span>? The latter is alway introduced into the css file, wheras the
+earlier only conditionally when the font/class is in use.
+</p><!--l. 9635--><p class="indent" >    We have
+</p><div class="Verbatim"><span 
+class="cmtt-10">\Configure{htf}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{odd-for-img-chr}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{distinguished</span><span 
+class="cmtt-10">&#x00A0;delimiter</span><span 
+class="cmtt-10">&#x00A0;ch+id}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{prefix</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;name,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;latter</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{prefix</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;alt,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;latter</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;family</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;mag</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;ord</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{close</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;tag}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\Configure{htf}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{even-for-reg-chr}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{distinguished</span><span 
+class="cmtt-10">&#x00A0;delimiter</span><span 
+class="cmtt-10">&#x00A0;ch+id}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{prefix}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;family</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;mag</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{c-template,</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;ch</span><span 
+class="cmtt-10">&#x00A0;ord</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;desired}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{postfix}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{closing</span><span 
+class="cmtt-10">&#x00A0;tag}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 9661--><p class="indent" >    The id is to be used in Needs fo associating styles to the character decorations. Also, due to the id, we can
+assign to the same code of font different styles. [<a 
+ href="tex4ht-sty27.html"  name="tex4ht-sty27.html" >example</a>]
+</p><!--l. 9685--><p class="indent" >    Newer:
+</p><div class="Verbatim"><span 
+class="cmtt-10">Css:</span><span 
+class="cmtt-10">&#x00A0;TD.caption{white-space:</span><span 
+class="cmtt-10">&#x00A0;nowrap;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmex","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmmi","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmmi","5","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmmi","7","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmr","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmr","5","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmr","7","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmsy","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmsy","7","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmti","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font("cmtt","10","100")</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font_Class(1,""):</span><span 
+class="cmtt-10">&#x00A0;&#x003C;IMG</span><span 
+class="cmtt-10">&#x00A0;SRC=""ALT=""CLASS="%s%s-%d--%x"&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font_Class(3,"mva"):</span><span 
+class="cmtt-10">&#x00A0;&#x003C;IMG</span><span 
+class="cmtt-10">&#x00A0;SRC=""ALT=""CLASS="%s-%d--%x"ALIGN="MIDDLE"&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font_Class(6,"ul"):</span><span 
+class="cmtt-10">&#x00A0;&#x003C;SPAN</span><span 
+class="cmtt-10">&#x00A0;CLASS="underline"&#x003E;&#x003C;/SPAN&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font_Css("sc"):</span><span 
+class="cmtt-10">&#x00A0;.small-caps{font-variant:</span><span 
+class="cmtt-10">&#x00A0;small-caps;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Font_Css("ul"):</span><span 
+class="cmtt-10">&#x00A0;.underline{text-decoration:underline;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 9707--><p class="indent" >    The <span 
+class="cmtt-10">Font(...) </span>indicates the fonts in use; it&#8217;s format is determined by the system variable LGFNT, and can be
+changed within the env file through a &#8216;f&#8217; flagged field. The indicated fonts are used for deciding which entries in
+<span 
+class="cmtt-10">htf.sty </span>should be introduced into the css file.
+</p><!--l. 9712--><p class="indent" >    The <span 
+class="cmtt-10">Font_Class(...) </span>indicates the classes in use within the fonts; it&#8217;s format is determined by the system
+variable LGCLS, and can be changed within the env file through a &#8216;c&#8217; flagged field.
+</p><!--l. 9716--><p class="indent" >    The <span 
+class="cmtt-10">Font_Css </span>is a contribution from the TeX file, from <span 
+class="cmtt-10">\Configure{htf-css}{...} </span>commands. It overides
+info found in <span 
+class="cmtt-10">htf.sty</span>. Its format can be changed by <span 
+class="cmtt-10">\Configure{FontCss}{...##1...}</span>, before the <span 
+class="cmtt-10">\Preamble</span>
+command.
+</p><!--l. 9723--><p class="indent" >    The <span 
+class="cmtt-10">Css </span>is a contribution from the TeX file, from <span 
+class="cmtt-10">\Css{...} </span>comamnds that preced the <span 
+class="cmtt-10">\CssFile </span>command.
+Its format can be changed by <span 
+class="cmtt-10">\Configure{Css}{...##1...}</span>, before the <span 
+class="cmtt-10">\Preamble </span>command.
+</p><!--l. 9727--><p class="indent" >    The <span 
+class="cmtt-10">\special{t4ht;,} </span>prevents notification to the log file of the change requested by <span 
+class="cmtt-10">\Configure{htf}</span>.
+</p><!--l. 9730--><p class="indent" >    <span 
+class="cmtt-10">\Configure{htf-css}{cmmi}{font-style: italic;} </span>produces <span 
+class="cmtt-10">Font_Css_Plus cmmi font-style: italic;</span>
+and that appears also in <span 
+class="cmtt-10">htf.sty</span>. The following are already in <span 
+class="cmtt-10">htf.sty</span>.
+</p>
+    <h3 class="SectionHead">14.2 <a 
+ href="tex4ht-sty.html#QQ2-26-161"  name="QQ1-26-161">New Accents</a></h3>
+           <!--l. 9748--><p class="noindent" ><a 
+ name="PrTx161001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50035"  name="QPrTx600"><span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx161002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx161009"><span 
+class="cmtt-10">new accents</span></a><a 
+ name="PrTx161004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165001"><span 
+class="cmtt-10">tools for accents</span></a><a 
+ name="PrTx161006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx161007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165019"><span 
+class="cmtt-10">old accents</span></a><a 
+ name="PrTx161008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9754--><p class="noindent" >Some accents of TeX are defined through commands of the form <span 
+class="cmtt-10">\accent &#x003C;number&#x003E; &#x003C;char&#x003E;</span>, and some throught
+macros (e.g., <span 
+class="cmtt-10">\b</span>, <span 
+class="cmtt-10">\c</span>, and <span 
+class="cmtt-10">\d</span>). Moreover,the <span 
+class="cmtt-10">\accent &#x003C;number&#x003E; &#x003C;char&#x003E; </span>reduces to <span 
+class="cmtt-10">\char &#x003C;number&#x003E;</span>,
+whenever <span 
+class="cmtt-10">&#x003C;char&#x003E; </span>doesn&#8217;t immediately follows <span 
+class="cmtt-10">&#x003C;number&#x003E; </span>(however, font changes, etc, are possible in
+between).
+</p><!--l. 9760--><p class="indent" >    We can&#8217;t decide the content of accented charaters without looking at the htf fonts. The accented characters of
+the source (la)tex files may go through transformations due to <span 
+class="cmtt-10">\uppercase </span>and <span 
+class="cmtt-10">\lowercase </span>operations (e.g.,
+<span 
+class="cmtt-10">\uppercase \&#8217;a</span>).
+</p>
+      <!--l. 9779--><p class="indent" ><a 
+ name="PrTx161009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161003"  name="QPrTx601"><span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx161010"  href="#PrTx162002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\leavevmode\ifx</span>&#x00A0;<span 
+class="cmtt-10">\d:mathaccent\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht\string~&#x003E;1\d:mathaccent}\fi</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht*\string^m}\o:mathaccent:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\mathaccent=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\leavevmode\ht:special{t4ht*\string^t}\o:accent:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\accent=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{accent}[6]{\ht:special{t4ht*\string^t#1#2#1#3#1#4#1#5#1#6}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{mathaccent}[6]{\ht:special{t4ht#1\string</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">^m#1#2#1#3#1#4#1#5#1}\edef\d:mathaccent{#6}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\d:mathaccent=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{accented}[6]{\ht:special</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{t4ht*\string^a#1#2#1#3#1#4#1#5#1#6}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{accenting}[3]{\ht:special{t4ht*\string^i#1#2#1#3#1#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-162"  name="QQ1-26-162">Screening</a></h3>
+<!--l. 9785--><p class="noindent" >The following feature is used as in
+</p><!--l. 9787--><p class="indent" >    <span 
+class="cmtt-10">\Configure{HAccent}\hat{AEIOUaeiou{}}{\Picture+{}}{\EndPicture}</span>
+</p><!--l. 9789--><p class="indent" >    and it screens which characters are allowed to use the native definitions of the accents, and which one the
+commands tailored for the hooks.
+</p>
+      <!--l. 9805--><p class="indent" ><a 
+ href="#PrTx161009"  name="PrTx162001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161003"  name="QPrTx602"><span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx162002"  href="#PrTx162006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HAccent}[1]{\pic:Accent#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pic:Accent#1#2#3#4{\edef\:tempb##1{{\expandafter\:gobble\string#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defI\:tempb{\choose:accent{####1}#2\relax</span><a 
+ name="PrTx162003"  href="#PrTx160007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx162004"  href="#PrTx162008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:defI\:tempb{{#3}{#4}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">\string#1:\endcsname=\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:tempb{\noexpand\Protect\noexpand\acc:nm{\string#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet#1=\:tempb}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\acc:nm#1{\csname</span>&#x00A0;<span 
+class="cmtt-10">\string#1:\endcsname}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9807--><p class="noindent" >The following sub-utilities iteratively search the dictionary to check whether the parameter is known.
+</p>
+      <!--l. 9824--><p class="indent" ><a 
+ href="#PrTx162001"  name="PrTx162005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161003"  name="QPrTx603"><span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx162006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\choose:accent#1{\def\:accented{#1}\cs:accent}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\realx:par{\relax}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\cs:accent#1{\def\:tempa{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\realx:par</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\pic:accent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\:accented</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\nopic:accent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\cs:accent\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pic:accent#1</span><a 
+ name="PrTx162007"  href="#PrTx162003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx162008"  href="#PrTx162010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#2#3#4{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3\nopic:accent</span><a 
+ name="PrTx162009"  href="#PrTx162007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx162010"  href="#PrTx162012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#2}{}{}#4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nopic:accent#1</span><a 
+ name="PrTx162011"  href="#PrTx162009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx162012"  href="tex4ht-styCh16.html#PrTx176004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#2#3#4{\expandafter\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:#2:\endcsname\expandafter{\:accented}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.3 <a 
+ href="tex4ht-sty.html#QQ2-26-163"  name="QQ1-26-163">Old Accents</a></h3>
+<!--l. 9832--><p class="noindent" >For entries not in the given font tables (not specified in the <span 
+class="cmtt-10">\Configure{accent}</span>), problems can arise for cases such
+as <span 
+class="cmtt-10">csname \ifmmode m\else t\fi :\acn:no\endcsname{#2} </span>and <span 
+class="cmtt-10">\hat{\char o} </span>when they don&#8217;t go into
+pictures.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-164"  name="QQ1-26-164">Accents through &#8216;accents&#8217; Configurations</a></h3>
+
+<!--l. 9839--><p class="noindent" >The <span 
+class="cmtt-10">\Configure{accent}\^\hat{{A-in}{A-out}{B-in}{B-out}...{}{last-out}} {do-found} {do-not-found}</span>
+defines the text accent <span 
+class="cmtt-10">\^ </span>and math accent <span 
+class="cmtt-10">\hat</span>. In cases that the text or math accent has no counter math accent,
+we fake <span 
+class="cmtt-10">\null </span>for the math part.
+</p><!--l. 9845--><p class="indent" >    When <span 
+class="cmtt-10">\hat{foo} </span>is encountered, a search is made for an <span 
+class="cmtt-10">??-i </span>that equals <span 
+class="cmtt-10">foo </span>in the given accent table. If
+found, do-found is executed; otherwise, do-not-found is executed. The do-found can reference the ??-out
+through <span 
+class="cmtt-10">#1</span>. The do-not-found can reference the old definition of <span 
+class="cmtt-10">\hat </span>through <span 
+class="cmtt-10">#1 </span>and the foo through
+<span 
+class="cmtt-10">#2</span>.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-165"  name="QQ1-26-165">Foundation for Accents</a></h3>
+           <!--l. 9871--><p class="noindent" ><a 
+ name="PrTx165001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx604"><span 
+class="cmtt-10">tools</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx165002"  href="#PrTx165034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{accent}[5]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">x:\string#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\edef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">x:\string#2\endcsname{\accent:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx165003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165009"><span 
+class="cmtt-10">save old accent comamnd</span></a><a 
+ name="PrTx165004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx165005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165011"><span 
+class="cmtt-10">new accent command</span></a><a 
+ name="PrTx165006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Advance:\accent:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{\csname</span>&#x00A0;<span 
+class="cmtt-10">x:\string#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx165007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165017"><span 
+class="cmtt-10">get accent config</span></a><a 
+ name="PrTx165008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\accent:cnt{0}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9873--><p class="noindent" >The <span 
+class="cmtt-10">\csname t:\accent:cnt\endcsname </span>part is for the text mode, and the <span 
+class="cmtt-10">\csname m:\accent:cnt\endcsname</span>
+part is for math mode.
+</p>
+      <!--l. 9880--><p class="indent" ><a 
+ name="PrTx165009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165003"  name="QPrTx605"><span 
+class="cmtt-10">save</span>&#x00A0;<span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">comamnd</span></a><a 
+ name="PrTx165010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">t:\accent:cnt\endcsname=#1%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">m:\accent:cnt\endcsname=#2%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9891--><p class="noindent" ><a 
+ name="PrTx165011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165005"  name="QPrTx606"><span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">command</span></a><a 
+ name="PrTx165012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\accent:def\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\def</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\accent:def</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\:temp{\noexpand\ac:pc{\accent:cnt}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\HLet\noexpand#1=\noexpand\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx165013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165015"><span 
+class="cmtt-10">hook accent table</span></a><a 
+ name="PrTx165014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\HLet#2=#1\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9893--><p class="noindent" >The search starts at <span 
+class="cmtt-10">\ac:pc{\accent:cnt}</span>. The accent table is stored in <span 
+class="cmtt-10">\csname\accent:cnt :ac\endcsname</span>.
+The table is searched by <span 
+class="cmtt-10">\acpc:</span>, which puts the result in <span 
+class="cmtt-10">\end:accent</span>.
+</p>
+      <!--l. 9903--><p class="indent" ><a 
+ name="PrTx165015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165013"  name="QPrTx607"><span 
+class="cmtt-10">hook</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">table</span></a><a 
+ name="PrTx165016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\noexpand\pend:defI</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\:accnts{\noexpand\ifnum</span>&#x00A0;<span 
+class="cmtt-10">########1=\accent:cnt</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\acpc:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname\accent:cnt</span>&#x00A0;<span 
+class="cmtt-10">:ac\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\end:accent</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9905--><p class="noindent" >The pend above is just: <span 
+class="cmtt-10">\pend:defI\:accnts{\ifnum ########1=\accent:cnt \expandafter\acpc:</span>
+<span 
+class="cmtt-10">\csname\accent:cnt :ac\endcsname \expandafter\end:accent\fi}</span>
+</p>
+      <!--l. 9920--><p class="indent" ><a 
+ name="PrTx165017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165007"  name="QPrTx608"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">config</span></a><a 
+ name="PrTx165018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{#3}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">\:tempa</span>&#x00A0;<span 
+class="cmtt-10">:ac\endcsname{#3}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp##1##2{#4#5}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:gobbleII</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">C:\:tempa\endcsname##1{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">MT:\:tempa\endcsname##1##2{#5}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9924--><p class="noindent" ><span 
+class="cmtt-10">\acp:c </span>might go to the aux file of latex, where <span 
+class="cmtt-10">: </span>has standard cat code. Hence, the the protection on <span 
+class="cmtt-10">\csname </span>and
+not the command itself (as was the case at the beginning).
+</p>
+      <!--l. 9936--><p class="indent" ><a 
+ name="PrTx165019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161007"  name="QPrTx609"><span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx165020"  href="#PrTx165028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ac:pc{\Protect\csname</span>&#x00A0;<span 
+class="cmtt-10">acp:c\endcsname}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\acp:c#1#2{{\def\acn:no{#1}\def\:temp{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx165021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165025"><span 
+class="cmtt-10">accent on empty arg</span></a><a 
+ name="PrTx165022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<a 
+ name="PrTx165023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx165035"><span 
+class="cmtt-10">tabacckludge</span></a><a 
+ name="PrTx165024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\ac:pc{\ac:nt{#2}}\a:cpc{#1}\fi</span>&#x00A0;<span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ac:nt{\csname</span>&#x00A0;<span 
+class="cmtt-10">\ifmmode</span>&#x00A0;<span 
+class="cmtt-10">m\else</span>&#x00A0;<span 
+class="cmtt-10">t\fi</span>&#x00A0;<span 
+class="cmtt-10">:\acn:no\endcsname}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9940--><p class="noindent" ><a 
+ name="PrTx165025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165021"  name="QPrTx610"><span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">empty</span>&#x00A0;<span 
+class="cmtt-10">arg</span></a><a 
+ name="PrTx165026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ac:nt{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9950--><p class="noindent" ><a 
+ href="#PrTx165019"  name="PrTx165027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161007"  name="QPrTx611"><span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx165028"  href="#PrTx165030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Ac:nt{\edef\:temp{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\ac:pc{\noexpand\Protect</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\acp:c}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">MT:\acn:no\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\ifmmode</span>&#x00A0;<span 
+class="cmtt-10">m\else</span>&#x00A0;<span 
+class="cmtt-10">t\fi</span>&#x00A0;<span 
+class="cmtt-10">:\acn:no\endcsname}\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9952--><p class="noindent" >The second line above is for nested accents in nonpictorial environments (e.g., <span 
+class="cmtt-10">\hat{\hat{x}}</span>). Otherwise, we are
+getting an infinite loop because by now <span 
+class="cmtt-10">\ac:pc </span>has been modified to equal <span 
+class="cmtt-10">\Ac:nt</span>.
+</p><!--l. 9958--><p class="indent" >     <span 
+class="cmtt-10">\def\acp:c#1#2{{\def\:temp{#2}\def\ac:pc{\accent#1 #2}\a:cpc{#1}}}</span>
+</p><!--l. 9960--><p class="indent" >    We can&#8217;t have braces around <span 
+class="cmtt-10">#2 </span>in <span 
+class="cmtt-10">\accent#1 #2 </span>because they get TeX [<a 
+ href="tex4ht-sty28.html"  name="tex4ht-sty28.html" >confused</a>] on the exact location of the mark.
+</p>
+      <!--l. 9973--><p class="indent" ><a 
+ href="#PrTx165027"  name="PrTx165029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161007"  name="QPrTx612"><span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx165030"  href="#PrTx166002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\a:cpc#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\AC:PC{</span><a 
+ name="PrTx165031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx166015"><span 
+class="cmtt-10">default accent</span></a><a 
+ name="PrTx165032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:accnts{#1}\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ac:pc</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9976--><p class="noindent" >The <span 
+class="cmtt-10">\empty </span>is for the skiping over the leftover of the fonts, once a font is found. It is used in <span 
+class="cmtt-10">\end:accent</span>.
+</p>
+      <!--l. 9982--><p class="indent" ><a 
+ href="#PrTx165001"  name="PrTx165033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161005"  name="QPrTx613"><span 
+class="cmtt-10">tools</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx165034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\end:accent#1\empty{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:accnts#1{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9990--><p class="noindent" >Latex has <span 
+class="cmtt-10">\def\@tabacckludge#1{\csname #1\endcsname}</span>.
+</p>
+      <!--l. 9994--><p class="indent" ><a 
+ name="PrTx165035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165023"  name="QPrTx614"><span 
+class="cmtt-10">tabacckludge</span></a><a 
+ name="PrTx165036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\@tabacckludge=\:tabacckludge</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-166"  name="QQ1-26-166">Getting the Html Replacement</a></h3>
+           <!--l. 10007--><p class="noindent" ><a 
+ href="#PrTx165029"  name="PrTx166001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx161007"  name="QPrTx615"><span 
+class="cmtt-10">old</span>&#x00A0;<span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx166002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\acpc:#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx166003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx166007"><span 
+class="cmtt-10">char/pic accent</span></a><a 
+ name="PrTx166004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\:temp</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\AC:PC=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx166005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx166013"><span 
+class="cmtt-10">accent for table entry</span></a><a 
+ name="PrTx166006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\acpc:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10009--><p class="noindent" >/:temp below is the parameter of the accent, and it can be empty (e.g. <span 
+class="cmtt-10">\^{}</span>). If the parameter is
+empty, the accent is just a character, given in the last parameter of <span 
+class="cmtt-10">\acpc:</span>. The recursive macro
+<span 
+class="cmtt-10">\acpc: </span>eats two parameters at a time, and it terminates when the first in the pair of parameters is
+empty.
+</p>
+      <!--l. 10020--><p class="indent" ><a 
+ name="PrTx166007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx166003"  name="QPrTx616"><span 
+class="cmtt-10">char/pic</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx166008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\AC:PC</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<a 
+ name="PrTx166009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx166011"><span 
+class="cmtt-10">accent for ?</span></a><a 
+ name="PrTx166010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\AC:PC</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10025--><p class="noindent" ><a 
+ name="PrTx166011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx166009"  name="QPrTx617"><span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">?</span></a><a 
+ name="PrTx166012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\ifmmode</span>&#x00A0;<span 
+class="cmtt-10">m\else</span>&#x00A0;<span 
+class="cmtt-10">t\fi</span>&#x00A0;<span 
+class="cmtt-10">:\acn:no\endcsname{#2}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10030--><p class="noindent" ><a 
+ name="PrTx166013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx166005"  name="QPrTx618"><span 
+class="cmtt-10">accent</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">table</span>&#x00A0;<span 
+class="cmtt-10">entry</span></a><a 
+ name="PrTx166014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">C:\acn:no\endcsname{#2}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10033--><p class="noindent" >The else <span 
+class="cmtt-10">\csname \ifmmode m\else t\fi :\acn:no\endcsname{} </span>is for the case that the parameter is empty, in
+which case the accent needs to be converted into a stand alone character (e.g., <span 
+class="cmtt-10">\={}</span>).
+</p><!--l. 10038--><p class="indent" >    Default is needed for symbols not found in initiation tables.
+</p>
+      <!--l. 10043--><p class="indent" ><a 
+ name="PrTx166015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx165031"  name="QPrTx619"><span 
+class="cmtt-10">default</span>&#x00A0;<span 
+class="cmtt-10">accent</span></a><a 
+ name="PrTx166016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{\let\AC:PC=\ACP:C</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\ac:nt=\Ac:nt</span>&#x00A0;<span 
+class="cmtt-10">\ac:pc}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10049--><p class="noindent" >The <span 
+class="cmtt-10">\let\AC:PC=\ACP:C </span>above is for recursive cases like in <span 
+class="cmtt-10">$A\hat{B\hat{x}}$</span>.
+
+</p>
+      <!--l. 10058--><p class="indent" ><a 
+ name="PrTx166017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx166017"  name="QPrTx620"><span 
+class="cmtt-10">config nonspecified accent</span></a><a 
+ name="PrTx166018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1##2{#5#6}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:gobbleII</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">C:#3\endcsname##1{#5}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">MT:#3\endcsname##1##2{#6}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.4 <a 
+ href="tex4ht-sty.html#QQ2-26-167"  name="QQ1-26-167">End-of-Line Ch Characters</a></h3>
+           <!--l. 10071--><p class="noindent" ><a 
+ href="tex4ht-styCh7.html#PrTx71007"  name="PrTx167001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16013"  name="QPrTx621"><span 
+class="cmtt-10">html utilities</span></a><a 
+ name="PrTx167002"  href="tex4ht-styCh18.html#PrTx189006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Hnewline{\:newlnch}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10073--><p class="noindent" >Without the following, we get in toc things like <span 
+class="cmtt-10">^^J </span>that don&#8217;t go together with catcode 13 for <span 
+class="cmtt-10">^</span>.
+</p>
+      <!--l. 10078--><p class="indent" ><a 
+ name="PrTx167003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh8.html#PrTx85013"  name="QPrTx622"><span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">Hnewline</span></a><a 
+ name="PrTx167004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:newlnch=\space</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">14.5 <a 
+ href="tex4ht-sty.html#QQ2-26-168"  name="QQ1-26-168">Symbols</a></h3>
+<!--l. 10085--><p class="noindent" >Check that all the symbols belong to TeX and LaTeX
+</p>
+      <!--l. 10093--><p class="indent" ><a 
+ href="tex4ht-styCh12.html#PrTx132003"  name="PrTx168001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx623"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx168002"  href="#PrTx169002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HChar#1{{\leavevmode</span>&#x00A0;<i><span 
+class="cmtt-10">\ifmmode\else\expandafter\immediate\fi</span></i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht@#1}\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#1&#x003E;-1</span>&#x00A0;<span 
+class="cmtt-10">\a:HChar\fi}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HChar}{1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HChar}{x}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10097--><p class="noindent" >There is a boundary case of <span 
+class="cmtt-10">\HChar{0} </span>we didn&#8217;t handle above. Do we want to take care of it?
+</p><!--l. 10101--><p class="indent" >    <span 
+class="cmtt-10">\HChar{i} </span>inserts the character code i, with its font info, if i is positive. If i is negative, the font info is not
+included. The first case is obtained with a special that inserts its content directly, and the second by a special
+sending its content as override on top of the next character.
+</p><!--l. 10107--><p class="indent" >    The <span 
+class="cmtt-10">\Configure </span>tells from where the font info comes. With the presence of regular and pictorial symbols, we
+should be careful not to get here into a mess.
+</p><!--l. 10111--><p class="indent" >    Without checking for the math mode the immediate becomes problematic in math mode (why?).
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">$\_$</span><span 
+class="cmtt-10">&#x00A0;vs</span><span 
+class="cmtt-10">&#x00A0;\_</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 10121--><p class="indent" >    Same problem for tables (why?)
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{tabular}{l}</span><span 
+class="cmtt-10">&#x00A0;\_</span><span 
+class="cmtt-10">&#x00A0;\end{tabular}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-26-169"  name="QQ1-26-169">Symbols</a></h3>
+           <!--l. 10154--><p class="noindent" ><a 
+ href="#PrTx168001"  name="PrTx169001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx624"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx169002"  href="tex4ht-styCh15.html#PrTx171006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@Picture}[1]{\def\a:@Picture{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:@Picture=\:gobble</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 10160--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh15.html" >next</a>] [<a 
+ href="tex4ht-styCh13.html" >prev</a>] [<a 
+ href="tex4ht-styCh13.html#tailtex4ht-styCh13.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh14.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh14.html" >up</a>] </p></div>
+<!--l. 10160--><p class="indent" >    <a 
+  name="tailtex4ht-styCh14.html"></a>   </p> 
+</body></html> 

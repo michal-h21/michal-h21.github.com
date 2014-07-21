@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ScriptsManagerLH: A Lexical Handler</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 4328--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesli1.html" >prev</a>] [<a 
+ href="xtpipesli1.html#tailxtpipesli1.html" >prev-tail</a>] [<a 
+ href="xtpipessu55.html#tailxtpipesse12.html">tail</a>] [<a 
+ href="xtpipessu51.html# " >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">12   </span> <a 
+  id="x74-8200012"></a>ScriptsManagerLH: A Lexical Handler</h3>
+<!--l. 4333--><p class="noindent" >The lexical handler sends its strings to the content hadler.
+</p>
+           <!--l. 4369--><p class="noindent" ><a 
+ id="PrTx82001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx82001"  id="QPrTx240"><span 
+class="cmtt-10">ScriptsManagerLH.java</span></a><a 
+ id="PrTx82002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManagerLH.java</span>&#x00A0;<span 
+class="cmtt-10">(2014-05-24-12:32),</span>&#x00A0;<span 
+class="cmtt-10">generated</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">xtpipes.tex</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2009-2010</span>&#x00A0;<span 
+class="cmtt-10">TeX</span>&#x00A0;<span 
+class="cmtt-10">Users</span>&#x00A0;<span 
+class="cmtt-10">Group</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2002-2009</span>&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>
+      <br /><!--x-->&#x00A0;<a 
+ id="PrTx82003"  href="xtpipessu51.html#PrTx76003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipes.html#PrTx2"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ id="PrTx82004"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">*/</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">package</span>&#x00A0;<span 
+class="cmtt-10">xtpipes.util;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">org.xml.sax.ext.LexicalHandler;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">//</span>&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">org.xml.sax.ContentHandler;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.io.PrintWriter;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">class</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManagerLH</span>&#x00A0;<span 
+class="cmtt-10">implements</span>&#x00A0;<span 
+class="cmtt-10">LexicalHandler</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">contentHandler;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter</span>&#x00A0;<span 
+class="cmtt-10">log;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManagerLH(</span>&#x00A0;<span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">contentHandler,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter</span>&#x00A0;<span 
+class="cmtt-10">log,</span>&#x00A0;<span 
+class="cmtt-10">boolean</span>&#x00A0;<span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.contentHandler</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">contentHandler;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">this.log</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(log==null)?</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">PrintWriter(</span>&#x00A0;<span 
+class="cmtt-10">System.err</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">log;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">comment(char[]</span>&#x00A0;<span 
+class="cmtt-10">ch,</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">start,</span>&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">length){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">contentHandler.inBody</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">String(ch,</span>&#x00A0;<span 
+class="cmtt-10">start,</span>&#x00A0;<span 
+class="cmtt-10">length);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">contentHandler.add(</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">"&#x003C;!--"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"\n--&#x003E;");</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startEntity(String</span>&#x00A0;<span 
+class="cmtt-10">x){}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">endEntity(String</span>&#x00A0;<span 
+class="cmtt-10">x){}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startCDATA(){}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">endCDATA(){}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">startDTD(String</span>&#x00A0;<span 
+class="cmtt-10">x,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">y,</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">z){}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">public</span>&#x00A0;<span 
+class="cmtt-10">void</span>&#x00A0;<span 
+class="cmtt-10">endDTD(){}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+     <ul class="itemize1">
+     <li class="itemize">The line breaks in the comments are to avoid sequences of comments
+     loosing their intermediate line breaks and as a result causing overflow of
+     buffers.
+
+     </li>
+     <li class="itemize">The  comments  in  the  preamble  are  included  through  the  preamble
+     pattribute of xtpipes.</li></ul>
+
+   <!--l. 4392--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesli1.html" >prev</a>] [<a 
+ href="xtpipesli1.html#tailxtpipesli1.html" >prev-tail</a>] [<a 
+ href="xtpipesse12.html" >front</a>] [<a 
+ href="xtpipessu51.html# " >up</a>] </p></div>
+<!--l. 4392--><p class="indent" >   <a 
+  id="tailxtpipesse12.html"></a> </p> 
+</body></html> 

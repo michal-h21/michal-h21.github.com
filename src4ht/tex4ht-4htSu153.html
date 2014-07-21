@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Headers and Footers</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 34454--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu154.html" >next</a>] [<a 
+ href="tex4ht-4htSu152.html" >prev</a>] [<a 
+ href="tex4ht-4htSu152.html#tailtex4ht-4htSu152.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu153.html">tail</a>] [<a 
+ href="tex4ht-4htSe282.html#tex4ht-4htSu153.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe282.html#QQ2-550-512"  name="QQ1-550-512">Headers and Footers</a></h3>
+           <!--l. 34465--><p class="noindent" ><a 
+ name="PrTx512001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx512001"  name="QPrTx1811"><span 
+class="cmtt-10">non-html TeX4ht divs</span></a><a 
+ name="PrTx512002"  href="#PrTx512010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\headline={\:HeaderNumFont</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\botmark</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifodd\pageno</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:rightheader</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:leftheader</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\footline={\:HeaderNumFont</span>&#x00A0;<span 
+class="cmtt-10">\hfil</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:footer</span>&#x00A0;<span 
+class="cmtt-10">\hfil}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\:leftheader{\hfil}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\:rightheader{\hfil}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\:footer{\folio}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\::uppercase=\uppercase</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:uppercase#1{{\:HeaderTitleFont</span>&#x00A0;<span 
+class="cmtt-10">\::uppercase{#1}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34471--><p class="noindent" >We don&#8217;t know under what condition <span 
+class="cmtt-10">\mark </span>and <span 
+class="cmtt-10">\topinsert </span>will expand.
+</p>
+      <!--l. 34487--><p class="indent" ><a 
+ name="PrTx512003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu150.html#PrTx509021"  name="QPrTx1812"><span 
+class="cmtt-10">headline</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">footline</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">ch</span></a><a 
+ name="PrTx512004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:HeaderFonts</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\:ChHeader{\noexpand\folio\hfil</span>&#x00A0;<span 
+class="cmtt-10">\:uppercase{#1}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:StrtChNo{\the\pageno}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:leftheader{\noexpand\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:StrtChNo=\pageno\hfil</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\else\:ChHeader\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:footer{\noexpand\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:StrtChNo=\pageno\folio</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\:rightheader{\noexpand\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:StrtChNo=\pageno</span>&#x00A0;<span 
+class="cmtt-10">\hfil</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\else</span>&#x00A0;<span 
+class="cmtt-10">\:uppercase{#1}\hfil\noexpand\folio</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\mark{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34489--><p class="noindent" >First mark for current HPage. The second is for the following HPages, until we get a section header.
+</p><!--l. 34492--><p class="indent" >    The empty <span 
+class="cmtt-10">\mark </span>ensures that the ones from a sections will not change the definition of <span 
+class="cmtt-10">\:rightheader </span>in first
+HPage of the chapter (when <span 
+class="cmtt-10">\firtmark </span>is the choice) and that nothing will propogate from previous
+HPages.
+</p><!--l. 34498--><p class="indent" >    The <span 
+class="cmtt-10">\write</span>, and <span 
+class="cmtt-10">\mark</span>(?), commands introduce whatsis so we want them in horizontal mode to avoid extra
+spaces. Also, for correct HPage numbers, and for correct timing of headers, we want the <span 
+class="cmtt-10">\:toc </span>and <span 
+class="cmtt-10">\mark </span>to be
+inserted after we get to horizontal mode.
+</p>
+      <!--l. 34517--><p class="indent" ><a 
+ name="PrTx512005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu151.html#PrTx510007"  name="QPrTx1813"><span 
+class="cmtt-10">headline</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">section</span></a><a 
+ name="PrTx512006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:HeaderFonts</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:chapters</span>&#x00A0;<span 
+class="cmtt-10">\mark{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\noexpand\:rightheader{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:StrtChNo=\pageno</span>&#x00A0;<span 
+class="cmtt-10">\hfil</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\SectionCounter&#x003E;0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:uppercase{\theSectionCounter}\space\space</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:uppercase{#1}\hfil\noexpand\folio</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34519--><p class="noindent" >We also have to take into consideration that sections present with no chapters. Hence, the following definition, and
+in the above <span 
+class="cmtt-10">\:rightheader </span>is defined before <span 
+class="cmtt-10">\:leftheader</span>.
+</p>
+      <!--l. 34524--><p class="indent" ><a 
+ name="PrTx512007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx512007"  name="QPrTx1814"><span 
+class="cmtt-10">headers and footers</span></a><a 
+ name="PrTx512008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\:ChHeader{\:rightheader}</span>-_-_-</span>
+
+</p><!--l. 34529--><p class="noindent" >&#8216;<span 
+class="cmtt-10">\:HeaderFonts{cmr8}{cmr10}</span>&#8217;&#8212;first font to sections and chapters fonts, and seconf font for HPage
+numbers.
+</p><!--l. 34532--><p class="indent" >    We want &#8216;<span 
+class="cmtt-10">\:HeaderNumFont</span>&#8217; and &#8216;<span 
+class="cmtt-10">\:HeaderTitleFont</span>&#8217; to be hard wired to a specific font because otherwise
+fonts taht are in effect when the HPages are submitted will take effect (<span 
+class="cmtt-10">\rm</span>, for instance, is not a
+font).
+</p>
+      <!--l. 34547--><p class="indent" ><a 
+ href="#PrTx512001"  name="PrTx512009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx512009"  name="QPrTx1815"><span 
+class="cmtt-10">non-html TeX4ht divs</span></a><a 
+ name="PrTx512010"  href="tex4ht-4htSu154.html#PrTx513002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:HeaderNumFont\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\font\eightrm=cmr8</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\font\eighttt=cmtt8</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\HeaderFonts#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:HeaderNumFont=#1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:HeaderTitleFont=#2</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:HeaderFonts{#3}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HeaderFonts\tenrm\eightrm{\def\tt{\eighttt}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 34550--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu154.html" >next</a>] [<a 
+ href="tex4ht-4htSu152.html" >prev</a>] [<a 
+ href="tex4ht-4htSu152.html#tailtex4ht-4htSu152.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu153.html" >front</a>] [<a 
+ href="tex4ht-4htSe282.html#tex4ht-4htSu153.html" >up</a>] </p></div>
+<!--l. 34550--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu153.html"></a> </p> 
+</body></html> 

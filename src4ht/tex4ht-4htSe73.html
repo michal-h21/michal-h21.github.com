@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Modifying LaTeX Macros</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 13021--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe74.html" >next</a>] [<a 
+ href="tex4ht-4htCh27.html" >prev</a>] [<a 
+ href="tex4ht-4htCh27.html#tailtex4ht-4htCh27.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe73.html">tail</a>] [<a 
+ href="tex4ht-4htCh27.html#tex4ht-4htSe73.html" >up</a>] </p></div>
+    <h3 class="SectionHead">27.1 <a 
+ href="tex4ht-4htPa1.html#QQ2-202-177"  name="QQ1-202-177">Modifying LaTeX Macros</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 13033--><p class="indent" ><a 
+ name="PrTx177001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3069"  name="QPrTx626"><span 
+class="cmtt-10">article</span>&#x00A0;<span 
+class="cmtt-10">et</span>&#x00A0;<span 
+class="cmtt-10">al</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx177002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tableofcontents{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\contentsname\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\contentsname\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177013"><span 
+class="cmtt-10">protect from TocAt</span></a><a 
+ name="PrTx177004"  href="#PrTx177010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\section*{\contentsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177015"><span 
+class="cmtt-10">end protect from TocAt</span></a><a 
+ name="PrTx177006"  href="#PrTx177012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tableofcontents}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13044--><p class="noindent" ><a 
+ name="PrTx177007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3009"  name="QPrTx627"><span 
+class="cmtt-10">book</span>&#x00A0;<span 
+class="cmtt-10">et</span>&#x00A0;<span 
+class="cmtt-10">al</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx177008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tableofcontents{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\contentsname\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177009"  href="#PrTx177003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177013"><span 
+class="cmtt-10">protect from TocAt</span></a><a 
+ name="PrTx177010"  href="tex4ht-4htSe122.html#PrTx263004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\chapter*{\contentsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177011"  href="#PrTx177005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177015"><span 
+class="cmtt-10">end protect from TocAt</span></a><a 
+ name="PrTx177012"  href="tex4ht-4htSe122.html#PrTx263006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tableofcontents}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 13047--><p class="noindent" >Without the following, the chapter*/section* introduces the cutat configuration for the <span 
+class="cmtt-10">\tableofcontents</span>
+</p>
+      <!--l. 13052--><p class="indent" ><a 
+ name="PrTx177013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177003"  name="QPrTx628"><span 
+class="cmtt-10">protect</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TocAt</span></a><a 
+ name="PrTx177014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13056--><p class="noindent" ><a 
+ name="PrTx177015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177005"  name="QPrTx629"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">protect</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TocAt</span></a><a 
+ name="PrTx177016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13068--><p class="noindent" ><a 
+ name="PrTx177017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3075"  name="QPrTx630"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx177018"  href="tex4ht-4htSe74.html#PrTx178004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:TOC{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\noexpand\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\expandafter\noexpand\:TableOfContents</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\Auto:ent{</span><a 
+ name="PrTx177019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe74.html#PrTx178001"><span 
+class="cmtt-10">entries for latex tocs</span></a><a 
+ name="PrTx177020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx177021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177023"><span 
+class="cmtt-10">latex et al tocs</span></a><a 
+ name="PrTx177022"  href="tex4ht-4htSe118.html#PrTx259028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13076--><p class="noindent" ><a 
+ name="PrTx177023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177021"  name="QPrTx631"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">et</span>&#x00A0;<span 
+class="cmtt-10">al</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx177024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tableofcontents{\futurelet\:temp\:TOC}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Auto:ent#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\auto:toc{\noexpand\:TableOfContents[\ifx</span>&#x00A0;<span 
+class="cmtt-10">\auto:toc\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\else</span>&#x00A0;<span 
+class="cmtt-10">\auto:toc</span>&#x00A0;<span 
+class="cmtt-10">\fi]}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\auto:toc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\auto:toc=\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13092--><p class="noindent" ><a 
+ name="PrTx177025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4061"  name="QPrTx632"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">/addcontentsline</span></a><a 
+ name="PrTx177026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\addcontentsline#1#2#3{\if@filesw</span>&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no:lbl:idx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\protect\@unexpandable@protect</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@temptokena{\thepage}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177029"><span 
+class="cmtt-10">revised /addcontentsline</span></a><a 
+ name="PrTx177028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\@tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@nobreak</span>&#x00A0;<span 
+class="cmtt-10">\ifvmode\nobreak\fi\fi\endgroup\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 13094--><p class="noindent" >The redefinition of <span 
+class="cmtt-10">\addcontentsline </span>should preserve vertical mode. The following is the modification to the
+original def.
+</p>
+      <!--l. 13111--><p class="indent" ><a 
+ name="PrTx177029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177027"  name="QPrTx633"><span 
+class="cmtt-10">revised</span>&#x00A0;<span 
+class="cmtt-10">/addcontentsline</span></a><a 
+ name="PrTx177030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempb{#1}\def\:tempa{toc}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempb\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx177031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177049"><span 
+class="cmtt-10">addcontentsline html addr</span></a><a 
+ name="PrTx177032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\Link{}{\:tempb}\EndLink}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\@tempa{</span><a 
+ name="PrTx177033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177047"><span 
+class="cmtt-10">add contents line</span></a><a 
+ name="PrTx177034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<i>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\TitleCount</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span></i><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<a 
+ name="PrTx177035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177041"><span 
+class="cmtt-10">non-toc addcontentsline html addr</span></a><a 
+ name="PrTx177036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\Link{}{</span><a 
+ name="PrTx177037"  href="tex4ht-4htSu6.html#PrTx18005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx177038"  href="#PrTx177046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr}\EndLink}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\@tempa{</span><a 
+ name="PrTx177039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx177043"><span 
+class="cmtt-10">add non-toc contents line</span></a><a 
+ name="PrTx177040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13117--><p class="noindent" ><a 
+ name="PrTx177041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177035"  name="QPrTx634"><span 
+class="cmtt-10">non-toc</span>&#x00A0;<span 
+class="cmtt-10">addcontentsline</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx177042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\html:addr</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13124--><p class="noindent" ><a 
+ name="PrTx177043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177039"  name="QPrTx635"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">non-toc</span>&#x00A0;<span 
+class="cmtt-10">contents</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx177044"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">if:toc\endcsname{\the\:tokwrite{\string\doTocEntry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\toc#1{}{\string\csname\space</span>&#x00A0;<span 
+class="cmtt-10">a:TocLink\string\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\FileNumber}{</span><a 
+ name="PrTx177045"  href="#PrTx177037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx177046"  href="tex4ht-4htSe108.html#PrTx237022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr}{}{#3}}{\the\@temptokena}\relax}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 13132--><p class="noindent" ><a 
+ name="PrTx177047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177033"  name="QPrTx636"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">contents</span>&#x00A0;<span 
+class="cmtt-10">line</span></a><a 
+ name="PrTx177048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">if:toc\endcsname{\the\:tokwrite{\string\doTocEntry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\toc#2{}{\string\csname\space</span>&#x00A0;<span 
+class="cmtt-10">a:TocLink\string\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\FileNumber}{\:tempb}{}{#3}}{\the\@temptokena}\relax}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 13139--><p class="noindent" >In the above link,
+</p><!--l. 13141--><p class="indent" >
+</p><ul type="disc" >
+<li>Originally we didn&#8217;t have a file name in &#8216;<span 
+class="cmtt-10">[...]</span>&#8217;, and it caused a problem in parent-children relationships. So we
+introduced Without &#8216;<span 
+class="cmtt-10">[\RefFileNumber\FileNumber]</span>&#8217; the cross link is not recognized in parents-childred
+relationships. </li>
+<li>Then it turned out that some browsers reload the current page if the file name is mentioned, so we removed the
+reference to the page name
+      <!--l. 13157--><p class="indent" ><a 
+ name="PrTx177049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177031"  name="QPrTx637"><span 
+class="cmtt-10">addcontentsline</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx177050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempb{</span><a 
+ name="PrTx177051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2003"><span 
+class="cmtt-10">section html addr</span></a><a 
+ name="PrTx177052"  href="tex4ht-4htSu154.html#PrTx513044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 13160--><p class="noindent" >Instead of
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewHaddr\:tempb</span>
+-_-_-</span>
+</p><!--l. 13169--><p class="noindent" ></p></li>
+<li>Do the parent-children relationships still work?
+    </li></ul>
+      <!--l. 13176--><p class="indent" ><a 
+ name="PrTx177053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx177053"  name="QPrTx639"><span 
+class="cmtt-10">add aux line</span></a><a 
+ name="PrTx177054"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\write</span>&#x00A0;<span 
+class="cmtt-10">\@auxout{\string\@writefile{#1}{\protect</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\contentsline{#2}{#3}{\the\@temptokena}}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 13178--><p class="noindent" >The command <span 
+class="cmtt-10">\addvspace </span>may appear at start of list of tables and it must be reached in vertical mode (see list
+tables &#8211; lot).
+</p><!--l. 13186--><p class="indent" >    The following goes also into non-core latex. Do we need &#8216;  <span 
+class="cmtt-10">\Configure{cite}{}{}{}{}%</span>&#8217; in the
+following?
+</p>
+      <!--l. 13206--><p class="indent" ><a 
+ name="PrTx177055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174063"  name="QPrTx640"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">latex.ltx</span>&#x00A0;<span 
+class="cmtt-10">core</span></a><a 
+ name="PrTx177056"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@starttoc#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\makeatletter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{toc}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@input{\jobname.4ct}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@input{\jobname.#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@filesw</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">newwrite\endcsname\csname</span>&#x00A0;<span 
+class="cmtt-10">tf@#1\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\openout</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">tf@#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\jobname.#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@nobreakfalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 13214--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe74.html" >next</a>] [<a 
+ href="tex4ht-4htCh27.html" >prev</a>] [<a 
+ href="tex4ht-4htCh27.html#tailtex4ht-4htCh27.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe73.html" >front</a>] [<a 
+ href="tex4ht-4htCh27.html#tex4ht-4htSe73.html" >up</a>] </p></div>
+<!--l. 13214--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe73.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Configurations</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 1217--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh3.html" >next</a>] [<a 
+ href="tex4ht-styCh1.html" >prev</a>] [<a 
+ href="tex4ht-styCh1.html#tailtex4ht-styCh1.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh2.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh2.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 2<br /><a 
+ href="tex4ht-sty.html#QQ2-3-17"  name="QQ1-3-17">Configurations</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.1&#x00A0;<a 
+ href="#QQ1-3-18"  name="QQ2-3-18">Contributes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.2&#x00A0;<a 
+ href="#QQ1-3-19"  name="QQ2-3-19">Configurations</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-3-20"  name="QQ2-3-20">Configure</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-3-21"  name="QQ2-3-21">NewConfigure</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.3&#x00A0;<a 
+ href="#QQ1-3-22"  name="QQ2-3-22">Tracing
+Configurations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.4&#x00A0;<a 
+ href="#QQ1-3-23"  name="QQ2-3-23">Editing and Xml</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.5&#x00A0;<a 
+ href="#QQ1-3-24"  name="QQ2-3-24">Verify Elements</a></span><br />
+    </div>
+    <h3 class="SectionHead">2.1 <a 
+ href="tex4ht-sty.html#QQ2-3-18"  name="QQ1-3-18">Contributes</a></h3>
+           <!--l. 1228--><p class="noindent" ><a 
+ name="PrTx18001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx18001"  name="QPrTx73"><span 
+class="cmtt-10">early utilitiesNO</span></a><a 
+ name="PrTx18002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\Contribute#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\Contribute{#1}?}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1235--><p class="noindent" ><a 
+ name="PrTx18003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx18003"  name="QPrTx74"><span 
+class="cmtt-10">utilitiesNO</span></a><a 
+ name="PrTx18004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\Contribute#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\Contribute{#1}?}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname{#2}\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">2.2 <a 
+ href="tex4ht-sty.html#QQ2-3-19"  name="QQ1-3-19">Configurations</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-3-20"  name="QQ1-3-20">Configure</a></h3>
+<!--l. 1245--><p class="noindent" >The following assumes a definition <span 
+class="cmtt-10">\Odef\c:#2:[#1]...</span>
+</p>
+      <!--l. 1255--><p class="indent" ><a 
+ name="PrTx20001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16005"  name="QPrTx75"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">Configure</span></a><a 
+ name="PrTx20002"  href="#PrTx21002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Configure#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\Configure{#1}?}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1:\endcsname}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\c:def=\def</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\d:def=\def</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-3-21"  name="QQ1-3-21">NewConfigure</a></h3>
+           <!--l. 1291--><p class="noindent" ><a 
+ href="#PrTx20001"  name="PrTx21001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16005"  name="QPrTx76"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">Configure</span></a><a 
+ name="PrTx21002"  href="#PrTx21010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NewConfigure#1{\def\:tempa{#1}\futurelet\:temp\Nw:cnf}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Nw:cnf{\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{\noexpand\N:wCnfga{\:tempa}}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{\noexpand\N:wCnfgb{\:tempa}}\fi</span>&#x00A0;<span 
+class="cmtt-10">\:tempa}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\N:wCnfga#1[#2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{</span><a 
+ name="PrTx21003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21007"><span 
+class="cmtt-10">/long/def/c:...:</span></a><a 
+ name="PrTx21004"  href="#PrTx21006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\:temp</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\N:wCnfgb#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{</span><a 
+ name="PrTx21005"  href="#PrTx21003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21007"><span 
+class="cmtt-10">/long/def/c:...:</span></a><a 
+ name="PrTx21006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\New:Conf{\aNew:Conf#1}{####1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;1</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\bNew:Conf#1}{####2}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;2</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\cNew:Conf#1}{####3}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;3</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\dNew:Conf#1}{####4}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;4</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\eNew:Conf#1}{####5}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;5</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\fNew:Conf#1}{####6}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;6</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\gNew:Conf#1}{####7}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;7</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\hNew:Conf#1}{####8}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;8</span>&#x00A0;<span 
+class="cmtt-10">\New:Conf{\iNew:Conf#1}{####9}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}\:temp}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1300--><p class="noindent" ><a 
+ name="PrTx21007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21003"  name="QPrTx77"><span 
+class="cmtt-10">/long/def/c:...:</span></a><a 
+ name="PrTx21008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\expandafter</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">c:#1:\endcsname####1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;1</span>&#x00A0;<span 
+class="cmtt-10">####2\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;2</span>&#x00A0;<span 
+class="cmtt-10">####3\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;3</span>&#x00A0;<span 
+class="cmtt-10">####4\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;4</span>&#x00A0;<span 
+class="cmtt-10">####5\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;5</span>&#x00A0;<span 
+class="cmtt-10">####6\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;6</span>&#x00A0;<span 
+class="cmtt-10">####7\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;7</span>&#x00A0;<span 
+class="cmtt-10">####8\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#2&#x003E;8</span>&#x00A0;<span 
+class="cmtt-10">####9\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1314--><p class="noindent" ><a 
+ href="#PrTx21001"  name="PrTx21009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16005"  name="QPrTx78"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">Configure</span></a><a 
+ name="PrTx21010"  href="tex4ht-styCh9.html#PrTx96008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\New:Conf#1{\noexpand\c:def</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname#1\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:NewConfigure:#1#2#3#4#5#6#7#8#9{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\aNew:Conf{#1}\def\bNew:Conf{#2}\def\cNew:Conf{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\dNew:Conf{#4}\def\eNew:Conf{#5}\def\fNew:Conf{#6}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\gNew:Conf{#7}\def\hNew:Conf{#8}\def\iNew:Conf{#9}}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx21011"  href="tex4ht-styCh1.html#PrTx16041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21013"><span 
+class="cmtt-10">system NewConfigure</span></a><a 
+ name="PrTx21012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1317--><p class="noindent" >After each loading of the vertical 4ht files, the coefficients of newconfigure assume their initial definitions.
+</p>
+      <!--l. 1322--><p class="indent" ><a 
+ name="PrTx21013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16041"  name="QPrTx79"><span 
+class="cmtt-10">system</span>&#x00A0;<span 
+class="cmtt-10">NewConfigure</span></a><a 
+ name="PrTx21014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{NewConfigure}{a:}{b:}{c:}{d:}{e:}{f:}{g:}{h:}{i:}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">2.3 <a 
+ href="tex4ht-sty.html#QQ2-3-22"  name="QQ1-3-22">Tracing Configurations</a></h3>
+<!--l. 1330--><p class="noindent" >See also LaTeX part
+</p>
+      <!--l. 1359--><p class="indent" ><a 
+ name="PrTx22001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50027"  name="QPrTx80"><span 
+class="cmtt-10">trace configurations</span></a><a 
+ name="PrTx22002"  href="#PrTx23002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks++}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22011"><span 
+class="cmtt-10">trace+ comamnds</span></a><a 
+ name="PrTx22004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\edit:p#1#2{\let#2=\empty</span>&#x00A0;<span 
+class="cmtt-10">\:gobble}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks+}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:wrt{\immediate\write16}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{hooks}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\trc:wrt=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22015"><span 
+class="cmtt-10">trace commands</span></a><a 
+ name="PrTx22006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\edit:p=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22019"><span 
+class="cmtt-10">trace and trace+</span></a><a 
+ name="PrTx22008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{hooks}[4]{\def\a:trc{#1}\def\b:trc{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\c:trc{#3}\def\d:trc{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\a:trc\empty</span>&#x00A0;<span 
+class="cmtt-10">\def\a:trc##1\b:trc{\b:trc}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\c:trc\empty</span>&#x00A0;<span 
+class="cmtt-10">\def\c:trc##1\d:trc{\d:trc}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\d:def{\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by1\def}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{hooks}{}{}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\c:hooks:=\:gobbleIV</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22009"><span 
+class="cmtt-10">no trace and trace+</span></a><a 
+ name="PrTx22010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1373--><p class="noindent" ><a 
+ name="PrTx22011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22003"  name="QPrTx81"><span 
+class="cmtt-10">trace+</span>&#x00A0;<span 
+class="cmtt-10">comamnds</span></a><a 
+ name="PrTx22012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defI\Configure{\tmp:cnt=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\def\c:def####1####2{\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22021"><span 
+class="cmtt-10">tempb = number of parameters</span></a><a 
+ name="PrTx22014"  href="#PrTx22018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def####1{####2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\pend:def\noexpand####1{\noexpand\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\EndPicture\noexpand\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\hbox{\noexpand\a:trc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">##1\the\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">:\:tempb\noexpand\b:trc}\noexpand\fi}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\append:def\noexpand####1{\noexpand\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\EndPicture\noexpand\:UnDef\hbox{\noexpand\c:trc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">##1\the\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">:\:tempb\noexpand\d:trc}\noexpand\fi}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1390--><p class="noindent" ><a 
+ name="PrTx22015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22005"  name="QPrTx82"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">commands</span></a><a 
+ name="PrTx22016"  href="tex4ht-styCh9.html#PrTx96012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\Configure{\tmp:cnt=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\def\c:def####1####2{\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx22017"  href="#PrTx22013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22021"><span 
+class="cmtt-10">tempb = number of parameters</span></a><a 
+ name="PrTx22018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def####1{####2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">####1\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\pend:def\noexpand####1{\hbox{\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:trc</span>&#x00A0;<span 
+class="cmtt-10">##1\the\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">:\:tempb\noexpand\b:trc}}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\append:def\noexpand####1{\hbox{\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:trc</span>&#x00A0;<span 
+class="cmtt-10">##1\the\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">:\:tempb\noexpand\d:trc}}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\trc:wrt{...##1\the\tmp:cnt....\meaning####1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1398--><p class="noindent" ><a 
+ name="PrTx22019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22007"  name="QPrTx83"><span 
+class="cmtt-10">trace</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">trace+</span></a><a 
+ name="PrTx22020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempb{\def\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\par:N##1\string</span>&#x00A0;<span 
+class="cmtt-10">:##2-&#x003E;##3////{\noexpand\par:NN?##2//}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempb</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\par:NN#1#2//{\def\:tempb{#2}\ifx\:tempb\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempb{#1}\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:tempb{\par:NN#2//}\expandafter\:tempb\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1403--><p class="noindent" ><a 
+ name="PrTx22021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22013"  name="QPrTx84"><span 
+class="cmtt-10">tempb</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">number</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">parameters</span></a><a 
+ name="PrTx22022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempb{\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\meaning\csname</span>&#x00A0;<span 
+class="cmtt-10">c:##1:\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\par:N</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tempb////%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">2.4 <a 
+ href="tex4ht-sty.html#QQ2-3-23"  name="QQ1-3-23">Editing and Xml</a></h3>
+<!--l. 1415--><p class="noindent" >Note that <span 
+class="cmtt-10">edit </span>is not the option <span 
+class="cmtt-10">tty</span>!
+</p>
+      <!--l. 1442--><p class="indent" ><a 
+ href="#PrTx22001"  name="PrTx23001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50027"  name="QPrTx85"><span 
+class="cmtt-10">trace configurations</span></a><a 
+ name="PrTx23002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Tg&#x003C;#1&#x003E;{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\try:tagend</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;#1&#x003C;/</span><a 
+ name="PrTx23003"  href="tex4ht-styCh1.html#PrTx16033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23004"  href="#PrTx23006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\is:empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tagend#1</span><a 
+ name="PrTx23005"  href="#PrTx23003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23006"  href="#PrTx23008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\try:tagempty</span>&#x00A0;<span 
+class="cmtt-10">#1&#x003E;/&#x003E;</span><a 
+ name="PrTx23007"  href="#PrTx23005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23008"  href="#PrTx23010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\is:empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tag{#1}\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tagempty</span>&#x00A0;<span 
+class="cmtt-10">#1&#x003E;\fi\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:tagend#1&#x003C;/#2</span><a 
+ name="PrTx23009"  href="#PrTx23007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23010"  href="#PrTx23012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1is:empty}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:tagempty#1/&#x003E;#2</span><a 
+ name="PrTx23011"  href="#PrTx23009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23012"  href="#PrTx23030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#2is:empty}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\is:empty{\empty\empty}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{edit}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23023"><span 
+class="cmtt-10">tg and TG</span></a><a 
+ name="PrTx23014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23071"><span 
+class="cmtt-10">edit* option</span></a><a 
+ name="PrTx23016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23025"><span 
+class="cmtt-10">no-edit tg and TG</span></a><a 
+ name="PrTx23018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{verify}\if:Option\else</span>&#x00A0;<span 
+class="cmtt-10">\:CheckOption{verify+}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23067"><span 
+class="cmtt-10">edit- code</span></a><a 
+ name="PrTx23020"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23027"><span 
+class="cmtt-10">no-edit option</span></a><a 
+ name="PrTx23022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1444--><p class="noindent" >The <span 
+class="cmtt-10">\tg </span>is also part of mex.
+</p>
+      <!--l. 1449--><p class="indent" ><a 
+ name="PrTx23023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23013"  name="QPrTx86"><span 
+class="cmtt-10">tg</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">TG</span></a><a 
+ name="PrTx23024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">\def\tg&#x003C;#1&#x003E;{\c:edit#1\d:edit}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\TG&#x003C;#1&#x003E;{\a:edit#1\b:edit}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1454--><p class="noindent" ><a 
+ name="PrTx23025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23017"  name="QPrTx87"><span 
+class="cmtt-10">no-edit</span>&#x00A0;<span 
+class="cmtt-10">tg</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">TG</span></a><a 
+ name="PrTx23026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">\def\tg&#x003C;#1&#x003E;{&#x003C;#1&#x003E;}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\TG&#x003C;#1&#x003E;{\HCode{&#x003C;#1&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1458--><p class="noindent" >The <span 
+class="cmtt-10">edit+ </span>is a pseudo-browser mode showing a possible view of the code.
+</p>
+      <!--l. 1466--><p class="indent" ><a 
+ name="PrTx23027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23021"  name="QPrTx88"><span 
+class="cmtt-10">no-edit</span>&#x00A0;<span 
+class="cmtt-10">option</span></a><a 
+ name="PrTx23028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tag#1{\hbox{\HCode{&#x003C;#1&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagend#1#2</span><a 
+ name="PrTx23029"  href="#PrTx23011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23030"  href="#PrTx23034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\hbox{\HCode{&#x003C;/#2&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagempty#1/&#x003E;{\hbox{\HCode{&#x003C;#1/&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:&#x003C;:\endcsname#1&#x003E;{\:gobbleII}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1469--><p class="noindent" >The <span 
+class="cmtt-10">\hbox </span>above is to avoid creating extra paragraphs with extra tags, which can also introduce extra paragraph
+ends.
+</p><!--l. 1472--><p class="indent" >    The definiions of <span 
+class="cmtt-10">\c:&#x003C;...&#x003E;: </span>are broken into two parts to avoid the spaces after the closing angular bracket
+<span 
+class="cmtt-10">&#x003E;</span>.
+</p>
+      <!--l. 1500--><p class="indent" ><a 
+ name="PrTx23031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23031"  name="QPrTx89"><span 
+class="cmtt-10">edit+ option</span></a><a 
+ name="PrTx23032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tag:of#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx23033"  href="#PrTx23029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23034"  href="#PrTx23036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pl:s{+}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tag#1{\VerifyOpen{#1}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23035"  href="#PrTx23033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23036"  href="#PrTx23038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\pl:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{#1}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23037"  href="#PrTx23035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23038"  href="#PrTx23040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagend#1#2</span><a 
+ name="PrTx23039"  href="#PrTx23037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23040"  href="#PrTx23042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\VerifyClose{#2}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23041"  href="#PrTx23039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23042"  href="#PrTx23044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\pl:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{/#2}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23043"  href="#PrTx23041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23044"  href="#PrTx23046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagempty#1/&#x003E;{\VerifyEmpty{#1}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23045"  href="#PrTx23043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23046"  href="#PrTx23048"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname\pl:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{#1/}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23047"  href="#PrTx23045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23048"  href="#PrTx23052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:&#x003C;:\endcsname#1&#x003E;{\edef\:temp{#1}\:gat}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:gat#1#2{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\:temp\endcsname{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\:temp\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{edit}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{edit}{\HCode{&#x003C;strong</span>&#x00A0;<span 
+class="cmtt-10">class="edit"&#x003E;&amp;lt;}}</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\HCode{&amp;gt;&#x003C;/strong&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1524--><p class="noindent" ><a 
+ name="PrTx23049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23049"  name="QPrTx90"><span 
+class="cmtt-10">edit option</span></a><a 
+ name="PrTx23050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tag:of#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx23051"  href="#PrTx23047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23052"  href="#PrTx23054"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tag#1{\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23053"  href="#PrTx23051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23054"  href="#PrTx23056"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\VerifyOpen{#1}\a:edit\HCode{#1}\b:edit</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23055"  href="#PrTx23053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23056"  href="#PrTx23058"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagend#1#2</span><a 
+ name="PrTx23057"  href="#PrTx23055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23058"  href="#PrTx23060"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">A:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23059"  href="#PrTx23057"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23060"  href="#PrTx23062"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\VerifyClose{#2}\a:edit\HCode{/#2}\b:edit</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23061"  href="#PrTx23059"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23062"  href="#PrTx23064"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagempty#1/&#x003E;{\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23063"  href="#PrTx23061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23064"  href="#PrTx23066"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\VerifyEmpty{#1}\a:edit\HCode{#1/}\b:edit</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23065"  href="#PrTx23063"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23066"  href="#PrTx23070"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:&#x003C;:\endcsname#1&#x003E;{\edef\:temp{#1}\:gat}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:gat#1#2{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\:temp\endcsname{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\:temp\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{edit}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{edit}{\HCode{&#x003C;strong&#x003E;&amp;lt;}}{\HCode{&amp;gt;&#x003C;/strong&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{&#x003C;strong&#x003E;&amp;lt;}{&amp;gt;&#x003C;/strong&#x003E;}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1531--><p class="noindent" ><a 
+ name="PrTx23067"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23019"  name="QPrTx91"><span 
+class="cmtt-10">edit-</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx23068"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tag#1{\VerifyOpen{#1}\hbox{\HCode{&#x003C;#1&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagend#1#2</span><a 
+ name="PrTx23069"  href="#PrTx23065"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23070"  href="#PrTx23074"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\VerifyClose{#2}\hbox{\HCode{&#x003C;/#2&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagempty#1/&#x003E;{\VerifyEmpty{#1}\hbox{\HCode{&#x003C;#1/&#x003E;}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:&#x003C;:\endcsname#1&#x003E;{\:gobbleII}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1534--><p class="noindent" >The <span 
+class="cmtt-10">\hbox </span>above is to avoid creating extra paragraphs with extra tags, which can also introduce extra paragraph
+ends.
+</p>
+      <!--l. 1566--><p class="indent" ><a 
+ name="PrTx23071"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23015"  name="QPrTx92"><span 
+class="cmtt-10">edit*</span>&#x00A0;<span 
+class="cmtt-10">option</span></a><a 
+ name="PrTx23072"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tag:of#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx23073"  href="#PrTx23069"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23074"  href="#PrTx23076"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\mn:s{-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tag#1{\VerifyOpen{#1}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23075"  href="#PrTx23073"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23076"  href="#PrTx23078"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\mn:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23077"  href="#PrTx23075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23078"  href="#PrTx23080"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{#1}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23079"  href="#PrTx23077"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23080"  href="#PrTx23082"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagend#1#2</span><a 
+ name="PrTx23081"  href="#PrTx23079"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23082"  href="#PrTx23084"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\VerifyClose{#2}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23083"  href="#PrTx23081"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23084"  href="#PrTx23086"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\mn:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23085"  href="#PrTx23083"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23086"  href="#PrTx23088"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{/#2}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:/\tag:of#2</span>&#x00A0;<a 
+ name="PrTx23087"  href="#PrTx23085"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23088"  href="#PrTx23090"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tagempty#1/&#x003E;{\VerifyEmpty{#1}\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23089"  href="#PrTx23087"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23090"  href="#PrTx23092"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname\mn:s\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23091"  href="#PrTx23089"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23092"  href="#PrTx23094"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\a:edit\HCode{#1/}\b:edit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\tag:of#1</span>&#x00A0;<a 
+ name="PrTx23093"  href="#PrTx23091"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx23094"  href="#PrTx24010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">/\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">c:&#x003C;:\endcsname#1&#x003E;{\edef\:temp{#1}\:gat}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:gat#1#2{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\csname</span>&#x00A0;<span 
+class="cmtt-10">A:\:temp\endcsname{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">B:\:temp\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{edit}{4}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">2.5 <a 
+ href="tex4ht-sty.html#QQ2-3-24"  name="QQ1-3-24">Verify Elements</a></h3>
+           <!--l. 1588--><p class="noindent" ><a 
+ name="PrTx24001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10015"  name="QPrTx93"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">Configure&#8217;s</span></a><a 
+ name="PrTx24002"  href="tex4ht-styCh5.html#PrTx50026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{verify}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx24003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx24011"><span 
+class="cmtt-10">chk no trace</span></a><a 
+ name="PrTx24004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{verify+}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx24005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx24013"><span 
+class="cmtt-10">chk trace</span></a><a 
+ name="PrTx24006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx24007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx24015"><span 
+class="cmtt-10">check utilities</span></a><a 
+ name="PrTx24008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\VerifyOpen=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\VerifyClose=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\VerifyEmpty=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\long\def\Verify#1\EndVerify{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trace:chk#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx24009"  href="#PrTx23093"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24010"  href="#PrTx24018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1592--><p class="noindent" ><a 
+ name="PrTx24011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx24003"  name="QPrTx94"><span 
+class="cmtt-10">chk</span>&#x00A0;<span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">trace</span></a><a 
+ name="PrTx24012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:chk:trc=\:gobble</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1597--><p class="noindent" ><a 
+ name="PrTx24013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx24005"  name="QPrTx95"><span 
+class="cmtt-10">chk</span>&#x00A0;<span 
+class="cmtt-10">trace</span></a><a 
+ name="PrTx24014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:chk:trc#1{\immediate</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\write16{\the\inputlineno\space(\:ChkLevel)</span>&#x00A0;<span 
+class="cmtt-10">#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1599--><p class="noindent" >The <span 
+class="cmtt-10">\PushStack\:CHK\empty </span>is needed because whenever a pop occurs, we temporarily take one more pop to check
+who was the old parent.
+</p>
+      <!--l. 1660--><p class="indent" ><a 
+ name="PrTx24015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx24007"  name="QPrTx96"><span 
+class="cmtt-10">check</span>&#x00A0;<span 
+class="cmtt-10">utilities</span></a><a 
+ name="PrTx24016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\:ChkLevel=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:CurrentChk=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\PushStack\:CHK\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\VerifyOpen#1{\Protect\trace:chk#1</span>&#x00A0;<a 
+ name="PrTx24017"  href="#PrTx24009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24018"  href="#PrTx24020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\trace:chk#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx24019"  href="#PrTx24017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24020"  href="#PrTx24022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\:ChkLevel</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\:chk:trc{Open......#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gHAssign\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gHAdvance\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PushStack\:CHK{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk</span>&#x00A0;<span 
+class="cmtt-10">+#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gdef</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk</span>&#x00A0;<span 
+class="cmtt-10">+#1\endcsname{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write16{\the\inputlineno.</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk\space</span>&#x00A0;<span 
+class="cmtt-10">--&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">?}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\:CurrentChk{#1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\VerifyClose#1{\Protect\trace:endchk#1</span>&#x00A0;<a 
+ name="PrTx24021"  href="#PrTx24019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24022"  href="#PrTx24024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\trace:endchk#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx24023"  href="#PrTx24021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24024"  href="#PrTx24026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:chk:trc{Close......#1}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write16{\the\inputlineno.</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/#1&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">witout</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;#1&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gHAssign\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gHAdvance\csname</span>&#x00A0;<span 
+class="cmtt-10">#1Level:\endcsname</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\:ChkLevel</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:CHK\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopStack\:CHK\:CurrentChk</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PushStack\:CHK\:CurrentChk</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write16{\the\inputlineno.</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/\:temp&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">instead</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/#1&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\VerifyEmpty#1{\Protect\trace:emptychk#1</span>&#x00A0;<a 
+ name="PrTx24025"  href="#PrTx24023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24026"  href="#PrTx24028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\trace:emptychk#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx24027"  href="#PrTx24025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx24028"  href="tex4ht-styCh3.html#PrTx26004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:chk:trc{Empty......#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk</span>&#x00A0;<span 
+class="cmtt-10">+#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gdef</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk</span>&#x00A0;<span 
+class="cmtt-10">+#1\endcsname{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write16{\the\inputlineno.</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">\:CurrentChk\space</span>&#x00A0;<span 
+class="cmtt-10">--&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">?}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=7</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\Verify{\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\</span>&#x00A0;<span 
+class="cmtt-10">=9</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^^M=9</span>&#x00A0;<span 
+class="cmtt-10">\:dtd}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:dtd#1\EndVerify{\egroup\dtd:rule#1,--&#x003E;,}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\dtd:rule#1--&#x003E;#2,{\def\:temp{#1#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gdef</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1+#2\endcsname{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\dtd:rule</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 1663--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh3.html" >next</a>] [<a 
+ href="tex4ht-styCh1.html" >prev</a>] [<a 
+ href="tex4ht-styCh1.html#tailtex4ht-styCh1.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh2.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh2.html" >up</a>] </p></div>
+<!--l. 1663--><p class="indent" >    <a 
+  name="tailtex4ht-styCh2.html"></a>  </p> 
+</body></html> 

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Get Content Handler for SAX</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 2364--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse4.html" >next</a>] [<a 
+ href="xtpipessu26.html" >prev</a>] [<a 
+ href="xtpipessu26.html#tailxtpipessu26.html" >prev-tail</a>] [<a 
+ href="xtpipessu23.html#tailxtpipessu25.html">tail</a>] [<a 
+ href="xtpipessu16.html#xtpipessu27.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">3.11   </span> <a 
+  id="x33-410003.11"></a>Get Content Handler for SAX</h4>
+           <!--l. 2372--><p class="noindent" ><a 
+ id="PrTx41001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu23.html#PrTx36011"  id="QPrTx121"><span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">className</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">...</span></a><a 
+ id="PrTx41002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">className</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getAttributes()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNamedItem(</span>&#x00A0;<span 
+class="cmtt-10">"content-handler"</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNodeValue()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.split(",");</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 2377--><p class="noindent" >The constructor of a content handler is provided five arguments:
+</p>
+     <ul class="itemize1">
+     <li class="itemize">An output stream
+     </li>
+     <li class="itemize">A hash map containing the enclosed defdinitions of scripts
+     </li>
+     <li class="itemize">A method name
+     </li>
+     <li class="itemize">A log stream
+     </li>
+     <li class="itemize">A trace flag</li></ul>
+           <!--l. 2404--><p class="noindent" ><a 
+ id="PrTx41003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu23.html#PrTx36013"  id="QPrTx122"><span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">content</span>&#x00A0;<span 
+class="cmtt-10">handler</span></a><a 
+ id="PrTx41004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Class&#x003C;?&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter.class,</span>&#x00A0;<span 
+class="cmtt-10">HashMap.class,</span>&#x00A0;<span 
+class="cmtt-10">Method.class,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">PrintWriter.class,</span>&#x00A0;<span 
+class="cmtt-10">boolean.class</span>&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;<a 
+ id="PrTx41005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu24.html#PrTx40001"><span 
+class="cmtt-10">output stream for sax</span></a><a 
+ id="PrTx41006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Object</span>&#x00A0;<span 
+class="cmtt-10">parmValues[]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Object[5];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">parmValues[0]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">out;</span>
+      <br /><!--x-->&#x00A0;<a 
+ id="PrTx41007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx41009"><span 
+class="cmtt-10">sax scripts</span></a><a 
+ id="PrTx41008"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">parmValues[1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scripts;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">parmValues[2]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">method;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">parmValues[3]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Xtpipes.logWriter;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">parmValues[4]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">Xtpipes.trace;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Class&#x003C;?&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">cls</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Class.forName(</span>&#x00A0;<span 
+class="cmtt-10">className[0].trim()</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Constructor&#x003C;?&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">c</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">cls.getConstructor(</span>&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Object</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">c.newInstance(</span>&#x00A0;<span 
+class="cmtt-10">parmValues</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 2421--><p class="noindent" ><a 
+ id="PrTx41009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx41007"  id="QPrTx123"><span 
+class="cmtt-10">sax</span>&#x00A0;<span 
+class="cmtt-10">scripts</span></a><a 
+ id="PrTx41010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">HashMap</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;String,Object&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">scripts</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">HashMap</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;String,Object&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span>&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getFirstChild();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">null</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">script.getNodeType()==Node.ELEMENT_NODE</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">element</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">script.getAttributes().getNamedItem(</span>&#x00A0;<span 
+class="cmtt-10">"element"</span>&#x00A0;<span 
+class="cmtt-10">)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNodeValue();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">scripts.containsKey(element)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">System.err.println(</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">"---</span>&#x00A0;<span 
+class="cmtt-10">Warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">redfining</span>&#x00A0;<span 
+class="cmtt-10">script:</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">element</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">scripts.put(</span>&#x00A0;<span 
+class="cmtt-10">element,</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">script</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">script.getNextSibling();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2427--><p class="noindent" ><a 
+ href="xtpipessu23.html#PrTx37005"  id="PrTx41011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu3.html#PrTx5011"  id="QPrTx124"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">initialization</span></a><a 
+ id="PrTx41012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Class</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;?&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">cls</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Xtpipes.class;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Class&#x003C;?&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">Node.class,</span>&#x00A0;<span 
+class="cmtt-10">String.class</span>&#x00A0;<span 
+class="cmtt-10">};</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">method</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">cls.getMethod(</span>&#x00A0;<span 
+class="cmtt-10">"execute",</span>&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2431--><p class="noindent" ><a 
+ href="xtpipessu23.html#PrTx37007"  id="PrTx41013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu1.html#PrTx3009"  id="QPrTx125"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx41014"  href="xtpipessu41.html#PrTx61016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span>&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Method</span>&#x00A0;<span 
+class="cmtt-10">method;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 2434--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse4.html" >next</a>] [<a 
+ href="xtpipessu26.html" >prev</a>] [<a 
+ href="xtpipessu26.html#tailxtpipessu26.html" >prev-tail</a>] [<a 
+ href="xtpipessu25.html" >front</a>] [<a 
+ href="xtpipessu16.html#xtpipessu27.html" >up</a>] </p></div>
+<!--l. 2434--><p class="indent" >   <a 
+  id="tailxtpipessu25.html"></a> </p> 
+</body></html> 

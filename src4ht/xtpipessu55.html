@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Name Spaces at End of Elements</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 4230--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesli1.html" >next</a>] [<a 
+ href="xtpipessu56.html" >prev</a>] [<a 
+ href="xtpipessu56.html#tailxtpipessu56.html" >prev-tail</a>] [<a 
+ href="xtpipessu53.html#tailxtpipessu55.html">tail</a>] [<a 
+ href="xtpipessu52.html#xtpipesse12.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">11.5   </span> <a 
+  id="x72-8000011.5"></a>Name Spaces at End of Elements</h4>
+           <!--l. 4252--><p class="noindent" ><a 
+ id="PrTx80001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu53.html#PrTx78009"  id="QPrTx231"><span 
+class="cmtt-10">remove</span>&#x00A0;<span 
+class="cmtt-10">xmlns</span>&#x00A0;<span 
+class="cmtt-10">attributes</span>&#x00A0;<span 
+class="cmtt-10">supported</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">above</span></a><a 
+ id="PrTx80002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">m</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">s.indexOf(&#8217;&#x003E;&#8217;);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">attrs</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">s.substring(0,m).toCharArray();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">result</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">qName.length()+1,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">result,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">from=-1,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ id="PrTx80003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81005"><span 
+class="cmtt-10">xmlns name</span></a><a 
+ id="PrTx80004"  href="#PrTx80006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">char</span>&#x00A0;<span 
+class="cmtt-10">delimiter</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;</span>&#x00A0;<span 
+class="cmtt-10">&#8217;;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">name="";</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(int</span>&#x00A0;<span 
+class="cmtt-10">i=result;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003C;m;</span>&#x00A0;<span 
+class="cmtt-10">i++</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">attrs[result++]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">attrs[i];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">switch(</span>&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;&#x00A0;<a 
+ id="PrTx80005"  href="#PrTx80003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81005"><span 
+class="cmtt-10">xmlns name</span></a><a 
+ id="PrTx80006"  href="#PrTx80030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ id="PrTx80007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80017"><span 
+class="cmtt-10">insert attribute name</span></a><a 
+ id="PrTx80008"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ id="PrTx80009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81007"><span 
+class="cmtt-10">xmlns quote</span></a><a 
+ id="PrTx80010"  href="#PrTx80020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ id="PrTx80011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80021"><span 
+class="cmtt-10">insert attribute quote</span></a><a 
+ id="PrTx80012"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">case</span>&#x00A0;<a 
+ id="PrTx80013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81009"><span 
+class="cmtt-10">xmlns value</span></a><a 
+ id="PrTx80014"  href="#PrTx80024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<a 
+ id="PrTx80015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx80025"><span 
+class="cmtt-10">insert attribute value</span></a><a 
+ id="PrTx80016"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">break;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">(new</span>&#x00A0;<span 
+class="cmtt-10">String(attrs,0,</span>&#x00A0;<span 
+class="cmtt-10">Math.min(result,attrs.length)))</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">s.substring(m);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4261--><p class="noindent" ><a 
+ id="PrTx80017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80007"  id="QPrTx232"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">attribute</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ id="PrTx80018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">attrs[i]</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;=&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(new</span>&#x00A0;<span 
+class="cmtt-10">String(attrs,mark,result-mark-1)).trim();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ id="PrTx80019"  href="#PrTx80009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81007"><span 
+class="cmtt-10">xmlns quote</span></a><a 
+ id="PrTx80020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4269--><p class="noindent" ><a 
+ id="PrTx80021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80011"  id="QPrTx233"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">attribute</span>&#x00A0;<span 
+class="cmtt-10">quote</span></a><a 
+ id="PrTx80022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(attrs[i]</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;"&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(attrs[i]</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\&#8217;&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">delimiter</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">attrs[i];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ id="PrTx80023"  href="#PrTx80013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81009"><span 
+class="cmtt-10">xmlns value</span></a><a 
+ id="PrTx80024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">result;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4282--><p class="noindent" ><a 
+ id="PrTx80025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx80015"  id="QPrTx234"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">attribute</span>&#x00A0;<span 
+class="cmtt-10">value</span></a><a 
+ id="PrTx80026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">attrs[i]</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">delimiter</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">name.startsWith("xmlns")</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">((name.length()</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">5)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(name.charAt(5)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;:&#8217;))</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">value</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(new</span>&#x00A0;<span 
+class="cmtt-10">String(attrs,from,result-from-1)).trim();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx80027"  href="xtpipessu54.html#PrTx79003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu49.html#PrTx72015"><span 
+class="cmtt-10">bool := xmlns active?</span></a><a 
+ id="PrTx80028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">bool</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;<span 
+class="cmtt-10">result</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">mark;</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">mark</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">result;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">control</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<a 
+ id="PrTx80029"  href="#PrTx80005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu56.html#PrTx81005"><span 
+class="cmtt-10">xmlns name</span></a><a 
+ id="PrTx80030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 4287--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesli1.html" >next</a>] [<a 
+ href="xtpipessu56.html" >prev</a>] [<a 
+ href="xtpipessu56.html#tailxtpipessu56.html" >prev-tail</a>] [<a 
+ href="xtpipessu55.html" >front</a>] [<a 
+ href="xtpipessu52.html#xtpipesse12.html" >up</a>] </p></div>
+<!--l. 4287--><p class="indent" >   <a 
+  id="tailxtpipessu55.html"></a> </p> 
+</body></html> 

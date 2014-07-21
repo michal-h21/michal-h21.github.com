@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Outline of the Code</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 332--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htPa3.html" >next</a>] [<a 
+ href="tex4ht-4htPa2.html" >prev</a>] [<a 
+ href="tex4ht-4htPa2.html#tailtex4ht-4htPa2.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htCh1.html">tail</a>] [<a 
+ href="tex4ht-4htPa2.html#tex4ht-4htCh1.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 1<br /><a 
+ href="tex4ht-4ht.html#QQ2-4-3"  name="QQ1-4-3">Outline of the Code</a></h2><div class="TableOfContents">
+    </div>
+      <!--l. 362--><p class="indent" ><a 
+ name="PrTx3001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3005"  name="QPrTx4"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx3002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2009--2014 </span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">TeX</span>&#x00A0;<span 
+class="cmtt-10">Users</span>&#x00A0;<span 
+class="cmtt-10">Group</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">This</span>&#x00A0;<span 
+class="cmtt-10">work</span>&#x00A0;<span 
+class="cmtt-10">may</span>&#x00A0;<span 
+class="cmtt-10">be</span>&#x00A0;<span 
+class="cmtt-10">distributed</span>&#x00A0;<span 
+class="cmtt-10">and/or</span>&#x00A0;<span 
+class="cmtt-10">modified</span>&#x00A0;<span 
+class="cmtt-10">under</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">conditions</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">LaTeX</span>&#x00A0;<span 
+class="cmtt-10">Project</span>&#x00A0;<span 
+class="cmtt-10">Public</span>&#x00A0;<span 
+class="cmtt-10">License,</span>&#x00A0;<span 
+class="cmtt-10">either</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">version</span>&#x00A0;<span 
+class="cmtt-10">1.3c</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">license</span>&#x00A0;<span 
+class="cmtt-10">or</span>&#x00A0;<span 
+class="cmtt-10">(at</span>&#x00A0;<span 
+class="cmtt-10">your</span>&#x00A0;<span 
+class="cmtt-10">option)</span>&#x00A0;<span 
+class="cmtt-10">any</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">later</span>&#x00A0;<span 
+class="cmtt-10">version.</span>&#x00A0;<span 
+class="cmtt-10">The</span>&#x00A0;<span 
+class="cmtt-10">latest</span>&#x00A0;<span 
+class="cmtt-10">version</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">license</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">http://www.latex-project.org/lppl.txt</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">version</span>&#x00A0;<span 
+class="cmtt-10">1.3c</span>&#x00A0;<span 
+class="cmtt-10">or</span>&#x00A0;<span 
+class="cmtt-10">later</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">part</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">all</span>&#x00A0;<span 
+class="cmtt-10">distributions</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">LaTeX</span>&#x00A0;<span 
+class="cmtt-10">version</span>&#x00A0;<span 
+class="cmtt-10">2005/12/01</span>&#x00A0;<span 
+class="cmtt-10">or</span>&#x00A0;<span 
+class="cmtt-10">later.</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">This</span>&#x00A0;<span 
+class="cmtt-10">work</span>&#x00A0;<span 
+class="cmtt-10">has</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">LPPL</span>&#x00A0;<span 
+class="cmtt-10">maintenance</span>&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">"maintained".%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">This</span>&#x00A0;<span 
+class="cmtt-10">Current</span>&#x00A0;<span 
+class="cmtt-10">Maintainer</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">work</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">Project</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;tex4ht@tug.org&#x003E;.</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">If</span>&#x00A0;<span 
+class="cmtt-10">you</span>&#x00A0;<span 
+class="cmtt-10">modify</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">program</span>&#x00A0;<span 
+class="cmtt-10">your</span>&#x00A0;<span 
+class="cmtt-10">changing</span>&#x00A0;<span 
+class="cmtt-10">its</span>&#x00A0;<span 
+class="cmtt-10">signature</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">directive</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">following</span>&#x00A0;<span 
+class="cmtt-10">form</span>&#x00A0;<span 
+class="cmtt-10">will</span>&#x00A0;<span 
+class="cmtt-10">be</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">appreciated.</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\message{signature}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">tex4ht@tug.org</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">http://www.tug.org/tex4ht</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{version</span>&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 383--><p class="noindent" ><a 
+ name="PrTx3003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3003"  name="QPrTx5"><span 
+class="cmtt-10">book.4ht</span></a><a 
+ name="PrTx3004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">book.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx3006"  href="#PrTx3028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe54.html#PrTx132001"><span 
+class="cmtt-10">book / report / article cut points</span></a><a 
+ name="PrTx3008"  href="#PrTx3030"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe73.html#PrTx177007"><span 
+class="cmtt-10">book et al tocs</span></a><a 
+ name="PrTx3010"  href="#PrTx3032"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe86.html#PrTx198001"><span 
+class="cmtt-10">chapters for book / report</span></a><a 
+ name="PrTx3012"  href="#PrTx3034"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3013"><span 
+class="cmtt-10">config book.sty utilities</span></a><a 
+ name="PrTx3014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3073"><span 
+class="cmtt-10">book / report / article</span></a><a 
+ name="PrTx3016"  href="#PrTx3046"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe35.html#PrTx82003"><span 
+class="cmtt-10">config book-report-article utilities</span></a><a 
+ name="PrTx3018"  href="#PrTx3036"><span 
+class="cmtt-10">.&#x003E;</span></a>
+
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe98.html#PrTx216001"><span 
+class="cmtt-10">redefine maketitle</span></a><a 
+ name="PrTx3020"  href="#PrTx3038"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3085"><span 
+class="cmtt-10">config book-report-article shared</span></a><a 
+ name="PrTx3022"  href="#PrTx3040"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3087"><span 
+class="cmtt-10">report,book tocs</span></a><a 
+ name="PrTx3024"  href="#PrTx3048"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{book}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 407--><p class="noindent" ><a 
+ name="PrTx3025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3025"  name="QPrTx6"><span 
+class="cmtt-10">report.4ht</span></a><a 
+ name="PrTx3026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">report.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3027"  href="#PrTx3005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx3028"  href="#PrTx3052"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3029"  href="#PrTx3007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe54.html#PrTx132001"><span 
+class="cmtt-10">book / report / article cut points</span></a><a 
+ name="PrTx3030"  href="#PrTx3054"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3031"  href="#PrTx3009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe73.html#PrTx177007"><span 
+class="cmtt-10">book et al tocs</span></a><a 
+ name="PrTx3032"  href="tex4ht-4htSe114.html#PrTx244004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3033"  href="#PrTx3011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe86.html#PrTx198001"><span 
+class="cmtt-10">chapters for book / report</span></a><a 
+ name="PrTx3034"  href="tex4ht-4htSe121.html#PrTx262014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3035"  href="#PrTx3017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe35.html#PrTx82003"><span 
+class="cmtt-10">config book-report-article utilities</span></a><a 
+ name="PrTx3036"  href="#PrTx3058"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3037"  href="#PrTx3019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe98.html#PrTx216001"><span 
+class="cmtt-10">redefine maketitle</span></a><a 
+ name="PrTx3038"  href="#PrTx3060"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3039"  href="#PrTx3021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3085"><span 
+class="cmtt-10">config book-report-article shared</span></a><a 
+ name="PrTx3040"  href="#PrTx3062"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3041"><span 
+class="cmtt-10">config report / article shared</span></a><a 
+ name="PrTx3042"  href="#PrTx3064"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3043"><span 
+class="cmtt-10">config report.sty utilities</span></a><a 
+ name="PrTx3044"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3045"  href="#PrTx3015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3073"><span 
+class="cmtt-10">book / report / article</span></a><a 
+ name="PrTx3046"  href="#PrTx3068"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3047"  href="#PrTx3023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3087"><span 
+class="cmtt-10">report,book tocs</span></a><a 
+ name="PrTx3048"  href="tex4ht-4htSe118.html#PrTx259032"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{report}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 430--><p class="noindent" ><a 
+ name="PrTx3049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3049"  name="QPrTx7"><span 
+class="cmtt-10">article.4ht</span></a><a 
+ name="PrTx3050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">article.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3051"  href="#PrTx3027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx3052"  href="#PrTx3096"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3053"  href="#PrTx3029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe54.html#PrTx132001"><span 
+class="cmtt-10">book / report / article cut points</span></a><a 
+ name="PrTx3054"  href="tex4ht-4htSe107.html#PrTx233004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3055"><span 
+class="cmtt-10">config article.sty utilities</span></a><a 
+ name="PrTx3056"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3057"  href="#PrTx3035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe35.html#PrTx82003"><span 
+class="cmtt-10">config book-report-article utilities</span></a><a 
+ name="PrTx3058"  href="tex4ht-4htSe117.html#PrTx258006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3059"  href="#PrTx3037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe98.html#PrTx216001"><span 
+class="cmtt-10">redefine maketitle</span></a><a 
+ name="PrTx3060"  href="tex4ht-4htSe113.html#PrTx243004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3061"  href="#PrTx3039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3085"><span 
+class="cmtt-10">config book-report-article shared</span></a><a 
+ name="PrTx3062"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3063"  href="#PrTx3041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3063"><span 
+class="cmtt-10">config report / article shared</span></a><a 
+ name="PrTx3064"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3065"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3065"><span 
+class="cmtt-10">config article.sty shared</span></a><a 
+ name="PrTx3066"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3067"  href="#PrTx3045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3073"><span 
+class="cmtt-10">book / report / article</span></a><a 
+ name="PrTx3068"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3069"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe73.html#PrTx177001"><span 
+class="cmtt-10">article et al tocs</span></a><a 
+ name="PrTx3070"  href="tex4ht-4htSe119.html#PrTx260030"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3071"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3091"><span 
+class="cmtt-10">article tocs</span></a><a 
+ name="PrTx3072"  href="#PrTx3090"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{article}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 436--><p class="noindent" ><a 
+ name="PrTx3073"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3015"  name="QPrTx8"><span 
+class="cmtt-10">book</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">report</span>&#x00A0;<span 
+class="cmtt-10">/</span>&#x00A0;<span 
+class="cmtt-10">article</span></a><a 
+ name="PrTx3074"  href="tex4ht-4htSe68.html#PrTx161050"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx3075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe73.html#PrTx177017"><span 
+class="cmtt-10">html latex tocs</span></a><a 
+ name="PrTx3076"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3077"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3081"><span 
+class="cmtt-10">book, report, article</span></a><a 
+ name="PrTx3078"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3079"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe91.html#PrTx207001"><span 
+class="cmtt-10">latex options 1, 2, 3</span></a><a 
+ name="PrTx3080"  href="tex4ht-4htSe117.html#PrTx258024"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">tocs,</span>&#x00A0;<span 
+class="cmtt-10">divs,</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">cuts</span></i>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 441--><p class="noindent" ><a 
+ name="PrTx3081"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3077"  name="QPrTx9"><span 
+class="cmtt-10">book,</span>&#x00A0;<span 
+class="cmtt-10">report,</span>&#x00A0;<span 
+class="cmtt-10">article</span></a><a 
+ name="PrTx3082"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx3083"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3083"><span 
+class="cmtt-10">halign-based tables</span></a><a 
+ name="PrTx3084"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 454--><p class="noindent" ><a 
+ name="PrTx3085"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3021"  name="QPrTx10"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">book-report-article</span>&#x00A0;<span 
+class="cmtt-10">shared</span></a><a 
+ name="PrTx3086"  href="tex4ht-4htSe35.html#PrTx82002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:tempc{\@roman</span>&#x00A0;<span 
+class="cmtt-10">\c@enumiii}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\theenumiii\:tempc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempc{\a:enumiii\@roman\c@enumiii\b:enumiii}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\theenumiii\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{enumiii}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 461--><p class="noindent" ><a 
+ name="PrTx3087"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3023"  name="QPrTx11"><span 
+class="cmtt-10">report,book</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx3088"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx3089"  href="#PrTx3071"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3091"><span 
+class="cmtt-10">article tocs</span></a><a 
+ name="PrTx3090"  href="tex4ht-4htSe119.html#PrTx260034"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{appendix}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{chapter}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likechapter}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 476--><p class="noindent" ><a 
+ name="PrTx3091"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3071"  name="QPrTx12"><span 
+class="cmtt-10">article</span>&#x00A0;<span 
+class="cmtt-10">tocs</span></a><a 
+ name="PrTx3092"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likeparagraph}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likepart}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likesection}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likesubparagraph}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likesubsection}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{likesubsubsection}</span>&#x00A0;<span 
+class="cmtt-10">{}{\empty}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{paragraph}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{part}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{section}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{subparagraph}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{subsection}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ConfigureToc{subsubsection}</span>&#x00A0;<span 
+class="cmtt-10">{\empty}{\</span>&#x00A0;<span 
+class="cmtt-10">}{}{\newline}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 489--><p class="noindent" ><a 
+ name="PrTx3093"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3093"  name="QPrTx13"><span 
+class="cmtt-10">usepackage.4ht</span></a><a 
+ name="PrTx3094"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">usepackage.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2003--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3095"  href="#PrTx3051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx3096"  href="tex4ht-4htPa3.html#PrTx4004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx3097"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3099"><span 
+class="cmtt-10">insert into latex</span></a><a 
+ name="PrTx3098"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 504--><p class="noindent" ><a 
+ name="PrTx3099"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3097"  name="QPrTx14"><span 
+class="cmtt-10">insert</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">latex</span></a><a 
+ name="PrTx3100"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{tex4ht}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\@currname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\usepackage{tex4ht}</span>&#x00A0;<span 
+class="cmtt-10">again?}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx3101"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx3113"><span 
+class="cmtt-10">problem due to hyperref?</span></a><a 
+ name="PrTx3102"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\a:usepackage{\use:package</span>&#x00A0;<a 
+ name="PrTx3103"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe11.html#PrTx31007"><span 
+class="cmtt-10">use package</span></a><a 
+ name="PrTx3104"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">,</span><a 
+ name="PrTx3105"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx3106"  href="#PrTx3108"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gdef\use:package#1,{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">:#1:\def\:temp##1</span><a 
+ name="PrTx3107"  href="#PrTx3105"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx3108"  href="#PrTx3110"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@currname\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span><a 
+ name="PrTx3109"  href="#PrTx3107"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx3110"  href="#PrTx3116"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\input</span>&#x00A0;<span 
+class="cmtt-10">usepackage.4ht</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\let\:temp=\use:package</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\:temp}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx3111"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe11.html#PrTx31009"><span 
+class="cmtt-10">add to usepackage</span></a><a 
+ name="PrTx3112"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 517--><p class="noindent" ><a 
+ name="PrTx3113"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx3101"  name="QPrTx15"><span 
+class="cmtt-10">problem</span>&#x00A0;<span 
+class="cmtt-10">due</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">hyperref?</span></a><a 
+ name="PrTx3114"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1htex4ht.def,tex4ht.sty#2</span><a 
+ name="PrTx3115"  href="#PrTx3109"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx3116"  href="#PrTx3118"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\@filelist</span>&#x00A0;<span 
+class="cmtt-10">htex4ht.def,tex4ht.sty</span><a 
+ name="PrTx3117"  href="#PrTx3115"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx3118"  href="tex4ht-4htCh2.html#PrTx5010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{if</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\RequirePackage[tex4ht]{hyperref}</span>&#x00A0;<span 
+class="cmtt-10">or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\usepackage[tex4ht]{hyperref}</span>&#x00A0;<span 
+class="cmtt-10">was</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">used</span>&#x00A0;<span 
+class="cmtt-10">try</span>&#x00A0;<span 
+class="cmtt-10">instead,</span>&#x00A0;<span 
+class="cmtt-10">repectively,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\RequirePackage{hyperref}</span>&#x00A0;<span 
+class="cmtt-10">or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\usepackage{hyperref}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 520--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htPa3.html" >next</a>] [<a 
+ href="tex4ht-4htPa2.html" >prev</a>] [<a 
+ href="tex4ht-4htPa2.html#tailtex4ht-4htPa2.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htCh1.html" >front</a>] [<a 
+ href="tex4ht-4htPa2.html#tex4ht-4htCh1.html" >up</a>] </p></div>
+<!--l. 520--><p class="indent" >    <a 
+  name="tailtex4ht-4htCh1.html"></a> </p> 
+</body></html> 

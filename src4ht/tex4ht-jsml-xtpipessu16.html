@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Paragraphs (JsmlFilter.java)</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-jsml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:52:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-jsml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 977--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipessu17.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu15.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu15.html#tailtex4ht-jsml-xtpipessu15.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-jsml-xtpipessu16.html">tail</a>] [<a 
+ href="tex4ht-jsml-xtpipesse4.html#tex4ht-jsml-xtpipessu16.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">4.5   </span> <a 
+  id="x22-210004.5"></a>Paragraphs (JsmlFilter.java)</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-47"><div class="head">
+       <a 
+ id="PrTx21001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu10.html#PrTx14009"  id="QPrTx47"><span 
+class="cmtt-10">remove</span><span 
+class="cmtt-10">&#x00A0;empty</span><span 
+class="cmtt-10">&#x00A0;paragraphs</span></a><a 
+ id="PrTx21002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;xsl:template</span><span 
+class="cmtt-10">&#x00A0;match="</span><span 
+class="cmtt-10">&#x00A0;PARA[</span><span 
+class="cmtt-10">&#x00A0;normalize-space(.)</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;&#8217;&#8217;</span><span 
+class="cmtt-10">&#x00A0;]</span><span 
+class="cmtt-10">&#x00A0;"</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;/xsl:template&#x003E;</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 986--><p class="indent" >   The following adds PARA on &#8216;p&#8217; paragraphs, ul.
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-48"><div class="head">
+       <a 
+ id="PrTx21003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21003"  id="QPrTx48"><span 
+class="cmtt-10">JsmlFilter.java</span></a><a 
+ id="PrTx21004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">package</span><span 
+class="cmtt-10">&#x00A0;tex4ht;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span><span 
+class="cmtt-10">&#x00A0;JsmlFilter.java</span><span 
+class="cmtt-10">&#x00A0;(2014-05-24-11:52),</span><span 
+class="cmtt-10">&#x00A0;generated</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;tex4ht-jsml-xtpipes.tex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2009-2010</span><span 
+class="cmtt-10">&#x00A0;TeX</span><span 
+class="cmtt-10">&#x00A0;Users</span><span 
+class="cmtt-10">&#x00A0;Group</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2002-2009</span><span 
+class="cmtt-10">&#x00A0;Eitan</span><span 
+class="cmtt-10">&#x00A0;M.</span><span 
+class="cmtt-10">&#x00A0;Gurari</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx21005"  href="tex4ht-jsml-xtpipessu12.html#PrTx17005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-jsml-xtpipes.html#PrTx2"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ id="PrTx21006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;*/</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span><span 
+class="cmtt-10">&#x00A0;org.xml.sax.helpers.*;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span><span 
+class="cmtt-10">&#x00A0;org.xml.sax.*;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span><span 
+class="cmtt-10">&#x00A0;java.io.PrintWriter;</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">public</span><span 
+class="cmtt-10">&#x00A0;class</span><span 
+class="cmtt-10">&#x00A0;JsmlFilter</span><span 
+class="cmtt-10">&#x00A0;extends</span><span 
+class="cmtt-10">&#x00A0;XMLFilterImpl</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;out</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;null;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;JsmlFilter(</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;out,</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;log,</span><span 
+class="cmtt-10">&#x00A0;boolean</span><span 
+class="cmtt-10">&#x00A0;trace</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;this.out</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;out;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;void</span><span 
+class="cmtt-10">&#x00A0;startElement(String</span><span 
+class="cmtt-10">&#x00A0;ns,</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;sName,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;qName,</span><span 
+class="cmtt-10">&#x00A0;Attributes</span><span 
+class="cmtt-10">&#x00A0;attr)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;try{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21011"><span 
+class="cmtt-10">elements for PARA?</span></a><a 
+ id="PrTx21008"  href="#PrTx21010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Attributes</span><span 
+class="cmtt-10">&#x00A0;att</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;new</span><span 
+class="cmtt-10">&#x00A0;AttributesImpl();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;super.startElement(ns,</span><span 
+class="cmtt-10">&#x00A0;"PARA",</span><span 
+class="cmtt-10">&#x00A0;"PARA",</span><span 
+class="cmtt-10">&#x00A0;att);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;super.startElement(ns,</span><span 
+class="cmtt-10">&#x00A0;sName,</span><span 
+class="cmtt-10">&#x00A0;qName,</span><span 
+class="cmtt-10">&#x00A0;attr);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;catch(</span><span 
+class="cmtt-10">&#x00A0;Exception</span><span 
+class="cmtt-10">&#x00A0;e</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;System.out.println(</span><span 
+class="cmtt-10">&#x00A0;"---</span><span 
+class="cmtt-10">&#x00A0;JsmlFilter</span><span 
+class="cmtt-10">&#x00A0;Error</span><span 
+class="cmtt-10">&#x00A0;1</span><span 
+class="cmtt-10">&#x00A0;---</span><span 
+class="cmtt-10">&#x00A0;"</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;e);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;void</span><span 
+class="cmtt-10">&#x00A0;endElement(String</span><span 
+class="cmtt-10">&#x00A0;ns,</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;sName,</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;qName){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;try{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;super.endElement(ns,</span><span 
+class="cmtt-10">&#x00A0;sName,</span><span 
+class="cmtt-10">&#x00A0;qName);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21009"  href="#PrTx21007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21011"><span 
+class="cmtt-10">elements for PARA?</span></a><a 
+ id="PrTx21010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;super.endElement(ns,</span><span 
+class="cmtt-10">&#x00A0;"PARA",</span><span 
+class="cmtt-10">&#x00A0;"PARA");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;catch(</span><span 
+class="cmtt-10">&#x00A0;Exception</span><span 
+class="cmtt-10">&#x00A0;e</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;System.out.println(</span><span 
+class="cmtt-10">&#x00A0;"---</span><span 
+class="cmtt-10">&#x00A0;JsmlFilter</span><span 
+class="cmtt-10">&#x00A0;Error</span><span 
+class="cmtt-10">&#x00A0;2</span><span 
+class="cmtt-10">&#x00A0;---</span><span 
+class="cmtt-10">&#x00A0;"</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;e);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-49"><div class="head">
+       <a 
+ id="PrTx21011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21007"  id="QPrTx49"><span 
+class="cmtt-10">elements</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;PARA?</span></a><a 
+ id="PrTx21012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"p"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"h2"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"h3"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"h4"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"ul"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"ol"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"li"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"dd"</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">||</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"dl"</span><span 
+class="cmtt-10">&#x00A0;)</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 1052--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipessu17.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu15.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu15.html#tailtex4ht-jsml-xtpipessu15.html" >prev-tail</a>] [<a 
+ href="tex4ht-jsml-xtpipessu16.html" >front</a>] [<a 
+ href="tex4ht-jsml-xtpipesse4.html#tex4ht-jsml-xtpipessu16.html" >up</a>] </p></div>
+<!--l. 1052--><p class="indent" >   <a 
+  id="tailtex4ht-jsml-xtpipessu16.html"></a> </p> 
+</body></html> 

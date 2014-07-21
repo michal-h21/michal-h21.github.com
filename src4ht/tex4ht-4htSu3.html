@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ref, label, newlabel: Hooking into Label</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 1426--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu4.html" >next</a>] [<a 
+ href="tex4ht-4htSu2.html" >prev</a>] [<a 
+ href="tex4ht-4htSu2.html#tailtex4ht-4htSu2.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu3.html">tail</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu3.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe3.html#QQ2-18-15"  name="QQ1-18-15">ref, label, newlabel: Hooking into Label</a></h3>
+           <!--l. 1456--><p class="noindent" ><a 
+ href="tex4ht-4htSu2.html#PrTx14003"  name="PrTx15001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx60"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx15002"  href="#PrTx15036"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:label=\label</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\label{\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">cur:th\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:label</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\l:bel</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\lb:l=\label</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\l:bel#1{\@bsphack\if@filesw</span>&#x00A0;<span 
+class="cmtt-10">{\let\thepage=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh19.html#PrTx147001"><span 
+class="cmtt-10">control @</span></a><a 
+ name="PrTx15004"  href="tex4ht-4htCh19.html#PrTx147006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\protect=\@unexpandable@protect</span>&#x00A0;<span 
+class="cmtt-10">\cur:lbl{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\cur:th\skip:anchor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15023"><span 
+class="cmtt-10">if-label anchors</span></a><a 
+ name="PrTx15006"  href="#PrTx15030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:currentlabel\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15027"><span 
+class="cmtt-10">pre section anchor</span></a><a 
+ name="PrTx15008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15033"><span 
+class="cmtt-10">anchors for pictures</span></a><a 
+ name="PrTx15010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:@newlabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\@tempa{\write\@auxout{\string</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\newlabel{#1}{{</span><a 
+ name="PrTx15011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15037"><span 
+class="cmtt-10">logical label</span></a><a 
+ name="PrTx15012"  href="tex4ht-4htSe7.html#PrTx27004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx15013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15039"><span 
+class="cmtt-10">page label</span></a><a 
+ name="PrTx15014"  href="tex4ht-4htSe7.html#PrTx27006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span><a 
+ name="PrTx15015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu12.html#PrTx36041"><span 
+class="cmtt-10">hyperref label</span></a><a 
+ name="PrTx15016"  href="tex4ht-4htSe7.html#PrTx27008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter}\@tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@nobreak</span>&#x00A0;<span 
+class="cmtt-10">\ifvmode\nobreak\fi\fi\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx15017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15025"><span 
+class="cmtt-10">cancel if-label anchors</span></a><a 
+ name="PrTx15018"  href="tex4ht-4htSe57.html#PrTx137012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@esphack}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx15019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15043"><span 
+class="cmtt-10">sub/sup in labels/refs</span></a><a 
+ name="PrTx15020"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1460--><p class="noindent" ><a 
+ name="PrTx15021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu2.html#PrTx14005"  name="QPrTx61"><span 
+class="cmtt-10">configure</span>&#x00A0;<span 
+class="cmtt-10">@newlabel</span></a><a 
+ name="PrTx15022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{@newlabel}{\def\%{\string\%}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1464--><p class="noindent" >We had before &#8216;<span 
+class="cmtt-10">\ifx \EndPicture\:UnDef...\else...\fi</span>&#8217; embeded within &#8216;<span 
+class="cmtt-10">\ifx \cur:th\skip:anchor</span>&#8217; but
+that eliminated the anchors for eqnarray of pictures.
+</p><!--l. 1469--><p class="indent" >    To save memory, we try to get anchors only when refered by labels. For instance, this is the case for
+<span 
+class="cmtt-10">\@thm</span>.
+</p>
+      <!--l. 1475--><p class="indent" ><a 
+ name="PrTx15023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15005"  name="QPrTx62"><span 
+class="cmtt-10">if-label</span>&#x00A0;<span 
+class="cmtt-10">anchors</span></a><a 
+ name="PrTx15024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:@newlabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Make:Label{\label:addr}{}\egroup</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1479--><p class="noindent" ><a 
+ name="PrTx15025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15017"  name="QPrTx63"><span 
+class="cmtt-10">cancel</span>&#x00A0;<span 
+class="cmtt-10">if-label</span>&#x00A0;<span 
+class="cmtt-10">anchors</span></a><a 
+ name="PrTx15026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\skip:anchor=\:UnDef</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1482--><p class="noindent" >The following deals with labels <span 
+class="cmtt-10">\label </span>provided before sectioning commands.
+</p>
+      <!--l. 1487--><p class="indent" ><a 
+ name="PrTx15027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15007"  name="QPrTx64"><span 
+class="cmtt-10">pre</span>&#x00A0;<span 
+class="cmtt-10">section</span>&#x00A0;<span 
+class="cmtt-10">anchor</span></a><a 
+ name="PrTx15028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:currentlabel{doc}%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx15029"  href="#PrTx15005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx15023"><span 
+class="cmtt-10">if-label anchors</span></a><a 
+ name="PrTx15030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1493--><p class="noindent" ><a 
+ name="PrTx15031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSu5.html#PrTx17009"  name="QPrTx65"><span 
+class="cmtt-10">replace AutoRefstepAnchor</span></a><a 
+ name="PrTx15032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\AutoRefstepAnchor{\SkipRefstepAnchor}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 1495--><p class="noindent" >The following is to ensure anchors for labels in pictures.
+</p>
+      <!--l. 1506--><p class="indent" ><a 
+ name="PrTx15033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15009"  name="QPrTx66"><span 
+class="cmtt-10">anchors</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">pictures</span></a><a 
+ name="PrTx15034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:@newlabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\AfterPicture{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\Make:Label{\label:addr}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\uno:lbl{\label:addr}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1509--><p class="noindent" >The following is to avoid eliminated anchors as is the case in, for instance, &#8216;<span 
+class="cmtt-10">\[xx\label{a}\label{b}\]</span>
+&#8217;.
+</p>
+      <!--l. 1516--><p class="indent" ><a 
+ href="#PrTx15001"  name="PrTx15035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx67"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx15036"  href="#PrTx15042"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\uno:lbl#1{\def\:temp{#1}\futurelet\:tempa\I:lbl}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\I:lbl{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\Make:Label</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\no:mklbl</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\no:mklbl#1#2#3{\def\:tempa{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Make:Label{#2}{#3}\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1521--><p class="noindent" ><a 
+ name="PrTx15037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15011"  name="QPrTx68"><span 
+class="cmtt-10">logical</span>&#x00A0;<span 
+class="cmtt-10">label</span></a><a 
+ name="PrTx15038"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:newlabel\@currentlabel</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1523--><p class="noindent" >The anchor for the page is approximated to the anchor of the logical unit. This is so to solve the possible problem of
+having a &#8216;<span 
+class="cmtt-10">label</span>&#8217; in a position where &#8216;<span 
+class="cmtt-10">&#x003C;A&#x003E;</span>&#8217; links are not allowed.
+</p>
+      <!--l. 1529--><p class="indent" ><a 
+ name="PrTx15039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15013"  name="QPrTx69"><span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">label</span></a><a 
+ name="PrTx15040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:newlabel\thepage</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1534--><p class="noindent" ><a 
+ href="#PrTx15035"  name="PrTx15041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx70"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx15042"  href="tex4ht-4htSu4.html#PrTx16002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:currentlabel=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1536--><p class="noindent" >In pure latex, <span 
+class="cmtt-10">\Configure{newlabel}{##1}</span>.
+</p><!--l. 1540--><p class="indent" >    The following is treated in a similar manner to cite. It provides the means to disable nested links in
+entries of tocs. The <span 
+class="cmtt-10">\Link </span>doesn&#8217;t seem to need the <span 
+class="cmtt-10">[] </span>option there, so a <span 
+class="cmtt-10">\:gobbleII </span>can do the
+job.
+</p><!--l. 1555--><p class="indent" >    A better def is given to <span 
+class="cmtt-10">\l:bel </span>in AmsLaTeX .
+</p>
+      <!--l. 1568--><p class="indent" ><a 
+ name="PrTx15043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15019"  name="QPrTx71"><span 
+class="cmtt-10">sub/sup</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">labels/refs</span></a><a 
+ name="PrTx15044"  href="#PrTx15046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\l:bel:=\l:bel</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\l::bel#1{{\:SUBOff\:SUPOff\xdef\:temp{\noexpand\l:bel:{#1}}}\:temp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\l:bel{\Protect\l::bel}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\o:ref=\:ref</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::ref#1{{\:SUBOff\:SUPOff\xdef\RefArg{#1}}\expandafter\o:ref</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter{\RefArg}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:ref{\Protect\::ref}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\ref=\:ref</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1570--><p class="noindent" >Without the &#8217; we may get <span 
+class="cmtt-10">\RefArg </span>passed as the first argument to <span 
+class="cmtt-10">\T@arg</span>, resulting in <span 
+class="cmtt-10">\def\RefArg{\RefArg}</span>.
+</p>
+      <!--l. 1580--><p class="indent" ><a 
+ href="#PrTx15043"  name="PrTx15045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15019"  name="QPrTx72"><span 
+class="cmtt-10">sub/sup</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">labels/refs</span></a><a 
+ name="PrTx15046"  href="#PrTx15048"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:newl@bel=\@newl@bel</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\n:wlbl=\@newl@bel</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@newl@bel#1#2{{\:SUBOff\:SUPOff</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\:temp{\noexpand\n:wlbl{#1}{#2}}}\:temp}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 1588--><p class="noindent" ><a 
+ href="#PrTx15045"  name="PrTx15047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx15019"  name="QPrTx73"><span 
+class="cmtt-10">sub/sup</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">labels/refs</span></a><a 
+ name="PrTx15048"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:testdef=\@testdef</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@testdef</span>&#x00A0;<span 
+class="cmtt-10">#1#2{{\:SUBOff\:SUPOff</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\:temp{\noexpand\:testdef{#1}{#2}}}\:temp}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 1593--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu4.html" >next</a>] [<a 
+ href="tex4ht-4htSu2.html" >prev</a>] [<a 
+ href="tex4ht-4htSu2.html#tailtex4ht-4htSu2.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu3.html" >front</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu3.html" >up</a>] </p></div>
+<!--l. 1593--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu3.html"></a> </p> 
+</body></html> 

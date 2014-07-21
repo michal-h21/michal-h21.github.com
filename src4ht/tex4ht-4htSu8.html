@@ -1,0 +1,1803 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>biblatex.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 2081--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu9.html" >next</a>] [<a 
+ href="tex4ht-4htSe6.html" >prev</a>] [<a 
+ href="tex4ht-4htSe6.html#tailtex4ht-4htSe6.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu8.html">tail</a>] [<a 
+ href="tex4ht-4htSe6.html#tex4ht-4htSu8.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe6.html#QQ2-27-23"  name="QQ1-27-23">biblatex.sty</a></h3>
+           <!--l. 2095--><p class="noindent" ><a 
+ name="PrTx23001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23001"  name="QPrTx96"><span 
+class="cmtt-10">biblatex.4ht</span></a><a 
+ name="PrTx23002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">biblatex.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">2007--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx23003"  href="tex4ht-4htSe5.html#PrTx21003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx23004"  href="tex4ht-4htSu9.html#PrTx24004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23015"><span 
+class="cmtt-10">config biblatex</span></a><a 
+ name="PrTx23006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23081"><span 
+class="cmtt-10">shared config biblatex</span></a><a 
+ name="PrTx23008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23089"><span 
+class="cmtt-10">biblatex-crosslinking</span></a><a 
+ name="PrTx23010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23013"><span 
+class="cmtt-10">biblatex AtEndPreamble</span></a><a 
+ name="PrTx23012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{biblatex}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2114--><p class="noindent" ><a 
+ name="PrTx23013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23011"  name="QPrTx97"><span 
+class="cmtt-10">biblatex</span>&#x00A0;<span 
+class="cmtt-10">AtEndPreamble</span></a><a 
+ name="PrTx23014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp\do</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\do#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\patchcmd#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\color@begingroup}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\color@begingroup\toggletrue{blx@footnote}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\togglefalse{blx@tempa}\listbreak}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\docsvlist{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@footnotetext,%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">latex</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\H@@footnotetext,%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">hyperref</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\scr@saved@footnotetext,%</span>&#x00A0;<span 
+class="cmtt-10">koma-script</span>&#x00A0;<span 
+class="cmtt-10">3.x</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\l@dold@footnotetext,%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ledmac</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\l@doldold@footnotetext,%</span>&#x00A0;<span 
+class="cmtt-10">ledmac</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@fntORI}%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">frenchle</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\do\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2131--><p class="noindent" ><a 
+ name="PrTx23015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx98"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23016"  href="#PrTx23018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\blx@startbib\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@shorthands{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibinit{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAssign\shorthands:cnt=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{printfield-shorthand}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{printfield-shorthand}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\gHAdvance\shorthands:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\shorthands:cnt=1</span>&#x00A0;<span 
+class="cmtt-10">\a:printshorthands</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:printshorthands</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\d:printshorthands}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\endtheshorthands{\b:printshorthands}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:@shorthands\endcsname}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2143--><p class="noindent" ><a 
+ href="#PrTx23015"  name="PrTx23017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx99"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23018"  href="#PrTx23020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\b:printshorthands\Undef\let\endtheshorthands\@empty\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\a:entryhead{CVR}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\a:entryhead:full{CV</span>&#x00A0;<span 
+class="cmtt-10">Radhakrishnan}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\bib@macro@entryhead:name\UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\bib@macro@entryhead:name\@empty\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\bib@macro@entryhead:full\UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\bib@macro@entryhead:full\@empty\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\BibFileName[#1]#2{\expandafter\xdef\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">BibFileName#1\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2155--><p class="noindent" ><a 
+ href="#PrTx23017"  name="PrTx23019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx100"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23020"  href="#PrTx23026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\newcount\sv:sec:cnt</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\bibSecConfigure{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\save:section\section</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\sv:sec:cnt=\c@secnumdepth</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\section{\@ifstar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\c@secnumdepth=0\relax\save:section}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\c@secnumdepth=\sv:sec:cnt\save:section}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAssign\bibN=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2200--><p class="noindent" ><a 
+ name="PrTx23021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23027"  name="QPrTx101"><span 
+class="cmtt-10">biblatex-with-ooffice</span></a><a 
+ name="PrTx23022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\bibConfigure{\ConfigureList{thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\IgnorePar\EndP</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\bib:N</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;text:bibliography</span>&#x00A0;<span 
+class="cmtt-10">text:name="bib-\bib:N"</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:bibliography-source&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-title-template&#x003E;}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NoFonts\ref:name\EndNoFonts</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;/text:index-title-template&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:bibliography-entry-template\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:bibliography-type="custom1"</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:style-name="Bibliography11"&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-bibliography</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:bibliography-data-field="identifier"/&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-span&#x003E;:</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:index-entry-span&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-bibliography</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:bibliography-data-field="author"</span>&#x00A0;<span 
+class="cmtt-10">/&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-span&#x003E;,</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:index-entry-span&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-bibliography</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:bibliography-data-field="title"</span>&#x00A0;<span 
+class="cmtt-10">/&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-span&#x003E;,</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:index-entry-span&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-entry-bibliography</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:bibliography-data-field="year"</span>&#x00A0;<span 
+class="cmtt-10">/&#x003E;\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:bibliography-entry-template&#x003E;\Hnewline\Hnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:bibliography-source&#x003E;\Hnewline</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;text:index-body&#x003E;\Hnewline}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\en:bib=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\en:bib\HCode{&#x003C;/text:index-body&#x003E;&#x003C;/text:bibliography&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\en:bib\gdef\en:bib{\HCode{&#x003C;/text:p&#x003E;\Hnewline}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;text:p</span>&#x00A0;<span 
+class="cmtt-10">text:style-name="p-bibitem"&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\bibN</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;text:reference-mark</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">text:name="X0-\csname</span>&#x00A0;<span 
+class="cmtt-10">BIB-\bibN\endcsname"&#x003E;%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;/text:reference-mark&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2235--><p class="noindent" ><a 
+ name="PrTx23023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23029"  name="QPrTx102"><span 
+class="cmtt-10">biblatex-without-ooffice</span></a><a 
+ name="PrTx23024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\bibConfigure{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureList{thebibliography}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifvmode</span>&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode</span>&#x00A0;<span 
+class="cmtt-10">{&#x003C;dl</span>&#x00A0;<span 
+class="cmtt-10">class="thebibliography"&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">This</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">linking</span>&#x00A0;<span 
+class="cmtt-10">citations</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">biblist</span>&#x00A0;<span 
+class="cmtt-10">items</span>&#x00A0;<span 
+class="cmtt-10">which</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">are</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">different</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">when</span>&#x00A0;<span 
+class="cmtt-10">output</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">split</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">different</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">chunks.</span>&#x00A0;<span 
+class="cmtt-10">[CVR</span>&#x00A0;<span 
+class="cmtt-10">2012-09-27]</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;biblatex-2.2&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write\@auxout{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\BibFileName[\therefsection]{\FileName}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/biblatex-2.2&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PushMacro</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">\global</span>&#x00A0;<span 
+class="cmtt-10">\let</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">=\empty}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifvmode</span>&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\PopMacro</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">\global</span>&#x00A0;<span 
+class="cmtt-10">\let</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode</span>&#x00A0;<span 
+class="cmtt-10">{&#x003C;/dd&#x003E;&#x003C;/dl&#x003E;}\ShowPar}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifvmode</span>&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance</span>&#x00A0;<span 
+class="cmtt-10">\bibN</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">\global</span>&#x00A0;<span 
+class="cmtt-10">\def</span>&#x00A0;<span 
+class="cmtt-10">\end:itm</span>&#x00A0;<span 
+class="cmtt-10">{\EndP</span>&#x00A0;<span 
+class="cmtt-10">\Tg</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;/dd&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode</span>&#x00A0;<span 
+class="cmtt-10">{&#x003C;dt</span>&#x00A0;<span 
+class="cmtt-10">id="X\therefsection-\abx@field@entrykey"</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">class="thebibliography"&#x003E;}\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\bf}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifvmode</span>&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\EndP</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode</span>&#x00A0;<span 
+class="cmtt-10">{&#x003C;/dt&#x003E;&#x003C;dd\Hnewline</span>&#x00A0;<span 
+class="cmtt-10">id="bib-\bibN"</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">class="thebibliography"&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\par</span>&#x00A0;<span 
+class="cmtt-10">\ShowPar}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2243--><p class="noindent" ><a 
+ href="#PrTx23019"  name="PrTx23025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx103"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23026"  href="#PrTx23032"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:CheckOption{ooffice}\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23021"><span 
+class="cmtt-10">biblatex-with-ooffice</span></a><a 
+ name="PrTx23028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx23029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23023"><span 
+class="cmtt-10">biblatex-without-ooffice</span></a><a 
+ name="PrTx23030"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 2262--><p class="noindent" ><a 
+ href="#PrTx23025"  name="PrTx23031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx104"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23032"  href="#PrTx23034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{printshorthands}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@shorthands}[1]{\concat:config\a:@shorthands{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:@shorthands\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nolinkurl{\o:url:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\blx@checksum{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\blx@checksum@old</span>&#x00A0;<span 
+class="cmtt-10">\blx@checksum@new</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@warning@noline</span>&#x00A0;<span 
+class="cmtt-10">{Page</span>&#x00A0;<span 
+class="cmtt-10">references</span>&#x00A0;<span 
+class="cmtt-10">have</span>&#x00A0;<span 
+class="cmtt-10">changed.\MessageBreak</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Rerun</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">references</span>&#x00A0;<span 
+class="cmtt-10">right}\@tempswatrue</span>&#x00A0;<span 
+class="cmtt-10">\blx@reruntrue</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@nameuse</span>&#x00A0;<span 
+class="cmtt-10">{blx@rerun}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibliography{\bibSecConfigure%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibinit{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bibConfigure</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">onthebibliography:list\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2287--><p class="noindent" ><a 
+ href="#PrTx23031"  name="PrTx23033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx105"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23034"  href="#PrTx23062"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\en:bib\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\newcounter{bib}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@bbl@entry#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\texht@bibkey{#1}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\abx@field@entrykey{\detokenize{#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\c@bib</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\immediate\write\@auxout{\string\expandafter\string\gdef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\csname\space</span>&#x00A0;<span 
+class="cmtt-10">BIB-\thebib\string\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\expandafter\strip@prefix\meaning\texht@bibkey}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Tag{)QX\therefsection-#1}{\thebib}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@setoptions@type{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@bbl@options{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@setoptions@entry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\blx@bbl@data{blx@data@\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">@\abx@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csuse\blx@bbl@data</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\cslet\blx@bbl@data\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@bbl@addfield{entrykey}{\abx@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@bbl@addfield{entrytype}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@imc@iffieldundef{options}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@bbl@fieldedef{options}{\expandonce\abx@field@options}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2312--><p class="noindent" ><a 
+ name="PrTx23035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23035"  name="QPrTx106"><span 
+class="cmtt-10">appto blx mkhyperref</span></a><a 
+ name="PrTx23036"  href="#PrTx23044"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@anchors\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\bib@field@entrykey\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@anchor{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xifinlist{</span><a 
+ name="PrTx23037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23051"><span 
+class="cmtt-10">/the /c@refsection @</span></a><a 
+ name="PrTx23038"  href="#PrTx23040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bib@field@entrykey}{\blx@anchors}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\listxadd\blx@anchors{</span><a 
+ name="PrTx23039"  href="#PrTx23037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23051"><span 
+class="cmtt-10">/the /c@refsection @</span></a><a 
+ name="PrTx23040"  href="#PrTx23042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bib@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorstart{</span><a 
+ name="PrTx23041"  href="#PrTx23039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23051"><span 
+class="cmtt-10">/the /c@refsection @</span></a><a 
+ name="PrTx23042"  href="#PrTx23046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bib@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorend}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2330--><p class="noindent" ><a 
+ href="#PrTx23035"  name="PrTx23043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23043"  name="QPrTx107"><span 
+class="cmtt-10">appto blx mkhyperref</span></a><a 
+ name="PrTx23044"  href="#PrTx23056"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@bibhyperref{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[%]</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@bibhyperref@i}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@bibhyperref@i[\bib@field@entrykey]}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\blx@bibhyperref@i[#1]#2{%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natlinkstart{</span><a 
+ name="PrTx23045"  href="#PrTx23041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23051"><span 
+class="cmtt-10">/the /c@refsection @</span></a><a 
+ name="PrTx23046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natlinkend}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhyperlink#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natlinkstart{</span><a 
+ name="PrTx23047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23053"><span 
+class="cmtt-10">/the /c@refsection :</span></a><a 
+ name="PrTx23048"  href="#PrTx23050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natlinkend}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhypertarget#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@bsphack</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorstart{</span><a 
+ name="PrTx23049"  href="#PrTx23047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx23053"><span 
+class="cmtt-10">/the /c@refsection :</span></a><a 
+ name="PrTx23050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@esphack</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natanchorend}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2335--><p class="noindent" ><a 
+ name="PrTx23051"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23037"  name="QPrTx108"><span 
+class="cmtt-10">/the</span>&#x00A0;<span 
+class="cmtt-10">/c@refsection</span>&#x00A0;<span 
+class="cmtt-10">@</span></a><a 
+ name="PrTx23052"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%@</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2339--><p class="noindent" ><a 
+ name="PrTx23053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23047"  name="QPrTx109"><span 
+class="cmtt-10">/the</span>&#x00A0;<span 
+class="cmtt-10">/c@refsection</span>&#x00A0;<span 
+class="cmtt-10">:</span></a><a 
+ name="PrTx23054"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">--%:</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2347--><p class="noindent" ><a 
+ href="#PrTx23043"  name="PrTx23055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23055"  name="QPrTx110"><span 
+class="cmtt-10">appto blx mkhyperref</span></a><a 
+ name="PrTx23056"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@ifhyperref\@firstoftwo</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natanchorstart#1{\Link{}{#1}\EndLink}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natanchorend{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natlinkstart#1{\Link{#1}{}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natlinkend{\EndLink}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\blx@bibhyperref@i[#1]#2{#2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhyperlink#1#2{#2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhypertarget#1#2{#2}</span>
+-_-_-</span>
+           </p><!--l. 2389--><p class="noindent" ><a 
+ name="PrTx23057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23057"  name="QPrTx112"><span 
+class="cmtt-10">config biblatex-???</span></a><a 
+ name="PrTx23058"  href="#PrTx23060"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibliography{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibinit{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ConfigureList{thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\a:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\b:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\c:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\d:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">onthebibliography:list\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\endthebibliography{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@newlist</span>&#x00A0;<span 
+class="cmtt-10">\global\@newlistfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2400--><p class="noindent" ><a 
+ href="#PrTx23057"  name="PrTx23059"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23059"  name="QPrTx113"><span 
+class="cmtt-10">config biblatex-???</span></a><a 
+ name="PrTx23060"  href="#PrTx23064"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\blx@bibitem{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\bibitem:key\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx:anchor\blx@anchor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\blx@anchor{\let\blx@anchor\blx:anchor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link{}{\bibitem:key}\EndLink}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\bibitem:key{##1}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2413--><p class="noindent" ><a 
+ href="#PrTx23033"  name="PrTx23061"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx114"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23062"  href="#PrTx23066"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@finentry{%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unspace</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:finentry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\finentrypunct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@postpunct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:finentry</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@initunit</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{finentry}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2451--><p class="noindent" ><a 
+ href="#PrTx23059"  name="PrTx23063"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23063"  name="QPrTx115"><span 
+class="cmtt-10">config biblatex-???</span></a><a 
+ name="PrTx23064"  href="tex4ht-4htSu9.html#PrTx24012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@citeprint#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\c@citecount\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\addtocounter{instcount}\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\c@citecount=\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@getdata@cite{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@precode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\c@citetotal&#x003E;\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@resetdata</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@dlimcode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\c@citetotal&#x003E;\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@getdata@cite{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@entrysetcount</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@options</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@backref</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@pagetracker</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csuse{blx@hook@citekey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csuse{blx@hook@citekey@next}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@execute</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\cIteLink{#1}{}\blx@loopcode</span>&#x00A0;<span 
+class="cmtt-10">\EndcIteLink</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@citetracker</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@ibidtracker</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@opcittracker</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@loccittracker</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\c@citecount=\c@citetotal</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\blx@thecheckpunct{\blx@err@nestcite\@gobble}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@postcode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2465--><p class="noindent" ><a 
+ href="#PrTx23061"  name="PrTx23065"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx116"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23066"  href="#PrTx23068"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:printfield-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{printfield-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{printfield-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:printfield-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:printfield-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@printfield:\endcsname[#1]{#2}%</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@printfield\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2474--><p class="noindent" ><a 
+ href="#PrTx23065"  name="PrTx23067"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx117"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23068"  href="#PrTx23072"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{printfield}[1]{\def\a:printfield##1{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{printfield}{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\HCode{&#x003C;!--#1--&#x003E;}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\HCode{&#x003C;!--/#1--&#x003E;}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2488--><p class="noindent" ><a 
+ name="PrTx23069"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23069"  name="QPrTx118"><span 
+class="cmtt-10">config biblatex--???</span></a><a 
+ name="PrTx23070"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:printtext-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{printtext-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{printtext-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:printtext-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:printtext-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@printtext:\endcsname[#1]{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@printtext\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2504--><p class="noindent" ><a 
+ href="#PrTx23067"  name="PrTx23071"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx119"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23072"  href="#PrTx23074"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibstring-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibstring-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{bibstring-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:bibstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@bibstring:\endcsname[#1]{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@bibstring\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2518--><p class="noindent" ><a 
+ href="#PrTx23071"  name="PrTx23073"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx120"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23074"  href="#PrTx23076"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibcpstring-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibcpstring-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{bibcpstring-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibcpstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:bibcpstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@bibcpstring:\endcsname[#1]{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@bibcpstring\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2533--><p class="noindent" ><a 
+ href="#PrTx23073"  name="PrTx23075"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx121"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23076"  href="#PrTx23078"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:biblcstring-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{biblcstring-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{biblcstring-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:biblcstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:biblcstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@biblcstring:\endcsname[#1]{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@biblcstring\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2548--><p class="noindent" ><a 
+ href="#PrTx23075"  name="PrTx23077"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx122"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23078"  href="#PrTx23084"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibucstring-#2\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibucstring-#2}{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:printfield{bibucstring-#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">a:bibucstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">b:bibucstring-#2\endcsname}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\blx@bibucstring:\endcsname[#1]{#2}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname\string\blx@bibucstring\endcsname\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2561--><p class="noindent" ><a 
+ name="PrTx23079"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23079"  name="QPrTx123"><span 
+class="cmtt-10">config biblatex pre v. 0.7 -??</span></a><a 
+ name="PrTx23080"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@bibliography{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\thebibitem{\c:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\thebibitem{\relax\d:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\blx@startbib{\a:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\endthebibliography{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@newlist</span>&#x00A0;<span 
+class="cmtt-10">\global\@newlistfalse</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\endthebibliography{\b:thebibliography}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2566--><p class="noindent" ><a 
+ name="PrTx23081"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23007"  name="QPrTx124"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23082"  href="#PrTx23088"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{thebibliography}{4}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2586--><p class="noindent" ><a 
+ href="#PrTx23077"  name="PrTx23083"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx125"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23084"  href="#PrTx23086"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{biblatex-style}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\blx@cbxfile</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\biblatex:style\def</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\biblatex:style{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{biblatex-style}{}{}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:def\at:docend{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\UnDef\biblatex:style</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\Configure{biblatex-style}{\blx@cbxfile}{...}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">not</span>&#x00A0;<span 
+class="cmtt-10">available}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2689--><p class="noindent" ><a 
+ href="#PrTx23083"  name="PrTx23085"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23005"  name="QPrTx126"><span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23086"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx:item\@item</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@item[#1]{%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx:item[#1]%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifhmode</span>&#x00A0;<span 
+class="cmtt-10">\spacefactor\blx@sf@par\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@resetpuncthook\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@csq@ifkernmark\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\newskip\blx@unitmark</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\blx@unitmark=10pt</span>&#x00A0;<span 
+class="cmtt-10">plus</span>&#x00A0;<span 
+class="cmtt-10">1pt</span>&#x00A0;<span 
+class="cmtt-10">minus</span>&#x00A0;<span 
+class="cmtt-10">1pt</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\abx@aux@page\@gobbletwo</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\abx@aux@fnpage\@gobbletwo</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\abx@aux@refsection\@gobbletwo</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;Kristian.Debrabant@cs.kuleuven.be&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">reported</span>&#x00A0;<span 
+class="cmtt-10">that</span>&#x00A0;<span 
+class="cmtt-10">After</span>&#x00A0;<span 
+class="cmtt-10">updating</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">biblatex.ht</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">versions</span>&#x00A0;<span 
+class="cmtt-10">2.2</span>&#x00A0;<span 
+class="cmtt-10">respectively</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">2012-09-28-17:49</span>&#x00A0;<span 
+class="cmtt-10">(using</span>&#x00A0;<span 
+class="cmtt-10">MiKTeX</span>&#x00A0;<span 
+class="cmtt-10">2.9</span>&#x00A0;<span 
+class="cmtt-10">64</span>&#x00A0;<span 
+class="cmtt-10">bit),</span>&#x00A0;<span 
+class="cmtt-10">tex4ht</span>&#x00A0;<span 
+class="cmtt-10">seemed</span>&#x00A0;<span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">longer</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">respected</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">defernumbers</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">biblatex.sty:</span>&#x00A0;<span 
+class="cmtt-10">When</span>&#x00A0;<span 
+class="cmtt-10">applied</span>&#x00A0;<span 
+class="cmtt-10">to</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">attached</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">tex4hterror.tex.</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">The</span>&#x00A0;<span 
+class="cmtt-10">problem</span>&#x00A0;<span 
+class="cmtt-10">was</span>&#x00A0;<span 
+class="cmtt-10">due</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">nullifying</span>&#x00A0;<span 
+class="cmtt-10">\abx@aux@number</span>&#x00A0;<span 
+class="cmtt-10">which</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">fact</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">should</span>&#x00A0;<span 
+class="cmtt-10">have</span>&#x00A0;<span 
+class="cmtt-10">been</span>&#x00A0;<span 
+class="cmtt-10">redefined</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\blx@aux@number</span>&#x00A0;<span 
+class="cmtt-10">when</span>&#x00A0;<span 
+class="cmtt-10">defernumbers</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">true.</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">This</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">done</span>&#x00A0;<span 
+class="cmtt-10">now</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">as</span>&#x00A0;<span 
+class="cmtt-10">per</span>&#x00A0;<span 
+class="cmtt-10">Kristian,</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">works</span>&#x00A0;<span 
+class="cmtt-10">fine</span>&#x00A0;<span 
+class="cmtt-10">now.</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@aux@number#1#2#3#4{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@bbl@addentryfield{\detokenize{#2}}{#3}{localnumber}{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifblank{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csgdef{blx@labelnumber@#3}{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%\blx@addchecksum{#1}{#4}</span>&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">can</span>&#x00A0;<span 
+class="cmtt-10">cause</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">nodocument</span>&#x00A0;<span 
+class="cmtt-10">error!</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\iftoggle{blx@defernumbers}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\setkeys{blx@opt@pre}{labelnumber}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx@thelabelnumber\blx@addlabelnumber</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\abx@aux@number\blx@aux@number}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\let\blx@thelabelnumber\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\abx@aux@number\@gobblefour}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\AtEndDocument{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\abx@aux@page#1#2{\blx@addpagesum{#1}{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\abx@aux@fnpage#1#2{\blx@addpagesum{#1}{#2}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\blx@begunit{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\toggletrue{blx@tempa}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iftoggle{blx@insert}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\iftoggle{blx@unit}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx@begunit\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx@endunit\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@unitpunct\blx@postpunct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\togglefalse{blx@unit}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\togglefalse{blx@tempa}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@postpunct}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iftoggle{blx@block}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx@begunit\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\blx@endunit\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\newblockpunct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\togglefalse{blx@block}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\togglefalse{blx@tempa}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@postpunct</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@resetpuncthook</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iftoggle{blx@tempa}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\global\togglefalse{blx@insert}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:blx@unit\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@leavevmode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\blx@csq@ifkernmark</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\penalty\@M</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip-\blx@unitmark\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip\blx@unitmark\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}{}{}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\blx@endunit{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:blx@unit\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{blx@unit}{}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim\lastskip=\blx@unitmark</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\unskip\unskip\unpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\togglefalse{blx@lastins}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\toggletrue{blx@insert}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\toggletrue{blx@lastins}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{blx@unit}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2694--><p class="noindent" ><a 
+ href="#PrTx23081"  name="PrTx23087"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23007"  name="QPrTx127"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span></a><a 
+ name="PrTx23088"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\blx@bibinit{\a:bibinit}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{bibinit}{1}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2772--><p class="noindent" ><a 
+ name="PrTx23089"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx23009"  name="QPrTx128"><span 
+class="cmtt-10">biblatex-crosslinking</span></a><a 
+ name="PrTx23090"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@anchors\@empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\bib@field@entrykey\@empty</span>
+      <br /><!--x-->&#x00A0;
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@anchor{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xifinlist{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bib@field@entrykey}{\blx@anchors}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\listxadd\blx@anchors{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bib@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorstart{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bib@field@entrykey}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorend}}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\def\blx@bibhyperref{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifnextchar[%]</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@bibhyperref@i}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\blx@bibhyperref@i[\bib@field@entrykey]}}%</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\blx@bibhyperref@i[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natlinkstart{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natlinkend}%</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhyperlink#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natlinkstart{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natlinkend}%</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\protected\long\def\blx@bibhypertarget#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@bsphack</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper:natanchorstart{X\the\c@refsection</span>&#x00A0;<span 
+class="cmtt-10">-%:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@esphack</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#2\hyper:natanchorend}%</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@ifhyperref\@firstoftwo</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Oleg</span>&#x00A0;<span 
+class="cmtt-10">Domanov</span>&#x00A0;<span 
+class="cmtt-10">odomanov@yandex.ru</span>&#x00A0;<span 
+class="cmtt-10">reports:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">tex4ht</span>&#x00A0;<span 
+class="cmtt-10">ends</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">an</span>&#x00A0;<span 
+class="cmtt-10">error</span>&#x00A0;<span 
+class="cmtt-10">when</span>&#x00A0;<span 
+class="cmtt-10">compiles</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span>&#x00A0;<span 
+class="cmtt-10">files.</span>&#x00A0;<span 
+class="cmtt-10">I&#8217;m</span>&#x00A0;<span 
+class="cmtt-10">on</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Windows,</span>&#x00A0;<span 
+class="cmtt-10">texlive</span>&#x00A0;<span 
+class="cmtt-10">2012.</span>&#x00A0;<span 
+class="cmtt-10">I</span>&#x00A0;<span 
+class="cmtt-10">put</span>&#x00A0;<span 
+class="cmtt-10">here</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">minimal</span>&#x00A0;<span 
+class="cmtt-10">example</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">files</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">generated</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">latexmk</span>&#x00A0;<span 
+class="cmtt-10">test</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">mk4ht</span>&#x00A0;<span 
+class="cmtt-10">oolatex</span>&#x00A0;<span 
+class="cmtt-10">test</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">https://www.dropbox.com/s/hn1zm40htqs13mf/t4htlink.zip</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">There</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">superfluous</span>&#x00A0;<span 
+class="cmtt-10">\relax</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">test.tmp,</span>&#x00A0;<span 
+class="cmtt-10">line</span>&#x00A0;<span 
+class="cmtt-10">65</span>&#x00A0;<span 
+class="cmtt-10">which</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">seems</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">cause</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">error.</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Changes</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">cope</span>&#x00A0;<span 
+class="cmtt-10">with</span>&#x00A0;<span 
+class="cmtt-10">biblatex</span>&#x00A0;<span 
+class="cmtt-10">upgrade</span>&#x00A0;<span 
+class="cmtt-10">caused</span>&#x00A0;<span 
+class="cmtt-10">this</span>&#x00A0;<span 
+class="cmtt-10">problem.</span>&#x00A0;<span 
+class="cmtt-10">It</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">now</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">fixed.</span>&#x00A0;<span 
+class="cmtt-10">--CVR</span>&#x00A0;<span 
+class="cmtt-10">2012/10/26</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{ooffice}\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper:natanchorstart#1{\Link{}{#1}\EndLink}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper:natlinkstart#1{\Link{#1}{}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper:natanchorstart#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">QXpage.\thepage\endcsname\relax%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Tag{)Qpage.\thepage}{\file:id}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;a</span>&#x00A0;<span 
+class="cmtt-10">id="page.\thepage"&#x003E;&#x003C;/a&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\xdef\csname</span>&#x00A0;<span 
+class="cmtt-10">QXpage.\thepage\endcsname{0}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link[\csname</span>&#x00A0;<span 
+class="cmtt-10">BibFileName\therefsection\endcsname]{}{#1}\EndLink}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper:natlinkstart#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">QXpage.\thepage\endcsname\relax%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Tag{)Qpage.\thepage}{\file:id}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;a</span>&#x00A0;<span 
+class="cmtt-10">id="page.\thepage"&#x003E;&#x003C;/a&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\xdef\csname</span>&#x00A0;<span 
+class="cmtt-10">QXpage.\thepage\endcsname{0}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link[\csname</span>&#x00A0;<span 
+class="cmtt-10">BibFileName\therefsection\endcsname]{#1}{}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natanchorend{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hyper:natlinkend{\EndLink}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\writeCiteLink#1{\immediate\write\@mainaux{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\@namedef{#1.\thepage}{\FileName}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\blx@addpagesum\@gobbletwo</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\nolinkurl\relax</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 2775--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu9.html" >next</a>] [<a 
+ href="tex4ht-4htSe6.html" >prev</a>] [<a 
+ href="tex4ht-4htSe6.html#tailtex4ht-4htSe6.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu8.html" >front</a>] [<a 
+ href="tex4ht-4htSe6.html#tex4ht-4htSu8.html" >up</a>] </p></div>
+<!--l. 2775--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu8.html"></a> </p> 
+</body></html> 

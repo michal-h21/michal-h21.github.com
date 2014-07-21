@@ -1,0 +1,1169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Accents</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-moz.tex"> 
+<meta name="date" content="2014-05-24 11:53:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-moz.css"> 
+</head><body 
+>
+   <!--l. 339--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mozse3.html" >next</a>] [<a 
+ href="tex4ht-mozse1.html" >prev</a>] [<a 
+ href="tex4ht-mozse1.html#tailtex4ht-mozse1.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-mozse2.html">tail</a>] [<a 
+ href="tex4ht-mozch2.html#tex4ht-mozse2.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.2   </span> <a 
+ href="tex4ht-moz.html#QQ2-7-4"  id="x7-40002.2">Accents</a></h3>
+   <div class="sectionTOCS">
+   </div>
+<!--l. 342--><p class="indent" >   See test file at tex4ht-mathml
+
+   <div class="verbatim" id="verbatim-1">
+&#x00A0;&#x003E;&#x00A0;There&#x00A0;is&#x00A0;a&#x00A0;problem&#x00A0;in&#x00A0;\dot{x}:&#x00A0;it&#x00A0;is&#x00A0;never&#x00A0;build&#x00A0;well,&#x00A0;but&#x00A0;\dot{k}&#x00A0;or
+&#x00A0;<br />&#x00A0;&#x003E;&#x00A0;\dot{V}&#x00A0;are&#x00A0;correctly&#x00A0;arranged.
+&#x00A0;<br />
+&#x00A0;<br />It&#x00A0;is&#x00A0;a&#x00A0;mozilla&#x00A0;problem--it&#x00A0;doesnt&#x00A0;recognizes&#x00A0;the&#x00A0;unicode&#x00A0;character
+&#x00A0;<br />&amp;#x1E8B;&#x00A0;of&#x00A0;\dot{x}.&#x00A0;&#x00A0;I&#x00A0;modified&#x00A0;the&#x00A0;defintion&#x00A0;to&#x00A0;get&#x00A0;a&#x00A0;simulation&#x00A0;of
+&#x00A0;<br />the&#x00A0;same&#x00A0;effect,&#x00A0;as&#x00A0;is&#x00A0;the&#x00A0;case&#x00A0;&#x00A0;&#x00A0;for&#x00A0;\dot{k}&#x00A0;and&#x00A0;\dot{V}.
+&#x00A0;<br />
+&#x00A0;<br />&#x00A0;&#x003E;&#x00A0;I&#x00A0;detected&#x00A0;that&#x00A0;symbols&#x00A0;\tilde&#x00A0;and&#x00A0;\widetilde&#x00A0;are&#x00A0;not&#x00A0;being&#x00A0;generated
+&#x00A0;<br />&#x00A0;&#x003E;&#x00A0;by&#x00A0;TeX4ht
+&#x00A0;<br />
+&#x00A0;<br />I&#8217;m&#x00A0;getting&#x00A0;the&#x00A0;same&#x00A0;problem&#x00A0;here.&#x00A0;&#x00A0;Tex4ht&#x00A0;produces&#x00A0;the&#x00A0;combining
+&#x00A0;<br />tilde&#x00A0;U0303,&#x00A0;but&#x00A0;mozilla&#x00A0;fails&#x00A0;to&#x00A0;recognize&#x00A0;it.&#x00A0;&#x00A0;Changing&#x00A0;it
+&#x00A0;<br />to&#x00A0;the&#x00A0;small&#x00A0;tilde&#x00A0;character&#x00A0;U02DC&#x00A0;fixes&#x00A0;the&#x00A0;problem&#x00A0;(now&#x00A0;in&#x00A0;the&#x00A0;bug
+&#x00A0;<br />fixes&#x00A0;page&#x00A0;of&#x00A0;tex4ht).
+&#x00A0;<br />
+&#x00A0;<br />However,&#x00A0;that&#x00A0;is&#x00A0;an&#x00A0;improper&#x00A0;behavior&#x00A0;of&#x00A0;mozilla.&#x00A0;It&#x00A0;can&#x00A0;be&#x00A0;seen&#x00A0;with
+&#x00A0;<br />the&#x00A0;hat&#x00A0;and&#x00A0;widehat&#x00A0;operations.&#x00A0;There&#x00A0;U0302&#x00A0;does&#x00A0;the&#x00A0;right&#x00A0;job&#x00A0;and
+&#x00A0;<br />U02C6&#x00A0;doesn&#8217;t.
+</div>
+<!--l. 363--><p class="nopar" >
+
+   <p></p><div class="ShowCode" id="ShowCode-37"><div class="head">
+       <a 
+ id="PrTx4001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4079"  id="QPrTx37"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4002"  href="#PrTx4008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\.\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\dot{{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{dot}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\"\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ddot{{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{uml}{#1}{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-38"><div class="head">
+       <a 
+ href="tex4ht-mozse1.html#PrTx3001"  id="PrTx4003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13009"  id="QPrTx38"><span 
+class="cmtt-10">configure mozilla latex</span></a><a 
+ id="PrTx4004"  href="#PrTx4082"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:widetilde:over{\ifmmode</span><span 
+class="cmtt-10">&#x00A0;\expandafter\mathop\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\x:unicode{02DC}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tilde:over{\mathop{\x:unicode{02DC}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-39"><div class="head">
+       <a 
+ href="tex4ht-mozch2.html#PrTx2083"  id="PrTx4005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13015"  id="QPrTx39"><span 
+class="cmtt-10">configure mozilla plain</span></a><a 
+ id="PrTx4006"  href="#PrTx4078"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:widetilde:over{\mathop{\ifmmode</span><span 
+class="cmtt-10">&#x00A0;\expandafter\x:unicode\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{02DC}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tilde:over{\mathop{\x:unicode{02DC}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-40"><div class="head">
+       <a 
+ href="#PrTx4001"  id="PrTx4007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4079"  id="QPrTx40"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{uniaccents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{accent}\dot\dot{</span><a 
+ id="PrTx4009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4037"><span 
+class="cmtt-10">dot above codes</span></a><a 
+ id="PrTx4010"  href="#PrTx4012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\.\expandafter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\.\endcsname{</span><a 
+ id="PrTx4011"  href="#PrTx4009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4037"><span 
+class="cmtt-10">dot above codes</span></a><a 
+ id="PrTx4012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\v\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\check{</span><a 
+ id="PrTx4013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4039"><span 
+class="cmtt-10">caron codes</span></a><a 
+ id="PrTx4014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\=\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\bar{</span><a 
+ id="PrTx4015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4041"><span 
+class="cmtt-10">macron codes</span></a><a 
+ id="PrTx4016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\&#8216;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\grave{</span><a 
+ id="PrTx4017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4043"><span 
+class="cmtt-10">grave codes</span></a><a 
+ id="PrTx4018"  href="#PrTx4060"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{grave}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\^\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\hat{</span><a 
+ id="PrTx4019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4045"><span 
+class="cmtt-10">circumflex codes</span></a><a 
+ id="PrTx4020"  href="#PrTx4064"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\~\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\tilde{</span><a 
+ id="PrTx4021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4047"><span 
+class="cmtt-10">tilde codes</span></a><a 
+ id="PrTx4022"  href="#PrTx4066"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{accent}\ddot\ddot{</span><a 
+ id="PrTx4023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4049"><span 
+class="cmtt-10">diaeresis codes</span></a><a 
+ id="PrTx4024"  href="#PrTx4026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{34}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\"\expandafter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\"\endcsname{</span><a 
+ id="PrTx4025"  href="#PrTx4023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4049"><span 
+class="cmtt-10">diaeresis codes</span></a><a 
+ id="PrTx4026"  href="#PrTx4068"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{34}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\r\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\r\endcsname{</span><a 
+ id="PrTx4027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4027"><span 
+class="cmtt-10">ring codes</span></a><a 
+ id="PrTx4028"  href="#PrTx4072"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\b\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\b{</span><a 
+ id="PrTx4029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4051"><span 
+class="cmtt-10">bar below codes</span></a><a 
+ id="PrTx4030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\d\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\d\endcsname{</span><a 
+ id="PrTx4031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4055"><span 
+class="cmtt-10">dot below codes</span></a><a 
+ id="PrTx4032"  href="#PrTx4076"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\c\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\c\endcsname{</span><a 
+ id="PrTx4033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4053"><span 
+class="cmtt-10">cedilla codes</span></a><a 
+ id="PrTx4034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\H\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\H\endcsname{</span><a 
+ id="PrTx4035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4035"><span 
+class="cmtt-10">double acute code</span></a><a 
+ id="PrTx4036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-41"><div class="head">
+       <a 
+ id="PrTx4037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4009"  id="QPrTx41"><span 
+class="cmtt-10">dot</span><span 
+class="cmtt-10">&#x00A0;above</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4038"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">C{010A}c{010B}E{0116}e{0117}G{0120}g{0121}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">I{0130}Z{017B}z{017C}A{0226}a{0227}O{022E}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">o{022F}B{1E02}b{1E03}D{1E0A}d{1E0B}F{1E1E}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">f{1E1F}H{1E22}h{1E23}M{1E40}m{1E41}N{1E44}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">n{1E45}P{1E56}p{1E57}R{1E58}r{1E59}S{1E60}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">s{1E61}T{1E6A}t{1E6B}W{1E86}w{1E87}X{1E8A}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">x{1E8B}Y{1E8E}y{1E8F}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-42"><div class="head">
+       <a 
+ id="PrTx4039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4013"  id="QPrTx42"><span 
+class="cmtt-10">caron</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4040"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">C{010C}c{010D}D{010E}d{010F}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">E{011A}e{011B}L{013D}l{013E}N{0147}n{0148}R{0158}r{0159}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">S{0160}s{0161}T{0164}t{0165}Z{017D}z{017E}A{01CD}a{01CE}I{01CF}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">i{01D0}O{01D1}o{01D2}U{01D3}u{01D4}G{01E6}g{01E7}K{01E8}k{01E9}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">j{01F0}\i{01D0}\j{01F0}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-43"><div class="head">
+       <a 
+ id="PrTx4041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4015"  id="QPrTx43"><span 
+class="cmtt-10">macron</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4042"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{0100}a{0101}E{0112}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">e{0113}I{012A}i{012B}O{014C}o{014D}U{016A}u{016B}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">G{1E20}g{1E21}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-44"><div class="head">
+       <a 
+ id="PrTx4043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4017"  id="QPrTx44"><span 
+class="cmtt-10">grave</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4044"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{00C0}E{00C8}I{00CC}N{01F8}O{00D2}U{00D9}W{1E80}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Y{1EF2}a{00E0}e{00E8}o{00F2}u{00F9}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">w{1E81}y{1EF3}\i{00EC}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-45"><div class="head">
+       <a 
+ id="PrTx4045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4019"  id="QPrTx45"><span 
+class="cmtt-10">circumflex</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4046"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{00C2}E{00CA}I{00CE}O{00D4}U{00DB}a{00E2}e{00EA}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">i{00EE}o{00F4}u{00FB}C{0108}c{0109}G{011C}g{011D}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">H{0124}h{0125}J{0134}j{0135}S{015C}s{015D}W{0174}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">w{0175}Y{0176}y{0177}\i{00EE}\j{0135}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-46"><div class="head">
+       <a 
+ id="PrTx4047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4021"  id="QPrTx46"><span 
+class="cmtt-10">tilde</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4048"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{00C3}N{00D1}O{00D5}a{00E3}n{00F1}o{00F5}I{0128}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">i{0129}U{0168}u{0169}E{1EBC}e{1EBD}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Y{1EF8}y{1EF9}\i{0129}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-47"><div class="head">
+       <a 
+ id="PrTx4049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4023"  id="QPrTx47"><span 
+class="cmtt-10">diaeresis</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4050"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{00C4}E{00CB}I{00CF}O{00D6}U{00DC}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">a{00E4}e{00EB}i{00EF}o{00F6}u{00FC}y{00FF}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Y{0178}\i{00EF}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-48"><div class="head">
+       <a 
+ id="PrTx4051"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4029"  id="QPrTx48"><span 
+class="cmtt-10">bar</span><span 
+class="cmtt-10">&#x00A0;below</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4052"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">D{1E0E}d{1E0F}K{1E34}k{1E35}L{1E3A}l{1E3B}N{1E48}n{1E49}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">R{1E5E}r{1E5F}T{1E6E}t{1E6F}Z{1E94}z{1E95}h{1E96}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-49"><div class="head">
+       <a 
+ id="PrTx4053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4033"  id="QPrTx49"><span 
+class="cmtt-10">cedilla</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4054"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">K{0136}k{0137}L{013B}l{013C}N{0145}n{0146}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">R{0156}r{0157}S{015E}s{015F}T{0162}t{0163}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">E{0228}e{0229}H{1E28}h{1E29}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">C{00C7}c{00E7}G{0122}g{0123}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-50"><div class="head">
+       <a 
+ id="PrTx4055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4031"  id="QPrTx50"><span 
+class="cmtt-10">dot</span><span 
+class="cmtt-10">&#x00A0;below</span><span 
+class="cmtt-10">&#x00A0;codes</span></a><a 
+ id="PrTx4056"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">A{1EA0}a{1Ea1}D{1E0C}d{1E0D}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">E{1EB8}e{1EB9}H{1E24}h{1E25}I{1ECA}i{1ECB}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">K{1E32}k{1E33}L{1E36}l{1E37}M{1E42}m{1E43}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">N{1E46}n{1E47}O{1ECC}o{1ECD}R{1E5A}r{1E5B}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">S{1E62}s{1E63}T{1E6C}t{1E6D}U{1EE4}u{1EE5}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">V{1E7E}v{1E7F}W{1E88}w{1E89}Y{1EF4}y{1EF5}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-51"><div class="head">
+       <a 
+ id="PrTx4057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4057"  id="QPrTx51"><span 
+class="cmtt-10">old unicode accentsNO</span></a><a 
+ id="PrTx4058"  href="#PrTx4074"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\&#8216;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\grave{</span><a 
+ id="PrTx4059"  href="#PrTx4017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4043"><span 
+class="cmtt-10">grave codes</span></a><a 
+ id="PrTx4060"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{grave}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\&#8217;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\acute{</span><a 
+ id="PrTx4061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4061"><span 
+class="cmtt-10">acute codes</span></a><a 
+ id="PrTx4062"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{acute}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\^\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\hat{</span><a 
+ id="PrTx4063"  href="#PrTx4019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4045"><span 
+class="cmtt-10">circumflex codes</span></a><a 
+ id="PrTx4064"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{hat}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\~\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\tilde{</span><a 
+ id="PrTx4065"  href="#PrTx4021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4047"><span 
+class="cmtt-10">tilde codes</span></a><a 
+ id="PrTx4066"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{tilde}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{accent}\ddot\ddot{</span><a 
+ id="PrTx4067"  href="#PrTx4025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4049"><span 
+class="cmtt-10">diaeresis codes</span></a><a 
+ id="PrTx4068"  href="#PrTx4070"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{34}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{uml}{#1}{#2}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\Configure{accent}}\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\"\expandafter</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\"\endcsname{</span><a 
+ id="PrTx4069"  href="#PrTx4067"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4049"><span 
+class="cmtt-10">diaeresis codes</span></a><a 
+ id="PrTx4070"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{34}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{uml}{#1}{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-52">
+      <div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\r\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\r\endcsname{</span><a 
+ id="PrTx4071"  href="#PrTx4027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4071"><span 
+class="cmtt-10">ring codes</span></a><a 
+ id="PrTx4072"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{ring}{#1}{#2}}</span></span>
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-53"><div class="head">
+       <a 
+ href="#PrTx4057"  id="PrTx4073"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4073"  id="QPrTx53"><span 
+class="cmtt-10">old unicode accentsNO</span></a><a 
+ id="PrTx4074"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\expand:after{\Configure{accent}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\d\endcsname}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;OT1\string\d\endcsname{</span><a 
+ id="PrTx4075"  href="#PrTx4031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4055"><span 
+class="cmtt-10">dot below codes</span></a><a 
+ id="PrTx4076"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\a:accents{}{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\b:accents{d}{#1}{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-54"><div class="head">
+       <a 
+ href="#PrTx4005"  id="PrTx4077"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13015"  id="QPrTx54"><span 
+class="cmtt-10">configure mozilla plain</span></a><a 
+ id="PrTx4078"  href="tex4ht-mozse3.html#PrTx5004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4079"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4080"  href="#PrTx4084"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-55"><div class="head">
+       <a 
+ href="#PrTx4003"  id="PrTx4081"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13009"  id="QPrTx55"><span 
+class="cmtt-10">configure mozilla latex</span></a><a 
+ id="PrTx4082"  href="tex4ht-mozse3.html#PrTx5002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4083"  href="#PrTx4079"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4084"  href="#PrTx4088"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-56"><div class="head">
+       <a 
+ id="PrTx4085"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13029"  id="QPrTx56"><span 
+class="cmtt-10">configure mozilla croatian</span></a><a 
+ id="PrTx4086"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4087"  href="#PrTx4083"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4088"  href="#PrTx4092"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-57"><div class="head">
+       <a 
+ id="PrTx4089"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13023"  id="QPrTx57"><span 
+class="cmtt-10">configure mozilla romanian</span></a><a 
+ id="PrTx4090"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4091"  href="#PrTx4087"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4092"  href="#PrTx4096"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-58"><div class="head">
+       <a 
+ id="PrTx4093"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13025"  id="QPrTx58"><span 
+class="cmtt-10">configure mozilla slovak</span></a><a 
+ id="PrTx4094"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4095"  href="#PrTx4091"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4096"  href="#PrTx4100"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-59"><div class="head">
+       <a 
+ id="PrTx4097"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mozse7.html#PrTx13027"  id="QPrTx59"><span 
+class="cmtt-10">configure mozilla slovene</span></a><a 
+ id="PrTx4098"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{new-accents}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx4099"  href="#PrTx4095"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4001"><span 
+class="cmtt-10">old unicode accents</span></a><a 
+ id="PrTx4100"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 618--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mozse3.html" >next</a>] [<a 
+ href="tex4ht-mozse1.html" >prev</a>] [<a 
+ href="tex4ht-mozse1.html#tailtex4ht-mozse1.html" >prev-tail</a>] [<a 
+ href="tex4ht-mozse2.html" >front</a>] [<a 
+ href="tex4ht-mozch2.html#tex4ht-mozse2.html" >up</a>] </p></div>
+<!--l. 618--><p class="indent" >   <a 
+  id="tailtex4ht-mozse2.html"></a>  
+</body></html> 

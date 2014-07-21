@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>/link for /label from /refstepcounter</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 1693--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu6.html" >next</a>] [<a 
+ href="tex4ht-4htSu4.html" >prev</a>] [<a 
+ href="tex4ht-4htSu4.html#tailtex4ht-4htSu4.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu5.html">tail</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu5.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe3.html#QQ2-20-17"  name="QQ1-20-17">/link for /label from /refstepcounter</a></h3>
+<!--l. 1696--><p class="noindent" >The following is late arrival into TeX4ht, inserted for handling <span 
+class="cmtt-10">\newtheorem</span>, and possibly other structures. It might
+cause duplicated anchors. At least in the case of figures and lists they are overided by other anchors, and hence not
+needed. In case of lists and new theorems we ended to delete the overriden case. Still need to do it for pictures, and
+amybe also other cases.
+</p><!--l. 1707--><p class="indent" >    The <span 
+class="cmtt-10">\refstepcounter </span>may appear in places (e.g., before first item of a list) where no text is
+allowed, hence we have to ensure that <span 
+class="cmtt-10">\anc:lbl </span>will not break this restriction. How about within
+pictures?
+</p>
+      <!--l. 1735--><p class="indent" ><a 
+ href="tex4ht-4htSu4.html#PrTx16001"  name="PrTx17001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx81"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx17002"  href="#PrTx17014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\refstepcounter{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx17003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu4.html#PrTx16009"><span 
+class="cmtt-10">def :currentlabel for refstepcounter</span></a><a 
+ name="PrTx17004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\anc:lbl</span>&#x00A0;<span 
+class="cmtt-10">r{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\anc:lbl#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\html:addr</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\cur:th{</span><a 
+ name="PrTx17005"  href="tex4ht-4htSu4.html#PrTx16013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx17006"  href="#PrTx17008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr</span>&#x00A0;<span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\let\leavevmode=\empty</span>&#x00A0;<span 
+class="cmtt-10">\cur:lbl{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Make:Label{\cur:th\:currentlabel}{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\label\@gobble</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\cur:lbl{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\noexpand\AfterPicture{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\Make:Label{\cur:th\:currentlabel}{}}}\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\onc:lbl=\anc:lbl</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\SkipRefstepAnchor{\def\anc:lbl##1##2{\html:addr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\cur:th{</span><a 
+ name="PrTx17007"  href="#PrTx17005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx17008"  href="#PrTx17012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr}\ShowRefstepAnchor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\skip:anchor=\cur:th}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ShowRefstepAnchor{\let\anc:lbl=\onc:lbl}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx17009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu3.html#PrTx15031"><span 
+class="cmtt-10">replace AutoRefstepAnchor</span></a><a 
+ name="PrTx17010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\html:addr</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\cur:th{</span><a 
+ name="PrTx17011"  href="#PrTx17007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx17012"  href="tex4ht-4htSu6.html#PrTx18006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1743--><p class="noindent" >We can&#8217;t use ref- below, because
+</p><!--l. 1746--><p class="indent" >    The MakeLabel removes duplicates such as in
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\begin{equation}\label{jh}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;c</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\end{equation}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 1758--><p class="indent" >    For memory conservation, a maximum is placed on the number of labels recorded.
+</p>
+      <!--l. 1773--><p class="indent" ><a 
+ href="#PrTx17001"  name="PrTx17013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx82"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx17014"  href="#PrTx17022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Make:Label#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempb##1</span><a 
+ name="PrTx17015"  href="tex4ht-4htCh2.html#PrTx5015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx17016"  href="#PrTx17018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\Made:Labels{{#1}\Made:Labels}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\set:label{\hbox{\Link{}{#1}#2\EndLink}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\trim:Labels</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempc##1</span><a 
+ name="PrTx17017"  href="#PrTx17015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx17018"  href="#PrTx17020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\hbox{#2}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:next=\check:labels</span>&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{#1}%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:next\Made:Labels{}</span><a 
+ name="PrTx17019"  href="#PrTx17017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx17020"  href="#PrTx17026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\set:label=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1782--><p class="noindent" ><a 
+ href="#PrTx17013"  name="PrTx17021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx83"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx17022"  href="#PrTx17024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Made:Labels=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\check:labels#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\ifx\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\let\:next=\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:next=\:tempc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:next</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1800--><p class="noindent" ><a 
+ href="#PrTx17021"  name="PrTx17023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx84"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx17024"  href="tex4ht-4htSu6.html#PrTx18012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\Labels:Cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\trim:Labels{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\Labels:Cnt&#x003E;100</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa##1</span><a 
+ name="PrTx17025"  href="#PrTx17019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx17026"  href="#PrTx17028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAssign\Labels:Cnt</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempb\Made:Labels</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\Made:Labels\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\keep:Labels\:tempb</span><a 
+ name="PrTx17027"  href="#PrTx17025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx17028"  href="tex4ht-4htSe18.html#PrTx45006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\Labels:Cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\keep:Labels#1{\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\Labels:Cnt&#x003C;50</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\Made:Labels{\Made:Labels{#1}}\gHAdvance\Labels:Cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\keep:Labels</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1804--><p class="noindent" >We need the <span 
+class="cmtt-10">\hbox </span>above because <span 
+class="cmtt-10">\label </span>complains if vertical mode is replaced with horizontal mode.
+</p><!--l. 1808--><p class="indent" >    &#8216;  <span 
+class="cmtt-10">\let\Link:Labe|=\Make:Label \def\Tag:Label#1#2{\Tag{fR\label:Count}{#1}#2\GetLabel}</span>
+<span 
+class="cmtt-10">\def\LinkLabels{\let\Make:Label|=\Link:Label} \def\SendLabels{\let\Make:Label|=\Tag:Label}</span>&#8217;
+</p><!--l. 1814--><p class="indent" >    [<a 
+ href="tex4ht-4ht21.html"  name="tex4ht-4ht21.html" >test data</a>]
+
+</p>
+    <!--l. 1830--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu6.html" >next</a>] [<a 
+ href="tex4ht-4htSu4.html" >prev</a>] [<a 
+ href="tex4ht-4htSu4.html#tailtex4ht-4htSu4.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu5.html" >front</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu5.html" >up</a>] </p></div>
+<!--l. 1830--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu5.html"></a> </p> 
+</body></html> 

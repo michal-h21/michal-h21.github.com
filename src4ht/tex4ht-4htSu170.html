@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Multi-Columns</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 35977--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu171.html" >next</a>] [<a 
+ href="tex4ht-4htSu169.html" >prev</a>] [<a 
+ href="tex4ht-4htSu169.html#tailtex4ht-4htSu169.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu170.html">tail</a>] [<a 
+ href="tex4ht-4htSe287.html#tex4ht-4htSu170.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe287.html#QQ2-574-534"  name="QQ1-574-534">Multi-Columns</a></h3>
+<!--l. 35981--><p class="noindent" ><span 
+class="cmtt-10">\HColumns[contribute-TABLE,contribute-TD]{i}</span>; Given count of column in <span 
+class="cmtt-10">\HCol</span>
+</p>
+      <!--l. 35990--><p class="indent" ><a 
+ href="tex4ht-4htSu169.html#PrTx533001"  name="PrTx534001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493035"  name="QPrTx1901"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">sty</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span></a><a 
+ name="PrTx534002"  href="#PrTx534004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\add:col{\Advance:\:cols</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>&#x00A0;<span 
+class="cmtt-10">\HAdvance\HCol</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\:cols&#x003E;0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:Cols</span>&#x00A0;<span 
+class="cmtt-10">\vsplit0</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\d:Cols</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\add:col</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 35997--><p class="noindent" ><a 
+ href="#PrTx534001"  name="PrTx534003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493035"  name="QPrTx1902"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">sty</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span></a><a 
+ name="PrTx534004"  href="#PrTx534006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Columns}{4}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:Cols{\edef\sv:dim{\the\tmp:dim}\c:Columns}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\d:Cols{\d:Columns</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim=\sv:dim</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ColMag#1{\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">#1\tmp:dim}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 36008--><p class="noindent" ><a 
+ href="#PrTx534003"  name="PrTx534005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493035"  name="QPrTx1903"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">sty</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span></a><a 
+ name="PrTx534006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Columns#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:Columns</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAssign\:cols=#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox0=\vbox\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\divide\hsize</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndColumns{\egroup</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAssign\HCol=0</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=\ht0</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">\dp0</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\divide\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">\:cols</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\add:col</span>&#x00A0;<span 
+class="cmtt-10">\c:Cols</span>&#x00A0;<span 
+class="cmtt-10">\box0</span>&#x00A0;<span 
+class="cmtt-10">\d:Cols</span>&#x00A0;<span 
+class="cmtt-10">\b:Columns}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 36014--><p class="noindent" ><a 
+ name="PrTx534007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493047"  name="QPrTx1904"><span 
+class="cmtt-10">non-html</span>&#x00A0;<span 
+class="cmtt-10">sty</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span></a><a 
+ name="PrTx534008"  href="tex4ht-4htSu171.html#PrTx535002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Columns=\:gobble</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\EndColumns=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 36017--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu171.html" >next</a>] [<a 
+ href="tex4ht-4htSu169.html" >prev</a>] [<a 
+ href="tex4ht-4htSu169.html#tailtex4ht-4htSu169.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu170.html" >front</a>] [<a 
+ href="tex4ht-4htSe287.html#tex4ht-4htSu170.html" >up</a>] </p></div>
+<!--l. 36017--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu170.html"></a> </p> 
+</body></html> 

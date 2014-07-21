@@ -1,0 +1,2671 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>halign-based tables</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 5873--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh11.html" >next</a>] [<a 
+ href="tex4ht-styCh9.html" >prev</a>] [<a 
+ href="tex4ht-styCh9.html#tailtex4ht-styCh9.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh10.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh10.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 10<br /><a 
+ href="tex4ht-sty.html#QQ2-11-103"  name="QQ1-11-103">halign-based tables</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.1&#x00A0;<a 
+ href="#QQ1-11-104"  name="QQ2-11-104">Taming of halign</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.2&#x00A0;<a 
+ href="#QQ1-11-105"  name="QQ2-11-105">Building Blocks for
+Accessing Halign Tables</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-106"  name="QQ2-11-106">Build Expanded Pattern</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-107"  name="QQ2-11-107">Html Insertions</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-108"  name="QQ2-11-108">/omit
+and /span</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-109"  name="QQ2-11-109">TD Script</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-110"  name="QQ2-11-110">Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.3&#x00A0;<a 
+ href="#QQ1-11-111"  name="QQ2-11-111">A Realization for halign</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-112"  name="QQ2-11-112">Check
+for /edef Environment</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-113"  name="QQ2-11-113">Remove Dimension</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-114"  name="QQ2-11-114">Check for Embedded
+Def</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-115"  name="QQ2-11-115">/halign Not Within Parameters</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-116"  name="QQ2-11-116">Embedded /halign</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-117"  name="QQ2-11-117">Utilities fo
+Embedded /halign</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-118"  name="QQ2-11-118">/halign into <span 
+class="cmtt-10">&#x003C;PRE&#x003E;</span></a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-119"  name="QQ2-11-119">/halign into /MkHalign</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-11-120"  name="QQ2-11-120">noalign</a></span><br />
+    </div>
+      <!--l. 5881--><p class="indent" ><a 
+ name="PrTx103001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10031"  name="QPrTx406"><span 
+class="cmtt-10">halign-based</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx103002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx103003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx104001"><span 
+class="cmtt-10">all halign-based tables</span></a><a 
+ name="PrTx103004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx103005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx105001"><span 
+class="cmtt-10">html blocks for halign tables</span></a><a 
+ name="PrTx103006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx103007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx111001"><span 
+class="cmtt-10">html halign</span></a><a 
+ name="PrTx103008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\let\:shrp=##}</span>&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5883--><p class="noindent" >The <span 
+class="cmtt-10">\:shrp </span>should be defined at the end so as not to bother other definitions that will regard it as improper <span 
+class="cmtt-10">#</span>
+parameter.
+</p>
+    <h3 class="SectionHead">10.1 <a 
+ href="tex4ht-sty.html#QQ2-11-104"  name="QQ1-11-104">Taming of halign</a></h3>
+<!--l. 5892--><p class="noindent" >The <span 
+class="cmtt-10">\halign </span>comamnds not defined within TeX4ht environment can be problematic, and the same may be true to
+some within such environnt. Specifically, comamnds of the form <span 
+class="cmtt-10">\halign...{...} </span>are translated well in TeX4ht,
+but cause a problem if defined before TeX4ht was activated. Commands of the form <span 
+class="cmtt-10">\halign...\bgroup... </span>cause
+no problem in either mode, but they also introduce no html code. Commands of the form <span 
+class="cmtt-10">\halign...{...\egroup</span>
+cause problems in either way.
+</p><!--l. 5901--><p class="indent" >    TeX4ht takes care of the <span 
+class="cmtt-10">\halign </span>commands in TeX and LaTeX, but not of those that are loaded earlier from
+other libraries.
+</p><!--l. 5905--><p class="indent" >    The following tree shows the direct and indirect use of <span 
+class="cmtt-10">\halign </span>in TeX and LaTeX.
+</p><!--l. 5927--><p class="indent" >    The <span 
+class="cmtt-10">\iffalse{\fi...\iffalse}\fi </span>is to hide the <span 
+class="cmtt-10">\cr </span>from <span 
+class="cmtt-10">\halign </span>when it scans for that command.
+</p>
+      <!--l. 5944--><p class="indent" ><a 
+ name="PrTx104001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103003"  name="QPrTx407"><span 
+class="cmtt-10">all</span>&#x00A0;<span 
+class="cmtt-10">halign-based</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx104002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\TeXhalign=\halign</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RecallTeXcr{\iffalse{\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\cr=}\csname</span>&#x00A0;<span 
+class="cmtt-10">0cr\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\crcr=}\csname</span>&#x00A0;<span 
+class="cmtt-10">0crcr\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iffalse}\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">0cr\endcsname=\cr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">0crcr\endcsname=\crcr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\TeXhalign:cr{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\iffalse{\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\cr\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">cr\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\crcr\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">crcr\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iffalse}\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TeXhalign}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 5947--><p class="noindent" >Save/recover <span 
+class="cmtt-10">\crcr </span>and <span 
+class="cmtt-10">\cr </span>causes problems, e.g., in nested arrays. It seems also we don&#8217;t really need such a
+feature.
+</p>
+      <!--l. 5955--><p class="indent" ><a 
+ name="PrTx104003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx104003"  name="QPrTx408"><span 
+class="cmtt-10">tex4ht halign and cr/crcr</span></a><a 
+ name="PrTx104004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\halign=\sv:halign</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">10.2 <a 
+ href="tex4ht-sty.html#QQ2-11-105"  name="QQ1-11-105">Building Blocks for Accessing Halign Tables</a></h3>
+<!--l. 5972--><p class="noindent" >The next comamnd can be in use when the parameters <span 
+class="cmtt-10"># </span>(i.e., the first parameter <span 
+class="cmtt-10">#1</span>) are in cat code
+13.
+
+</p><!--l. 5976--><p class="indent" >    We hade <span 
+class="cmtt-10">\:relax </span>instead of <span 
+class="cmtt-10">\relax </span>below. Where did it come from?
+</p><!--l. 5980--><p class="indent" >    The <span 
+class="cmtt-10">\MkHalign </span>takes the form <span 
+class="cmtt-10">\MkHalign#{...pattern...}...body...\EndHalign </span>and seeds the end tags
+<span 
+class="cmtt-10">\a:halign </span>and <span 
+class="cmtt-10">\b:halign </span>around the construct, and <span 
+class="cmtt-10">\c:halign </span>and <span 
+class="cmtt-10">d:halign </span>in the pattern. The outcome is a
+seeded <span 
+class="cmtt-10">\halign{...}</span>. The <span 
+class="cmtt-10">\Configure{MkHalign}... </span>places <span 
+class="cmtt-10">a:MkHalign</span>, <span 
+class="cmtt-10">b:MkHalign</span>, <span 
+class="cmtt-10">c:MkHalign</span>, <span 
+class="cmtt-10">d:MkHalign</span>,
+<span 
+class="cmtt-10">e:MkHalign</span>, and <span 
+class="cmtt-10">\f:MkHalign </span>within <span 
+class="cmtt-10">\a:halign</span>, <span 
+class="cmtt-10">\b:halign</span>, <span 
+class="cmtt-10">\c:halign</span>, and <span 
+class="cmtt-10">d:halign</span>. The <span 
+class="cmtt-10"># </span>in the
+pattern can be any character of category code 13. The <span 
+class="cmtt-10">&amp; </span>charaters shouldn&#8217;t be within braces. The
+<span 
+class="cmtt-10">\RecallTeXcr </span>should appear before <span 
+class="cmtt-10">\MkHalign</span>; if it appears within the pattern, we loose the row
+breaks.
+</p>
+      <!--l. 6010--><p class="indent" ><a 
+ name="PrTx105001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx409"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx105002"  href="#PrTx105016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\MkHalign#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iffalse{\fi</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sv:new:row=\new:row</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\relax:shrp{\let#1=\relax}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\new:halign{\TeXhalign</span>&#x00A0;<span 
+class="cmtt-10">\bgroup}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\add:halign#2&amp;</span><a 
+ name="PrTx105003"  href="tex4ht-styCh8.html#PrTx80023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx105004"  href="#PrTx106004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\cr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let#1=\:shrp</span>&#x00A0;&#x00A0;<a 
+ name="PrTx105005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107001"><span 
+class="cmtt-10">before TeXhalign</span></a><a 
+ name="PrTx105006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iffalse}\fi</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx105007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx105019"><span 
+class="cmtt-10">protection for $$</span></a><a 
+ name="PrTx105008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:PauseMkHalign</span>&#x00A0;<span 
+class="cmtt-10">\new:halign\ext:cr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndMkHalign{\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\d:PauseMkHalign</span>&#x00A0;<a 
+ name="PrTx105009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx105021"><span 
+class="cmtt-10">end protection for $$</span></a><a 
+ name="PrTx105010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\iffalse{\fi</span>&#x00A0;<a 
+ name="PrTx105011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107003"><span 
+class="cmtt-10">after TeXhalign</span></a><a 
+ name="PrTx105012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\relax:shrp</span>&#x00A0;<span 
+class="cmtt-10">\iffalse}\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\PauseMkHalign#1{\cr\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hbox{\r:halign</span>&#x00A0;<span 
+class="cmtt-10">\global\let\new:row=\R:halign}\b:PauseMkHalign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\c:PauseMkHalign\new:halign\ext:cr}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6014--><p class="noindent" ><a 
+ href="tex4ht-styCh9.html#PrTx96005"  name="PrTx105013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx410"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx105014"  href="#PrTx105018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{PauseMkHalign}{4}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6017--><p class="noindent" >The PauseMkHalign provides a vehicle to decompose a <span 
+class="cmtt-10">\halign\bgroup...0......1...\egroup </span>and recompose it in
+arbitrary order and choise of components, as is the case in longtable: <span 
+class="cmtt-10">\setbox0=\hbox{\halign\bgroup...0...\egroup}</span>
+<span 
+class="cmtt-10">\setbox1=\hbox{\halign\bgroup...1...\egroup}\box0\box1</span>. In some occasions, and may be all, the parameter
+of <span 
+class="cmtt-10">\PauseMkHalign </span>must be just boxes.
+</p><!--l. 6025--><p class="indent" >    The <span 
+class="cmtt-10">\iffalse ...\fi </span>above are for hiding <span 
+class="cmtt-10">\cr </span>in nested cases (e.g., of <span 
+class="cmtt-10">\tabular </span>in LaTeX).
+</p><!--l. 6028--><p class="indent" >    Spans over N columns require many compilations to realize them.
+</p><!--l. 6031--><p class="indent" >    The following is an application of <span 
+class="cmtt-10">\MkHalign</span>. it allows for tables of the form <span 
+class="cmtt-10">\MiniHalign...\EndMiniHalign</span>
+instead of <span 
+class="cmtt-10">\halign{...}</span>.
+</p>
+      <!--l. 6045--><p class="indent" ><a 
+ href="#PrTx105001"  name="PrTx105015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx411"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx105016"  href="#PrTx106002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=6</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\MiniHalign{\begingroup</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>&#x00A0;<span 
+class="cmtt-10">\let#=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:MHalign}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:MHalign@1\cr{\endgroup</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\SaveMkHalignConfig</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{MkHalign}{\a:MiniHalign}{\b:MiniHalign}\c:MiniHalign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\d:MiniHalign{\e:MiniHalign\RecallMkHalignConfig}\f:MiniHalign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\MkHalign#{@1}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=6</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=11</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndMiniHalign{\EndMkHalign</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\RecallMkHalignConfig</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6049--><p class="noindent" ><a 
+ href="#PrTx105013"  name="PrTx105017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx412"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx105018"  href="#PrTx120012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{MiniHalign}{6}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6053--><p class="noindent" >[<a 
+ href="tex4ht-sty12.html"  name="tex4ht-sty12.html" >test data</a>]
+</p>
+      <!--l. 6075--><p class="indent" ><a 
+ name="PrTx105019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105007"  name="QPrTx413"><span 
+class="cmtt-10">protection</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">$$</span></a><a 
+ name="PrTx105020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\begingroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifmmode</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\end:m{$$\egroup}\vtop\bgroup$$\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let</span>&#x00A0;<span 
+class="cmtt-10">\end:m=\empty\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6080--><p class="noindent" ><a 
+ name="PrTx105021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105009"  name="QPrTx414"><span 
+class="cmtt-10">end</span>&#x00A0;<span 
+class="cmtt-10">protection</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">$$</span></a><a 
+ name="PrTx105022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\end:m\endgroup</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-106"  name="QQ1-11-106">Build Expanded Pattern</a></h3>
+<!--l. 6087--><p class="noindent" >Break the pattern at <span 
+class="cmtt-10">&amp;</span>s and enclose with calls for html code.
+</p>
+      <!--l. 6100--><p class="indent" ><a 
+ href="#PrTx105015"  name="PrTx106001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx415"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx106002"  href="#PrTx107006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\add:halign#1&amp;#2\cr{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#2}\def\:tempb{</span><a 
+ name="PrTx106003"  href="#PrTx105003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx106004"  href="#PrTx107012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\new:halign{\b:halign#1\c:halign}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\ifx\:temp\empty</span>&#x00A0;<span 
+class="cmtt-10">\append:def\new:halign{&amp;}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\new:halign{\b:halign#1\c:halign&amp;}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\add:halign#2\cr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-107"  name="QQ1-11-107">Html Insertions</a></h3>
+           <!--l. 6119--><p class="noindent" ><a 
+ name="PrTx107001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105005"  name="QPrTx416"><span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">TeXhalign</span></a><a 
+ name="PrTx107002"  href="#PrTx108022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\new:row=\R:halign</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Advance:\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">cr\endcsname=\cr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">crcr\endcsname=\crcr</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\cr{\noexpand\rR:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">cr\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\crcr{\noexpand\rR:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">crcr\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\omit=\om:t</span>&#x00A0;<span 
+class="cmtt-10">\def\TT:halign{\T:halign</span>&#x00A0;<span 
+class="cmtt-10">\global\let\TT:halign=\empty}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6121--><p class="noindent" >Inserting <span 
+class="cmtt-10">\T:halign </span>here causes infinite loop in <span 
+class="cmtt-10">\@array </span>of latex. Hence, we delay it to the stat of the first
+element.
+</p>
+      <!--l. 6130--><p class="indent" ><a 
+ name="PrTx107003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105011"  name="QPrTx417"><span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">TeXhalign</span></a><a 
+ name="PrTx107004"  href="#PrTx108026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\cr=}\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">cr\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\let\crcr=}\csname</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">crcr\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\omit=\:omit</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{\ht:everypar{}\r:halign}\t:halign</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Advance:\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6135--><p class="noindent" ><a 
+ href="#PrTx106001"  name="PrTx107005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx418"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx107006"  href="#PrTx107008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\rR:halign{\gdef\new:row{\r:halign</span>&#x00A0;<span 
+class="cmtt-10">\R:halign}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\MkHalign:d</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6146--><p class="noindent" ><a 
+ href="#PrTx107005"  name="PrTx107007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx419"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx107008"  href="#PrTx107038"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\b:halign{\BB:halign</span>&#x00A0;<span 
+class="cmtt-10">\bgroup}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:halign{\egroup\d:halign}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\BB:halign{\expand:after{\global\let\new:row=\empty</span>&#x00A0;<span 
+class="cmtt-10">}\new:row</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\D:halign}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6148--><p class="noindent" >The <span 
+class="cmtt-10">\Configure </span>may use the values of <span 
+class="cmtt-10">\:MULTISPAN</span>, <span 
+class="cmtt-10">\halignTD</span>, <span 
+class="cmtt-10">\HRow</span>&#8217; and <span 
+class="cmtt-10">\HCol</span>. The <span 
+class="cmtt-10">\halignTD </span>gets its value
+from <span 
+class="cmtt-10">\Configure{TD}{...}</span>.
+</p>
+      <!--l. 6167--><p class="indent" ><a 
+ href="tex4ht-styCh8.html#PrTx89007"  name="PrTx107009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx420"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx107010"  href="#PrTx107016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\halignTD{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:mALIGN\empty</span>&#x00A0;<span 
+class="cmtt-10">\hT:D</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\:mALIGN</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\halignTB#1{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{Missing</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{halignTB&#x003C;&#x003E;}{#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\expandafter\let\expandafter\:MkHalign:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\a:halignTB</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\halign:TB</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname</span><a 
+ name="PrTx107011"  href="#PrTx106003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx107012"  href="#PrTx108016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\b:halignTB</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halignTB}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halignTB&#x003C;&#x003E;}[2]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span>&#x00A0;<span 
+class="cmtt-10">:#1:\endcsname{#2}}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx107013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107033"><span 
+class="cmtt-10">init :MkHalign:</span></a><a 
+ name="PrTx107014"  href="#PrTx107018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6188--><p class="noindent" ><a 
+ href="#PrTx107009"  name="PrTx107015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx421"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx107016"  href="#PrTx109022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{MkHalign}[6]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\T:halign{\PushMacro\:MkHalign:</span><a 
+ name="PrTx107017"  href="#PrTx107013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107033"><span 
+class="cmtt-10">init :MkHalign:</span></a><a 
+ name="PrTx107018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\t:halign{#2\PopMacro\:MkHalign:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\:MkHalign:=\:MkHalign:}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\R:halign{\TT:halign</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\HRow</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\gHAssign\HCol=1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\r:halign{\end:omit#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\D:halign{\:nopartrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx107019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107027"><span 
+class="cmtt-10">save dH</span></a><a 
+ name="PrTx107020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx107021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx108003"><span 
+class="cmtt-10">cond TD for multispan</span></a><a 
+ name="PrTx107022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\MS:count=\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:MULTISPAN\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\MS:count</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:MULTISPAN\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\gdef\csname</span>&#x00A0;<span 
+class="cmtt-10">dH\MkHalign:d\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx107023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx108005"><span 
+class="cmtt-10">cond /TD for multispan</span></a><a 
+ name="PrTx107024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\d:halign{\csname</span>&#x00A0;<span 
+class="cmtt-10">dH\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d&#x003C;1</span>&#x00A0;<span 
+class="cmtt-10">1\else</span>&#x00A0;<span 
+class="cmtt-10">\MkHalign:d\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endcsname</span>&#x00A0;<a 
+ name="PrTx107025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx107029"><span 
+class="cmtt-10">recall dH</span></a><a 
+ name="PrTx107026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{MkHalign}{}{}{}{}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\dH:cnt=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6198--><p class="noindent" ><a 
+ name="PrTx107027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107019"  name="QPrTx422"><span 
+class="cmtt-10">save</span>&#x00A0;<span 
+class="cmtt-10">dH</span></a><a 
+ name="PrTx107028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance\dH:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempa{\global\let\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">xc\dH:cnt\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">dH\MkHalign:d\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempa</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\xdef\csname</span>&#x00A0;<span 
+class="cmtt-10">\dH:cnt</span>&#x00A0;<span 
+class="cmtt-10">:tempa\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">dH\MkHalign:d\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\noexpand\csname</span>&#x00A0;<span 
+class="cmtt-10">xc\dH:cnt\endcsname}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6203--><p class="noindent" ><a 
+ name="PrTx107029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107025"  name="QPrTx423"><span 
+class="cmtt-10">recall</span>&#x00A0;<span 
+class="cmtt-10">dH</span></a><a 
+ name="PrTx107030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\dH:cnt</span>&#x00A0;<span 
+class="cmtt-10">:tempa\endcsname</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance\dH:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6205--><p class="noindent" >Nonleading <span 
+class="cmtt-10">\csname dH\MkHalign:d\endcsname </span>produce improper closing delimiters in <span 
+class="cmtt-10">\multispan </span>of index <span 
+class="cmmi-10">&#x003E; </span>1.
+In such cases, only the outcome of the first <span 
+class="cmtt-10">\D:halign </span>contribute for the openning delimiter&#8212;occuring in the
+iteration in which <span 
+class="cmtt-10">\MS:count=\:MULTISPAN</span>.
+
+</p><!--l. 6211--><p class="indent" >    The <span 
+class="cmtt-10">\ifnum \MkHalign:d&#x003C;1 1\else \MkHalign:d\fi </span>is needed because we can get down to 0 if the last entry
+is a <span 
+class="cmtt-10">\multispan</span>.
+</p>
+      <!--l. 6219--><p class="indent" ><a 
+ name="PrTx107031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50037"  name="QPrTx424"><span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx107032"  href="#PrTx119024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6223--><p class="noindent" ><a 
+ name="PrTx107033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107013"  name="QPrTx425"><span 
+class="cmtt-10">init</span>&#x00A0;<span 
+class="cmtt-10">:MkHalign:</span></a><a 
+ name="PrTx107034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTB&#x003C;&#x003E;}{MkHalign}{&#x003C;&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6227--><p class="noindent" >The saving <span 
+class="cmtt-10">\csname dH\MkHalign:d\endcsname </span>and loading is to protect from changes that may occur inside the
+entity in the meaning of <span 
+class="cmtt-10">\d:halign</span>. Don&#8217;t we need the same for <span 
+class="cmtt-10">\r:halign</span>?
+</p><!--l. 6231--><p class="indent" >    The following is for tracing users definitions to be used in extensions that need to do reverse eng of the users
+input.
+</p>
+      <!--l. 6241--><p class="indent" ><a 
+ name="PrTx107035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107035"  name="QPrTx426"><span 
+class="cmtt-10">shared configNO</span></a><a 
+ name="PrTx107036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{TraceTables}[8]{\def\trc:T{#1}\def\trc:eT{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:t{#3}\def\trc:et{#4}\def\trc:R{#5}\def\trc:eR{#6}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:r{#7}\def\trc:er{#8}\d:TrcHlgn}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\d:TrcHlgn#1#2#3#4{\def\trc:D{#1}\def\trc:eD{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trc:d{#3}\def\trc:ed{#4}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6244--><p class="noindent" >The <span 
+class="cmtt-10">\:removeindenttrue </span>is important, for instance, in case of a <span 
+class="cmtt-10">\noalign{...}</span>.
+</p><!--l. 6247--><p class="indent" >    When we meet <span 
+class="cmtt-10">&amp;&amp;</span>, which signals a loop.
+</p><!--l. 6250--><p class="indent" >    We place <span 
+class="cmtt-10"># </span>under catcode 13. <span 
+class="cmtt-10">\noalign </span>is ignored.
+</p>
+      <!--l. 6267--><p class="indent" ><a 
+ href="#PrTx107007"  name="PrTx107037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx427"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx107038"  href="#PrTx108002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\SaveMkHalignConfig{\let\sT:halign=\T:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\st:halign=\t:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sR:halign=\R:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sr:halign=\r:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sD:halign=\D:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sd:halign=\d:halign}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\RecallMkHalignConfig{\let\T:halign=\sT:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\t:halign=\st:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\R:halign=\sR:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\r:halign=\sr:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\D:halign=\sD:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\d:halign=\sd:halign}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-108"  name="QQ1-11-108">/omit and /span</a></h3>
+           <!--l. 6280--><p class="noindent" ><a 
+ href="#PrTx107037"  name="PrTx108001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx428"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx108002"  href="#PrTx108008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:omit=\omit</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\om:t{\:omit</span>&#x00A0;<span 
+class="cmtt-10">\BB:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\end:omit{\gdef\end:omit{}\d:halign}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\end:omit=\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6283--><p class="noindent" >A <span 
+class="cmtt-10">\multispa </span>is a sequence of <span 
+class="cmtt-10">\span</span>&#8217;s. Each <span 
+class="cmtt-10">\span </span>puts <span 
+class="cmtt-10">\HRow.\HCol; </span>in <span 
+class="cmtt-10">\new:span;</span>. Next compilation retrieves
+this info to compute <span 
+class="cmtt-10">\:MULTISPAN</span>.
+</p>
+      <!--l. 6297--><p class="indent" ><a 
+ name="PrTx108003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107021"  name="QPrTx429"><span 
+class="cmtt-10">cond</span>&#x00A0;<span 
+class="cmtt-10">TD</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">multispan</span></a><a 
+ name="PrTx108004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance\MS:count</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\MS:count</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\end:omit</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\relax:shrp</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\derive:TD</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAssign\:MULTISPAN=1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:mALIGN=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\add:span\old:span</span>&#x00A0;<span 
+class="cmtt-10">\gHAssign\MS:count=\:MULTISPAN</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\relax</span>&#x00A0;<span 
+class="cmtt-10">#5%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\xdef\Step:Col{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\HMultispan\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\HMultispan\fi}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6302--><p class="noindent" ><a 
+ name="PrTx108005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx107023"  name="QPrTx430"><span 
+class="cmtt-10">cond</span>&#x00A0;<span 
+class="cmtt-10">/TD</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">multispan</span></a><a 
+ name="PrTx108006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\MS:count&#x003C;2</span>&#x00A0;<span 
+class="cmtt-10">#6\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\HCol</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Step:Col\relax</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6312--><p class="noindent" >For some reason <span 
+class="cmtt-10">\if:latex\@multicnt\else\mscount\fi </span>didn&#8217;t work for <span 
+class="cmtt-10">\MS:count&#x003E;0 </span>on
+</p><div class="Verbatim"><span 
+class="cmtt-10">\halign{#\qquad&amp;</span><span 
+class="cmtt-10">&#x00A0;\$#</span><span 
+class="cmtt-10">&#x00A0;each\cr</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\omit\span\omit\hfil</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Shipping</span><span 
+class="cmtt-10">&#x00A0;Charges\hfil\cr</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">1--10&amp;1.30\cr11--100&amp;1.00\cr</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">111--&amp;0.70\cr}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 6324--><p class="indent" >    Tried to put <span 
+class="cmtt-10">\iffalse{\fi \let\cr|=\ext:cr \let\crcr|=\ext:crcr \iffalse}\fi  </span>at start of cell. It
+didn&#8217;t work, because I couldn&#8217;t restore the <span 
+class="cmtt-10">\cr </span>and <span 
+class="cmtt-10">\crcr </span>before the <span 
+class="cmtt-10">\cr </span>is read at end of line. This doesn&#8217;t look
+like an important because the redefined version just has a <span 
+class="cmtt-10">\gdef </span>in it and produces no code of itself. However, it is
+important because problems sometimes arise if a nonnative instance is present, for instance, in <span 
+class="cmtt-10">\openup10pt</span>
+<span 
+class="cmtt-10">\halign{ $2^{#}$\quad&amp; $\overbrace{2\cdots 2}^{# \rm times}$\quad&amp; #\cr 2&amp;2&amp;4\cr 3&amp;3&amp;8\cr }</span>
+.
+</p><!--l. 6339--><p class="indent" >    See Knuth 386 for the hiding <span 
+class="cmtt-10">\iffalse{\fi\let\cr|=\ext:cr\iffalse}\fi  </span>of <span 
+class="cmtt-10">\cr</span>.
+</p>
+      <!--l. 6345--><p class="indent" ><a 
+ href="#PrTx108001"  name="PrTx108007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx431"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx108008"  href="#PrTx108010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\ext:cr=\cr</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\ext:crcr=\crcr</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6356--><p class="noindent" ><a 
+ href="#PrTx108007"  name="PrTx108009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx432"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx108010"  href="#PrTx108030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:span=\span</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\add:span#1;{\def\:tempa{#1}\edef\:temp{\HRow</span>&#x00A0;<span 
+class="cmtt-10">.\HCol}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\Advance:\:MULTISPAN</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:tempa\empty</span>&#x00A0;<span 
+class="cmtt-10">\let\HMultispan=\:MULTISPAN</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx108011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx108013"><span 
+class="cmtt-10">align for multispan in latex</span></a><a 
+ name="PrTx108012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\add:span</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6374--><p class="noindent" ><a 
+ name="PrTx108013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx108011"  name="QPrTx433"><span 
+class="cmtt-10">align</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">multispan</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">latex</span></a><a 
+ name="PrTx108014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp##1.{\def\:temp####1</span><a 
+ name="PrTx108015"  href="#PrTx107011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx108016"  href="#PrTx108018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{####1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\afterassignment\:temp\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\:temp\expandafter\:tempa</span><a 
+ name="PrTx108017"  href="#PrTx108015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx108018"  href="#PrTx109004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:tempb{\HRow.\HCol\:temp}\ifx\:tempa\:tempb</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\string\:temp</span>&#x00A0;<span 
+class="cmtt-10">:T:D\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\edef\:mALIGN{\expandafter\noexpand</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\string\:temp</span>&#x00A0;<span 
+class="cmtt-10">:T:D\endcsname}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6383--><p class="noindent" ><a 
+ name="PrTx108019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx108019"  name="QPrTx434"><span 
+class="cmtt-10">NO</span></a><a 
+ name="PrTx108020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\HRow</span>&#x00A0;<span 
+class="cmtt-10">.\HCol&#x003C;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\def\:mALIGN{\l:TD}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\HRow</span>&#x00A0;<span 
+class="cmtt-10">.\HCol-}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\def\:mALIGN{\c:TD}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\HRow</span>&#x00A0;<span 
+class="cmtt-10">.\HCol&#x003E;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\def\:mALIGN{\r:TD}\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 6396--><p class="noindent" ><a 
+ href="#PrTx107001"  name="PrTx108021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105005"  name="QPrTx435"><span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">TeXhalign</span></a><a 
+ name="PrTx108022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sv:end:omit=\end:omit</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\end:omit=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\ms:count=\MS:count</span>&#x00A0;<span 
+class="cmtt-10">\HAssign\MS:count=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\lgn:r=\HRow</span>&#x00A0;<span 
+class="cmtt-10">\let\lgn:c=\HCol</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HAssign\HRow=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\span{\xdef\new:span{\new:span\HRow.\HCol;}\:span}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sv:new:span=\new:span</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\new:span=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance\Halgn:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\edef\halign:id{\Halgn:cnt}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\old:span{\LikeRef{</span><a 
+ name="PrTx108023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx108031"><span 
+class="cmtt-10">halign tag</span></a><a 
+ name="PrTx108024"  href="#PrTx108028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\old:span\space</span>&#x00A0;<span 
+class="cmtt-10">\def\old:span{;}\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6398--><p class="noindent" >The <span 
+class="cmtt-10">\ifx \old:span\space \def\old:span{;}\fi </span>is needed for first runs when no info is yet available.
+</p>
+      <!--l. 6409--><p class="indent" ><a 
+ href="#PrTx107003"  name="PrTx108025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx105011"  name="QPrTx436"><span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">TeXhalign</span></a><a 
+ name="PrTx108026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Tag{</span><a 
+ name="PrTx108027"  href="#PrTx108023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx108031"><span 
+class="cmtt-10">halign tag</span></a><a 
+ name="PrTx108028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}{\new:span;}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\new:span=\sv:new:span</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\iffalse{\fi</span>&#x00A0;<span 
+class="cmtt-10">\let\span=\:span</span>&#x00A0;<span 
+class="cmtt-10">\iffalse}\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\HRow=\lgn:r</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\HCol=\lgn:c</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\MS:count=\ms:count</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\new:row=\sv:new:row</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\global\let\end:omit=\sv:end:omit</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6413--><p class="noindent" ><a 
+ href="#PrTx108009"  name="PrTx108029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx437"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx108030"  href="#PrTx109002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\Halgn:cnt=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6418--><p class="noindent" >The <span 
+class="cmtt-10">\mu:span </span>Provides a little movement to avoid oscilation of multi spans around incorrect values. It is attached
+to <span 
+class="cmtt-10">\TitleCount </span>ingeneral, but not within <span 
+class="cmtt-10">\begin{longtable}...\end{longtable}</span>. In that environment,
+<span 
+class="cmtt-10">\caption </span>may appear, and so change the value of <span 
+class="cmtt-10">\TitleCount </span>in the middle of a table, within a
+<span 
+class="cmtt-10">\multispan</span>.
+</p>
+      <!--l. 6430--><p class="indent" ><a 
+ name="PrTx108031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx108023"  name="QPrTx438"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx108032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx108033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh19.html#PrTx211009"><span 
+class="cmtt-10">auto tag</span></a><a 
+ name="PrTx108034"  href="tex4ht-styCh18.html#PrTx195008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">M\halign:id</span>&#x00A0;<span 
+class="cmtt-10">x\mu:span</span>-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-109"  name="QQ1-11-109">TD Script</a></h3>
+<!--l. 6437--><p class="noindent" >Through <span 
+class="cmtt-10">\Configure{MkHalign}{....} </span>with entries of the form <span 
+class="cmtt-10">row col insertion  </span>(space at end:
+<span 
+class="cmtt-10">\Contribute{halignTD}{1 1 - } </span>is fine but not <span 
+class="cmtt-10">\Contribute{halignTD}{1 1 -}</span>. The first character may be a
+code <span 
+class="cmtt-10">&#x003C;</span>, <span 
+class="cmtt-10">-</span>, <span 
+class="cmtt-10">&#x003E;</span>, <span 
+class="cmtt-10">^</span>, <span 
+class="cmtt-10">=</span>, <span 
+class="cmtt-10">-</span>, or <span 
+class="cmtt-10">_</span>. A row of value 0 applies for a full column, a column of 0 stands for a full row, and row and
+col of 0 stand for a full table.
+</p>
+      <!--l. 6460--><p class="indent" ><a 
+ href="#PrTx108029"  name="PrTx109001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx439"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx109002"  href="#PrTx109010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\derive:TD{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\no:actv</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\:temp{\noexpand\expandafter\noexpand\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\halign:TD\:MkHalign:</span>&#x00A0;<span 
+class="cmtt-10">-0</span>&#x00A0;<span 
+class="cmtt-10">0</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<a 
+ name="PrTx109003"  href="#PrTx108017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx109004"  href="#PrTx110004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\hT:D=\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp##1</span>&#x00A0;<span 
+class="cmtt-10">##2</span>&#x00A0;<span 
+class="cmtt-10">##3</span>&#x00A0;<span 
+class="cmtt-10">{\ifnum</span>&#x00A0;<span 
+class="cmtt-10">-1=##1##2##3</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx109005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx109007"><span 
+class="cmtt-10">process TD op</span></a><a 
+ name="PrTx109006"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa##1\empty{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\hT:D{\hT:D}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6471--><p class="noindent" ><a 
+ name="PrTx109007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx109005"  name="QPrTx440"><span 
+class="cmtt-10">process</span>&#x00A0;<span 
+class="cmtt-10">TD</span>&#x00A0;<span 
+class="cmtt-10">op</span></a><a 
+ name="PrTx109008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\HRow=##1</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\HCol=##2</span>&#x00A0;<span 
+class="cmtt-10">\:TDcode</span>&#x00A0;<span 
+class="cmtt-10">##3\fi\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\HRow=##1</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">0=##2</span>&#x00A0;<span 
+class="cmtt-10">\:TDcode</span>&#x00A0;<span 
+class="cmtt-10">##3\fi\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">0=##1</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\HCol=##2</span>&#x00A0;<span 
+class="cmtt-10">\:TDcode</span>&#x00A0;<span 
+class="cmtt-10">##3\fi\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">0=##1</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">0=##2</span>&#x00A0;<span 
+class="cmtt-10">\:TDcode</span>&#x00A0;<span 
+class="cmtt-10">##3\fi\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 6483--><p class="noindent" ><a 
+ href="#PrTx109001"  name="PrTx109009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx441"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx109010"  href="#PrTx110002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TDcode#1{</span><a 
+ name="PrTx109011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx109019"><span 
+class="cmtt-10">process TD code</span></a><a 
+ name="PrTx109012"  href="#PrTx109016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndTD:CLASS}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\_=13</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=13</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\:TDcode{\TD:CLASS}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp=\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\no:actv{\let\noexpand\noexpand\noexpand^=\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\noexpand\noexpand\noexpand_=\:tempa}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\_=8</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=7</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{^}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{_}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\no:actv{\no:actv}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6498--><p class="noindent" ><a 
+ name="PrTx109013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx109013"  name="QPrTx442"><span 
+class="cmtt-10">html blocks for halign tablesNOOO</span></a><a 
+ name="PrTx109014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TDcode#1{</span><a 
+ name="PrTx109015"  href="#PrTx109011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx109019"><span 
+class="cmtt-10">process TD code</span></a><a 
+ name="PrTx109016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndTD:CLASS}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\_=13</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=13</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\:TDcode{\TD:CLASS</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">_##1</span>&#x00A0;<span 
+class="cmtt-10">\o:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">^##1</span>&#x00A0;<span 
+class="cmtt-10">\t:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp=\relax</span>&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\no:actv{\let\noexpand\noexpand\noexpand^=\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\noexpand\noexpand\noexpand_=\:tempa}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\_=8</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=7</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{^}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa{_}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\no:actv{\no:actv}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6514--><p class="noindent" ><a 
+ name="PrTx109017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx109017"  name="QPrTx443"><span 
+class="cmtt-10">process TD codeOLDTD</span></a><a 
+ name="PrTx109018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\l:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">-#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\r:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">^#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\t:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">=#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">|#1</span>&#x00A0;<span 
+class="cmtt-10">\m:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">_#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">p#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\p:TD</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter#1\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6523--><p class="noindent" ><a 
+ name="PrTx109019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx109011"  name="QPrTx444"><span 
+class="cmtt-10">process</span>&#x00A0;<span 
+class="cmtt-10">TD</span>&#x00A0;<span 
+class="cmtt-10">code</span></a><a 
+ name="PrTx109020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\string#1:T:D\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\string#1:T:D\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter#1\empty</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6533--><p class="noindent" ><a 
+ href="#PrTx107015"  name="PrTx109021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx445"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx109022"  href="#PrTx109024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halignTD}[2]{\c:def\TD:CLASS{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\EndTD:CLASS{#2}\scan:halignTD}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\scan:halignTD#1{\def\:temp{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\sc:halignTD\fi{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sc:halignTD#1#2{\expandafter\def\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string#1:T:D\endcsname{#2}\scan:halignTD}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6536--><p class="noindent" >We could also have used <span 
+class="cmtt-10">\Configure{halignTD} {CLASS="NOWRAP}{"} { LEFT}{ CENTER}{ RIGHT} { TOP}{</span>
+<span 
+class="cmtt-10">BASELINE}{ MIDDLE}{ BOTTOM} </span>fot DTD4.0s.
+</p>
+      <!--l. 6544--><p class="indent" ><a 
+ href="#PrTx109021"  name="PrTx109023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx446"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx109024"  href="#PrTx109026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halignTR}[1]{\def\halignTR{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTR}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 6556--><p class="noindent" ><a 
+ href="#PrTx109023"  name="PrTx109025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx447"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx109026"  href="#PrTx119022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\halignTBL{\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">v:TBL\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\v:TBL</span>&#x00A0;<span 
+class="cmtt-10">:T:BL\endcsname\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">\v:TBL</span>&#x00A0;<span 
+class="cmtt-10">:T:BL\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halignTBL}[1]{\scan:halignTBL{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\scan:halignTBL#1{\def\:temp{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\sc:halignTBL\fi{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sc:halignTBL#1#2{\expandafter\def\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string#1:T:BL\endcsname{#2}\scan:halignTBL}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-110"  name="QQ1-11-110">Utilities</a></h3>
+<!--l. 6567--><p class="noindent" >The global is because the table starts within the first entry.
+</p>
+      <!--l. 6572--><p class="indent" ><a 
+ href="#PrTx109009"  name="PrTx110001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103005"  name="QPrTx448"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">blocks</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span></a><a 
+ name="PrTx110002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\halign:TB#1&#x003C;&#x003E;#2</span><a 
+ name="PrTx110003"  href="#PrTx109003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx110004"  href="#PrTx110006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\halign:TD#1&#x003C;&#x003E;#2</span><a 
+ name="PrTx110005"  href="#PrTx110003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx110006"  href="#PrTx114010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{#2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">10.3 <a 
+ href="tex4ht-sty.html#QQ2-11-111"  name="QQ1-11-111">A Realization for halign</a></h3>
+           <!--l. 6588--><p class="noindent" ><a 
+ name="PrTx111001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx103007"  name="QPrTx449"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">halign</span></a><a 
+ name="PrTx111002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{no-halign}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx111003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx111005"><span 
+class="cmtt-10">halign tables from TeX</span></a><a 
+ name="PrTx111004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6592--><p class="noindent" >This is the corner stone for deciding the case.
+</p>
+    <table id="TBL-1"  
+><tr >
+<td colspan="10" 
+ 
+>Witin Picture Environment?</td></tr><tr ><td 
+>Y</td><td colspan="10" 
+ 
+>tex:align</td></tr><tr ><td 
+>N</td><td 
+>within edef (:halign)?</td></tr><tr ><td 
+></td><td 
+>Y</td><td 
+>tex halign</td></tr><tr ><td 
+></td><td 
+>N</td><td colspan="10" 
+ 
+>remove &#8216;to dim&#8217; (:hlgn: +
+hl:gn)</td></tr><tr ><td 
+></td><td 
+></td><td colspan="10" 
+ 
+>change catcode of <span 
+class="cmtt-10"># </span>(hlg:n)</td></tr><tr ><td 
+></td><td 
+></td><td colspan="10" 
+ 
+>within a parameter or a def? (hal:gn)</td></tr><tr ><td 
+></td><td 
+></td><td 
+>Y</td><td colspan="10" 
+ 
+>tex:align + PRE</td></tr><tr ><td 
+></td><td 
+></td><td 
+>N</td><td colspan="10" 
+ 
+>open delimiter?
+(:Hlign)</td></tr><tr ><td 
+></td><td 
+></td><td 
+></td><td 
+><span 
+class="cmtt-10">\bgroup</span></td><td colspan="10" 
+ 
+><span 
+class="cmtt-10">tex:align + PRE</span></td></tr><tr ><td 
+></td><td 
+></td><td 
+><span 
+class="cmtt-10">{</span></td><td colspan="10" 
+ 
+><span 
+class="cmtt-10">go for hypertext table</span></td></tr></table>
+<!--l. 6614--><p class="indent" >    Check whether we are in <span 
+class="cmtt-10">\Picture </span>environment. This can happen implicitly through environment <span 
+class="cmtt-10">\[...\] </span>or
+through nesting in a construct that explicitly activates the picture mode.
+</p>
+      <!--l. 6626--><p class="indent" ><a 
+ name="PrTx111005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx450"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx111006"  href="#PrTx112002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\h:halign{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:Undef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\to:dim=\empty</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:halign</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\TeXhalign:cr\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{base}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{\Protect\h:halign}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\halign=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-112"  name="QQ1-11-112">Check for /edef Environment</a></h3>
+<!--l. 6630--><p class="noindent" >ENSURE that for cases that reduce to <span 
+class="cmtt-10">\TeXhalign:cr </span>the macro get into edef.
+</p>
+      <!--l. 6648--><p class="indent" ><a 
+ href="#PrTx111005"  name="PrTx112001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx451"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx112002"  href="#PrTx113002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\r:lax=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\r:relax{\r:lax}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\rl:x=\relax</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:halign{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\rl:x=\r:relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\rl:x\r:relax</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\nodim:hlgn:</span>&#x00A0;<i><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">not</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">edef</span></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\TeXhalign:cr</span>&#x00A0;&#x00A0;&#x00A0;<i><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">edef</span></i>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-113"  name="QQ1-11-113">Remove Dimension</a></h3>
+<!--l. 6652--><p class="noindent" >Remove the dimension in case of <span 
+class="cmtt-10">\halign to dim{...} </span>or <span 
+class="cmtt-10">\halign spread dim{...} </span>and store in <span 
+class="cmtt-10">\to:dim</span>. The
+dimension can be nested within another macro
+</p>
+      <!--l. 6661--><p class="indent" ><a 
+ href="#PrTx112001"  name="PrTx113001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx452"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx113002"  href="#PrTx114002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nodim:hlgn:{\futurelet\:temp\hl:gn}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hl:gn{\ifx</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:temp\bgroup</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\hlg:n</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:tempa##1{\append:def\to:dim{##1}\nodim:hlgn:}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:tempa}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6664--><p class="noindent" >Without recording, and using the dimension, some pictures can get corrupted. For instance, an overlap of index with
+the picture may [<a 
+ href="tex4ht-sty13.html"  name="tex4ht-sty13.html" >occur</a>]
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-114"  name="QQ1-11-114">Check for Embedded Def</a></h3>
+<!--l. 6688--><p class="noindent" >Within macros and parameters, and definitions, the catcode of characters in general, and <span 
+class="cmtt-10"># </span>in particular, can&#8217;t
+change. Hence, in such cases <span 
+class="cmtt-10">@2 </span>is empty.
+</p>
+      <!--l. 6698--><p class="indent" ><a 
+ href="#PrTx113001"  name="PrTx114001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx453"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx114002"  href="#PrTx115002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\~=6</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hlg:n{\begingroup</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>&#x00A0;<span 
+class="cmtt-10">\let#=\relax</span>&#x00A0;<span 
+class="cmtt-10">\hal:gn}%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx114003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx114003"><span 
+class="cmtt-10">process pattern of halign tbl</span></a><a 
+ name="PrTx114004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx114005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx114007"><span 
+class="cmtt-10">halign defs in catcode 13</span></a><a 
+ name="PrTx114006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=6</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\~=13</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6701--><p class="noindent" >If catcodes don&#8217;t change, we can&#8217;t get the catcode 13 for processing the parameters, and the empty flag comes
+up.
+</p>
+      <!--l. 6711--><p class="indent" ><a 
+ name="PrTx114007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx114005"  name="QPrTx454"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">defs</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">catcode</span>&#x00A0;<span 
+class="cmtt-10">13</span></a><a 
+ name="PrTx114008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\hal:gn~1{\p:lgn~1#</span><a 
+ name="PrTx114009"  href="#PrTx110005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx114010"  href="#PrTx114014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx114011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx116001"><span 
+class="cmtt-10">embedded halign</span></a><a 
+ name="PrTx114012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{\endgroup\:hlign{~1}}\fi</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:temp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\p:lgn~1#~2</span><a 
+ name="PrTx114013"  href="#PrTx114009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx114014"  href="#PrTx116004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{~2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-115"  name="QQ1-11-115">/halign Not Within Parameters</a></h3>
+<!--l. 6715--><p class="noindent" >By now we know that we are not within a picture or embeded in other macro or a parameter, and that we have
+<span 
+class="cmtt-10">\halign\bgroup...\egroup </span>or <span 
+class="cmtt-10">\halign{...}</span>. We are going to scan <span 
+class="cmtt-10">\bgroup </span>or <span 
+class="cmtt-10">{...}</span>.
+</p>
+      <!--l. 6727--><p class="indent" ><a 
+ href="#PrTx114001"  name="PrTx115001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx455"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx115002"  href="#PrTx116016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:hlign#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{\bgroup}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>&#x00A0;&#x00A0;<a 
+ name="PrTx115003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115007"><span 
+class="cmtt-10">halign into pre</span></a><a 
+ name="PrTx115004"  href="#PrTx116012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expand:after{\HRestore\noalign</span>&#x00A0;<span 
+class="cmtt-10">\TeXhalign:cr\bgroup}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<a 
+ name="PrTx115005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx119001"><span 
+class="cmtt-10">halign into MkHalign</span></a><a 
+ name="PrTx115006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6733--><p class="noindent" ><a 
+ name="PrTx115007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115003"  name="QPrTx456"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">pre</span></a><a 
+ name="PrTx115008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:warning{\noexpand\halign</span>&#x00A0;<span 
+class="cmtt-10">translated</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">linear</span>&#x00A0;<span 
+class="cmtt-10">text}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6736--><p class="noindent" >In the above if statement, <span 
+class="cmtt-10">\expandafter </span>does not work for nested halign in the true part.
+</p><!--l. 6739--><p class="indent" >    If we scan <span 
+class="cmtt-10">\bgroup </span>we are going after all to use the original definition of <span 
+class="cmtt-10">\halign</span>. Otherwise, we are going
+for <span 
+class="cmtt-10">\HTable</span>, and for such a case we want the following environment. The variable <span 
+class="cmtt-10"># </span>controls where
+patterns should be included in entries and it is used for spliting the patterns into the two parameters of
+<span 
+class="cmtt-10">\HTableScript</span>.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-116"  name="QQ1-11-116">Embedded /halign</a></h3>
+<!--l. 6752--><p class="noindent" >The <span 
+class="cmtt-10">\halign </span>are transformed into pictures or <span 
+class="cmtt-10">\TeXhalign:cr</span>.
+</p><!--l. 6755--><p class="indent" >    We now have a command of the form <span 
+class="cmtt-10">\halign\bgroup... </span>or a break up on a case of the form
+<span 
+class="cmtt-10">\halign{...body...</span>. The parameter <span 
+class="cmtt-10">~1 </span>is either <span 
+class="cmtt-10">\bgroup </span>or <span 
+class="cmtt-10">...body...</span>. If we are lucky, the body doesn&#8217;t start
+with a <span 
+class="cmtt-10"># </span>or <span 
+class="cmtt-10">\bgroup</span>.
+</p>
+      <!--l. 6775--><p class="indent" ><a 
+ name="PrTx116001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx114011"  name="QPrTx457"><span 
+class="cmtt-10">embedded</span>&#x00A0;<span 
+class="cmtt-10">halign</span></a><a 
+ name="PrTx116002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\chs:halgn\string</span>&#x00A0;<span 
+class="cmtt-10">~1</span><a 
+ name="PrTx116003"  href="#PrTx114013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx116004"  href="#PrTx116010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempb{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">a:embedded-halign\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifmmode</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vbox{</span><a 
+ name="PrTx116005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx116017"><span 
+class="cmtt-10">recall sharp</span></a><a 
+ name="PrTx116006"  href="#PrTx116008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">$$\TeXhalign:cr</span>&#x00A0;<span 
+class="cmtt-10">\to:dim{~1}$$}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\vbox{</span><a 
+ name="PrTx116007"  href="#PrTx116005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx116017"><span 
+class="cmtt-10">recall sharp</span></a><a 
+ name="PrTx116008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\TeXhalign:cr</span>&#x00A0;<span 
+class="cmtt-10">\to:dim{~1}}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:nopartrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">b:embedded-halign\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp=\endgroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempb</span><a 
+ name="PrTx116009"  href="#PrTx116003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx116010"  href="#PrTx116014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:tempb\:temp{\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx116011"  href="#PrTx115003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx115007"><span 
+class="cmtt-10">halign into pre</span></a><a 
+ name="PrTx116012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HRestore\noalign</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\TeXhalign:cr~1}\:tempa</span><a 
+ name="PrTx116013"  href="#PrTx116009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx116014"  href="#PrTx117018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6782--><p class="noindent" ><a 
+ href="#PrTx115001"  name="PrTx116015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx458"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx116016"  href="#PrTx116020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{embedded-halign}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{embedded-halign}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\expand:after{\Picture+}\pic:hlng{</span>&#x00A0;<span 
+class="cmtt-10">\a:@Picture{pic-halign}}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\EndPicture}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6784--><p class="noindent" >The <span 
+class="cmtt-10">\vbox{|&#x003C;recall sharp|&#x003E;\TeXhalign:cr \to:dim{@1}} </span>is needed to keep the picture in one page. Without
+this we get from tex4ht.c <a 
+ href="tex4ht-sty14.html"  name="tex4ht-sty14.html" >complaints</a> of mismatches <span 
+class="cmtt-10">\specals{+} </span>(due to split over pages?).
+</p><!--l. 6801--><p class="indent" >    An <span 
+class="cmtt-10">\halign{...} </span>can be in math mode <span 
+class="cmtt-10">$$....$$</span>, but not within inline math mode. If it is there, there are
+quite a few restctions (not clear of which kind) on what can appear in the math code outside the <span 
+class="cmtt-10">\halign</span>. Hence,
+we put everything into math mode in a sepearte box just for an extra precaution.
+</p><!--l. 6810--><p class="indent" >    <span 
+class="cmtt-10">\TeXhalign:cr </span>reestablishes the meaning of <span 
+class="cmtt-10">\cr </span>and <span 
+class="cmtt-10">\crcr </span>for picture-mode, but not for the second one. The
+later case may cause problems.
+</p><!--l. 6815--><p class="indent" >    Pictures might be called for also with <span 
+class="cmtt-10"># </span>having catcode 13, as is the case with <span 
+class="cmtt-10">\halign{\empty{#}&amp;&amp;{#}\cr</span>
+<span 
+class="cmtt-10">phi&amp;varphi\cr} </span>(but not with <span 
+class="cmtt-10">\halign{\empty #&amp;&amp; #\cr phi&amp;varphi\cr}</span>). In this case, the scanning in
+<span 
+class="cmtt-10">\p:lgn@1#|&#x003C;par del|&#x003E;% </span>can&#8217;t detect the sharp characters that are embedded in braces. That is, a neccesary
+condition for getting tabular representation is at least one <span 
+class="cmtt-10"># </span>out of braces, to ensure that such characters can get
+catcode 13.
+</p>
+      <!--l. 6828--><p class="indent" ><a 
+ name="PrTx116017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx116005"  name="QPrTx459"><span 
+class="cmtt-10">recall</span>&#x00A0;<span 
+class="cmtt-10">sharp</span></a><a 
+ name="PrTx116018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Rc:sharp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6835--><p class="noindent" ><a 
+ href="#PrTx116015"  name="PrTx116019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx460"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx116020"  href="#PrTx117002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Rc:sharp{\let#=\sv:sharp}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=6</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\let\sv:sharp=##}\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-117"  name="QQ1-11-117">Utilities fo Embedded /halign</a></h3>
+           <!--l. 6857--><p class="noindent" ><a 
+ href="#PrTx116019"  name="PrTx117001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx461"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx117002"  href="#PrTx117010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\chs:halgn#1{\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa##1##2##3##4##5{\def\:tempa{##1}\def\:tempb{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempc{##3}\def\:tempd{##4}\def\:tempe{##5}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa\string\bgro</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempa</span>&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter\try:b\string}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\brc:halign</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:b{\try:ch\:tempb\try:g}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:g{\try:ch\:tempc\try:r}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:r{\try:ch\:tempd\try:o}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:o#1{\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\:tempe</span>&#x00A0;<span 
+class="cmtt-10">\def\:tempb{</span><a 
+ name="PrTx117003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx117019"><span 
+class="cmtt-10">bgroup halign</span></a><a 
+ name="PrTx117004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:temp=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempb{</span><a 
+ name="PrTx117005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx117021"><span 
+class="cmtt-10">braced halign</span></a><a 
+ name="PrTx117006"  href="#PrTx117012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx117007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx117015"><span 
+class="cmtt-10">tempa = consume the rest of @1</span></a><a 
+ name="PrTx117008"  href="#PrTx117014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\:tempa}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\try:ch#1#2#3{\def\:temp{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp#1</span>&#x00A0;<span 
+class="cmtt-10">\expand:after{\expandafter#2\string}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\brc:halign</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6863--><p class="noindent" ><a 
+ href="#PrTx117001"  name="PrTx117009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx462"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx117010"  href="#PrTx119008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\brc:halign{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:temp=\empty</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempb{</span><a 
+ name="PrTx117011"  href="#PrTx117005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx117021"><span 
+class="cmtt-10">braced halign</span></a><a 
+ name="PrTx117012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx117013"  href="#PrTx117007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx117015"><span 
+class="cmtt-10">tempa = consume the rest of @1</span></a><a 
+ name="PrTx117014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\:tempa}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6867--><p class="noindent" ><a 
+ name="PrTx117015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx117007"  name="QPrTx463"><span 
+class="cmtt-10">tempa</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">consume</span>&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">rest</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">@1</span></a><a 
+ name="PrTx117016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:tempa##1</span><a 
+ name="PrTx117017"  href="#PrTx116013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx117018"  href="#PrTx119004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6871--><p class="noindent" ><a 
+ name="PrTx117019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx117003"  name="QPrTx464"><span 
+class="cmtt-10">bgroup</span>&#x00A0;<span 
+class="cmtt-10">halign</span></a><a 
+ name="PrTx117020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempb=\def\:tempa</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6875--><p class="noindent" ><a 
+ name="PrTx117021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx117005"  name="QPrTx465"><span 
+class="cmtt-10">braced</span>&#x00A0;<span 
+class="cmtt-10">halign</span></a><a 
+ name="PrTx117022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempb=\:tempa</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-118"  name="QQ1-11-118">/halign into <span 
+class="cmtt-10">&#x003C;PRE&#x003E;</span></a></h3>
+<!--l. 6883--><p class="noindent" >We temporariliy get out from display mode, because we want the <span 
+class="cmtt-10">&#x003C;PRE&#x003E; </span>before <span 
+class="cmtt-10">\halign </span>and nothing is allowed
+before <span 
+class="cmtt-10">\halign </span>in display mode. The enclosure within table is to group the content for protection from embedding
+<span 
+class="cmtt-10">&#x003C;CENTER&#x003E; </span>commands and the like.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-119"  name="QQ1-11-119">/halign into /MkHalign</a></h3>
+<!--l. 6893--><p class="noindent" >We now have a command of the form <span 
+class="cmtt-10">\halign{....} </span>or a break up on a case of the form <span 
+class="cmtt-10">\halign{....\egroup</span>.
+</p>
+      <!--l. 6902--><p class="indent" ><a 
+ name="PrTx119001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx115005"  name="QPrTx466"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">MkHalign</span></a><a 
+ name="PrTx119002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\tabskip=\tmp:dim</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\hrulefill=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\hidewidth=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expand:after{\h:align#1\cr</span><a 
+ name="PrTx119003"  href="#PrTx117017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119004"  href="#PrTx119006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1</span><a 
+ name="PrTx119005"  href="#PrTx119003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119006"  href="#PrTx119010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6906--><p class="noindent" >The pattern of <span 
+class="cmtt-10">\halign </span>can end with a <span 
+class="cmtt-10">\cr </span>or a <span 
+class="cmtt-10">\crcr</span>. We first check whether <span 
+class="cmtt-10">\cr </span>present, and if so whether or not
+it is preceded by a <span 
+class="cmtt-10">\crcr</span>.
+</p>
+      <!--l. 6922--><p class="indent" ><a 
+ href="#PrTx117009"  name="PrTx119007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx467"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx119008"  href="#PrTx120002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=13</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=6</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\h:align@1\cr@2</span><a 
+ name="PrTx119009"  href="#PrTx119005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119010"  href="#PrTx119012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{@2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\h:alignII</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\crcr:align@1\crcr</span><a 
+ name="PrTx119011"  href="#PrTx119009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119012"  href="#PrTx119014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\crcr:align@1\crcr@2</span><a 
+ name="PrTx119013"  href="#PrTx119011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119014"  href="#PrTx119016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{@2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\h:alignI</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\h:alignII</span>&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\h:alignI@1\cr@2</span><a 
+ name="PrTx119015"  href="#PrTx119013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx119016"  href="tex4ht-styCh11.html#PrTx124004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\SaveMkHalignConfig</span>&#x00A0;<a 
+ name="PrTx119017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx119019"><span 
+class="cmtt-10">halign configuration for halign</span></a><a 
+ name="PrTx119018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\MkHalign#{@1}@2\EndMkHalign</span>&#x00A0;<span 
+class="cmtt-10">\RecallMkHalignConfig}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\h:alignII@1\crcr{\h:alignI@1\cr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=6</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=11</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6931--><p class="noindent" ><a 
+ name="PrTx119019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx119017"  name="QPrTx468"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">configuration</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">halign</span></a><a 
+ name="PrTx119020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{MkHalign}{\hlg:a}{\hlg:b}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hlg:c\hlg:d{\hlg:e\RecallMkHalignConfig}\hlg:f</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6940--><p class="noindent" ><a 
+ href="#PrTx109025"  name="PrTx119021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50029"  name="QPrTx469"><span 
+class="cmtt-10">html config util</span></a><a 
+ name="PrTx119022"  href="tex4ht-styCh11.html#PrTx123006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{halign}[6]{\c:def\hlg:a{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\hlg:b{#2}\c:def\hlg:c{#3}\c:def\hlg:d{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c:def\hlg:e{#5}\c:def\hlg:f{#6}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{pic-halign}[1]{\def\pic:hlng{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6945--><p class="noindent" ><a 
+ href="#PrTx107031"  name="PrTx119023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50037"  name="QPrTx470"><span 
+class="cmtt-10">math</span>&#x00A0;<span 
+class="cmtt-10">config</span>&#x00A0;<span 
+class="cmtt-10">util</span></a><a 
+ name="PrTx119024"  href="tex4ht-styCh13.html#PrTx138002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:halign:{&#x003C;&#x003E;}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6951--><p class="noindent" >We must put in at least the <span 
+class="cmtt-10">&#x003C;&#x003E;</span>.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-11-120"  name="QQ1-11-120">noalign</a></h3>
+<!--l. 6960--><p class="noindent" >In TeX4ht <span 
+class="cmtt-10">\everycr\noalign </span>causes a loop because the definition of <span 
+class="cmtt-10">\halign </span>includes <span 
+class="cmtt-10">\cr</span>. We declare a loop when
+100 cycles are encountered. Another possible problem is due to <span 
+class="cmtt-10">\hline </span>which contains <span 
+class="cmtt-10">noalign </span>at its
+start.[<a 
+ href="tex4ht-sty15.html"  name="tex4ht-sty15.html" >more</a>]
+</p><!--l. 6970--><p class="indent" >    If we want to go for optional <span 
+class="cmtt-10">\noalign </span>with response to a parameter in <span 
+class="cmtt-10">\Preamble</span>, we need to take care of
+places that needs it html interpretation (in tables?).
+</p>
+      <!--l. 6978--><p class="indent" ><a 
+ href="#PrTx119007"  name="PrTx120001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx111003"  name="QPrTx471"><span 
+class="cmtt-10">halign</span>&#x00A0;<span 
+class="cmtt-10">tables</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">TeX</span></a><a 
+ name="PrTx120002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx120003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx120005"><span 
+class="cmtt-10">noalign</span></a><a 
+ name="PrTx120004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 6992--><p class="noindent" ><a 
+ name="PrTx120005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx120003"  name="QPrTx472"><span 
+class="cmtt-10">noalign</span></a><a 
+ name="PrTx120006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\noalign:N=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1{</span><a 
+ name="PrTx120007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx120015"><span 
+class="cmtt-10">cycle protection fo noalign</span></a><a 
+ name="PrTx120008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vtop{\IgnorePar\a:noalign\vtop{\IgnorePar#1}\b:noalign}\cr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\tmp:toks=\everycr</span>&#x00A0;<span 
+class="cmtt-10">\global\everycr{}\cr</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:noalign:{\global\everycr=\tmp:toks</span>&#x00A0;<span 
+class="cmtt-10">\gHAssign\noalign:N=0</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\noalign=\:tempc</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx120009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx120009"><span 
+class="cmtt-10">another alternative for noalign</span></a><a 
+ name="PrTx120010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 6994--><p class="noindent" >We probbaly can remove the cycle protection.
+</p><!--l. 6996--><p class="indent" >    The internal <span 
+class="cmtt-10">\top </span>is to ensure vertical mode for material which assumes it. In the extreem, that also prevents
+infinite loops.
+</p>
+      <!--l. 7003--><p class="indent" ><a 
+ href="#PrTx105017"  name="PrTx120011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx473"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx120012"  href="#PrTx120014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{noalign-}[2]{\c:def\a:noalign{#1}\c:def\b:noalign{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7005--><p class="noindent" >Any reason left for keeping both cases?
+</p>
+      <!--l. 7011--><p class="indent" ><a 
+ href="#PrTx120011"  name="PrTx120013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh5.html#PrTx50031"  name="QPrTx474"><span 
+class="cmtt-10">shared config</span></a><a 
+ name="PrTx120014"  href="tex4ht-styCh12.html#PrTx127002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{no-halign}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NewConfigure{noalign}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7023--><p class="noindent" >The <span 
+class="cmtt-10">\Protect </span>is needed, for instance, in <span 
+class="cmtt-10">\endalignat </span>of amstex.tex during a pre-edef stage.
+</p><!--l. 7026--><p class="indent" >    The looping can happen in <span 
+class="cmtt-10">\displaylines</span>, <span 
+class="cmtt-10">\eqalignno</span>, and <span 
+class="cmtt-10">\leqalignno </span>due to the first command below
+(<span 
+class="cmtt-10">\@align</span>?.).
+</p>
+      <!--l. 7038--><p class="indent" ><a 
+ name="PrTx120015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx120007"  name="QPrTx475"><span 
+class="cmtt-10">cycle</span>&#x00A0;<span 
+class="cmtt-10">protection</span>&#x00A0;<span 
+class="cmtt-10">fo</span>&#x00A0;<span 
+class="cmtt-10">noalign</span></a><a 
+ name="PrTx120016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAdvance\noalign:N</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\noalign:N&#x003E;100</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\noalign=\o:noalign:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">can&#8217;t</span>&#x00A0;<span 
+class="cmtt-10">handle</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\everycr{...\string\noalign...}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7041--><p class="noindent" >Removed <span 
+class="cmtt-10">\let\dotfill|=\empty</span>. Did I have any reason to put it there in first place?
+
+</p>
+    <!--l. 7046--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh11.html" >next</a>] [<a 
+ href="tex4ht-styCh9.html" >prev</a>] [<a 
+ href="tex4ht-styCh9.html#tailtex4ht-styCh9.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh10.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh10.html" >up</a>] </p></div>
+<!--l. 7046--><p class="indent" >    <a 
+  name="tailtex4ht-styCh10.html"></a>   </p> 
+</body></html> 

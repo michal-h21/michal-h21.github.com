@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>divisions in tex4ht.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 1830--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu7.html" >next</a>] [<a 
+ href="tex4ht-4htSu5.html" >prev</a>] [<a 
+ href="tex4ht-4htSu5.html#tailtex4ht-4htSu5.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu6.html">tail</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu6.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe3.html#QQ2-22-18"  name="QQ1-22-18">divisions in tex4ht.sty</a></h3>
+           <!--l. 1841--><p class="noindent" ><a 
+ name="PrTx18001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174039"  name="QPrTx85"><span 
+class="cmtt-10">elements for latex divs</span></a><a 
+ name="PrTx18002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Get:SecAnchor#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx18003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx18009"><span 
+class="cmtt-10">/edef /@currentlabel</span></a><a 
+ name="PrTx18004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\cur:th{</span><a 
+ name="PrTx18005"  href="tex4ht-4htSu5.html#PrTx17011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh59.html#PrTx293007"><span 
+class="cmtt-10">haddr prefix</span></a><a 
+ name="PrTx18006"  href="tex4ht-4htSe73.html#PrTx177038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\last:haddr}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx18007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx18013"><span 
+class="cmtt-10">get :currentlabel</span></a><a 
+ name="PrTx18008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:SecAnchor{\cur:th\:currentlabel}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1844--><p class="noindent" >We redefine <span 
+class="cmtt-10">\@Roman </span>for <span 
+class="cmtt-10">\thepart </span>to have the same number of entries as <span 
+class="cmtt-10">\Alph</span>.
+</p>
+      <!--l. 1858--><p class="indent" ><a 
+ name="PrTx18009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx18003"  name="QPrTx86"><span 
+class="cmtt-10">/edef</span>&#x00A0;<span 
+class="cmtt-10">/@currentlabel</span></a><a 
+ name="PrTx18010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@Roman##1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcase##1\or</span>&#x00A0;<span 
+class="cmtt-10">I\or</span>&#x00A0;<span 
+class="cmtt-10">II\or</span>&#x00A0;<span 
+class="cmtt-10">III\or</span>&#x00A0;<span 
+class="cmtt-10">IV\or</span>&#x00A0;<span 
+class="cmtt-10">V\or</span>&#x00A0;<span 
+class="cmtt-10">VI\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">VII\or</span>&#x00A0;<span 
+class="cmtt-10">VIII\or</span>&#x00A0;<span 
+class="cmtt-10">IX\or</span>&#x00A0;<span 
+class="cmtt-10">X\or</span>&#x00A0;<span 
+class="cmtt-10">XI\or</span>&#x00A0;<span 
+class="cmtt-10">XII\or</span>&#x00A0;<span 
+class="cmtt-10">XIII\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">XIV\or</span>&#x00A0;<span 
+class="cmtt-10">XV\or</span>&#x00A0;<span 
+class="cmtt-10">XVI\or</span>&#x00A0;<span 
+class="cmtt-10">XVII\or</span>&#x00A0;<span 
+class="cmtt-10">XVIII\or</span>&#x00A0;<span 
+class="cmtt-10">XIX\or</span>&#x00A0;<span 
+class="cmtt-10">XX\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">XXI\or</span>&#x00A0;<span 
+class="cmtt-10">XXII\or</span>&#x00A0;<span 
+class="cmtt-10">XXIII\or</span>&#x00A0;<span 
+class="cmtt-10">XXIV\or</span>&#x00A0;<span 
+class="cmtt-10">XV\or</span>&#x00A0;<span 
+class="cmtt-10">XVI\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\uppercase\expandafter{\romannumeral</span>&#x00A0;<span 
+class="cmtt-10">##1}\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:currentlabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{#2}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\global\let\@currentlabel=\:temp\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1862--><p class="noindent" ><a 
+ href="tex4ht-4htSu5.html#PrTx17023"  name="PrTx18011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12005"  name="QPrTx87"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">ref</span></a><a 
+ name="PrTx18012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{currentlabel}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1865--><p class="noindent" >The <span 
+class="cmtt-10">\@currentlabel </span>may hold a <span 
+class="cmtt-10">\uppercase </span>due to <span 
+class="cmtt-10">\thepart </span>that has a <span 
+class="cmtt-10">\@Roman </span>in it. Tried to go for
+&#8216;<span 
+class="cmtt-10">\cur:lbl{#1}%</span>&#8217;, but that was a problem for cross references with labels of sections, because <span 
+class="cmtt-10">\label </span>uses
+&#8216;<span 
+class="cmtt-10">\cur:lbl{}</span>&#8217;.
+</p>
+      <!--l. 1873--><p class="indent" ><a 
+ name="PrTx18013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx18007"  name="QPrTx88"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">:currentlabel</span></a><a 
+ name="PrTx18014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempa=\uppercase</span>&#x00A0;<span 
+class="cmtt-10">\def\uppercase##1{##1}\cur:lbl{}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\uppercase=\:tempa</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1876--><p class="noindent" >How the above &#8216;<span 
+class="cmtt-10">\global\let\cur:th|=\last:haddr</span>&#8217; work with the change in <span 
+class="cmtt-10">\refstepcounter</span>?
+
+</p>
+    <!--l. 1885--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu7.html" >next</a>] [<a 
+ href="tex4ht-4htSu5.html" >prev</a>] [<a 
+ href="tex4ht-4htSu5.html#tailtex4ht-4htSu5.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu6.html" >front</a>] [<a 
+ href="tex4ht-4htSe3.html#tex4ht-4htSu6.html" >up</a>] </p></div>
+<!--l. 1885--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu6.html"></a> </p> 
+</body></html> 
