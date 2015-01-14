@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="de-DE" xmlns="http://www.w3.org/1999/xhtml">
+  <!-- This file was converted to xhtml by Writer2xhtml ver. 1.2.1. See http://writer2latex.sourceforge.net for more info. -->
+  <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
+    <title></title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC" />
+    <meta content="" name="DC.title" />
+    <meta content="" name="DC.subject" />
+    <meta content="" name="DC.description" />
+    <meta content="Volker Gottwald" name="DC.creator" />
+    <meta content="2015-01-14T16:37:00" name="DC.date" />
+    <meta content="de" name="DC.language" />
+    <link href="http://www.w3.org/StyleSheets/Core/Oldstyle" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body dir="ltr">
+    <p class="Title" dir="ltr"><span xml:lang="en-GB">E-books from Latex</span></p>
+    <p class="IntenseQuote" dir="ltr"><span class="Strong">Volker Gottwald – Status 14.1.2015</span></p>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">To create ebooks from new or existing Latex (.tex) files on a Windows PC you need</span></p>
+    <ul class="listlevel1WWNum1">
+      <li><span xml:lang="en-GB">A Linux-Distribution. I have tested it with TexLive, it might work with MikTex also.<br />(Download TexLive from </span><a href="https://www.tug.org/texlive/acquire-netinstall.html">https://www.tug.org/texlive/acquire-netinstall.html</a><span xml:lang="en-GB">. Save the file where you find it again for later use.</span></li>
+      <li><span xml:lang="en-GB">The Software Tex4ebook from Michal Hoftich<br />(Download the zip file from </span><a href="https://github.com/michal-h21/tex4ebook">https://github.com/michal-h21/tex4ebook</a><span xml:lang="en-GB"> and then click on the icon “Download ZIP” or directly from here </span><a href="https://github.com/michal-h21/tex4ebook/archive/master.zip">https://github.com/michal-h21/tex4ebook/archive/master.zip</a><span xml:lang="en-GB">. Save the file where you find it again for later use.</span></li>
+      <li><span xml:lang="en-GB">The Software Make4ht from Michal Hoftich<br />(Download the zip file from </span><a href="https://github.com/michal-h21/make4ht">https://github.com/michal-h21/make4ht</a><span xml:lang="en-GB"> and then click on the icon “Download ZIP” or directly from here </span><a href="https://github.com/michal-h21/make4ht/archive/master.zip">https://github.com/michal-h21/make4ht/archive/master.zip</a><span xml:lang="en-GB">. Save the file where you find it again for later use.</span></li>
+    </ul>
+    <h1 dir="ltr" id="toc0"><span xml:lang="en-GB">Installation</span></h1>
+    <h2 dir="ltr" id="toc1"><span xml:lang="en-GB">Install TexLive first</span></h2>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Open the file “install-tl-windows.exe” from you PC. Follow the instructions given. The installation may take 60 minutes or more depending on your internet connection. Also allow to install the Editor that comes with the package. Compiling the tex-files is easier with a good editor.</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">After a successful installation you should see this </span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 1" class="frameGraphics" id="Grafik1graphic" src="tex4ebook-img001.png" style="width:476.86298px;height:331.80475px" /></p>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <h2 dir="ltr" id="toc2"><span xml:lang="en-GB">Install tex4ebook </span></h2>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">This is more to “copy” files to the correct location than “installing” anything. Extract the two downloaded zip files where you stored your download. </span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">This will create two directories</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">make4htmaster</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 8" class="frameGraphics" id="Grafik8graphic" src="tex4ebook-img002.png" style="width:604.80005px;height:151.67244px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">and tex4ebook-master</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 6" class="frameGraphics" id="Grafik6graphic" src="tex4ebook-img003.png" style="width:604.80005px;height:223.67247px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">After TexLive is installed go to the Command Line interface (cmd) and enter</span></p>
+    <p class="Standard" dir="ltr"><span class="HTMLCode">kpsewhich -var-value TEXMFHOME</span></p>
+    <p class="Standard" dir="ltr"><span class="HTMLCode"><span xml:lang="en-GB">Depending on your Windows Installation and language you will see different output from this command.</span></span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 2" class="frameGraphics" id="Grafik2graphic" src="tex4ebook-img004.png" style="width:474.40628px;height:240.41574px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">In my case it was </span></p>
+    <p class="Standard" dir="ltr"><span class="HTMLCode">C:/Users/Volker/texmf</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">You may need to create this directory if it does not exist. Also you need to create the subdirectory</span></p>
+    <ul class="listlevel1WWNum3">
+      <li><span xml:lang="en-GB">scripts/lua below texmf and</span></li>
+      <li><span xml:lang="en-GB">tex/latex/ belew texmf</span></li>
+    </ul>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Copy the files extracted from the two links above into this directory. In case you decide to copy the directory as if from your download storage area you need to rename the directories from</span></p>
+    <ul class="listlevel1WWNum2">
+      <li><span xml:lang="en-GB">make4ht-master to make4ht and</span></li>
+      <li><span xml:lang="en-GB">tex4ebook-master to tex4ebook</span></li>
+    </ul>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Then</span></p>
+    <ul class="listlevel1WWNum4">
+      <li><span xml:lang="en-GB">Copy the directory make4ht with it’s content to texmf/scripts/lua</span></li>
+      <li><span xml:lang="en-GB">Copy the directory tex4ebook with it’s content to texmf/tex/latex/</span></li>
+    </ul>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Finally it should look like this on your PC</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Below the directory C:/Benutzer/Volker (resp. your personal settings)</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 4" class="frameGraphics" id="Grafik4graphic" src="tex4ebook-img005.png" style="width:167.92441px;height:152.9197px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">	You should see the texmf directory like this</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 9" class="frameGraphics" id="Grafik9graphic" src="tex4ebook-img006.png" style="width:205.94644px;height:148.95119px" /></p>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <h1 dir="ltr" id="toc3"><span xml:lang="en-GB">Creating an E-Book</span></h1>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Open Texworks and create a little testfile like this one</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\documentclass{article}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\begin{document}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">hello world</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\end{document}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Create a PDF file form this with Xelatex for example and see if you Latex installation works.</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 10" class="frameGraphics" id="Grafik10graphic" src="tex4ebook-img007.png" style="width:257.72598px;height:192.0px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">As a result a PDF file should open in a separate window. Now you can proceed to create an e-book from this file</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">To make this easy without using the command line and bat files open “bearbeiten” and click on “Einstellungen”</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 11" class="frameGraphics" id="Grafik11graphic" src="tex4ebook-img008.png" style="width:427.9181px;height:332.9386px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">This window will open</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 12" class="frameGraphics" id="Grafik12graphic" src="tex4ebook-img009.png" style="width:604.80005px;height:500.74957px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Click on the plus sign to create a new entry</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 14" class="frameGraphics" id="Grafik14graphic" src="tex4ebook-img010.png" style="width:479.92447px;height:317.93387px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Ent a Name like “E-Book” (or whatever you like) and enter the command “texlua” in the filed below.</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Next click on the + sign for adding arguments to this command</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Enter </span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">C:\Users\Volker\texmf\tex\latex\tex4ebook\tex4ebook.lua</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">As first argument (This is exactly the location of the tex4ebbook.lua file on your PC. You location might be different according to you Windows installation)</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">As second argument enter</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">$fullname</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 15" class="frameGraphics" id="Grafik15graphic" src="tex4ebook-img011.png" style="width:479.92447px;height:317.93387px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">Finally click on OK for each open window (2) to close and save your changes.</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">From the menu select E-Book as the “Compiler” and click on the green “run” button</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 16" class="frameGraphics" id="Grafik16graphic" src="tex4ebook-img012.png" style="width:222.00946px;height:229.94647px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">The creation of the e-book should run without error messages and if so, you will find the ebook in an subdirectory of the original tex-file location with the name [filename]-epub and inside you have your e-book named [filename].epub</span></p>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 17" class="frameGraphics" id="Grafik17graphic" src="tex4ebook-img013.png" style="width:604.80005px;height:106.46929px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">If you have calibre installed, you can open the book and check the content.</span></p>
+    <p class="Standard" dir="ltr"><img alt="Grafik 18" class="frameGraphics" id="Grafik18graphic" src="tex4ebook-img014.png" style="width:604.80005px;height:713.1969px" /></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">From here you can experiment with different tex-files that you already have and/or add commands to you current file to learn more how the ebook compares with PDF files for printing.</span></p>
+    <h1 dir="ltr" id="toc4"><span xml:lang="en-GB">Important settings for e-books</span></h1>
+    <p class="Standard" dir="ltr" xml:lang="en-GB"> </p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">In case you want to use special fonts with the fontspec package of Latex you need to have the following lines of code in your preamble of the tex file after declaring the document class</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\ifdefined\HCode</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\usepackage[ngerman]{babel}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\usepackage[T1]{fontenc}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\usepackage[utf8]{inputenc}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\else</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\usepackage{polyglossia}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\setdefaultlanguage{german}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\usepackage{fontspec}</span></p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">\setmainfont[Ligatures=TeX]{DejaVu Serif Condensed}</span></p>
+    <p class="Standard" dir="ltr">\setsansfont[Ligatures=TeX]{DejaVu Sans}</p>
+    <p class="Standard" dir="ltr">\fi</p>
+    <p class="Standard" dir="ltr"><span xml:lang="en-GB">The first part is used fort he ebook. The second part for your PDF file</span></p>
+  </body>
+</html>
