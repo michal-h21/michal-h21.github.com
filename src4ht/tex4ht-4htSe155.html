@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>natbib.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 23289--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh63.html" >next</a>] [<a 
+ href="tex4ht-4htSe154.html" >prev</a>] [<a 
+ href="tex4ht-4htSe154.html#tailtex4ht-4htSe154.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe155.html">tail</a>] [<a 
+ href="tex4ht-4htCh62.html#tex4ht-4htSe155.html" >up</a>] </p></div>
+    <h3 class="SectionHead">62.6 <a 
+ href="tex4ht-4htPa1.html#QQ2-367-331"  name="QQ1-367-331">natbib.sty</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 23319--><p class="indent" ><a 
+ name="PrTx331001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331001"  name="QPrTx1189"><span 
+class="cmtt-10">natbib.4ht</span></a><a 
+ name="PrTx331002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">natbib.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1999--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx331003"  href="tex4ht-4htSe154.html#PrTx330003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx331004"  href="tex4ht-4htSe156.html#PrTx333004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HRestore\@lbibitem</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HRestore\@bibitem</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifNAT@super</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx331005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331017"><span 
+class="cmtt-10">natbib htcitet</span></a><a 
+ name="PrTx331006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx331007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331019"><span 
+class="cmtt-10">natbib numbers</span></a><a 
+ name="PrTx331008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@natlinkstart#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\rel:hyper=\def</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@linkstart{cite}{X#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@nat@current{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@natlinkbreak#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@linkend#1\let\rel:hyper=\def</span>&#x00A0;<span 
+class="cmtt-10">\hyper@linkstart{cite}{X#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@natlinkend{\hyper@linkend}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx331009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331015"><span 
+class="cmtt-10">hyperref for natbib</span></a><a 
+ name="PrTx331010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx331011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331013"><span 
+class="cmtt-10">natbib protect edef mbox</span></a><a 
+ name="PrTx331012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{natbib}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 23323--><p class="noindent" >The following protection is needed for
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\usepackage[sort&amp;compress]{natbib}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Single</span><span 
+class="cmtt-10">&#x00A0;citations</span><span 
+class="cmtt-10">&#x00A0;are</span><span 
+class="cmtt-10">&#x00A0;fine</span><span 
+class="cmtt-10">&#x00A0;\cite{foo},</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">double</span><span 
+class="cmtt-10">&#x00A0;citations</span><span 
+class="cmtt-10">&#x00A0;are</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;\cite{bar,foo}.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{thebibliography}{99}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\bibitem[1]{foo}</span><span 
+class="cmtt-10">&#x00A0;foofoo</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\bibitem[2]{bar}</span><span 
+class="cmtt-10">&#x00A0;barbar</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{thebibliography}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 23340--><p class="indent" >    when compiled with oolatex.
+</p>
+      <!--l. 23345--><p class="indent" ><a 
+ name="PrTx331013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331011"  name="QPrTx1190"><span 
+class="cmtt-10">natbib</span>&#x00A0;<span 
+class="cmtt-10">protect</span>&#x00A0;<span 
+class="cmtt-10">edef</span>&#x00A0;<span 
+class="cmtt-10">mbox</span></a><a 
+ name="PrTx331014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defIII\NAT@cite{\let\mbox\o:mbox:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defIII\NAT@citenum{\let\mbox\o:mbox:}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 23347--><p class="noindent" >The following failed on
+
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\usepackage</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;[numbers,sort&amp;compress]%</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{natbib}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\section{Introduction}</span><span 
+class="cmtt-10">&#x00A0;\label{sec:Introduction}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\cite{Arantes2003b}.</span><span 
+class="cmtt-10">&#x00A0;Here</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Section</span><span 
+class="cmtt-10">&#x00A0;\ref{sec:Algorithms}</span><span 
+class="cmtt-10">&#x00A0;presents</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\o:NAT@citexnum:\NAT@citexnum</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NAT@citexnum[#1][#2]#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sv:mbox\mbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\mbox\o:mbox:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\o:NAT@citexnum:[#1][#2]{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\mbox\sv:mbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+-_-_-</span>
+           <!--l. 23395--><p class="noindent" ><a 
+ name="PrTx331015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331009"  name="QPrTx1192"><span 
+class="cmtt-10">hyperref</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">natbib</span></a><a 
+ name="PrTx331016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">hyper@linkstart\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@linkstart#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:temp\@urltype</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link[#2]{}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\rel:hyper\def\Link{#2}{}\else\Link[\##2]{}{}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\rel:hyper=\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@linkend{\EndLink}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp#1{}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\hyper@natanchorstart</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@natanchorstart#1{\Link{}{X#1}\EndLink}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 23397--><p class="noindent" >This modification is needed since Stefan <span 
+class="cmtt-10">&#x003C;s.newslists@googlemail.com&#x003E; </span>vide bug # 178 reported that <span 
+class="cmtt-10">\citet</span>
+didn&#8217;t work in combination with <span 
+class="cmtt-10">super </span>option of <span 
+class="cmtt-10">natbib </span>package.
+</p>
+      <!--l. 23405--><p class="indent" ><a 
+ name="PrTx331017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331005"  name="QPrTx1193"><span 
+class="cmtt-10">natbib</span>&#x00A0;<span 
+class="cmtt-10">htcitet</span></a><a 
+ name="PrTx331018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\citet{\@ifstar{\NAT@longnamestrue\ht@citet}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\NAT@longnamesfalse\ht@citet}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 23415--><p class="noindent" ><a 
+ name="PrTx331019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331007"  name="QPrTx1194"><span 
+class="cmtt-10">natbib</span>&#x00A0;<span 
+class="cmtt-10">numbers</span></a><a 
+ name="PrTx331020"  href="#PrTx331022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\setb:anc#1{\let\sv:anc\AnchorLabel</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\bib:anc{\Link{}{bibitem\the</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c@NAT@ctr}\EndLink</span>&#x00A0;<span 
+class="cmtt-10">\gdef\bib:anc{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\AnchorLabel{\bib:anc}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nb:link#1{\Protect\Link{bibitem#1}{}#1\Protect\EndLink}</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nb@link#1{\Protect\Link{bibitem#1}{}#1\Protect\EndLink}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 23426--><p class="noindent" ><a 
+ href="#PrTx331019"  name="PrTx331021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331007"  name="QPrTx1195"><span 
+class="cmtt-10">natbib</span>&#x00A0;<span 
+class="cmtt-10">numbers</span></a><a 
+ name="PrTx331022"  href="#PrTx331024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\nat:lbibitem\@lbibitem</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@lbibitem{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\hyper@natanchorstart\@gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\hyper@natanchorstart##1{\Link{}{bibitem\the</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\c@NAT@ctr}\EndLink}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\nat:lbibitem</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 23532--><p class="noindent" ><a 
+ href="#PrTx331021"  name="PrTx331023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331007"  name="QPrTx1196"><span 
+class="cmtt-10">natbib</span>&#x00A0;<span 
+class="cmtt-10">numbers</span></a><a 
+ name="PrTx331024"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=12</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\ht@citet#1{\def\NAT@num{-1}\let\NAT@last@yr\relax\let\NAT@nm\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@citea\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@for\@citeb:=#1\do{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifundefined{b@\@citeb\@extra@b@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{{\reset@font\bfseries?}\NAT@citeundefined\PackageWarning{natbib}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Citation</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\@citeb&#8217;</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">\thepage</span>&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<span 
+class="cmtt-10">undefined}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\@citea\let\NAT@last@num\NAT@num\let\NAT@last@nm\NAT@nm</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@parse{\@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@longnames\@ifundefined{bv@\@citeb\@extra@b@citeb}{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\NAT@name=\NAT@all@names</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@namedef{bv@\@citeb\@extra@b@citeb}{}}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@full\let\NAT@nm\NAT@all@names\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\NAT@nm\NAT@name</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@nm}\Tg&#x003C;sup&#x003E;\nb@link{\NAT@num}\Tg&#x003C;/sup&#x003E;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@citea{\unskip\NAT@sep\penalty\@m\space}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NAT@citexnum[#1][#2]#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@sort@cites{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@citea\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@cite{\def\NAT@num{-1}\let\NAT@last@yr\relax\let\NAT@nm\@empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@for\@citeb:=\NAT@cite@list\do</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\edef\@citeb{\expandafter\@firstofone\@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@filesw\immediate\write\@auxout{\string\citation{\@citeb}}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifundefined{b@\@citeb\@extra@b@citeb}{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\reset@font\bfseries?}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@citeundefined\PackageWarning{natbib}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{Citation</span>&#x00A0;<span 
+class="cmtt-10">&#8216;\@citeb&#8217;</span>&#x00A0;<span 
+class="cmtt-10">on</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">\thepage</span>&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<span 
+class="cmtt-10">undefined}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\let\NAT@last@num\NAT@num\let\NAT@last@nm\NAT@nm</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@parse{\@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@longnames\@ifundefined{bv@\@citeb\@extra@b@citeb}{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\NAT@name=\NAT@all@names</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@namedef{bv@\@citeb\@extra@b@citeb}{}}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@full\let\NAT@nm\NAT@all@names\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\NAT@nm\NAT@name\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@swa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\NAT@ctype=2\relax\@citea</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkstart{\@citeb\@extra@b@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@test{2}\hyper@natlinkend\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\NAT@sort&#x003E;1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup\catcode&#8216;\_=8</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcat</span>&#x00A0;<span 
+class="cmtt-10">_\ifnum\z@&#x003C;0\NAT@num</span>&#x00A0;<span 
+class="cmtt-10">_\else</span>&#x00A0;<span 
+class="cmtt-10">A\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\NAT@nm=\NAT@num</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\gdef\NAT@nm{-2}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcat</span>&#x00A0;<span 
+class="cmtt-10">_\ifnum\z@&#x003C;0\NAT@last@num</span>&#x00A0;<span 
+class="cmtt-10">_\else</span>&#x00A0;<span 
+class="cmtt-10">A\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@tempcnta=\NAT@last@num</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\advance\@tempcnta</span>&#x00A0;<span 
+class="cmtt-10">by\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\global\@tempcnta\m@ne\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\NAT@nm=\@tempcnta</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\NAT@last@yr\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\NAT@last@yr{\@citea</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:mbox:\endcsname{</span><a 
+ name="PrTx331025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331031"><span 
+class="cmtt-10">nb link</span></a><a 
+ name="PrTx331026"  href="#PrTx331028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\NAT@num}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\NAT@last@yr{--\penalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@m\csname</span>&#x00A0;<span 
+class="cmtt-10">o:mbox:\endcsname{</span><a 
+ name="PrTx331027"  href="#PrTx331025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331031"><span 
+class="cmtt-10">nb link</span></a><a 
+ name="PrTx331028"  href="#PrTx331030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\NAT@num}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@last@yr</span>&#x00A0;<span 
+class="cmtt-10">\@citea</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:mbox:\endcsname{</span><a 
+ name="PrTx331029"  href="#PrTx331027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx331031"><span 
+class="cmtt-10">nb link</span></a><a 
+ name="PrTx331030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\NAT@num}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\NAT@last@yr\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@citea</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:mbox:\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\ifx\hyper@natanchorstart\@gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Link{bibitem\NAT@num}{}\NAT@num</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\EndLink</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@num</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkend</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@citea{\NAT@sep\penalty\@m\NAT@space}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcase\NAT@ctype\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\NAT@last@nm\NAT@nm</span>&#x00A0;<span 
+class="cmtt-10">\NAT@yrsep\penalty\@m\NAT@space\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@citea</span>&#x00A0;<span 
+class="cmtt-10">\NAT@test{1}\</span>&#x00A0;<span 
+class="cmtt-10">\NAT@@open</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if\relax#1\relax\else#1\</span>&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">\NAT@mbox{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkstart{\@citeb\@extra@b@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@num\hyper@natlinkend}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@citea{\NAT@@close\NAT@sep\penalty\@m\</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\or\@citea</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkstart{\@citeb\@extra@b@citeb}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@test{1}\hyper@natlinkend</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@citea{\NAT@sep\penalty\@m\</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\or\@citea</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkstart{\@citeb\@extra@b@citeb}\NAT@test{2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hyper@natlinkend</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@citea{\NAT@sep\penalty\@m\</span>&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\NAT@sort&#x003E;1\NAT@last@yr\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifNAT@swa\else\ifnum\NAT@ctype=0\if\relax#2\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAT@cmt\</span>&#x00A0;<span 
+class="cmtt-10">#2\fi</span>&#x00A0;<span 
+class="cmtt-10">\NAT@@close\fi\fi}{#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@citex=\NAT@citexnum</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\:=11</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 23537--><p class="noindent" ><a 
+ name="PrTx331031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx331025"  name="QPrTx1197"><span 
+class="cmtt-10">nb</span>&#x00A0;<span 
+class="cmtt-10">link</span></a><a 
+ name="PrTx331032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">nb:link\endcsname</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 23540--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh63.html" >next</a>] [<a 
+ href="tex4ht-4htSe154.html" >prev</a>] [<a 
+ href="tex4ht-4htSe154.html#tailtex4ht-4htSe154.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe155.html" >front</a>] [<a 
+ href="tex4ht-4htCh62.html#tex4ht-4htSe155.html" >up</a>] </p></div>
+<!--l. 23540--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe155.html"></a> </p> 
+</body></html> 

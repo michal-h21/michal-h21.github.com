@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>more</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;updated</span><span 
+class="cmtt-10">&#x00A0;all</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;ftp://www.tug.org/private/texk7.2drivers/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">A</span><span 
+class="cmtt-10">&#x00A0;small</span><span 
+class="cmtt-10">&#x00A0;patch</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;tex4htk.</span><span 
+class="cmtt-10">&#x00A0;It</span><span 
+class="cmtt-10">&#x00A0;won&#8217;t</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;systems</span><span 
+class="cmtt-10">&#x00A0;without</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x003C;dirent.h&#x003E;,</span><span 
+class="cmtt-10">&#x00A0;therefore</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;copied</span><span 
+class="cmtt-10">&#x00A0;this</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;gsftopk.</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;don&#8217;t</span><span 
+class="cmtt-10">&#x00A0;know</span><span 
+class="cmtt-10">&#x00A0;how</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">handle</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;MSVC_1_52_DOS</span><span 
+class="cmtt-10">&#x00A0;correctly.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">---</span><span 
+class="cmtt-10">&#x00A0;tex4ht.c.ORIG</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Wed</span><span 
+class="cmtt-10">&#x00A0;Mar</span><span 
+class="cmtt-10">&#x00A0;18</span><span 
+class="cmtt-10">&#x00A0;11:07:26</span><span 
+class="cmtt-10">&#x00A0;1998</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+++</span><span 
+class="cmtt-10">&#x00A0;tex4ht.c</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Wed</span><span 
+class="cmtt-10">&#x00A0;Mar</span><span 
+class="cmtt-10">&#x00A0;18</span><span 
+class="cmtt-10">&#x00A0;11:17:39</span><span 
+class="cmtt-10">&#x00A0;1998</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">@@</span><span 
+class="cmtt-10">&#x00A0;-146,7</span><span 
+class="cmtt-10">&#x00A0;+146,21</span><span 
+class="cmtt-10">&#x00A0;@@</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;#ifndef</span><span 
+class="cmtt-10">&#x00A0;MSVC_1_52_DOS</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">-#include</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&#x003C;dirent.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#ifdef</span><span 
+class="cmtt-10">&#x00A0;HAVE_DIRENT_H</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;dirent.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+typedef</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct</span><span 
+class="cmtt-10">&#x00A0;dirent</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct_dirent;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#else</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;&#x003C;dirent.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;*/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+typedef</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct</span><span 
+class="cmtt-10">&#x00A0;direct</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct_dirent;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#ifdef</span><span 
+class="cmtt-10">&#x00A0;HAVE_SYS_NDIR_H</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;sys/ndir.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#ifdef</span><span 
+class="cmtt-10">&#x00A0;HAVE_SYS_DIR_H</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;sys/dir.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#ifdef</span><span 
+class="cmtt-10">&#x00A0;HAVE_NDIR_H</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#include</span><span 
+class="cmtt-10">&#x00A0;&#x003C;ndir.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+#endif</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;&#x003C;dirent.h&#x003E;</span><span 
+class="cmtt-10">&#x00A0;*/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">@@</span><span 
+class="cmtt-10">&#x00A0;-2598,7</span><span 
+class="cmtt-10">&#x00A0;+2612,7</span><span 
+class="cmtt-10">&#x00A0;@@</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;#ifndef</span><span 
+class="cmtt-10">&#x00A0;NOSUBDIR</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;DIR</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*dp;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">-</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct</span><span 
+class="cmtt-10">&#x00A0;dirent</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*dirp;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">+</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct_dirent</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*dirp;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;struct</span><span 
+class="cmtt-10">&#x00A0;STSTAT</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;buf;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;(dp</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;opendir(</span><span 
+class="cmtt-10">&#x00A0;str</span><span 
+class="cmtt-10">&#x00A0;))</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;NULL</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;while(</span><span 
+class="cmtt-10">&#x00A0;(dirp</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;readdir(dp))</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;NULL</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+     
+</body></html> 

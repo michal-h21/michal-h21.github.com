@@ -1,0 +1,993 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Indexes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3 --> 
+<meta name="src" content="tex4ht-docbook.tex"> 
+<meta name="date" content="2014-05-24 11:49:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-docbook.css"> 
+</head><body 
+>
+   <!--l. 2148--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-docbookse17.html" >next</a>] [<a 
+ href="tex4ht-docbookse15.html" >prev</a>] [<a 
+ href="tex4ht-docbookse15.html#tailtex4ht-docbookse15.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-docbookse16.html">tail</a>] [<a 
+ href="tex4ht-docbookch4.html#tex4ht-docbookse16.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">4.12   </span> <a 
+  id="x24-420004.12"></a>Indexes</h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >4.12.1 <a 
+ href="#x24-430004.12.1">Article, Report, Book</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.12.2 <a 
+ href="#x24-440004.12.2">index</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.12.3 <a 
+ href="#x24-450004.12.3">theindex</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.12.4 <a 
+ href="#x24-460004.12.4">splitindex</a></span>
+   </div>
+<!--l. 2154--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.12.1   </span> <a 
+  id="x24-430004.12.1"></a>Article, Report, Book</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-157"><div class="head">
+       <a 
+ id="PrTx43001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43035"  id="QPrTx157"><span 
+class="cmtt-10">index entry</span></a><a 
+ id="PrTx43002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{theindex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\end:theidx=\empty</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;indexterm&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/indexterm&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx43003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45005"><span 
+class="cmtt-10">primary index</span></a><a 
+ id="PrTx43004"  href="#PrTx43014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\end:cur{</span><a 
+ id="PrTx43005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45007"><span 
+class="cmtt-10">end primary index</span></a><a 
+ id="PrTx43006"  href="#PrTx43016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\let\end:cur=\empty}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\DB:index</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:cur</span><span 
+class="cmtt-10">&#x00A0;\let\chain:subitem=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\chain:subitem</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx43007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45009"><span 
+class="cmtt-10">secondary index</span></a><a 
+ id="PrTx43008"  href="#PrTx43028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\end:cur{</span><a 
+ id="PrTx43009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45011"><span 
+class="cmtt-10">end secondary index</span></a><a 
+ id="PrTx43010"  href="#PrTx43030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\let\end:cur=\empty}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:cur</span><span 
+class="cmtt-10">&#x00A0;\def\chain:subitem{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx43011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx43011"><span 
+class="cmtt-10">new index entry</span></a><a 
+ id="PrTx43012"  href="#PrTx43022"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ id="PrTx43013"  href="#PrTx43003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45005"><span 
+class="cmtt-10">primary index</span></a><a 
+ id="PrTx43014"  href="#PrTx43024"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ id="PrTx43015"  href="#PrTx43005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45007"><span 
+class="cmtt-10">end primary index</span></a><a 
+ id="PrTx43016"  href="#PrTx43026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\chain:subsubitem=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\chain:subsubitem</span><a 
+ id="PrTx43017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45013"><span 
+class="cmtt-10">tertiary index</span></a><a 
+ id="PrTx43018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\end:cur{</span><a 
+ id="PrTx43019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45015"><span 
+class="cmtt-10">end tertiary index</span></a><a 
+ id="PrTx43020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\let\end:cur=\empty}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:cur</span><span 
+class="cmtt-10">&#x00A0;\def\chain:subsubitem{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx43021"  href="#PrTx43011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx43021"><span 
+class="cmtt-10">new index entry</span></a><a 
+ id="PrTx43022"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ id="PrTx43023"  href="#PrTx43013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45005"><span 
+class="cmtt-10">primary index</span></a><a 
+ id="PrTx43024"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ id="PrTx43025"  href="#PrTx43015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45007"><span 
+class="cmtt-10">end primary index</span></a><a 
+ id="PrTx43026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx43027"  href="#PrTx43007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45009"><span 
+class="cmtt-10">secondary index</span></a><a 
+ id="PrTx43028"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ id="PrTx43029"  href="#PrTx43009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx45011"><span 
+class="cmtt-10">end secondary index</span></a><a 
+ id="PrTx43030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-158"><div class="head">
+       <a 
+ href="tex4ht-docbookse3.html#PrTx5089"  id="PrTx43031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5003"  id="QPrTx158"><span 
+class="cmtt-10">article,</span><span 
+class="cmtt-10">&#x00A0;report,</span><span 
+class="cmtt-10">&#x00A0;book</span></a><a 
+ id="PrTx43032"  href="#PrTx43034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\DB:index#1\indNum#2{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#2=\index:N</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\DB:index=\relax</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#1\long\def\item##1\end{\end}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\expandafter\gob:item</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\gob:item#1\item{\DB:index}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\indNum=\:gobble</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-159"><div class="head">
+       <a 
+ href="#PrTx43031"  id="PrTx43033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5003"  id="QPrTx159"><span 
+class="cmtt-10">article,</span><span 
+class="cmtt-10">&#x00A0;report,</span><span 
+class="cmtt-10">&#x00A0;book</span></a><a 
+ id="PrTx43034"  href="#PrTx45002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\index:N</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\comNum#1{\tmp:cnt=}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\db:index=\index</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\index{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\openin15=\jobname.ind</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifeof15</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\closein15</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\gobble##1{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\index:N</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx43035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx43001"><span 
+class="cmtt-10">index entry</span></a><a 
+ id="PrTx43036"  href="#PrTx44026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\leavevmode</span><span 
+class="cmtt-10">&#x00A0;\let\par=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\input{\jobname.ind}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\db:index}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2219--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.12.2   </span> <a 
+  id="x24-440004.12.2"></a>index</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-160"><div class="head">
+       <a 
+ href="tex4ht-docbookse11.html#PrTx28059"  id="PrTx44001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77009"  id="QPrTx160"><span 
+class="cmtt-10">configure docbook latex</span></a><a 
+ id="PrTx44002"  href="tex4ht-docbookse18.html#PrTx48004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{idxmake}{\Beforeentry}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-161"><div class="head">
+       <a 
+ id="PrTx44003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse20.html#PrTx51011"  id="QPrTx161"><span 
+class="cmtt-10">ams art,proc,book</span></a><a 
+ id="PrTx44004"  href="tex4ht-docbookse22.html#PrTx53002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx44005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx44023"><span 
+class="cmtt-10">index throug printindex</span></a><a 
+ id="PrTx44006"  href="#PrTx44010"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-162"><div class="head">
+       <a 
+ id="PrTx44007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx44007"  id="QPrTx162"><span 
+class="cmtt-10">configure docbook amsmidx</span></a><a 
+ id="PrTx44008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx44009"  href="#PrTx44005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx44023"><span 
+class="cmtt-10">index throug printindex</span></a><a 
+ id="PrTx44010"  href="#PrTx44014"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-163"><div class="head">
+       <a 
+ id="PrTx44011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77049"  id="QPrTx163"><span 
+class="cmtt-10">configure docbook makeidx</span></a><a 
+ id="PrTx44012"  href="#PrTx45004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx44013"  href="#PrTx44009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx44023"><span 
+class="cmtt-10">index throug printindex</span></a><a 
+ id="PrTx44014"  href="#PrTx44018"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-164"><div class="head">
+       <a 
+ id="PrTx44015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77041"  id="QPrTx164"><span 
+class="cmtt-10">configure docbook index</span></a><a 
+ id="PrTx44016"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx44017"  href="#PrTx44013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx44023"><span 
+class="cmtt-10">index throug printindex</span></a><a 
+ id="PrTx44018"  href="#PrTx44022"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-165"><div class="head">
+       <a 
+ id="PrTx44019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77043"  id="QPrTx165"><span 
+class="cmtt-10">configure docbook multind</span></a><a 
+ id="PrTx44020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx44021"  href="#PrTx44017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx44023"><span 
+class="cmtt-10">index throug printindex</span></a><a 
+ id="PrTx44022"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-166"><div class="head">
+       <a 
+ id="PrTx44023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx44005"  id="QPrTx166"><span 
+class="cmtt-10">index</span><span 
+class="cmtt-10">&#x00A0;throug</span><span 
+class="cmtt-10">&#x00A0;printindex</span></a><a 
+ id="PrTx44024"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\HCode{&#x003C;indexterm</span><span 
+class="cmtt-10">&#x00A0;role="printindex"</span><span 
+class="cmtt-10">&#x00A0;/&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\printindex\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;db:index\endcsname\realx</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\db:index=\index</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\index{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HRestore\printindex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\gobble##1{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\index:N</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx44025"  href="#PrTx43035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx43001"><span 
+class="cmtt-10">index entry</span></a><a 
+ id="PrTx44026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\leavevmode</span><span 
+class="cmtt-10">&#x00A0;\let\par=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\printindex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup</span><span 
+class="cmtt-10">&#x00A0;\db:index}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\comNum#1{\tmp:cnt=}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\brange#1{\HCode{&#x003C;remark</span><span 
+class="cmtt-10">&#x00A0;role="start"&#x003E;}\Link{to-#1}{from-#1}\EndLink</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/remark&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\erange#1{\HCode{&#x003C;remark</span><span 
+class="cmtt-10">&#x00A0;role="to"&#x003E;}\Link{from-#1}{to-#1}\EndLink</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/remark&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-167">
+      <div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\comNum{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;,\:temp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa####1{\tmp:cnt=}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;{\:temp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa####1{\tmp:cnt=####1}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\iffalse</span><span 
+class="cmtt-10">&#x00A0;}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{\tmp:cnt=}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi\fi</span><span 
+class="cmtt-10">&#x00A0;\:tempa}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\futurelet\:temp\:tempa}</span></span>
+   </div></div>
+<!--l. 2287--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.12.3   </span> <a 
+  id="x24-450004.12.3"></a>theindex</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-168"><div class="head">
+       <a 
+ href="#PrTx43033"  id="PrTx45001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5003"  id="QPrTx168"><span 
+class="cmtt-10">article,</span><span 
+class="cmtt-10">&#x00A0;report,</span><span 
+class="cmtt-10">&#x00A0;book</span></a><a 
+ id="PrTx45002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{theindex}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\special{t4ht@[}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\special{t4ht@]}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}{}{}{}{}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-169"><div class="head">
+       <a 
+ href="#PrTx44011"  id="PrTx45003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77049"  id="QPrTx169"><span 
+class="cmtt-10">configure docbook makeidx</span></a><a 
+ id="PrTx45004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{see}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\csname</span><span 
+class="cmtt-10">&#x00A0;end:cur\endcsname</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;seealso</span><span 
+class="cmtt-10">&#x00A0;role="see"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/seealso&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\futurelet\:next\remove:comma}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\remove:comma{\ifx</span><span 
+class="cmtt-10">&#x00A0;,\:next</span><span 
+class="cmtt-10">&#x00A0;\expandafter\:gobble\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-170"><div class="head">
+       <a 
+ id="PrTx45005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43003"  id="QPrTx170"><span 
+class="cmtt-10">primary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;primary&#x003E;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-171"><div class="head">
+       <a 
+ id="PrTx45007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43005"  id="QPrTx171"><span 
+class="cmtt-10">end</span><span 
+class="cmtt-10">&#x00A0;primary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;/primary&#x003E;}\hfil\break</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-172"><div class="head">
+       <a 
+ id="PrTx45009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43007"  id="QPrTx172"><span 
+class="cmtt-10">secondary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;secondary&#x003E;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-173"><div class="head">
+       <a 
+ id="PrTx45011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43009"  id="QPrTx173"><span 
+class="cmtt-10">end</span><span 
+class="cmtt-10">&#x00A0;secondary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;/secondary&#x003E;}\hfil\break</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-174"><div class="head">
+       <a 
+ id="PrTx45013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43017"  id="QPrTx174"><span 
+class="cmtt-10">tertiary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;tertiary&#x003E;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-175"><div class="head">
+       <a 
+ id="PrTx45015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx43019"  id="QPrTx175"><span 
+class="cmtt-10">end</span><span 
+class="cmtt-10">&#x00A0;tertiary</span><span 
+class="cmtt-10">&#x00A0;index</span></a><a 
+ id="PrTx45016"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;/tertiary&#x003E;}\hfil\break</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2339--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.12.4   </span> <a 
+  id="x24-460004.12.4"></a>splitindex</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-176"><div class="head">
+       <a 
+ id="PrTx46001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77051"  id="QPrTx176"><span 
+class="cmtt-10">configure docbook splitidx</span></a><a 
+ id="PrTx46002"  href="#PrTx46004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\db:sindex=\sindex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:sindex{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HRestore\printindex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\gobble##1{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\index:N</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\leavevmode</span><span 
+class="cmtt-10">&#x00A0;\let\par=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\edef\:temp{\LikeRef{printindex}}\expandafter\printindex\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup</span><span 
+class="cmtt-10">&#x00A0;\db:sindex}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-177"><div class="head">
+       <a 
+ href="#PrTx46001"  id="PrTx46003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77051"  id="QPrTx177"><span 
+class="cmtt-10">configure docbook splitidx</span></a><a 
+ id="PrTx46004"  href="#PrTx46006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;indexterm</span><span 
+class="cmtt-10">&#x00A0;role="printindex\ifx</span><span 
+class="cmtt-10">&#x00A0;*\:temp</span><span 
+class="cmtt-10">&#x00A0;-star\fi"</span><span 
+class="cmtt-10">&#x00A0;/&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;*\:temp</span><span 
+class="cmtt-10">&#x00A0;\Tag{printindex}{*}\expandafter\:gobble\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\futurelet\:temp\:tempa</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\printindex\:temp</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-178"><div class="head">
+       <a 
+ href="#PrTx46003"  id="PrTx46005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse34.html#PrTx77051"  id="QPrTx178"><span 
+class="cmtt-10">configure docbook splitidx</span></a><a 
+ id="PrTx46006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sindex{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;[\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp[####1]{\def\ind:ext{####1}\:sindex[####1]}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\expandafter\:sindex</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\futurelet\:temp\:tempa</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\o:@@printindex:=\@@printindex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@@printindex[#1][#2]{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{#1}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\ind:ext</span><span 
+class="cmtt-10">&#x00A0;\o:@@printindex:[#1][#2]\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 2384--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-docbookse17.html" >next</a>] [<a 
+ href="tex4ht-docbookse15.html" >prev</a>] [<a 
+ href="tex4ht-docbookse15.html#tailtex4ht-docbookse15.html" >prev-tail</a>] [<a 
+ href="tex4ht-docbookse16.html" >front</a>] [<a 
+ href="tex4ht-docbookch4.html#tex4ht-docbookse16.html" >up</a>] </p></div>
+<!--l. 2384--><p class="indent" >   <a 
+  id="tailtex4ht-docbookse16.html"></a>   
+</body></html> 

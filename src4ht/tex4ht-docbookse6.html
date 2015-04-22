@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Sections</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3 --> 
+<meta name="src" content="tex4ht-docbook.tex"> 
+<meta name="date" content="2014-05-24 11:49:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-docbook.css"> 
+</head><body 
+>
+   <!--l. 659--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-docbookse7.html" >next</a>] [<a 
+ href="tex4ht-docbookse5.html" >prev</a>] [<a 
+ href="tex4ht-docbookse5.html#tailtex4ht-docbookse5.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-docbookse6.html">tail</a>] [<a 
+ href="tex4ht-docbookch4.html#tex4ht-docbookse6.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">4.2   </span> <a 
+  id="x13-110004.2"></a>Sections</h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >4.2.1 <a 
+ href="#x13-120004.2.1">Special Cases for Sectioning Titles</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.2.2 <a 
+ href="#x13-130004.2.2">Titles and Bodies</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >4.2.3 <a 
+ href="#x13-140004.2.3">End Points</a></span>
+   </div>
+<!--l. 665--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.2.1   </span> <a 
+  id="x13-120004.2.1"></a>Special Cases for Sectioning Titles</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-57"><div class="head">
+       <a 
+ id="PrTx12001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse2.html#PrTx4003"  id="QPrTx57"><span 
+class="cmtt-10">latex</span><span 
+class="cmtt-10">&#x00A0;ltsec</span></a><a 
+ id="PrTx12002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{InsertTitle}{\let\label=\lb:l</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\ref=\o:ref</span><span 
+class="cmtt-10">&#x00A0;\Configure{ref}{}{}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{AfterTitle}{\let\index=\:index</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\ref=\:ref</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\label=\lb:l</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{NoSection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\sv:index=\index</span><span 
+class="cmtt-10">&#x00A0;\let\sv:label=\label</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\sv:newline=\newline</span><span 
+class="cmtt-10">&#x00A0;\def\newline{</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\sv:setfontsize=\@setfontsize</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\@setfontsize=\:gobbleIII</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\index=\@gobble</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\label=\@gobble</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx12003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx12007"><span 
+class="cmtt-10">nolink ref</span></a><a 
+ id="PrTx12004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\index=\sv:index</span><span 
+class="cmtt-10">&#x00A0;\let\label=\sv:label</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx12005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx12009"><span 
+class="cmtt-10">restore ref</span></a><a 
+ id="PrTx12006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\newline=\sv:newline</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\@setfontsize=\sv:setfontsize</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-58"><div class="head">
+       <a 
+ id="PrTx12007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx12003"  id="QPrTx58"><span 
+class="cmtt-10">nolink</span><span 
+class="cmtt-10">&#x00A0;ref</span></a><a 
+ id="PrTx12008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sva:rEfLiNK=\a:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\svb:rEfLiNK=\b:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\svc:rEfLiNK=\c:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\svC:rEfLiNK\c:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{ref}{}{}{}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\sv:ref=\ref</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\ref=\@gobble</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-59"><div class="head">
+       <a 
+ id="PrTx12009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx12005"  id="QPrTx59"><span 
+class="cmtt-10">restore</span><span 
+class="cmtt-10">&#x00A0;ref</span></a><a 
+ id="PrTx12010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\a:rEfLiNK=\sva:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\b:rEfLiNK=\svb:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\c:rEfLiNK=\svc:rEfLiNK</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\c:rEfLiNK\svC:rEfLiNK</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\ref\sv:ref</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 708--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.2.2   </span> <a 
+  id="x13-130004.2.2"></a>Titles and Bodies</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-60"><div class="head">
+       <a 
+ id="PrTx13001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5053"  id="QPrTx60"><span 
+class="cmtt-10">book</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx13002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx13003"  href="tex4ht-docbookse3.html#PrTx5009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx13009"><span 
+class="cmtt-10">article sections</span></a><a 
+ id="PrTx13004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{chapter}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{chapter}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{chapter}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likechapter}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likechapter}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likechapter}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-61"><div class="head">
+       <a 
+ id="PrTx13005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5031"  id="QPrTx61"><span 
+class="cmtt-10">report</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx13006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx13007"  href="tex4ht-docbookse3.html#PrTx5075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx13001"><span 
+class="cmtt-10">book sections</span></a><a 
+ id="PrTx13008"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-62"><div class="head">
+       <a 
+ id="PrTx13009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5009"  id="QPrTx62"><span 
+class="cmtt-10">article</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx13010"  href="#PrTx13018"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx13011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-docbookse24.html#PrTx55013"><span 
+class="cmtt-10">amsart + article sec</span></a><a 
+ id="PrTx13012"  href="tex4ht-docbookse24.html#PrTx55004"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-63"><div class="head">
+       <a 
+ id="PrTx13013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse24.html#PrTx55015"  id="QPrTx63"><span 
+class="cmtt-10">TitleMark</span></a><a 
+ id="PrTx13014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\TitleMark</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-64"><div class="head">
+       <a 
+ id="PrTx13015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse20.html#PrTx51005"  id="QPrTx64"><span 
+class="cmtt-10">sectioning utilities</span></a><a 
+ id="PrTx13016"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\OpenDiv#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\EndP</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;!--l.</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\the\inputlineno--&#x003E;&#x003C;section\Hnewline</span><span 
+class="cmtt-10">&#x00A0;role="#1"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\CloseDiv#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\EndP\HCode{&#x003C;/section&#x003E;&#x003C;!--end</span><span 
+class="cmtt-10">&#x00A0;#1--&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\AppOpenDiv#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\EndP</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;!--l.</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\the\inputlineno--&#x003E;&#x003C;appendix\Hnewline</span><span 
+class="cmtt-10">&#x00A0;role="#1"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\AppCloseDiv#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\EndP\HCode{&#x003C;/appendix&#x003E;&#x003C;!--end</span><span 
+class="cmtt-10">&#x00A0;#1--&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-65"><div class="head">
+       <a 
+ href="#PrTx13009"  id="PrTx13017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5009"  id="QPrTx65"><span 
+class="cmtt-10">article</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx13018"  href="#PrTx14002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likepart}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likepart}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likesection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likesection}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likesection}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likesubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likesubsection}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likesubsection}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likesubsubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likesubsubsection}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likesubsubsection}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likeparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likeparagraph}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likeparagraph}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{likesubparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{likesubparagraph}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{likesubparagraph}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-66"><div class="head">
+       <a 
+ id="PrTx13019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5077"  id="QPrTx66"><span 
+class="cmtt-10">scrbook</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx13020"  href="#PrTx14004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{addchap}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\OpenDiv{addchap}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\CloseDiv{addchap}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;title&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/title&#x003E;}\par\ShowPar}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 807--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">4.2.3   </span> <a 
+  id="x13-140004.2.3"></a>End Points</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-67"><div class="head">
+       <a 
+ href="#PrTx13017"  id="PrTx14001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5009"  id="QPrTx67"><span 
+class="cmtt-10">article</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx14002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{section,chapter,likechapter,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subsection,section,likesection,chapter,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likechapter,appendix,part,likpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubsubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subsubsection,subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,appendix,part,likpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikeparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{paragraph,subsubsection,likesubsubsection,subsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,appendix,part,likpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subparagraph,likeparagraph,subsubsection,likesubsubsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,appendix,part,likpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\part\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{endlikepart}{endpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-68"><div class="head">
+       <a 
+ href="#PrTx13019"  id="PrTx14003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-docbookse3.html#PrTx5077"  id="QPrTx68"><span 
+class="cmtt-10">scrbook</span><span 
+class="cmtt-10">&#x00A0;sections</span></a><a 
+ id="PrTx14004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikeparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{paragraph,subsubsection,likesubsubsection,subsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endsubparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{likesubparagraph,likeparagraph,subsubsection,likesubsubsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subparagraph,likeparagraph,subsubsection,likesubsubsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{section,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endsubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{likesubsection,section,likesection,chapter,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subsection,section,likesection,chapter,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endsubsubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{likesubsubsection,subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikesubsubsection}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{subsubsection,subsection,likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endparagraph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{likeparagraph,subsubsection,likesubsubsection,subsection,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesubsection,section,%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;likesection,chapter,likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endchapter}{likechapter,addchap,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endlikechapter}{chapter,appendix,part,likeparaddchap,addchap}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endaddchap}{chapter,likechapter,appendix,part,likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{endappendix}{chapter,likechapter,addchap,part,likepart}</span>
+  <br /><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\part\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{endpart}{likepart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{endlikepart}{endpart}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 878--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-docbookse7.html" >next</a>] [<a 
+ href="tex4ht-docbookse5.html" >prev</a>] [<a 
+ href="tex4ht-docbookse5.html#tailtex4ht-docbookse5.html" >prev-tail</a>] [<a 
+ href="tex4ht-docbookse6.html" >front</a>] [<a 
+ href="tex4ht-docbookch4.html#tex4ht-docbookse6.html" >up</a>] </p></div>
+<!--l. 878--><p class="indent" >   <a 
+  id="tailtex4ht-docbookse6.html"></a>   
+</body></html> 

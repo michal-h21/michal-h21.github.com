@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Boxes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 7468--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu37.html" >next</a>] [<a 
+ href="tex4ht-4htSu36.html" >prev</a>] [<a 
+ href="tex4ht-4htSu36.html#tailtex4ht-4htSu36.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htCh11.html">tail</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh11.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 11<br /><a 
+ href="tex4ht-4ht.html#QQ2-108-88"  name="QQ1-108-88">Boxes</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.1&#x00A0;<a 
+ href="tex4ht-4htSe39.html#QQ1-112-92"  name="QQ2-112-92">Centerline, Leftline, Rightline</a></span><br />
+    </div>
+<!--l. 7474--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltboxes.dtx" >ltboxes.dtx</a>
+</p><!--l. 7483--><p class="indent" >    Boxes are occasionally before placing them within pictures. In such cases, configurations of the form
+&#8216;<span 
+class="cmtt-10">\Configure{lrbox}{\noexpand\PictureOff}</span>&#8217; might be useful. We don&#8217;t want such configurations for a default,
+because of possible nested pictures such as in &#8216;<span 
+class="cmtt-10">\newsavebox{\bx} \begin{lrbox}{\bx}% \( x = \frac{1}{2} \)</span>
+<span 
+class="cmtt-10">\end{lrbox}</span>&#8217;
+</p>
+      <!--l. 7507--><p class="indent" ><a 
+ name="PrTx88001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx333"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx88002"  href="#PrTx88004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\lrbox#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\reserved@a{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox#1\hbox{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:lrbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\aftergroup}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\@currenvir{\@currenvir}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\noexpand\@currenvline{\on@line}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\reserved@a</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@endpefalse</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\color@setgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ignorespaces}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{lrbox}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7513--><p class="noindent" >We place the third parameter of <span 
+class="cmtt-10">\makebox </span>in a group for avoiding problematic font of the form &#8216;<span 
+class="cmtt-10">&#x003C;/CODE&#x003E;&#x003C;CODE</span>
+<span 
+class="cmtt-10">&#x003E;uparrow</span>&#8217; from &#8216;<span 
+class="cmtt-10">\makebox[90pt][l]{\tt uparrow}</span>&#8217; instead of &#8216;<span 
+class="cmtt-10">&#x003C;CODE &#x003E;uparrow&#x003C;/CODE&#x003E;</span>&#8217;.
+</p>
+      <!--l. 7525--><p class="indent" ><a 
+ href="#PrTx88001"  name="PrTx88003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx334"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx88004"  href="#PrTx88006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:tempc[#1][#2]#3{\o:@imakebox:[#1][#2]{{#3}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@imakebox=\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7527--><p class="noindent" >Similarly for the following.
+</p>
+      <!--l. 7532--><p class="indent" ><a 
+ href="#PrTx88003"  name="PrTx88005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx335"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx88006"  href="tex4ht-4htSu37.html#PrTx89002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:sbox=\sbox</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\sbox#1#2{\:sbox#1{{#2}}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 7634--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu37.html" >next</a>] [<a 
+ href="tex4ht-4htSu36.html" >prev</a>] [<a 
+ href="tex4ht-4htSu36.html#tailtex4ht-4htSu36.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htCh11.html" >front</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh11.html" >up</a>] </p></div>
+<!--l. 7634--><p class="indent" >    <a 
+  name="tailtex4ht-4htCh11.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>LaTeX</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 9711--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe52.html" >next</a>] [<a 
+ href="tex4ht-4htCh16.html" >prev</a>] [<a 
+ href="tex4ht-4htCh16.html#tailtex4ht-4htCh16.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe51.html">tail</a>] [<a 
+ href="tex4ht-4htCh16.html#tex4ht-4htSe51.html" >up</a>] </p></div>
+    <h3 class="SectionHead">16.1 <a 
+ href="tex4ht-4htPa1.html#QQ2-148-128"  name="QQ1-148-128">LaTeX</a></h3>
+    <div class="TableOfContents">
+    </div>
+<!--l. 9714--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltthm.dtx" >ltthm.dtx</a>
+</p><!--l. 9718--><p class="indent" >    In latex.cls <span 
+class="cmtt-10">\@thm </span>is defined with two arguments, and in amsthm.sty with three parameters. In both cases we
+have a <span 
+class="cmtt-10">\@currentlabel </span>defined through a <span 
+class="cmtt-10">refstepcounter</span>, and the latter command introducing its own identity,
+instead of that of the theorem, into the xref file (and then the href fields of the html tags). The following code
+corrects that behavior.
+</p>
+      <!--l. 9733--><p class="indent" ><a 
+ name="PrTx128001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4043"  name="QPrTx467"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltthm</span></a><a 
+ name="PrTx128002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:thm{\o:@thm:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{</span><a 
+ name="PrTx128003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx128005"><span 
+class="cmtt-10">seed begin theorem</span></a><a 
+ name="PrTx128004"  href="tex4ht-4htSe128.html#PrTx294014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\:thm}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@thm=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\o:@endtheorem:=\@endtheorem</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\@endtheorem{\c:newtheorem}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{newtheorem}{3}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 9742--><p class="noindent" ><a 
+ name="PrTx128005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx128003"  name="QPrTx468"><span 
+class="cmtt-10">seed</span>&#x00A0;<span 
+class="cmtt-10">begin</span>&#x00A0;<span 
+class="cmtt-10">theorem</span></a><a 
+ name="PrTx128006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sv:item=\item</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\item[##1]{</span><a 
+ name="PrTx128007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx128009"><span 
+class="cmtt-10">no page break before item</span></a><a 
+ name="PrTx128008"  href="tex4ht-4htSe128.html#PrTx294042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\let\item=\sv:item</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\item[##1]\b:newtheorem}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\a:newtheorem\AutoRefstepAnchor</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9744--><p class="noindent" >A page break before an item might have a different behavor than a regular start of a paragraph at an item. Hence,
+the following code.
+</p>
+      <!--l. 9749--><p class="indent" ><a 
+ name="PrTx128009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx128007"  name="QPrTx469"><span 
+class="cmtt-10">no</span>&#x00A0;<span 
+class="cmtt-10">page</span>&#x00A0;<span 
+class="cmtt-10">break</span>&#x00A0;<span 
+class="cmtt-10">before</span>&#x00A0;<span 
+class="cmtt-10">item</span></a><a 
+ name="PrTx128010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\nobreak</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 9752--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe52.html" >next</a>] [<a 
+ href="tex4ht-4htCh16.html" >prev</a>] [<a 
+ href="tex4ht-4htCh16.html#tailtex4ht-4htCh16.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe51.html" >front</a>] [<a 
+ href="tex4ht-4htCh16.html#tex4ht-4htSe51.html" >up</a>] </p></div>
+<!--l. 9752--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe51.html"></a> </p> 
+</body></html> 

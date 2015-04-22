@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>wripro.tex: HTML Stuff Shared by TeX4ht and AlProTex</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,family,sections+ --> 
+<meta name="src" content="tex4ht-sty.tex" /> 
+<meta name="date" content="2014-07-02 18:09:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-sty.css" /> 
+<link rev="made" 
+href="mailto:gurari@cse.ohio-state.edu" /></head><body 
+>
+    <!--l. 11058--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh20.html" >next</a>] [<a 
+ href="tex4ht-styCh18.html" >prev</a>] [<a 
+ href="tex4ht-styCh18.html#tailtex4ht-styCh18.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-styCh19.html">tail</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh19.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter                           19<br /><a 
+ href="tex4ht-sty.html#QQ2-35-197"  name="QQ1-35-197">wripro.tex:                           HTML
+Stuff Shared by TeX4ht and AlProTex</a></h2><div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.1&#x00A0;<a 
+ href="#QQ1-35-198"  name="QQ2-35-198">Root Point</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-199"  name="QQ2-35-199">Directory for
+Files</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-200"  name="QQ2-35-200">Identifiers and Counters</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-201"  name="QQ2-35-201">Relax Right Margin</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-202"  name="QQ2-35-202">Foot and
+Head Lines</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.2&#x00A0;<a 
+ href="#QQ1-35-203"  name="QQ2-35-203">Html Commmands From Users</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.3&#x00A0;<a 
+ href="#QQ1-35-204"  name="QQ2-35-204">Cross References
+within Html</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.4&#x00A0;<a 
+ href="#QQ1-35-205"  name="QQ2-35-205">Html Addresses</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-206"  name="QQ2-35-206">Retrieving for HREF</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-207"  name="QQ2-35-207">Retrieving
+for NAME</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-208"  name="QQ2-35-208">Generating</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-209"  name="QQ2-35-209">File Names</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.5&#x00A0;<a 
+ href="#QQ1-35-210"  name="QQ2-35-210">Other</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-35-211"  name="QQ2-35-211">Tags</a></span><br />
+    </div>
+<!--l. 11062--><p class="indent" >    TeX4ht writes its tags into <span 
+class="cmtt-10">.ref </span>files until ProTex takes over and gets the tags into <span 
+class="cmtt-10">.xref </span>files.
+</p>
+      <!--l. 11074--><p class="indent" ><a 
+ name="PrTx197001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx5003"  name="QPrTx675"><span 
+class="cmtt-10">check</span>&#x00A0;<span 
+class="cmtt-10">that</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">not</span>&#x00A0;<span 
+class="cmtt-10">loaded</span>&#x00A0;<span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx197002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:warning#1{\immediate\write16{l.\the\inputlineno\space</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">warning</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<span 
+class="cmtt-10">---}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:ShowCode\:UnDeF</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{</span><a 
+ name="PrTx197003"  href="tex4ht-styCh1.html#PrTx6007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh20.html#PrTx212001"><span 
+class="cmtt-10">TeX4ht name</span></a><a 
+ name="PrTx197004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">.sty</span>&#x00A0;<span 
+class="cmtt-10">loaded</span>&#x00A0;<span 
+class="cmtt-10">after</span>&#x00A0;<span 
+class="cmtt-10">ProTeX?}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11078--><p class="noindent" ><span 
+class="cmtt-10">\NewHaddr </span>provides an address that encodes a location together with its file name.
+</p><!--l. 11081--><p class="indent" >    Is the followint true? We can have for hadresses <span 
+class="cmtt-10">\Link{Haddr}{} \Link{}{Haddr} </span>without worrying about
+extracting the file names as long as we use HAddress we get from <span 
+class="cmtt-10">\NewHaddr</span>!!! That is, in <span 
+class="cmtt-10">\Link</span>the [] option is
+needed just for external files compiled separately. WELL, it seems to be true for any tags because
+they are resolved indirectly through thr REF file!!!! Great , how could I have forgotten about this
+pearl?
+</p><!--l. 11090--><p class="indent" >    AlProTex used something like the following. Create saving at direct programming of HREF and HTAG in <span 
+class="cmtt-10">&#x003C;A&#x003E;</span>
+coomands, because we don&#8217;t need now Ref/Tag intermediates.
+</p>
+      <!--l. 11099--><p class="indent" ><a 
+ href="tex4ht-styCh18.html#PrTx192001"  name="PrTx197005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16013"  name="QPrTx676"><span 
+class="cmtt-10">html utilities</span></a><a 
+ name="PrTx197006"  href="#PrTx197010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NewHaddr#1{\html:addr</span>&#x00A0;<span 
+class="cmtt-10">\let#1=\last:haddr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\GetHref#1{\expandafter\get:href#1-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\GetHname#1{\expandafter\get:htag#1-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\make:addr\:UnDeF</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\make:addr#1{</span><a 
+ name="PrTx197007"  href="tex4ht-styCh12.html#PrTx133015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx197007"><span 
+class="cmtt-10">tail for file name</span></a><a 
+ name="PrTx197008"  href="#PrTx208006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 11101--><p class="noindent" ><span 
+class="cmtt-10">make:addr </span>may already be defined from AlProTex. It had<span 
+class="cmtt-10">\space </span>after <span 
+class="cmtt-10">#1 </span>that has been removed (see
+AlProTex).
+</p>
+      <!--l. 11107--><p class="indent" ><a 
+ href="#PrTx197005"  name="PrTx197009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx16013"  name="QPrTx677"><span 
+class="cmtt-10">html utilities</span></a><a 
+ name="PrTx197010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\FileNumber{\file:id}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:XrefFile:#1{\def\aXrefFile{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">19.1 <a 
+ href="tex4ht-sty.html#QQ2-35-198"  name="QQ1-35-198">Root Point</a></h3>
+           <!--l. 35--><p class="noindent" ><a 
+ name="PrTx198001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh3.html#PrTx26025"  name="QPrTx678"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx198002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\html:addr\:UnDeF</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx198003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx199001"><span 
+class="cmtt-10">html common to TeX4ht and protex</span></a><a 
+ name="PrTx198004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Htmltrue</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 49--><p class="noindent" ><a 
+ name="PrTx198005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198005"  name="QPrTx679"><span 
+class="cmtt-10">non-html utilities</span></a><a 
+ name="PrTx198006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx198007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx203003"><span 
+class="cmtt-10">nohtml common to TeX4ht and protex</span></a><a 
+ name="PrTx198008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-199"  name="QQ1-35-199">Directory for Files</a></h3>
+
+           <!--l. 56--><p class="noindent" ><a 
+ name="PrTx199001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx680"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx199002"  href="#PrTx200004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write16{---</span>&#x00A0;<span 
+class="cmtt-10">needs</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">tex4ht</span>&#x00A0;<span 
+class="cmtt-10">\jobname\space</span>&#x00A0;<span 
+class="cmtt-10">---}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 66--><p class="noindent" ><a 
+ name="PrTx199003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx199003"  name="QPrTx681"><span 
+class="cmtt-10">html common to TeX4ht and protexNO</span></a><a 
+ name="PrTx199004"  href="#PrTx206008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\HDir\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\HDir=\empty</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:HDir=\HDir</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write16{---</span>&#x00A0;<span 
+class="cmtt-10">needs</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">\ifx\HDir\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else-d</span>&#x00A0;<span 
+class="cmtt-10">\HDir\space\space\fi</span>&#x00A0;<span 
+class="cmtt-10">\jobname\space</span>&#x00A0;<span 
+class="cmtt-10">---}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-200"  name="QQ1-35-200">Identifiers and Counters</a></h3>
+           <!--l. 77--><p class="noindent" ><a 
+ href="tex4ht-styCh3.html#PrTx28007"  name="PrTx200001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx13003"  name="QPrTx682"><span 
+class="cmtt-10">new ifs</span></a><a 
+ name="PrTx200002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\Htmltrue\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{\csname</span>&#x00A0;<span 
+class="cmtt-10">newif\endcsname}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">ifHtml\endcsname</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Htmlfalse</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 88--><p class="noindent" ><a 
+ href="#PrTx199001"  name="PrTx200003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx683"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx200004"  href="#PrTx200006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\tmp:cnt\:UnDeF</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newcount\endcsname\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\g:advance#1{\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=#1\afterassignment\:gplus</span>&#x00A0;<span 
+class="cmtt-10">\advance\tmp:cnt}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:gplus{\expandafter\xdef\:temp{\the\tmp:cnt}\egroup}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:lbl{1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:addr{\xdef\last:haddr{\file:id-\html:lbl}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\g:advance\html:lbl</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1\relax</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 95--><p class="noindent" ><a 
+ href="#PrTx200003"  name="PrTx200005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx684"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx200006"  href="#PrTx201002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\file:id\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\file:id{</span><a 
+ name="PrTx200007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx200009"><span 
+class="cmtt-10">first file id</span></a><a 
+ name="PrTx200008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\let\maxfile:id=\file:id</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 98--><p class="noindent" ><a 
+ name="PrTx200009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx200007"  name="QPrTx685"><span 
+class="cmtt-10">first</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">id</span></a><a 
+ name="PrTx200010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">1</span>-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-201"  name="QQ1-35-201">Relax Right Margin</a></h3>
+           <!--l. 112--><p class="noindent" ><a 
+ href="#PrTx200005"  name="PrTx201001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx686"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx201002"  href="#PrTx203002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\hbadness=10000</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vbadness=10000</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{fussy}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hfuzz=99in</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vfuzz=\hfuzz</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\hyphenpenalty=1000</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\exhyphenpenalty=1000</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:rightskip{\rightskip</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">0pt</span>&#x00A0;<span 
+class="cmtt-10">plus</span>&#x00A0;<span 
+class="cmtt-10">0.5\hsize</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">minus0.5\hsize</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\html:rightskip</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-202"  name="QQ1-35-202">Foot and Head Lines</a></h3>
+           <!--l. 125--><p class="noindent" ><a 
+ name="PrTx202001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx202001"  name="QPrTx687"><span 
+class="cmtt-10">html protex</span></a><a 
+ name="PrTx202002"  href="#PrTx204014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\footline\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\footline={\hfil}</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\headline={\hfil}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">19.2 <a 
+ href="tex4ht-sty.html#QQ2-35-203"  name="QQ1-35-203">Html Commmands From Users</a></h3>
+<!--l. 130--><p class="noindent" >The <span 
+class="cmtt-10">\let\ht:special=\special </span>is for protection against redefinitions of the <span 
+class="cmtt-10">\special</span>, as is the case in
+french.sty.
+</p>
+
+      <!--l. 145--><p class="indent" ><a 
+ href="#PrTx201001"  name="PrTx203001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx688"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx203002"  href="#PrTx204004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\ht:special\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\ht:special=\special</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HCode#1{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\EndPicture\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\relax\ifvmode\leavevmode\fi\ht:special{t4ht=#1}\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:HCode=\HCode</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Hbrakets\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NewLineChar{\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\^=7</span>&#x00A0;<span 
+class="cmtt-10">\:NewLineChar}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:NewLineChar#1{\egroup</span>&#x00A0;<span 
+class="cmtt-10">\def\:newlnch{</span>&#x00A0;<span 
+class="cmtt-10">#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewLineChar{^^J}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 150--><p class="noindent" ><a 
+ name="PrTx203003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198007"  name="QPrTx689"><span 
+class="cmtt-10">nohtml</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx203004"  href="#PrTx204020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HCode#1{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 152--><p class="noindent" >The <span 
+class="cmtt-10">\HCode</span>&#8217; starts a new paragraph if introduced in vertical mode. The <span 
+class="cmtt-10">\leavevmode</span>&#8217; is included for proper spacing
+in dviht.
+</p>
+    <h3 class="SectionHead">19.3 <a 
+ href="tex4ht-sty.html#QQ2-35-204"  name="QQ1-35-204">Cross References within Html</a></h3>
+<!--l. 159--><p class="noindent" >- NCSA Mosaic can&#8217;t handle the end-of-anchor <span 
+class="cmtt-10">&#x003C;/...&#x003E; </span>tag if it is not on one line. For instance, in
+<span 
+class="cmtt-10">&#x003C;A&#x003E;...&#x003C;A</span>
+
+</p><!--l. 162--><p class="indent" >    <span 
+class="cmtt-10">&#x003E;</span>, Mosaic paints everything blue until the next <span 
+class="cmtt-10">&#x003C;/A&#x003E; </span>it finds that is entirely on one line.
+</p>
+      <!--l. 180--><p class="indent" ><a 
+ name="PrTx204001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10005"  name="QPrTx690"><span 
+class="cmtt-10">html+nohtml</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\EndLink{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk\empty</span>&#x00A0;<span 
+class="cmtt-10">\HCode{\Hbrakets&#x003C;/\tag:A&#x003E;}\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:HRef{\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\::HRef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:::HRef</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HT:tag{\ifx</span>&#x00A0;<span 
+class="cmtt-10">-\let:val</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\H:Tag</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\HTa:g\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HTa:g{\H:Tag-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Link{\let\:attr\empty</span>&#x00A0;<span 
+class="cmtt-10">\futurelet\let:val\HRefT:ag}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HRefT:ag{\ifx</span>&#x00A0;<span 
+class="cmtt-10">-\let:val</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\H:RefTag</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\HRefTa:g\fi</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HRefTa:g{\H:RefTag-}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\H:RefTag#1{\futurelet\:temp\:HRefTag}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:HRefTag{\ifx</span>&#x00A0;<span 
+class="cmtt-10">[\:temp</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\::HRefTag</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:::HRefTag</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 183--><p class="noindent" >A <span 
+class="cmtt-10">\Link-{..}{b} </span>asks that a <span 
+class="cmtt-10">\Tag </span>will not be produced for &#8216;b&#8217;. A <span 
+class="cmtt-10">\Link[\empty]{b}{..} </span>asks that a <span 
+class="cmtt-10">\Ref </span>will not
+be produced for &#8216;a&#8217;. The same is true for any other non-empty replacement to <span 
+class="cmtt-10">\empty </span>A &#8216;b&#8217; for which we neither
+have a <span 
+class="cmtt-10">\Tag </span>and a <span 
+class="cmtt-10">\Ref </span>provides a memory save in &#8216;strings out of&#8217;, &#8216;string characters out of&#8217;, and &#8216;multiletter
+control sequences&#8217; (see log files).
+</p>
+      <!--l. 197--><p class="indent" ><a 
+ href="#PrTx203001"  name="PrTx204003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx691"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204004"  href="#PrTx204010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::HRef[#1]{\get:attr{#1}\::hRef\:::HRef}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::HRefTag[#1]{\get:attr{#1}\::hRefTag\:::HRefTag}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:attr#1{\edef\:attr{\noexpand\get:atr</span>&#x00A0;<span 
+class="cmtt-10">#1</span>&#x00A0;<a 
+ name="PrTx204005"  href="tex4ht-styCh18.html#PrTx190005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx204006"  href="#PrTx204008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\:attr}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:atr#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx204007"  href="#PrTx204005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh4.html#PrTx39009, 35211015-"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx204008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#3#4{\def\:attr{\space#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:te:mpa{#1}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:te:mpa\empty</span>&#x00A0;<span 
+class="cmtt-10">\let\:te:mpa#4\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:te:mpa{#3[#1]}\fi</span>&#x00A0;<span 
+class="cmtt-10">\:te:mpa}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 210--><p class="noindent" ><a 
+ href="#PrTx204003"  name="PrTx204009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx692"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204010"  href="#PrTx204012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\H:Tag#1#2{\:TagHTag{#2}\HCode{\Hbrakets&#x003C;\tag:A\:newlnch</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAME:"#2"\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::hRef[#1]#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{\Hbrakets&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\if\relax#1#2\relax</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:{}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"#1\if\relax#1\relax</span>&#x00A0;<span 
+class="cmtt-10">\else\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#2\fi"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRef#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{\Hbrakets&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\if\relax#1\relax</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:{}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"\get:hfile{#1}\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#1"\fi</span>&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::hRef[#1]#2{\def\:te:mp{#1}\def\:te:mpa{#1#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpa\empty</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"#1\ifx\:te:mp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#2\fi"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRef#1{\def\:te:mpa{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpa\empty</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"\get:hfile{#1}\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#1"\fi</span>&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+-_-_-</span>
+           </p><!--l. 242--><p class="noindent" ><a 
+ href="#PrTx204009"  name="PrTx204011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx694"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204012"  href="#PrTx204016"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::hRefTag[#1]#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if\relax#3\relax\else\:TagHTag{#3}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{\Hbrakets&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\if\relax#1#2\relax</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:{#3}\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"#1\if\relax#2\relax</span>&#x00A0;<span 
+class="cmtt-10">\else\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#2\fi"\fi</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if\relax#3\relax\else\space</span>&#x00A0;<span 
+class="cmtt-10">\NAME:"#3"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRefTag#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if\relax#2\relax\else\:TagHTag{#2}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{\Hbrakets&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\if\relax#1\relax</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\HREF:"\get:hfile{#1}\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#1"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if\relax#2\relax\else\space</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAME:"#2"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\empty:lnk=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NOHREF#1{\space}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::hRefTag[#1]#2#3{\def\:te:mp{#2}\def\:te:mpa{#1#2}\def\:te:mpb{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpb\empty\else\:TagHTag{#3}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpa\empty</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HREF:"#1\ifx\:te:mp\empty</span>&#x00A0;<span 
+class="cmtt-10">\else\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#2\fi"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpb\empty\else\space</span>&#x00A0;<span 
+class="cmtt-10">\NAME:"#3"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRefTag#1#2{\def\:te:mp{#1}\def\:te:mpa{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpa\empty\else\:TagHTag{#2}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HCode{&#x003C;\tag:A\:newlnch</span>&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mp\empty</span>&#x00A0;<span 
+class="cmtt-10">\NOHREF:</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\HREF:"\get:hfile{#1}\:sharp</span>&#x00A0;<span 
+class="cmtt-10">#1"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:te:mpa\empty\else\space</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\NAME:"#2"\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:attr</span>&#x00A0;<span 
+class="cmtt-10">\empty:lnk&#x003E;}}</span>
+-_-_-</span>
+</p><!--l. 265--><p class="noindent" ><span 
+class="cmtt-10">\def\NOHREF:#1{\ifx \hrEF:\HREF: \space NOHREF \fi} </span>is not part of html!
+</p>
+      <!--l. 271--><p class="indent" ><a 
+ href="#PrTx202001"  name="PrTx204013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx204013"  name="QPrTx696"><span 
+class="cmtt-10">html protex</span></a><a 
+ name="PrTx204014"  href="#PrTx208004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HREF:{</span>&#x00A0;<span 
+class="cmtt-10">href=}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\tag:A{a}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\NAME:{</span>&#x00A0;<span 
+class="cmtt-10">name=}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 277--><p class="noindent" >We don&#8217;t use <span 
+class="cmtt-10">^^J </span>to break lines in <span 
+class="cmtt-10">\write </span>because user may change it, and because I had unexplained problem with
+it in emtex.
+</p>
+      <!--l. 282--><p class="indent" ><a 
+ href="#PrTx204011"  name="PrTx204015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx697"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204016"  href="#PrTx206002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TagHTag#1{\ifx</span>&#x00A0;<span 
+class="cmtt-10">-\let:val\else</span>&#x00A0;<span 
+class="cmtt-10">\Tag{</span><a 
+ name="PrTx204017"  href="tex4ht-styCh8.html#PrTx86005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx204018"  href="#PrTx209010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}{\file:id}\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 291--><p class="noindent" ><a 
+ href="#PrTx203003"  name="PrTx204019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198007"  name="QPrTx698"><span 
+class="cmtt-10">nohtml</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx204020"  href="#PrTx210006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\H:Tag#1#2{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::HRef[#1]#2{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRef#1{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\::HRefTag[#1]#2#3{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:::HRefTag#1#2{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:TagHTag#1{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">19.4 <a 
+ href="tex4ht-sty.html#QQ2-35-205"  name="QQ1-35-205">Html Addresses</a></h3>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-206"  name="QQ1-35-206">Retrieving for HREF</a></h3>
+           <!--l. 305--><p class="noindent" ><a 
+ href="#PrTx204015"  name="PrTx206001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx699"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx206002"  href="#PrTx207002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:href{\expandafter\get::href}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::href#1-#2-{\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#1=\file:id\space</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx206003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx209041"><span 
+class="cmtt-10">get html file name</span></a><a 
+ name="PrTx206004"  href="#PrTx206010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:sharp</span>&#x00A0;<a 
+ name="PrTx206005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx208001"><span 
+class="cmtt-10">make html addr</span></a><a 
+ name="PrTx206006"  href="#PrTx206012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 314--><p class="noindent" ><a 
+ href="#PrTx199003"  name="PrTx206007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx206007"  name="QPrTx700"><span 
+class="cmtt-10">html common to TeX4ht and protexNO</span></a><a 
+ name="PrTx206008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:href{\expandafter\get::href}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::href#1-#2-{\ifnum</span>&#x00A0;<span 
+class="cmtt-10">#1=\file:id\space</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:HDir</span>&#x00A0;<a 
+ name="PrTx206009"  href="#PrTx206003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx209041"><span 
+class="cmtt-10">get html file name</span></a><a 
+ name="PrTx206010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:sharp</span>&#x00A0;<a 
+ name="PrTx206011"  href="#PrTx206005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx208001"><span 
+class="cmtt-10">make html addr</span></a><a 
+ name="PrTx206012"  href="#PrTx207004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-207"  name="QQ1-35-207">Retrieving for NAME</a></h3>
+           <!--l. 321--><p class="noindent" ><a 
+ href="#PrTx206001"  name="PrTx207001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx701"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx207002"  href="#PrTx209004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:htag{\expandafter\get::htag}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::htag#1-#2-{</span><a 
+ name="PrTx207003"  href="#PrTx206011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx208001"><span 
+class="cmtt-10">make html addr</span></a><a 
+ name="PrTx207004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-208"  name="QQ1-35-208">Generating</a></h3>
+           <!--l. 327--><p class="noindent" ><a 
+ name="PrTx208001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx206005"  name="QPrTx702"><span 
+class="cmtt-10">make</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">addr</span></a><a 
+ name="PrTx208002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\make:addr{#2}</span>-_-_-</span>
+           </p><!--l. 336--><p class="noindent" ><a 
+ href="#PrTx204013"  name="PrTx208003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx208003"  name="QPrTx703"><span 
+class="cmtt-10">html protex</span></a><a 
+ name="PrTx208004"  href="#PrTx210004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\make:addr#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\clearcode:id&#x003E;0</span>&#x00A0;<span 
+class="cmtt-10">\romannumeral\clearcode:id</span>&#x00A0;<span 
+class="cmtt-10">Q\else</span>&#x00A0;<span 
+class="cmtt-10">PrTx\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx208005"  href="#PrTx197007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx208005"><span 
+class="cmtt-10">tail for file name</span></a><a 
+ name="PrTx208006"  href="#PrTx208010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\clearcode:id\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\clearcode::id{0}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\clearcode:id{0}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 338--><p class="noindent" >We had before <span 
+class="cmtt-10">\space </span>after <span 
+class="cmtt-10">#1</span>. It was not a problem because <span 
+class="cmtt-10">|&#x003C;tail... </span>was a <span 
+class="cmtt-10">\roman.. </span>that absorbed the space.
+But now with no one absorbing it, it became a problem.
+</p>
+      <!--l. 350--><p class="indent" ><a 
+ name="PrTx208007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx208007"  name="QPrTx704"><span 
+class="cmtt-10">html protexNO</span></a><a 
+ name="PrTx208008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\make:addr#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum\clearcode:id&#x003E;0</span>&#x00A0;<span 
+class="cmtt-10">\romannumeral\clearcode:id</span>&#x00A0;<span 
+class="cmtt-10">Q\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx208009"  href="#PrTx208005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx208009"><span 
+class="cmtt-10">tail for file name</span></a><a 
+ name="PrTx208010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\space}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\clearcode:id\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\clearcode::id{0}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\clearcode:id{0}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 358--><p class="noindent" >Originally, we had <span 
+class="cmtt-10">\romannumeral </span>for tail, but it created named that are too long, and cause memory
+overflow.
+</p><!--l. 362--><p class="indent" >    The condition <span 
+class="cmtt-10">\ifnum\clearcode:id&#x003E;0 </span>is set to hold only for references to code fragments.
+</p><!--l. 365--><p class="indent" >    Romannumeral might be better tags then just numerals because they might be less likely to be generater
+manually.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-209"  name="QQ1-35-209">File Names</a></h3>
+<!--l. 371--><p class="noindent" ><span 
+class="cmtt-10">\Ref </span>and <span 
+class="cmtt-10">\Tag </span>are mechanisms to exchange information. The following can be used to connect locations. (Note,
+however, that <span 
+class="cmtt-10">\Tag </span>may appear in more than one location sending a sequences of tags separated by comma. In such
+cases, we arbitrarily go for the first choise.)
+</p>
+      <!--l. 380--><p class="indent" ><a 
+ name="PrTx209001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx209005"  name="QPrTx705"><span 
+class="cmtt-10">init XrefFile</span></a><a 
+ name="PrTx209002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\aXrefFile\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\let\aXrefFile=\empty</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 398--><p class="noindent" ><a 
+ href="#PrTx207001"  name="PrTx209003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx706"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx209004"  href="#PrTx210002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx209005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx209001"><span 
+class="cmtt-10">init XrefFile</span></a><a 
+ name="PrTx209006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:hfile#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx209007"  href="tex4ht-styCh7.html#PrTx74003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh18.html#PrTx195001, 35211001-"><span 
+class="cmtt-10">tag of Tag</span></a><a 
+ name="PrTx209008"  href="#PrTx209012"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ name="PrTx209009"  href="#PrTx204017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx209010"  href="#PrTx209014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\get@hfile{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\get::hfile</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<a 
+ name="PrTx209011"  href="#PrTx209007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh18.html#PrTx195001, 35211001-"><span 
+class="cmtt-10">tag of Tag</span></a><a 
+ name="PrTx209012"  href="#PrTx209020"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ name="PrTx209013"  href="#PrTx209009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx209014"  href="#PrTx209050"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\endcsname,//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::hfile#1,#2//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\file:id=0#1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx209015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx209017"><span 
+class="cmtt-10">get file name for tag</span></a><a 
+ name="PrTx209016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\get@hfile\:Undef</span>&#x00A0;<span 
+class="cmtt-10">\let\get@hfile=\:gobble</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 406--><p class="noindent" ><a 
+ name="PrTx209017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx209015"  name="QPrTx707"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx209018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<a 
+ name="PrTx209019"  href="#PrTx209011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh18.html#PrTx195001, 35211001-"><span 
+class="cmtt-10">tag of Tag</span></a><a 
+ name="PrTx209020"  href="#PrTx209032"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ name="PrTx209021"  href="tex4ht-styCh7.html#PrTx74005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209022"  href="#PrTx209026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx209023"  href="tex4ht-styCh7.html#PrTx70007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211007"><span 
+class="cmtt-10">Tag/Ref: file-id -&#x003E; file-name</span></a><a 
+ name="PrTx209024"  href="#PrTx209028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:LikeRef{</span><a 
+ name="PrTx209025"  href="#PrTx209021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209026"  href="#PrTx209034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1</span><a 
+ name="PrTx209027"  href="#PrTx209023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211007"><span 
+class="cmtt-10">Tag/Ref: file-id -&#x003E; file-name</span></a><a 
+ name="PrTx209028"  href="#PrTx209036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;-_-_-</span>
+           </p><!--l. 414--><p class="noindent" ><a 
+ name="PrTx209029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx209029"  name="QPrTx708"><span 
+class="cmtt-10">get file name for tagNO</span></a><a 
+ name="PrTx209030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<a 
+ name="PrTx209031"  href="#PrTx209019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-styCh18.html#PrTx195001, 35211001-"><span 
+class="cmtt-10">tag of Tag</span></a><a 
+ name="PrTx209032"><span 
+class="cmtt-10">.&#x003E;</span></a><a 
+ name="PrTx209033"  href="#PrTx209025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209034"  href="#PrTx209038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx209035"  href="#PrTx209027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211007"><span 
+class="cmtt-10">Tag/Ref: file-id -&#x003E; file-name</span></a><a 
+ name="PrTx209036"  href="#PrTx209040"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:HDir</span>&#x00A0;<span 
+class="cmtt-10">\:LikeRef{</span><a 
+ name="PrTx209037"  href="#PrTx209033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209038"  href="#PrTx209044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1</span><a 
+ name="PrTx209039"  href="#PrTx209035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211007"><span 
+class="cmtt-10">Tag/Ref: file-id -&#x003E; file-name</span></a><a 
+ name="PrTx209040"  href="#PrTx209046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;-_-_-</span>
+           </p><!--l. 419--><p class="noindent" ><a 
+ name="PrTx209041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx206003"  name="QPrTx709"><span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">name</span></a><a 
+ name="PrTx209042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:LikeRef{</span><a 
+ name="PrTx209043"  href="#PrTx209037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209044"  href="#PrTx209054"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1</span><a 
+ name="PrTx209045"  href="#PrTx209039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211007"><span 
+class="cmtt-10">Tag/Ref: file-id -&#x003E; file-name</span></a><a 
+ name="PrTx209046"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>-_-_-</span>
+</p><!--l. 422--><p class="noindent" >The following alternative can act as basis for retrieving all the file names, instead of just the first
+one.
+</p>
+      <!--l. 455--><p class="indent" ><a 
+ name="PrTx209047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx209047"  name="QPrTx710"><span 
+class="cmtt-10">COMMENT</span></a><a 
+ name="PrTx209048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:hfile#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cw:</span><a 
+ name="PrTx209049"  href="#PrTx209013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx209050"  href="#PrTx209052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\get@hfile{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\expandafter\expandafter\get::hfile</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cw:</span><a 
+ name="PrTx209051"  href="#PrTx209049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211003"><span 
+class="cmtt-10">HTag tag</span></a><a 
+ name="PrTx209052"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\endcsname,\empty</span>&#x00A0;<span 
+class="cmtt-10">end:Links,/</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\end:Links#1//{}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::hfile#1,#2//{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter</span>&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">#1\endcsname\end:Links</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\end:Links</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\file:id=0#1</span>&#x00A0;<span 
+class="cmtt-10">\FileName\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">cw:</span><a 
+ name="PrTx209053"  href="#PrTx209043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209054"  href="#PrTx209056"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\empty</span>&#x00A0;<span 
+class="cmtt-10">F-\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:LikeRef{</span><a 
+ name="PrTx209055"  href="#PrTx209053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211011"><span 
+class="cmtt-10">auto file tag</span></a><a 
+ name="PrTx209056"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1\empty</span>&#x00A0;<span 
+class="cmtt-10">F-}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\get::hfileA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">#2//}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get::hfileA#1{%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">#1\space</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\get::hfile\else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">#1\empty</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\space\fi%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\get::hfile\expandafter#1\fi}</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SectionHead">19.5 <a 
+ href="tex4ht-sty.html#QQ2-35-210"  name="QQ1-35-210">Other</a></h3>
+<!--l. 463--><p class="noindent" >Dviht produce new line only after nonempty lines. The following can be used to force non empty lines.
+</p>
+      <!--l. 470--><p class="indent" ><a 
+ href="#PrTx209003"  name="PrTx210001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198003"  name="QPrTx711"><span 
+class="cmtt-10">html</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx210002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<i><span 
+class="cmtt-10">\def\HComment#1{\def\html:src{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HComment{}</span>&#x00A0;</i>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\html:src=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=12</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:sharp{#}</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\#=6</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 478--><p class="noindent" ><a 
+ href="#PrTx208003"  name="PrTx210003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx210003"  name="QPrTx712"><span 
+class="cmtt-10">html protex</span></a><a 
+ name="PrTx210004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\html:par\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\def\html:par{\HCode{&#x003C;p&#x003E;}}</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\html:invisible{&#x003C;!--x--&#x003E;\string&amp;\#x00A0;}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 480--><p class="noindent" >The <span 
+class="cmtt-10">&#x003C;!--x--&#x003E;&amp;nbsp; </span>is needed for blank lines in <span 
+class="cmtt-10">&#x003C;PRE&#x003E; </span>within netscape. Opposite order of comment and
+non-breaking-space will not work, and the same if one of the entities is sliminates. On the other other, mosaic show
+the nobreaking space as strin. Well, ...
+</p>
+      <!--l. 487--><p class="indent" ><a 
+ href="#PrTx204019"  name="PrTx210005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx198007"  name="QPrTx713"><span 
+class="cmtt-10">nohtml</span>&#x00A0;<span 
+class="cmtt-10">common</span>&#x00A0;<span 
+class="cmtt-10">to</span>&#x00A0;<span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">protex</span></a><a 
+ name="PrTx210006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<i><span 
+class="cmtt-10">\def\HComment#1{}</span></i>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 489--><p class="noindent" ><span 
+class="cmtt-10">\HComment </span>seems to have no real value, unless we want to trace the input for debugging.
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="#QQ2-35-211"  name="QQ1-35-211">Tags</a></h3>
+           <!--l. 498--><p class="noindent" ><a 
+ name="PrTx211001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh4.html#PrTx31003"  name="QPrTx714"><span 
+class="cmtt-10">tag of Tag</span></a><a 
+ name="PrTx211002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;<span 
+class="cmtt-10">cw:</span>-_-_-</span>
+           </p><!--l. 501--><p class="noindent" ><a 
+ name="PrTx211003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh4.html#PrTx40005"  name="QPrTx715"><span 
+class="cmtt-10">HTag</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx211004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx211005"  href="tex4ht-styCh18.html#PrTx195011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211009"><span 
+class="cmtt-10">auto tag</span></a><a 
+ name="PrTx211006"  href="#PrTx211014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">Q\aXrefFile</span>&#x00A0;-_-_-</span>
+           </p><!--l. 506--><p class="noindent" ><a 
+ name="PrTx211007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh4.html#PrTx40015"  name="QPrTx716"><span 
+class="cmtt-10">Tag/Ref:</span>&#x00A0;<span 
+class="cmtt-10">file-id</span>&#x00A0;<span 
+class="cmtt-10">-&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">file-name</span></a><a 
+ name="PrTx211008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\empty</span>&#x00A0;<span 
+class="cmtt-10">F-</span>-_-_-</span>
+           </p><!--l. 509--><p class="noindent" ><a 
+ name="PrTx211009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh10.html#PrTx108033"  name="QPrTx717"><span 
+class="cmtt-10">auto</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx211010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">)</span>-_-_-</span>
+           </p><!--l. 512--><p class="noindent" ><a 
+ name="PrTx211011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh4.html#PrTx40013"  name="QPrTx718"><span 
+class="cmtt-10">auto</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">tag</span></a><a 
+ name="PrTx211012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx211013"  href="#PrTx211005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx211009"><span 
+class="cmtt-10">auto tag</span></a><a 
+ name="PrTx211014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">F\aXrefFile</span>&#x00A0;-_-_-</span>
+           </p><!--l. 518--><p class="noindent" ><a 
+ name="PrTx211015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx4007"  name="QPrTx719"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx211016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">!*?:</span>&#x00A0;-_-_-</span>
+           </p><!--l. 11125--><p class="noindent" ><a 
+ name="PrTx211017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh4.html#PrTx35013"  name="QPrTx720"><span 
+class="cmtt-10">warnings</span>&#x00A0;<span 
+class="cmtt-10">for</span>&#x00A0;<span 
+class="cmtt-10">missing</span>&#x00A0;<span 
+class="cmtt-10">/Link</span></a><a 
+ name="PrTx211018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:::HRefTag\:UnDef\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defII\:::HRefTag{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">\relax##1\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">cw:)Q\aXrefFile</span>&#x00A0;<span 
+class="cmtt-10">##1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{\string\Link{##1}?}\csname</span>&#x00A0;<span 
+class="cmtt-10">a:?Link\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 11129--><p class="noindent" ><a 
+ href="tex4ht-styCh4.html#PrTx29001"  name="PrTx211019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-styCh1.html#PrTx10009"  name="QPrTx721"><span 
+class="cmtt-10">cross</span>&#x00A0;<span 
+class="cmtt-10">references</span></a><a 
+ name="PrTx211020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{?Link}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 11132--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-styCh20.html" >next</a>] [<a 
+ href="tex4ht-styCh18.html" >prev</a>] [<a 
+ href="tex4ht-styCh18.html#tailtex4ht-styCh18.html" >prev-tail</a>] [<a 
+ href="tex4ht-styCh19.html" >front</a>] [<a 
+ href="tex4ht-sty.html#tex4ht-styCh19.html" >up</a>] </p></div>
+<!--l. 11132--><p class="indent" >    <a 
+  name="tailtex4ht-styCh19.html"></a>   </p> 
+</body></html> 

@@ -1,0 +1,3665 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Introduction</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-javahelp.tex"> 
+<meta name="date" content="2014-05-24 11:52:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-javahelp.css"> 
+</head><body 
+>
+   <!--l. 82--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-javahelpse3.html" >next</a>] [<a 
+ href="#tailtex4ht-javahelpse2.html">tail</a>] [<a 
+ href="tex4ht-javahelpch2.html#tex4ht-javahelpse2.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.1   </span> <a 
+ href="tex4ht-javahelp.html#QQ2-7-4"  id="x7-40002.1">Introduction</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.1 <a 
+ href="#x7-50002.1.1">Review</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.2 <a 
+ href="#x7-60002.1.2">References</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.3 <a 
+ href="#x7-70002.1.3">Importing CSS</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.4 <a 
+ href="#x7-80002.1.4">Tabular</a></span>
+
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.5 <a 
+ href="#x7-90002.1.5">Long Tables</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.6 <a 
+ href="#x7-100002.1.6">Color Tables</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.7 <a 
+ href="#x7-110002.1.7">Color</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.8 <a 
+ href="#x7-120002.1.8">Fonts</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.9 <a 
+ href="#x7-130002.1.9">French</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.1.10 <a 
+ href="#x7-140002.1.10">Ulem</a></span>
+   </div>
+<!--l. 86--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.1   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-5"  id="x7-50002.1.1">Review</a></h4>
+<!--l. 89--><p class="noindent" >JavaHelp is an online documentation system for use by Java-based applications.
+     <ul class="itemize1">
+     <li class="itemize">It can be activated with the &#8216;javahelp&#8217; options. For instance, &#8216;<span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">htlatex</span><span 
+class="cmtt-10">&#x00A0;jobname</span><span 
+class="cmtt-10">&#x00A0;"html,3.2,javahelp,unicode,3"</span><span 
+class="cmtt-10">&#x00A0;"</span><span 
+class="cmtt-10">&#x00A0;-cmozhtf</span><span 
+class="cmtt-10">&#x00A0;-u10"</span><span 
+class="cmtt-10">&#x00A0;"-cjavahelp"</span></span></span>&#8217;.
+     </li>
+     <li class="itemize">Supports HTML 3.2 (+?) and (some?) CSS 1.0 as imported files as well
+     as style attributes.</li></ul>
+<!--l. 103--><p class="indent" >   TeX4ht does the following for JavaHelp
+     <ul class="itemize1">
+     <li class="itemize">Creates keys for the entries in the table of contents and the index
+     </li>
+     <li class="itemize">Maps the keys into th erl&#8217;s of the toc and the index (jobname.jhm)
+     </li>
+     <li class="itemize">Maps the keys to the entries referenced by the toc (jobname-jht.xml) and
+     to the entries referenced by the toc (jobname-jhi.xml)
+     </li>
+     <li class="itemize">Creates a manifest of the files (jhelpset.hs), under the assumption that
+     jhindexer set a search directory at jobname-jhs &#8216;<span 
+class="cmtt-10">java -jar /n/gold/5/gurari/javahelp.dir/jh1.1.3/javahelp/bin/jhindexer.jar</span>
+     <span 
+class="cmtt-10">-db jobname-jhs *.html</span>&#8217;</li></ul>
+<!--l. 118--><p class="indent" >   The javahelp.4ht file should not be loaded before the leading <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\tableofcontents</span></span></span>
+command got active.
+<!--l. 124--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.2   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-6"  id="x7-60002.1.2">References</a></h4>
+
+     <ul class="itemize1">
+     <li class="itemize"><a 
+ href="C:/jh1.1.3/doc/spec/FileFormat.html" class="url" ><span 
+class="cmtt-10">C:/jh1.1.3/doc/spec/FileFormat.html</span></a>
+     </li>
+     <li class="itemize"><a 
+ href="http://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/javahelp/javahelp.html" class="url" ><span 
+class="cmtt-10">http://supportweb.cs.bham.ac.uk/documentation/tutorials/docsystem/build/tutorials/javahelp/javahelp.html</span></a>
+     </li>
+     <li class="itemize"><a 
+ href="http://developer.java.sun.com/developer/JDCTechTips/2002/tt0423.html" class="url" ><span 
+class="cmtt-10">http://developer.java.sun.com/developer/JDCTechTips/2002/tt0423.html</span></a>
+     </li>
+     <li class="itemize"><a 
+ href="http://developer.java.sun.com/developer/JDCTechTips/2002/tt0521.html" class="url" ><span 
+class="cmtt-10">http://developer.java.sun.com/developer/JDCTechTips/2002/tt0521.html</span></a>
+     </li>
+     <li class="itemize"><a 
+ href="http://www.oreilly.de/catalog/creatingjavahelp/examples/" class="url" ><span 
+class="cmtt-10">http://www.oreilly.de/catalog/creatingjavahelp/examples/</span></a></li></ul>
+<!--l. 137--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.3   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-7"  id="x7-70002.1.3">Importing CSS</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-3"><div class="head">
+       <a 
+ id="PrTx7001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37007"  id="QPrTx3"><span 
+class="cmtt-10">configure javahelp tex4ht</span></a><a 
+ id="PrTx7002"  href="#PrTx7008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{-css}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{to</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;CSS</span><span 
+class="cmtt-10">&#x00A0;code,</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;-css}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:CheckOption{css-in}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{the</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;CSS</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;extracted</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;input</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;previous</span><span 
+class="cmtt-10">&#x00A0;compilation,</span><span 
+class="cmtt-10">&#x00A0;so</span><span 
+class="cmtt-10">&#x00A0;an</span><span 
+class="cmtt-10">&#x00A0;extra</span><span 
+class="cmtt-10">&#x00A0;compilation</span><span 
+class="cmtt-10">&#x00A0;might</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;needed}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{@HEAD}{</span><a 
+ id="PrTx7003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx7005"><span 
+class="cmtt-10">css inline</span></a><a 
+ id="PrTx7004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;CSS</span><span 
+class="cmtt-10">&#x00A0;code,</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;css-in&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{@HEAD}{\HCode{&#x003C;link</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;rel="stylesheet"</span><span 
+class="cmtt-10">&#x00A0;type="text/css"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;href="\aa:CssFile"\xml:empty&#x003E;\Hnewline}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-4"><div class="head">
+       <a 
+ id="PrTx7005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7003"  id="QPrTx4"><span 
+class="cmtt-10">css</span><span 
+class="cmtt-10">&#x00A0;inline</span></a><a 
+ id="PrTx7006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\openin15=\jobname</span><span 
+class="cmtt-10">&#x00A0;.css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifeof15</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:warning{Missing</span><span 
+class="cmtt-10">&#x00A0;file:</span><span 
+class="cmtt-10">&#x00A0;\jobname</span><span 
+class="cmtt-10">&#x00A0;.css</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\{=12</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\}=12</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\%=12</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\catcode&#8216;\#=12</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\Hnewline&#x003C;style</span><span 
+class="cmtt-10">&#x00A0;type="text/css"&#x003E;\Hnewline</span><span 
+class="cmtt-10">&#x00A0;&#x003C;!--</span><span 
+class="cmtt-10">&#x00A0;\Hnewline}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\loop</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\read15</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:tempa{\par}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\:tempa</span><span 
+class="cmtt-10">&#x00A0;\let\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifeof15\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\tmp:toks\expandafter{\:temp}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\the\tmp:toks</span><span 
+class="cmtt-10">&#x00A0;\Hnewline}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\repeat</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\Hnewline--&#x003E;\Hnewline&#x003C;/style&#x003E;\Hnewline}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\closein15</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-5"><div class="head">
+       <a 
+ href="#PrTx7001"  id="PrTx7007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37007"  id="QPrTx5"><span 
+class="cmtt-10">configure javahelp tex4ht</span></a><a 
+ id="PrTx7008"  href="#PrTx8082"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx7009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx7019"><span 
+class="cmtt-10">0,32,4 preambles</span></a><a 
+ id="PrTx7010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\a:FontCss:\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{FontCss}{Font\string_Css##1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{Font\string_Css\string_Plus\space##1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;aa:Css\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{Css}{Css:</span><span 
+class="cmtt-10">&#x00A0;##1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-6"><div class="head">
+       <a 
+ id="PrTx7011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37009"  id="QPrTx6"><span 
+class="cmtt-10">configure javahelp latex</span></a><a 
+ id="PrTx7012"  href="#PrTx8002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx7013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16005"><span 
+class="cmtt-10">jh defs</span></a><a 
+ id="PrTx7014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Preamble}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\:CheckOption{-css}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx7015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx7045"><span 
+class="cmtt-10">default cascade style sheets</span></a><a 
+ id="PrTx7016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx7017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx19007"><span 
+class="cmtt-10">jh at start</span></a><a 
+ id="PrTx7018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{@/BODY}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\FileNumber=1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\SaveEndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\input</span><span 
+class="cmtt-10">&#x00A0;javahelp-a.4ht</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\RecallEndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-7"><div class="head">
+       <a 
+ id="PrTx7019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7009"  id="QPrTx7"><span 
+class="cmtt-10">0,32,4</span><span 
+class="cmtt-10">&#x00A0;preambles</span></a><a 
+ id="PrTx7020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{-css}</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\Css#1{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\NewConfigure{CssFile}{2}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx7021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx7023"><span 
+class="cmtt-10">cascade style sheets</span></a><a 
+ id="PrTx7022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-8"><div class="head">
+       <a 
+ id="PrTx7023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7021"  id="QPrTx8"><span 
+class="cmtt-10">cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx7024"  href="#PrTx7026"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css#1{{\def\:temp{\Configure{Needs}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\:temp\expandafter{\aa:Css}\Needs{#1}}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-9"><div class="head">
+       <a 
+ href="#PrTx7023"  id="PrTx7025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7021"  id="QPrTx9"><span 
+class="cmtt-10">cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx7026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ScriptCommand{\CssFile}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\write-1{---</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;\aa:CssFile\space</span><span 
+class="cmtt-10">&#x00A0;---}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\FontSize##1##2{\:Context{##1}\ht:special{t4ht;\%##2}\%}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\FontName##1{\:Context{##1}\ht:special{t4ht;=}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:Context##1{\ht:special{t4ht&#x003E;\jobname.tmp}##1\ht:special</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{t4ht&#x003E;\aa:CssFile}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht&#x003E;\jobname.tmp}\ht:special{t4ht&#x003E;\aa:CssFile}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\bgroup</span><span 
+class="cmtt-10">&#x00A0;\everypar{}\NoFonts</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\bb:CssFile</span><span 
+class="cmtt-10">&#x00A0;\hfil\break}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup</span><span 
+class="cmtt-10">&#x00A0;\EndNoFonts</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ht:special{t4ht&#x003C;\aa:CssFile}\ht:special{t4ht&#x003C;\jobname.tmp}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\Css:File=\CssFile</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\CssFile{\futurelet\:temp\Css:Fl}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css:Fl{\ifx</span><span 
+class="cmtt-10">&#x00A0;[\:temp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\Css:fl</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\expand:after{\Css:File</span><span 
+class="cmtt-10">&#x00A0;\space}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Css:fl[#1]{\Css:File\space</span><span 
+class="cmtt-10">&#x00A0;\css:files</span><span 
+class="cmtt-10">&#x00A0;#1,,</span><a 
+ id="PrTx7027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7028"  href="#PrTx7030"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\css:files#1,#2</span><a 
+ id="PrTx7029"  href="#PrTx7027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7030"  href="#PrTx7032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#1}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\in:css#1.</span><a 
+ id="PrTx7031"  href="#PrTx7029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7032"  href="#PrTx7034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\css:files#2,,</span><a 
+ id="PrTx7033"  href="#PrTx7031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7034"  href="#PrTx7036"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:temp</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\in:css#1.#2</span><a 
+ id="PrTx7035"  href="#PrTx7033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7036"  href="#PrTx7038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#2}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\inc:ss#1.css</span><a 
+ id="PrTx7037"  href="#PrTx7035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7038"  href="#PrTx7040"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\inc:ss#1.#2</span><a 
+ id="PrTx7039"  href="#PrTx7037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7040"  href="#PrTx7042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\inc:ss#1.</span><a 
+ id="PrTx7041"  href="#PrTx7039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx7042"  href="#PrTx8072"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{</span><a 
+ id="PrTx7043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx7047"><span 
+class="cmtt-10">input css file</span></a><a 
+ id="PrTx7044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{CssFile}[2]{\def\aa:CssFile{#1}\def\bb:CssFile{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-10"><div class="head">
+       <a 
+ id="PrTx7045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7015"  id="QPrTx10"><span 
+class="cmtt-10">default</span><span 
+class="cmtt-10">&#x00A0;cascade</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;sheets</span></a><a 
+ id="PrTx7046"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">{\ifdim</span><span 
+class="cmtt-10">&#x00A0;\lastskip&#x003E;\z@</span><span 
+class="cmtt-10">&#x00A0;\unskip\fi</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\parindent\z@</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\leavevmode}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\immediate\write-1{---</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;\aa:CssFile\space</span><span 
+class="cmtt-10">&#x00A0;---}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003E;\aa:CssFile}\ht:special{t4ht=\Hnewline</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;css.sty</span><span 
+class="cmtt-10">&#x00A0;*/}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:special{t4ht&#x003C;\aa:CssFile}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-11"><div class="head">
+       <a 
+ id="PrTx7047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx7043"  id="QPrTx11"><span 
+class="cmtt-10">input</span><span 
+class="cmtt-10">&#x00A0;css</span><span 
+class="cmtt-10">&#x00A0;file</span></a><a 
+ id="PrTx7048"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\immediate\openin15=#1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifeof15</span><span 
+class="cmtt-10">&#x00A0;\immediate\closein15</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:warning{Missing</span><span 
+class="cmtt-10">&#x00A0;file:</span><span 
+class="cmtt-10">&#x00A0;#1}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\immediate\closein15</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\input</span><span 
+class="cmtt-10">&#x00A0;#1</span><span 
+class="cmtt-10">&#x00A0;\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 271--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.4   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-8"  id="x7-80002.1.4">Tabular</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-12"><div class="head">
+       <a 
+ href="#PrTx7011"  id="PrTx8001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37009"  id="QPrTx12"><span 
+class="cmtt-10">configure javahelp latex</span></a><a 
+ id="PrTx8002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{no-array}\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8009"><span 
+class="cmtt-10">html latex array/tabular Config 4.0t</span></a><a 
+ id="PrTx8004"  href="#PrTx8008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-13"><div class="head">
+       <a 
+ id="PrTx8005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37015"  id="QPrTx13"><span 
+class="cmtt-10">configure javahelp array</span></a><a 
+ id="PrTx8006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx8007"  href="#PrTx8003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8009"><span 
+class="cmtt-10">html latex array/tabular Config 4.0t</span></a><a 
+ id="PrTx8008"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-14"><div class="head">
+       <a 
+ id="PrTx8009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx14"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8010"  href="#PrTx8020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{pic-tabular}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ConfigureEnv{tabular}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx8011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8037"><span 
+class="cmtt-10">configure tabular noalign</span></a><a 
+ id="PrTx8012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar</span><a 
+ id="PrTx8013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8039"><span 
+class="cmtt-10">inline comment</span></a><a 
+ id="PrTx8014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\EndP\HCode{&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;class="tabular"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\PushStack\Col:Marg\AllColMargins</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/div&#x003E;}\PopStack\Col:Marg\AllColMargins\ShowPar</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8041"><span 
+class="cmtt-10">configure clear noalign</span></a><a 
+ id="PrTx8016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8043"><span 
+class="cmtt-10">try env inline par</span></a><a 
+ id="PrTx8018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{div.tabular,</span><span 
+class="cmtt-10">&#x00A0;div.center</span><span 
+class="cmtt-10">&#x00A0;div.tabular</span><span 
+class="cmtt-10">&#x00A0;{text-align:</span><span 
+class="cmtt-10">&#x00A0;center;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;margin-top:0.5em;</span><span 
+class="cmtt-10">&#x00A0;margin-bottom:0.5em;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{table.tabular</span><span 
+class="cmtt-10">&#x00A0;td</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;p{margin-top:0em;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{table.tabular</span><span 
+class="cmtt-10">&#x00A0;{margin-left:</span><span 
+class="cmtt-10">&#x00A0;auto;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;margin-right:</span><span 
+class="cmtt-10">&#x00A0;auto;}}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><i><span 
+class="cmtt-10">&#x00A0;centering</span><span 
+class="cmtt-10">&#x00A0;</span></i>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 307--><p class="indent" >   <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\AllColMargins</span></span></span> Return a binary string in which 1 represents a column, and 0
+represents a &#8216;@&#8217;. <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\ColMargins</span></span></span> retrieves the zeros before the 1&#8217;s that represent the
+current and following 1&#8217;s.
+
+   <p></p><div class="ShowCode" id="ShowCode-15"><div class="head">
+       <a 
+ href="#PrTx8009"  id="PrTx8019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx15"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8020"  href="#PrTx8022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\ColMargins{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\AllColMargins\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\:warning{Empty</span><span 
+class="cmtt-10">&#x00A0;\string\AllColMargins}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\tmp:cnt=\HCol\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\nosp:hbr\AllColMargins</span><span 
+class="cmtt-10">&#x00A0;1//%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nosp:hbr#11#2//{\ifnum</span><span 
+class="cmtt-10">&#x00A0;\tmp:cnt&#x003E;1</span><span 
+class="cmtt-10">&#x00A0;\advance\tmp:cnt</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;-1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\nosp:hbr#2//\else\nosp:gt#11#2//\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nosp:gt#11#21#3//{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{#1}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;1\else</span><span 
+class="cmtt-10">&#x00A0;0\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{#2}\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;1\else</span><span 
+class="cmtt-10">&#x00A0;0\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-16"><div class="head">
+       <a 
+ href="#PrTx8019"  id="PrTx8021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx16"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8022"  href="#PrTx8060"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{VBorder}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\global\let\oldVBorder=\empty}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\gdef\oldVBorder{border="1"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTB&#x003C;&#x003E;}{tabular}{\HCode{id="TBL-\TableNo"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="tabular"\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\oldVBorder</span><span 
+class="cmtt-10">&#x00A0;\GROUPS\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}&#x003C;&#x003E;\HAlign}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{table[rules]</span><span 
+class="cmtt-10">&#x00A0;{border-left:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;border-right:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{pic-tabular}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{tabular}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP</span><span 
+class="cmtt-10">&#x00A0;\halignTB{tabular}\putVBorder</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/table&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;tr</span><span 
+class="cmtt-10">&#x00A0;\Hnewline}\halignTR</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo-\HRow-"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;td</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\HMultispan&#x003E;1</span><span 
+class="cmtt-10">&#x00A0;colspan="\HMultispan"\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\halignTD</span><span 
+class="cmtt-10">&#x00A0;\HCode{</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo-\HRow-\HCol"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="td}</span><a 
+ id="PrTx8023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8047"><span 
+class="cmtt-10">tabular td align</span></a><a 
+ id="PrTx8024"  href="#PrTx8062"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{"&#x003E;}</span><a 
+ id="PrTx8025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8049"><span 
+class="cmtt-10">td save EndP</span></a><a 
+ id="PrTx8026"  href="#PrTx8032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx8027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8053"><span 
+class="cmtt-10">start array par box</span></a><a 
+ id="PrTx8028"  href="#PrTx8064"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\PushStack\Table:Stck\TableNo}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx8029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8055"><span 
+class="cmtt-10">end array par box</span></a><a 
+ id="PrTx8030"  href="#PrTx8066"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\PopStack\Table:Stck\TableNo</span><span 
+class="cmtt-10">&#x00A0;\d:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\R:HA{\HCode{&#x003C;tr</span><span 
+class="cmtt-10">&#x00A0;\Hnewline}\halignTR\HCode{&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\r:HA{\HCode{&#x003C;/tr&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\D:HA{</span><a 
+ id="PrTx8031"  href="#PrTx8025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8049"><span 
+class="cmtt-10">td save EndP</span></a><a 
+ id="PrTx8032"  href="#PrTx9014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;td</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\HMultispan&#x003E;1</span><span 
+class="cmtt-10">&#x00A0;colspan="\HMultispan"\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\halignTD</span><span 
+class="cmtt-10">&#x00A0;\HCode{\Hnewline&#x003E;}\ShowPar\par}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\d:HA{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/td&#x003E;}</span><a 
+ id="PrTx8033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8051"><span 
+class="cmtt-10">td recall EndP</span></a><a 
+ id="PrTx8034"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx8035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8057"><span 
+class="cmtt-10">configuring @()</span></a><a 
+ id="PrTx8036"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{td.td00{</span><span 
+class="cmtt-10">&#x00A0;padding-left:0pt;</span><span 
+class="cmtt-10">&#x00A0;padding-right:0pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{td.td01{</span><span 
+class="cmtt-10">&#x00A0;padding-left:0pt;</span><span 
+class="cmtt-10">&#x00A0;padding-right:5pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{td.td10{</span><span 
+class="cmtt-10">&#x00A0;padding-left:5pt;</span><span 
+class="cmtt-10">&#x00A0;padding-right:0pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{td.td11{</span><span 
+class="cmtt-10">&#x00A0;padding-left:5pt;</span><span 
+class="cmtt-10">&#x00A0;padding-right:5pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-17"><div class="head">
+       <a 
+ id="PrTx8037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8011"  id="QPrTx17"><span 
+class="cmtt-10">configure</span><span 
+class="cmtt-10">&#x00A0;tabular</span><span 
+class="cmtt-10">&#x00A0;noalign</span></a><a 
+ id="PrTx8038"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{noalign}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\f:tabular\d:tabular</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;tr&#x003E;&#x003C;td</span><span 
+class="cmtt-10">&#x00A0;colspan="\ar:cnt"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/td&#x003E;&#x003C;/tr&#x003E;}\pend:def\TableNo{0}\c:tabular\e:tabular}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-18"><div class="head">
+       <a 
+ id="PrTx8039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8013"  id="QPrTx18"><span 
+class="cmtt-10">inline</span><span 
+class="cmtt-10">&#x00A0;comment</span></a><a 
+ id="PrTx8040"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifvmode\else\HCode{&#x003C;!--tex4ht:inline--&#x003E;}\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-19"><div class="head">
+       <a 
+ id="PrTx8041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8015"  id="QPrTx19"><span 
+class="cmtt-10">configure</span><span 
+class="cmtt-10">&#x00A0;clear</span><span 
+class="cmtt-10">&#x00A0;noalign</span></a><a 
+ id="PrTx8042"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{noalign}{}{}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-20"><div class="head">
+       <a 
+ id="PrTx8043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8017"  id="QPrTx20"><span 
+class="cmtt-10">try</span><span 
+class="cmtt-10">&#x00A0;env</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;par</span></a><a 
+ id="PrTx8044"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ShowPar</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-21"><div class="head">
+       <a 
+ id="PrTx8045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8045"  id="QPrTx21"><span 
+class="cmtt-10">try inline par</span></a><a 
+ id="PrTx8046"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ShowPar</span><span 
+class="cmtt-10">&#x00A0;\par{\HCondtrue\noindent}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-22"><div class="head">
+       <a 
+ id="PrTx8047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8023"  id="QPrTx22"><span 
+class="cmtt-10">tabular</span><span 
+class="cmtt-10">&#x00A0;td</span><span 
+class="cmtt-10">&#x00A0;align</span></a><a 
+ id="PrTx8048"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NoFonts</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\ttfamily\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\ttfamily\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ColMargins</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\EndNoFonts</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-23"><div class="head">
+       <a 
+ id="PrTx8049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8025"  id="QPrTx23"><span 
+class="cmtt-10">td</span><span 
+class="cmtt-10">&#x00A0;save</span><span 
+class="cmtt-10">&#x00A0;EndP</span></a><a 
+ id="PrTx8050"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\SaveEndP</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-24"><div class="head">
+       <a 
+ id="PrTx8051"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8033"  id="QPrTx24"><span 
+class="cmtt-10">td</span><span 
+class="cmtt-10">&#x00A0;recall</span><span 
+class="cmtt-10">&#x00A0;EndP</span></a><a 
+ id="PrTx8052"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\RecallEndP</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-25"><div class="head">
+       <a 
+ id="PrTx8053"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8027"  id="QPrTx25"><span 
+class="cmtt-10">start</span><span 
+class="cmtt-10">&#x00A0;array</span><span 
+class="cmtt-10">&#x00A0;par</span><span 
+class="cmtt-10">&#x00A0;box</span></a><a 
+ id="PrTx8054"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\par</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ShowPar</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-26"><div class="head">
+       <a 
+ id="PrTx8055"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8029"  id="QPrTx26"><span 
+class="cmtt-10">end</span><span 
+class="cmtt-10">&#x00A0;array</span><span 
+class="cmtt-10">&#x00A0;par</span><span 
+class="cmtt-10">&#x00A0;box</span></a><a 
+ id="PrTx8056"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span><span 
+class="cmtt-10">&#x00A0;\EndP</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-27"><div class="head">
+       <a 
+ id="PrTx8057"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8035"  id="QPrTx27"><span 
+class="cmtt-10">configuring</span><span 
+class="cmtt-10">&#x00A0;@()</span></a><a 
+ id="PrTx8058"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{@{}}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-28"><div class="head">
+       <a 
+ href="#PrTx8021"  id="PrTx8059"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx28"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8060"  href="#PrTx8068"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTB&#x003C;&#x003E;}{array}{\HCode{id="TBL-\TableNo"</span><span 
+class="cmtt-10">&#x00A0;class="array"\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\GROUPS\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}&#x003C;&#x003E;\HAlign}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{table[rules]</span><span 
+class="cmtt-10">&#x00A0;{border-left:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;border-right:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{pic-array}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{array}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP\halignTB{array}\putVBorder}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/table&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\R:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\D:HA\HCode{&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;class="td}</span><a 
+ id="PrTx8061"  href="#PrTx8023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8047"><span 
+class="cmtt-10">tabular td align</span></a><a 
+ id="PrTx8062"  href="#PrTx9012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{"&#x003E;}</span><a 
+ id="PrTx8063"  href="#PrTx8027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8053"><span 
+class="cmtt-10">start array par box</span></a><a 
+ id="PrTx8064"  href="#PrTx9016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\pic:env}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx8065"  href="#PrTx8029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8055"><span 
+class="cmtt-10">end array par box</span></a><a 
+ id="PrTx8066"  href="#PrTx9018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\HCode{&#x003C;/div&#x003E;}\d:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{arrayparbox}{\ShowPar}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-29"><div class="head">
+       <a 
+ href="#PrTx8059"  id="PrTx8067"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx29"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8068"  href="#PrTx8070"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\VBorder=\empty</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\AllColMargins=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{VBorder}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\VBorder=\empty</span><span 
+class="cmtt-10">&#x00A0;\let\AllColMargins=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\GROUPS=\empty</span><span 
+class="cmtt-10">&#x00A0;\HAssign\NewGroup</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\Next:TableNo</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span><span 
+class="cmtt-10">&#x00A0;\global\let\TableNo=\Next:TableNo</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\oldVBorder=\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\xdef\VBorder{\VBorder\ifnum</span><span 
+class="cmtt-10">&#x00A0;\NewGroup&#x003E;</span><span 
+class="cmtt-10">&#x00A0;0</span><span 
+class="cmtt-10">&#x00A0;&#x003C;/colgroup&#x003E;\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HAssign\NewGroup</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gdef\GROUPS{rules="groups"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gdef\oldVBorder{border="1"</span><span 
+class="cmtt-10">&#x00A0;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Advance:\NewGroup</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\NewGroup=1</span><span 
+class="cmtt-10">&#x00A0;\xdef\VBorder{\VBorder&#x003C;colgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo-\ar:cnt</span><span 
+class="cmtt-10">&#x00A0;g"&#x003E;}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\xdef\VBorder{\VBorder&#x003C;col\Hnewline</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-\ar:cnt"\xml:empty&#x003E;}\xdef\AllColMargins{\AllColMargins1}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\xdef\AllColMargins{\AllColMargins</span><span 
+class="cmtt-10">&#x00A0;0}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{HBorder}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;tr\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="hline"&#x003E;}</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;td&#x003E;&#x003C;hr\xml:empty&#x003E;&#x003C;/td&#x003E;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;/tr&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;tr\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="cline"&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;td&#x003E;&#x003C;/td&#x003E;}</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;td&#x003E;&#x003C;hr\xml:empty&#x003E;&#x003C;/td&#x003E;}</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;/tr&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;tr\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="vspace"</span><span 
+class="cmtt-10">&#x00A0;style="font-size:\HBorderspace"&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;td\Hnewline&#x003E;\string&amp;nbsp;&#x003C;/td&#x003E;}</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;/tr&#x003E;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{putHBorder}{\HCode{\HBorder}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\Next:TableNo=0</span><span 
+class="cmtt-10">&#x00A0;\global\let\TableNo=\Next:TableNo</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.hline</span><span 
+class="cmtt-10">&#x00A0;hr,</span><span 
+class="cmtt-10">&#x00A0;.cline</span><span 
+class="cmtt-10">&#x00A0;hr{</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;height</span><span 
+class="cmtt-10">&#x00A0;:</span><span 
+class="cmtt-10">&#x00A0;1px;</span><span 
+class="cmtt-10">&#x00A0;margin:0px;</span><span 
+class="cmtt-10">&#x00A0;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-30"><div class="head">
+       <a 
+ href="#PrTx8067"  id="PrTx8069"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx30"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8070"  href="#PrTx8078"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\putVBorder{\expandafter\put:VBorder\VBorder&#x003C;/&#x003E;</span><a 
+ id="PrTx8071"  href="#PrTx7041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx8072"  href="#PrTx8074"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\put:VBorder#1&#x003C;/#2&#x003E;#3</span><a 
+ id="PrTx8073"  href="#PrTx8071"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx8074"  href="#PrTx8076"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\def\:temp{#2}\ifx\:temp\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{\VBorder}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{#1}\ifx\:temp\empty</span><span 
+class="cmtt-10">&#x00A0;\else\HCode{&#x003C;/colgroup&#x003E;}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\:temp{\put:VBorder#3</span><a 
+ id="PrTx8075"  href="#PrTx8073"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx8076"  href="#PrTx10004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\expandafter\:temp\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-31"><div class="head">
+       <a 
+ href="#PrTx8069"  id="PrTx8077"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx31"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8078"  href="#PrTx8080"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{multicolumn}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\col:Css\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{VBorder}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\edef\col:Css{\col:Css</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;border-\ifnum</span><span 
+class="cmtt-10">&#x00A0;\ar:cnt=0</span><span 
+class="cmtt-10">&#x00A0;left\else</span><span 
+class="cmtt-10">&#x00A0;right\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}{}{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifx</span><span 
+class="cmtt-10">&#x00A0;\col:Css\empty</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{td\#TBL-\TableNo-\HRow-\HCol{\col:Css}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode\IgnorePar\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;class="multicolumn"</span><span 
+class="cmtt-10">&#x00A0;}\HColAlign\HCode{&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\col:Css\empty</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{td\#TBL-\TableNo-\HRow-\HCol{\col:Css}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifvmode\IgnorePar\fi</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/div&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-32"><div class="head">
+       <a 
+ href="#PrTx8077"  id="PrTx8079"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8003"  id="QPrTx32"><span 
+class="cmtt-10">html</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;array/tabular</span><span 
+class="cmtt-10">&#x00A0;Config</span><span 
+class="cmtt-10">&#x00A0;4.0t</span></a><a 
+ id="PrTx8080"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pic:env{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\begin##1{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\end####1{\o:end:{####1}\EndPicture\egroup}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\EndPicture\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Picture+{</span><span 
+class="cmtt-10">&#x00A0;class="##1"</span><span 
+class="cmtt-10">&#x00A0;style="text-align:middle"}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\let\EndPicture=\empty\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\o:begin:{##1}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-33"><div class="head">
+       <a 
+ href="#PrTx7007"  id="PrTx8081"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37007"  id="QPrTx33"><span 
+class="cmtt-10">configure javahelp tex4ht</span></a><a 
+ id="PrTx8082"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTD}</span><span 
+class="cmtt-10">&#x00A0;{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:nowrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:left;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{-}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:nowrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:center;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003E;}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:nowrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:right;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{^}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="vertical-align:top;</span><span 
+class="cmtt-10">&#x00A0;white-space:nowrap;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{=}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="vertical-align:baseline;</span><span 
+class="cmtt-10">&#x00A0;white-space:nowrap;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{|}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="vertical-align:middle;</span><span 
+class="cmtt-10">&#x00A0;white-space:nowrap;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{_}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="vertical-align:bottom;</span><span 
+class="cmtt-10">&#x00A0;white-space:nowrap;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{p}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:wrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:left;"}\Protect\a:HColWidth}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{m}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:nowrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:left;</span><span 
+class="cmtt-10">&#x00A0;vertical-align:middle;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{b}{\HCode{</span><span 
+class="cmtt-10">&#x00A0;style="white-space:nowrap;</span><span 
+class="cmtt-10">&#x00A0;text-align:left;</span><span 
+class="cmtt-10">&#x00A0;vertical-align:baseline;"}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HColWidth}{1}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HColWidth}{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 554--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.5   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-9"  id="x7-90002.1.5">Long Tables</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-34"><div class="head">
+       <a 
+ id="PrTx9001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37017"  id="QPrTx34"><span 
+class="cmtt-10">configure javahelp longtable</span></a><a 
+ id="PrTx9002"  href="#PrTx9006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9007"><span 
+class="cmtt-10">config new longtable</span></a><a 
+ id="PrTx9004"><span 
+class="cmtt-10">.&#x003E;</span></a></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-35"><div class="head">
+       <a 
+ href="#PrTx9001"  id="PrTx9005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37017"  id="QPrTx35"><span 
+class="cmtt-10">configure javahelp longtable</span></a><a 
+ id="PrTx9006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{pic-longtable}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\if:Option</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ConfigureEnv{longtable}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\IgnorePar\EndP\Tg&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;class="pic-longtable"&#x003E;\Picture*{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\EndPicture\Tg&#x003C;/div&#x003E;}{}{}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{div.pic-longtable</span><span 
+class="cmtt-10">&#x00A0;{text-align:center;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Log:Note{for</span><span 
+class="cmtt-10">&#x00A0;pictorial</span><span 
+class="cmtt-10">&#x00A0;longtable,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;command</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;&#8216;pic-longtable&#8217;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-36"><div class="head">
+       <a 
+ id="PrTx9007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx9003"  id="QPrTx36"><span 
+class="cmtt-10">config</span><span 
+class="cmtt-10">&#x00A0;new</span><span 
+class="cmtt-10">&#x00A0;longtable</span></a><a 
+ id="PrTx9008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{halignTB&#x003C;&#x003E;}{longtable}{\HCode{id="TBL-\TableNo"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="longtable"\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\oldVBorder</span><span 
+class="cmtt-10">&#x00A0;\GROUPS\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}&#x003C;&#x003E;\HAlign}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{table[rules]</span><span 
+class="cmtt-10">&#x00A0;{border-left:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;border-right:solid</span><span 
+class="cmtt-10">&#x00A0;black</span><span 
+class="cmtt-10">&#x00A0;0.4pt;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{longtable}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\IgnorePar\EndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{</span><a 
+ id="PrTx9009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9019"><span 
+class="cmtt-10">show input line no</span></a><a 
+ id="PrTx9010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x003C;div</span><span 
+class="cmtt-10">&#x00A0;class="longtable"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\halignTB{longtable}\putVBorder</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/table&#x003E;&#x003C;/div&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;tr</span><span 
+class="cmtt-10">&#x00A0;\Hnewline}\halignTR\HCode{</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo-\HRow-"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\r:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;td</span><span 
+class="cmtt-10">&#x00A0;\ifnum</span><span 
+class="cmtt-10">&#x00A0;\HMultispan&#x003E;1</span><span 
+class="cmtt-10">&#x00A0;colspan="\HMultispan"\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\halignTD</span><span 
+class="cmtt-10">&#x00A0;\HCode{</span><span 
+class="cmtt-10">&#x00A0;id="TBL-\TableNo-\HRow-\HCol"</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span><span 
+class="cmtt-10">&#x00A0;class="td}</span><a 
+ id="PrTx9011"  href="#PrTx8061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8047"><span 
+class="cmtt-10">tabular td align</span></a><a 
+ id="PrTx9012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{"&#x003E;}</span><a 
+ id="PrTx9013"  href="#PrTx8031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8049"><span 
+class="cmtt-10">td save EndP</span></a><a 
+ id="PrTx9014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9015"  href="#PrTx8063"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8053"><span 
+class="cmtt-10">start array par box</span></a><a 
+ id="PrTx9016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\PushStack\Table:Stck\TableNo}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\PopStack\Table:Stck\TableNo</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9017"  href="#PrTx8065"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8055"><span 
+class="cmtt-10">end array par box</span></a><a 
+ id="PrTx9018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\d:HA}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{div.longtable{text-align:center;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{longtableparbox}{\IgnorePar\leavevmode\ShowPar\par}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-37"><div class="head">
+       <a 
+ id="PrTx9019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx9009"  id="QPrTx37"><span 
+class="cmtt-10">show</span><span 
+class="cmtt-10">&#x00A0;input</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;no</span></a><a 
+ id="PrTx9020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;!--l.</span><span 
+class="cmtt-10">&#x00A0;\the\inputlineno--&#x003E;%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 609--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.6   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-10"  id="x7-100002.1.6">Color Tables</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-38"><div class="head">
+       <a 
+ id="PrTx10001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37021"  id="QPrTx38"><span 
+class="cmtt-10">configure javahelp colortbl</span></a><a 
+ id="PrTx10002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{@classz}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\begin:current@color=\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\end:current@color=\relax</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\CT@column@color\relax</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\CT@column@color\empty</span><span 
+class="cmtt-10">&#x00A0;\else{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\CT@color{\@ifnextchar[\color:ii\color:i}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\CT@column@color</span><a 
+ id="PrTx10003"  href="#PrTx8075"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-javahelpse3.html#PrTx16029"><span 
+class="cmtt-10">par del</span></a><a 
+ id="PrTx10004"  href="tex4ht-javahelpse3.html#PrTx20044"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\edef\:temp{\noexpand\add:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{background-color}{\:temp}{\ar:cnt}}\:temp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}\fi</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\begin:current@color}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\end:current@color}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{rowcolor}{\row:clr}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\row:clr#1{{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HAdvance\HRow</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\add:color{background-color}{#1}{\HRow-}}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{text-colortbl}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\add:color{color}{\current@color}{\HRow-\HCol}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{cell-colortbl}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\add:color{background-color}{\current@color}{\HRow-\HCol}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\add:color#1#2#3{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{SetHColor}{\Css{</span><span 
+class="cmtt-10">&#x00A0;\#TBL-\TableNo-#3{</span><span 
+class="cmtt-10">&#x00A0;#1:\HColor</span><span 
+class="cmtt-10">&#x00A0;}}}{#2}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 641--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.7   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-11"  id="x7-110002.1.7">Color</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-39"><div class="head">
+       <a 
+ id="PrTx11001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37019"  id="QPrTx39"><span 
+class="cmtt-10">configure javahelp color</span></a><a 
+ id="PrTx11002"  href="#PrTx11006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HAssign\textcolorN=0</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{colorbox}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\textcolorN</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\let\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar</span><span 
+class="cmtt-10">&#x00A0;\EndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\let\v:colorbox=\relax</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx11003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx11007"><span 
+class="cmtt-10">colorbox background</span></a><a 
+ id="PrTx11004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;\ifx</span><span 
+class="cmtt-10">&#x00A0;\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;div\else</span><span 
+class="cmtt-10">&#x00A0;span\fi</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="colorbox"</span><span 
+class="cmtt-10">&#x00A0;id="colorbox\textcolorN"&#x003E;}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifx</span><span 
+class="cmtt-10">&#x00A0;\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/div&#x003E;}\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/span&#x003E;}\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-40"><div class="head">
+       <a 
+ href="#PrTx11001"  id="PrTx11005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37019"  id="QPrTx40"><span 
+class="cmtt-10">configure javahelp color</span></a><a 
+ id="PrTx11006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{textcolor}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\gHAdvance\textcolorN</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{color}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{SetHColor}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Css{span\#textcolor\textcolorN{color:\HColor}}}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;id="textcolor\textcolorN"&#x003E;}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-41"><div class="head">
+       <a 
+ id="PrTx11007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx11003"  id="QPrTx41"><span 
+class="cmtt-10">colorbox</span><span 
+class="cmtt-10">&#x00A0;background</span></a><a 
+ id="PrTx11008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\A:color=\a:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{color}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\a:color=\A:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{SetHColor}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Css{\ifx</span><span 
+class="cmtt-10">&#x00A0;\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;div\else</span><span 
+class="cmtt-10">&#x00A0;span\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\#colorbox\textcolorN{background-color:\HColor;}}}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-42">
+      <div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{fcolorbox}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\gHAdvance\textcolorN</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\A:color=\a:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{color}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{SetHColor}{\Css{\#colorbox\textcolorN{border:</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;solid</span><span 
+class="cmtt-10">&#x00A0;1px</span><span 
+class="cmtt-10">&#x00A0;\HColor;}}}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{fbox}{\leavevmode</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\gHAdvance\textcolorN</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;-1</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\a:color=\A:color}{}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}</span></span>
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-43"><div class="head">
+       <a 
+ id="PrTx11009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx11009"  id="QPrTx43"><span 
+class="cmtt-10">color.sty config 4.0t</span></a><a 
+ id="PrTx11010"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{fcolorbox}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\bgroup\gHAdvance\textcolorN</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;1</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifvmode</span><span 
+class="cmtt-10">&#x00A0;\let\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;\IgnorePar</span><span 
+class="cmtt-10">&#x00A0;\EndP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\let\v:colorbox=\relax</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;\ifx</span><span 
+class="cmtt-10">&#x00A0;\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;div\else</span><span 
+class="cmtt-10">&#x00A0;span\fi</span><span 
+class="cmtt-10">&#x00A0;\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="colorbox"</span><span 
+class="cmtt-10">&#x00A0;id="colorbox\textcolorN"&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx11011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx11013"><span 
+class="cmtt-10">fcolorbox border</span></a><a 
+ id="PrTx11012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{fbox}{\leavevmode</span><span 
+class="cmtt-10">&#x00A0;}{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{\ifx</span><span 
+class="cmtt-10">&#x00A0;\v:colorbox\def</span><span 
+class="cmtt-10">&#x00A0;\EndP\HCode{&#x003C;/div&#x003E;}\par</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;\else</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/span&#x003E;}\fi</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\egroup}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-44"><div class="head">
+       <a 
+ id="PrTx11013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx11011"  id="QPrTx44"><span 
+class="cmtt-10">fcolorbox</span><span 
+class="cmtt-10">&#x00A0;border</span></a><a 
+ id="PrTx11014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\A:color=\a:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{color}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx11015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx11017"><span 
+class="cmtt-10">fcolor background</span></a><a 
+ id="PrTx11016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{SetHColor}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{\#colorbox\textcolorN{border:</span><span 
+class="cmtt-10">&#x00A0;solid</span><span 
+class="cmtt-10">&#x00A0;1px</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\HColor;}}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-45"><div class="head">
+       <a 
+ id="PrTx11017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx11015"  id="QPrTx45"><span 
+class="cmtt-10">fcolor</span><span 
+class="cmtt-10">&#x00A0;background</span></a><a 
+ id="PrTx11018"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{color}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let\a:color=\A:color</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{SetHColor}{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Css{\#colorbox\textcolorN{background-color:</span><span 
+class="cmtt-10">&#x00A0;\HColor;}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 733--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.8   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-12"  id="x7-120002.1.8">Fonts</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-46"><div class="head">
+       <a 
+ id="PrTx12001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx12001"  id="QPrTx46"><span 
+class="cmtt-10">configure javahelp fontmath </span></a><a 
+ id="PrTx12002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{textbf}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;b&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;/b&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{textit}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;i&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;/i&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{textsl}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;i&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;/i&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{texttt}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;tt&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;/tt&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{emph}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;em&#x003E;}\fi}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifimmediate\else</span><span 
+class="cmtt-10">&#x00A0;\Protect\HCode{&#x003C;/em&#x003E;}\fi}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-47"><div class="head">
+       <a 
+ id="PrTx12003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37011"  id="QPrTx47"><span 
+class="cmtt-10">configure javahelp fontmath</span></a><a 
+ id="PrTx12004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{jhxml}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\textbf\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\textit\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\textsl\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\texttt\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\textsc\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\emph\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-48"><div class="head">
+       <a 
+ id="PrTx12005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37013"  id="QPrTx48"><span 
+class="cmtt-10">configure javahelp inputenc</span></a><a 
+ id="PrTx12006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{jhxml}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\IeC\empty</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 780--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.9   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-13"  id="x7-130002.1.9">French</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-49"><div class="head">
+       <a 
+ id="PrTx13001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37023"  id="QPrTx49"><span 
+class="cmtt-10">configure javahelp frenchb</span></a><a 
+ id="PrTx13002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{jhxml}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\def\csname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;a:frenchb-thinspace\endcsname##1frenchb-thinspace\endcsname{}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-50"><div class="head">
+       <a 
+ id="PrTx13003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx13003"  id="QPrTx50"><span 
+class="cmtt-10">configure javahelp frenchb </span></a><a 
+ id="PrTx13004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span><span 
+class="cmtt-10">&#x00A0;jha:ftsp\expandafter\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\csname</span><span 
+class="cmtt-10">&#x00A0;a:frenchb-thinspace\endcsname</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\def\csname</span><span 
+class="cmtt-10">&#x00A0;a:frenchb-thinspace\endcsname{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifimmediate</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\jha:ftspignore</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\jha:ftsp</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\jha:ftspignore#1frenchb-thinspace\endcsname{}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 809--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.1.10   </span> <a 
+ href="tex4ht-javahelpch2.html#QQ2-7-14"  id="x7-140002.1.10">Ulem</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-51"><div class="head">
+       <a 
+ id="PrTx14001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-javahelpse5.html#PrTx37025"  id="QPrTx51"><span 
+class="cmtt-10">configure javahelp ulem</span></a><a 
+ id="PrTx14002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{uline}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="uline"&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.uline{</span><span 
+class="cmtt-10">&#x00A0;text-decoration:underline;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{uuline}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="uuline"&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{.uuline{</span><span 
+class="cmtt-10">&#x00A0;text-decoration:underline;</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{sout}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="sout"&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{span.sout</span><span 
+class="cmtt-10">&#x00A0;{text-decoration:</span><span 
+class="cmtt-10">&#x00A0;line-through</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{xout}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="xout"&#x003E;&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="underline"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;&#x003C;/span&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{span.xout</span><span 
+class="cmtt-10">&#x00A0;{text-decoration:</span><span 
+class="cmtt-10">&#x00A0;line-through</span><span 
+class="cmtt-10">&#x00A0;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{uwave}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;span</span><span 
+class="cmtt-10">&#x00A0;class="uwave"&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{&#x003C;/span&#x003E;}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Css{span.uwave</span><span 
+class="cmtt-10">&#x00A0;{text-decoration:underline</span><span 
+class="cmtt-10">&#x00A0;}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 838--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-javahelpse3.html" >next</a>] [<a 
+ href="tex4ht-javahelpse2.html" >front</a>] [<a 
+ href="tex4ht-javahelpch2.html#tex4ht-javahelpse2.html" >up</a>] </p></div>
+<!--l. 838--><p class="indent" >   <a 
+  id="tailtex4ht-javahelpse2.html"></a>   
+</body></html> 

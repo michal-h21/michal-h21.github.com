@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>more</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Eitan&#x003E;</span><span 
+class="cmtt-10">&#x00A0;I</span><span 
+class="cmtt-10">&#x00A0;also</span><span 
+class="cmtt-10">&#x00A0;wonder</span><span 
+class="cmtt-10">&#x00A0;whether</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;WIN32</span><span 
+class="cmtt-10">&#x00A0;really</span><span 
+class="cmtt-10">&#x00A0;needs</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;discard</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Eitan&#x003E;</span><span 
+class="cmtt-10">&#x00A0;following</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;fragment.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">signal()</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;supported</span><span 
+class="cmtt-10">&#x00A0;through</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;standard</span><span 
+class="cmtt-10">&#x00A0;libc,</span><span 
+class="cmtt-10">&#x00A0;but</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;mostly</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">ineffective.</span><span 
+class="cmtt-10">&#x00A0;An</span><span 
+class="cmtt-10">&#x00A0;example</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;kind</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;needed</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;attached.</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/*</span><span 
+class="cmtt-10">&#x00A0;Interrupt</span><span 
+class="cmtt-10">&#x00A0;handler.</span><span 
+class="cmtt-10">&#x00A0;mt_exit()</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;cleanup_and_exit</span><span 
+class="cmtt-10">&#x00A0;function</span><span 
+class="cmtt-10">&#x00A0;*/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#ifdef</span><span 
+class="cmtt-10">&#x00A0;_WIN32</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">BOOL</span><span 
+class="cmtt-10">&#x00A0;sigint_handler(DWORD</span><span 
+class="cmtt-10">&#x00A0;dwCtrlType)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">{</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;mt_exit(3);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;return</span><span 
+class="cmtt-10">&#x00A0;FALSE;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;return</span><span 
+class="cmtt-10">&#x00A0;value</span><span 
+class="cmtt-10">&#x00A0;obligatory</span><span 
+class="cmtt-10">&#x00A0;*/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#else</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">void</span><span 
+class="cmtt-10">&#x00A0;sigint_handler</span><span 
+class="cmtt-10">&#x00A0;(int</span><span 
+class="cmtt-10">&#x00A0;sig)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">{</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;mt_exit(3);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/*</span><span 
+class="cmtt-10">&#x00A0;Catch</span><span 
+class="cmtt-10">&#x00A0;signals,</span><span 
+class="cmtt-10">&#x00A0;so</span><span 
+class="cmtt-10">&#x00A0;we</span><span 
+class="cmtt-10">&#x00A0;clean</span><span 
+class="cmtt-10">&#x00A0;up</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;interrupted.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;This</span><span 
+class="cmtt-10">&#x00A0;emulates</span><span 
+class="cmtt-10">&#x00A0;"trap</span><span 
+class="cmtt-10">&#x00A0;&#8217;whatever&#8217;</span><span 
+class="cmtt-10">&#x00A0;1</span><span 
+class="cmtt-10">&#x00A0;2</span><span 
+class="cmtt-10">&#x00A0;15".</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*/</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#ifdef</span><span 
+class="cmtt-10">&#x00A0;_WIN32</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;SetConsoleCtrlHandler((PHANDLER_ROUTINE)sigint_handler,</span><span 
+class="cmtt-10">&#x00A0;TRUE);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#else</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;ifdef</span><span 
+class="cmtt-10">&#x00A0;SIGINT</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;signal</span><span 
+class="cmtt-10">&#x00A0;(SIGINT,</span><span 
+class="cmtt-10">&#x00A0;sigint_handler);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;ifdef</span><span 
+class="cmtt-10">&#x00A0;SIGHUP</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;signal</span><span 
+class="cmtt-10">&#x00A0;(SIGHUP,</span><span 
+class="cmtt-10">&#x00A0;sigint_handler);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;ifdef</span><span 
+class="cmtt-10">&#x00A0;SIGTERM</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;signal</span><span 
+class="cmtt-10">&#x00A0;(SIGTERM,</span><span 
+class="cmtt-10">&#x00A0;sigint_handler);</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#</span><span 
+class="cmtt-10">&#x00A0;endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">#endif</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+     
+</body></html> 

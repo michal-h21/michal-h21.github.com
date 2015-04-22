@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>amsthm.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 19482--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh56.html" >next</a>] [<a 
+ href="tex4ht-4htCh54.html" >prev</a>] [<a 
+ href="tex4ht-4htCh54.html#tailtex4ht-4htCh54.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htCh55.html">tail</a>] [<a 
+ href="tex4ht-4htPa5.html#tex4ht-4htCh55.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 55<br /><a 
+ href="tex4ht-4ht.html#QQ2-300-266"  name="QQ1-300-266">amsthm.sty</a></h2><div class="TableOfContents">
+    </div>
+      <!--l. 19501--><p class="indent" ><a 
+ name="PrTx266001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx266001"  name="QPrTx946"><span 
+class="cmtt-10">amsthm.4ht</span></a><a 
+ name="PrTx266002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">amsthm.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx266003"  href="tex4ht-4htCh54.html#PrTx265003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx266004"  href="tex4ht-4htSe123.html#PrTx268004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx266005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx266009"><span 
+class="cmtt-10">body of amsthm.sty</span></a><a 
+ name="PrTx266006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx266007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx266021"><span 
+class="cmtt-10">theorem in amsthm.sty</span></a><a 
+ name="PrTx266008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{amsthm}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19507--><p class="noindent" ><a 
+ name="PrTx266009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx266005"  name="QPrTx947"><span 
+class="cmtt-10">body</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">amsthm.sty</span></a><a 
+ name="PrTx266010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx266011"  href="tex4ht-4htCh53.html#PrTx264005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx266013"><span 
+class="cmtt-10">qed symbol</span></a><a 
+ name="PrTx266012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19515--><p class="noindent" ><a 
+ name="PrTx266013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh53.html#PrTx264005"  name="QPrTx948"><span 
+class="cmtt-10">qed</span>&#x00A0;<span 
+class="cmtt-10">symbol</span></a><a 
+ name="PrTx266014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\qed:sym{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\leavevmode\Picture+[Q.E.D.]{}\o:qedsymbol:\EndPicture</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\SavePicture\qed:sym[Q.E.D.]</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\qed:sym</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\MathSymbol\mathop{qedsymbol}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19529--><p class="noindent" ><a 
+ name="PrTx266015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe117.html#PrTx258039"  name="QPrTx949"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">ams</span>&#x00A0;<span 
+class="cmtt-10">thm/cls</span></a><a 
+ name="PrTx266016"  href="#PrTx266026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\deferred@thm@head\:UnDef\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\dth@everypar\expandafter{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\the\dth@everypar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\the\ht:everypar}\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar{\HtmlPar}\ShowPar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx266017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx266019"><span 
+class="cmtt-10">revised begintheorem</span></a><a 
+ name="PrTx266018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19548--><p class="noindent" ><a 
+ name="PrTx266019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx266017"  name="QPrTx950"><span 
+class="cmtt-10">revised</span>&#x00A0;<span 
+class="cmtt-10">begintheorem</span></a><a 
+ name="PrTx266020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\deferred@thm@head#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@inlabel</span>&#x00A0;<span 
+class="cmtt-10">\indent</span>&#x00A0;<span 
+class="cmtt-10">\par</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<i>&#x00A0;<span 
+class="cmtt-10">eject</span>&#x00A0;<span 
+class="cmtt-10">a</span>&#x00A0;<span 
+class="cmtt-10">section</span>&#x00A0;<span 
+class="cmtt-10">head</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">one</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">pending</span></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if@nobreak</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\adjust@parskip@nobreak</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\addpenalty\@beginparpenalty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\addvspace\@topsep</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\addvspace{-\parskip}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\@inlabeltrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar\dth@everypar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sv:newtheorem=\b:newtheorem</span>&#x00A0;<span 
+class="cmtt-10">\let\b:newtheorem=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\item[\normalfont#1]%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\b:newtheorem=\sv:newtheorem</span>&#x00A0;<span 
+class="cmtt-10">\b:newtheorem</span>&#x00A0;<span 
+class="cmtt-10">\ignorespaces</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 19550--><p class="noindent" >The old version of amsthm used &#8216;<span 
+class="cmtt-10">\item[\normalfont#1]</span>&#8217; instead of &#8216;<span 
+class="cmtt-10">\sbox\@labels{\normalfont#1}</span>&#8217;&#8211;it is
+preferable for tex4ht, in case the lemma starts with something like &#8216;<span 
+class="cmtt-10">\begin{equation}</span>&#8217;.
+</p><!--l. 19558--><p class="indent" >    The following code is for the cases that the <span 
+class="cmtt-10">\refstercounter </span>is ignored in <span 
+class="cmtt-10">\@thm</span>.
+</p>
+      <!--l. 19565--><p class="indent" ><a 
+ name="PrTx266021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx266007"  name="QPrTx951"><span 
+class="cmtt-10">theorem</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">amsthm.sty</span></a><a 
+ name="PrTx266022"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp{\ShowRefstepAnchor\o:@begintheorem:}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@begintheorem=\:temp</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx266023"  href="tex4ht-4htSe117.html#PrTx258039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx266015"><span 
+class="cmtt-10">shared ams thm/cls</span></a><a 
+ name="PrTx266024"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19588--><p class="noindent" ><a 
+ href="#PrTx266015"  name="PrTx266025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe117.html#PrTx258039"  name="QPrTx952"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">ams</span>&#x00A0;<span 
+class="cmtt-10">thm/cls</span></a><a 
+ name="PrTx266026"  href="#PrTx266030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\expandafter\eorem:syle</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\meaning\:temp</span><a 
+ name="PrTx266027"  href="tex4ht-4htSe83.html#PrTx191045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx266028"  href="#PrTx266032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\@tmp:sv\csname</span>&#x00A0;<span 
+class="cmtt-10">th@\:temp\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:tempa##1{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\append:def\csname</span>&#x00A0;<span 
+class="cmtt-10">th@##1\endcsname{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">th@##1\endcsname=\@tmp:sv</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\thm:headnl=\thmheadnl</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\thmheadnl{\let\thmheadnl\thm:headnl</span>&#x00A0;<span 
+class="cmtt-10">\b:newtheorem}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\thmheadnl{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar\expandafter{\the\ht:everypar</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ht:everypar{\HtmlPar}}}}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\:tempa\expandafter{\:temp}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\sv:trivlist=\trivlist</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\trivlist{\let\trivlist\sv:trivlist</span>&#x00A0;<span 
+class="cmtt-10">\let\sv:trivlist\:unDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:newtheorem</span>&#x00A0;<span 
+class="cmtt-10">\trivlist}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\aftergroup\c:newtheorem</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:thm{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@thm\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HRestore\@endtheorem</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 19596--><p class="noindent" >The @thm appends its setting to the hook of theoremstyle:
+</p>
+      <!--l. 19609--><p class="indent" ><a 
+ href="#PrTx266025"  name="PrTx266029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe117.html#PrTx258039"  name="QPrTx953"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">ams</span>&#x00A0;<span 
+class="cmtt-10">thm/cls</span></a><a 
+ name="PrTx266030"  href="#PrTx266034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\bgroup{\catcode&#8216;\\=0</span>&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\t=11</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\/=0</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\@=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\h=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\catcode&#8216;\\=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/catcode&#8216;/t=12</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/edef~{/def/noexpand/eorem:syle##1\th@##2</span>&#x00A0;<a 
+ name="PrTx266031"  href="#PrTx266027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx266032"  href="tex4ht-4htSu111.html#PrTx355006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{##2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/bgroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\egroup</span>&#x00A0;<span 
+class="cmtt-10">~</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 19618--><p class="noindent" ><a 
+ href="#PrTx266029"  name="PrTx266033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe117.html#PrTx258039"  name="QPrTx954"><span 
+class="cmtt-10">shared</span>&#x00A0;<span 
+class="cmtt-10">ams</span>&#x00A0;<span 
+class="cmtt-10">thm/cls</span></a><a 
+ name="PrTx266034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp[#1]{\par\a:proof</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">o:\string\proof</span>&#x00A0;<span 
+class="cmtt-10">:\endcsname[#1]\b:proof}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\HLet\csname</span>&#x00A0;<span 
+class="cmtt-10">\string\proof</span>&#x00A0;<span 
+class="cmtt-10">\endcsname=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:def\endproof{\c:proof}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{proof}{3}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\newtheoremstyle{note}%</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{3pt}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Space</span><span 
+class="cmtt-10">&#x00A0;above</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{3pt}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Space</span><span 
+class="cmtt-10">&#x00A0;below</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Body</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Indent</span><span 
+class="cmtt-10">&#x00A0;amount</span><span 
+class="cmtt-10">&#x00A0;(empty</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;indent,</span><span 
+class="cmtt-10">&#x00A0;\parindent</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;para</span><span 
+class="cmtt-10">&#x00A0;indent)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\itshape}%</span><span 
+class="cmtt-10">&#x00A0;Thm</span><span 
+class="cmtt-10">&#x00A0;head</span><span 
+class="cmtt-10">&#x00A0;font</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{:}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Punctuation</span><span 
+class="cmtt-10">&#x00A0;after</span><span 
+class="cmtt-10">&#x00A0;thm</span><span 
+class="cmtt-10">&#x00A0;head</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{.5em}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Space</span><span 
+class="cmtt-10">&#x00A0;after</span><span 
+class="cmtt-10">&#x00A0;thm</span><span 
+class="cmtt-10">&#x00A0;head:</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;normal</span><span 
+class="cmtt-10">&#x00A0;interword</span><span 
+class="cmtt-10">&#x00A0;space;</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\newline</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;linebreak</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}%</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Thm</span><span 
+class="cmtt-10">&#x00A0;head</span><span 
+class="cmtt-10">&#x00A0;spec</span><span 
+class="cmtt-10">&#x00A0;(can</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;left</span><span 
+class="cmtt-10">&#x00A0;empty,</span><span 
+class="cmtt-10">&#x00A0;meaning</span><span 
+class="cmtt-10">&#x00A0;&#8216;normal&#8217;)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+    <!--l. 19640--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh56.html" >next</a>] [<a 
+ href="tex4ht-4htCh54.html" >prev</a>] [<a 
+ href="tex4ht-4htCh54.html#tailtex4ht-4htCh54.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htCh55.html" >front</a>] [<a 
+ href="tex4ht-4htPa5.html#tex4ht-4htCh55.html" >up</a>] </p></div>
+<!--l. 19640--><p class="indent" >    <a 
+  name="tailtex4ht-4htCh55.html"></a> </p> 
+</body></html> 

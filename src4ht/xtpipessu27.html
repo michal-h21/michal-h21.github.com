@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Get Lexical Handler for SAX</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 2478--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu29.html" >next</a>] [<a 
+ href="xtpipesse4.html" >prev</a>] [<a 
+ href="xtpipesse4.html#tailxtpipesse4.html" >prev-tail</a>] [<a 
+ href="xtpipessu25.html#tailxtpipessu27.html">tail</a>] [<a 
+ href="xtpipessu16.html#xtpipessu28.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">3.13   </span> <a 
+  id="x35-430003.13"></a>Get Lexical Handler for SAX</h4>
+<!--l. 2489--><p class="noindent" >The constructor of a lexical handler is provided the content handler as an
+argument.
+</p>
+           <!--l. 2522--><p class="noindent" ><a 
+ id="PrTx43001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu23.html#PrTx36019"  id="QPrTx127"><span 
+class="cmtt-10">saxReader</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">lexical</span>&#x00A0;<span 
+class="cmtt-10">handler</span></a><a 
+ id="PrTx43002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">Node</span>&#x00A0;<span 
+class="cmtt-10">lexAttr</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getAttributes()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNamedItem(</span>&#x00A0;<span 
+class="cmtt-10">"lexical-handler"</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">lexAttr</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">null</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">lexName</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">lexAttr.getNodeValue();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Class[3];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">argTypes[0]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Class.forName(</span>&#x00A0;<span 
+class="cmtt-10">className[0].trim()</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">argTypes[1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">PrintWriter.class;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">argTypes[2]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">boolean.class;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">parmValues</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Object[3];</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">parmValues[0]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">ch;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">parmValues[1]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Xtpipes.logWriter;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">parmValues[2]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">Xtpipes.trace;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">errMsg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"Class.forName(</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">lexName.trim()</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">")</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">cls</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">Class.forName(</span>&#x00A0;<span 
+class="cmtt-10">lexName.trim()</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">errMsg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"get-constructor</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">lexName.trim()</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">"(</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">className[0].trim()</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">c</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">cls.getConstructor(</span>&#x00A0;<span 
+class="cmtt-10">argTypes</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">errMsg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"get-object</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">lexName.trim()</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"(</span>&#x00A0;<span 
+class="cmtt-10">...</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Object</span>&#x00A0;<span 
+class="cmtt-10">xh</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">c.newInstance(</span>&#x00A0;<span 
+class="cmtt-10">parmValues</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">errMsg</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">"set</span>&#x00A0;<span 
+class="cmtt-10">lexical</span>&#x00A0;<span 
+class="cmtt-10">handler</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">lexName.trim()</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">";</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">saxReader.setProperty(</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">"http://xml.org/sax/properties/lexical-handler",</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(org.xml.sax.ext.LexicalHandler)</span>&#x00A0;<span 
+class="cmtt-10">xh</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+   <!--l. 2534--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu29.html" >next</a>] [<a 
+ href="xtpipesse4.html" >prev</a>] [<a 
+ href="xtpipesse4.html#tailxtpipesse4.html" >prev-tail</a>] [<a 
+ href="xtpipessu27.html" >front</a>] [<a 
+ href="xtpipessu16.html#xtpipessu28.html" >up</a>] </p></div>
+<!--l. 2534--><p class="indent" >   <a 
+  id="tailxtpipessu27.html"></a> </p> 
+</body></html> 

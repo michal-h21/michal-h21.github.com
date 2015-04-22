@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Class Paths</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 2745--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu34.html" >next</a>] [<a 
+ href="xtpipesse6.html" >prev</a>] [<a 
+ href="xtpipesse6.html#tailxtpipesse6.html" >prev-tail</a>] [<a 
+ href="xtpipessu30.html#tailxtpipessu32.html">tail</a>] [<a 
+ href="xtpipessu31.html#xtpipessu33.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">5.3   </span> <a 
+  id="x42-500005.3"></a>Class Paths</h4>
+           <!--l. 2753--><p class="noindent" ><a 
+ id="PrTx50001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu30.html#PrTx48009"  id="QPrTx138"><span 
+class="cmtt-10">classPaths[]</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">...</span></a><a 
+ id="PrTx50002"  href="#PrTx50004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">classPaths</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FileInfo.getPaths(</span>&#x00A0;<span 
+class="cmtt-10">System.getProperty("java.class.path")</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 2755--><p class="noindent" >Script paths are to be encoded in a similar manner as class paths.
+</p>
+           <!--l. 2761--><p class="noindent" ><a 
+ href="#PrTx50001"  id="PrTx50003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu30.html#PrTx48009"  id="QPrTx139"><span 
+class="cmtt-10">classPaths[]</span>&#x00A0;<span 
+class="cmtt-10">:=</span>&#x00A0;<span 
+class="cmtt-10">...</span></a><a 
+ id="PrTx50004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">iii_scriptDir</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">null</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">scriptPaths</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FileInfo.getPaths(</span>&#x00A0;<span 
+class="cmtt-10">iii_scriptDir</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2779--><p class="noindent" ><a 
+ id="PrTx50005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu30.html#PrTx48015"  id="QPrTx140"><span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">getPaths(</span>&#x00A0;<span 
+class="cmtt-10">dirs</span>&#x00A0;<span 
+class="cmtt-10">)</span></a><a 
+ id="PrTx50006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">getPaths(</span>&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">dirs</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">paths</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">null;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">paths</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">dirs.split(</span>&#x00A0;<span 
+class="cmtt-10">System.getProperty("path.separator")</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">k</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">paths.length;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">k&#x003E;0</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">k--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx50007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx50009"><span 
+class="cmtt-10">set full path</span></a><a 
+ id="PrTx50008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">int</span>&#x00A0;<span 
+class="cmtt-10">len</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">paths[k].length();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(len&#x003E;1)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(paths[k].lastIndexOf(slash</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">".")</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">(len-1))</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">paths[k].substring(0,len-1);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">else</span>&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(len&#x003E;0)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">((len-1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">paths[k].lastIndexOf(</span>&#x00A0;<span 
+class="cmtt-10">slash</span>&#x00A0;<span 
+class="cmtt-10">))</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">slash;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">paths;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 2785--><p class="noindent" ><a 
+ id="PrTx50009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx50007"  id="QPrTx141"><span 
+class="cmtt-10">set</span>&#x00A0;<span 
+class="cmtt-10">full</span>&#x00A0;<span 
+class="cmtt-10">path</span></a><a 
+ id="PrTx50010"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">cleanPath(</span>&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(paths[k].length()</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">0)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">(paths[k].charAt(0)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;~&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(paths[k].length()</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">1)||</span>&#x00A0;<span 
+class="cmtt-10">(paths[k].charAt(1)</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">&#8217;~&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">System.getProperty(</span>&#x00A0;<span 
+class="cmtt-10">"user.home"</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">paths[k].substring(1);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">paths[k].charAt(0)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;.&#8217;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">paths[k]</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">System.getProperty(</span>&#x00A0;<span 
+class="cmtt-10">"user.dir"</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">slash</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">paths[k];</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+-_-_-</span>
+
+</p>
+   <!--l. 2799--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu34.html" >next</a>] [<a 
+ href="xtpipesse6.html" >prev</a>] [<a 
+ href="xtpipesse6.html#tailxtpipesse6.html" >prev-tail</a>] [<a 
+ href="xtpipessu32.html" >front</a>] [<a 
+ href="xtpipessu31.html#xtpipessu33.html" >up</a>] </p></div>
+<!--l. 2799--><p class="indent" >   <a 
+  id="tailxtpipessu32.html"></a> </p> 
+</body></html> 

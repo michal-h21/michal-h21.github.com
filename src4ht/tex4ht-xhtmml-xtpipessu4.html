@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Check Nature of Item Content</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="tex4ht-xhtmml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-xhtmml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 335--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-xhtmml-xtpipesse5.html" >next</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu3.html" >prev</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu3.html#tailtex4ht-xhtmml-xtpipessu3.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-xhtmml-xtpipessu4.html">tail</a>] [<a 
+ href="tex4ht-xhtmml-xtpipesse4.html#tex4ht-xhtmml-xtpipessu4.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">4.4   </span> <a 
+  id="x10-90004.4"></a>Check Nature of Item Content</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-20"><div class="head">
+       <a 
+ id="PrTx9001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-xhtmml-xtpipessu1.html#PrTx6005"  id="QPrTx20"><span 
+class="cmtt-10">hasBlock,</span><span 
+class="cmtt-10">&#x00A0;hasInline</span><span 
+class="cmtt-10">&#x00A0;:=</span><span 
+class="cmtt-10">&#x00A0;exist</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;li?</span></a><a 
+ id="PrTx9002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">liChild</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;liNode.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;liChild</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;short</span><span 
+class="cmtt-10">&#x00A0;type</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeType();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9003"  href="tex4ht-xhtmml-xtpipessu2.html#PrTx7003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9005"><span 
+class="cmtt-10">liChild == block?</span></a><a 
+ id="PrTx9004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;hasBlock</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;true;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;type</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.TEXT_NODE</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;!((Text)</span><span 
+class="cmtt-10">&#x00A0;liChild).getWholeText().trim().equals("")</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;hasInline</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;true;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;if(</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(type</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;Node.COMMENT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(type</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;Node.PROCESSING_INSTRUCTION_NODE</span><span 
+class="cmtt-10">&#x00A0;)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;hasInline</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;true;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;liChild.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-21"><div class="head">
+       <a 
+ id="PrTx9005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-xhtmml-xtpipessu2.html#PrTx7003"  id="QPrTx21"><span 
+class="cmtt-10">liChild</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;block?</span></a><a 
+ id="PrTx9006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">(type</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">(</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeName().equals("p")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;||</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeName().equals("ol")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;||</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeName().equals("ul")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;||</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeName().equals("div")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;||</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;liChild.getNodeName().equals("table")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">)</span></span></div><div class="tail">-_-_-
+   </div></div>
+   <!--l. 378--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-xhtmml-xtpipesse5.html" >next</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu3.html" >prev</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu3.html#tailtex4ht-xhtmml-xtpipessu3.html" >prev-tail</a>] [<a 
+ href="tex4ht-xhtmml-xtpipessu4.html" >front</a>] [<a 
+ href="tex4ht-xhtmml-xtpipesse4.html#tex4ht-xhtmml-xtpipessu4.html" >up</a>] </p></div>
+<!--l. 378--><p class="indent" >   <a 
+  id="tailtex4ht-xhtmml-xtpipessu4.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,3375 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Platform-dependent Code</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <!--l. 297--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe4.html" >next</a>] [<a 
+ href="tex4ht-t4htSe2.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe2.html#tailtex4ht-t4htSe2.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-t4htSe3.html">tail</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe3.html" >up</a>] </p></div>
+    <h3 class="SectionHead">3 <a 
+ href="tex4ht-t4ht.html#QQ2-4-7"  name="QQ1-4-7">Platform-dependent Code</a></h3>
+    <div class="TableOfContents"><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-4-8"  name="QQ2-4-8">PreProcessor
+Directives</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-4-9"  name="QQ2-4-9">KPATHSEA</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-4-10"  name="QQ2-4-10">Compilers</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-4-11"  name="QQ2-4-11">DJGPP</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="#QQ1-4-12"  name="QQ2-4-12">Slashes
+n Directory Pathes</a></span><br />
+    </div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-4-8"  name="QQ1-4-8">PreProcessor Directives</a></h3>
+<!--l. 324--><p class="noindent" >Symantec C++ for wid95: <span 
+class="cmtt-10">sc t4ht.c -mn -o+time -WA -3 -a8 -c -D_CONSOLE=1 -ot4ht.obj</span>
+</p>
+      <!--l. 330--><p class="indent" ><a 
+ href="tex4ht-t4htSe1.html#PrTx4003"  name="PrTx8001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx8002"  href="#PrTx8030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">IGNORED</span>&#x00A0;<span 
+class="cmtt-10">void</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 381--><p class="noindent" ><a 
+ name="PrTx8003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3061"><span 
+class="cmtt-10">t4ht.h</span></a><a 
+ name="PrTx8004"  href="#PrTx8046"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">**********************************************</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Compiler</span>&#x00A0;<span 
+class="cmtt-10">options</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(uncommented</span>&#x00A0;<span 
+class="cmtt-10">|</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">------------------------------------------------*</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Classic</span>&#x00A0;<span 
+class="cmtt-10">C</span>&#x00A0;<span 
+class="cmtt-10">(CC)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">default</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ANSI</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ansi-c,</span>&#x00A0;<span 
+class="cmtt-10">c++</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS_C</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRING_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;string.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_DIRENT_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;dirent.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_SYS_NDIR_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/ndir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_SYS_DIR_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/dir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_NDIR_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;ndir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_IO_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;io.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_UNISTD_H</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#x003C;unistd.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">SYSTEM_FUNCTION_OK</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">CDECL</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">..........</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">BCC32</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">bordland</span>&#x00A0;<span 
+class="cmtt-10">c++</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">*************************************************</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Tex4ht</span>&#x00A0;<span 
+class="cmtt-10">variables</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(uncommented</span>&#x00A0;<span 
+class="cmtt-10">|</span>&#x00A0;<span 
+class="cmtt-10">command</span>&#x00A0;<span 
+class="cmtt-10">line)</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">*</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">-----------------------------------------------</span>&#x00A0;<span 
+class="cmtt-10">*/</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx42029"><span 
+class="cmtt-10">h-defines</span></a><a 
+ name="PrTx8006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">********************************************</span>&#x00A0;<span 
+class="cmtt-10">*/</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8007"><span 
+class="cmtt-10">define MSVC-1-52</span></a><a 
+ name="PrTx8008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8023"><span 
+class="cmtt-10">bordland: bcc32 -DBCC32 t4ht</span></a><a 
+ name="PrTx8010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8025"><span 
+class="cmtt-10">bordland: bcc -DBCC tex4ht</span></a><a 
+ name="PrTx8012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx11001"><span 
+class="cmtt-10">DJGPP</span></a><a 
+ name="PrTx8014"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">DOS_C</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">DOS</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS_WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifndef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRING_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRING_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS_WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8033"><span 
+class="cmtt-10">h-defines DOS-WIN32</span></a><a 
+ name="PrTx8016"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9015"><span 
+class="cmtt-10">h-defines KWIN32</span></a><a 
+ name="PrTx8018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8027"><span 
+class="cmtt-10">h-include</span></a><a 
+ name="PrTx8020"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9007"><span 
+class="cmtt-10">h-defines 2</span></a><a 
+ name="PrTx8022"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 392--><p class="noindent" ><a 
+ name="PrTx8023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8009"><span 
+class="cmtt-10">bordland:</span>&#x00A0;<span 
+class="cmtt-10">bcc32</span>&#x00A0;<span 
+class="cmtt-10">-DBCC32</span>&#x00A0;<span 
+class="cmtt-10">t4ht</span></a><a 
+ name="PrTx8024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">BCC32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ANSI</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_IO_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRING_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">PLATFORM</span>&#x00A0;<span 
+class="cmtt-10">"ms-win32"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 403--><p class="noindent" ><a 
+ name="PrTx8025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8011"><span 
+class="cmtt-10">bordland:</span>&#x00A0;<span 
+class="cmtt-10">bcc</span>&#x00A0;<span 
+class="cmtt-10">-DBCC</span>&#x00A0;<span 
+class="cmtt-10">tex4ht</span></a><a 
+ name="PrTx8026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">BCC</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS_C</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ANSI</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">HAVE_IO_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">PLATFORM</span>&#x00A0;<span 
+class="cmtt-10">"ms-dos"</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 412--><p class="noindent" ><a 
+ name="PrTx8027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8019"><span 
+class="cmtt-10">h-include</span></a><a 
+ name="PrTx8028"  href="#PrTx8032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/config.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;stdio.h&#x003E;</span>&#x00A0;&#x00A0;&#x00A0;<i>&#x00A0;<span 
+class="cmtt-10">EOF,</span>&#x00A0;<span 
+class="cmtt-10">FILE</span>&#x00A0;</i>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;stdlib.h&#x003E;</span>&#x00A0;&#x00A0;<i>&#x00A0;<span 
+class="cmtt-10">EXIT_FAILURE</span>&#x00A0;</i>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 416--><p class="noindent" >Under ANSI C, all malloc stuff is declared in &#8216;<span 
+class="cmtt-10">&#x003C;stdlib.h&#x003E;</span>&#8217; (which you also include), hence this non-standard header
+is redundant.
+</p>
+      <!--l. 425--><p class="indent" ><a 
+ href="#PrTx8001"  name="PrTx8029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx8030"  href="#PrTx8048"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifndef</span>&#x00A0;<span 
+class="cmtt-10">EXIT_FAILURE</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">EXIT_FAILURE</span>&#x00A0;<span 
+class="cmtt-10">1</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 431--><p class="noindent" ><a 
+ href="#PrTx8027"  name="PrTx8031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8019"><span 
+class="cmtt-10">h-include</span></a><a 
+ name="PrTx8032"  href="#PrTx8036"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRING_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;string.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 440--><p class="noindent" ><a 
+ name="PrTx8033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8015"><span 
+class="cmtt-10">h-defines</span>&#x00A0;<span 
+class="cmtt-10">DOS-WIN32</span></a><a 
+ name="PrTx8034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">DOS_WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">STRUCT_DIRENT</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 452--><p class="noindent" ><a 
+ href="#PrTx8031"  name="PrTx8035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8019"><span 
+class="cmtt-10">h-include</span></a><a 
+ name="PrTx8036"  href="tex4ht-t4htSe14.html#PrTx51002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_DIRENT_H</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8041"><span 
+class="cmtt-10">needs dirent.h</span></a><a 
+ name="PrTx8038"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifndef</span>&#x00A0;<span 
+class="cmtt-10">STRUCT_DIRENT</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">STRUCT_DIRECT</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx8039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx8043"><span 
+class="cmtt-10">needs simulated dirent.h</span></a><a 
+ name="PrTx8040"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 458--><p class="noindent" ><a 
+ name="PrTx8041"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8037"><span 
+class="cmtt-10">needs</span>&#x00A0;<span 
+class="cmtt-10">dirent.h</span></a><a 
+ name="PrTx8042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;dirent.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 471--><p class="noindent" ><a 
+ name="PrTx8043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8039"><span 
+class="cmtt-10">needs</span>&#x00A0;<span 
+class="cmtt-10">simulated</span>&#x00A0;<span 
+class="cmtt-10">dirent.h</span></a><a 
+ name="PrTx8044"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_SYS_NDIR_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/ndir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_SYS_DIR_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/dir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_NDIR_H</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;ndir.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 474--><p class="noindent" >REPLACE EXIT with somthing that DOS also accept.
+</p>
+      <!--l. 489--><p class="indent" ><a 
+ href="#PrTx8003"  name="PrTx8045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3061"><span 
+class="cmtt-10">t4ht.h</span></a><a 
+ name="PrTx8046"  href="#PrTx9014"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">DOS</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">PROTOTYP</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">ANSI</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">PROTOTYP</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KWIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">PROTOTYP</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 507--><p class="noindent" ><a 
+ href="#PrTx8029"  name="PrTx8047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx8048"  href="#PrTx12002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">PROTOTYP</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">MYVOID</span>&#x00A0;<span 
+class="cmtt-10">void</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(x)</span>&#x00A0;<span 
+class="cmtt-10">x</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(x,y)</span>&#x00A0;<span 
+class="cmtt-10">x,y</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_III(x,y,z)</span>&#x00A0;<span 
+class="cmtt-10">x,y,z</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_IV(x,y,z,w)</span>&#x00A0;<span 
+class="cmtt-10">x,y,z,w</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_V(x,y,z,w,u)</span>&#x00A0;<span 
+class="cmtt-10">x,y,z,w,u</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">MYVOID</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(x)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_II(x,y)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_III(x,y,z)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_IV(x,y,z,w)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ARG_V(x,y,z,w,u)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-4-9"  name="QQ1-4-9">KPATHSEA</a></h3>
+           <!--l. 540--><p class="noindent" ><a 
+ name="PrTx9001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx9001"><span 
+class="cmtt-10">h-defines 2NO</span></a><a 
+ name="PrTx9002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx9003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx45007"><span 
+class="cmtt-10">h-include before KPATHSEA</span></a><a 
+ name="PrTx9004"  href="#PrTx9010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifndef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRCHR</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">strchr</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">index</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifndef</span>&#x00A0;<span 
+class="cmtt-10">HAVE_STRRCHR</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">strrchr</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">rindex</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-errno.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-ctype.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-fopen.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-pathmx.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/proginit.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/tex-file.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/tex-make.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/variable.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;signal.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">!defined(_AMIGA)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!defined(WIN32)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/time.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;fcntl.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;setjmp.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>&#x00A0;<i><span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>&#x00A0;<span 
+class="cmtt-10">*/</span></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx9005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx45011"><span 
+class="cmtt-10">h-include after KPATHSEA</span></a><a 
+ name="PrTx9006"  href="#PrTx9012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 561--><p class="noindent" ><a 
+ name="PrTx9007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8021"><span 
+class="cmtt-10">h-defines</span>&#x00A0;<span 
+class="cmtt-10">2</span></a><a 
+ name="PrTx9008"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ name="PrTx9009"  href="#PrTx9003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx45007"><span 
+class="cmtt-10">h-include before KPATHSEA</span></a><a 
+ name="PrTx9010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-errno.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-ctype.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-fopen.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/c-pathmx.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/proginit.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/tex-file.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/tex-make.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;kpathsea/variable.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;signal.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">!defined(_AMIGA)</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">!defined(WIN32)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;sys/time.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;fcntl.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#include</span>&#x00A0;<span 
+class="cmtt-10">&#x003C;setjmp.h&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>&#x00A0;<i><span 
+class="cmtt-10">/*</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>&#x00A0;<span 
+class="cmtt-10">*/</span></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx9011"  href="#PrTx9005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-t4htSe12.html#PrTx45011"><span 
+class="cmtt-10">h-include after KPATHSEA</span></a><a 
+ name="PrTx9012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 564--><p class="noindent" >The &#8216;<span 
+class="cmtt-10">__cdecl</span>&#8217; is defined in KPATHSEA: kpathsea/c-protos.h is defined to nothing for compilers other than
+MS.
+</p>
+      <!--l. 577--><p class="indent" ><a 
+ href="#PrTx8045"  name="PrTx9013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3061"><span 
+class="cmtt-10">t4ht.h</span></a><a 
+ name="PrTx9014"  href="tex4ht-t4htSe13.html#PrTx48018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#undef</span>&#x00A0;<span 
+class="cmtt-10">CDECL</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">CDECL</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">__cdecl</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">CDECL</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 585--><p class="noindent" ><a 
+ name="PrTx9015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8017"><span 
+class="cmtt-10">h-defines</span>&#x00A0;<span 
+class="cmtt-10">KWIN32</span></a><a 
+ name="PrTx9016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">KPATHSEA</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">WIN32</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">KWIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-4-10"  name="QQ1-4-10">Compilers</a></h3>
+<!--l. 594--><p class="noindent" >
+</p><dl > <dt>BCC32</dt><dd>
+<!--l. 597--><p class="indent" >    For Win 95.
+</p><!--l. 599--><p class="indent" >    Options (<span 
+class="cmtt-10">bcc32 </span>comamnd):
+</p><div class="Verbatim"><span 
+class="cmtt-10">Borland</span><span 
+class="cmtt-10">&#x00A0;C++</span><span 
+class="cmtt-10">&#x00A0;5.0</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;Win32</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(c)</span><span 
+class="cmtt-10">&#x00A0;1993,</span><span 
+class="cmtt-10">&#x00A0;1996</span><span 
+class="cmtt-10">&#x00A0;Borland</span><span 
+class="cmtt-10">&#x00A0;International</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Syntax</span><span 
+class="cmtt-10">&#x00A0;is:</span><span 
+class="cmtt-10">&#x00A0;BCC32</span><span 
+class="cmtt-10">&#x00A0;[</span><span 
+class="cmtt-10">&#x00A0;options</span><span 
+class="cmtt-10">&#x00A0;]</span><span 
+class="cmtt-10">&#x00A0;file[s]</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;default;</span><span 
+class="cmtt-10">&#x00A0;-x-</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;turn</span><span 
+class="cmtt-10">&#x00A0;switch</span><span 
+class="cmtt-10">&#x00A0;x</span><span 
+class="cmtt-10">&#x00A0;off</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-3</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;80386</span><span 
+class="cmtt-10">&#x00A0;Instructions</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-4</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;80486</span><span 
+class="cmtt-10">&#x00A0;Instructions</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Ax</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Disable</span><span 
+class="cmtt-10">&#x00A0;extensions</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-B</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Compile</span><span 
+class="cmtt-10">&#x00A0;via</span><span 
+class="cmtt-10">&#x00A0;assembly</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-C</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Allow</span><span 
+class="cmtt-10">&#x00A0;nested</span><span 
+class="cmtt-10">&#x00A0;comments</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Dxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Define</span><span 
+class="cmtt-10">&#x00A0;macro</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Exxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Alternate</span><span 
+class="cmtt-10">&#x00A0;Assembler</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Hxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Use</span><span 
+class="cmtt-10">&#x00A0;pre-compiled</span><span 
+class="cmtt-10">&#x00A0;headers</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Ixxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Include</span><span 
+class="cmtt-10">&#x00A0;files</span><span 
+class="cmtt-10">&#x00A0;directory</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-K</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Default</span><span 
+class="cmtt-10">&#x00A0;char</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;unsigned</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Lxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Libraries</span><span 
+class="cmtt-10">&#x00A0;directory</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-M</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Generate</span><span 
+class="cmtt-10">&#x00A0;link</span><span 
+class="cmtt-10">&#x00A0;map</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-N</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Check</span><span 
+class="cmtt-10">&#x00A0;stack</span><span 
+class="cmtt-10">&#x00A0;overflow</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Ox</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Optimizations</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-P</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Force</span><span 
+class="cmtt-10">&#x00A0;C++</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-R</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Produce</span><span 
+class="cmtt-10">&#x00A0;browser</span><span 
+class="cmtt-10">&#x00A0;info</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-RT</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;Generate</span><span 
+class="cmtt-10">&#x00A0;RTTI</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-S</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Produce</span><span 
+class="cmtt-10">&#x00A0;assembly</span><span 
+class="cmtt-10">&#x00A0;output</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Txxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Set</span><span 
+class="cmtt-10">&#x00A0;assembler</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Uxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Undefine</span><span 
+class="cmtt-10">&#x00A0;macro</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-Vx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Virtual</span><span 
+class="cmtt-10">&#x00A0;table</span><span 
+class="cmtt-10">&#x00A0;control</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-X</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Suppress</span><span 
+class="cmtt-10">&#x00A0;autodep.</span><span 
+class="cmtt-10">&#x00A0;output</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-aN</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Align</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;N</span><span 
+class="cmtt-10">&#x00A0;bytes</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-b</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;Treat</span><span 
+class="cmtt-10">&#x00A0;enums</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;integers</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-c</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Compile</span><span 
+class="cmtt-10">&#x00A0;only</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-d</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Merge</span><span 
+class="cmtt-10">&#x00A0;duplicate</span><span 
+class="cmtt-10">&#x00A0;strings</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-exxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Executable</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-fxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Floating</span><span 
+class="cmtt-10">&#x00A0;point</span><span 
+class="cmtt-10">&#x00A0;options</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-gN</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Stop</span><span 
+class="cmtt-10">&#x00A0;after</span><span 
+class="cmtt-10">&#x00A0;N</span><span 
+class="cmtt-10">&#x00A0;warnings</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-iN</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Max.</span><span 
+class="cmtt-10">&#x00A0;identifier</span><span 
+class="cmtt-10">&#x00A0;length</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-jN</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Stop</span><span 
+class="cmtt-10">&#x00A0;after</span><span 
+class="cmtt-10">&#x00A0;N</span><span 
+class="cmtt-10">&#x00A0;errors</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-k</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;Standard</span><span 
+class="cmtt-10">&#x00A0;stack</span><span 
+class="cmtt-10">&#x00A0;frame</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-lx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Set</span><span 
+class="cmtt-10">&#x00A0;linker</span><span 
+class="cmtt-10">&#x00A0;option</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-nxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Output</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;directory</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-oxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Object</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-p</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Pascal</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-tWxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Create</span><span 
+class="cmtt-10">&#x00A0;Windows</span><span 
+class="cmtt-10">&#x00A0;app</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-u</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;Underscores</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;externs</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-v</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Source</span><span 
+class="cmtt-10">&#x00A0;level</span><span 
+class="cmtt-10">&#x00A0;debugging</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-wxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Warning</span><span 
+class="cmtt-10">&#x00A0;control</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-xxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Exception</span><span 
+class="cmtt-10">&#x00A0;handling</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-y</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Produce</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;number</span><span 
+class="cmtt-10">&#x00A0;info</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-zxxx</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Set</span><span 
+class="cmtt-10">&#x00A0;segment</span><span 
+class="cmtt-10">&#x00A0;names</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+    </dd><dt>BCC</dt><dd>
+<!--l. 631--><p class="indent" >    For DOS.
+</p>
+    </dd><dt>MSVC++</dt><dd>
+<!--l. 635--><p class="indent" >    For DOS.
+</p><!--l. 637--><p class="indent" >    &#8216;<span 
+class="cmtt-10">c:\msvc\bin\cl -Ic:\msvc\include -DDOS t4ht.c</span>&#8217;
+</p><!--l. 639--><p class="indent" >    In tex-live &#8216;  <span 
+class="cmtt-10">cl -D_X86_=1 -DWINVER=0x0400 -DWIN32 -D_WIN32 -DWIN32_LEAN_AND_MEAN -D_MT -D_DLL</span>
+<span 
+class="cmtt-10">-DKPATHSEA -D_IMPORT -DANSI -I. -I. -I.. -IG:\fptex\source\web2c-7.2 -c -W3 -DCRTAPI1=_cdecl</span>
+<span 
+class="cmtt-10">-DCRTAPI2=_cdecl -nologo -O2x -G5rs -Gy -c /Fodynamic\t4ht.obj .\t4ht.c</span>&#8217;
+</p><!--l. 645--><p class="indent" >    The following are the available flags (<span 
+class="cmtt-10">c:\msvc\bin\cl -help</span>).
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;C</span><span 
+class="cmtt-10">&#x00A0;COMPILER</span><span 
+class="cmtt-10">&#x00A0;OPTIONS</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-MEMORY</span><span 
+class="cmtt-10">&#x00A0;MODEL-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/AS</span><span 
+class="cmtt-10">&#x00A0;small</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/AC</span><span 
+class="cmtt-10">&#x00A0;compact</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/AM</span><span 
+class="cmtt-10">&#x00A0;medium</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/AL</span><span 
+class="cmtt-10">&#x00A0;large</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">/AH</span><span 
+class="cmtt-10">&#x00A0;huge</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/AT</span><span 
+class="cmtt-10">&#x00A0;tiny</span><span 
+class="cmtt-10">&#x00A0;model</span><span 
+class="cmtt-10">&#x00A0;(.COM</span><span 
+class="cmtt-10">&#x00A0;files)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/A&#x003C;string&#x003E;</span><span 
+class="cmtt-10">&#x00A0;(custom</span><span 
+class="cmtt-10">&#x00A0;memory</span><span 
+class="cmtt-10">&#x00A0;model)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-OPTIMIZATION-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/O</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;optimization</span><span 
+class="cmtt-10">&#x00A0;(same</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;/Ot)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/O1</span><span 
+class="cmtt-10">&#x00A0;minimize</span><span 
+class="cmtt-10">&#x00A0;space</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/O2</span><span 
+class="cmtt-10">&#x00A0;maximize</span><span 
+class="cmtt-10">&#x00A0;speed</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oa</span><span 
+class="cmtt-10">&#x00A0;assume</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;aliasing</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ob&#x003C;n&#x003E;</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;expansion</span><span 
+class="cmtt-10">&#x00A0;(default</span><span 
+class="cmtt-10">&#x00A0;n=0)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oc</span><span 
+class="cmtt-10">&#x00A0;local</span><span 
+class="cmtt-10">&#x00A0;common</span><span 
+class="cmtt-10">&#x00A0;subexpression</span><span 
+class="cmtt-10">&#x00A0;opt.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Od</span><span 
+class="cmtt-10">&#x00A0;disable</span><span 
+class="cmtt-10">&#x00A0;optimization</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oe</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;registers</span><span 
+class="cmtt-10">&#x00A0;allocation</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Of[-]</span><span 
+class="cmtt-10">&#x00A0;toggle</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;quoting</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Og</span><span 
+class="cmtt-10">&#x00A0;global</span><span 
+class="cmtt-10">&#x00A0;common</span><span 
+class="cmtt-10">&#x00A0;subexpression</span><span 
+class="cmtt-10">&#x00A0;opt.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Oi</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;intrinsic</span><span 
+class="cmtt-10">&#x00A0;functions</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ol</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;loop</span><span 
+class="cmtt-10">&#x00A0;optimizations</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/On</span><span 
+class="cmtt-10">&#x00A0;disable</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;unsafe&#8217;&#8217;</span><span 
+class="cmtt-10">&#x00A0;optimizations</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oo[-]</span><span 
+class="cmtt-10">&#x00A0;toggle</span><span 
+class="cmtt-10">&#x00A0;post</span><span 
+class="cmtt-10">&#x00A0;code-gen.</span><span 
+class="cmtt-10">&#x00A0;opt.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Op[-]</span><span 
+class="cmtt-10">&#x00A0;improve</span><span 
+class="cmtt-10">&#x00A0;floating-pt</span><span 
+class="cmtt-10">&#x00A0;consistency</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oq</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;maximum</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;optimization</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Or</span><span 
+class="cmtt-10">&#x00A0;gen.</span><span 
+class="cmtt-10">&#x00A0;common</span><span 
+class="cmtt-10">&#x00A0;exit</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;(CodeView)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Os</span><span 
+class="cmtt-10">&#x00A0;favor</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ot</span><span 
+class="cmtt-10">&#x00A0;favor</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;speed</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ov[-]</span><span 
+class="cmtt-10">&#x00A0;toggle</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;frame</span><span 
+class="cmtt-10">&#x00A0;sorting</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/OV&#x003C;n&#x003E;</span><span 
+class="cmtt-10">&#x00A0;control</span><span 
+class="cmtt-10">&#x00A0;inlining</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;func.</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ow</span><span 
+class="cmtt-10">&#x00A0;assume</span><span 
+class="cmtt-10">&#x00A0;cross-function</span><span 
+class="cmtt-10">&#x00A0;aliasing</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ox</span><span 
+class="cmtt-10">&#x00A0;maximum</span><span 
+class="cmtt-10">&#x00A0;opts.</span><span 
+class="cmtt-10">&#x00A0;(/Ob1cegilnot</span><span 
+class="cmtt-10">&#x00A0;/Gs)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Oz</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;&#8216;&#8216;unsafe&#8217;&#8217;</span><span 
+class="cmtt-10">&#x00A0;optimizations</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-CODE</span><span 
+class="cmtt-10">&#x00A0;GENERATION-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/G0</span><span 
+class="cmtt-10">&#x00A0;8086</span><span 
+class="cmtt-10">&#x00A0;instructions</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/G1</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;186</span><span 
+class="cmtt-10">&#x00A0;instructions</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/G2</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;286</span><span 
+class="cmtt-10">&#x00A0;instructions</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/G3</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;386</span><span 
+class="cmtt-10">&#x00A0;instructions</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(press</span><span 
+class="cmtt-10">&#x00A0;&#x003C;return&#x003E;</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;continue)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/GA</span><span 
+class="cmtt-10">&#x00A0;protected-mode</span><span 
+class="cmtt-10">&#x00A0;Win</span><span 
+class="cmtt-10">&#x00A0;entry/exit</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/GD</span><span 
+class="cmtt-10">&#x00A0;protected-mode</span><span 
+class="cmtt-10">&#x00A0;Win</span><span 
+class="cmtt-10">&#x00A0;entry/exit</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/GE&#x003C;x&#x003E;</span><span 
+class="cmtt-10">&#x00A0;customize</span><span 
+class="cmtt-10">&#x00A0;Windows</span><span 
+class="cmtt-10">&#x00A0;entry/exit</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gq</span><span 
+class="cmtt-10">&#x00A0;backwards</span><span 
+class="cmtt-10">&#x00A0;compatibility</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;v.</span><span 
+class="cmtt-10">&#x00A0;6</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gc</span><span 
+class="cmtt-10">&#x00A0;Pascal</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;calling</span><span 
+class="cmtt-10">&#x00A0;conventions</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gd</span><span 
+class="cmtt-10">&#x00A0;C</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;calling</span><span 
+class="cmtt-10">&#x00A0;conventions</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ge</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;stack-check</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gf</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;string</span><span 
+class="cmtt-10">&#x00A0;pooling</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ge</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;stack-check</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gf</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;string</span><span 
+class="cmtt-10">&#x00A0;pooling</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gs</span><span 
+class="cmtt-10">&#x00A0;remove</span><span 
+class="cmtt-10">&#x00A0;stack-check</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gn</span><span 
+class="cmtt-10">&#x00A0;remove</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;native</span><span 
+class="cmtt-10">&#x00A0;entry</span><span 
+class="cmtt-10">&#x00A0;points</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gp&#x003C;num&#x003E;</span><span 
+class="cmtt-10">&#x00A0;specify</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;entry</span><span 
+class="cmtt-10">&#x00A0;tables</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gr</span><span 
+class="cmtt-10">&#x00A0;_fastcall</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;calling</span><span 
+class="cmtt-10">&#x00A0;convention</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gt[num]</span><span 
+class="cmtt-10">&#x00A0;data</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;threshold</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/GW</span><span 
+class="cmtt-10">&#x00A0;real-mode</span><span 
+class="cmtt-10">&#x00A0;Windows</span><span 
+class="cmtt-10">&#x00A0;entry/exit</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gw</span><span 
+class="cmtt-10">&#x00A0;real-mode</span><span 
+class="cmtt-10">&#x00A0;Windows</span><span 
+class="cmtt-10">&#x00A0;entry/exit</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gx</span><span 
+class="cmtt-10">&#x00A0;assume</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;data</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;near</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Gx-</span><span 
+class="cmtt-10">&#x00A0;assume</span><span 
+class="cmtt-10">&#x00A0;that</span><span 
+class="cmtt-10">&#x00A0;data</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;far</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Gy</span><span 
+class="cmtt-10">&#x00A0;separate</span><span 
+class="cmtt-10">&#x00A0;functions</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;linker</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zr</span><span 
+class="cmtt-10">&#x00A0;check</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;pointers</span><span 
+class="cmtt-10">&#x00A0;(/f</span><span 
+class="cmtt-10">&#x00A0;only)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-OUTPUT</span><span 
+class="cmtt-10">&#x00A0;FILES-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fa[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;assembly</span><span 
+class="cmtt-10">&#x00A0;listing</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Fc[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;source/object</span><span 
+class="cmtt-10">&#x00A0;listing</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fd[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;.PDB</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Fe&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;executable</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fl[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;object</span><span 
+class="cmtt-10">&#x00A0;listing</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Fm[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;map</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fo&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;object</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Fr[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;.SBR</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fp&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;.PCH</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/FR[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;extended</span><span 
+class="cmtt-10">&#x00A0;.SBR</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Fs[file]</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;source</span><span 
+class="cmtt-10">&#x00A0;listing</span><span 
+class="cmtt-10">&#x00A0;filename</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-PREPROCESSOR-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/C</span><span 
+class="cmtt-10">&#x00A0;don&#8217;t</span><span 
+class="cmtt-10">&#x00A0;strip</span><span 
+class="cmtt-10">&#x00A0;comments</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/D&#x003C;name&#x003E;[=|#text]</span><span 
+class="cmtt-10">&#x00A0;define</span><span 
+class="cmtt-10">&#x00A0;macro</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/E</span><span 
+class="cmtt-10">&#x00A0;preprocess</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;stdout</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/EP</span><span 
+class="cmtt-10">&#x00A0;same</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;/E</span><span 
+class="cmtt-10">&#x00A0;but</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;#line</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/I&#x003C;directory&#x003E;</span><span 
+class="cmtt-10">&#x00A0;add</span><span 
+class="cmtt-10">&#x00A0;#include</span><span 
+class="cmtt-10">&#x00A0;path</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/P</span><span 
+class="cmtt-10">&#x00A0;preprocess</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/U&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;remove</span><span 
+class="cmtt-10">&#x00A0;predefined</span><span 
+class="cmtt-10">&#x00A0;macro</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/u</span><span 
+class="cmtt-10">&#x00A0;remove</span><span 
+class="cmtt-10">&#x00A0;all</span><span 
+class="cmtt-10">&#x00A0;defined</span><span 
+class="cmtt-10">&#x00A0;macros</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(press</span><span 
+class="cmtt-10">&#x00A0;&#x003C;return&#x003E;</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;continue)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/X</span><span 
+class="cmtt-10">&#x00A0;ignore</span><span 
+class="cmtt-10">&#x00A0;"standard</span><span 
+class="cmtt-10">&#x00A0;places"</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-LANGUAGE-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/vd{0|1}</span><span 
+class="cmtt-10">&#x00A0;disable/enable</span><span 
+class="cmtt-10">&#x00A0;vtordisp</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/vm&#x003C;x&#x003E;</span><span 
+class="cmtt-10">&#x00A0;type</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;pointers</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;members</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Z7</span><span 
+class="cmtt-10">&#x00A0;C</span><span 
+class="cmtt-10">&#x00A0;7</span><span 
+class="cmtt-10">&#x00A0;style</span><span 
+class="cmtt-10">&#x00A0;CodeView</span><span 
+class="cmtt-10">&#x00A0;information</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Za</span><span 
+class="cmtt-10">&#x00A0;disable</span><span 
+class="cmtt-10">&#x00A0;extensions</span><span 
+class="cmtt-10">&#x00A0;(implies</span><span 
+class="cmtt-10">&#x00A0;/Op)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zd</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;number</span><span 
+class="cmtt-10">&#x00A0;information</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ze</span><span 
+class="cmtt-10">&#x00A0;enable</span><span 
+class="cmtt-10">&#x00A0;extensions</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zg</span><span 
+class="cmtt-10">&#x00A0;generate</span><span 
+class="cmtt-10">&#x00A0;function</span><span 
+class="cmtt-10">&#x00A0;prototypes</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Zi</span><span 
+class="cmtt-10">&#x00A0;prepare</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;debugging</span><span 
+class="cmtt-10">&#x00A0;(CodeView)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zl</span><span 
+class="cmtt-10">&#x00A0;omit</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;library</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;.OBJ</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Zp[n]</span><span 
+class="cmtt-10">&#x00A0;pack</span><span 
+class="cmtt-10">&#x00A0;structs</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;n-byte</span><span 
+class="cmtt-10">&#x00A0;boundary</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zs</span><span 
+class="cmtt-10">&#x00A0;check</span><span 
+class="cmtt-10">&#x00A0;syntax</span><span 
+class="cmtt-10">&#x00A0;only</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-FLOATING</span><span 
+class="cmtt-10">&#x00A0;POINT-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/FPa</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;altmath</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/FPc</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;emulator</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">/FPc87</span><span 
+class="cmtt-10">&#x00A0;calls</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;8087</span><span 
+class="cmtt-10">&#x00A0;library</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/FPi</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;emulator</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/FPi87</span><span 
+class="cmtt-10">&#x00A0;inline</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;8087</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-SOURCE</span><span 
+class="cmtt-10">&#x00A0;LISTING-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Sl&#x003C;columns&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;line</span><span 
+class="cmtt-10">&#x00A0;width</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Sp&#x003C;lines&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;page</span><span 
+class="cmtt-10">&#x00A0;length</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/St&#x003C;string&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;title</span><span 
+class="cmtt-10">&#x00A0;string</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ss&#x003C;string&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;subtitle</span><span 
+class="cmtt-10">&#x00A0;string</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-MISCELLANEOUS-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/batch</span><span 
+class="cmtt-10">&#x00A0;specify</span><span 
+class="cmtt-10">&#x00A0;batch</span><span 
+class="cmtt-10">&#x00A0;mode</span><span 
+class="cmtt-10">&#x00A0;compilation</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Bm&#x003C;num&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;compiler&#8217;s</span><span 
+class="cmtt-10">&#x00A0;available</span><span 
+class="cmtt-10">&#x00A0;mem.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/c</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;only,</span><span 
+class="cmtt-10">&#x00A0;no</span><span 
+class="cmtt-10">&#x00A0;link</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/H&#x003C;num&#x003E;</span><span 
+class="cmtt-10">&#x00A0;external</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;length</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/J</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;char</span><span 
+class="cmtt-10">&#x00A0;type</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;unsigned</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/f</span><span 
+class="cmtt-10">&#x00A0;select</span><span 
+class="cmtt-10">&#x00A0;fast</span><span 
+class="cmtt-10">&#x00A0;compiler</span><span 
+class="cmtt-10">&#x00A0;(default)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/f-</span><span 
+class="cmtt-10">&#x00A0;select</span><span 
+class="cmtt-10">&#x00A0;optimizing</span><span 
+class="cmtt-10">&#x00A0;compiler</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Yc</span><span 
+class="cmtt-10">&#x00A0;create</span><span 
+class="cmtt-10">&#x00A0;.PCH</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Yd</span><span 
+class="cmtt-10">&#x00A0;put</span><span 
+class="cmtt-10">&#x00A0;debug</span><span 
+class="cmtt-10">&#x00A0;info</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;.PCH</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Yu</span><span 
+class="cmtt-10">&#x00A0;use</span><span 
+class="cmtt-10">&#x00A0;.PCH</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/YX</span><span 
+class="cmtt-10">&#x00A0;automatic</span><span 
+class="cmtt-10">&#x00A0;precompiled</span><span 
+class="cmtt-10">&#x00A0;header</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/nologo</span><span 
+class="cmtt-10">&#x00A0;suppress</span><span 
+class="cmtt-10">&#x00A0;copyright</span><span 
+class="cmtt-10">&#x00A0;message</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(press</span><span 
+class="cmtt-10">&#x00A0;&#x003C;return&#x003E;</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;continue)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Mq</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;QuickWin</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/ND&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;data</span><span 
+class="cmtt-10">&#x00A0;segment</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/NM&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;segment</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/NQ&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;combine</span><span 
+class="cmtt-10">&#x00A0;p-code</span><span 
+class="cmtt-10">&#x00A0;temp</span><span 
+class="cmtt-10">&#x00A0;segments</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/NT&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;segment</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/NV&#x003C;name&#x003E;</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;far</span><span 
+class="cmtt-10">&#x00A0;v-table</span><span 
+class="cmtt-10">&#x00A0;segment</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Tc&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;without</span><span 
+class="cmtt-10">&#x00A0;.c</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Tp&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;compile</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;without</span><span 
+class="cmtt-10">&#x00A0;.cpp</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/V&#x003C;string&#x003E;</span><span 
+class="cmtt-10">&#x00A0;set</span><span 
+class="cmtt-10">&#x00A0;version</span><span 
+class="cmtt-10">&#x00A0;string</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/W&#x003C;n&#x003E;</span><span 
+class="cmtt-10">&#x00A0;warning</span><span 
+class="cmtt-10">&#x00A0;level</span><span 
+class="cmtt-10">&#x00A0;(default</span><span 
+class="cmtt-10">&#x00A0;n=1)</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/w</span><span 
+class="cmtt-10">&#x00A0;disable</span><span 
+class="cmtt-10">&#x00A0;all</span><span 
+class="cmtt-10">&#x00A0;warnings</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/WX</span><span 
+class="cmtt-10">&#x00A0;treat</span><span 
+class="cmtt-10">&#x00A0;all</span><span 
+class="cmtt-10">&#x00A0;warnings</span><span 
+class="cmtt-10">&#x00A0;as</span><span 
+class="cmtt-10">&#x00A0;errors</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Zn</span><span 
+class="cmtt-10">&#x00A0;turn</span><span 
+class="cmtt-10">&#x00A0;off</span><span 
+class="cmtt-10">&#x00A0;SBRPACK</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;.SBR</span><span 
+class="cmtt-10">&#x00A0;files</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-MASM</span><span 
+class="cmtt-10">&#x00A0;SUPPORT-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/MA&#x003C;MASM</span><span 
+class="cmtt-10">&#x00A0;switch&#x003E;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ta&#x003C;file&#x003E;</span><span 
+class="cmtt-10">&#x00A0;assemble</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;without</span><span 
+class="cmtt-10">&#x00A0;.asm</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;-LINKING-</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/F</span><span 
+class="cmtt-10">&#x00A0;&#x003C;hex_num&#x003E;</span><span 
+class="cmtt-10">&#x00A0;stack</span><span 
+class="cmtt-10">&#x00A0;size</span><span 
+class="cmtt-10">&#x00A0;(hex.</span><span 
+class="cmtt-10">&#x00A0;bytes)</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Lr</span><span 
+class="cmtt-10">&#x00A0;append</span><span 
+class="cmtt-10">&#x00A0;&#8217;r&#8217;</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;default</span><span 
+class="cmtt-10">&#x00A0;lib</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;.OBJ</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/link</span><span 
+class="cmtt-10">&#x00A0;[lib]</span><span 
+class="cmtt-10">&#x00A0;give</span><span 
+class="cmtt-10">&#x00A0;lib</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;linker</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Ln</span><span 
+class="cmtt-10">&#x00A0;do</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;link</span><span 
+class="cmtt-10">&#x00A0;CRT.LIB</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">/Ld</span><span 
+class="cmtt-10">&#x00A0;select</span><span 
+class="cmtt-10">&#x00A0;dynamically-linked</span><span 
+class="cmtt-10">&#x00A0;library</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;/Lw</span><span 
+class="cmtt-10">&#x00A0;select</span><span 
+class="cmtt-10">&#x00A0;statically-linked</span><span 
+class="cmtt-10">&#x00A0;library</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+    </dd></dl>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-4-11"  name="QQ1-4-11">DJGPP</a></h3>
+<div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;tex4ht.c</span><span 
+class="cmtt-10">&#x00A0;[__DJGPP__]</span><span 
+class="cmtt-10">&#x00A0;(ANSI,</span><span 
+class="cmtt-10">&#x00A0;DOS_GIF_FILE):</span><span 
+class="cmtt-10">&#x00A0;Define.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(WRITE_BIN_FLAGS,</span><span 
+class="cmtt-10">&#x00A0;READ_BIN_FLAGS):</span><span 
+class="cmtt-10">&#x00A0;Use</span><span 
+class="cmtt-10">&#x00A0;binary</span><span 
+class="cmtt-10">&#x00A0;mode</span><span 
+class="cmtt-10">&#x00A0;with</span><span 
+class="cmtt-10">&#x00A0;DJGPP.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(dos_file_names):</span><span 
+class="cmtt-10">&#x00A0;New</span><span 
+class="cmtt-10">&#x00A0;variable.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(sig_err):</span><span 
+class="cmtt-10">&#x00A0;If</span><span 
+class="cmtt-10">&#x00A0;got</span><span 
+class="cmtt-10">&#x00A0;fatal</span><span 
+class="cmtt-10">&#x00A0;signal</span><span 
+class="cmtt-10">&#x00A0;other</span><span 
+class="cmtt-10">&#x00A0;than</span><span 
+class="cmtt-10">&#x00A0;SIGINT</span><span 
+class="cmtt-10">&#x00A0;or</span><span 
+class="cmtt-10">&#x00A0;SIGQUIT,</span><span 
+class="cmtt-10">&#x00A0;don&#8217;t</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;return</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;caller,</span><span 
+class="cmtt-10">&#x00A0;since</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;program</span><span 
+class="cmtt-10">&#x00A0;will</span><span 
+class="cmtt-10">&#x00A0;be</span><span 
+class="cmtt-10">&#x00A0;aborted</span><span 
+class="cmtt-10">&#x00A0;otherwise.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(main)</span><span 
+class="cmtt-10">&#x00A0;[KPATHSEA]:</span><span 
+class="cmtt-10">&#x00A0;If</span><span 
+class="cmtt-10">&#x00A0;input</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;stdin</span><span 
+class="cmtt-10">&#x00A0;which</span><span 
+class="cmtt-10">&#x00A0;is</span><span 
+class="cmtt-10">&#x00A0;not</span><span 
+class="cmtt-10">&#x00A0;a</span><span 
+class="cmtt-10">&#x00A0;console</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;device,</span><span 
+class="cmtt-10">&#x00A0;switch</span><span 
+class="cmtt-10">&#x00A0;it</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;binary</span><span 
+class="cmtt-10">&#x00A0;mode.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Set</span><span 
+class="cmtt-10">&#x00A0;dos_file_names</span><span 
+class="cmtt-10">&#x00A0;to</span><span 
+class="cmtt-10">&#x00A0;TRUE</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;all</span><span 
+class="cmtt-10">&#x00A0;DOS</span><span 
+class="cmtt-10">&#x00A0;platforms,</span><span 
+class="cmtt-10">&#x00A0;FALSE</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;Unix</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;WIN32,</span><span 
+class="cmtt-10">&#x00A0;and</span><span 
+class="cmtt-10">&#x00A0;compute</span><span 
+class="cmtt-10">&#x00A0;at</span><span 
+class="cmtt-10">&#x00A0;runtime</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;DJGPP.</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Simplify</span><span 
+class="cmtt-10">&#x00A0;logic</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;finding</span><span 
+class="cmtt-10">&#x00A0;the</span><span 
+class="cmtt-10">&#x00A0;init</span><span 
+class="cmtt-10">&#x00A0;file</span><span 
+class="cmtt-10">&#x00A0;by</span><span 
+class="cmtt-10">&#x00A0;pushing</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;HOME=C:</span><span 
+class="cmtt-10">&#x00A0;into</span><span 
+class="cmtt-10">&#x00A0;environment</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;$HOME</span><span 
+class="cmtt-10">&#x00A0;isn&#8217;t</span><span 
+class="cmtt-10">&#x00A0;defined</span><span 
+class="cmtt-10">&#x00A0;on</span><span 
+class="cmtt-10">&#x00A0;DOSISH</span><span 
+class="cmtt-10">&#x00A0;systems.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+           <!--l. 763--><p class="noindent" ><a 
+ name="PrTx11001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx8013"><span 
+class="cmtt-10">DJGPP</span></a><a 
+ name="PrTx11002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">__DJGPP__</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">DOS_WIN32</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">ANSI</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 773--><p class="noindent" ><a 
+ name="PrTx11003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe14.html#PrTx51011"><span 
+class="cmtt-10">DJGPP signals</span></a><a 
+ name="PrTx11004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#ifdef</span>&#x00A0;<span 
+class="cmtt-10">__DJGPP__</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">(s</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">SIGINT</span>&#x00A0;<span 
+class="cmtt-10">&amp;&amp;</span>&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">SIGQUIT)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">exit(EXIT_FAILURE);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p>
+
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-t4ht.html#QQ2-4-12"  name="QQ1-4-12">Slashes n Directory Pathes</a></h3>
+           <!--l. 789--><p class="noindent" ><a 
+ href="#PrTx8047"  name="PrTx12001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3063"><span 
+class="cmtt-10">defines</span></a><a 
+ name="PrTx12002"  href="tex4ht-t4htSe5.html#PrTx16012"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">defined(DOS_WIN32)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">defined(__DJGPP__)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">dir_path_slash(str)</span>&#x00A0;<span 
+class="cmtt-10">(is_forward_slash(str)?</span>&#x00A0;<span 
+class="cmtt-10">&#8217;/&#8217;</span>&#x00A0;<span 
+class="cmtt-10">:</span>&#x00A0;<span 
+class="cmtt-10">&#8217;\\&#8217;)</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#else</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#define</span>&#x00A0;<span 
+class="cmtt-10">dir_path_slash(str)</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">&#8217;/&#8217;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 797--><p class="noindent" ><a 
+ name="PrTx12003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3067"><span 
+class="cmtt-10">header</span>&#x00A0;<span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx12004"  href="tex4ht-t4htSe4.html#PrTx15040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">defined(DOS_WIN32)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">defined(__DJGPP__)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">is_forward_slash(</span>&#x00A0;<span 
+class="cmtt-10">ARG_I(Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 809--><p class="noindent" ><a 
+ name="PrTx12005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3069"><span 
+class="cmtt-10">functions</span></a><a 
+ name="PrTx12006"  href="tex4ht-t4htSe4.html#PrTx15042"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">#if</span>&#x00A0;<span 
+class="cmtt-10">defined(DOS_WIN32)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">defined(__DJGPP__)</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">is_forward_slash</span><strong><span 
+class="cmtt-10">(</span></strong><span 
+class="cmtt-10">str)</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Q_CHAR</span>&#x00A0;<span 
+class="cmtt-10">*</span>&#x00A0;<span 
+class="cmtt-10">str</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">;{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">*str</span>&#x00A0;<span 
+class="cmtt-10">){</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">*(str++)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;/&#8217;</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">TRUE;</span>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">return</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">#endif</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 818--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe4.html" >next</a>] [<a 
+ href="tex4ht-t4htSe2.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe2.html#tailtex4ht-t4htSe2.html" >prev-tail</a>] [<a 
+ href="tex4ht-t4htSe3.html" >front</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe3.html" >up</a>] </p></div>
+<!--l. 818--><p class="indent" >    <a 
+  name="tailtex4ht-t4htSe3.html"></a>  </p> 
+</body></html> 

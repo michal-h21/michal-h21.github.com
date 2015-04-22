@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>color.sty</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 27098--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe196.html" >next</a>] [<a 
+ href="tex4ht-4htSe194.html" >prev</a>] [<a 
+ href="tex4ht-4htSe194.html#tailtex4ht-4htSe194.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe195.html">tail</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe195.html" >up</a>] </p></div>
+    <h3 class="SectionHead">66.13 <a 
+ href="tex4ht-4htPa1.html#QQ2-424-386"  name="QQ1-424-386">color.sty</a></h3>
+    <div class="TableOfContents">
+    </div>
+<!--l. 27104--><p class="indent" >    Was &#8216;<span 
+class="cmtt-10">\def\color@setgroup{\begingroup \ht:special {color push \current@color }% \aftergroup</span>
+<span 
+class="cmtt-10">\reset@color }</span>&#8217; indirectly through <span 
+class="cmtt-10">\set@color</span>. It caused an extra leading line for verbatim environments.
+As a side comment, the <span 
+class="cmtt-10">\aftergroup </span>might cause an ordering problem, if html code is attached to
+it.
+</p>
+      <!--l. 27132--><p class="indent" ><a 
+ name="PrTx386001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386001"  name="QPrTx1396"><span 
+class="cmtt-10">color.4ht</span></a><a 
+ name="PrTx386002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">color.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx386003"  href="tex4ht-4htSe194.html#PrTx385003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx386004"  href="tex4ht-4htSe196.html#PrTx387004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">color:def\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\color:def\def</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\endinput\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:temp=\begingroup</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\color@setgroup=\:temp</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx386005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx386011"><span 
+class="cmtt-10">def HColor</span></a><a 
+ name="PrTx386006"  href="tex4ht-4htSe271.html#PrTx484008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{color}{1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1#2#3{\protect\leavevmode{\protect\a:textcolor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\color#1{#2}#3\protect\b:textcolor}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@textcolor=\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{textcolor}{2}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx386007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx386017"><span 
+class="cmtt-10">fix color</span></a><a 
+ name="PrTx386008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx386009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx386015"><span 
+class="cmtt-10">boxes of color</span></a><a 
+ name="PrTx386010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{color}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27140--><p class="noindent" ><a 
+ name="PrTx386011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386005"  name="QPrTx1397"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">HColor</span></a><a 
+ name="PrTx386012"  href="#PrTx386034"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HColor{\:warning{\string\Hcode{...}{...}</span>&#x00A0;<span 
+class="cmtt-10">is</span>&#x00A0;<span 
+class="cmtt-10">deprecated;</span>&#x00A0;<span 
+class="cmtt-10">Use</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\string\Configure{HColor}{...}{...}}\Configure{HColor}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{HColor}[2]{\if</span>&#x00A0;<span 
+class="cmtt-10">!#1!</span><a 
+ name="PrTx386013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx386031"><span 
+class="cmtt-10">internal HColor</span></a><a 
+ name="PrTx386014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\edef\csname</span>&#x00A0;<span 
+class="cmtt-10">CLR:#1\endcsname{#2}\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\a:fcol=\empty</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\b:fcol=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\color@b@x\relax{\color#1{#2}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\color@box=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\a:fcol=\a:fcolorbox</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\b:fcol=\b:fcolorbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\color@b@x{\fboxsep\z@\color#1{#2}\fbox}{\color#1{#3}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\color@fbox=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{\relax}\ifx\:temp\:tempa\else\leavevmode\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\a:fcol</span>&#x00A0;<span 
+class="cmtt-10">#1{\ifcolors@</span>&#x00A0;<span 
+class="cmtt-10">\a:colorbox\fi</span>&#x00A0;<span 
+class="cmtt-10">\leavevmode</span>&#x00A0;<span 
+class="cmtt-10">#2%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\set@color#3}\ifcolors@</span>&#x00A0;<span 
+class="cmtt-10">\b:colorbox\fi}}\b:fcol}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\color@b@x=\:temp</span>
+-_-_-</span>
+
+           </p><!--l. 27174--><p class="noindent" ><a 
+ name="PrTx386015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386009"  name="QPrTx1399"><span 
+class="cmtt-10">boxes</span>&#x00A0;<span 
+class="cmtt-10">of</span>&#x00A0;<span 
+class="cmtt-10">color</span></a><a 
+ name="PrTx386016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcolors@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{\relax}\ifx\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:colorbox</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\a:fcolorbox</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#1{\leavevmode</span>&#x00A0;<span 
+class="cmtt-10">#2{\set@color#3}}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifcolors@</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp{#1}\def\:tempa{\relax}\ifx\:temp\:tempa</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\b:colorbox</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\b:fcolorbox</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\color@b@x\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{colorbox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{fcolorbox}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27184--><p class="noindent" ><a 
+ name="PrTx386017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386007"  name="QPrTx1400"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">color</span></a><a 
+ name="PrTx386018"  href="#PrTx386020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pagecolor{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\begingroup</span>&#x00A0;<span 
+class="cmtt-10">\a:pagecolor</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\ignorespaces\endgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\set@color\set@page@color</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\color}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{pagecolor}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27195--><p class="noindent" ><a 
+ href="#PrTx386017"  name="PrTx386019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386007"  name="QPrTx1401"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">color</span></a><a 
+ name="PrTx386020"  href="#PrTx386022"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@undeclaredcolor[#1]#2{\a:color{#1</span>&#x00A0;<span 
+class="cmtt-10">#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifundefined{color@#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\@latex@error{Undefined</span>&#x00A0;<span 
+class="cmtt-10">color</span>&#x00A0;<span 
+class="cmtt-10">model</span>&#x00A0;<span 
+class="cmtt-10">&#8216;#1&#8217;}\@ehd}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\csname</span>&#x00A0;<span 
+class="cmtt-10">color@#1\endcsname\current@color{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\set@color}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ignorespaces}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\@declaredcolor{\a:color{##1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27215--><p class="noindent" ><a 
+ href="#PrTx386019"  name="PrTx386021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386007"  name="QPrTx1402"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">color</span></a><a 
+ name="PrTx386022"  href="#PrTx386026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{SetHColor}[2]{{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\let\expandafter\:temp</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">CLR:#2\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{#2</span>&#x00A0;<span 
+class="cmtt-10">//}\expandafter\get:HColor\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\HColor\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx386023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe196.html#PrTx387015"><span 
+class="cmtt-10">xcolor SetHColor</span></a><a 
+ name="PrTx386024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\HColor=\:temp</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\HColor\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:warning{missing</span>&#x00A0;<span 
+class="cmtt-10">\string\Configure{HColor}{#2}{...}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(in</span>&#x00A0;<span 
+class="cmtt-10">LaTeX:</span>&#x00A0;<span 
+class="cmtt-10">\csname\string\color</span>&#x00A0;<span 
+class="cmtt-10">@#2\endcsname)}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\global\expandafter\let\csname</span>&#x00A0;<span 
+class="cmtt-10">CLR:#2\endcsname=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">#1\fi</span>&#x00A0;<span 
+class="cmtt-10">}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 27218--><p class="noindent" >The first argument to SetHColor above is the XML code to be added for the color, with the color itself referenced by
+<span 
+class="cmtt-10">\HColor</span>. The second argument is the same color name as provided to <span 
+class="cmtt-10">\color </span>of color.sty. That is, the configuration
+is employed in the following manner.
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{SetHColor}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{#1:</span><span 
+class="cmtt-10">&#x00A0;XML</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;color</span><span 
+class="cmtt-10">&#x00A0;provided</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;\HColor}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{#2:</span><span 
+class="cmtt-10">&#x00A0;latex</span><span 
+class="cmtt-10">&#x00A0;color</span><span 
+class="cmtt-10">&#x00A0;name}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 27229--><p class="indent" >    The SetHColor typically is requsted indirectly in the following manner
+
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\a:color{latex</span><span 
+class="cmtt-10">&#x00A0;color</span><span 
+class="cmtt-10">&#x00A0;name}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 27235--><p class="indent" >    Where <span 
+class="cmtt-10">\a:color </span>is similar to.
+</p><div class="Verbatim"><span 
+class="cmtt-10">\Configure{color}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{SetHColor}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{...XML</span><span 
+class="cmtt-10">&#x00A0;code</span><span 
+class="cmtt-10">&#x00A0;for</span><span 
+class="cmtt-10">&#x00A0;color</span><span 
+class="cmtt-10">&#x00A0;provided</span><span 
+class="cmtt-10">&#x00A0;in</span><span 
+class="cmtt-10">&#x00A0;\HColor...}%</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 27248--><p class="indent" >    The <span 
+class="cmtt-10">\get:HColor </span>does the job of looking for XML color value, and it assignes that value to <span 
+class="cmtt-10">\HColor</span>.
+</p>
+      <!--l. 27267--><p class="indent" ><a 
+ href="#PrTx386021"  name="PrTx386025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386007"  name="QPrTx1403"><span 
+class="cmtt-10">fix</span>&#x00A0;<span 
+class="cmtt-10">color</span></a><a 
+ name="PrTx386026"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:HColor#1</span>&#x00A0;<span 
+class="cmtt-10">#2//{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">HColor:#1\endcsname\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\HColor=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx386027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx386029"><span 
+class="cmtt-10">color from def</span></a><a 
+ name="PrTx386028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">HColor:#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">#2//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:HColor:gray:{\def\HColor:gray##1</span>&#x00A0;<span 
+class="cmtt-10">##2//}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HColor:gray}{\Configure{HColor}{}{}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:HColor:rgb:{\def\HColor:rgb##1,##2,##3</span>&#x00A0;<span 
+class="cmtt-10">##4//}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HColor:rgb}{\Configure{HColor}{}{}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\c:HColor:cmyk:{\def\HColor:cmyk##1,##2,##3,##4</span>&#x00A0;<span 
+class="cmtt-10">##5//}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{HColor:cmyk}{\Configure{HColor}{}{}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27276--><p class="noindent" ><a 
+ name="PrTx386029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386027"  name="QPrTx1404"><span 
+class="cmtt-10">color</span>&#x00A0;<span 
+class="cmtt-10">from</span>&#x00A0;<span 
+class="cmtt-10">def</span></a><a 
+ name="PrTx386030"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname\string\color</span>&#x00A0;<span 
+class="cmtt-10">@#1\endcsname</span>&#x00A0;<span 
+class="cmtt-10">\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx</span>&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">colortyp:\endcsname\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">colortyp:\expandafter\expandafter\expandafter\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\string\color</span>&#x00A0;<span 
+class="cmtt-10">@#1\expandafter\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<span 
+class="cmtt-10">.</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27282--><p class="noindent" ><a 
+ name="PrTx386031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386013"  name="QPrTx1405"><span 
+class="cmtt-10">internal</span>&#x00A0;<span 
+class="cmtt-10">HColor</span></a><a 
+ name="PrTx386032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\if!#2!\let\HColor=\relax</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\edef\HColor{#2}\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 27301--><p class="noindent" ><a 
+ href="#PrTx386011"  name="PrTx386033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx386005"  name="QPrTx1406"><span 
+class="cmtt-10">def</span>&#x00A0;<span 
+class="cmtt-10">HColor</span></a><a 
+ name="PrTx386034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\@ifundefined{color@#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\c@lor@error{model</span>&#x00A0;<span 
+class="cmtt-10">&#8216;#2&#8217;}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\@ifundefined{\string\color</span>&#x00A0;<span 
+class="cmtt-10">@#1}{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\PackageInfo{color}{Redefining</span>&#x00A0;<span 
+class="cmtt-10">color</span>&#x00A0;<span 
+class="cmtt-10">#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">color@#2\expandafter\endcsname</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname\string\color</span>&#x00A0;<span 
+class="cmtt-10">@#1\endcsname{#3}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\definecolor\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defIII\definecolor{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\ifx\csname</span>&#x00A0;<span 
+class="cmtt-10">HColor:##2\endcsname\relax\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">HColor:##2\endcsname</span>&#x00A0;<span 
+class="cmtt-10">##3</span>&#x00A0;<span 
+class="cmtt-10">//%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{{HColor}{##1}{\HColor}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\Configure\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p><!--l. 27304--><p class="noindent" >The <span 
+class="cmtt-10">\color{red} </span>instruction might be problematic since it does not on its own determine the extent of the text to
+be colored. As a result, its effect can cross logical boundaries. That is against the philosophy of markup languages in
+general and of XML in particular.
+</p><!--l. 27309--><p class="indent" >    It is possible to implement the <span 
+class="cmtt-10">\color{...} </span>feature but I&#8217;m not sure it is desirable to do so. I
+think it is preferable to expect users to use commands of the form <span 
+class="cmtt-10">\textcolor{red}{...} </span>for code
+fragments.
+
+</p>
+    <!--l. 27319--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe196.html" >next</a>] [<a 
+ href="tex4ht-4htSe194.html" >prev</a>] [<a 
+ href="tex4ht-4htSe194.html#tailtex4ht-4htSe194.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe195.html" >front</a>] [<a 
+ href="tex4ht-4htCh66.html#tex4ht-4htSe195.html" >up</a>] </p></div>
+<!--l. 27319--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe195.html"></a> </p> 
+</body></html> 

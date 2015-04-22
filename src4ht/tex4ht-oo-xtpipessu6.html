@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Remove Extra Column Declarations</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-oo-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:53:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-oo-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 424--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu7.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu5.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu5.html#tailtex4ht-oo-xtpipessu5.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oo-xtpipessu6.html">tail</a>] [<a 
+ href="tex4ht-oo-xtpipesse2.html#tex4ht-oo-xtpipessu6.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">2.3   </span> <a 
+  id="x9-90002.3"></a>Remove Extra Column Declarations</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-17"><div class="head">
+       <a 
+ id="PrTx9001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oo-xtpipessu4.html#PrTx7011"  id="QPrTx17"><span 
+class="cmtt-10">remove</span><span 
+class="cmtt-10">&#x00A0;child</span><span 
+class="cmtt-10">&#x00A0;spaces</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;row</span></a><a 
+ id="PrTx9002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">tblCell</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblRow.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;tblCell</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;d</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblCell.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;justSpace(tblCell)</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow.removeChild(tblCell);</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblCell</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;d;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-18"><div class="head">
+       <a 
+ id="PrTx9003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oo-xtpipessu4.html#PrTx7015"  id="QPrTx18"><span 
+class="cmtt-10">n</span><span 
+class="cmtt-10">&#x00A0;:=</span><span 
+class="cmtt-10">&#x00A0;max</span><span 
+class="cmtt-10">&#x00A0;number</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;cols</span></a><a 
+ id="PrTx9004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;tblRow</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(tblRow.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow.getNodeName().equals("table:table-row")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx9007"><span 
+class="cmtt-10">m := number of columns</span></a><a 
+ id="PrTx9006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;m</span><span 
+class="cmtt-10">&#x00A0;&#x003E;</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;){</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;m;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblRow.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-19"><div class="head">
+       <a 
+ id="PrTx9007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx9005"  id="QPrTx19"><span 
+class="cmtt-10">m</span><span 
+class="cmtt-10">&#x00A0;:=</span><span 
+class="cmtt-10">&#x00A0;number</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;columns</span></a><a 
+ id="PrTx9008"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">int</span><span 
+class="cmtt-10">&#x00A0;m</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;0;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">tblCell</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblRow.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;tblCell</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(tblCell.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblCell.getNodeName().equals("table:table-cell")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;m++;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx9009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipessu7.html#PrTx10001"><span 
+class="cmtt-10">table:table-cell -= empty text:p</span></a><a 
+ id="PrTx9010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblCell</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblCell.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-20"><div class="head">
+       <a 
+ id="PrTx9011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oo-xtpipessu4.html#PrTx7017"  id="QPrTx20"><span 
+class="cmtt-10">remove</span><span 
+class="cmtt-10">&#x00A0;extra</span><span 
+class="cmtt-10">&#x00A0;col</span><span 
+class="cmtt-10">&#x00A0;declarations</span></a><a 
+ id="PrTx9012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getFirstChild();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">while(</span><span 
+class="cmtt-10">&#x00A0;tblRow</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;d</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;tblRow.getNextSibling();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;(tblRow.getNodeType()</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;Node.ELEMENT_NODE)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow.getNodeName().equals("table:table-column")</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;n--;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;n</span><span 
+class="cmtt-10">&#x00A0;&#x003C;</span><span 
+class="cmtt-10">&#x00A0;0</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow.getParentNode().removeChild(tblRow);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;tblRow</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;d;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 496--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu7.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu5.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu5.html#tailtex4ht-oo-xtpipessu5.html" >prev-tail</a>] [<a 
+ href="tex4ht-oo-xtpipessu6.html" >front</a>] [<a 
+ href="tex4ht-oo-xtpipesse2.html#tex4ht-oo-xtpipessu6.html" >up</a>] </p></div>
+<!--l. 496--><p class="indent" >   <a 
+  id="tailtex4ht-oo-xtpipessu6.html"></a> </p> 
+</body></html> 

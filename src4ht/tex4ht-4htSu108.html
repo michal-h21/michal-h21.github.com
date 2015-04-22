@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Fix</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 22484--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe145.html" >next</a>] [<a 
+ href="tex4ht-4htSu107.html" >prev</a>] [<a 
+ href="tex4ht-4htSu107.html#tailtex4ht-4htSu107.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu108.html">tail</a>] [<a 
+ href="tex4ht-4htSe144.html#tex4ht-4htSu108.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe144.html#QQ2-353-318"  name="QQ1-353-318">Fix</a></h3>
+           <!--l. 22498--><p class="noindent" ><a 
+ href="tex4ht-4htSu106.html#PrTx316001"  name="PrTx318001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh61.html#PrTx311023"  name="QPrTx1142"><span 
+class="cmtt-10">bib</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;<span 
+class="cmtt-10">amsppt.sty</span></a><a 
+ name="PrTx318002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\makerefbox#1#2#3{\endgraf</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\z@\lastbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\setbox\@ne\hbox{\unhbox\holdoverbox</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid\z@\else\unhbox\z@\unskip\unskip\unpenalty\fi}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\setbox\curbox\box</span>&#x00A0;<span 
+class="cmtt-10">\@ne</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifvoid#2\else\Err@{Redundant</span>&#x00A0;<span 
+class="cmtt-10">\string#1;</span>&#x00A0;<span 
+class="cmtt-10">duplicate</span>&#x00A0;<span 
+class="cmtt-10">use,</span>&#x00A0;<span 
+class="cmtt-10">or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">mutually</span>&#x00A0;<span 
+class="cmtt-10">exclusive</span>&#x00A0;<span 
+class="cmtt-10">information</span>&#x00A0;<span 
+class="cmtt-10">already</span>&#x00A0;<span 
+class="cmtt-10">given}\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\curbox{#2}\setbox\curbox\vbox\bgroup</span>&#x00A0;<span 
+class="cmtt-10">\hsize\maxdimen</span>&#x00A0;<span 
+class="cmtt-10">\noindent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 22500--><p class="noindent" >The original file has the code &#8216;<span 
+class="cmtt-10">\setbox\curbox\box \ifdim\wd\@ne&#x003E;\z@ \@ne \else\voidb@x\fi</span>&#8217;. That code is
+problematic because we can reach widths larger than can be measured by the &#8216;<span 
+class="cmtt-10">\wd</span>&#8217; command.
+
+</p>
+    <!--l. 22506--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe145.html" >next</a>] [<a 
+ href="tex4ht-4htSu107.html" >prev</a>] [<a 
+ href="tex4ht-4htSu107.html#tailtex4ht-4htSu107.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu108.html" >front</a>] [<a 
+ href="tex4ht-4htSe144.html#tex4ht-4htSu108.html" >up</a>] </p></div>
+<!--l. 22506--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu108.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>/framebox and /fbox</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 7575--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe39.html" >next</a>] [<a 
+ href="tex4ht-4htSu38.html" >prev</a>] [<a 
+ href="tex4ht-4htSu38.html#tailtex4ht-4htSu38.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu39.html">tail</a>] [<a 
+ href="tex4ht-4htCh11.html#tex4ht-4htSu39.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe38.html#QQ2-111-91"  name="QQ1-111-91">/framebox and /fbox</a></h3>
+           <!--l. 7583--><p class="noindent" ><a 
+ href="tex4ht-4htSu37.html#PrTx89001"  name="PrTx91001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx339"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx91002"  href="#PrTx91006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp#1{\a:fbox\gobble:fbox\o:fbox:{\hbox{{#1}}}\b:fbox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\fbox=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\gobble:fbox=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\gobble:fbox=\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7588--><p class="noindent" ><a 
+ href="tex4ht-4htSe31.html#PrTx69001"  name="PrTx91003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174023"  name="QPrTx340"><span 
+class="cmtt-10">config latex.ltx utilities</span></a><a 
+ name="PrTx91004"  href="tex4ht-4htSu45.html#PrTx102018"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{fbox}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 7599--><p class="noindent" ><a 
+ href="#PrTx91001"  name="PrTx91005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx341"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx91006"  href="#PrTx91008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\long\def\:temp[#1][#2]#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\em:dim\frameboxWidth{#1}\def\frameboxAlign{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:framebox</span>&#x00A0;<span 
+class="cmtt-10">\gobble:frame\o:@iframebox:[#1][#2]{#3}\b:framebox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@iframebox=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{framebox}{2}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\gobble:frame=\empty</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:tempc#1[#2][#3]{\hbox}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\gobble:frame=\:tempc</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 7601--><p class="noindent" >We need the &#8216;<span 
+class="cmtt-10">[]</span>&#8217; above, because the picture contains an mbox that may include pictorial symbols that will cause
+nested images in ALT of xref.
+</p>
+      <!--l. 7618--><p class="indent" ><a 
+ href="#PrTx91005"  name="PrTx91007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4037"  name="QPrTx342"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltboxes</span></a><a 
+ name="PrTx91008"  href="tex4ht-4htSe39.html#PrTx92002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\em:dim#1#2{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=#2\tmp:cnt=0</span>&#x00A0;<span 
+class="cmtt-10">\em:int</span>&#x00A0;<span 
+class="cmtt-10">\edef#1{\the\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=10\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=0</span>&#x00A0;<span 
+class="cmtt-10">\em:int</span>&#x00A0;<span 
+class="cmtt-10">\edef#1{#1.\the\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=10\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:cnt=0</span>&#x00A0;<span 
+class="cmtt-10">\em:int</span>&#x00A0;<span 
+class="cmtt-10">\edef#1{#1\the\tmp:cnt}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef#1{#1em}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\em:int{\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003E;1em</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\tmp:cnt</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\advance\tmp:dim</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1em</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\em:int</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 7625--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe39.html" >next</a>] [<a 
+ href="tex4ht-4htSu38.html" >prev</a>] [<a 
+ href="tex4ht-4htSu38.html#tailtex4ht-4htSu38.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu39.html" >front</a>] [<a 
+ href="tex4ht-4htCh11.html#tex4ht-4htSu39.html" >up</a>] </p></div>
+<!--l. 7625--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu39.html"></a> </p> 
+</body></html> 

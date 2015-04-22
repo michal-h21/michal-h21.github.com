@@ -1,0 +1,908 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Limits of Sub- snd Super- Scripts</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-mathltx.tex"> 
+<meta name="date" content="2014-05-24 11:52:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-mathltx.css"> 
+</head><body 
+>
+   <!--l. 2492--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mathltxse8.html" >next</a>] [<a 
+ href="tex4ht-mathltxse6.html" >prev</a>] [<a 
+ href="tex4ht-mathltxse6.html#tailtex4ht-mathltxse6.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-mathltxse7.html">tail</a>] [<a 
+ href="tex4ht-mathltxch2.html#tex4ht-mathltxse7.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">2.5   </span> <a 
+ href="tex4ht-mathltx.html#QQ2-12-18"  id="x12-180002.5">Limits of Sub- snd Super- Scripts</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >2.5.1 <a 
+ href="#x12-190002.5.1">Outline</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.5.2 <a 
+ href="#x12-200002.5.2">Simultaneously Sub- and Super- Scripts</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.5.3 <a 
+ href="#x12-210002.5.3">Superscripts</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >2.5.4 <a 
+ href="#x12-220002.5.4">Subscripts</a></span>
+   </div>
+<!--l. 2497--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.5.1   </span> <a 
+ href="tex4ht-mathltxch2.html#QQ2-12-19"  id="x12-190002.5.1">Outline</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-162"><div class="head">
+       <a 
+ id="PrTx19001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse3.html#PrTx7029"  id="QPrTx162"><span 
+class="cmtt-10">limits</span><span 
+class="cmtt-10">&#x00A0;sub,</span><span 
+class="cmtt-10">&#x00A0;sup,</span><span 
+class="cmtt-10">&#x00A0;subsup</span></a><a 
+ id="PrTx19002"  href="#PrTx20020"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{nolimits}{\HCode{\string\nolimits\space}}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{limits}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\let</span><a 
+ id="PrTx19003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22033"><span 
+class="cmtt-10">restore SUB</span></a><a 
+ id="PrTx19004"  href="#PrTx20006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">=\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let</span><a 
+ id="PrTx19005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21033"><span 
+class="cmtt-10">restore SUP</span></a><a 
+ id="PrTx19006"  href="#PrTx20010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">=\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\sp</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx19007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21001"><span 
+class="cmtt-10">conf limits SUP</span></a><a 
+ id="PrTx19008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;\:temp\sb</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx19009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22001"><span 
+class="cmtt-10">conf limits SUB</span></a><a 
+ id="PrTx19010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx19011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx20001"><span 
+class="cmtt-10">conf limits SUBSUP</span></a><a 
+ id="PrTx19012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2514--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.5.2   </span> <a 
+ href="tex4ht-mathltxch2.html#QQ2-12-20"  id="x12-200002.5.2">Simultaneously Sub- and Super- Scripts</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-163"><div class="head">
+       <a 
+ id="PrTx20001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx19011"  id="QPrTx163"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUBSUP</span></a><a 
+ id="PrTx20002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx20003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx20015"><span 
+class="cmtt-10">save pre-limits SUBSUP</span></a><a 
+ id="PrTx20004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUBSUP}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\ifx</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx20005"  href="#PrTx19003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22033"><span 
+class="cmtt-10">restore SUB</span></a><a 
+ id="PrTx20006"  href="#PrTx20008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\:UnDef\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx20007"  href="#PrTx20005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22033"><span 
+class="cmtt-10">restore SUB</span></a><a 
+ id="PrTx20008"  href="#PrTx22032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifx</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx20009"  href="#PrTx19005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21033"><span 
+class="cmtt-10">restore SUP</span></a><a 
+ id="PrTx20010"  href="#PrTx20012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\:UnDef\else</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx20011"  href="#PrTx20009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21033"><span 
+class="cmtt-10">restore SUP</span></a><a 
+ id="PrTx20012"  href="#PrTx21032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx20013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx20017"><span 
+class="cmtt-10">restore pre-limits SUBSUP</span></a><a 
+ id="PrTx20014"  href="#PrTx21008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Send{BACK}{\l:brace}\HCode{\r:brace</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\string_\l:brace}\trap:base</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{\r:brace\string^\l:brace}\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\HCode{\r:brace}}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-164"><div class="head">
+       <a 
+ id="PrTx20015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx20003"  id="QPrTx164"><span 
+class="cmtt-10">save</span><span 
+class="cmtt-10">&#x00A0;pre-limits</span><span 
+class="cmtt-10">&#x00A0;SUBSUP</span></a><a 
+ id="PrTx20016"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\pl:SUBSUP=\SUBSUP:</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-165"><div class="head">
+       <a 
+ id="PrTx20017"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx20013"  id="QPrTx165"><span 
+class="cmtt-10">restore</span><span 
+class="cmtt-10">&#x00A0;pre-limits</span><span 
+class="cmtt-10">&#x00A0;SUBSUP</span></a><a 
+ id="PrTx20018"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\pl:SUBSUP\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\SUBSUP:=\pl:SUBSUP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-166"><div class="head">
+       <a 
+ href="#PrTx19001"  id="PrTx20019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-mathltxse3.html#PrTx7029"  id="QPrTx166"><span 
+class="cmtt-10">limits</span><span 
+class="cmtt-10">&#x00A0;sub,</span><span 
+class="cmtt-10">&#x00A0;sup,</span><span 
+class="cmtt-10">&#x00A0;subsup</span></a><a 
+ id="PrTx20020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\a:putSUB\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\pend:def\a:putSUB{\ifx</span><span 
+class="cmtt-10">&#x00A0;\pl:SUBSUP\:UnDef\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\SUBSUP:=\pl:SUBSUP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\pl:SUBSUP=\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span><span 
+class="cmtt-10">&#x00A0;\a:putSUP\:UnDef</span><span 
+class="cmtt-10">&#x00A0;\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\pend:def\a:putSUP{\ifx</span><span 
+class="cmtt-10">&#x00A0;\pl:SUBSUP\:UnDef\else</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\SUBSUP:=\pl:SUBSUP</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\pl:SUBSUP=\:UnDef</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2559--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.5.3   </span> <a 
+ href="tex4ht-mathltxch2.html#QQ2-12-21"  id="x12-210002.5.3">Superscripts</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-167"><div class="head">
+       <a 
+ id="PrTx21001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx19007"  id="QPrTx167"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx21003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21011"><span 
+class="cmtt-10">save pre-limits SUP</span></a><a 
+ id="PrTx21004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUP}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx21005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21027"><span 
+class="cmtt-10">open external limits SUP</span></a><a 
+ id="PrTx21006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21007"  href="#PrTx20013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx20017"><span 
+class="cmtt-10">restore pre-limits SUBSUP</span></a><a 
+ id="PrTx21008"  href="#PrTx22008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21013"><span 
+class="cmtt-10">conf second limits SUP</span></a><a 
+ id="PrTx21010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-168"><div class="head">
+       <a 
+ id="PrTx21011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21003"  id="QPrTx168"><span 
+class="cmtt-10">save</span><span 
+class="cmtt-10">&#x00A0;pre-limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pl:SUP{\Configure{SUP}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\append:def</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\pl:SUP\expandafter{\expandafter{\a:SUP}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\append:def</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\pl:SUP\expandafter{\expandafter{\b:SUP}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-169"><div class="head">
+       <a 
+ id="PrTx21013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21009"  id="QPrTx169"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;second</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUP}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx21015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21035"><span 
+class="cmtt-10">open intermediate limits SUP</span></a><a 
+ id="PrTx21016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21021"><span 
+class="cmtt-10">conf third limit SUP</span></a><a 
+ id="PrTx21018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup</span><a 
+ id="PrTx21019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21029"><span 
+class="cmtt-10">close external limits SUP</span></a><a 
+ id="PrTx21020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-170"><div class="head">
+       <a 
+ id="PrTx21021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21017"  id="QPrTx170"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;third</span><span 
+class="cmtt-10">&#x00A0;limit</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21022"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUP}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx21023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21037"><span 
+class="cmtt-10">open internal limits SUP</span></a><a 
+ id="PrTx21024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span><span 
+class="cmtt-10">&#x00A0;\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx21025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21039"><span 
+class="cmtt-10">close internal limits SUP</span></a><a 
+ id="PrTx21026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-171"><div class="head">
+       <a 
+ id="PrTx21027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21005"  id="QPrTx171"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;external</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21028"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string^\l:brace}\trap:base</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-172"><div class="head">
+       <a 
+ id="PrTx21029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21019"  id="QPrTx172"><span 
+class="cmtt-10">close</span><span 
+class="cmtt-10">&#x00A0;external</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21030"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{\r:brace}\aftergroup</span><a 
+ id="PrTx21031"  href="#PrTx20011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx21033"><span 
+class="cmtt-10">restore SUP</span></a><a 
+ id="PrTx21032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-173"><div class="head">
+       <a 
+ id="PrTx21033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx19005"  id="QPrTx173"><span 
+class="cmtt-10">restore</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21034"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pl:SUP</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-174"><div class="head">
+       <a 
+ id="PrTx21035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21015"  id="QPrTx174"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;intermediate</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21036"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string^\l:brace}\trap:base</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-175"><div class="head">
+       <a 
+ id="PrTx21037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21023"  id="QPrTx175"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;internal</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21038"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string^\l:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-176"><div class="head">
+       <a 
+ id="PrTx21039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21025"  id="QPrTx176"><span 
+class="cmtt-10">close</span><span 
+class="cmtt-10">&#x00A0;internal</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUP</span></a><a 
+ id="PrTx21040"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{\r:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 2623--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">2.5.4   </span> <a 
+ href="tex4ht-mathltxch2.html#QQ2-12-22"  id="x12-220002.5.4">Subscripts</a></h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-177"><div class="head">
+       <a 
+ id="PrTx22001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx19009"  id="QPrTx177"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<a 
+ id="PrTx22003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22011"><span 
+class="cmtt-10">save pre-limits SUB</span></a><a 
+ id="PrTx22004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUB}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx22005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22027"><span 
+class="cmtt-10">open external limits SUB</span></a><a 
+ id="PrTx22006"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx22007"  href="#PrTx21007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx20017"><span 
+class="cmtt-10">restore pre-limits SUBSUP</span></a><a 
+ id="PrTx22008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx22009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22013"><span 
+class="cmtt-10">conf second limits SUB</span></a><a 
+ id="PrTx22010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-178"><div class="head">
+       <a 
+ id="PrTx22011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22003"  id="QPrTx178"><span 
+class="cmtt-10">save</span><span 
+class="cmtt-10">&#x00A0;pre-limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22012"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\pl:SUB{\Configure{SUB}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\append:def</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\pl:SUB\expandafter{\expandafter{\a:SUB}}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\expandafter\append:def</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\expandafter\pl:SUB\expandafter{\expandafter{\b:SUB}}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-179"><div class="head">
+       <a 
+ id="PrTx22013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22009"  id="QPrTx179"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;second</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22014"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUB}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx22015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22035"><span 
+class="cmtt-10">open intermediate limits SUB</span></a><a 
+ id="PrTx22016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx22017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22021"><span 
+class="cmtt-10">conf third limit SUB</span></a><a 
+ id="PrTx22018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup</span><a 
+ id="PrTx22019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22029"><span 
+class="cmtt-10">close external limits SUB</span></a><a 
+ id="PrTx22020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-180"><div class="head">
+       <a 
+ id="PrTx22021"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22017"  id="QPrTx180"><span 
+class="cmtt-10">conf</span><span 
+class="cmtt-10">&#x00A0;third</span><span 
+class="cmtt-10">&#x00A0;limit</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22022"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{SUB}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{</span><a 
+ id="PrTx22023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22037"><span 
+class="cmtt-10">open internal limits SUB</span></a><a 
+ id="PrTx22024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\bgroup</span><span 
+class="cmtt-10">&#x00A0;\trap:base}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\egroup</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx22025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22039"><span 
+class="cmtt-10">close internal limits SUB</span></a><a 
+ id="PrTx22026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-181"><div class="head">
+       <a 
+ id="PrTx22027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22005"  id="QPrTx181"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;external</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22028"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string_\l:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-182"><div class="head">
+       <a 
+ id="PrTx22029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22019"  id="QPrTx182"><span 
+class="cmtt-10">close</span><span 
+class="cmtt-10">&#x00A0;external</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22030"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{\r:brace}\aftergroup</span><a 
+ id="PrTx22031"  href="#PrTx20007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx22033"><span 
+class="cmtt-10">restore SUB</span></a><a 
+ id="PrTx22032"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-183"><div class="head">
+       <a 
+ id="PrTx22033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx19003"  id="QPrTx183"><span 
+class="cmtt-10">restore</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22034"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pl:SUB</span><span 
+class="cmtt-10">&#x00A0;</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-184"><div class="head">
+       <a 
+ id="PrTx22035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22015"  id="QPrTx184"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;intermediate</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22036"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string_\l:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-185"><div class="head">
+       <a 
+ id="PrTx22037"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22023"  id="QPrTx185"><span 
+class="cmtt-10">open</span><span 
+class="cmtt-10">&#x00A0;internal</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22038"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Send{BACK}{\l:brace}\HCode{\r:brace\string_\l:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-186"><div class="head">
+       <a 
+ id="PrTx22039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx22025"  id="QPrTx186"><span 
+class="cmtt-10">close</span><span 
+class="cmtt-10">&#x00A0;internal</span><span 
+class="cmtt-10">&#x00A0;limits</span><span 
+class="cmtt-10">&#x00A0;SUB</span></a><a 
+ id="PrTx22040"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{\r:brace}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 2688--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-mathltxse8.html" >next</a>] [<a 
+ href="tex4ht-mathltxse6.html" >prev</a>] [<a 
+ href="tex4ht-mathltxse6.html#tailtex4ht-mathltxse6.html" >prev-tail</a>] [<a 
+ href="tex4ht-mathltxse7.html" >front</a>] [<a 
+ href="tex4ht-mathltxch2.html#tex4ht-mathltxse7.html" >up</a>] </p></div>
+<!--l. 2688--><p class="indent" >   <a 
+  id="tailtex4ht-mathltxse7.html"></a>   
+</body></html> 

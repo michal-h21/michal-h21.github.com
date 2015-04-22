@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Outline</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-oo-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:53:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-oo-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 1603--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu17.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tailtex4ht-oo-xtpipesse10.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oo-xtpipessu16.html">tail</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tex4ht-oo-xtpipessu16.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">10.1   </span> <a 
+  id="x27-2700010.1"></a>Outline</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-62"><div class="head">
+       <a 
+ id="PrTx27001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx27001"  id="QPrTx62"><span 
+class="cmtt-10">OoFilter.java</span></a><a 
+ id="PrTx27002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">package</span><span 
+class="cmtt-10">&#x00A0;tex4ht;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">/*</span><span 
+class="cmtt-10">&#x00A0;OoFilter.java</span><span 
+class="cmtt-10">&#x00A0;(2014-05-24-11:53),</span><span 
+class="cmtt-10">&#x00A0;generated</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;tex4ht-oo-xtpipes.tex</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2009-2010</span><span 
+class="cmtt-10">&#x00A0;TeX</span><span 
+class="cmtt-10">&#x00A0;Users</span><span 
+class="cmtt-10">&#x00A0;Group</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Copyright</span><span 
+class="cmtt-10">&#x00A0;(C)</span><span 
+class="cmtt-10">&#x00A0;2002-2009</span><span 
+class="cmtt-10">&#x00A0;Eitan</span><span 
+class="cmtt-10">&#x00A0;M.</span><span 
+class="cmtt-10">&#x00A0;Gurari</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx27003"  href="tex4ht-oo-xtpipesse9.html#PrTx25003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipes.html#PrTx2"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ id="PrTx27004"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">&#x00A0;*/</span>
+  <br /><!--x-->&#x00A0;<a 
+ id="PrTx27005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipessu18.html#PrTx29069"><span 
+class="cmtt-10">OoFilter imports</span></a><a 
+ id="PrTx27006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">public</span><span 
+class="cmtt-10">&#x00A0;class</span><span 
+class="cmtt-10">&#x00A0;OoFilter</span><span 
+class="cmtt-10">&#x00A0;extends</span><span 
+class="cmtt-10">&#x00A0;XMLFilterImpl</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;out</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;null;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;OoFilter(</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;out,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;PrintWriter</span><span 
+class="cmtt-10">&#x00A0;log,</span><span 
+class="cmtt-10">&#x00A0;boolean</span><span 
+class="cmtt-10">&#x00A0;trace</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;this.out</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;out;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;void</span><span 
+class="cmtt-10">&#x00A0;startElement(String</span><span 
+class="cmtt-10">&#x00A0;ns,</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;sName,</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;qName,</span><span 
+class="cmtt-10">&#x00A0;Attributes</span><span 
+class="cmtt-10">&#x00A0;attr)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;qName.equals(</span><span 
+class="cmtt-10">&#x00A0;"draw:frame"</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx27007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipessu17.html#PrTx28001"><span 
+class="cmtt-10">set dimensions of figures</span></a><a 
+ id="PrTx27008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;try{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;super.startElement(ns,</span><span 
+class="cmtt-10">&#x00A0;sName,</span><span 
+class="cmtt-10">&#x00A0;qName,</span><span 
+class="cmtt-10">&#x00A0;attr);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;catch(</span><span 
+class="cmtt-10">&#x00A0;Exception</span><span 
+class="cmtt-10">&#x00A0;e</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;System.err.println(</span><span 
+class="cmtt-10">&#x00A0;"---</span><span 
+class="cmtt-10">&#x00A0;OoFilter</span><span 
+class="cmtt-10">&#x00A0;Error</span><span 
+class="cmtt-10">&#x00A0;1</span><span 
+class="cmtt-10">&#x00A0;---</span><span 
+class="cmtt-10">&#x00A0;"</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;e);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;public</span><span 
+class="cmtt-10">&#x00A0;void</span><span 
+class="cmtt-10">&#x00A0;processingInstruction(String</span><span 
+class="cmtt-10">&#x00A0;target,</span><span 
+class="cmtt-10">&#x00A0;String</span><span 
+class="cmtt-10">&#x00A0;fileName)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;target.equals("tex4ht-lg")</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;fileName</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;fileName.trim();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;fileName.replaceAll("</span><span 
+class="cmtt-10">&#x00A0;","").startsWith("file=")</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx27009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipessu18.html#PrTx29035"><span 
+class="cmtt-10">load font vars</span></a><a 
+ id="PrTx27010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><a 
+ id="PrTx27011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-oo-xtpipessu18.html#PrTx29001"><span 
+class="cmtt-10">load font styles</span></a><a 
+ id="PrTx27012"><span 
+class="cmtt-10">.&#x003E;</span></a>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 1649--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu17.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tailtex4ht-oo-xtpipesse10.html" >prev-tail</a>] [<a 
+ href="tex4ht-oo-xtpipessu16.html" >front</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tex4ht-oo-xtpipessu16.html" >up</a>] </p></div>
+<!--l. 1649--><p class="indent" >   <a 
+  id="tailtex4ht-oo-xtpipessu16.html"></a> </p> 
+</body></html> 

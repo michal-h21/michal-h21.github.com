@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Indexes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 33772--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu147.html" >next</a>] [<a 
+ href="tex4ht-4htSu146.html" >prev</a>] [<a 
+ href="tex4ht-4htSu146.html#tailtex4ht-4htSu146.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe280.html">tail</a>] [<a 
+ href="tex4ht-4htCh71.html#tex4ht-4htSe280.html" >up</a>] </p></div>
+    <h3 class="SectionHead">71.3 <a 
+ href="tex4ht-4htPa1.html#QQ2-541-503"  name="QQ1-541-503">Indexes</a></h3>
+    <div class="TableOfContents">
+<br />    &#8212; <a 
+ href="tex4ht-4htSu147.html#QQ1-542-504"  name="QQ2-542-504">Listing</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu148.html#QQ1-543-505"  name="QQ2-543-505">Fonts</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu149.html#QQ1-544-506"  name="QQ2-544-506">Hypertext Tags</a>
+    </div>
+      <!--l. 33779--><p class="indent" ><a 
+ name="PrTx503001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493043"  name="QPrTx1762"><span 
+class="cmtt-10">th4</span>&#x00A0;<span 
+class="cmtt-10">indexes</span></a><a 
+ name="PrTx503002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{index}</span>&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx503003"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx503005"><span 
+class="cmtt-10">indexes</span></a><a 
+ name="PrTx503004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 33784--><p class="noindent" >An entry takes the form &#8216;<span 
+class="cmtt-10">\--#1/#2/#3/</span>&#8217;. The first parameter &#8216;<span 
+class="cmtt-10">#1</span>&#8217; is the major entry, the second parameter &#8216;<span 
+class="cmtt-10">#2</span>&#8217; is
+the secodary entry, and the third parameter &#8216;<span 
+class="cmtt-10">#3</span>&#8217; is a range entry (empty, the character &#8216;<span 
+class="cmtt-10">&#x003C;</span>&#8217;, or the character
+&#8216;<span 
+class="cmtt-10">&#x003E;</span>&#8217;).
+</p><!--l. 33789--><p class="indent" >    The current approach is a variant of the definition in section 17.8 of Writing with TeX. It uses a direct approach
+in which the full entries and subentries are recorded at each location, and so eliminating the need for the <span 
+class="cmtt-10">&#x003C;tag&#x003E;</span>. It
+also eliminates the format entry, but one can always merge this entry into the range entry by employing an
+appropriate encoding scheme.
+</p>
+      <!--l. 33812--><p class="indent" ><a 
+ name="PrTx503005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx503003"  name="QPrTx1763"><span 
+class="cmtt-10">indexes</span></a><a 
+ name="PrTx503006"  href="#PrTx503014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\mi:nus=\-</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\-{\futurelet\:temp\:idxentry}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:idxentry{\ifx</span>&#x00A0;<span 
+class="cmtt-10">\:temp-</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\:addidx</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\expandafter\mi:nus\fi}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:addidx-#1/#2/#3/{{\def\:ii{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx503007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu149.html#PrTx506001"><span 
+class="cmtt-10">html index target</span></a><a 
+ name="PrTx503008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifx\:ii\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\write\:idx{\string\--{#1}{</span>&#x00A0;<span 
+class="cmtt-10">}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx503009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu149.html#PrTx506003"><span 
+class="cmtt-10">html index source</span></a><a 
+ name="PrTx503010"  href="#PrTx503012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\relax}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\edef\:temp{\write\:idx{\string\--{#1}{#2}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx503011"  href="#PrTx503009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu149.html#PrTx506003"><span 
+class="cmtt-10">html index source</span></a><a 
+ name="PrTx503012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}\relax}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:temp}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 33816--><p class="noindent" >The relax at the end of each line is a &#8216;comment&#8217; for eliminating the spaces at the end of the lines.
+</p>
+      <!--l. 33822--><p class="indent" ><a 
+ href="#PrTx503005"  name="PrTx503013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx503003"  name="QPrTx1764"><span 
+class="cmtt-10">indexes</span></a><a 
+ name="PrTx503014"  href="tex4ht-4htSu147.html#PrTx504002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">newwrite\endcsname\:idx</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\openout\:idx=\jobname.idx</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 33923--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu147.html" >next</a>] [<a 
+ href="tex4ht-4htSu146.html" >prev</a>] [<a 
+ href="tex4ht-4htSu146.html#tailtex4ht-4htSu146.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe280.html" >front</a>] [<a 
+ href="tex4ht-4htCh71.html#tex4ht-4htSe280.html" >up</a>] </p></div>
+<!--l. 33923--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe280.html"></a> </p> 
+</body></html> 

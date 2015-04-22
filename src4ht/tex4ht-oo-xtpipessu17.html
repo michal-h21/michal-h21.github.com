@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Dimensions for Figures</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-oo-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:53:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-oo-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 1649--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu18.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu16.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu16.html#tailtex4ht-oo-xtpipessu16.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oo-xtpipessu17.html">tail</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tex4ht-oo-xtpipessu17.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">10.2   </span> <a 
+  id="x28-2800010.2"></a>Dimensions for Figures</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-63"><div class="head">
+       <a 
+ id="PrTx28001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-oo-xtpipessu16.html#PrTx27007"  id="QPrTx63"><span 
+class="cmtt-10">set</span><span 
+class="cmtt-10">&#x00A0;dimensions</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;figures</span></a><a 
+ id="PrTx28002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">String</span><span 
+class="cmtt-10">&#x00A0;name</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;attr.getValue("draw:name");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;(name</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;(attr.getValue("svg:width")</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;null)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;(attr.getValue("svg:height")</span><span 
+class="cmtt-10">&#x00A0;==</span><span 
+class="cmtt-10">&#x00A0;null)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;java.awt.Image</span><span 
+class="cmtt-10">&#x00A0;image</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;new</span><span 
+class="cmtt-10">&#x00A0;javax.swing.ImageIcon(name).getImage();</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;int</span><span 
+class="cmtt-10">&#x00A0;width</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;image.getWidth(null);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;int</span><span 
+class="cmtt-10">&#x00A0;height</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;image.getHeight(null);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if(</span><span 
+class="cmtt-10">&#x00A0;(width&#x003E;0)</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;(height&#x003E;0)</span><span 
+class="cmtt-10">&#x00A0;){</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;org.xml.sax.helpers.AttributesImpl</span><span 
+class="cmtt-10">&#x00A0;attrs</span><span 
+class="cmtt-10">&#x00A0;=</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;new</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;org.xml.sax.helpers.AttributesImpl(</span><span 
+class="cmtt-10">&#x00A0;attr</span><span 
+class="cmtt-10">&#x00A0;);</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;attrs.addAttribute(null,</span><span 
+class="cmtt-10">&#x00A0;"svg:width",</span><span 
+class="cmtt-10">&#x00A0;"svg:width",</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;"String",</span><span 
+class="cmtt-10">&#x00A0;(width</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;72</span><span 
+class="cmtt-10">&#x00A0;/</span><span 
+class="cmtt-10">&#x00A0;110)</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;"pt");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;attrs.addAttribute(null,</span><span 
+class="cmtt-10">&#x00A0;"svg:width",</span><span 
+class="cmtt-10">&#x00A0;"svg:height",</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;"String",</span><span 
+class="cmtt-10">&#x00A0;(height</span><span 
+class="cmtt-10">&#x00A0;*</span><span 
+class="cmtt-10">&#x00A0;72</span><span 
+class="cmtt-10">&#x00A0;/</span><span 
+class="cmtt-10">&#x00A0;110)</span><span 
+class="cmtt-10">&#x00A0;+</span><span 
+class="cmtt-10">&#x00A0;"pt");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;attr</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;attrs;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 1674--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu18.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipessu16.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipessu16.html#tailtex4ht-oo-xtpipessu16.html" >prev-tail</a>] [<a 
+ href="tex4ht-oo-xtpipessu17.html" >front</a>] [<a 
+ href="tex4ht-oo-xtpipesse10.html#tex4ht-oo-xtpipessu17.html" >up</a>] </p></div>
+<!--l. 1674--><p class="indent" >   <a 
+  id="tailtex4ht-oo-xtpipessu17.html"></a> </p> 
+</body></html> 
