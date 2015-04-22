@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>ltspace (Horizontal Spaces)</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 1199--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh5.html" >next</a>] [<a 
+ href="tex4ht-4htCh3.html" >prev</a>] [<a 
+ href="tex4ht-4htCh3.html#tailtex4ht-4htCh3.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htCh4.html">tail</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh4.html" >up</a>] </p></div>
+    <h2 class="ChapterHead">Chapter 4<br /><a 
+ href="tex4ht-4ht.html#QQ2-12-9"  name="QQ1-12-9">ltspace (Horizontal Spaces)</a></h2><div class="TableOfContents">
+    </div>
+<!--l. 1202--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltspace.dtx" >ltspace.dtx</a>
+</p>
+      <!--l. 1219--><p class="indent" ><a 
+ name="PrTx9001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4017"  name="QPrTx53"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltspace</span></a><a 
+ name="PrTx9002"  href="#PrTx9004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{hspace}{3}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{hspace}{}{}{</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{\tmp:dim=#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:hspace</span>&#x00A0;<span 
+class="cmtt-10">\hsp:c\hskip</span>&#x00A0;<span 
+class="cmtt-10">#1\relax\b:hspace}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@hspace=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{\tmp:dim=#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\a:hspace</span>&#x00A0;<span 
+class="cmtt-10">\hsp:c\vrule</span>&#x00A0;<span 
+class="cmtt-10">\@width\z@\nobreak</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;<span 
+class="cmtt-10">#1\hskip</span>&#x00A0;<span 
+class="cmtt-10">\z@skip\b:hspace}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@hspacer=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\hsp:c{\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003C;1em\else\c:hspace\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003C;2em\else\c:hspace\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003C;3em\else\c:hspace\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003C;4em\else\c:hspace\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003C;5em\else\c:hspace\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 1222--><p class="noindent" >We need the assignment to <span 
+class="cmtt-10">\tmp:dim </span>because of commands like <span 
+class="cmtt-10">\hspace{0.25em plus 0.125em minus</span>
+<span 
+class="cmtt-10">0.08em}</span>.
+</p>
+      <!--l. 1235--><p class="indent" ><a 
+ href="#PrTx9001"  name="PrTx9003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4017"  name="QPrTx54"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltspace</span></a><a 
+ name="PrTx9004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\@vspace</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\:tempc{\a:vspace{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@vspace\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:tempc\@vspacer</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\:tempc{\a:vspace{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\@vspacer\:tempc</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{vspace}[1]{\def\a:vspace##1{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{vspace}{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 1239--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh5.html" >next</a>] [<a 
+ href="tex4ht-4htCh3.html" >prev</a>] [<a 
+ href="tex4ht-4htCh3.html#tailtex4ht-4htCh3.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htCh4.html" >front</a>] [<a 
+ href="tex4ht-4htPa3.html#tex4ht-4htCh4.html" >up</a>] </p></div>
+<!--l. 1239--><p class="indent" >    <a 
+  name="tailtex4ht-4htCh4.html"></a> </p> 
+</body></html> 

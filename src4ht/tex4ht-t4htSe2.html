@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Stop on tex4ht.c Err</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <!--l. 269--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe3.html" >next</a>] [<a 
+ href="tex4ht-t4htSe1.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe1.html#tailtex4ht-t4htSe1.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-t4htSe2.html">tail</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe2.html" >up</a>] </p></div>
+    <h3 class="SectionHead">2 <a 
+ href="tex4ht-t4ht.html#QQ2-3-6"  name="QQ1-3-6">Stop on tex4ht.c Err</a></h3>
+    <div class="TableOfContents">
+    </div>
+      <!--l. 287--><p class="indent" ><a 
+ name="PrTx6001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3009"><span 
+class="cmtt-10">stop,</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">tex4ht.c</span>&#x00A0;<span 
+class="cmtt-10">err</span></a><a 
+ name="PrTx6002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">check_tex4ht_c_err</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">eoln_ch</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(int)</span>&#x00A0;<span 
+class="cmtt-10">&#8217;x&#8217;;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">while(</span>&#x00A0;<span 
+class="cmtt-10">eoln_ch</span>&#x00A0;<span 
+class="cmtt-10">!=</span>&#x00A0;<span 
+class="cmtt-10">EOF</span>&#x00A0;<span 
+class="cmtt-10">)</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_str("tex4ht.c</span>&#x00A0;<span 
+class="cmtt-10">error:</span>&#x00A0;<span 
+class="cmtt-10">",</span>&#x00A0;<span 
+class="cmtt-10">TRUE,</span>&#x00A0;<span 
+class="cmtt-10">lg_file);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">(IGNORED)</span>&#x00A0;<span 
+class="cmtt-10">fprintf(stderr,</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">"---</span>&#x00A0;<span 
+class="cmtt-10">Error</span>&#x00A0;<span 
+class="cmtt-10">---</span>&#x00A0;<span 
+class="cmtt-10">tex4ht.c</span>&#x00A0;<span 
+class="cmtt-10">ran</span>&#x00A0;<span 
+class="cmtt-10">into</span>&#x00A0;<span 
+class="cmtt-10">problems\n"</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">exit(EXIT_FAILURE);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">status</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">scan_until_end_str("",</span>&#x00A0;<span 
+class="cmtt-10">1,</span>&#x00A0;<span 
+class="cmtt-10">status,</span>&#x00A0;<span 
+class="cmtt-10">lg_file);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 294--><p class="noindent" ><a 
+ href="tex4ht-t4htSe1.html#PrTx5001"  name="PrTx6003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-t4htSe1.html#PrTx3065"><span 
+class="cmtt-10">vars</span></a><a 
+ name="PrTx6004"  href="tex4ht-t4htSe4.html#PrTx15002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">BOOL</span>&#x00A0;<span 
+class="cmtt-10">check_tex4ht_c_err</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">FALSE;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 297--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-t4htSe3.html" >next</a>] [<a 
+ href="tex4ht-t4htSe1.html" >prev</a>] [<a 
+ href="tex4ht-t4htSe1.html#tailtex4ht-t4htSe1.html" >prev-tail</a>] [<a 
+ href="tex4ht-t4htSe2.html" >front</a>] [<a 
+ href="tex4ht-t4ht.html#tex4ht-t4htSe2.html" >up</a>] </p></div>
+<!--l. 297--><p class="indent" >    <a 
+  name="tailtex4ht-t4htSe2.html"></a> </p> 
+</body></html> 

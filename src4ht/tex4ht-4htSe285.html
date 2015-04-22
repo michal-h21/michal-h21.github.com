@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Html Tables</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 35186--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu159.html" >next</a>] [<a 
+ href="tex4ht-4htSu158.html" >prev</a>] [<a 
+ href="tex4ht-4htSu158.html#tailtex4ht-4htSu158.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe285.html">tail</a>] [<a 
+ href="tex4ht-4htCh71.html#tex4ht-4htSe285.html" >up</a>] </p></div>
+    <h3 class="SectionHead">71.8 <a 
+ href="tex4ht-4htPa1.html#QQ2-558-520"  name="QQ1-558-520">Html Tables</a></h3>
+    <div class="TableOfContents">
+<br />    &#8212; <a 
+ href="tex4ht-4htSu159.html#QQ1-561-521"  name="QQ2-561-521">Character Options after /HTable</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu160.html#QQ1-562-522"  name="QQ2-562-522">Open Table</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu161.html#QQ1-563-523"  name="QQ2-563-523">Enviromental Tables</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu162.html#QQ1-564-524"  name="QQ2-564-524">Braced Tables</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu163.html#QQ1-565-525"  name="QQ2-565-525">Retrieve the Local Options for a Cell</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu164.html#QQ1-566-526"  name="QQ2-566-526">Script</a>
+<br />    &#8212; <a 
+ href="tex4ht-4htSu165.html#QQ1-567-527"  name="QQ2-567-527">Scanning of Cells</a>
+    </div>
+<!--l. 35191--><p class="indent" >    We need the <span 
+class="cmtt-10">\HTable{...} </span>version for handling TeX tables and for not modifying &#8216;<span 
+class="cmtt-10">&amp;</span>&#8217; with other catcode or
+replacement command. Otherwise, <span 
+class="cmtt-10">\HTable...\EndHtable </span>are better because that don&#8217;t ask for expandable
+stuff.
+</p>
+      <!--l. 35203--><p class="indent" ><a 
+ name="PrTx520001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493037"  name="QPrTx1863"><span 
+class="cmtt-10">HTable</span></a><a 
+ name="PrTx520002"  href="tex4ht-4htSu159.html#PrTx521002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\HTable{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:TR=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\TABLE:=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\futurelet\:temp\T:ABLE}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 35210--><p class="noindent" >Defining the <span 
+class="cmtt-10">\HTable </span>in terms of <span 
+class="cmtt-10">\halign </span>is problematic for a few reasons.
+</p><!--l. 35213--><p class="indent" >
+</p><ol type="1" >
+<li>Paragraph breaks are treated as space characters within <span 
+class="cmtt-10">\halign</span>. Defining<span 
+class="cmtt-10">\par </span>to equal <span 
+class="cmtt-10">\the\ht:everypar </span>causes
+multiple calls to <span 
+class="cmtt-10">\ht:everypar</span>.
+<!--l. 35219--><p class="noindent" ></p></li>
+<li>Don&#8217;t know how to get the <span 
+class="cmtt-10">&#x003C;/TABLE&#x003E; </span>in place.
+<!--l. 35221--><p class="noindent" ></p></li>
+<li>Well, so far I [<a 
+ href="tex4ht-4ht559.html"  name="tex4ht-4ht559.html" >got</a>]
+<!--l. 35259--><p class="noindent" ></p></li>
+<li>What about paragraph breaks in independent HTable? Are we loosing them as is the case in the following
+example.
+<!--l. 35262--><p class="indent" >    [<a 
+ href="tex4ht-4ht560.html"  name="tex4ht-4ht560.html" >??</a>]
+</p><!--l. 35410--><p class="indent" >    Also, do we have consistent behavior between TeX and LaTeX here? </p></li></ol>
+
+    <!--l. 35770--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu159.html" >next</a>] [<a 
+ href="tex4ht-4htSu158.html" >prev</a>] [<a 
+ href="tex4ht-4htSu158.html#tailtex4ht-4htSu158.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe285.html" >front</a>] [<a 
+ href="tex4ht-4htCh71.html#tex4ht-4htSe285.html" >up</a>] </p></div>
+<!--l. 35770--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe285.html"></a> </p> 
+</body></html> 

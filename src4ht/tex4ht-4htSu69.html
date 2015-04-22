@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>????</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 11434--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu70.html" >next</a>] [<a 
+ href="tex4ht-4htSu68.html" >prev</a>] [<a 
+ href="tex4ht-4htSu68.html#tailtex4ht-4htSu68.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu69.html">tail</a>] [<a 
+ href="tex4ht-4htSe65.html#tex4ht-4htSu69.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe65.html#QQ2-176-156"  name="QQ1-176-156">????</a></h3>
+<!--l. 11442--><p class="noindent" >Tables in two columns.
+</p><div class="Verbatim"><span 
+class="cmtt-10">\Configure{theindex}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Columns[WIDTH="100\%",VALIGN="TOP"]{2}}</span><span 
+class="cmtt-10">&#x00A0;{\EndColumns}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\idx:tbl}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\endidx:tbl}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\idx:tbl\idx:sub}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\endidx:tbl}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\idx:tbl\idx:sub\idx:sub}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\endidx:tbl}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\hbox{\HCode{&#x003C;P&#x003E;}}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\def\idx:tbl{\hbox\bgroup\HCode{&#x003C;TABLE</span><span 
+class="cmtt-10">&#x00A0;\:zbsp{theindex}&#x003E;&#x003C;TR</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;CLASS="theindex"&#x003E;&#x003C;TD</span><span 
+class="cmtt-10">&#x00A0;CLASS="theindex"&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\def\endidx:tbl{\HCode{&#x003C;/TD&#x003E;&#x003C;/TR&#x003E;&#x003C;/TABLE&#x003E;}\egroup}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\def\idx:sub{\</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;/TD&#x003E;&#x003C;TD</span><span 
+class="cmtt-10">&#x00A0;CLASS="theindexsub"&#x003E;}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 11461--><p class="indent" >    Redifine <span 
+class="cmtt-10">\index </span>and <span 
+class="cmtt-10">\glossary </span>to add the &#8216;<span 
+class="cmtt-10">\beforeentry{file name}{tag}</span>&#8217; before each <span 
+class="cmtt-10">\indexentry </span>and
+each <span 
+class="cmtt-10">\glossaryentry</span>, with default definition for <span 
+class="cmtt-10">\beforeentry </span>to eat its fields and do nothing.
+</p><!--l. 11468--><p class="indent" >    In addition, The command inserts a tag at the file. To get a pointer to the file, all we need to insert te
+redefinition &#8216;<span 
+class="cmtt-10">\def\beforeentry#1#2#3#4{#3{\Link[#1]{#2}{}#4\EndLink}}</span>&#8217; which puts the link on the page
+number (for whatever the page number is good, or replaces it with another mark).
+
+</p>
+    <!--l. 11477--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu70.html" >next</a>] [<a 
+ href="tex4ht-4htSu68.html" >prev</a>] [<a 
+ href="tex4ht-4htSu68.html#tailtex4ht-4htSu68.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu69.html" >front</a>] [<a 
+ href="tex4ht-4htSe65.html#tex4ht-4htSu69.html" >up</a>] </p></div>
+<!--l. 11477--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu69.html"></a> </p> 
+</body></html> 

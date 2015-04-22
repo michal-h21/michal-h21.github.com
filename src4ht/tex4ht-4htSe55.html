@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Shared Below Chapter Stuff</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 9934--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu59.html" >next</a>] [<a 
+ href="tex4ht-4htSe54.html" >prev</a>] [<a 
+ href="tex4ht-4htSe54.html#tailtex4ht-4htSe54.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe55.html">tail</a>] [<a 
+ href="tex4ht-4htCh17.html#tex4ht-4htSe55.html" >up</a>] </p></div>
+    <h3 class="SectionHead">17.2 <a 
+ href="tex4ht-4htPa1.html#QQ2-153-133"  name="QQ1-153-133">Shared Below Chapter Stuff</a></h3>
+    <div class="TableOfContents">
+<br />    &#8212; <a 
+ href="tex4ht-4htSu59.html#QQ1-154-134"  name="QQ2-154-134">Configuration for &#8216;section-&#8217; option</a>
+    </div>
+<!--l. 9937--><p class="indent" >    Sectioning commands can be called directly through their default definitions, or indirectly throught
+<span 
+class="cmtt-10">\rdef:sec</span>.
+</p><!--l. 9940--><p class="indent" >    The latter invocation calls a corresponding tex4ht command: <span 
+class="cmtt-10">\:likefoo </span>in case of a starred commands, and
+<span 
+class="cmtt-10">\no:foo </span>in case of non-starred commands. Then it invokes the original definition, without a title, to extract the
+native changes in the environment, such as counter numbers.
+</p><!--l. 9946--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltsect.dtx" >ltsect.dtx</a>
+      <span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\no:ssect=\@ssect</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def#1#2#3{\no:ssect{#1}{#2}{0ex}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\no:sect=\@sect</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\no@sect#1#2#3#4#5{\no:sect{#1}{#2}{#3}{#4}{0ex}}</span>
+-_-_-</span>
+           </p><!--l. 9969--><p class="noindent" ><a 
+ name="PrTx133001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4045"  name="QPrTx481"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltsect</span></a><a 
+ name="PrTx133002"  href="#PrTx133004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\no@ssect=\@ssect</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@ssect#1#2#3#4#5{\:Sc3</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no@ssect{#1}{#2}{#3}{#4}{\:Sc4#5\:Sc2}\HtmlEnv}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\no@sect=\@sect</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@sect#1#2#3#4#5#6[#7]#8{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\c:secnumdepth{#2}\:Sc3</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no@sect{#1}{#2}{#3}{#4}{#5}{#6}[#7]{\:Sc4#8\:Sc2}\HtmlEnv}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:startsection=\@startsection</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@startsection#1{\@ifstar{\Configure{secType}{like#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\Configure{secType}{#1}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:Sc1\:startsection{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{secType}[1]{\def\sec:typ{#1}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9971--><p class="noindent" ><span 
+class="cmtt-10">\@sec </span>and <span 
+class="cmtt-10">\@ssec </span>are redefined in tex4ht.4ht to be based on building-blocks of tex4ht.sty. The <span 
+class="cmtt-10">section- </span>option
+resestablish the default setting.
+</p>
+      <!--l. 9987--><p class="indent" ><a 
+ href="#PrTx133001"  name="PrTx133003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4045"  name="QPrTx482"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltsect</span></a><a 
+ name="PrTx133004"  href="#PrTx133034"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@sec</span>&#x00A0;<span 
+class="cmtt-10">@ssect}[1]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\rdef:sec##1{#1\csname</span>&#x00A0;<span 
+class="cmtt-10">no@##1\endcsname}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{sections-}</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{@sec</span>&#x00A0;<span 
+class="cmtt-10">@ssect}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure{@sec</span>&#x00A0;<span 
+class="cmtt-10">@ssect}{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133029"><span 
+class="cmtt-10">sv Sc, sec, ssec</span></a><a 
+ name="PrTx133006"  href="tex4ht-4htSe102.html#PrTx225010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\let\:Sc=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133015"><span 
+class="cmtt-10">redf sec</span></a><a 
+ name="PrTx133008"  href="tex4ht-4htSe102.html#PrTx225014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133023"><span 
+class="cmtt-10">redf ssec</span></a><a 
+ name="PrTx133010"  href="tex4ht-4htSe102.html#PrTx225016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\IgnorePar}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 9989--><p class="noindent" >The following is need for <span 
+class="cmtt-10">\@seccntformat</span>.
+</p>
+      <!--l. 9997--><p class="indent" ><a 
+ name="PrTx133011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133017"  name="QPrTx483"><span 
+class="cmtt-10">disable @seccntformat</span></a><a 
+ name="PrTx133012"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\o:@seccntformat:\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\o:@seccntformat:=\@seccntformat</span>
+
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\@seccntformat=\:gobble</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10002--><p class="noindent" ><a 
+ name="PrTx133013"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133021"  name="QPrTx484"><span 
+class="cmtt-10">restore @seccntformat</span></a><a 
+ name="PrTx133014"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\@seccntformat=\o:@seccntformat:</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10019--><p class="noindent" ><a 
+ name="PrTx133015"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133007"  name="QPrTx485"><span 
+class="cmtt-10">redf</span>&#x00A0;<span 
+class="cmtt-10">sec</span></a><a 
+ name="PrTx133016"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@sect##1##2##3##4##5##6[##7]##8{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133011"><span 
+class="cmtt-10">disable @seccntformat</span></a><a 
+ name="PrTx133018"  href="tex4ht-4htSe102.html#PrTx225020"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@sect=\no@sect</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\xdef\c:secnumdepth{##2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\SkipRefstepAnchor</span>&#x00A0;<span 
+class="cmtt-10">\let\addcontentsline=\:gobbleIII</span>&#x00A0;<span 
+class="cmtt-10">\let\mark=\:gobble</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no@sect{##1}{##2}{##3}{##4}{##5}{##6}[{##7}]{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133031"><span 
+class="cmtt-10">recall Sc, sec, ssec</span></a><a 
+ name="PrTx133020"  href="#PrTx133028"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133013"><span 
+class="cmtt-10">restore @seccntformat</span></a><a 
+ name="PrTx133022"  href="tex4ht-4htSe102.html#PrTx225024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HtmlEnv</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Toc:Title{##7}\csname</span>&#x00A0;<span 
+class="cmtt-10">no:#1\endcsname{##8}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 10021--><p class="noindent" >In the above we want &#8216;<span 
+class="cmtt-10">[{##7}]</span>&#8217; instead of &#8216;<span 
+class="cmtt-10">[##7]</span>&#8217;, in case &#8216;]&#8217; is included in the parameter.
+</p><!--l. 10026--><p class="indent" >    The following is for the star option.
+</p>
+      <!--l. 10036--><p class="indent" ><a 
+ name="PrTx133023"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133009"  name="QPrTx486"><span 
+class="cmtt-10">redf</span>&#x00A0;<span 
+class="cmtt-10">ssec</span></a><a 
+ name="PrTx133024"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\@ssect##1##2##3##4##5{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe9.html#PrTx29015"><span 
+class="cmtt-10">star sec title</span></a><a 
+ name="PrTx133026"  href="tex4ht-4htCh36.html#PrTx226116"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@ssect=\no@ssect</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\def\addcontentsline####1####2####3{}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\no@ssect{##1}{##2}{##3}{##4}{}}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx133027"  href="#PrTx133019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx133031"><span 
+class="cmtt-10">recall Sc, sec, ssec</span></a><a 
+ name="PrTx133028"  href="tex4ht-4htSe102.html#PrTx225022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HtmlEnv</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\csname</span>&#x00A0;<span 
+class="cmtt-10">:like#1\endcsname{##5}}%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10042--><p class="noindent" ><a 
+ name="PrTx133029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133005"  name="QPrTx487"><span 
+class="cmtt-10">sv</span>&#x00A0;<span 
+class="cmtt-10">Sc,</span>&#x00A0;<span 
+class="cmtt-10">sec,</span>&#x00A0;<span 
+class="cmtt-10">ssec</span></a><a 
+ name="PrTx133030"  href="tex4ht-4htSe102.html#PrTx225026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\sv:Sc=\:Sc</span>&#x00A0;<span 
+class="cmtt-10">\let\sv:sect=\@sect</span>&#x00A0;<span 
+class="cmtt-10">\let\sv:ssect=\@ssect</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10046--><p class="noindent" ><a 
+ name="PrTx133031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx133019"  name="QPrTx488"><span 
+class="cmtt-10">recall</span>&#x00A0;<span 
+class="cmtt-10">Sc,</span>&#x00A0;<span 
+class="cmtt-10">sec,</span>&#x00A0;<span 
+class="cmtt-10">ssec</span></a><a 
+ name="PrTx133032"  href="tex4ht-4htSe102.html#PrTx225028"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:Sc=\sv:Sc</span>&#x00A0;<span 
+class="cmtt-10">\let\@sect=\sv:sect</span>&#x00A0;<span 
+class="cmtt-10">\let\@ssect=\sv:ssect</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 10054--><p class="noindent" ><a 
+ href="#PrTx133003"  name="PrTx133033"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htPa3.html#PrTx4045"  name="QPrTx489"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltsect</span></a><a 
+ name="PrTx133034"  href="tex4ht-4htSu59.html#PrTx134002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\pend:defI\@hangfrom{\a:@hangfrom}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\append:defI\@hangfrom{\b:@hangfrom}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{@hangfrom}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 10112--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu59.html" >next</a>] [<a 
+ href="tex4ht-4htSe54.html" >prev</a>] [<a 
+ href="tex4ht-4htSe54.html#tailtex4ht-4htSe54.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe55.html" >front</a>] [<a 
+ href="tex4ht-4htCh17.html#tex4ht-4htSe55.html" >up</a>] </p></div>
+<!--l. 10112--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe55.html"></a> </p> 
+</body></html> 

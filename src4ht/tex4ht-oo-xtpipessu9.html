@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Background</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-oo-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:53:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-oo-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 1142--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu10.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html#tailtex4ht-oo-xtpipesse7.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-oo-xtpipessu9.html">tail</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html#tex4ht-oo-xtpipessu9.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">7.1   </span> <a 
+  id="x17-170007.1"></a>Background</h4>
+<!--l. 1149--><p class="noindent" >All columns explicitly require identical number of columns.
+</p><!--l. 1151--><p class="indent" >   Broken:
+
+</p>
+   <div class="verbatim" id="verbatim-12">
+&#x003C;math:mtable&#x00A0;&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;1&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;2&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;1&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/math:mtr&#x003E;
+&#x00A0;<br />&#x003C;/math:mtable&#x003E;
+</div>
+<!--l. 1163--><p class="nopar" >
+</p><!--l. 1165--><p class="indent" >   Works:
+
+</p>
+   <div class="verbatim" id="verbatim-13">
+&#x003C;math:mtable&#x00A0;&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;1&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;2&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;math:mn&#x003E;1&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x00A0;columnalign="left"&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/math:mtr&#x003E;
+&#x00A0;<br />&#x003C;/math:mtable&#x003E;
+</div>
+<!--l. 1178--><p class="nopar" >
+</p><!--l. 1181--><p class="indent" >   The last <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\\</span></span></span> produces extra line with single entry and no data.
+
+</p>
+   <div class="verbatim" id="verbatim-14">
+$
+&#x00A0;<br />\begin{cases}
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;1&#x00A0;&amp;&#x00A0;2\\
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;3&#x00A0;&amp;&#x00A0;4\\
+&#x00A0;<br />\end{cases}
+&#x00A0;<br />$
+</div>
+<!--l. 1190--><p class="nopar" >
+</p><!--l. 1192--><p class="indent" >   Singlton mspace breaks math tables:
+
+</p>
+   <div class="verbatim" id="verbatim-15">
+&#x003C;math:mtable&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;math:mtr&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x003E;&#x003C;math:mn&#x003E;1&#x003C;/math:mn&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;math:mtd&#x003E;&#x003C;math:mspace&#x00A0;width="1em"/&#x003E;&#x003C;/math:mtd&#x003E;
+&#x00A0;<br />&#x00A0;&#x00A0;&#x003C;/math:mtr&#x003E;
+&#x00A0;<br />&#x003C;/math:mtable&#x003E;
+</div>
+<!--l. 1201--><p class="nopar" >
+
+</p>
+   <!--l. 1204--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-oo-xtpipessu10.html" >next</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html" >prev</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html#tailtex4ht-oo-xtpipesse7.html" >prev-tail</a>] [<a 
+ href="tex4ht-oo-xtpipessu9.html" >front</a>] [<a 
+ href="tex4ht-oo-xtpipesse7.html#tex4ht-oo-xtpipessu9.html" >up</a>] </p></div>
+<!--l. 1204--><p class="indent" >   <a 
+  id="tailtex4ht-oo-xtpipessu9.html"></a> </p> 
+</body></html> 

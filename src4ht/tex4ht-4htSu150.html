@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Chapter, LikeChapter, Appendix</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 34056--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu151.html" >next</a>] [<a 
+ href="tex4ht-4htSe282.html" >prev</a>] [<a 
+ href="tex4ht-4htSe282.html#tailtex4ht-4htSe282.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSu150.html">tail</a>] [<a 
+ href="tex4ht-4htSe282.html#tex4ht-4htSu150.html" >up</a>] </p></div>
+    <h3 class="SubSectionHead"><a 
+ href="tex4ht-4htSe282.html#QQ2-547-509"  name="QQ1-547-509">Chapter, LikeChapter, Appendix</a></h3>
+<!--l. 34058--><p class="noindent" >In its default setting, <span class="TEX">T<span 
+class="E">E</span>X</span> contributes an indentation of size <span 
+class="cmtt-10">\parindent </span>to each paragraph. The following code is
+introduced for the removal of the indentation that is first encountered after the switch <span 
+class="cmtt-10">\:removeindent </span>is set to be
+true. (also in boo: condition=¿switch + not if...)
+</p>
+      <!--l. 34067--><p class="indent" ><a 
+ href="tex4ht-4htSe282.html#PrTx508001"  name="PrTx509001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe278.html#PrTx493019"  name="QPrTx1784"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">divs</span></a><a 
+ name="PrTx509002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ht:everypar{\if:nopar</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\hskip</span>&#x00A0;<span 
+class="cmtt-10">-\parindent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ShowPar</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>-_-_-</span>
+           </p><!--l. 34081--><p class="noindent" ><a 
+ name="PrTx509003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe282.html#PrTx508003"  name="QPrTx1785"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">(like)ch</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">app</span></a><a 
+ name="PrTx509004"  href="#PrTx509006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Def:Section\Chapter{\theChapterCounter}{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Def:Section\LikeChapter{\theChapterCounter}{#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Def:Section\Appendix{\theChapterCounter}{#1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34099--><p class="noindent" ><a 
+ href="#PrTx509003"  name="PrTx509005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe282.html#PrTx508003"  name="QPrTx1786"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">(like)ch</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">app</span></a><a 
+ name="PrTx509006"  href="#PrTx509028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Chapter}[4]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure:Sec</span>&#x00A0;<span 
+class="cmtt-10">{Chapter}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#4</span><a 
+ name="PrTx509007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu154.html#PrTx513041"><span 
+class="cmtt-10">addr for Tag and Ref of Ch and App</span></a><a 
+ name="PrTx509008"  href="#PrTx509012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx509009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509031"><span 
+class="cmtt-10">modify ch counter</span></a><a 
+ name="PrTx509010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Appendix}[4]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure:Sec</span>&#x00A0;<span 
+class="cmtt-10">{Appendix}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#4</span><a 
+ name="PrTx509011"  href="#PrTx509007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu154.html#PrTx513041"><span 
+class="cmtt-10">addr for Tag and Ref of Ch and App</span></a><a 
+ name="PrTx509012"  href="#PrTx509016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx509013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509035"><span 
+class="cmtt-10">modify app counter</span></a><a 
+ name="PrTx509014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{LikeChapter}[4]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\Configure:Sec</span>&#x00A0;<span 
+class="cmtt-10">{LikeChapter}{#3}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#4</span><a 
+ name="PrTx509015"  href="#PrTx509011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu154.html#PrTx513041"><span 
+class="cmtt-10">addr for Tag and Ref of Ch and App</span></a><a 
+ name="PrTx509016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx509017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509039"><span 
+class="cmtt-10">modify like ch counter</span></a><a 
+ name="PrTx509018"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34116--><p class="noindent" ><a 
+ name="PrTx509019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509019"  name="QPrTx1787"><span 
+class="cmtt-10">non-html TeX4ht (like)ch and app</span></a><a 
+ name="PrTx509020"  href="#PrTx509026"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Chapter}{\:chprefix{#1}}{}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Appendix}{\:chprefix{#1}}{}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{LikeChapter}{\:chprefix{#1}}{}{}{}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:chprefix#1{%</span>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\global\:chapterstrue</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\InsertTitle{\uppercase}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ShowIndent</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ChapterFonts</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\leavevmode</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{</span><a 
+ name="PrTx509021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu153.html#PrTx512003"><span 
+class="cmtt-10">headline and footline from ch</span></a><a 
+ name="PrTx509022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vskip20mm</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\rightskip=\z@</span>&#x00A0;<span 
+class="cmtt-10">plus</span>&#x00A0;<span 
+class="cmtt-10">0.7\hsize</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ChapterFonts\bf</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ name="PrTx509023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509047"><span 
+class="cmtt-10">typeset ch/like/app num</span></a><a 
+ name="PrTx509024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34130--><p class="noindent" ><a 
+ href="#PrTx509019"  name="PrTx509025"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509025"  name="QPrTx1788"><span 
+class="cmtt-10">non-html TeX4ht (like)ch and app</span></a><a 
+ name="PrTx509026"  href="#PrTx509050"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\b:Chapter#1{\bigskip\vskip10mm</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\egroup</span>&#x00A0;<span 
+class="cmtt-10">\IgnorePar</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\b:LikeChapter=\b:Chapter</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\b:Appendix=\b:Chapter</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34136--><p class="noindent" >The command <span 
+class="cmtt-10">\leavevmode </span>introduces a blank line before the introduction of the vertical space. The command is
+needed because <span class="TEX">T<span 
+class="E">E</span>X</span> removes the vertical spaces that appear at the top of the HPages.
+</p><!--l. 34142--><p class="indent" >    The value of <span 
+class="cmtt-10">\rightskip </span>is adjusted to allow for ragged margin on the right, and so to decrease the probability
+of getting hyphenated words in the title. Moreover, the paragraph that the title makes must be completed before
+leaving the braced group, because the values that <span 
+class="cmtt-10">\baselineskip </span>and <span 
+class="cmtt-10">\righskip </span>hold at the end of the paragraph
+are the ones that count. A task that is achieved here with <span 
+class="cmtt-10">\bigskip</span>.
+</p>
+      <!--l. 34175--><p class="indent" ><a 
+ href="#PrTx509005"  name="PrTx509027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe282.html#PrTx508003"  name="QPrTx1789"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">(like)ch</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">app</span></a><a 
+ name="PrTx509028"  href="#PrTx509030"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\ChapterFonts\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\font\:ChFont=cmbx10</span>&#x00A0;<span 
+class="cmtt-10">scaled</span>&#x00A0;<span 
+class="cmtt-10">\magstep5</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\ChapterFonts{\let\bf=\:ChFont</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\baselineskip=29.85pt}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34177--><p class="noindent" >The command <span 
+class="cmtt-10">\magstep</span><span 
+class="cmmi-10">i </span>increases the size of the characters by a factor of (1<span 
+class="cmmi-10">.</span>2)<sup><span 
+class="cmmi-7">i</span></sup>. On the other hand, the
+normal distance between base lines is 12pt. Hence, the motivation for increasing this distance to 29.85pt
+( = 12 <span 
+class="cmsy-10">&sdot;</span> (1.2)<sup><span 
+class="cmr-7">5</span></sup>pt).
+</p><!--l. 34189--><p class="indent" >    <span 
+class="cmtt-10">\ChapterCounter </span>is 0 for <span 
+class="cmtt-10">\LikeChapter</span>, positive for <span 
+class="cmtt-10">\Chapter</span>, and negative for <span 
+class="cmtt-10">\Appendix</span>. To allow for the
+appearance of the title commands within groups, the changes to variables <span 
+class="cmtt-10">\ChapterCounter </span>and <span 
+class="cmtt-10">\SectionCounter</span>
+are made global.
+</p>
+      <!--l. 34202--><p class="indent" ><a 
+ href="#PrTx509027"  name="PrTx509029"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe282.html#PrTx508003"  name="QPrTx1790"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">(like)ch</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">app</span></a><a 
+ name="PrTx509030"  href="#PrTx509046"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAssign\ChapterCounter=0</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\theChapterCounter{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ChapterCounter&#x003E;0</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter&#x003C;0</span>&#x00A0;<span 
+class="cmtt-10">\:Alph{-\ChapterCounter}\fi\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34211--><p class="noindent" ><a 
+ name="PrTx509031"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509009"  name="QPrTx1791"><span 
+class="cmtt-10">modify</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">counter</span></a><a 
+ name="PrTx509032"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter&#x003C;1</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\ChapterCounter{1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\gHAdvance\ChapterCounter</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">1</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\pageno&#x003C;0</span>&#x00A0;<span 
+class="cmtt-10">\global\pageno=1</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx509033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509043"><span 
+class="cmtt-10">Ch subcounters</span></a><a 
+ name="PrTx509034"  href="#PrTx509038"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34219--><p class="noindent" ><a 
+ name="PrTx509035"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509013"  name="QPrTx1792"><span 
+class="cmtt-10">modify</span>&#x00A0;<span 
+class="cmtt-10">app</span>&#x00A0;<span 
+class="cmtt-10">counter</span></a><a 
+ name="PrTx509036"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\pageno&#x003C;0</span>&#x00A0;<span 
+class="cmtt-10">\global\pageno=1</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter&#x003C;0</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAdvance\ChapterCounter</span>&#x00A0;<span 
+class="cmtt-10">by</span>&#x00A0;<span 
+class="cmtt-10">-1</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\gdef\ChapterCounter{-1}\fi</span>
+
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx509037"  href="#PrTx509033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509043"><span 
+class="cmtt-10">Ch subcounters</span></a><a 
+ name="PrTx509038"  href="#PrTx509042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34224--><p class="noindent" ><a 
+ name="PrTx509039"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509017"  name="QPrTx1793"><span 
+class="cmtt-10">modify</span>&#x00A0;<span 
+class="cmtt-10">like</span>&#x00A0;<span 
+class="cmtt-10">ch</span>&#x00A0;<span 
+class="cmtt-10">counter</span></a><a 
+ name="PrTx509040"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\gHAssign\ChapterCounter=0</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx509041"  href="#PrTx509037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx509043"><span 
+class="cmtt-10">Ch subcounters</span></a><a 
+ name="PrTx509042"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34229--><p class="noindent" ><a 
+ name="PrTx509043"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509033"  name="QPrTx1794"><span 
+class="cmtt-10">Ch</span>&#x00A0;<span 
+class="cmtt-10">subcounters</span></a><a 
+ name="PrTx509044"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gHAssign\SectionCounter=0</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 34233--><p class="noindent" >Do we want the following public? If so then also &#8216;<span 
+class="cmtt-10">\alph</span>&#8217;.
+</p>
+      <!--l. 34240--><p class="indent" ><a 
+ href="#PrTx509029"  name="PrTx509045"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe282.html#PrTx508003"  name="QPrTx1795"><span 
+class="cmtt-10">TeX4ht</span>&#x00A0;<span 
+class="cmtt-10">(like)ch</span>&#x00A0;<span 
+class="cmtt-10">and</span>&#x00A0;<span 
+class="cmtt-10">app</span></a><a 
+ name="PrTx509046"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Alph#1{\ifcase</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">A\or</span>&#x00A0;<span 
+class="cmtt-10">B\or</span>&#x00A0;<span 
+class="cmtt-10">C\or</span>&#x00A0;<span 
+class="cmtt-10">D\or</span>&#x00A0;<span 
+class="cmtt-10">E\or</span>&#x00A0;<span 
+class="cmtt-10">F\or</span>&#x00A0;<span 
+class="cmtt-10">G\or</span>&#x00A0;<span 
+class="cmtt-10">H\or</span>&#x00A0;<span 
+class="cmtt-10">I\or</span>&#x00A0;<span 
+class="cmtt-10">J\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">K\or</span>&#x00A0;<span 
+class="cmtt-10">L\or</span>&#x00A0;<span 
+class="cmtt-10">M\or</span>&#x00A0;<span 
+class="cmtt-10">N\or</span>&#x00A0;<span 
+class="cmtt-10">O\or</span>&#x00A0;<span 
+class="cmtt-10">P\or</span>&#x00A0;<span 
+class="cmtt-10">Q\or</span>&#x00A0;<span 
+class="cmtt-10">R\or</span>&#x00A0;<span 
+class="cmtt-10">S\or</span>&#x00A0;<span 
+class="cmtt-10">T\or</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">U\or</span>&#x00A0;<span 
+class="cmtt-10">V\or</span>&#x00A0;<span 
+class="cmtt-10">W\or</span>&#x00A0;<span 
+class="cmtt-10">X\or</span>&#x00A0;<span 
+class="cmtt-10">Y\or</span>&#x00A0;<span 
+class="cmtt-10">Z\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34251--><p class="noindent" ><a 
+ name="PrTx509047"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509023"  name="QPrTx1796"><span 
+class="cmtt-10">typeset</span>&#x00A0;<span 
+class="cmtt-10">ch/like/app</span>&#x00A0;<span 
+class="cmtt-10">num</span></a><a 
+ name="PrTx509048"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter=0</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\uppercase##1{##1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noindent</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifnum</span>&#x00A0;<span 
+class="cmtt-10">\ChapterCounter&#x003E;0</span>&#x00A0;<span 
+class="cmtt-10">\theChapter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\theAppendix</span>&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\vskip10mm</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noindent</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 34269--><p class="noindent" ><a 
+ href="#PrTx509025"  name="PrTx509049"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx509049"  name="QPrTx1797"><span 
+class="cmtt-10">non-html TeX4ht (like)ch and app</span></a><a 
+ name="PrTx509050"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\BeforeEveryChapter{\:clearpage}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\BeforeEveryLikeChapter{\:clearpage}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\BeforeEveryAppendix{\:clearpage}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 34275--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSu151.html" >next</a>] [<a 
+ href="tex4ht-4htSe282.html" >prev</a>] [<a 
+ href="tex4ht-4htSe282.html#tailtex4ht-4htSe282.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSu150.html" >front</a>] [<a 
+ href="tex4ht-4htSe282.html#tex4ht-4htSu150.html" >up</a>] </p></div>
+<!--l. 34275--><p class="indent" >    <a 
+  name="tailtex4ht-4htSu150.html"></a> </p> 
+</body></html> 

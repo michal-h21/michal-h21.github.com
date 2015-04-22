@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>amsmath</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,3,sections+ --> 
+<meta name="src" content="tex4ht-html0.tex"> 
+<meta name="date" content="2014-05-24 11:51:00"> 
+<link rel="stylesheet" type="text/css" href="tex4ht-html0.css"> 
+</head><body 
+>
+   <!--l. 3456--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html0se45.html" >next</a>] [<a 
+ href="tex4ht-html0se43.html" >prev</a>] [<a 
+ href="tex4ht-html0se43.html#tailtex4ht-html0se43.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-html0se44.html">tail</a>] [<a 
+ href="tex4ht-html0ch3.html#tex4ht-html0se44.html" >up</a>] </p></div>
+   <h3 class="sectionHead"><span class="titlemark">3.26   </span> <a 
+ href="tex4ht-html0.html#QQ2-50-67"  id="x50-670003.26">amsmath</a></h3>
+   <div class="sectionTOCS">
+   &#x00A0;&#x00A0;<span class="subsectionToc" >3.26.1 <a 
+ href="#x50-680003.26.1">TeX Engine</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.26.2 <a 
+ href="#x50-690003.26.2">latex.ltx</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.26.3 <a 
+ href="#x50-700003.26.3">plain.sty</a></span>
+<br />   &#x00A0;&#x00A0;<span class="subsectionToc" >3.26.4 <a 
+ href="#x50-710003.26.4">Palin + LaTeX</a></span>
+   </div>
+
+   <p></p><div class="ShowCode" id="ShowCode-224"><div class="head">
+       <a 
+ id="PrTx67001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx67001"  id="QPrTx224"><span 
+class="cmtt-10">temp hcode accents</span></a><a 
+ id="PrTx67002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\HCode{&amp;\expandafter</span><span 
+class="cmtt-10">&#x00A0;\ifx\csname</span><span 
+class="cmtt-10">&#x00A0;U#2#1\endcsname\relax</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;#2#1\else</span><span 
+class="cmtt-10">&#x00A0;\#x\csname</span><span 
+class="cmtt-10">&#x00A0;U#2#1\endcsname\fi;}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-225"><div class="head">
+       <a 
+ id="PrTx67003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx67003"  id="QPrTx225"><span 
+class="cmtt-10">xmlns</span></a><a 
+ id="PrTx67004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">xmlns="http://www.w3.org/1999/xhtml"</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3528--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.26.1   </span> <a 
+ href="tex4ht-html0ch3.html#QQ2-50-68"  id="x50-680003.26.1">TeX Engine</a></h4>
+<!--l. 3536--><p class="noindent" >The <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\trap:base</span></span></span> is to catch empty bases of exponents like, e.g., in <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">$a^{^b}$</span></span></span>.
+
+   <p></p><div class="ShowCode" id="ShowCode-226"><div class="head">
+       <a 
+ id="PrTx68001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68001"  id="QPrTx226"><span 
+class="cmtt-10">?</span></a><a 
+ id="PrTx68002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\MathRow#1{%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Configure{\expandafter\:gobble\string#1*}{*}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{&#x003C;\a:mathml: mrow\Hnewline</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;class="\expandafter\:gobble\string#1"&#x003E;}{&#x003C;/\a:mathml: mrow&#x003E;}%</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;{\Configure{\expandafter\:gobble\string#1}{}{}{}{}}#1}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-227"><div class="head">
+       <a 
+ id="PrTx68003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68003"  id="QPrTx227"><span 
+class="cmtt-10">recall dvimath par</span></a><a 
+ id="PrTx68004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\sv:ignore</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-228"><div class="head">
+       <a 
+ id="PrTx68005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx68005"  id="QPrTx228"><span 
+class="cmtt-10">sv dvimath par</span></a><a 
+ id="PrTx68006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\sv:ignore{\if:nopar</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\noexpand\IgnorePar\else</span><span 
+class="cmtt-10">&#x00A0;\noexpand\ShowPar\fi}%</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3572--><p class="indent" >   The <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\MathRow</span></span></span> requests a <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">&#x003C;|.mrow\Hnewline&#x003E;...&#x003C;/|.mrow&#x003E;</span></span></span>, instead of the
+contributions of <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\mathop</span></span></span>, <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\mathrel</span></span></span>,...., for the next parameter.
+<!--l. 3591--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.26.2   </span> <a 
+ href="tex4ht-html0ch3.html#QQ2-50-69"  id="x50-690003.26.2">latex.ltx</a></h4>
+<!--l. 3610--><p class="noindent" >Definitions like <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\def\mathbf#1{\a:mathbf#1\b:mathbf}</span></span></span> can&#8217;t be done on
+a global level, because <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\mathbf</span></span></span> is just a name of a font. So, for instance,
+<span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\bf</span></span></span> expands to <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\mathbf</span></span></span>, and so <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">$\bf</span><span 
+class="cmtt-10">&#x00A0;R$</span></span></span> indirectly brings up the latter
+command.
+<!--l. 3619--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.26.3   </span> <a 
+ href="tex4ht-html0ch3.html#QQ2-50-70"  id="x50-700003.26.3">plain.sty</a></h4>
+<!--l. 3627--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark">3.26.4   </span> <a 
+ href="tex4ht-html0ch3.html#QQ2-50-71"  id="x50-710003.26.4">Palin + LaTeX</a></h4>
+<!--l. 3629--><p class="noindent" >The default <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\left</span></span></span> and <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\right</span></span></span> in their default definition with tex produce
+multi-part delimiters, from cmex, on large subformulas. Hence, the &#8216;&#8217;.&#8217; below is
+needed.
+<!--l. 3680--><p class="indent" >   The <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\HCode{}</span></span></span> in <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\sideset</span></span></span> is for catching superscripts and subscripts
+
+   <!--l. 3687--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-html0se45.html" >next</a>] [<a 
+ href="tex4ht-html0se43.html" >prev</a>] [<a 
+ href="tex4ht-html0se43.html#tailtex4ht-html0se43.html" >prev-tail</a>] [<a 
+ href="tex4ht-html0se44.html" >front</a>] [<a 
+ href="tex4ht-html0ch3.html#tex4ht-html0se44.html" >up</a>] </p></div>
+<!--l. 3687--><p class="indent" >   <a 
+  id="tailtex4ht-html0se44.html"></a>   
+</body></html> 

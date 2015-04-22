@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>I Core</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 203--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse1.html" >next</a>] [<a 
+ href="xtpipes.html" >prev</a>] [<a 
+ href="xtpipes.html#tailxtpipes" >prev-tail</a>] [<a 
+ href="#tailxtpipespa1.html">tail</a>] [<a 
+ href="xtpipes.html#xtpipespa1.html" >up</a>] </p></div>
+   <h1 class="partHead"><span class="titlemark">Part&#x00A0;I<br /></span><a 
+  id="x2-1000I"></a>Core</h1>
+   <div class="sectionTOCS">
+   <span class="sectionToc" >1 <a 
+ href="xtpipesse1.html#x3-20001">Control</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.1 <a 
+ href="xtpipessu1.html#x4-30001.1">Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.2 <a 
+ href="xtpipessu2.html#x5-40001.2">Invocation Interfaces</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.3 <a 
+ href="xtpipessu3.html#x6-50001.3">Core Entry Code</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.4 <a 
+ href="xtpipessu4.html#x7-60001.4">Locate the Script File</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.5 <a 
+ href="xtpipessu5.html#x9-70001.5">Flow of Control</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.6 <a 
+ href="xtpipessu6.html#x10-80001.6">Comamnd Line Options: Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.7 <a 
+ href="xtpipessu7.html#x11-90001.7">Comamnd Line Options: Processing</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >1.8 <a 
+ href="xtpipessu8.html#x12-100001.8">Output File</a></span>
+<br />   <span class="sectionToc" >2 <a 
+ href="xtpipesse2.html#x13-110002">The xtpipes Script</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.1 <a 
+ href="xtpipessu9.html#x14-120002.1">Command Line Options</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.2 <a 
+ href="xtpipessu10.html#x15-130002.2">Getting the Start Up Script</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.3 <a 
+ href="xtpipessu11.html#x16-140002.3">DTDs</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.4 <a 
+ href="xtpipessu12.html#x19-150002.4">Indirect Scripts</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.5 <a 
+ href="xtpipessu13.html#x20-160002.5">Search File</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >2.6 <a 
+ href="xtpipessu14.html#x21-170002.6">Copy Preamble</a></span>
+<br />   <span class="sectionToc" >3 <a 
+ href="xtpipesse3.html#x22-180003">The Instructions</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.1 <a 
+ href="xtpipessu15.html#x23-190003.1">XtPipes</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.2 <a 
+ href="xtpipessu16.html#x24-200003.2">Handle Set</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.3 <a 
+ href="xtpipessu17.html#x25-210003.3">Handle Get XML Code</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.4 <a 
+ href="xtpipessu18.html#x26-220003.4">Print Named XML Code</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.5 <a 
+ href="xtpipessu19.html#x27-230003.5">Result for Returned Value</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.6 <a 
+ href="xtpipessu20.html#x28-240003.6">Conditional &#8216;if&#8217; statements</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.7 <a 
+ href="xtpipessu21.html#x29-250003.7">Handle XSLT</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.8 <a 
+ href="xtpipessu22.html#x30-300003.8">DOM</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.9 <a 
+ href="xtpipessu23.html#x31-350003.9">Handle SAX</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.10 <a 
+ href="xtpipessu24.html#x32-380003.10">Handling DOCTYPE Statements</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.11 <a 
+ href="xtpipessu25.html#x33-410003.11">Get Content Handler for SAX</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.12 <a 
+ href="xtpipessu26.html#x34-420003.12">Get Filters</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >3.13 <a 
+ href="xtpipessu27.html#x35-430003.13">Get Lexical Handler for SAX</a></span>
+<br />   <span class="sectionToc" >4 <a 
+ href="xtpipesse4.html#x36-440004">Entity Resolver</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.1 <a 
+ href="xtpipessu28.html#x37-450004.1">Interface</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >4.2 <a 
+ href="xtpipessu29.html#x38-460004.2">Implementation</a></span>
+<br />   <span class="sectionToc" >5 <a 
+ href="xtpipesse5.html#x39-470005">File Information</a></span>
+
+<br />   &#x00A0;<span class="subsectionToc" >5.1 <a 
+ href="xtpipessu30.html#x40-480005.1">Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.2 <a 
+ href="xtpipessu31.html#x41-490005.2">Search Engine</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >5.3 <a 
+ href="xtpipessu32.html#x42-500005.3">Class Paths</a></span>
+<br />   <span class="sectionToc" >6 <a 
+ href="xtpipesse6.html#x43-510006">Input Objects for XML Files</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.1 <a 
+ href="xtpipessu33.html#x44-520006.1">Outline</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.2 <a 
+ href="xtpipessu34.html#x45-530006.2">Constructor</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.3 <a 
+ href="xtpipessu35.html#x46-540006.3">Stream from a File Name</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.4 <a 
+ href="xtpipessu36.html#x47-550006.4">Stream from a URL</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.5 <a 
+ href="xtpipessu37.html#x48-560006.5">Clean Path</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.6 <a 
+ href="xtpipessu38.html#x49-570006.6">Profile: Connecting and Reading the Input File</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >6.7 <a 
+ href="xtpipessu39.html#x50-580006.7">Profile: Scanning the Different Cases</a></span>
+<br />   <span class="sectionToc" >7 <a 
+ href="xtpipesse7.html#x51-590007">Input Objects for XML Strings</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.1 <a 
+ href="xtpipessu40.html#x52-600007.1">Search String for Indirection</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >7.2 <a 
+ href="xtpipessu41.html#x53-610007.2">The Search Engine</a></span>
+<br />   <span class="sectionToc" >8 <a 
+ href="xtpipesse8.html#x54-620008">Information About the Transformation</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.1 <a 
+ href="xtpipessu42.html#x55-630008.1">User&#8217;s System</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.2 <a 
+ href="xtpipessu43.html#x56-640008.2">Script to be Used</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.3 <a 
+ href="xtpipessu44.html#x57-650008.3">Preamble Attribute</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >8.4 <a 
+ href="xtpipessu45.html#x58-660008.4">Tracing</a></span>
+<br />   <span class="sectionToc" >9 <a 
+ href="xtpipesse9.html#x59-670009">loose Ends</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.1 <a 
+ href="xtpipessu46.html#x60-680009.1">Fix XML Defaults</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.2 <a 
+ href="xtpipessu47.html#x61-690009.2">Unicode Filter</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >9.3 <a 
+ href="xtpipessu48.html#x62-700009.3">Error Messagesg</a></span>
+<br />   <span class="sectionToc" >10 <a 
+ href="xtpipesse10.html#x63-7100010">Serialize Dom</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >10.1 <a 
+ href="xtpipessu49.html#x64-7200010.1">Clean Xmlns</a></span>
+<br />   &#x00A0;<span class="subsectionToc" >10.2 <a 
+ href="xtpipessu50.html#x65-7300010.2">Default Script</a></span>
+   </div>
+
+
+
+
+
+
+
+
+
+
+   <!--l. 3988--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse1.html" >next</a>] [<a 
+ href="xtpipes.html" >prev</a>] [<a 
+ href="xtpipes.html#tailxtpipes" >prev-tail</a>] [<a 
+ href="xtpipespa1.html" >front</a>] [<a 
+ href="xtpipes.html#xtpipespa1.html" >up</a>] </p></div>
+<!--l. 3988--><p class="indent" >   <a 
+  id="tailxtpipespa1.html"></a> </p> 
+</body></html> 

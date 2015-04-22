@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>
+
+    <title>tex4ht-t4ht.html</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,th4,sections+ --> 
+<meta name="src" content="tex4ht-t4ht.tex" /> 
+<meta name="date" content="2014-05-24 12:31:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-t4ht.css" /> 
+</head><body 
+>
+    <h2 class="LikeChapterHead"><a 
+ href="#QQ1-1-1"  name="QQ1-1-1">t4ht: postprocessor for tex4ht</a></h2>
+    The compilation of this file requires the packages <a 
+ href="http://www.cis.ohio-state.edu/~gurari/tpf/ProTex.sty" >Pro<span class="TEX">T<span 
+class="E">E</span>X</span></a> and <a 
+ href="http://www.cis.ohio-state.edu/~gurari/tpf/AlProTex.sty" >AlPro<span class="TEX">T<span 
+class="E">E</span>X</span></a>.
+    <div class="TableOfContents"><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1&#x00A0;<a 
+ href="tex4ht-t4htSe1.html#QQ1-2-2"  name="QQ2-2-2">Outline</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe1.html#QQ1-2-3"  name="QQ2-2-3">The Cases</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe1.html#QQ1-2-4"  name="QQ2-2-4">char, signed char, unsigned char (gcc
+man)</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe1.html#QQ1-2-5"  name="QQ2-2-5">EOF Character</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2&#x00A0;<a 
+ href="tex4ht-t4htSe2.html#QQ1-3-6"  name="QQ2-3-6">Stop on tex4ht.c Err</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-7"  name="QQ2-4-7">Platform-dependent
+Code</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-8"  name="QQ2-4-8">PreProcessor
+Directives</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-9"  name="QQ2-4-9">KPATHSEA</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-10"  name="QQ2-4-10">Compilers</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-11"  name="QQ2-4-11">DJGPP</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe3.html#QQ1-4-12"  name="QQ2-4-12">Slashes n
+Directory Pathes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4&#x00A0;<a 
+ href="tex4ht-t4htSe4.html#QQ1-5-13"  name="QQ2-5-13">Command-Line Options</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe4.html#QQ1-5-14"  name="QQ2-5-14">Available Options</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe4.html#QQ1-5-15"  name="QQ2-5-15">Scanning
+the Options</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5&#x00A0;<a 
+ href="tex4ht-t4htSe5.html#QQ1-6-16"  name="QQ2-6-16">Identify the Empty Pictures</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-17"  name="QQ2-7-17">Process Gifs</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-18"  name="QQ2-7-18">The
+Scripts</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-19"  name="QQ2-7-19">Identifying the requests</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-20"  name="QQ2-7-20">General Pictures</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-21"  name="QQ2-7-21">Pictorial
+Symbols</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-22"  name="QQ2-7-22">The Conversion Code</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-23"  name="QQ2-7-23">Filter</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe6.html#QQ1-7-24"  name="QQ2-7-24">Ignore/Noignore
+Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7&#x00A0;<a 
+ href="tex4ht-t4htSe7.html#QQ1-8-25"  name="QQ2-8-25">CopyTo files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8&#x00A0;<a 
+ href="tex4ht-t4htSe8.html#QQ1-9-26"  name="QQ2-9-26">post-process ext files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9&#x00A0;<a 
+ href="tex4ht-t4htSe9.html#QQ1-10-27"  name="QQ2-10-27">post-process files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10&#x00A0;<a 
+ href="tex4ht-t4htSe10.html#QQ1-11-28"  name="QQ2-11-28">User
+Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-29"  name="QQ2-12-29">CSS</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-30"  name="QQ2-12-30">Record HTFCSS Entries from the lg File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-31"  name="QQ2-12-31">Font-Css-Plus
+Entries from The lg File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-32"  name="QQ2-12-32">Imported Css File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-33"  name="QQ2-12-33">Preliminary Processing
+of the CSS File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-34"  name="QQ2-12-34">Cotributors to the Css File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-35"  name="QQ2-12-35">Contributions from
+/Css Commands</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-36"  name="QQ2-12-36">Contributions From Font-Size</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-37"  name="QQ2-12-37">Contributions
+to Fonts</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe11.html#QQ1-12-38"  name="QQ2-12-38">Font-Css Contributions</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-39"  name="QQ2-13-39">Load Env File</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-40"  name="QQ2-13-40">Retrieve
+Info</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-41"  name="QQ2-13-41">Utilities for Retrieving Info</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-42"  name="QQ2-13-42">Open Directory</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-43"  name="QQ2-13-43">kpathsea vs
+kpse-find-file</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-44"  name="QQ2-13-44">Root Directory</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-45"  name="QQ2-13-45">Env File from Command Line</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe12.html#QQ1-13-46"  name="QQ2-13-46">Env File
+from Location of t4ht.c</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13&#x00A0;<a 
+ href="tex4ht-t4htSe13.html#QQ1-14-47"  name="QQ2-14-47">Open Files</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe13.html#QQ1-14-48"  name="QQ2-14-48">General</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-49"  name="QQ2-15-49">Utilities</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-50"  name="QQ2-15-50">Error
+and Warning Messages</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-51"  name="QQ2-15-51">Signals</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-52"  name="QQ2-15-52">System Calls</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-53"  name="QQ2-15-53">Strings Concat and
+compare</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-54"  name="QQ2-15-54">String into Int</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-55"  name="QQ2-15-55">Dynamic Memory Alloc</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-56"  name="QQ2-15-56">myfseek</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-57"  name="QQ2-15-57">Pattern
+Recognition Functions</a></span><br /><span class="SubSectionToc" >&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ href="tex4ht-t4htSe14.html#QQ1-15-58"  name="QQ2-15-58">Shorthands and Mnemonics</a></span><br />
+    </div> 
+</body></html> 
+
+
+

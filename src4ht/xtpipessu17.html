@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Handle Get XML Code</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 1519--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu20.html" >next</a>] [<a 
+ href="xtpipessu18.html" >prev</a>] [<a 
+ href="xtpipessu18.html#tailxtpipessu18.html" >prev-tail</a>] [<a 
+ href="xtpipessu15.html#tailxtpipessu17.html">tail</a>] [<a 
+ href="xtpipessu16.html#xtpipessu19.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">3.3   </span> <a 
+  id="x25-210003.3"></a>Handle Get XML Code</h4>
+<!--l. 1522--><p class="noindent" >Stores a XML file content under the given name.
+
+</p>
+   <div class="verbatim" id="verbatim-4">
+&#x003C;get&#x00A0;name="..."&#x00A0;file="..."&#x00A0;/&#x003E;
+</div>
+<!--l. 1526--><p class="nopar" >
+</p>
+           <!--l. 1531--><p class="noindent" ><a 
+ href="xtpipessu16.html#PrTx20001"  id="PrTx21001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu11.html#PrTx14005"  id="QPrTx69"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">entries</span></a><a 
+ id="PrTx21002"  href="xtpipessu18.html#PrTx22002"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">|</span>&#x00A0;<span 
+class="cmtt-10">get</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1540--><p class="noindent" ><a 
+ href="xtpipessu16.html#PrTx20003"  id="PrTx21003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx21003"  id="QPrTx70"><span 
+class="cmtt-10">xtpipes.dtd</span></a><a 
+ id="PrTx21004"  href="xtpipessu18.html#PrTx22004"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;!ELEMENT</span>&#x00A0;<span 
+class="cmtt-10">get</span>&#x00A0;<span 
+class="cmtt-10">EMPTY</span>&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003C;!ATTLIST</span>&#x00A0;<span 
+class="cmtt-10">get</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">CDATA</span>&#x00A0;<span 
+class="cmtt-10">#REQUIRED</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">CDATA</span>&#x00A0;<span 
+class="cmtt-10">#REQUIRED</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x003E;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1557--><p class="noindent" ><a 
+ id="PrTx21005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu5.html#PrTx7009"  id="QPrTx71"><span 
+class="cmtt-10">execute</span>&#x00A0;<span 
+class="cmtt-10">get</span></a><a 
+ id="PrTx21006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">try</span>&#x00A0;<span 
+class="cmtt-10">{</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">name</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getAttributes()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNamedItem(</span>&#x00A0;<span 
+class="cmtt-10">"name"</span>&#x00A0;<span 
+class="cmtt-10">).getNodeValue();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">file</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">node.getAttributes()</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">.getNamedItem(</span>&#x00A0;<span 
+class="cmtt-10">"file"</span>&#x00A0;<span 
+class="cmtt-10">).getNodeValue();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">StreamSource</span>&#x00A0;<span 
+class="cmtt-10">in</span>&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">StreamSource(</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">File(file)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">ByteArrayOutputStream</span>&#x00A0;<span 
+class="cmtt-10">baos</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">ByteArrayOutputStream();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">identityTransformer.transform(</span>&#x00A0;<span 
+class="cmtt-10">in,</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">StreamResult(baos)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">byte</span>&#x00A0;<span 
+class="cmtt-10">[]</span>&#x00A0;<span 
+class="cmtt-10">bytes</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">baos.toByteArray();</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">map.put(</span>&#x00A0;<span 
+class="cmtt-10">name,</span>&#x00A0;<span 
+class="cmtt-10">(Object)</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">String(bytes)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">catch(</span>&#x00A0;<span 
+class="cmtt-10">Exception</span>&#x00A0;<span 
+class="cmtt-10">e</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">instructionErr(</span>&#x00A0;<span 
+class="cmtt-10">node,</span>&#x00A0;<span 
+class="cmtt-10">e.toString(),</span>&#x00A0;<span 
+class="cmtt-10">14</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1566--><p class="noindent" ><a 
+ id="PrTx21007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu3.html#PrTx5011"  id="QPrTx72"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">initialization</span></a><a 
+ id="PrTx21008"  href="xtpipessu20.html#PrTx24018"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">fc</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">TransformerFactory.newInstance();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">identityTransformer</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">fc.newTransformer();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">identityTransformer.setErrorListener(</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx21009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu48.html#PrTx70013"><span 
+class="cmtt-10">identity transformer XML error listener</span></a><a 
+ id="PrTx21010"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 1571--><p class="noindent" ><a 
+ href="xtpipessu9.html#PrTx12007"  id="PrTx21011"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu1.html#PrTx3009"  id="QPrTx73"><span 
+class="cmtt-10">xtpipes</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx21012"  href="xtpipessu20.html#PrTx24020"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span>&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">TransformerFactory</span>&#x00A0;<span 
+class="cmtt-10">fc;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">private</span>&#x00A0;<span 
+class="cmtt-10">static</span>&#x00A0;<span 
+class="cmtt-10">Transformer</span>&#x00A0;<span 
+class="cmtt-10">identityTransformer;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 1576--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipessu20.html" >next</a>] [<a 
+ href="xtpipessu18.html" >prev</a>] [<a 
+ href="xtpipessu18.html#tailxtpipessu18.html" >prev-tail</a>] [<a 
+ href="xtpipessu17.html" >front</a>] [<a 
+ href="xtpipessu16.html#xtpipessu19.html" >up</a>] </p></div>
+<!--l. 1576--><p class="indent" >   <a 
+  id="tailxtpipessu17.html"></a> </p> 
+</body></html> 

@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>latex.ltx</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 520--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh2.html" >next</a>] [<a 
+ href="tex4ht-4htCh1.html" >prev</a>] [<a 
+ href="tex4ht-4htCh1.html#tailtex4ht-4htCh1.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htPa3.html">tail</a>] [<a 
+ href="tex4ht-4ht.html#tex4ht-4htPa3.html" >up</a>] </p></div>
+    <h1 class="PartHead"><a 
+ href="tex4ht-4ht.html#QQ2-5-4"  name="QQ1-5-4">latex.ltx</a></h1>
+    <div class="TableOfContents"><span class="ChapterToc" >2&#x00A0;<a 
+ href="tex4ht-4htCh2.html#QQ1-7-5"  name="QQ2-7-5">Classes and Packages</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.1&#x00A0;<a 
+ href="tex4ht-4htSe1.html#QQ1-8-6"  name="QQ2-8-6">titlesec</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.2&#x00A0;<a 
+ href="tex4ht-4htSe2.html#QQ1-9-7"  name="QQ2-9-7">Scientific Word</a></span><br /><span class="ChapterToc" >3&#x00A0;<a 
+ href="tex4ht-4htCh3.html#QQ1-10-8"  name="QQ2-10-8">Common
+to Plain and LaTeX-Plain</a></span><br /><span class="ChapterToc" >4&#x00A0;<a 
+ href="tex4ht-4htCh4.html#QQ1-12-9"  name="QQ2-12-9">ltspace (Horizontal Spaces)</a></span><br /><span class="ChapterToc" >5&#x00A0;<a 
+ href="tex4ht-4htCh5.html#QQ1-13-10"  name="QQ2-13-10">ltlength</a></span><br /><span class="ChapterToc" >6&#x00A0;<a 
+ href="tex4ht-4htCh6.html#QQ1-14-11"  name="QQ2-14-11">Cross
+References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.1&#x00A0;<a 
+ href="tex4ht-4htSe3.html#QQ1-15-12"  name="QQ2-15-12">LaTeX</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.2&#x00A0;<a 
+ href="tex4ht-4htSe4.html#QQ1-24-20"  name="QQ2-24-20">apacite.sty bibtex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.3&#x00A0;<a 
+ href="tex4ht-4htSe5.html#QQ1-25-21"  name="QQ2-25-21">mla.sty bibtex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.4&#x00A0;<a 
+ href="tex4ht-4htSe6.html#QQ1-26-22"  name="QQ2-26-22">Biblatex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.5&#x00A0;<a 
+ href="tex4ht-4htSe7.html#QQ1-31-27"  name="QQ2-31-27">amstex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.6&#x00A0;<a 
+ href="tex4ht-4htSe8.html#QQ1-32-28"  name="QQ2-32-28">varioref.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.7&#x00A0;<a 
+ href="tex4ht-4htSe9.html#QQ1-33-29"  name="QQ2-33-29">nameref</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.8&#x00A0;<a 
+ href="tex4ht-4htSe10.html#QQ1-34-30"  name="QQ2-34-30">by
+name</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.9&#x00A0;<a 
+ href="tex4ht-4htSe11.html#QQ1-35-31"  name="QQ2-35-31">xr.sty: Cross-Document References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.10&#x00A0;<a 
+ href="tex4ht-4htSe12.html#QQ1-36-32"  name="QQ2-36-32">xr-hyper.sty: Hyperref-Oriented
+Cross-Document References</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.11&#x00A0;<a 
+ href="tex4ht-4htSe13.html#QQ1-37-33"  name="QQ2-37-33">url.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.12&#x00A0;<a 
+ href="tex4ht-4htSe14.html#QQ1-39-34"  name="QQ2-39-34">path.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.13&#x00A0;<a 
+ href="tex4ht-4htSe15.html#QQ1-40-35"  name="QQ2-40-35">hyperref</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.14&#x00A0;<a 
+ href="tex4ht-4htSe16.html#QQ1-49-42"  name="QQ2-49-42">hypcap.sty</a></span><br /><span class="ChapterToc" >7&#x00A0;<a 
+ href="tex4ht-4htCh7.html#QQ1-51-43"  name="QQ2-51-43">Miscellaneous
+Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.1&#x00A0;<a 
+ href="tex4ht-4htSe17.html#QQ1-52-44"  name="QQ2-52-44">document...enddocument</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.2&#x00A0;<a 
+ href="tex4ht-4htSe18.html#QQ1-53-45"  name="QQ2-53-45">Output Encoding</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.3&#x00A0;<a 
+ href="tex4ht-4htSe19.html#QQ1-54-46"  name="QQ2-54-46">Blocks:
+The /begin.../end Delimiters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.4&#x00A0;<a 
+ href="tex4ht-4htSe20.html#QQ1-64-51"  name="QQ2-64-51">CR-based Line Breaks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.5&#x00A0;<a 
+ href="tex4ht-4htSe21.html#QQ1-66-52"  name="QQ2-66-52">Verbatim</a></span><br /><span class="ChapterToc" >8&#x00A0;<a 
+ href="tex4ht-4htCh8.html#QQ1-69-53"  name="QQ2-69-53">Math
+Setup</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.1&#x00A0;<a 
+ href="tex4ht-4htSe22.html#QQ1-70-54"  name="QQ2-70-54">Big, BIG, ....</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.2&#x00A0;<a 
+ href="tex4ht-4htSe23.html#QQ1-72-55"  name="QQ2-72-55">Choose</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.3&#x00A0;<a 
+ href="tex4ht-4htSe24.html#QQ1-73-56"  name="QQ2-73-56">Mathpalette</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.4&#x00A0;<a 
+ href="tex4ht-4htSe25.html#QQ1-74-57"  name="QQ2-74-57">roots</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.5&#x00A0;<a 
+ href="tex4ht-4htSe26.html#QQ1-75-58"  name="QQ2-75-58">Matrices</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.6&#x00A0;<a 
+ href="tex4ht-4htSe27.html#QQ1-79-62"  name="QQ2-79-62">TeX
+and LaTex: Bordermatrix</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.7&#x00A0;<a 
+ href="tex4ht-4htSe28.html#QQ1-80-63"  name="QQ2-80-63">Displaylines</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.8&#x00A0;<a 
+ href="tex4ht-4htSe29.html#QQ1-82-64"  name="QQ2-82-64">[] and ()</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.9&#x00A0;<a 
+ href="tex4ht-4htSe30.html#QQ1-83-65"  name="QQ2-83-65">Equation (latex,
+amsmath, fleqn)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.10&#x00A0;<a 
+ href="tex4ht-4htSe31.html#QQ1-87-69"  name="QQ2-87-69">stackrel</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.11&#x00A0;<a 
+ href="tex4ht-4htSe32.html#QQ1-90-72"  name="QQ2-90-72">Eqnarray</a></span><br /><span class="ChapterToc" >9&#x00A0;<a 
+ href="tex4ht-4htCh9.html#QQ1-91-73"  name="QQ2-91-73">List Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.1&#x00A0;<a 
+ href="tex4ht-4htSe33.html#QQ1-92-74"  name="QQ2-92-74">Configure
+Description Lists</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.2&#x00A0;<a 
+ href="tex4ht-4htSe34.html#QQ1-93-75"  name="QQ2-93-75">LaTeX</a></span><br /><span class="ChapterToc" >10&#x00A0;<a 
+ href="tex4ht-4htCh10.html#QQ1-101-81"  name="QQ2-101-81">List-Based Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.1&#x00A0;<a 
+ href="tex4ht-4htSe35.html#QQ1-102-82"  name="QQ2-102-82">Verse, Quote,
+and Quoattion</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.2&#x00A0;<a 
+ href="tex4ht-4htSe36.html#QQ1-104-84"  name="QQ2-104-84">Centered</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.3&#x00A0;<a 
+ href="tex4ht-4htSe37.html#QQ1-105-85"  name="QQ2-105-85">Flushed Blocks</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.4&#x00A0;<a 
+ href="tex4ht-4htSe38.html#QQ1-106-86"  name="QQ2-106-86">Centering and
+Fussy</a></span><br /><span class="ChapterToc" >11&#x00A0;<a 
+ href="tex4ht-4htCh11.html#QQ1-108-88"  name="QQ2-108-88">Boxes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.1&#x00A0;<a 
+ href="tex4ht-4htSe39.html#QQ1-112-92"  name="QQ2-112-92">Centerline, Leftline, Rightline</a></span><br /><span class="ChapterToc" >12&#x00A0;<a 
+ href="tex4ht-4htCh12.html#QQ1-113-93"  name="QQ2-113-93">Tabbing</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.1&#x00A0;<a 
+ href="tex4ht-4htSe40.html#QQ1-114-94"  name="QQ2-114-94">Tabbing</a></span><br /><span class="ChapterToc" >13&#x00A0;<a 
+ href="tex4ht-4htCh13.html#QQ1-120-100"  name="QQ2-120-100">Tabular
+and Array Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.1&#x00A0;<a 
+ href="tex4ht-4htSe41.html#QQ1-121-101"  name="QQ2-121-101">Array, Tabular</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.2&#x00A0;<a 
+ href="tex4ht-4htSe42.html#QQ1-130-110"  name="QQ2-130-110">supertabular.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.3&#x00A0;<a 
+ href="tex4ht-4htSe43.html#QQ1-131-111"  name="QQ2-131-111">array.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.4&#x00A0;<a 
+ href="tex4ht-4htSe44.html#QQ1-134-114"  name="QQ2-134-114">dcolumn</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.5&#x00A0;<a 
+ href="tex4ht-4htSe45.html#QQ1-135-115"  name="QQ2-135-115">longtable.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.6&#x00A0;<a 
+ href="tex4ht-4htSe46.html#QQ1-136-116"  name="QQ2-136-116">table.sty
+of pctex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.7&#x00A0;<a 
+ href="tex4ht-4htSe47.html#QQ1-137-117"  name="QQ2-137-117">Horizontal Lines</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.8&#x00A0;<a 
+ href="tex4ht-4htSe48.html#QQ1-142-122"  name="QQ2-142-122">Tabulary</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.9&#x00A0;<a 
+ href="tex4ht-4htSe49.html#QQ1-143-123"  name="QQ2-143-123">Tabularx</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.10&#x00A0;<a 
+ href="tex4ht-4htSe50.html#QQ1-144-124"  name="QQ2-144-124">mdwtab</a></span><br /><span class="ChapterToc" >14&#x00A0;<a 
+ href="tex4ht-4htCh14.html#QQ1-145-125"  name="QQ2-145-125">multirow</a></span><br /><span class="ChapterToc" >15&#x00A0;<a 
+ href="tex4ht-4htCh15.html#QQ1-146-126"  name="QQ2-146-126">Pictures</a></span><br /><span class="ChapterToc" >16&#x00A0;<a 
+ href="tex4ht-4htCh16.html#QQ1-147-127"  name="QQ2-147-127">Theorem
+Environments</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.1&#x00A0;<a 
+ href="tex4ht-4htSe51.html#QQ1-148-128"  name="QQ2-148-128">LaTeX</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.2&#x00A0;<a 
+ href="tex4ht-4htSe52.html#QQ1-149-129"  name="QQ2-149-129">ntheorem.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.3&#x00A0;<a 
+ href="tex4ht-4htSe53.html#QQ1-150-130"  name="QQ2-150-130">ntheorem.sty</a></span><br /><span class="ChapterToc" >17&#x00A0;<a 
+ href="tex4ht-4htCh17.html#QQ1-151-131"  name="QQ2-151-131">Sectioning
+Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.1&#x00A0;<a 
+ href="tex4ht-4htSe54.html#QQ1-152-132"  name="QQ2-152-132">Cut Points</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.2&#x00A0;<a 
+ href="tex4ht-4htSe55.html#QQ1-153-133"  name="QQ2-153-133">Shared Below Chapter Stuff</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.3&#x00A0;<a 
+ href="tex4ht-4htSe56.html#QQ1-155-135"  name="QQ2-155-135">Cut
+Points</a></span><br /><span class="ChapterToc" >18&#x00A0;<a 
+ href="tex4ht-4htCh18.html#QQ1-156-136"  name="QQ2-156-136">Footnotes, Floats, and Figures</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.1&#x00A0;<a 
+ href="tex4ht-4htSe57.html#QQ1-157-137"  name="QQ2-157-137">Floats, Inserts, and Captions</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.2&#x00A0;<a 
+ href="tex4ht-4htSe58.html#QQ1-159-139"  name="QQ2-159-139">Wrapfig</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.3&#x00A0;<a 
+ href="tex4ht-4htSe59.html#QQ1-160-140"  name="QQ2-160-140">Footnotes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.4&#x00A0;<a 
+ href="tex4ht-4htSe60.html#QQ1-165-145"  name="QQ2-165-145">subfigure.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;18.5&#x00A0;<a 
+ href="tex4ht-4htSe61.html#QQ1-166-146"  name="QQ2-166-146">caption.sty</a></span><br /><span class="ChapterToc" >19&#x00A0;<a 
+ href="tex4ht-4htCh19.html#QQ1-167-147"  name="QQ2-167-147">Index
+and Glossary</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.1&#x00A0;<a 
+ href="tex4ht-4htSe62.html#QQ1-168-148"  name="QQ2-168-148">theindex</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.2&#x00A0;<a 
+ href="tex4ht-4htSe63.html#QQ1-169-149"  name="QQ2-169-149">makeidx</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.3&#x00A0;<a 
+ href="tex4ht-4htSe64.html#QQ1-170-150"  name="QQ2-170-150">splitidx.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.4&#x00A0;<a 
+ href="tex4ht-4htSe65.html#QQ1-171-151"  name="QQ2-171-151">External
+Processing of Index File (idxmake.4ht)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.5&#x00A0;<a 
+ href="tex4ht-4htSe66.html#QQ1-178-158"  name="QQ2-178-158">Glossaries</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;19.6&#x00A0;<a 
+ href="tex4ht-4htSe67.html#QQ1-179-159"  name="QQ2-179-159">Glossary</a></span><br /><span class="ChapterToc" >20&#x00A0;<a 
+ href="tex4ht-4htCh20.html#QQ1-180-160"  name="QQ2-180-160">Bibliography</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;20.1&#x00A0;<a 
+ href="tex4ht-4htSe68.html#QQ1-181-161"  name="QQ2-181-161">LaTeX</a></span><br /><span class="ChapterToc" >21&#x00A0;<a 
+ href="tex4ht-4htCh21.html#QQ1-184-164"  name="QQ2-184-164">Page
+styles and related commands</a></span><br /><span class="ChapterToc" >22&#x00A0;<a 
+ href="tex4ht-4htCh22.html#QQ1-188-166"  name="QQ2-188-166">LaTeX Accents</a></span><br /><span class="ChapterToc" >23&#x00A0;<a 
+ href="tex4ht-4htCh23.html#QQ1-189-167"  name="QQ2-189-167">Output Routine</a></span><br /><span class="ChapterToc" >24&#x00A0;<a 
+ href="tex4ht-4htCh24.html#QQ1-191-169"  name="QQ2-191-169">Utilities</a></span><br /><span class="ChapterToc" >25&#x00A0;<a 
+ href="tex4ht-4htCh25.html#QQ1-192-170"  name="QQ2-192-170">TO BE
+ORGANIZED</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;25.1&#x00A0;<a 
+ href="tex4ht-4htSe69.html#QQ1-193-171"  name="QQ2-193-171">Non-classified LaTeX************************</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;25.2&#x00A0;<a 
+ href="tex4ht-4htSe70.html#QQ1-194-172"  name="QQ2-194-172">srcltx.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;25.3&#x00A0;<a 
+ href="tex4ht-4htSe71.html#QQ1-195-173"  name="QQ2-195-173">emulateapj.sty</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;25.4&#x00A0;<a 
+ href="tex4ht-4htSe72.html#QQ1-196-174"  name="QQ2-196-174">ifthen.sty</a></span><br /><span class="ChapterToc" >26&#x00A0;<a 
+ href="tex4ht-4htCh26.html#QQ1-198-175"  name="QQ2-198-175">Display-Paragraph
+Environments of LaTeX</a></span><br /><span class="ChapterToc" >27&#x00A0;<a 
+ href="tex4ht-4htCh27.html#QQ1-201-176"  name="QQ2-201-176">Tables of Contents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;27.1&#x00A0;<a 
+ href="tex4ht-4htSe73.html#QQ1-202-177"  name="QQ2-202-177">Modifying LaTeX
+Macros</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;27.2&#x00A0;<a 
+ href="tex4ht-4htSe74.html#QQ1-203-178"  name="QQ2-203-178">Default Choice of Entries for TOC&#8217;s</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;27.3&#x00A0;<a 
+ href="tex4ht-4htSe75.html#QQ1-204-179"  name="QQ2-204-179">Extra entries to
+Toc</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;27.4&#x00A0;<a 
+ href="tex4ht-4htSe76.html#QQ1-205-180"  name="QQ2-205-180">Configurations</a></span><br /><span class="ChapterToc" >28&#x00A0;<a 
+ href="tex4ht-4htCh28.html#QQ1-206-181"  name="QQ2-206-181">Content in Margins</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;28.1&#x00A0;<a 
+ href="tex4ht-4htSe77.html#QQ1-207-182"  name="QQ2-207-182">Margin Notes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;28.2&#x00A0;<a 
+ href="tex4ht-4htSe78.html#QQ1-209-183"  name="QQ2-209-183">Picture
+Insertions</a></span><br /><span class="ChapterToc" >29&#x00A0;<a 
+ href="tex4ht-4htCh29.html#QQ1-210-184"  name="QQ2-210-184">Other</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.1&#x00A0;<a 
+ href="tex4ht-4htSe79.html#QQ1-211-185"  name="QQ2-211-185">Lost Spaces</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.2&#x00A0;<a 
+ href="tex4ht-4htSe80.html#QQ1-212-186"  name="QQ2-212-186">Accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.3&#x00A0;<a 
+ href="tex4ht-4htSe81.html#QQ1-216-188"  name="QQ2-216-188">List-Tocs
+of Figures and Tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.4&#x00A0;<a 
+ href="tex4ht-4htSe82.html#QQ1-218-190"  name="QQ2-218-190">/input Command</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.5&#x00A0;<a 
+ href="tex4ht-4htSe83.html#QQ1-219-191"  name="QQ2-219-191">Fonts (latex.ltx +
+fontmath.4ht)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;29.6&#x00A0;<a 
+ href="tex4ht-4htSe84.html#QQ1-221-192"  name="QQ2-221-192">Hfonts</a></span><br /><span class="ChapterToc" >30&#x00A0;<a 
+ href="tex4ht-4htCh30.html#QQ1-225-194"  name="QQ2-225-194">latex209.def</a></span><br /><span class="ChapterToc" >31&#x00A0;<a 
+ href="tex4ht-4htCh31.html#QQ1-226-195"  name="QQ2-226-195">Sectioning Commands</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.1&#x00A0;<a 
+ href="tex4ht-4htSe85.html#QQ1-228-196"  name="QQ2-228-196">Parts</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.2&#x00A0;<a 
+ href="tex4ht-4htSe86.html#QQ1-230-198"  name="QQ2-230-198">Chapters,
+Appendixes, and Like Chapters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.3&#x00A0;<a 
+ href="tex4ht-4htSe87.html#QQ1-232-199"  name="QQ2-232-199">Sections and Like Sections</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.4&#x00A0;<a 
+ href="tex4ht-4htSe88.html#QQ1-234-201"  name="QQ2-234-201">SubSections</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.5&#x00A0;<a 
+ href="tex4ht-4htSe89.html#QQ1-236-203"  name="QQ2-236-203">SubSubSections</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.6&#x00A0;<a 
+ href="tex4ht-4htSe90.html#QQ1-238-205"  name="QQ2-238-205">Paragraphs
+and Sub-Paragraphs</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;31.7&#x00A0;<a 
+ href="tex4ht-4htSe91.html#QQ1-240-207"  name="QQ2-240-207">Options 1, 2, 3 for LaTeX</a></span><br /><span class="ChapterToc" >32&#x00A0;<a 
+ href="tex4ht-4htCh32.html#QQ1-241-208"  name="QQ2-241-208">Encodings</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;32.1&#x00A0;<a 
+ href="tex4ht-4htSe92.html#QQ1-242-209"  name="QQ2-242-209">t2benc</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;32.2&#x00A0;<a 
+ href="tex4ht-4htSe93.html#QQ1-243-210"  name="QQ2-243-210">ot4enc</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;32.3&#x00A0;<a 
+ href="tex4ht-4htSe94.html#QQ1-244-211"  name="QQ2-244-211">pd1enc</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;32.4&#x00A0;<a 
+ href="tex4ht-4htSe95.html#QQ1-245-212"  name="QQ2-245-212">inputenc</a></span><br /><span class="ChapterToc" >33&#x00A0;<a 
+ href="tex4ht-4htCh33.html#QQ1-246-213"  name="QQ2-246-213">More
+LaTeX</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;33.1&#x00A0;<a 
+ href="tex4ht-4htSe96.html#QQ1-247-214"  name="QQ2-247-214">/listoffigures and /listoftables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;33.2&#x00A0;<a 
+ href="tex4ht-4htSe97.html#QQ1-248-215"  name="QQ2-248-215">Newline and Vspace</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;33.3&#x00A0;<a 
+ href="tex4ht-4htSe98.html#QQ1-249-216"  name="QQ2-249-216">Title
+Page</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;33.4&#x00A0;<a 
+ href="tex4ht-4htSe99.html#QQ1-251-217"  name="QQ2-251-217">Multi Columns</a></span><br />
+    </div>
+<!--l. 525--><p class="indent" >    <a 
+ href="/usr/local/teTeX/share/texmf/tex/latex/base/latex.ltx" >latex.ltx</a>,
+</p><!--l. 527--><p class="indent" >    <a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/" >latex source components</a>
+</p>
+      <!--l. 597--><p class="indent" ><a 
+ name="PrTx4001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4001"  name="QPrTx16"><span 
+class="cmtt-10">latex.4ht</span></a><a 
+ name="PrTx4002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">latex.4ht</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">2014-07-12-22:36</span>&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">%</span>&#x00A0;<span 
+class="cmtt-10">Copyright</span>&#x00A0;<span 
+class="cmtt-10">(C)</span>&#x00A0;<span 
+class="cmtt-10">1997--2009</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">Eitan</span>&#x00A0;<span 
+class="cmtt-10">M.</span>&#x00A0;<span 
+class="cmtt-10">Gurari</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4003"  href="tex4ht-4htCh1.html#PrTx3095"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh1.html#PrTx3001"><span 
+class="cmtt-10">TeX4ht copyright</span></a><a 
+ name="PrTx4004"  href="tex4ht-4htSe1.html#PrTx6004"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4065"><span 
+class="cmtt-10">exit if already loaded</span></a><a 
+ name="PrTx4006"  href="tex4ht-4htSe301.html#PrTx558006"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu57.html#PrTx120001"><span 
+class="cmtt-10">early latex definitions</span></a><a 
+ name="PrTx4008"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174085"><span 
+class="cmtt-10">latex changes for tex4ht.sty</span></a><a 
+ name="PrTx4010"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe28.html#PrTx63013"><span 
+class="cmtt-10">plain,latex utilities</span></a><a 
+ name="PrTx4012"  href="tex4ht-4htSe301.html#PrTx558056"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh2.html#PrTx5001"><span 
+class="cmtt-10">latex ltclass</span></a><a 
+ name="PrTx4014"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltclass.dtx" ><span 
+class="cmtt-10">ltclass</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltdirchk.dtx" ><span 
+class="cmtt-10">ltdirchk</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh3.html#PrTx8001"><span 
+class="cmtt-10">latex ltplain</span></a><a 
+ name="PrTx4016"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltplain.dtx" ><span 
+class="cmtt-10">ltplain</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltvers.dtx" ><span 
+class="cmtt-10">ltvers</span></a></i>
+
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltdefns.dtx" ><span 
+class="cmtt-10">ltdefns</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltalloc.dtx" ><span 
+class="cmtt-10">ltalloc</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltcntrl.dtx" ><span 
+class="cmtt-10">ltcntrl</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/lterror.dtx" ><span 
+class="cmtt-10">lterror</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltpar.dtx" ><span 
+class="cmtt-10">ltpar</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh4.html#PrTx9001"><span 
+class="cmtt-10">latex ltspace</span></a><a 
+ name="PrTx4018"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltspace.dtx" ><span 
+class="cmtt-10">ltspace</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltlogos.dtx" ><span 
+class="cmtt-10">ltlogos</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfiles.dtx" ><span 
+class="cmtt-10">ltfiles</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4019"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe18.html#PrTx45001"><span 
+class="cmtt-10">latex ltoutenc</span></a><a 
+ name="PrTx4020"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltoutenc.dtx" ><span 
+class="cmtt-10">ltoutenc</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4067"><span 
+class="cmtt-10">latex ltcounts</span></a><a 
+ name="PrTx4022"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltcounts.dtx" ><span 
+class="cmtt-10">ltcounts</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh5.html#PrTx10001"><span 
+class="cmtt-10">latex ltlength</span></a><a 
+ name="PrTx4024"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltlength.dtx" ><span 
+class="cmtt-10">ltlength</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfssbas.dtx" ><span 
+class="cmtt-10">ltfssbas</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4025"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4063"><span 
+class="cmtt-10">latex ltfsstrc</span></a><a 
+ name="PrTx4026"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfsstrc.dtx" ><span 
+class="cmtt-10">ltfsstrc</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfsscmp.dtx" ><span 
+class="cmtt-10">ltfsscmp</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4027"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh2.html#PrTx5017"><span 
+class="cmtt-10">latex ltfssdcl</span></a><a 
+ name="PrTx4028"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfssdcl.dtx" ><span 
+class="cmtt-10">ltfssdcl</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfssini.dtx" ><span 
+class="cmtt-10">ltfssini</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfntcmd.dtx" ><span 
+class="cmtt-10">ltfntcmd</span></a></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltpageno.dtx" ><span 
+class="cmtt-10">ltpageno</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4029"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe3.html#PrTx12001"><span 
+class="cmtt-10">latex ltxref</span></a><a 
+ name="PrTx4030"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltxref.dtx" ><span 
+class="cmtt-10">ltxref</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4031"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh7.html#PrTx43001"><span 
+class="cmtt-10">latex ltmiscen</span></a><a 
+ name="PrTx4032"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltmiscen.dtx" ><span 
+class="cmtt-10">ltmiscen</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4033"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh8.html#PrTx53001"><span 
+class="cmtt-10">latex ltmath</span></a><a 
+ name="PrTx4034"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltmath.dtx" ><span 
+class="cmtt-10">ltmath</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4035"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe33.html#PrTx74001"><span 
+class="cmtt-10">latex ltlists</span></a><a 
+ name="PrTx4036"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltlists.dtx" ><span 
+class="cmtt-10">ltlists</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4037"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh11.html#PrTx88001"><span 
+class="cmtt-10">latex ltboxes</span></a><a 
+ name="PrTx4038"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltboxes.dtx" ><span 
+class="cmtt-10">ltboxes</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4039"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe40.html#PrTx94001"><span 
+class="cmtt-10">latex lttab</span></a><a 
+ name="PrTx4040"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/lttab.dtx" ><span 
+class="cmtt-10">lttab</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4041"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh15.html#PrTx126001"><span 
+class="cmtt-10">latex ltpictur</span></a><a 
+ name="PrTx4042"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/oltpictur.dtx" ><span 
+class="cmtt-10">oltpictur</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4043"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe51.html#PrTx128001"><span 
+class="cmtt-10">latex ltthm</span></a><a 
+ name="PrTx4044"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltthm.dtx" ><span 
+class="cmtt-10">ltthm</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4045"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe55.html#PrTx133001"><span 
+class="cmtt-10">latex ltsect</span></a><a 
+ name="PrTx4046"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltsect.dtx" ><span 
+class="cmtt-10">ltsect</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4047"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe57.html#PrTx137001"><span 
+class="cmtt-10">latex ltfloat</span></a><a 
+ name="PrTx4048"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfloat.dtx" ><span 
+class="cmtt-10">ltfloat</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4049"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htCh19.html#PrTx147003"><span 
+class="cmtt-10">latex ltidxglo</span></a><a 
+ name="PrTx4050"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltidxglo.dtx" ><span 
+class="cmtt-10">ltidxglo</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4051"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe68.html#PrTx161001"><span 
+class="cmtt-10">latex ltbibl</span></a><a 
+ name="PrTx4052"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltbibl.dtx" ><span 
+class="cmtt-10">ltbibl</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4053"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu73.html#PrTx165001"><span 
+class="cmtt-10">latex ltpage</span></a><a 
+ name="PrTx4054"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltpage.dtx" ><span 
+class="cmtt-10">ltpage</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4055"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSu74.html#PrTx168001"><span 
+class="cmtt-10">latex ltoutput</span></a><a 
+ name="PrTx4056"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltoutput.dtx" ><span 
+class="cmtt-10">ltoutput</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4057"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx4057"><span 
+class="cmtt-10">latex ltfinal</span></a><a 
+ name="PrTx4058"><span 
+class="cmtt-10">.&#x003E;</span></a>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<i><a 
+ href="http://ctan.tug.org/ctan/tex-archive/macros/latex/base/ltfinal.dtx" ><span 
+class="cmtt-10">ltfinal</span></a></i>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4059"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174013"><span 
+class="cmtt-10">non classified latex</span></a><a 
+ name="PrTx4060"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx4061"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htSe73.html#PrTx177025"><span 
+class="cmtt-10">html /addcontentsline</span></a><a 
+ name="PrTx4062"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:MClass:=\c:MathClass:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{MathClass}[5]{\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@nodocument=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\normalcolor=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:MClass:{#1}{#2}{#3}{#4}{#5}\egroup}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\:MDelims:=\c:MathDelimiters:</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{MathDelimiters}[2]{\bgroup</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\@nodocument=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\normalcolor=\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:MDelims:{#1}{#2}\egroup}</span>
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Hinput{latex}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\endinput</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+           </p><!--l. 607--><p class="noindent" ><a 
+ name="PrTx4063"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4025"  name="QPrTx17"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltfsstrc</span></a><a 
+ name="PrTx4064"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\edef\:temp{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\every@math@size={\noexpand\ifx</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\EndPicture\noexpand\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\noexpand\else</span>&#x00A0;<span 
+class="cmtt-10">\the\every@math@size</span>&#x00A0;<span 
+class="cmtt-10">\noexpand\fi}%</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\:temp</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 613--><p class="noindent" ><a 
+ name="PrTx4065"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4005"  name="QPrTx18"><span 
+class="cmtt-10">exit</span>&#x00A0;<span 
+class="cmtt-10">if</span>&#x00A0;<span 
+class="cmtt-10">already</span>&#x00A0;<span 
+class="cmtt-10">loaded</span></a><a 
+ name="PrTx4066"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx\SaveMkHalignConf:g\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\endinput\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 617--><p class="noindent" >Latex prohibits content before the &#8216;<span 
+class="cmtt-10">\begin{document}</span>&#8217; by putting &#8216;<span 
+class="cmtt-10">\ht:everypar{\@nodocument}</span>&#8217; before
+&#8216;<span 
+class="cmtt-10">\begin{document}</span>&#8217; to get an error if text appears before the beginning. A possible solution is to put sensitive stuff
+in, for instance, &#8216;<span 
+class="cmtt-10">{ \let\@nodocument=\empty ...}</span>&#8217;.
+</p><!--l. 624--><p class="indent" >    It is unsafe to define <span 
+class="cmtt-10">\romannumeral </span>because it is used within immediate definition <span 
+class="cmtt-10">\edef</span>, as well as definitions
+of macro names <span 
+class="cmtt-10">\csname ...\romannumeral ...\endcsname</span>. Consider also <span 
+class="cmtt-10">\Configure{enumerate} </span>(e.g.,
+<a 
+ href="tex4ht-4ht6.html"  name="tex4ht-4ht6.html" >paralist</a>)
+</p>
+      <!--l. 674--><p class="indent" ><a 
+ name="PrTx4067"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4021"  name="QPrTx19"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltcounts</span></a><a 
+ name="PrTx4068"  href="#PrTx4070"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\:CheckOption{enum}\if:Option</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{\a:romannumeral</span>&#x00A0;<span 
+class="cmtt-10">{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:slowroman\romannumeral</span>&#x00A0;<span 
+class="cmtt-10">#1@}\b:romannumeral}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\@roman=\:temp</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{\a:romannumeral</span>&#x00A0;<span 
+class="cmtt-10">{\expandafter</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\:Slowroman\romannumeral</span>&#x00A0;<span 
+class="cmtt-10">#1@}\b:romannumeral}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\@Roman=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\item</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">:warning{To</span>&#x00A0;<span 
+class="cmtt-10">configure</span>&#x00A0;<span 
+class="cmtt-10">roman</span>&#x00A0;<span 
+class="cmtt-10">numbers</span>&#x00A0;<span 
+class="cmtt-10">use</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">the</span>&#x00A0;<span 
+class="cmtt-10">option</span>&#x00A0;<span 
+class="cmtt-10">&#8217;enum&#8217;</span>&#x00A0;<span 
+class="cmtt-10">(unsafe)}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{romannumeral}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 691--><p class="noindent" ><a 
+ href="#PrTx4067"  name="PrTx4069"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4021"  name="QPrTx20"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltcounts</span></a><a 
+ name="PrTx4070"  href="#PrTx4072"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:Slowroman#1{\ifx</span>&#x00A0;<span 
+class="cmtt-10">@#1\else</span>&#x00A0;<i><span 
+class="cmtt-10">\@slowromancap</span></i>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">i#1\I:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">v#1\V:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">x#1\X:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">l#1\L:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">c#1\C:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">d#1\D:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">m#1\M:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\fi\fi\fi\fi\fi\fi\fi\expandafter\:Slowroman\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{Roman}[7]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\I:rnum{#1}\def\V:rnum{#2}\def\X:rnum{#3}\def\L:rnum{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\C:rnum{#5}\def\D:rnum{#6}\def\M:rnum{#7}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{Roman}{I}{V}{X}{L}{C}{D}{M}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 708--><p class="noindent" ><a 
+ href="#PrTx4069"  name="PrTx4071"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx4021"  name="QPrTx21"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">ltcounts</span></a><a 
+ name="PrTx4072"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:slowroman#1{\ifx</span>&#x00A0;<span 
+class="cmtt-10">@#1\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">i#1\i:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">v#1\v:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">x#1\x:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">l#1\l:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">c#1\c:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">d#1\d:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">m#1\m:rnum\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#1\fi\fi\fi\fi\fi\fi\fi\expandafter\:slowroman\fi</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{roman}[7]{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\i:rnum{#1}\def\v:rnum{#2}\def\x:rnum{#3}\def\l:rnum{#4}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\c:rnum{#5}\def\d:rnum{#6}\def\m:rnum{#7}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\Configure{roman}{i}{v}{x}{l}{c}{d}{m}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 14909--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htCh2.html" >next</a>] [<a 
+ href="tex4ht-4htCh1.html" >prev</a>] [<a 
+ href="tex4ht-4htCh1.html#tailtex4ht-4htCh1.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htPa3.html" >front</a>] [<a 
+ href="tex4ht-4ht.html#tex4ht-4htPa3.html" >up</a>] </p></div>
+<!--l. 14909--><p class="indent" >    <a 
+  name="tailtex4ht-4htPa3.html"></a> </p> 
+</body></html> 

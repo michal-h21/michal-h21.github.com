@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Name Spaces at Start of Elements</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,3,next,html --> 
+<meta name="src" content="xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 12:32:00" /> 
+<link rel="stylesheet" type="text/css" href="xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 4181--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse12.html" >next</a>] [<a 
+ href="xtpipessu55.html" >prev</a>] [<a 
+ href="xtpipessu55.html#tailxtpipessu55.html" >prev-tail</a>] [<a 
+ href="xtpipessu52.html#tailxtpipessu54.html">tail</a>] [<a 
+ href="xtpipessu52.html#xtpipessu56.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">11.4   </span> <a 
+  id="x71-7900011.4"></a>Name Spaces at Start of Elements</h4>
+           <!--l. 4191--><p class="noindent" ><a 
+ id="PrTx79001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu52.html#PrTx77007"  id="QPrTx227"><span 
+class="cmtt-10">record</span>&#x00A0;<span 
+class="cmtt-10">xmlns</span></a><a 
+ id="PrTx79002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">name.startsWith("xmlns")</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">(name.length()</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">5)</span>&#x00A0;<span 
+class="cmtt-10">||</span>&#x00A0;<span 
+class="cmtt-10">(name.charAt(5)</span>&#x00A0;<span 
+class="cmtt-10">==</span>&#x00A0;<span 
+class="cmtt-10">&#8217;:&#8217;)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<a 
+ id="PrTx79003"  href="xtpipessu49.html#PrTx72013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="xtpipessu49.html#PrTx72015"><span 
+class="cmtt-10">bool := xmlns active?</span></a><a 
+ id="PrTx79004"  href="xtpipessu55.html#PrTx80028"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!bool</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">nsName.add(name);</span>&#x00A0;<span 
+class="cmtt-10">nsValue.add(value);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4211--><p class="noindent" ><a 
+ id="PrTx79005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu52.html#PrTx77009"  id="QPrTx228"><span 
+class="cmtt-10">add</span>&#x00A0;<span 
+class="cmtt-10">missing</span>&#x00A0;<span 
+class="cmtt-10">xmlns</span>&#x00A0;<span 
+class="cmtt-10">attributes</span></a><a 
+ id="PrTx79006"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">HashSet&#x003C;String&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">registry</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">HashSet&#x003C;String&#x003E;();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(int</span>&#x00A0;<span 
+class="cmtt-10">i=nsName.size();</span>&#x00A0;<span 
+class="cmtt-10">i&#x003E;top;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">registry.add(</span>&#x00A0;<span 
+class="cmtt-10">(String)</span>&#x00A0;<span 
+class="cmtt-10">nsName.get(i)</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">for(int</span>&#x00A0;<span 
+class="cmtt-10">i=top;</span>&#x00A0;<span 
+class="cmtt-10">i&#x003E;0;</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">i--;</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">String</span>&#x00A0;<span 
+class="cmtt-10">nm</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">(String)</span>&#x00A0;<span 
+class="cmtt-10">nsName.get(i);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">if(</span>&#x00A0;<span 
+class="cmtt-10">!</span>&#x00A0;<span 
+class="cmtt-10">registry.contains(nm)</span>&#x00A0;<span 
+class="cmtt-10">){</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">registry.add(</span>&#x00A0;<span 
+class="cmtt-10">nm</span>&#x00A0;<span 
+class="cmtt-10">);</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">s</span>&#x00A0;<span 
+class="cmtt-10">+=</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">"</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">nm</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"=\""</span>&#x00A0;<span 
+class="cmtt-10">+</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">XtpipesUni.toUni(</span>&#x00A0;<span 
+class="cmtt-10">(String)</span>&#x00A0;<span 
+class="cmtt-10">nsValue.get(i),</span>&#x00A0;<span 
+class="cmtt-10">"&#x003C;&#x003E;&amp;\"")</span>&#x00A0;<span 
+class="cmtt-10">+</span>&#x00A0;<span 
+class="cmtt-10">"\"";</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4220--><p class="noindent" ><a 
+ href="xtpipessu52.html#PrTx77013"  id="PrTx79007"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu51.html#PrTx76007"  id="QPrTx229"><span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">fields</span></a><a 
+ id="PrTx79008"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">ArrayList&#x003C;String&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">nsName</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">ArrayList&#x003C;String&#x003E;(),</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">nsValue</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">ArrayList&#x003C;String&#x003E;();</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">Stack&#x003C;Integer&#x003E;</span>&#x00A0;<span 
+class="cmtt-10">nsStack</span>&#x00A0;<span 
+class="cmtt-10">=</span>&#x00A0;<span 
+class="cmtt-10">new</span>&#x00A0;<span 
+class="cmtt-10">Stack&#x003C;Integer&#x003E;();</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 4226--><p class="noindent" ><a 
+ href="xtpipessu51.html#PrTx76013"  id="PrTx79009"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="xtpipessu51.html#PrTx76005"  id="QPrTx230"><span 
+class="cmtt-10">ScriptsManager</span>&#x00A0;<span 
+class="cmtt-10">imports</span></a><a 
+ id="PrTx79010"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.util.ArrayList;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">java.util.HashSet;</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">import</span>&#x00A0;<span 
+class="cmtt-10">xtpipes.XtpipesUni;</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+   <!--l. 4230--><div class="crosslinks"><p class="noindent">[<a 
+ href="xtpipesse12.html" >next</a>] [<a 
+ href="xtpipessu55.html" >prev</a>] [<a 
+ href="xtpipessu55.html#tailxtpipessu55.html" >prev-tail</a>] [<a 
+ href="xtpipessu54.html" >front</a>] [<a 
+ href="xtpipessu52.html#xtpipessu56.html" >up</a>] </p></div>
+<!--l. 4230--><p class="indent" >   <a 
+  id="tailxtpipessu54.html"></a> </p> 
+</body></html> 

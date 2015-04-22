@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Bookeeping for Continued Fractions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- xhtml,next,3,html --> 
+<meta name="src" content="tex4ht-jsml-xtpipes.tex" /> 
+<meta name="date" content="2014-05-24 11:52:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-jsml-xtpipes.css" /> 
+</head><body 
+>
+   <!--l. 3061--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipessu43.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu41.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu41.html#tailtex4ht-jsml-xtpipessu41.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-jsml-xtpipessu42.html">tail</a>] [<a 
+ href="tex4ht-jsml-xtpipesse9.html#tex4ht-jsml-xtpipessu42.html" >up</a>] </p></div>
+   <h4 class="subsectionHead"><span class="titlemark">9.4   </span> <a 
+  id="x53-520009.4"></a>Bookeeping for Continued Fractions</h4>
+
+   <p></p><div class="ShowCode" id="ShowCode-129"><div class="head">
+       <a 
+ id="PrTx52001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu40.html#PrTx50011"  id="QPrTx129"><span 
+class="cmtt-10">continued</span><span 
+class="cmtt-10">&#x00A0;level</span><span 
+class="cmtt-10">&#x00A0;counter</span></a><a 
+ id="PrTx52002"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">cont</span></span></div><div class="tail">-_-_-
+   </div></div>
+<!--l. 3069--><p class="indent" >   In the first phase, the mfrac elements in a group carry attributes as in
+
+</p>
+   <div class="verbatim" id="verbatim-15">
+&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x003C;mfrac&#x00A0;class="continued-mfrac"&#x003E;
+</div>
+<!--l. 3074--><p class="nopar" >
+</p><!--l. 3077--><p class="indent" >   with the exception of the bottom (internal) most leveles. The &#8216;cont&#8217; parameter is
+for determining whether the parent and the grandparent are frac elements marked as
+continued.
+
+</p>
+   <p></p><div class="ShowCode" id="ShowCode-130"><div class="head">
+       <a 
+ id="PrTx52003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu39.html#PrTx49007"  id="QPrTx130"><span 
+class="cmtt-10">clValue</span><span 
+class="cmtt-10">&#x00A0;:=</span><span 
+class="cmtt-10">&#x00A0;class</span><span 
+class="cmtt-10">&#x00A0;of</span><span 
+class="cmtt-10">&#x00A0;mfrac</span></a><a 
+ id="PrTx52004"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if</span><span 
+class="cmtt-10">&#x00A0;(node.hasAttributes())</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;Node</span><span 
+class="cmtt-10">&#x00A0;cl</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;node.getAttributes().getNamedItem("class");</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;if</span><span 
+class="cmtt-10">&#x00A0;(cl</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;clValue</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;cl.getNodeValue();</span><span 
+class="cmtt-10">&#x00A0;}</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <p></p><div class="ShowCode" id="ShowCode-131"><div class="head">
+       <a 
+ id="PrTx52005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-jsml-xtpipessu39.html#PrTx49009"  id="QPrTx131"><span 
+class="cmtt-10">cont</span><span 
+class="cmtt-10">&#x00A0;:=</span><span 
+class="cmtt-10">&#x00A0;distance</span><span 
+class="cmtt-10">&#x00A0;from</span><span 
+class="cmtt-10">&#x00A0;mfrac(continued-frac)</span></a><a 
+ id="PrTx52006"><span 
+class="cmtt-10">..&#x003E;</span></a></div><div class="body"><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">if(</span><span 
+class="cmtt-10">&#x00A0;(clValue</span><span 
+class="cmtt-10">&#x00A0;!=</span><span 
+class="cmtt-10">&#x00A0;null)</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;&amp;&amp;</span><span 
+class="cmtt-10">&#x00A0;clValue.equals("continued-mfrac")</span><span 
+class="cmtt-10">&#x00A0;)</span><span 
+class="cmtt-10">&#x00A0;{</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;cont</span><span 
+class="cmtt-10">&#x00A0;=</span><span 
+class="cmtt-10">&#x00A0;2;</span>
+  <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">}</span><span 
+class="cmtt-10">&#x00A0;else</span><span 
+class="cmtt-10">&#x00A0;{</span><span 
+class="cmtt-10">&#x00A0;cont--;</span><span 
+class="cmtt-10">&#x00A0;}</span></span></div><div class="tail">-_-_-
+   </div></div>
+
+   <!--l. 3100--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-jsml-xtpipessu43.html" >next</a>] [<a 
+ href="tex4ht-jsml-xtpipessu41.html" >prev</a>] [<a 
+ href="tex4ht-jsml-xtpipessu41.html#tailtex4ht-jsml-xtpipessu41.html" >prev-tail</a>] [<a 
+ href="tex4ht-jsml-xtpipessu42.html" >front</a>] [<a 
+ href="tex4ht-jsml-xtpipesse9.html#tex4ht-jsml-xtpipessu42.html" >up</a>] </p></div>
+<!--l. 3100--><p class="indent" >   <a 
+  id="tailtex4ht-jsml-xtpipessu42.html"></a> </p> 
+</body></html> 

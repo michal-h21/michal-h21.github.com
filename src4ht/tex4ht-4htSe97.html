@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Newline and Vspace</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 14632--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe98.html" >next</a>] [<a 
+ href="tex4ht-4htSe96.html" >prev</a>] [<a 
+ href="tex4ht-4htSe96.html#tailtex4ht-4htSe96.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe97.html">tail</a>] [<a 
+ href="tex4ht-4htCh33.html#tex4ht-4htSe97.html" >up</a>] </p></div>
+    <h3 class="SectionHead">33.2 <a 
+ href="tex4ht-4htPa1.html#QQ2-248-215"  name="QQ1-248-215">Newline and Vspace</a></h3>
+    <div class="TableOfContents">
+    </div>
+<!--l. 14634--><p class="indent" >    Latex uses vrule for vertical spaces within paragraph. In orser not to break paragraphs, we put line breaks. So,
+for instance, centered paragraphs retain their shapes.
+</p><!--l. 14639--><p class="indent" >    &#8216;<span 
+class="cmtt-10">\\[...]</span>&#8217; and <span 
+class="cmtt-10">\\*[...]</span>, in normal mode, are implied from <span 
+class="cmtt-10">\@xnewline</span>, and in turn on &#8216;<span 
+class="cmtt-10">\newline</span>&#8217; and
+<span 
+class="cmtt-10">\vspace</span>. More recent definitions of latex rely on <span 
+class="cmtt-10">\@gnewline</span>.
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">Try</span><span 
+class="cmtt-10">&#x00A0;\\[1mm]|</span><span 
+class="cmtt-10">&#x00A0;this.</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 14672--><p class="indent" ><a 
+ name="PrTx215001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174069"  name="QPrTx702"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">1999</span></a><a 
+ name="PrTx215002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@gnewline\:UnDef</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:def\newline{\ifhmode</span>&#x00A0;<span 
+class="cmtt-10">\a:newline\fi}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\@newline[#1]{\ifhmode\unskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003E;0.98\smallskipamount</span>&#x00A0;<span 
+class="cmtt-10">\a:newline\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\vspace{#1}\newline}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\:tempc\@gnewline</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:defI\:tempc{\ht:special{t4ht@[}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\append:defI\:tempc{\ht:special{t4ht@]}\ifhmode</span>&#x00A0;<span 
+class="cmtt-10">\a:newline\fi}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\@gnewline\:tempc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\:temp[#1]{{\ifhmode\unskip</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\tmp:dim=#1\relax</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\ifdim</span>&#x00A0;<span 
+class="cmtt-10">\tmp:dim&#x003E;0\smallskipamount</span>&#x00A0;<span 
+class="cmtt-10">\a:newline\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\let\a:newline=\empty</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\vspace{#1}\o:@newline:[#1]}}</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\HLet\@newline=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 14675--><p class="noindent" >The recent latex.ltx file introduced the code
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\global\let\if@newlist\@@if@newlist</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+<!--l. 14682--><p class="indent" >    at the end of the <span 
+class="cmtt-10">\@outputpage </span>macro. In the case of plain latex, I suspect, the task of this code is to avoid
+extra vertical space before a list which starts at the top of a page. This effect is achieved by having the <span 
+class="cmtt-10">\if@newlist</span>
+changing to false from true at the page break.
+</p><!--l. 14687--><p class="indent" >    In the case of tex4ht, the side effect of loosing the list header caused also the loss of the code
+<span 
+class="cmtt-10">&#x003C;ul&#x003E;</span>.
+</p><!--l. 14691--><p class="indent" >    Latex 200 introduces &#8216;<span 
+class="cmtt-10">\global\let\if@newlist\@@if@newlist</span>&#8217; at the end of the <span 
+class="cmtt-10">\@outputpage </span>routine.
+Without the following, we loose start of new lists at top of pages.
+</p>
+      <!--l. 14703--><p class="indent" ><a 
+ name="PrTx215003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174071"  name="QPrTx703"><span 
+class="cmtt-10">latex</span>&#x00A0;<span 
+class="cmtt-10">2000</span></a><a 
+ name="PrTx215004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\ifx</span>&#x00A0;<span 
+class="cmtt-10">\@@if@newlist\:UnDef</span>&#x00A0;<span 
+class="cmtt-10">\else</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\pend:def\@outputpage{\expandafter\global</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\let</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\@@if@newlist\csname</span>&#x00A0;<span 
+class="cmtt-10">if@newlist\endcsname}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\fi</span>
+
+      <br /><!--x-->&#x00A0;-_-_-</span>
+           </p><!--l. 14709--><p class="noindent" ><a 
+ href="tex4ht-4htSe77.html#PrTx182003"  name="PrTx215005"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174023"  name="QPrTx704"><span 
+class="cmtt-10">config latex.ltx utilities</span></a><a 
+ name="PrTx215006"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{newline}{1}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 14716--><p class="noindent" >We can&#8217;t play with the following because we may get extra <span 
+class="cmtt-10">&#x003C;BR&#x003E;</span>s for paragraph breaks <span 
+class="cmtt-10">&#x003C;P&#x003E;</span>.
+</p><div class="Verbatim"><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\:vspace|=\@vspace</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\let\:vspacer|=\@vspacer</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\@vspace#1{\vsp:br{#1}\:vspace{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\@vspacer#1{\vsp:br{#1}\:vspacer{#1}}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\def\vsp:br#1{\ifhmode</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\ifdim</span><span 
+class="cmtt-10">&#x00A0;#1&#x003E;0.98\smallskipamount</span><span 
+class="cmtt-10">&#x00A0;\HCode{&#x003C;BR&#x003E;}\fi</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\fi</span><span 
+class="cmtt-10">&#x00A0;}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+
+    <!--l. 14733--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe98.html" >next</a>] [<a 
+ href="tex4ht-4htSe96.html" >prev</a>] [<a 
+ href="tex4ht-4htSe96.html#tailtex4ht-4htSe96.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe97.html" >front</a>] [<a 
+ href="tex4ht-4htCh33.html#tex4ht-4htSe97.html" >up</a>] </p></div>
+<!--l. 14733--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe97.html"></a> </p> 
+</body></html> 

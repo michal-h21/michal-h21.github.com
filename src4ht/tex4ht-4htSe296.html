@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head><title>Accents through &#8216;accents&#8217; Configurations</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml,next --> 
+<meta name="src" content="tex4ht-4ht.tex" /> 
+<meta name="date" content="2014-07-12 22:36:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-4ht.css" /> 
+<link rev="made" href="mailto:tex4ht@tug.org" /></head><body 
+>
+    <!--l. 36489--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe297.html" >next</a>] [<a 
+ href="tex4ht-4htSe295.html" >prev</a>] [<a 
+ href="tex4ht-4htSe295.html#tailtex4ht-4htSe295.html" >prev-tail</a>] [<a 
+ href="#tailtex4ht-4htSe296.html">tail</a>] [<a 
+ href="tex4ht-4htCh74.html#tex4ht-4htSe296.html" >up</a>] </p></div>
+    <h3 class="SectionHead">74.5 <a 
+ href="tex4ht-4htPa1.html#QQ2-588-548"  name="QQ1-588-548">Accents through &#8216;accents&#8217; Configurations</a></h3>
+    <div class="TableOfContents">
+    </div>
+<!--l. 36493--><p class="indent" >    When <span 
+class="cmtt-10">\hat{foo} </span>is encountered, a search is made for an &#8216;<span 
+class="cmtt-10">??-i</span>&#8217; that equals &#8216;<span 
+class="cmtt-10">foo</span>&#8217; in the given accent table. If
+found, do-found is executed; otherwise, do-not-found is executed. The do-found can reference the ??-out through
+&#8216;<span 
+class="cmtt-10">#1</span>&#8217;. The do-not-found can reference the old definition of &#8216;<span 
+class="cmtt-10">\hat</span>&#8217; through &#8216;<span 
+class="cmtt-10">#1</span>&#8217; and the foo through
+&#8216;<span 
+class="cmtt-10">#2</span>&#8217;.
+</p>
+      <!--l. 36504--><p class="indent" ><a 
+ name="PrTx548001"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htSe72.html#PrTx174053"  name="QPrTx1934"><span 
+class="cmtt-10">accents</span></a><a 
+ name="PrTx548002"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{accents}[2]{\def\a:accents##1##2{#1}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\def\b:accents##1##2##3{#2}}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 36506--><p class="noindent" >
+</p><ul >
+<li>&#8216;<span 
+class="cmtt-10">\HChar{...}</span>&#8217; sends forward a character to the next printable char (can be refined to specific characters). That is, it
+uses the character of the command, with the decoration of the character that follows. </li>
+<li>&#8216;<span 
+class="cmtt-10">\special{t4ht@+...}</span>&#8217; sends forward a string to the next printable chr </li></ul>
+<!--l. 36517--><p class="indent" >    The space in the definition of &#8216;<span 
+class="cmtt-10">\check:sc</span>&#8217; is to deal with caese like &#8216;<span 
+class="cmtt-10">cmcsc10 at 14.4pt</span>&#8217;.
+</p>
+      <!--l. 36547--><p class="indent" ><a 
+ name="PrTx548003"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx548003"  name="QPrTx1935"><span 
+class="cmtt-10">temp patch for accents on small capsPRE-CSS</span></a><a 
+ name="PrTx548004"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\check:sc#1</span>&#x00A0;<span 
+class="cmtt-10">#2</span><a 
+ name="PrTx548005"  href="tex4ht-4htSu165.html#PrTx527005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548006"  href="#PrTx548008"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{\Check:sc#1}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\Check:sc#1#2#3#4#5#6#7#8#9*{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\gdef\Check:sc##1##2##3##4##5##6##7##8##9*{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{\if</span>&#x00A0;<span 
+class="cmtt-10">#1##1\if</span>&#x00A0;<span 
+class="cmtt-10">#2##2\if</span>&#x00A0;<span 
+class="cmtt-10">##3#3\if</span>&#x00A0;<span 
+class="cmtt-10">##4#4\if</span>&#x00A0;<span 
+class="cmtt-10">##5#5\if</span>&#x00A0;<span 
+class="cmtt-10">##6#6\if</span>&#x00A0;<span 
+class="cmtt-10">##7#7%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">##8#8\aftergroup\sc:reg:ac\else</span>&#x00A0;<span 
+class="cmtt-10">\sc:digits#8##8</span><a 
+ name="PrTx548007"  href="#PrTx548005"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548008"  href="#PrTx548010"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\sc:digits#7##7#8##8</span><a 
+ name="PrTx548009"  href="#PrTx548007"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548010"  href="#PrTx548012"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;<span 
+class="cmtt-10">\sc:digits#6##6#7##7#8##8</span><a 
+ name="PrTx548011"  href="#PrTx548009"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548012"  href="#PrTx548014"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi\fi\fi\fi\fi}}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">{\scshape\expandafter\expandafter\expandafter\check:sc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\fontname\expandafter\font</span>&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<a 
+ name="PrTx548013"  href="#PrTx548011"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548014"  href="#PrTx548016"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">xxxxxxxx*}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\get:sc{\expandafter\expandafter\expandafter\check:sc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\fontname\expandafter\font</span>&#x00A0;<span 
+class="cmtt-10">\space</span>&#x00A0;<a 
+ name="PrTx548015"  href="#PrTx548013"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548016"  href="#PrTx548022"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">xxxxxxxx*}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sc:reg:ac#1#2#3{\nxt:srch</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{#3}aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVxXyYzZ\i</span>&#x00A0;<span 
+class="cmtt-10">I\j</span>&#x00A0;<span 
+class="cmtt-10">J%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">{}{}//{#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\nxt:srch#1#2{\if</span>&#x00A0;<span 
+class="cmtt-10">#1#2\expandafter\:found</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\expandafter\not:found\fi{#1}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:found#1#2#3//#4#5{\a:textscaccent#4{#5}{#2}\b:textscaccent}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\not:found#1#2#3{\if</span>&#x00A0;<span 
+class="cmtt-10">!#3!\expandafter\endnot:found</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else\expandafter\nxt:srch\fi{#1}{#3}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\endnot:found#1#2//#3#4{#3{#4}{#1}}</span>
+      <br /><!--x-->&#x00A0;<a 
+ name="PrTx548017"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="#PrTx548019"><span 
+class="cmtt-10">sc digits</span></a><a 
+ name="PrTx548018"><span 
+class="cmtt-10">.&#x003E;</span></a>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\let\acp:csv=\acp:c</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\acp:c#1#2{\get:sc\acp:csv{#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{textscaccent}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 36549--><p class="noindent" >The checking for digits is needed for cases like &#8216;<span 
+class="cmtt-10">eccc1000</span>&#8217; vesrus &#8216;<span 
+class="cmtt-10">eccc1200</span>&#8217;. Eg.g,
+</p><div class="Verbatim"><span 
+class="cmtt-10">\documentclass{article}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\usepackage[T1]{fontenc}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\begin{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+
+<br /><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\textsc{Po\&#8217;e}</span><span 
+class="cmtt-10">&#x00A0;</span><span 
+class="cmtt-10">&#x00A0;\Large</span><span 
+class="cmtt-10">&#x00A0;\textsc{Po\&#8217;e}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /><span 
+class="cmtt-10">\end{document}</span><span 
+class="cmtt-10">&#x00A0;</span>
+<br /></div>
+      <!--l. 36578--><p class="indent" ><a 
+ name="PrTx548019"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="#PrTx548017"  name="QPrTx1936"><span 
+class="cmtt-10">sc</span>&#x00A0;<span 
+class="cmtt-10">digits</span></a><a 
+ name="PrTx548020"><span 
+class="cmtt-10">..&#x003E;</span></a><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sc:digits#1#2</span><a 
+ name="PrTx548021"  href="#PrTx548015"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548022"  href="#PrTx548024"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{0}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{1}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{2}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{3}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{4}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{5}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{6}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{7}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{8}{#1}{#2}%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\sc:dig{9}{#1}{#2}}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\sc:dig#1#2#3{%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\if</span>&#x00A0;<span 
+class="cmtt-10">#1#2\if</span>&#x00A0;<span 
+class="cmtt-10">!#3!\aftergroup\sc:reg:ac</span>&#x00A0;<span 
+class="cmtt-10">\expandafter\no:sc</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\else</span>&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\expandafter\sc:digits\fi</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">#3</span><a 
+ name="PrTx548023"  href="#PrTx548021"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548024"  href="#PrTx548026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">%</span>
+      <br /><!--x-->&#x00A0;&#x00A0;&#x00A0;&#x00A0;<span 
+class="cmtt-10">\fi</span>&#x00A0;<span 
+class="cmtt-10">}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\no:sc#1</span><a 
+ name="PrTx548025"  href="#PrTx548023"><span 
+class="cmtt-10">&#x003C;.</span></a><a 
+ href="tex4ht-4htPa2.html#PrTx2001"><span 
+class="cmtt-10">par del</span></a><a 
+ name="PrTx548026"><span 
+class="cmtt-10">.&#x003E;</span></a><span 
+class="cmtt-10">{}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+</p><!--l. 36581--><p class="noindent" >The second operands must be a single parameter macro. The previous to the last field must be empty, and the last
+one is not used.
+</p><!--l. 36590--><p class="indent" >    The following put characters over each other and indirectly takes care of <span 
+class="cmtt-10">\b</span>, <span 
+class="cmtt-10">\d</span>, and &#8216;<span 
+class="cmtt-10">\ooalign</span>&#8217;.
+</p>
+      <!--l. 36599--><p class="indent" ><a 
+ href="tex4ht-4htCh3.html#PrTx8005"  name="PrTx548027"><span 
+class="cmtt-10">&#x003C;..</span></a><a 
+ href="tex4ht-4htCh3.html#PrTx8003"  name="QPrTx1937"><span 
+class="cmtt-10">plain,ltplain</span>&#x00A0;<span 
+class="cmtt-10">obeylines,oalign</span></a><a 
+ name="PrTx548028"><span 
+class="cmtt-10">..&#x003E;</span></a><span 
+class="cmtt-10">+</span><br /><span class="ShowCode" style="font-family:monospace;white-space:nowrap;" ><!--x-->&#x00A0;<span 
+class="cmtt-10">\def\:temp#1{\leavevmode\a:oalign\o:oalign:{#1}\b:oalign}</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\HLet\oalign=\:temp</span>
+      <br /><!--x-->&#x00A0;<span 
+class="cmtt-10">\NewConfigure{oalign}{2}</span>
+      <br /><!--x-->&#x00A0;-_-_-</span>
+
+</p>
+    <!--l. 36604--><div class="crosslinks"><p class="noindent">[<a 
+ href="tex4ht-4htSe297.html" >next</a>] [<a 
+ href="tex4ht-4htSe295.html" >prev</a>] [<a 
+ href="tex4ht-4htSe295.html#tailtex4ht-4htSe295.html" >prev-tail</a>] [<a 
+ href="tex4ht-4htSe296.html" >front</a>] [<a 
+ href="tex4ht-4htCh74.html#tex4ht-4htSe296.html" >up</a>] </p></div>
+<!--l. 36604--><p class="indent" >    <a 
+  name="tailtex4ht-4htSe296.html"></a> </p> 
+</body></html> 

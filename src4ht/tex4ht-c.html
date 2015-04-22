@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head>
+
+    <title>tex4ht-c.html</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,th4,family,sections+,xhtml --> 
+<meta name="src" content="tex4ht-c.tex" /> 
+<meta name="date" content="2014-07-21 21:39:00" /> 
+<link rel="stylesheet" type="text/css" href="tex4ht-c.css" /> 
+</head><body 
+>
+    <h1 class="PartHead"><a 
+ href="tex4ht-ctoc.html#QQ2-1-1"  name="QQ1-1-1">tex4ht.c</a></h1>
+    <div class="TableOfContents"><span class="ChapterToc" >1&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-2"  name="QQ2-2-2">Flow of Program</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.1&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-3"  name="QQ2-2-3">Preamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.2&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-9"  name="QQ2-2-9">Kpathsea</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.3&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-10"  name="QQ2-2-10">Outline</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.4&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-13"  name="QQ2-2-13">Installers
+and Makefiles</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.5&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-14"  name="QQ2-2-14">Command Line Switches</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.6&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-15"  name="QQ2-2-15">I/O Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;1.7&#x00A0;<a 
+ href="tex4ht-cCh1.html#QQ1-2-20"  name="QQ2-2-20">Coding
+Hints</a></span><br /><span class="ChapterToc" >2&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-21"  name="QQ2-9-21">Structure of Dvi Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.1&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-22"  name="QQ2-9-22">Background</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.2&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-24"  name="QQ2-9-24">Scan Postamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.3&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-29"  name="QQ2-9-29">Scan
+Preamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.4&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-30"  name="QQ2-9-30">Scan Pages</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;2.5&#x00A0;<a 
+ href="tex4ht-cCh2.html#QQ1-9-31"  name="QQ2-9-31">Dvi Trace</a></span><br /><span class="ChapterToc" >3&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-34"  name="QQ2-11-34">Semantics of Dvi Code</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.1&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-35"  name="QQ2-11-35">Scanning
+the Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.2&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-36"  name="QQ2-11-36">Spaces</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.3&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-43"  name="QQ2-11-43">Rulers</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.4&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-44"  name="QQ2-11-44">Command Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;3.5&#x00A0;<a 
+ href="tex4ht-cCh3.html#QQ1-11-46"  name="QQ2-11-46">Specials:
+Extensions to dvi Primitives</a></span><br /><span class="ChapterToc" >4&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-47"  name="QQ2-14-47">Specials of TeX4ht</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.1&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-48"  name="QQ2-14-48">The Options</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.2&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-49"  name="QQ2-14-49">Insert
+Code (HCode)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.3&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-50"  name="QQ2-14-50">Insert Char Code</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.4&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-51"  name="QQ2-14-51">Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.5&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-59"  name="QQ2-14-59">Import Files, System
+Calls</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;4.6&#x00A0;<a 
+ href="tex4ht-cCh4.html#QQ1-14-60"  name="QQ2-14-60">Arithmetics</a></span><br /><span class="ChapterToc" >5&#x00A0;<a 
+ href="tex4ht-cCh5.html#QQ1-16-61"  name="QQ2-16-61">Character Maps</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.1&#x00A0;<a 
+ href="tex4ht-cCh5.html#QQ1-16-62"  name="QQ2-16-62">Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.2&#x00A0;<a 
+ href="tex4ht-cCh5.html#QQ1-16-63"  name="QQ2-16-63">Memory</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.3&#x00A0;<a 
+ href="tex4ht-cCh5.html#QQ1-16-65"  name="QQ2-16-65">Fill
+Map</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;5.4&#x00A0;<a 
+ href="tex4ht-cCh5.html#QQ1-16-68"  name="QQ2-16-68">Dump               Map</a></span><br /><span class="ChapterToc" >6&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-69"  name="QQ2-17-69">Extract               Code               of
+Figures</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.1&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-70"  name="QQ2-17-70">Outline</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.2&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-72"  name="QQ2-17-72">Preamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.3&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-73"  name="QQ2-17-73">Postamble</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.4&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-74"  name="QQ2-17-74">Body</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.5&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-80"  name="QQ2-17-80">Symbols
+from Fonts</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;6.6&#x00A0;<a 
+ href="tex4ht-cCh6.html#QQ1-17-82"  name="QQ2-17-82">Utilities</a></span><br /><span class="ChapterToc" >7&#x00A0;<a 
+ href="tex4ht-cCh7.html#QQ1-18-85"  name="QQ2-18-85">Tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.1&#x00A0;<a 
+ href="tex4ht-cCh7.html#QQ1-18-86"  name="QQ2-18-86">The Options</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;7.2&#x00A0;<a 
+ href="tex4ht-cCh7.html#QQ1-18-87"  name="QQ2-18-87">Info for Entries</a></span><br /><span class="ChapterToc" >8&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-94"  name="QQ2-19-94">Groups
+and Group-Based Inline Operations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.1&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-95"  name="QQ2-19-95">Data Transfer</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.2&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-99"  name="QQ2-19-99">Submissions and
+Retievals</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.3&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-102"  name="QQ2-19-102">Preprocessing Pass</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.4&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-106"  name="QQ2-19-106">Push/Pop Locations</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.5&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-107"  name="QQ2-19-107">Backward
+Token / Group Submissions</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;8.6&#x00A0;<a 
+ href="tex4ht-cCh8.html#QQ1-19-112"  name="QQ2-19-112">Actions on Forward Groups Accessed Through
+Pathes</a></span><br /><span class="ChapterToc" >9&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-119"  name="QQ2-22-119">Position-Based Decoration</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.1&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-120"  name="QQ2-22-120">Background</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.2&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-121"  name="QQ2-22-121">Compute Character
+Position</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.3&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-122"  name="QQ2-22-122">Compute Ruler Position</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.4&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-123"  name="QQ2-22-123">Boundary Conditions</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;9.5&#x00A0;<a 
+ href="tex4ht-cCh9.html#QQ1-22-124"  name="QQ2-22-124">Scan
+Coefficients</a></span><br /><span class="ChapterToc" >10&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-125"  name="QQ2-25-125">Font Information from TeX Font Metric (tfm) Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.1&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-126"  name="QQ2-25-126">Memory
+and Initialization</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.2&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-130"  name="QQ2-25-130">XeLaTeX: Scan Xdv Font Entry (Native Font
+Def)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.3&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-134"  name="QQ2-25-134">Connecting  to  the  Font  Table</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.4&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-137"  name="QQ2-25-137">Opening  a  Font
+File</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.5&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-138"  name="QQ2-25-138">Scanning a Font File</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;10.6&#x00A0;<a 
+ href="tex4ht-cCh10.html#QQ1-25-151"  name="QQ2-25-151">Computing Font Info</a></span><br /><span class="ChapterToc" >11&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-156"  name="QQ2-26-156">Font Information
+from Htf Tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.1&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-157"  name="QQ2-26-157">Load Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.2&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-159"  name="QQ2-26-159">Merge Tables</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.3&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-160"  name="QQ2-26-160">Scan
+Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.4&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-161"  name="QQ2-26-161">Use of Characters</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;11.5&#x00A0;<a 
+ href="tex4ht-cCh11.html#QQ1-26-169"  name="QQ2-26-169">Css Trace on Characters</a></span><br /><span class="ChapterToc" >12&#x00A0;<a 
+ href="tex4ht-cCh12.html#QQ1-28-179"  name="QQ2-28-179">Cascade
+Style Sheets</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.1&#x00A0;<a 
+ href="tex4ht-cCh12.html#QQ1-28-180"  name="QQ2-28-180">Command Line</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.2&#x00A0;<a 
+ href="tex4ht-cCh12.html#QQ1-28-181"  name="QQ2-28-181">Retrieve Data</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.3&#x00A0;<a 
+ href="tex4ht-cCh12.html#QQ1-28-182"  name="QQ2-28-182">Copy CSS
+File</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;12.4&#x00A0;<a 
+ href="tex4ht-cCh12.html#QQ1-28-183"  name="QQ2-28-183">Duplicates Avoidance</a></span><br /><span class="ChapterToc" >13&#x00A0;<a 
+ href="tex4ht-cCh13.html#QQ1-29-184"  name="QQ2-29-184">Accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.1&#x00A0;<a 
+ href="tex4ht-cCh13.html#QQ1-29-185"  name="QQ2-29-185">Htf Font Info</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.2&#x00A0;<a 
+ href="tex4ht-cCh13.html#QQ1-29-186"  name="QQ2-29-186">Integrated
+accents</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;13.3&#x00A0;<a 
+ href="tex4ht-cCh13.html#QQ1-29-187"  name="QQ2-29-187">Remote Accents</a></span><br /><span class="ChapterToc" >14&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-192"  name="QQ2-30-192">Math Classes for Symbols</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.1&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-193"  name="QQ2-30-193">Scanning
+Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.2&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-194"  name="QQ2-30-194">Setting Requests</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.3&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-195"  name="QQ2-30-195">Memory and Initialization</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.4&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-196"  name="QQ2-30-196">Delimiters
+Over  Next  Group</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;14.5&#x00A0;<a 
+ href="tex4ht-cCh14.html#QQ1-30-200"  name="QQ2-30-200">Delimiters  Over  Next  Character</a></span><br /><span class="ChapterToc" >15&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-201"  name="QQ2-31-201">Files  and
+Directories</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.1&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-202"  name="QQ2-31-202">Environment File (tex4ht.env)</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.2&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-207"  name="QQ2-31-207">Locating the TFM
+Fonts</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.3&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-213"  name="QQ2-31-213">Htf Font Files</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.4&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-214"  name="QQ2-31-214">External File Cache</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.5&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-217"  name="QQ2-31-217">Export
+TEX4HTFONTSET for kpathsea</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.6&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-223"  name="QQ2-31-223">Searching with KPATHSEA</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;15.7&#x00A0;<a 
+ href="tex4ht-cCh15.html#QQ1-31-226"  name="QQ2-31-226">Searching
+Utilities</a></span><br /><span class="ChapterToc" >16&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-232"  name="QQ2-42-232">Unicode into Character Encoding</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.1&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-233"  name="QQ2-42-233">Put Character</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.2&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-234"  name="QQ2-42-234">Flash
+Unrecognized Codes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.3&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-235"  name="QQ2-42-235">Load unicode.4hf Table</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.4&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-236"  name="QQ2-42-236">Store Entry of
+Table</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.5&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-237"  name="QQ2-42-237">Use Unicode Substitution</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.6&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-238"  name="QQ2-42-238">Base 10 for Entity Codes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.7&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-239"  name="QQ2-42-239">UTF-8
+for Entity Codes</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.8&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-240"  name="QQ2-42-240">Replacements for HTF</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;16.9&#x00A0;<a 
+ href="tex4ht-cCh16.html#QQ1-42-241"  name="QQ2-42-241">Propagate Changes
+into the HTF Fonts</a></span><br /><span class="ChapterToc" >17&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-242"  name="QQ2-43-242">Utilities</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.1&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-243"  name="QQ2-43-243">Output Character</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.2&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-244"  name="QQ2-43-244">Output
+String</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.3&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-245"  name="QQ2-43-245">Read Character</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.4&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-246"  name="QQ2-43-246">Read Strings</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.5&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-247"  name="QQ2-43-247">Read Unsigned
+Integer</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.6&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-248"  name="QQ2-43-248">Read Signed Integer</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.7&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-249"  name="QQ2-43-249">Strings Equality</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.8&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-250"  name="QQ2-43-250">Warnings
+and Errors</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.9&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-257"  name="QQ2-43-257">Dos</a></span><br /><span class="SectionToc" >&#x00A0;&#x00A0;&#x00A0;17.10&#x00A0;<a 
+ href="tex4ht-cCh17.html#QQ1-43-258"  name="QQ2-43-258">Op Codes of Dvi</a></span><br /><span class="ChapterToc" >18&#x00A0;<a 
+ href="tex4ht-cCh18.html#QQ1-44-259"  name="QQ2-44-259">References</a></span><br />
+    </div> 
+</body></html> 
+
+
+
