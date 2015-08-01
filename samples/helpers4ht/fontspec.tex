@@ -12,7 +12,8 @@
 \setotherlanguage{russian}
 \setotherlanguage{hindi}
 \usepackage{hyperref}
-\usepackage{listings}
+%\usepackage{listings}
+\usepackage{minted}
 \usepackage{microtype}
 \begin{document}
 \title{Using \texttt{fontspec} package with tex4ht and LuaLaTeX}
@@ -48,7 +49,8 @@ Some possible solutions which doesn't need to fix \texttt{tex4ht} exists:
     one can modify the document and use right arguments for \texttt{inputenc}
     and \texttt{fontenc} packages:
 
-    \begin{lstlisting}[language=TeX]
+    %\begin{lstlisting}[language=TeX]
+    \begin{minted}{latex}
       \ifdefined\HCode% detect tex4ht
       \usepackage[utf8]{inputenc}
       \usepackage[T1]{fontenc}
@@ -56,7 +58,8 @@ Some possible solutions which doesn't need to fix \texttt{tex4ht} exists:
       \usepackage{fontspec}
       \setmainfont{TeX Gyre Termes}
       \fi
-    \end{lstlisting}
+    \end{minted}
+    %\end{lstlisting}
 
     this method works best for European languages
 
@@ -84,7 +87,8 @@ problematic package with tex4ht. This alternative version usually provides main
 commands which may be used in a document, but the implementation if totally
 different, with focus on tex4ht support.
 
-\begin{lstlisting}[language=Tex,extendedchars=true]
+%\begin{lstlisting}[language=Tex,extendedchars=true]
+\begin{minted}{latex}
 \usepackage{alternative4ht}
 \altusepackage{fontspec}
 \setmainfont{TeX Gyre Termes}
@@ -113,17 +117,18 @@ different, with focus on tex4ht support.
 \begin{hindi}
   Hindi text
 \end{hindi}
+\end{minted}
+%\end{lstlisting}
 
-\end{lstlisting}
-
-I haven't included actual text in the listings, as it would be too long and
-unicode support in the \texttt{listings} package is lacking. The selected text
-is first paragraph from Wikipedia pages about Prague in various languages. As
-you can see, \texttt{Polyglossia} package provides two ways for including text
-in other language: \verb|\text<lang>| or \verb|\begin{<lang>}|.
-  The first method is better for smaller passages of text, possibly within
-  paragraph, the latter is good for longer passages of text. Note that it
-  always starts a new paragraph. We also need to provide a font family for each language as is shown with all these \verb|\newfontfamily\<lang>font| commands.
+I haven't included actual text in the listings, as it would be too long.
+The selected text is first paragraph from Wikipedia pages about Prague in
+various languages. As you can see, \texttt{Polyglossia} package provides two
+ways for including text in other language: \verb|\text<lang>| or
+\verb|\begin{<lang>}|.  The first method is better for smaller passages of
+  text, possibly within paragraph, the latter is good for longer passages of
+  text. Note that it always starts a new paragraph. We also need to provide a
+  font family for each language as is shown with all these
+  \verb|\newfontfamily\<lang>font| commands.
 
 A result with some real world texts:
 
@@ -163,7 +168,8 @@ Compile the document with
 make4ht -ul filename 
 \end{verbatim}
 
-If your browser supports hyphenation, you can see that some texts are hyphenated. Not all languages are supported by all browsers, unfortunately.
+If your browser supports hyphenation, you can see that some texts are
+hyphenated. Not all languages are supported by all browsers, unfortunately.
 
 \section{Limitations}
 
