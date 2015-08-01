@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html lang="en-US"> 
+<head> <title>Using fontspec package with tex4ht and LuaLaTeX</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,html,xhtml,fn-in --> 
+<meta name="src" content="fontspec.tex" /> 
+<meta name="date" content="2015-08-01 15:43:00" /> 
+<link rel="stylesheet" type="text/css" href="fontspec.css" /> 
+<link rel="stylesheet" type="text/css" href="css/scale.css" /></head><body 
+>
+<div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Using fontspec package with tex4ht and
+LuaLaTeX</h2>
+<div class="author" ><span 
+class="cmr-12">Michal Hoftich</span></div><br />
+<div class="date" ><span 
+class="cmr-12">August 1, 2015</span></div>
+</div>   
+<h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+<div class="tableofcontents">   
+<span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">Using <span 
+class="cmtt-10">alternative4ht</span></a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-4">Limitations</a></span>
+</div>
+<!--l. 23--><p class="indent" >   You can download this guide in <a 
+href="http://michal-h21.github.io/samples/helpers4ht/fontspec.pdf" >PDF</a>/<a 
+href="http://michal-h21.github.io/samples/helpers4ht/fontspec.tex" >TeX</a>.
+</p><!--l. 25--><p class="noindent" >
+</p>   
+<h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 27--><p class="noindent" >The <span 
+class="cmtt-10">fontspec </span>package provides support for OpenType fonts in unicode LaTeX
+formats, Xe<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> and Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span>. This enables full support for various non-latin
+scripts, such as Indic, CJK or Arabic. Huge problem is that it is not supported by
+tex4ht, convertor from <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span>to HTML.
+</p><!--l. 32--><p class="indent" >   The reason is that conversion is done by parsing special
+<span 
+class="cmtt-10">DVI </span>file with HTML instructions. It is done by <span 
+class="cmtt-10">tex4ht</span>
+command<span class="footnote-mark"><a 
+href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-2001f1"></a>.
+This command unfortunately doesn&#x2019;t support OpenType fonts, failing to do any
+conversion at all. This needs to be fixed in the source code, but as no person with
+knowledge of C language, DVI format internals and understanding of literate sources
+of <span 
+class="cmtt-10">tex4ht </span>is known to exist, it is unlikely that this happens in foreseeable
+                                                                  
+
+                                                                  
+future.
+</p><!--l. 44--><p class="indent" >   Some possible solutions which doesn&#x2019;t need to fix <span 
+class="cmtt-10">tex4ht </span>exists:
+</p><!--l. 46--><p class="indent" >     
+</p>
+<ol  class="enumerate1" >     
+<li 
+  class="enumerate" id="x1-2003x1">
+For documents which use only scripts supported by standard pdf<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span>,
+one can modify the document and use right arguments for <span 
+class="cmtt-10">inputenc </span>and
+<span 
+class="cmtt-10">fontenc </span>packages:
+<!--l. 51-->     
+<div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-2004r1"></a></span>      <span 
+class="cmsy-10">∖</span>ifdefined<span 
+class="cmsy-10">∖</span>HCode<span 
+class="cmti-10">%</span><span 
+class="cmti-10"> </span><span 
+class="cmti-10">detect</span><span 
+class="cmti-10"> </span><span 
+class="cmti-10">tex</span><span 
+class="cmti-10">4</span><span 
+class="cmti-10">ht</span> <br /><span class="label"><a 
+ id="x1-2005r2"></a></span>      <span 
+class="cmsy-10">∖</span>usepackage[utf8]<span 
+class="cmsy-10">{</span>inputenc<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-2006r3"></a></span>      <span 
+class="cmsy-10">∖</span>usepackage[T1]<span 
+class="cmsy-10">{</span>fontenc<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-2007r4"></a></span>      <span 
+class="cmsy-10">∖</span><span 
+class="cmbx-10">else</span> <br /><span class="label"><a 
+ id="x1-2008r5"></a></span>      <span 
+class="cmsy-10">∖</span>usepackage<span 
+class="cmsy-10">{</span>fontspec<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-2009r6"></a></span>      <span 
+class="cmsy-10">∖</span>setmainfont<span 
+class="cmsy-10">{</span>TeX Gyre Termes<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-2010r7"></a></span>      <span 
+class="cmsy-10">∖</span><span 
+class="cmbx-10">fi</span>
+     
+</div>
+<!--l. 61--><p class="noindent" >this method works best for European languages
+</p>     
+</li>
+<li 
+  class="enumerate" id="x1-2012x2">     
+Use <a 
+href="https://github.com/michal-h21/lua4ht" >lua4ht</a>, which is an experimental replacement for <span 
+class="cmtt-10">tex4ht </span>written in
+Lua. It doesn&#x2019;t support all tex4ht features though. See an example at
+<a 
+href="http://tex.stackexchange.com/a/253889/2891" >TeX.sx</a>.
+</li>     
+<li 
+  class="enumerate" id="x1-2014x3">
+Use alternative version of <span 
+class="cmtt-10">fontspec </span>and other packages provided by <a 
+href="https://github.com/michal-h21/helpers4ht" >helpers4ht</a>.
+This method will be described later in this document.
+</li></ol>
+<!--l. 75--><p class="noindent" >
+</p>   
+<h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>Using <span 
+class="cmtt-10">alternative4ht</span></h3>
+<!--l. 77--><p class="noindent" >The <span 
+class="cmtt-10">alternative4ht </span>package is included in <a 
+href="https://github.com/michal-h21/helpers4ht" >helpers4ht</a>, see the linked page for
+installation instructions. It provides means to support packages which causes
+tex4ht to fail. Usually these packages directly include <span 
+class="cmtt-10">PDF </span>instructions and it
+confuses <span 
+class="cmtt-10">tex4ht</span>. In order to minimize a need to modify a document, it
+enables to load alternative version of a problematic package with tex4ht. This
+alternative version usually provides main commands which may be used in a
+document, but the implementation if totally different, with focus on tex4ht
+support.
+</p>   
+<!--l. 87-->
+<div class="lstlisting" id="listing-2"><span class="label"><a 
+ id="x1-3001r1"></a></span><span 
+class="cmsy-10">∖</span>usepackage<span 
+class="cmsy-10">{</span>alternative4ht<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3002r2"></a></span><span 
+class="cmsy-10">∖</span>altusepackage<span 
+class="cmsy-10">{</span>fontspec<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3003r3"></a></span><span 
+class="cmsy-10">∖</span>setmainfont<span 
+class="cmsy-10">{</span>TeX Gyre Termes<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3004r4"></a></span><span 
+class="cmsy-10">∖</span>newfontfamily<span 
+class="cmsy-10">∖</span>greekfont<span 
+class="cmsy-10">{</span>Linux Libertine O<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3005r5"></a></span><span 
+class="cmsy-10">∖</span>newfontfamily<span 
+class="cmsy-10">∖</span>russianfont<span 
+class="cmsy-10">{</span>Linux Libertine O<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3006r6"></a></span><span 
+class="cmsy-10">∖</span>newfontfamily<span 
+class="cmsy-10">∖</span>hindifont<span 
+class="cmsy-10">{</span>Siddhanta<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3007r7"></a></span><span 
+class="cmsy-10">∖</span>altusepackage<span 
+class="cmsy-10">{</span>polyglossia<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3008r8"></a></span><span 
+class="cmsy-10">∖</span>setmainlanguage<span 
+class="cmsy-10">{</span>english<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3009r9"></a></span><span 
+class="cmsy-10">∖</span>setotherlanguage<span 
+class="cmsy-10">{</span>czech<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3010r10"></a></span><span 
+class="cmsy-10">∖</span>setotherlanguage<span 
+class="cmsy-10">{</span>greek<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3011r11"></a></span><span 
+class="cmsy-10">∖</span>setotherlanguage<span 
+class="cmsy-10">{</span>russian<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3012r12"></a></span><span 
+class="cmsy-10">∖</span>setotherlanguage<span 
+class="cmsy-10">{</span>hindi<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3013r13"></a></span>.... <br /><span class="label"><a 
+ id="x1-3014r14"></a></span><span 
+class="cmsy-10">∖</span>begin<span 
+class="cmsy-10">{</span>document<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3015r15"></a></span> <br /><span class="label"><a 
+ id="x1-3016r16"></a></span><span 
+class="cmsy-10">∖</span>begin<span 
+class="cmsy-10">{</span>czech<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3017r17"></a></span>  Czech text <br /><span class="label"><a 
+ id="x1-3018r18"></a></span><span 
+class="cmsy-10">∖</span><span 
+class="cmbx-10">end</span><span 
+class="cmsy-10">{</span>czech<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3019r19"></a></span> <br /><span class="label"><a 
+ id="x1-3020r20"></a></span><span 
+class="cmsy-10">∖</span>textgreek<span 
+class="cmsy-10">{</span>Greek text<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3021r21"></a></span> <br /><span class="label"><a 
+ id="x1-3022r22"></a></span><span 
+class="cmsy-10">∖</span>begin<span 
+class="cmsy-10">{</span>russian<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3023r23"></a></span>  Russian text <br /><span class="label"><a 
+ id="x1-3024r24"></a></span><span 
+class="cmsy-10">∖</span><span 
+class="cmbx-10">end</span><span 
+class="cmsy-10">{</span>russian<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3025r25"></a></span> <br /><span class="label"><a 
+ id="x1-3026r26"></a></span><span 
+class="cmsy-10">∖</span>begin<span 
+class="cmsy-10">{</span>hindi<span 
+class="cmsy-10">}</span> <br /><span class="label"><a 
+ id="x1-3027r27"></a></span>  Hindi text <br /><span class="label"><a 
+ id="x1-3028r28"></a></span><span 
+class="cmsy-10">∖</span><span 
+class="cmbx-10">end</span><span 
+class="cmsy-10">{</span>hindi<span 
+class="cmsy-10">}</span>
+   
+</div>
+                                                                  
+
+                                                                  
+<!--l. 119--><p class="indent" >   I haven&#x2019;t included actual text in the listings, as it would be too long and unicode
+support in the <span 
+class="cmtt-10">listings </span>package is lacking. The selected text is first paragraph from
+Wikipedia pages about Prague in various languages. As you can see, <span 
+class="cmtt-10">Polyglossia</span>
+package provides two ways for including text in other language: <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\text&#x003C;lang&#x003E;</span></span></span> or
+<span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\begin{&#x003C;lang&#x003E;}</span></span></span>. The first method is better for smaller passages of text, possibly
+within paragraph, the latter is good for longer passages of text. Note that
+it always starts a new paragraph. We also need to provide a font family
+for each language as is shown with all these <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\newfontfamily\&#x003C;lang&#x003E;font</span></span></span>
+commands.
+</p><!--l. 128--><p class="indent" >   A result with some real world texts:
+</p><!--l. 131--><p class="indent" >        
+</p>
+<div class="quotation">        
+<div lang="cs-CZ">
+<!--l. 133--><p class="indent" >   Praha je hlavní a současně největší město České republiky a 15.
+největší město Evropské unie. Leží mírně na sever od středu Čech na
+řece Vltavě, uvnitř Středočeského kraje, jehož je správním
+centrem, ale jako samostatný kraj není jeho součástí. Je sídlem
+velké části státních institucí a množství dalších organizací a
+firem. Sídlí zde prezident republiky, parlament, vláda, ústřední
+státní orgány a jeden ze dvou vrchních soudů. Mimoto je Praha
+sídlem řady dalších úřadů, jak ústředních, tak i územních
+samosprávných celků; sídlí zde též ústředí většiny politických
+stran a centrály téměř všech církví, náboženských a dalších
+sdružení s celorepublikovou působností registrovaných v ČR. </p></div>
+<!--l. 149--><p class="indent" >   <span lang="el">Η Πράγα (τσέχικα: Praha), είναι η πρωτεύουσα και μεγαλύτερη
+πόλη της Τσεχίας. Χτισμένη στον ποταμό Μολδάβα (Vltava), στην
+κεντρική Βοημία, έχει 1,2 εκατομμύριο κατοίκους. Αποκαλείται
+επίσης «η χρυσή πόλη» και «μητέρα των πόλεων». Από το 1992, το
+ιστορικό κέντρο της Πράγας ανήκει στον κατάλογο μνημείων
+παγκόσμιας κληρονομιάς της UNESCO.</span>
+</p>        
+<div lang="ru">
+<!--l. 152--><p class="indent" >   Пра́га (чеш. Praha [ˈpraɦa]) — город и столица Чехии;
+административный центр Среднечешского края и двух его районов
+— Прага-Восток и Прага-Запад. Образует самостоятельную
+административную единицу страны. </p></div>
+<div lang="">     
+<!--l. 156--><p class="indent" >    प्राग युरोप के चेकोस्लोवाकिया देश की राजधानी है। </p></div>
+</div>
+<!--l. 160--><p class="indent" >   Compile the document with
+                                                                  
+
+                                                                  
+</p>   
+<div class="verbatim" id="verbatim-1">
+make4ht -ul filename
+</div>
+<!--l. 164--><p class="nopar" >
+</p><!--l. 166--><p class="indent" >   If your browser supports hyphenation, you can see that some texts are
+hyphenated. Not all languages are supported by all browsers, unfortunately.
+</p><!--l. 168--><p class="noindent" >
+</p>   
+<h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-40003"></a>Limitations</h3>
+<!--l. 170--><p class="noindent" >This method works only with Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> at the moment. It uses a node callback to
+replace all characters with HTML entities, which are later translated back to unicode
+values by <span 
+class="cmtt-10">tex4ht</span>. I don&#x2019;t know about any easy solution for Xe<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span>, other
+than providing huge file with <span class="obeylines-h"><span class="verb"><span 
+class="cmtt-10">\DeclareUnicodeCharacter</span></span></span> for all possible
+characters. This doesn&#x2019;t sound right to me, so I am open to any more realistic
+ideas.
+</p><!--l. 175--><p class="indent" >   I provided definitions only for most basic commands, if you find any undefined commands
+in your documents, please let me know and I will try to provide reasonable definition for
+them<span class="footnote-mark"><a 
+href="#fn2x0" id="fn2x0-bk"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-4001f2"></a>.
+</p>   
+<div class="footnotes"><!--l. 37--><p class="indent" >    <span class="footnote-mark"><a 
+href="#fn1x0-bk" id="fn1x0"><sup class="textsuperscript">1</sup></a></span><span 
+class="cmr-8">It is little bit confusing that name </span><span 
+class="cmti-8">tex4ht </span><span 
+class="cmr-8">means two things: whole system including</span>
+<span class="LATEX"><span 
+class="cmr-8">L</span><span class="A"><span 
+class="cmr-8">A</span></span><span class="TEX"><span 
+class="cmr-8">T</span><span 
+class="E"><span 
+class="cmr-8">E</span></span><span 
+class="cmr-8">X</span></span></span><span 
+class="cmr-8"> packages and some command line applications, </span><span 
+class="cmtt-8">tex4ht </span><span 
+class="cmr-8">is also one of these command line</span>
+<span 
+class="cmr-8">applications. The command name will be printed in monospace font in this text to a avoid</span>
+<span 
+class="cmr-8">confusion</span></p>
+<!--l. 176--><p class="indent" >     <span class="footnote-mark"><a 
+href="#fn2x0-bk" id="fn2x0"><sup class="textsuperscript">2</sup></a></span><span 
+class="cmr-8">You can provide definitions as well, of course :)</span></p>                                                 </div>
+ 
+</body> 
+</html> 
+
+                                                                  
+
+
