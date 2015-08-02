@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<!--http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd-->  
+<html xmlns="http://www.w3.org/1999/xhtml"  
+> 
+<head> <title>Using textstyle4ht package</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- charset=utf-8,html,xhtml,fn-in --> 
+<meta name="src" content="textstyle.tex" /> 
+<meta name="date" content="2015-08-02 22:12:00" /> 
+<link rel="stylesheet" type="text/css" href="textstyle.css" /> 
+<link rel="stylesheet" type="text/css" href="css/scale.css" /></head><body 
+>
+   <div class="maketitle">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class="titleHead">Using textstyle4ht package</h2>
+<div class="author" ><span 
+class="ecrm-1200">Michal Hoftich</span></div><br />
+<div class="date" ><span 
+class="ecrm-1200">August 2, 2015</span></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-3">Basic configuration</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-4">Styling</a></span>
+   </div>
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 16--><p class="noindent" ><span 
+class="ectt-1000">textstyle4ht</span> is part of <a 
+href="https://github.com/michal-h21/helpers4ht" >helpers4ht</a>, helper packages for tex4ht bundle. It&#x2019;s main
+function is to make easier custom configurations, in particular inputing HTML tags
+and automatic generating corresponding CSS for basic font attributes such as style,
+weight and color.
+</p><!--l. 22--><p class="indent" >   As it is best to learn with examples, here is a LaTeX package <span 
+class="ectt-1000">mystyles.sty</span>
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb1"><a 
+ id="x1-2002r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor2"><span 
+class="ectt-1000">\ProvidesPackage</span></span><span id="textcolor3"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">mystyles</span><span id="textcolor4"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-2004r2"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor5"><span 
+class="ectt-1000">\RequirePackage</span></span><span id="textcolor6"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">xcolor</span><span id="textcolor7"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-2006r3"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span>
+<br class="fancyvrb" /><a 
+ id="x1-2008r4"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor8"><span 
+class="ectt-1000">\newcommand</span></span><span id="textcolor9"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor10"><span 
+class="ectt-1000">[1]</span></span><span id="textcolor11"><span 
+class="ectt-1000">{</span></span><span id="textcolor12"><span 
+class="ectt-1000">\textcolor</span></span><span id="textcolor13"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">red</span><span id="textcolor14"><span 
+class="ectt-1000">}{</span></span><span id="textcolor15"><span 
+class="ectt-1000">\textbf</span></span><span id="textcolor16"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">#1</span><span id="textcolor17"><span 
+class="ectt-1000">}}}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2010r5"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor18"><span 
+class="ectt-1000">\newenvironment</span></span><span id="textcolor19"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myquote</span><span id="textcolor20"><span 
+class="ectt-1000">}{</span></span><span id="textcolor21"><span 
+class="ectt-1000">\small</span></span><span id="textcolor22"><span 
+class="ectt-1000">\itshape</span></span><span id="textcolor23"><span 
+class="ectt-1000">\color</span></span><span id="textcolor24"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">green</span><span id="textcolor25"><span 
+class="ectt-1000">}}{}</span></span><br class="fancyvrb" /><a 
+ id="x1-2012r6"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor26"><span 
+class="ectt-1000">\endinput</span></span></div>
+<!--l. 26--><p class="indent" >   We can use these macros like that:
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb2"><a 
+ id="x1-2020r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> Here</span><span 
+class="ectt-1000"> is</span><span 
+class="ectt-1000"> some</span><span 
+class="ectt-1000"> text</span><span 
+class="ectt-1000"> </span><span id="textcolor27"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor28"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">with</span><span 
+class="ectt-1000"> highlights</span><span id="textcolor29"><span 
+class="ectt-1000">}</span></span><span 
+class="ectt-1000">,</span><span 
+class="ectt-1000"> but</span><span 
+class="ectt-1000"> </span><span id="textcolor30"><span 
+class="ectt-1000">\textit</span></span><span id="textcolor31"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">also</span><span id="textcolor32"><span 
+class="ectt-1000">}</span></span><span 
+class="ectt-1000"> </span><span id="textcolor33"><span 
+class="ectt-1000">\textbf</span></span><span id="textcolor34"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">some</span>
+<br class="fancyvrb" /><a 
+ id="x1-2022r2"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> other</span><span id="textcolor35"><span 
+class="ectt-1000">}</span></span><span 
+class="ectt-1000"> formatting.</span><br class="fancyvrb" /><a 
+ id="x1-2024r3"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><br class="fancyvrb" /><a 
+ id="x1-2026r4"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor36"><span 
+class="ectt-1000">\begin</span></span><span id="textcolor37"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myquote</span><span id="textcolor38"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-2028r5"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> Some</span><span 
+class="ectt-1000"> not</span><span 
+class="ectt-1000"> so</span><span 
+class="ectt-1000"> long</span><span 
+class="ectt-1000"> quote</span><br class="fancyvrb" /><a 
+ id="x1-2030r6"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor39"><span 
+class="ectt-1000">\end</span></span><span id="textcolor40"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myquote</span><span id="textcolor41"><span 
+class="ectt-1000">}</span></span></div>
+                                                                  
+
+                                                                  
+<!--l. 37--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>Basic configuration</h3>
+<!--l. 38--><p class="noindent" >In order to make our macros configurable, we may use special file where configurable
+hooks are inserted. This file is named <span 
+class="ectt-1000">mystyles.4ht</span>:
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb3"><a 
+ id="x1-3005r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor42"><span 
+class="ectt-1000">\NewConfigure</span></span><span id="textcolor43"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor44"><span 
+class="ectt-1000">}{</span></span><span 
+class="ectt-1000">2</span><span id="textcolor45"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-3007r2"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor46"><span 
+class="ectt-1000">\pend</span></span><span 
+class="ectt-1000">:defI</span><span id="textcolor47"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor48"><span 
+class="ectt-1000">{</span></span><span id="textcolor49"><span 
+class="ectt-1000">\a</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor50"><span 
+class="ectt-1000">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-3009r3"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor51"><span 
+class="ectt-1000">\append</span></span><span 
+class="ectt-1000">:defI</span><span id="textcolor52"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor53"><span 
+class="ectt-1000">{</span></span><span id="textcolor54"><span 
+class="ectt-1000">\b</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor55"><span 
+class="ectt-1000">}</span></span></div>
+<!--l. 46--><p class="indent" >   What it does is that it declares two new hooks with <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\NewConfigure</span></span></span> and then
+patches <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\myhighlight</span></span></span> macro. <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\pend:defI</span></span></span> will insert content at the beginning of the
+macro <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\mystyles</span></span></span>, <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\append:defI</span></span></span> at the end. Note that <span 
+class="ectt-1000">: </span>character can be
+contained in macro names in <span 
+class="ectt-1000">.4ht </span>files. Also note that several versions of
+<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\[ap]pend:def&#x003C;x&#x003E;</span></span></span> exists, depending on the number of parameters of patched
+macro.
+</p><!--l. 54--><p class="indent" >   Macros <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\a:myhighlight</span></span></span> and <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\b:myhighlight</span></span></span> were declared with
+<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\NewConfigure{myhighlight}{2}</span></span></span>. Their content can be declared with
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb4"><a 
+ id="x1-3012r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor56"><span 
+class="ectt-1000">\Configure</span></span><span id="textcolor57"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor58"><span 
+class="ectt-1000">}{</span></span><span 
+class="ectt-1000">content</span><span 
+class="ectt-1000"> for</span><span 
+class="ectt-1000"> </span><span id="textcolor59"><span 
+class="ectt-1000">\a</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor60"><span 
+class="ectt-1000">}{</span></span><span 
+class="ectt-1000">and</span><span 
+class="ectt-1000"> content</span><span 
+class="ectt-1000"> for</span><span 
+class="ectt-1000"> </span><span id="textcolor61"><span 
+class="ectt-1000">\b</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor62"><span 
+class="ectt-1000">}</span></span></div>
+<!--l. 60--><p class="indent" >   Now we can show usage of <span 
+class="ectt-1000">textstyle4ht</span> package. We can modify the
+<span 
+class="ectt-1000">mystyles.4ht </span>file slightly:
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb5"><a 
+ id="x1-3020r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor63"><span 
+class="ectt-1000">\RequirePackage</span></span><span id="textcolor64"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">textstyle4ht</span><span id="textcolor65"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-3022r2"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor66"><span 
+class="ectt-1000">\NewConfigure</span></span><span id="textcolor67"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor68"><span 
+class="ectt-1000">}{</span></span><span 
+class="ectt-1000">2</span><span id="textcolor69"><span 
+class="ectt-1000">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-3024r3"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor70"><span 
+class="ectt-1000">\pend</span></span><span 
+class="ectt-1000">:defI</span><span id="textcolor71"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor72"><span 
+class="ectt-1000">{</span></span><span id="textcolor73"><span 
+class="ectt-1000">\a</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor74"><span 
+class="ectt-1000">}</span></span><br class="fancyvrb" /><a 
+ id="x1-3026r4"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor75"><span 
+class="ectt-1000">\append</span></span><span 
+class="ectt-1000">:defI</span><span id="textcolor76"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor77"><span 
+class="ectt-1000">{</span></span><span id="textcolor78"><span 
+class="ectt-1000">\b</span></span><span 
+class="ectt-1000">:myhighlight</span><span id="textcolor79"><span 
+class="ectt-1000">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-3028r5"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor80"><span 
+class="ectt-1000">\Configure</span></span><span id="textcolor81"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor82"><span 
+class="ectt-1000">}{</span></span><span id="textcolor83"><span 
+class="ectt-1000">\InlineTag</span></span><span id="textcolor84"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor85"><span 
+class="ectt-1000">}{}}{</span></span><span id="textcolor86"><span 
+class="ectt-1000">\EndTag</span></span><span id="textcolor87"><span 
+class="ectt-1000">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-3030r6"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor88"><span 
+class="ectt-1000">\ConfigureEnv</span></span><span id="textcolor89"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myquote</span><span id="textcolor90"><span 
+class="ectt-1000">}{</span></span><span id="textcolor91"><span 
+class="ectt-1000">\BlockTag</span></span><span id="textcolor92"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myquote</span><span id="textcolor93"><span 
+class="ectt-1000">}{}}{</span></span><span id="textcolor94"><span 
+class="ectt-1000">\EndTag</span></span><span id="textcolor95"><span 
+class="ectt-1000">}{}{}</span></span></div>
+<!--l. 72--><p class="indent" >   There are some new commands introduced. Normally, tags are inserted with
+<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\HCode{&#x003C;tag&#x003E;}</span></span></span> command. <span 
+class="ectt-1000">textstyle4ht</span> uses instead special commands for
+inserting inline tags, block tags and their automatic closing. This meand that instead
+of
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb6"><a 
+ id="x1-3033r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor96"><span 
+class="ectt-1000">\Configure</span></span><span id="textcolor97"><span 
+class="ectt-1000">{</span></span><span id="textcolor98"><span 
+class="ectt-1000">\HCode</span></span><span id="textcolor99"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">&#x003C;div</span><span 
+class="ectt-1000"> class=&#x0022;hello&#x0022;&#x003E;</span><span id="textcolor100"><span 
+class="ectt-1000">}}{</span></span><span id="textcolor101"><span 
+class="ectt-1000">\HCode</span></span><span id="textcolor102"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">&#x003C;/div&#x003E;</span><span id="textcolor103"><span 
+class="ectt-1000">}}</span></span></div>
+<!--l. 80--><p class="indent" >   you can use
+</p><!--l. 1--><p class="indent" >
+                                                                  
+
+                                                                  
+</p>
+   <div class="fancyvrb" id="fancyvrb7"><a 
+ id="x1-3036r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor104"><span 
+class="ectt-1000">\Configure</span></span><span id="textcolor105"><span 
+class="ectt-1000">{</span></span><span id="textcolor106"><span 
+class="ectt-1000">\BlockTag</span></span><span id="textcolor107"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">hello</span><span id="textcolor108"><span 
+class="ectt-1000">}{}}{</span></span><span id="textcolor109"><span 
+class="ectt-1000">\EndTag</span></span><span id="textcolor110"><span 
+class="ectt-1000">}</span></span></div>
+<!--l. 87--><p class="indent" >   For block tags, <span 
+class="ectt-1000">div </span>is the default element, so you don&#x2019;t have to specify it, first
+parameter is class of the element, second parameter are any HTML arguments. You
+can leave it empty in most cases.
+</p><!--l. 91--><p class="indent" >   If you want use different element than <span 
+class="ectt-1000">div</span>, you can specify it as optional
+parameter:
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb8"><a 
+ id="x1-3039r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor111"><span 
+class="ectt-1000">\BlockTag</span></span><span id="textcolor112"><span 
+class="ectt-1000">[article]</span></span><span id="textcolor113"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">hello</span><span id="textcolor114"><span 
+class="ectt-1000">}{}</span></span></div>
+<!--l. 97--><p class="indent" >   What is the difference between <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\InlineTag</span></span></span> and <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\BlockTag</span></span></span>? Default element for
+inline tag is <span 
+class="ectt-1000">span </span>and it should be used for shorter text inside paragraph.
+Block tag should be used typically for longer texts, with possibility of nested
+paragraphs. Typical use are some environments. It takes care of correct
+paragraph handling see <a 
+href="http://tex.stackexchange.com/a/66172/2891" >Control the &#x003C;p&#x003E; tags inserted by tex4ht</a> for some
+details.
+</p><!--l. 105--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-40003"></a>Styling</h3>
+<!--l. 107--><p class="noindent" ><span 
+class="ectt-1000">textstyle4ht</span> also provides macros for saving basic font information such as font
+size, weight, style or color in the CSS file. It is little bit complicated because
+of technical limitations. The font information must be grabbed at place
+where it is in effect, which unfortunately isn&#x2019;t inside configurable hooks, as
+these are inserted before and after macro code, and font changes happen
+inside.
+</p><!--l. 113--><p class="indent" >   Two commands are provided: <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\SaveStyle</span></span></span> and <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\GrabStyle</span></span></span>. First one is simpler,
+it saves font information for the current element. The second is useful for saving
+information from commands with such as <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\myhighlight</span></span></span>
+</p><!--l. 117--><p class="indent" >   We can add to <span 
+class="ectt-1000">mystyles.4ht </span>these lines
+</p><!--l. 1--><p class="indent" >
+</p>
+   <div class="fancyvrb" id="fancyvrb9"><a 
+ id="x1-4004r1"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor115"><span 
+class="ectt-1000">\append</span></span><span 
+class="ectt-1000">:def</span><span id="textcolor116"><span 
+class="ectt-1000">\myquote</span></span><span id="textcolor117"><span 
+class="ectt-1000">{</span></span><span id="textcolor118"><span 
+class="ectt-1000">\SaveStyle</span></span><span id="textcolor119"><span 
+class="ectt-1000">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-4006r2"></a><span 
+class="ectt-1000"> </span><span 
+class="ectt-1000"> </span><span id="textcolor120"><span 
+class="ectt-1000">\AtBeginDocument</span></span><span id="textcolor121"><span 
+class="ectt-1000">{</span></span><span id="textcolor122"><span 
+class="ectt-1000">\GrabStyle</span></span><span id="textcolor123"><span 
+class="ectt-1000">{</span></span><span id="textcolor124"><span 
+class="ectt-1000">\InlineTag</span></span><span id="textcolor125"><span 
+class="ectt-1000">{</span></span><span 
+class="ectt-1000">myhighlight</span><span id="textcolor126"><span 
+class="ectt-1000">}{}}{</span></span><span id="textcolor127"><span 
+class="ectt-1000">\myhighlight</span></span><span id="textcolor128"><span 
+class="ectt-1000">}}</span></span></div>
+<!--l. 124--><p class="indent" >   They may look mysterious at first, but it is not so hard. We use <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\append:def</span></span></span> to
+insert <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\SaveStyle</span></span></span> after beginning of <span 
+class="ectt-1000">mystyle </span>environment. It is available as
+<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\mystyle</span></span></span> macro. At this moment, <span 
+class="ectt-1000">&#x003C;div class=&#x0022;myqoute&#x0022;&#x003E; </span>is selected as current
+element and we can use just <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\SaveStyle</span></span></span> to save the CSS.
+</p><!--l. 130--><p class="indent" >   The second line is even more mysterious. <span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\GrabStyle</span></span></span> macro takes two
+parameters, first produces element which should be configured CSS for, the second is
+macro which is grabbed for style. It must take exactly one parameter. The macro is
+                                                                  
+
+                                                                  
+printed inside a box, which is then discarded, so nothing shows in the document. But
+it must be called in the moment when text can be printed, so we must call it in
+<span class="obeylines-h"><span class="verb"><span 
+class="ectt-1000">\AtBeginDocument</span></span></span>, because <span 
+class="ectt-1000">.4ht </span>files are processed when LaTeX is still inside
+document preamble.
+</p><!--l. 139--><p class="indent" >   And this is how our example with all configurations ends:
+</p><!--l. 142--><p class="indent" >   Here is some text <span class="myhighlight"><span id="textcolor129">with highlights</span></span>, but <span 
+class="ecti-1000">also </span><span 
+class="ecbx-1000">some other </span>formatting.
+</p>
+   <div class="myquote">
+<!--l. 146--><p class="indent" >   Some not so long quote 
+</p></div>  
+</body></html> 
+
+                                                                  
+
+
