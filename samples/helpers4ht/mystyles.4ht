@@ -1,0 +1,11 @@
+\RequirePackage{textstyle4ht}
+\NewConfigure{myhighlight}{2}
+\pend:defI\myhighlight{\a:myhighlight}
+\append:defI\myhighlight{\b:myhighlight}
+
+\Configure{myhighlight}{\NoFonts\InlineTag{myhighlight}{}}{\EndTag\EndNoFonts}
+
+\ConfigureEnv{myquote}{\NoFonts\BlockTag{myquote}{}}{\EndTag\EndNoFonts}{}{}
+
+\append:def\myquote{\SaveStyle}
+\AtBeginDocument{\GrabStyle{\InlineTag{myhighlight}{}}{\myhighlight}}
