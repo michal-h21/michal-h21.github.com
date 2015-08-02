@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{mystyles}
+\title{Using \texttt{textstyle4ht} package}
+\author{Michal Hoftich}
+\newcommand\ts{\texttt{textstyle4ht}\ }
+\begin{document}
+\maketitle
+
+\tableofcontents
+\section{Introduction}
+
+\ts is part of
+\href{https://github.com/michal-h21/helpers4ht}{helpers4ht}, helper packages
+for tex4ht bundle. It's main function is to make easier custom configurations,
+in particular inputing HTML tags and automatic generating corresponding CSS for
+basic font attributes such as style, weight and color.
+
+As it is best to learn with examples, here is a LaTeX package  \texttt{mystyles.sty}
+
+\inputminted{tex}{mystyles.sty}
+
+We can use these macros like that:
+
+\begin{minted}{latex}
+Here is some text \myhighlight{with highlights}, but \textit{also} \textbf{some
+  other} formatting. 
+
+\begin{myquote}
+Some not so long quote
+\end{myquote}
+\end{minted}
+
+\section{Basic configuration}
+In order to make our macros configurable, we may use special file where configurable hooks are inserted. This file is named \texttt{mystyles.4ht}:
+
+\begin{minted}{latex}
+\NewConfigure{myhighlight}{2}
+\pend:defI\myhighlight{\a:myhighlight}
+\append:defI\myhighlight{\b:myhighlight}
+\end{minted}
+
+What it does is that it declares two  new hooks with \verb|\NewConfigure| and
+then patches \verb|\myhighlight| macro. \verb|\pend:defI| will insert content
+at the beginning of the macro \verb|\mystyles|, \verb|\append:defI| at the end.
+Note that \texttt{:} character can be contained in macro names in \texttt{.4ht}
+files. Also note that several versions of \verb|\[ap]pend:def<x>| exists,
+  depending on the number of parameters of patched macro. 
+
+
+Macros \verb|\a:myhighlight| and \verb|\b:myhighlight| were declared with \verb|\NewConfigure{myhighlight}{2}|. Their content can be declared with 
+
+\begin{minted}{latex}
+\Configure{myhighlight}{content for \a:myhighlight}{and content for \b:myhighlight}
+\end{minted}
+
+Now we can show usage of \ts package. We can modify the \texttt{mystyles.4ht} file slightly:
+
+\begin{minted}{latex}
+\RequirePackage{textstyle4ht}
+\NewConfigure{myhighlight}{2}
+\pend:defI\myhighlight{\a:myhighlight}
+\append:defI\myhighlight{\b:myhighlight}
+\Configure{myhighlight}{\InlineTag{myhighlight}{}}{\EndTag}
+\ConfigureEnv{myquote}{\BlockTag{myquote}{}}{\EndTag}{}{}
+\end{minted}
+
+
+There are some new commands introduced. Normally, tags are inserted with
+\verb|\HCode{<tag>}| command. \ts uses instead special commands for inserting
+inline tags, block tags and their automatic closing. This meand that instead of 
+
+\begin{minted}{latex}
+\Configure{\HCode{<div class="hello">}}{\HCode{</div>}}
+\end{minted}
+
+you can use
+
+
+\begin{minted}{latex}
+\Configure{\BlockTag{hello}{}}{\EndTag}
+\end{minted}
+
+For block tags, \texttt{div} is the default element, so you don't have to
+specify it, first parameter is class of the element, second parameter are any
+HTML arguments. You can leave it empty in most cases.
+
+If you want use different element than \texttt{div}, you can specify it as optional parameter:
+
+\begin{minted}{latex}
+\BlockTag[article]{hello}{}
+\end{minted}
+
+What is the difference between \verb|\InlineTag| and \verb|\BlockTag|? Default
+element for inline tag is \texttt{span} and it should be used for shorter text
+inside paragraph. Block tag should be used typically for longer texts, with
+possibility of nested paragraphs. Typical use are some environments. It takes
+care of correct paragraph handling see
+\href{http://tex.stackexchange.com/a/66172/2891}{Control the <p> tags inserted
+  by tex4ht} for some details.
+
+\section{Styling}
+
+\ts also provides macros for saving basic font information such as font size,
+weight, style or color in the CSS file. It is little bit complicated because of
+technical limitations. The font information must be grabbed at place where it
+is in effect, which unfortunately isn't inside configurable hooks, as these are
+inserted before and after macro code, and font changes happen inside. 
+
+Two commands are provided: \verb|\SaveStyle| and \verb|\GrabStyle|. First one
+is simpler, it saves font information for the current element. The second is
+useful for saving information from commands with such as \verb|\myhighlight|
+
+We can add to \texttt{mystyles.4ht} these lines
+
+\begin{minted}{latex}
+\append:def\myquote{\SaveStyle}
+\AtBeginDocument{\GrabStyle{\InlineTag{myhighlight}{}}{\myhighlight}}
+\end{minted}
+
+They may look mysterious at first, but it is not so hard. We use
+\verb|\append:def| to insert \verb|\SaveStyle| after beginning of
+\texttt{mystyle} environment. It is available as \verb|\mystyle| macro. At this
+moment, \texttt{<div class="myqoute">} is selected as current element and we
+can use just \verb|\SaveStyle| to save the CSS.
+
+The second line is even more mysterious. \verb|\GrabStyle| macro takes two
+parameters, first produces element which should be configured CSS for, the
+second is macro which is grabbed for style. It must take exactly one parameter.
+The macro is printed inside a box, which is then discarded, so nothing shows in
+the document. But it must be called in the moment when text can be printed, so
+we must call it in \verb|\AtBeginDocument|, because \texttt{.4ht} files are
+processed when LaTeX is still inside document preamble.
+
+
+And this is how our example with all configurations ends:
+
+
+Here is some text \myhighlight{with highlights}, but \textit{also} \textbf{some
+  other} formatting. 
+
+\begin{myquote}
+Some not so long quote
+\end{myquote}
+\end{document}
