@@ -7,9 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
 <meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
-<!-- charset=utf-8,html,xhtml,fn-in --> 
+<!-- fn-in,charset=utf-8,html,xhtml --> 
 <meta name="src" content="fontspec.tex" /> 
-<meta name="date" content="2015-08-01 16:44:00" /> 
 <link rel="stylesheet" type="text/css" href="fontspec.css" /> 
 <link rel="stylesheet" type="text/css" href="css/scale.css" /></head><body 
 >
@@ -26,27 +25,207 @@ LuaLaTeX</h2>
 <div class="author" ><span 
 class="cmr-12">Michal Hoftich</span></div><br />
 <div class="date" ><span 
-class="cmr-12">August 1, 2015</span></div>
+class="cmr-12">December 10, 2016</span></div>
 </div>   
 <h3 class="likesectionHead"><a 
  id="x1-1000"></a>Contents</h3>
 <div class="tableofcontents">   
 <span class="sectionToc" >1 <a 
-href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+href="#x1-30001" id="QQ2-1-3">Introduction</a></span>
 <br />   <span class="sectionToc" >2 <a 
-href="#x1-30002" id="QQ2-1-3">Using <span 
+href="#x1-40002" id="QQ2-1-4">Using <span 
 class="cmtt-10">alternative4ht</span></a></span>
 <br />   <span class="sectionToc" >3 <a 
-href="#x1-40003" id="QQ2-1-4">Limitations</a></span>
+href="#x1-50003" id="QQ2-1-5">Limitations</a></span>
 </div>
-<!--l. 24--><p class="indent" >   You can download this guide in <a 
+<!--l. 26--><p class="noindent" >You can download this guide in <a 
 href="http://michal-h21.github.io/samples/helpers4ht/fontspec.pdf" >PDF</a>/<a 
 href="http://michal-h21.github.io/samples/helpers4ht/fontspec.tex" >TeX</a>.
-</p><!--l. 26--><p class="noindent" >
+</p><!--l. 30--><p class="noindent" >
+</p>   
+<h3 class="likesectionHead"><a 
+ id="x1-2000"></a>Update December 2016</h3>
+<!--l. 32--><p class="noindent" >Support for <span 
+class="cmtt-10">fontspec </span>package has been added to tex4ht. You can try to update yout
+<span class="TEX">T<span 
+class="E">E</span>X</span> distribution in order to get this support. The guide bellow thus becomes
+obsolete, although functional and with (hopefully) useful information. Both
+Xe<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> and Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+class="E">E</span>X</span></span> are supported.
+</p><!--l. 37--><p class="indent" >   If you use non-latin scripts, you need to use a correct Script option in
+your font declaration, because all Unicode characters used in the document
+must be declared first. It is done automatically when you use the Script
+option.
+</p><!--l. 41--><p class="noindent" >Sample document:
+</p><!--l. 1--><p class="indent" >
+                                                                  
+
+                                                                  
+</p>   
+<div class="fancyvrb" id="fancyvrb1"><a 
+ id="x1-2027r1"></a><span id="textcolor1"><strong><span 
+class="cmtt-10">\documentclass</span></strong></span><span id="textcolor2"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">article</span><span id="textcolor3"><span 
+class="cmtt-10">}</span></span><br class="fancyvrb" /><a 
+ id="x1-2029r2"></a><span id="textcolor4"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor5"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">fontspec</span><span id="textcolor6"><span 
+class="cmtt-10">}</span></span><br class="fancyvrb" /><a 
+ id="x1-2031r3"></a><span id="textcolor7"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor8"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">polyglossia</span><span id="textcolor9"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2033r4"></a><span id="textcolor10"><strong><span 
+class="cmtt-10">\setmainlanguage</span></strong></span><span id="textcolor11"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">czech</span><span id="textcolor12"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2035r5"></a><span id="textcolor13"><strong><span 
+class="cmtt-10">\setotherlanguages</span></strong></span><span id="textcolor14"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">greek,russian,hindi</span><span id="textcolor15"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2037r6"></a><span id="textcolor16"><strong><span 
+class="cmtt-10">\newfontfamily\greekfont</span></strong></span><span id="textcolor17"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">Linux</span><span 
+class="cmtt-10"> Libertine</span><span 
+class="cmtt-10"> O</span><span id="textcolor18"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10">[Script=Greek]</span>
+<br class="fancyvrb" /><a 
+ id="x1-2039r7"></a><span id="textcolor19"><strong><span 
+class="cmtt-10">\newfontfamily\russianfont</span></strong></span><span id="textcolor20"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">Linux</span><span 
+class="cmtt-10"> Libertine</span><span 
+class="cmtt-10"> O</span><span id="textcolor21"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10">[Script=Cyrillic]</span>
+<br class="fancyvrb" /><a 
+ id="x1-2041r8"></a><span id="textcolor22"><strong><span 
+class="cmtt-10">\newfontfamily\hindifont</span></strong></span><span id="textcolor23"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">Siddhanta</span><span id="textcolor24"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10">[Script=Devanagari]</span>
+<br class="fancyvrb" /><a 
+ id="x1-2043r9"></a><span id="textcolor25"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor26"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">document</span><span id="textcolor27"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2045r10"></a><span 
+class="cmtt-10">P</span><span 
+class="cmtt-10">ř</span><span 
+class="cmtt-10">íli</span><span 
+class="cmtt-10">š</span><span 
+class="cmtt-10"> </span><span id="textcolor28"><strong><span 
+class="cmtt-10">\textit</span></strong></span><span id="textcolor29"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">žlu</span><span 
+class="cmtt-10">ťou</span><span 
+class="cmtt-10">čk</span><span 
+class="cmtt-10">ý</span><span id="textcolor30"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10"> k</span><span 
+class="cmtt-10">ů</span><span 
+class="cmtt-10">ň</span><span 
+class="cmtt-10"> </span><span id="textcolor31"><strong><span 
+class="cmtt-10">\textbf</span></strong></span><span id="textcolor32"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">úp</span><span 
+class="cmtt-10">ěl</span><span id="textcolor33"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10"> </span><span id="textcolor34"><strong><span 
+class="cmtt-10">\textsc</span></strong></span><span id="textcolor35"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">ď</span><span 
+class="cmtt-10">ábelsk</span><span 
+class="cmtt-10">é</span><span id="textcolor36"><span 
+class="cmtt-10">}</span></span><span 
+class="cmtt-10"> </span><span 
+class="cmtt-10">ódy.</span>
+<br class="fancyvrb" /><a 
+ id="x1-2047r11"></a>
+<br class="fancyvrb" /><a 
+ id="x1-2049r12"></a><span id="textcolor37"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor38"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">greek</span><span id="textcolor39"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2051r13"></a><span 
+class="cmtt-10"> </span><span 
+class="cmtt-10"> Greek</span><span 
+class="cmtt-10"> text</span>
+<br class="fancyvrb" /><a 
+ id="x1-2053r14"></a><span id="textcolor40"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor41"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">greek</span><span id="textcolor42"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2055r15"></a>
+<br class="fancyvrb" /><a 
+ id="x1-2057r16"></a><span id="textcolor43"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor44"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">russian</span><span id="textcolor45"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2059r17"></a><span 
+class="cmtt-10"> </span><span 
+class="cmtt-10"> Cyrillic</span><span 
+class="cmtt-10"> text</span>
+<br class="fancyvrb" /><a 
+ id="x1-2061r18"></a><span id="textcolor46"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor47"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">russian</span><span id="textcolor48"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2063r19"></a>
+<br class="fancyvrb" /><a 
+ id="x1-2065r20"></a><span id="textcolor49"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor50"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">hindi</span><span id="textcolor51"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2067r21"></a><span 
+class="cmtt-10"> </span><span 
+class="cmtt-10"> Devanagari</span><span 
+class="cmtt-10"> text</span>
+<br class="fancyvrb" /><a 
+ id="x1-2069r22"></a><span id="textcolor52"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor53"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">hindi</span><span id="textcolor54"><span 
+class="cmtt-10">}</span></span>
+<br class="fancyvrb" /><a 
+ id="x1-2071r23"></a>
+<br class="fancyvrb" /><a 
+ id="x1-2073r24"></a><span id="textcolor55"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor56"><span 
+class="cmtt-10">{</span></span><span 
+class="cmtt-10">document</span><span id="textcolor57"><span 
+class="cmtt-10">}</span></span>
+</div>
+<!--l. 71--><p class="indent" >   Bellow follows the original document.
+</p><!--l. 73--><p class="noindent" >
 </p>   
 <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
- id="x1-20001"></a>Introduction</h3>
-<!--l. 28--><p class="noindent" >The <span 
+ id="x1-30001"></a>Introduction</h3>
+<!--l. 75--><p class="noindent" >The <span 
 class="cmtt-10">fontspec </span>package provides support for OpenType fonts in unicode LaTeX
 formats, Xe<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
 class="E">E</span>X</span></span> and Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
@@ -54,29 +233,26 @@ class="E">E</span>X</span></span>. This enables full support for various non-lat
 scripts, such as Indic, CJK or Arabic. Huge problem is that it is not supported by
 tex4ht, convertor from <span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
 class="E">E</span>X</span></span>to HTML.
-</p><!--l. 33--><p class="indent" >   The reason is that conversion is done by parsing special
+</p><!--l. 80--><p class="indent" >   The reason is that conversion is done by parsing special
 <span 
 class="cmtt-10">DVI </span>file with HTML instructions. It is done by <span 
 class="cmtt-10">tex4ht</span>
 command<span class="footnote-mark"><a 
 href="#fn1x0" id="fn1x0-bk"><sup class="textsuperscript">1</sup></a></span><a 
- id="x1-2001f1"></a>.
+ id="x1-3001f1"></a>.
 This command unfortunately doesn&#x2019;t support OpenType fonts, failing to do any
 conversion at all. This needs to be fixed in the source code, but as no person with
 knowledge of C language, DVI format internals and understanding of literate sources
 of <span 
 class="cmtt-10">tex4ht </span>is known to exist, it is unlikely that this happens in foreseeable
-                                                                  
-
-                                                                  
 future.
-</p><!--l. 45--><p class="indent" >   Some possible solutions which doesn&#x2019;t need to fix <span 
+</p><!--l. 92--><p class="indent" >   Some possible solutions which doesn&#x2019;t need to fix <span 
 class="cmtt-10">tex4ht </span>exists:
-</p><!--l. 47--><p class="indent" >     
+</p><!--l. 94--><p class="indent" >     
 </p>
 <ol  class="enumerate1" >     
 <li 
-  class="enumerate" id="x1-2003x1">
+  class="enumerate" id="x1-3003x1">
 For documents which use only scripts supported by standard pdf<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
 class="E">E</span>X</span></span>,
 one can modify the document and use right arguments for <span 
@@ -85,128 +261,116 @@ class="cmtt-10">inputenc </span>and
 class="cmtt-10">fontenc </span>packages:
 <!--l. 1--><p class="noindent" >
 </p>     
-<div class="fancyvrb" id="fancyvrb1"><a 
- id="x1-2012r1"></a><span 
+<div class="fancyvrb" id="fancyvrb2"><a 
+ id="x1-3012r1"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor1"><span 
-class="cmtt-10">\ifdefined</span></span><span id="textcolor2"><span 
-class="cmtt-10">\HCode</span></span><span id="textcolor3"><span 
+class="cmtt-10"> </span><span id="textcolor58"><strong><span 
+class="cmtt-10">\ifdefined\HCode</span></strong></span><span id="textcolor59"><i><span 
 class="cmitt-10">%</span><span 
 class="cmitt-10"> detect</span><span 
-class="cmitt-10"> tex4ht</span></span><br class="fancyvrb" /><a 
- id="x1-2014r2"></a><span 
+class="cmitt-10"> tex4ht</span></i></span><br class="fancyvrb" /><a 
+ id="x1-3014r2"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor4"><span 
-class="cmtt-10">\usepackage</span></span><span id="textcolor5"><span 
-class="cmtt-10">[utf8]</span></span><span id="textcolor6"><span 
+class="cmtt-10"> </span><span id="textcolor60"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor61"><span 
+class="cmtt-10">[utf8]</span></span><span id="textcolor62"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">inputenc</span><span id="textcolor7"><span 
+class="cmtt-10">inputenc</span><span id="textcolor63"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-2016r3"></a><span 
+ id="x1-3016r3"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor8"><span 
-class="cmtt-10">\usepackage</span></span><span id="textcolor9"><span 
-class="cmtt-10">[T1]</span></span><span id="textcolor10"><span 
+class="cmtt-10"> </span><span id="textcolor64"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor65"><span 
+class="cmtt-10">[T1]</span></span><span id="textcolor66"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">fontenc</span><span id="textcolor11"><span 
+class="cmtt-10">fontenc</span><span id="textcolor67"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-2018r4"></a><span 
+ id="x1-3018r4"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor12"><span 
-class="cmtt-10">\else</span></span>
+class="cmtt-10"> </span><span id="textcolor68"><strong><span 
+class="cmtt-10">\else</span></strong></span>
 <br class="fancyvrb" /><a 
- id="x1-2020r5"></a><span 
+ id="x1-3020r5"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor13"><span 
-class="cmtt-10">\usepackage</span></span><span id="textcolor14"><span 
+class="cmtt-10"> </span><span id="textcolor69"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor70"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">fontspec</span><span id="textcolor15"><span 
+class="cmtt-10">fontspec</span><span id="textcolor71"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-2022r6"></a><span 
+ id="x1-3022r6"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor16"><span 
-class="cmtt-10">\setmainfont</span></span><span id="textcolor17"><span 
+class="cmtt-10"> </span><span id="textcolor72"><strong><span 
+class="cmtt-10">\setmainfont</span></strong></span><span id="textcolor73"><span 
 class="cmtt-10">{</span></span><span 
 class="cmtt-10">TeX</span><span 
 class="cmtt-10"> Gyre</span><span 
-class="cmtt-10"> Termes</span><span id="textcolor18"><span 
+class="cmtt-10"> Termes</span><span id="textcolor74"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-2024r7"></a><span 
+ id="x1-3024r7"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor19"><span 
-class="cmtt-10">\fi</span></span>
+class="cmtt-10"> </span><span id="textcolor75"><strong><span 
+class="cmtt-10">\fi</span></strong></span>
 </div>
-<!--l. 64--><p class="noindent" >this method works best for European languages
+<!--l. 111--><p class="noindent" >This method works best for European languages.
 </p>     
 </li>
 <li 
-  class="enumerate" id="x1-2026x2">     
+  class="enumerate" id="x1-3026x2">     
 Use <a 
 href="https://github.com/michal-h21/lua4ht" >lua4ht</a>, which is an experimental replacement for <span 
 class="cmtt-10">tex4ht </span>written in
+                                                                  
+
+                                                                  
 Lua. It doesn&#x2019;t support all tex4ht features though. See an example at
 <a 
 href="http://tex.stackexchange.com/a/253889/2891" >TeX.sx</a>.
 </li>     
 <li 
-  class="enumerate" id="x1-2028x3">
+  class="enumerate" id="x1-3028x3">
 Use alternative version of <span 
 class="cmtt-10">fontspec </span>and other packages provided by <a 
 href="https://github.com/michal-h21/helpers4ht" >helpers4ht</a>.
 This method will be described later in this document.
 </li></ol>
-<!--l. 78--><p class="noindent" >
+<!--l. 125--><p class="noindent" >
 </p>   
 <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
- id="x1-30002"></a>Using <span 
+ id="x1-40002"></a>Using <span 
 class="cmtt-10">alternative4ht</span></h3>
-<!--l. 80--><p class="noindent" >The <span 
+<!--l. 127--><p class="noindent" >The <span 
 class="cmtt-10">alternative4ht </span>package is included in <a 
 href="https://github.com/michal-h21/helpers4ht" >helpers4ht</a>, see the linked page for
 installation instructions. It provides means to support packages which causes
@@ -220,221 +384,160 @@ document, but the implementation if totally different, with focus on tex4ht
 support.
 </p><!--l. 1--><p class="indent" >
 </p>   
-<div class="fancyvrb" id="fancyvrb2"><a 
- id="x1-3030r1"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor20"><span 
-class="cmtt-10">\usepackage</span></span><span id="textcolor21"><span 
+<div class="fancyvrb" id="fancyvrb3"><a 
+ id="x1-4030r1"></a><span id="textcolor76"><strong><span 
+class="cmtt-10">\usepackage</span></strong></span><span id="textcolor77"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">alternative4ht</span><span id="textcolor22"><span 
+class="cmtt-10">alternative4ht</span><span id="textcolor78"><span 
 class="cmtt-10">}</span></span><br class="fancyvrb" /><a 
- id="x1-3032r2"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor23"><span 
-class="cmtt-10">\altusepackage</span></span><span id="textcolor24"><span 
+ id="x1-4032r2"></a><span id="textcolor79"><strong><span 
+class="cmtt-10">\altusepackage</span></strong></span><span id="textcolor80"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">fontspec</span><span id="textcolor25"><span 
+class="cmtt-10">fontspec</span><span id="textcolor81"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3034r3"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor26"><span 
-class="cmtt-10">\setmainfont</span></span><span id="textcolor27"><span 
+ id="x1-4034r3"></a><span id="textcolor82"><strong><span 
+class="cmtt-10">\setmainfont</span></strong></span><span id="textcolor83"><span 
 class="cmtt-10">{</span></span><span 
 class="cmtt-10">TeX</span><span 
 class="cmtt-10"> Gyre</span><span 
-class="cmtt-10"> Termes</span><span id="textcolor28"><span 
+class="cmtt-10"> Termes</span><span id="textcolor84"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3036r4"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor29"><span 
-class="cmtt-10">\newfontfamily</span></span><span id="textcolor30"><span 
-class="cmtt-10">\greekfont</span></span><span id="textcolor31"><span 
+ id="x1-4036r4"></a><span id="textcolor85"><strong><span 
+class="cmtt-10">\newfontfamily\greekfont</span></strong></span><span id="textcolor86"><span 
 class="cmtt-10">{</span></span><span 
 class="cmtt-10">Linux</span><span 
 class="cmtt-10"> Libertine</span><span 
-class="cmtt-10"> O</span><span id="textcolor32"><span 
+class="cmtt-10"> O</span><span id="textcolor87"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3038r5"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor33"><span 
-class="cmtt-10">\newfontfamily</span></span><span id="textcolor34"><span 
-class="cmtt-10">\russianfont</span></span><span id="textcolor35"><span 
+ id="x1-4038r5"></a><span id="textcolor88"><strong><span 
+class="cmtt-10">\newfontfamily\russianfont</span></strong></span><span id="textcolor89"><span 
 class="cmtt-10">{</span></span><span 
 class="cmtt-10">Linux</span><span 
 class="cmtt-10"> Libertine</span><span 
-class="cmtt-10"> O</span><span id="textcolor36"><span 
+class="cmtt-10"> O</span><span id="textcolor90"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3040r6"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor37"><span 
-class="cmtt-10">\newfontfamily</span></span><span id="textcolor38"><span 
-class="cmtt-10">\hindifont</span></span><span id="textcolor39"><span 
+ id="x1-4040r6"></a><span id="textcolor91"><strong><span 
+class="cmtt-10">\newfontfamily\hindifont</span></strong></span><span id="textcolor92"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">Siddhanta</span><span id="textcolor40"><span 
+class="cmtt-10">Siddhanta</span><span id="textcolor93"><span 
 class="cmtt-10">}</span></span>
-                                                                  
-
-                                                                  
 <br class="fancyvrb" /><a 
- id="x1-3042r7"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor41"><span 
-class="cmtt-10">\altusepackage</span></span><span id="textcolor42"><span 
+ id="x1-4042r7"></a><span id="textcolor94"><strong><span 
+class="cmtt-10">\altusepackage</span></strong></span><span id="textcolor95"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">polyglossia</span><span id="textcolor43"><span 
+class="cmtt-10">polyglossia</span><span id="textcolor96"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3044r8"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor44"><span 
-class="cmtt-10">\setmainlanguage</span></span><span id="textcolor45"><span 
+ id="x1-4044r8"></a><span id="textcolor97"><strong><span 
+class="cmtt-10">\setmainlanguage</span></strong></span><span id="textcolor98"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">english</span><span id="textcolor46"><span 
+class="cmtt-10">english</span><span id="textcolor99"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3046r9"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor47"><span 
-class="cmtt-10">\setotherlanguage</span></span><span id="textcolor48"><span 
+ id="x1-4046r9"></a><span id="textcolor100"><strong><span 
+class="cmtt-10">\setotherlanguage</span></strong></span><span id="textcolor101"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">czech</span><span id="textcolor49"><span 
+class="cmtt-10">czech</span><span id="textcolor102"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3048r10"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor50"><span 
-class="cmtt-10">\setotherlanguage</span></span><span id="textcolor51"><span 
+ id="x1-4048r10"></a><span id="textcolor103"><strong><span 
+class="cmtt-10">\setotherlanguage</span></strong></span><span id="textcolor104"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">greek</span><span id="textcolor52"><span 
+class="cmtt-10">greek</span><span id="textcolor105"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3050r11"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor53"><span 
-class="cmtt-10">\setotherlanguage</span></span><span id="textcolor54"><span 
+ id="x1-4050r11"></a><span id="textcolor106"><strong><span 
+class="cmtt-10">\setotherlanguage</span></strong></span><span id="textcolor107"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">russian</span><span id="textcolor55"><span 
+class="cmtt-10">russian</span><span id="textcolor108"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3052r12"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor56"><span 
-class="cmtt-10">\setotherlanguage</span></span><span id="textcolor57"><span 
+ id="x1-4052r12"></a><span id="textcolor109"><strong><span 
+class="cmtt-10">\setotherlanguage</span></strong></span><span id="textcolor110"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">hindi</span><span id="textcolor58"><span 
+class="cmtt-10">hindi</span><span id="textcolor111"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3054r13"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> ....</span>
+ id="x1-4054r13"></a><span 
+class="cmtt-10">....</span>
 <br class="fancyvrb" /><a 
- id="x1-3056r14"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor59"><span 
-class="cmtt-10">\begin</span></span><span id="textcolor60"><span 
+ id="x1-4056r14"></a><span id="textcolor112"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor113"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">document</span><span id="textcolor61"><span 
+class="cmtt-10">document</span><span id="textcolor114"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3058r15"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span>
+ id="x1-4058r15"></a>
 <br class="fancyvrb" /><a 
- id="x1-3060r16"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor62"><span 
-class="cmtt-10">\begin</span></span><span id="textcolor63"><span 
+ id="x1-4060r16"></a><span id="textcolor115"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor116"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">czech</span><span id="textcolor64"><span 
+class="cmtt-10">czech</span><span id="textcolor117"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3062r17"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
+ id="x1-4062r17"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> Czech</span><span 
 class="cmtt-10"> text</span>
 <br class="fancyvrb" /><a 
- id="x1-3064r18"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor65"><span 
-class="cmtt-10">\end</span></span><span id="textcolor66"><span 
+ id="x1-4064r18"></a><span id="textcolor118"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor119"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">czech</span><span id="textcolor67"><span 
+class="cmtt-10">czech</span><span id="textcolor120"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3066r19"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span>
+ id="x1-4066r19"></a>
 <br class="fancyvrb" /><a 
- id="x1-3068r20"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor68"><span 
-class="cmtt-10">\textgreek</span></span><span id="textcolor69"><span 
+ id="x1-4068r20"></a><span id="textcolor121"><strong><span 
+class="cmtt-10">\textgreek</span></strong></span><span id="textcolor122"><span 
 class="cmtt-10">{</span></span><span 
 class="cmtt-10">Greek</span><span 
-class="cmtt-10"> text</span><span id="textcolor70"><span 
+class="cmtt-10"> text</span><span id="textcolor123"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3070r21"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span>
+ id="x1-4070r21"></a>
 <br class="fancyvrb" /><a 
- id="x1-3072r22"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor71"><span 
-class="cmtt-10">\begin</span></span><span id="textcolor72"><span 
+ id="x1-4072r22"></a><span id="textcolor124"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor125"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">russian</span><span id="textcolor73"><span 
+class="cmtt-10">russian</span><span id="textcolor126"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3074r23"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
+ id="x1-4074r23"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> Russian</span><span 
 class="cmtt-10"> text</span>
 <br class="fancyvrb" /><a 
- id="x1-3076r24"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor74"><span 
-class="cmtt-10">\end</span></span><span id="textcolor75"><span 
+ id="x1-4076r24"></a><span id="textcolor127"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor128"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">russian</span><span id="textcolor76"><span 
+class="cmtt-10">russian</span><span id="textcolor129"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3078r25"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span>
+ id="x1-4078r25"></a>
 <br class="fancyvrb" /><a 
- id="x1-3080r26"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor77"><span 
-class="cmtt-10">\begin</span></span><span id="textcolor78"><span 
+ id="x1-4080r26"></a><span id="textcolor130"><strong><span 
+class="cmtt-10">\begin</span></strong></span><span id="textcolor131"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">hindi</span><span id="textcolor79"><span 
+class="cmtt-10">hindi</span><span id="textcolor132"><span 
 class="cmtt-10">}</span></span>
 <br class="fancyvrb" /><a 
- id="x1-3082r27"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span 
+ id="x1-4082r27"></a><span 
 class="cmtt-10"> </span><span 
 class="cmtt-10"> Hindi</span><span 
 class="cmtt-10"> text</span>
 <br class="fancyvrb" /><a 
- id="x1-3084r28"></a><span 
-class="cmtt-10"> </span><span 
-class="cmtt-10"> </span><span id="textcolor80"><span 
-class="cmtt-10">\end</span></span><span id="textcolor81"><span 
+ id="x1-4084r28"></a><span id="textcolor133"><strong><span 
+class="cmtt-10">\end</span></strong></span><span id="textcolor134"><span 
 class="cmtt-10">{</span></span><span 
-class="cmtt-10">hindi</span><span id="textcolor82"><span 
+class="cmtt-10">hindi</span><span id="textcolor135"><span 
 class="cmtt-10">}</span></span>
 </div>
-<!--l. 123--><p class="indent" >   I haven&#x2019;t included actual text in the listings, as it would be too long. The selected
+<!--l. 170--><p class="indent" >   I haven&#x2019;t included actual text in the listings, as it would be too long. The selected
 text is first paragraph from Wikipedia pages about Prague in various languages. As
 you can see, <span 
 class="cmtt-10">Polyglossia </span>package provides two ways for including text in other
@@ -446,12 +549,15 @@ text. Note that it always starts a new paragraph. We also need to provide a font
 family for each language as is shown with all these <span class="obeylines-h"><span class="verb"><span 
 class="cmtt-10">\newfontfamily\&#x003C;lang&#x003E;font</span></span></span>
 commands.
-</p><!--l. 133--><p class="indent" >   A result with some real world texts:
-</p><!--l. 136--><p class="indent" >        
+</p><!--l. 180--><p class="indent" >   A result with some real world texts:
+</p><!--l. 183--><p class="indent" >        
 </p>
 <div class="quotation">        
 <div lang="cs-CZ">
-<!--l. 138--><p class="indent" >   Praha je hlavní a současně největší město České republiky a 15.
+                                                                  
+
+                                                                  
+<!--l. 185--><p class="indent" >   Praha je hlavní a současně největší město České republiky a 15.
 největší město Evropské unie. Leží mírně na sever od středu Čech na
 řece Vltavě, uvnitř Středočeského kraje, jehož je správním
 centrem, ale jako samostatný kraj není jeho součástí. Je sídlem
@@ -462,7 +568,7 @@ sídlem řady dalších úřadů, jak ústředních, tak i územních
 samosprávných celků; sídlí zde též ústředí většiny politických
 stran a centrály téměř všech církví, náboženských a dalších
 sdružení s celorepublikovou působností registrovaných v ČR. </p></div>
-<!--l. 154--><p class="indent" >   <span lang="el">Η Πράγα (τσέχικα: Praha), είναι η πρωτεύουσα και μεγαλύτερη
+<!--l. 201--><p class="indent" >   <span lang="el">Η Πράγα (τσέχικα: Praha), είναι η πρωτεύουσα και μεγαλύτερη
 πόλη της Τσεχίας. Χτισμένη στον ποταμό Μολδάβα (Vltava), στην
 κεντρική Βοημία, έχει 1,2 εκατομμύριο κατοίκους. Αποκαλείται
 επίσης «η χρυσή πόλη» και «μητέρα των πόλεων». Από το 1992, το
@@ -470,17 +576,14 @@ sdružení s celorepublikovou působností registrovaných v ČR. </p></div>
 παγκόσμιας κληρονομιάς της UNESCO.</span>
 </p>        
 <div lang="ru">
-<!--l. 157--><p class="indent" >   Пра́га (чеш. Praha [ˈpraɦa]) — город и столица Чехии;
+<!--l. 204--><p class="indent" >   Пра́га (чеш. Praha [ˈpraɦa]) — город и столица Чехии;
 административный центр Среднечешского края и двух его районов
 — Прага-Восток и Прага-Запад. Образует самостоятельную
 административную единицу страны. </p></div>
-<div lang="">
-                                                                  
-
-                                                                  
-<!--l. 161--><p class="indent" >   प्राग युरोप के चेकोस्लोवाकिया देश की राजधानी है। </p></div>
+<div lang="">     
+<!--l. 209--><p class="indent" >    प्राग युरोप के चेकोस्लोवाकिया देश की राजधानी है। </p></div>
 </div>
-<!--l. 165--><p class="indent" >   Compile the document with
+<!--l. 213--><p class="indent" >   Compile the document with
                                                                   
 
                                                                   
@@ -488,14 +591,14 @@ sdružení s celorepublikovou působností registrovaných v ČR. </p></div>
 <div class="verbatim" id="verbatim-1">
 make4ht -ul filename
 </div>
-<!--l. 169--><p class="nopar" >
-</p><!--l. 171--><p class="indent" >   If your browser supports hyphenation, you can see that some texts are
+<!--l. 217--><p class="nopar" >
+</p><!--l. 219--><p class="indent" >   If your browser supports hyphenation, you can see that some texts are
 hyphenated. Not all languages are supported by all browsers, unfortunately.
-</p><!--l. 174--><p class="noindent" >
+</p><!--l. 222--><p class="noindent" >
 </p>   
 <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
- id="x1-40003"></a>Limitations</h3>
-<!--l. 176--><p class="noindent" >This method works only with Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
+ id="x1-50003"></a>Limitations</h3>
+<!--l. 224--><p class="noindent" >This method works only with Lua<span class="LATEX">L<span class="A">A</span><span class="TEX">T<span 
 class="E">E</span>X</span></span> at the moment. It uses a node callback to
 replace all characters with HTML entities, which are later translated back to unicode
 values by <span 
@@ -505,16 +608,16 @@ than providing huge file with <span class="obeylines-h"><span class="verb"><span
 class="cmtt-10">\DeclareUnicodeCharacter</span></span></span> for all possible
 characters. This doesn&#x2019;t sound right to me, so I am open to any more realistic
 ideas.
-</p><!--l. 181--><p class="indent" >   I provided definitions only for most basic commands, if you find any undefined commands
+</p><!--l. 231--><p class="indent" >   I provided definitions only for most basic commands, if you find any undefined commands
 in your documents, please let me know and I will try to provide reasonable definition for
 them<span class="footnote-mark"><a 
 href="#fn2x0" id="fn2x0-bk"><sup class="textsuperscript">2</sup></a></span><a 
- id="x1-4001f2"></a>.
+ id="x1-5001f2"></a>.
 </p>   
-<div class="footnotes"><!--l. 38--><p class="indent" >    <span class="footnote-mark"><a 
+<div class="footnotes"><!--l. 85--><p class="indent" >    <span class="footnote-mark"><a 
 href="#fn1x0-bk" id="fn1x0"><sup class="textsuperscript">1</sup></a></span><span 
-class="cmr-8">It is little bit confusing that name </span><span 
-class="cmti-8">tex4ht </span><span 
+class="cmr-8">It is little bit confusing that name</span> <i><span 
+class="cmti-8">tex4ht</span></i> <span 
 class="cmr-8">means two things: whole system including</span>
 <span class="LATEX"><span 
 class="cmr-8">L</span><span class="A"><span 
@@ -530,9 +633,9 @@ class="cmr-8">is also one of these command line</span>
 class="cmr-8">applications. The command name will be printed in monospace font in this text to a avoid</span>
 <span 
 class="cmr-8">confusion</span></p>
-<!--l. 182--><p class="indent" >     <span class="footnote-mark"><a 
+<!--l. 234--><p class="indent" >     <span class="footnote-mark"><a 
 href="#fn2x0-bk" id="fn2x0"><sup class="textsuperscript">2</sup></a></span><span 
-class="cmr-8">You can provide definitions as well, of course :)</span></p>                                                 </div>
+class="cmr-8">You can provide definitions as well, of course :-)</span></p>                                                </div>
  
 </body> 
 </html> 
