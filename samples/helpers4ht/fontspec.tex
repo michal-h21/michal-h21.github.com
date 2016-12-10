@@ -1,10 +1,10 @@
 \documentclass{article}
 \usepackage{alternative4ht}
 \altusepackage{fontspec}
-\setmainfont{TeX Gyre Termes}
-\newfontfamily\greekfont{Linux Libertine O}
-\newfontfamily\russianfont{Linux Libertine O}
-\newfontfamily\hindifont{Siddhanta}
+\setmainfont{Linux Libertine O}
+\newfontfamily\greekfont{Linux Libertine O}[Script=Greek]
+\newfontfamily\russianfont{Linux Libertine O}[Script=Cyrillic]
+\newfontfamily\hindifont{Siddhanta}[Script=Devanagari]
 \altusepackage{polyglossia}
 \setmainlanguage{english}
 \setotherlanguage{czech}
@@ -18,10 +18,57 @@
 \begin{document}
 \title{Using \texttt{fontspec} package with tex4ht and LuaLaTeX}
 \author{Michal Hoftich}
+
 \maketitle
 \tableofcontents
 
-You can download this guide in \href{http://michal-h21.github.io/samples/helpers4ht/fontspec.pdf}{PDF}/\href{http://michal-h21.github.io/samples/helpers4ht/fontspec.tex}{TeX}.
+\bigskip 
+\noindent You can download this guide in 
+\href{http://michal-h21.github.io/samples/helpers4ht/fontspec.pdf}{PDF}/%
+\href{http://michal-h21.github.io/samples/helpers4ht/fontspec.tex}{TeX}.
+
+\section*{Update December 2016}
+
+Support for \texttt{fontspec} package has been added to tex4ht. You can try to
+update yout \TeX\ distribution in order to get this support. The guide bellow
+thus becomes obsolete, although functional and with (hopefully) useful information.
+Both Xe\LaTeX\ and Lua\LaTeX\ are supported.
+
+If you use non-latin scripts, you need to use a correct Script option in your
+font declaration, because all Unicode characters used in the document must be
+declared first. It is done automatically when you use the Script option.
+
+\bigskip\noindent Sample document:
+
+\begin{minted}{latex}
+\documentclass{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{czech}
+\setotherlanguages{greek,russian,hindi}
+\newfontfamily\greekfont{Linux Libertine O}[Script=Greek]
+\newfontfamily\russianfont{Linux Libertine O}[Script=Cyrillic]
+\newfontfamily\hindifont{Siddhanta}[Script=Devanagari]
+\begin{document}
+Příliš \textit{žluťoučký} kůň \textbf{úpěl} \textsc{ďábelské} ódy.
+
+\begin{greek} 
+  Greek text
+\end{greek}
+
+\begin{russian}
+  Cyrillic text
+\end{russian}
+
+\begin{hindi}
+  Devanagari text
+\end{hindi}
+
+\end{document}
+
+\end{minted}
+
+Bellow follows the original document.
 
 \section{Introduction}
 
@@ -61,7 +108,7 @@ Some possible solutions which doesn't need to fix \texttt{tex4ht} exists:
     \end{minted}
     %\end{lstlisting}
 
-    this method works best for European languages
+    This method works best for European languages.
 
   \item Use \href{https://github.com/michal-h21/lua4ht}{lua4ht}, which is an
     experimental replacement for \texttt{tex4ht} written in Lua. It doesn't
@@ -154,8 +201,9 @@ náboženských a dalších sdružení s celorepublikovou působností registrov
   μνημείων παγκόσμιας κληρονομιάς της UNESCO.} 
 
 \begin{russian}
-Пра́га (чеш. Praha [ˈpraɦa]) — город и столица Чехии; административный центр Среднечешского края и двух его районов — Прага-Восток и Прага-Запад. Образует самостоятельную административную единицу страны.
-\end{russian}
+Пра́га (чеш. Praha [ˈpraɦa]) — город и столица Чехии; административный центр
+Среднечешского края и двух его районов — Прага-Восток и Прага-Запад. Образует
+самостоятельную административную единицу страны.  \end{russian}
 
 \begin{hindi}
   प्राग युरोप के चेकोस्लोवाकिया देश की राजधानी है।
@@ -176,10 +224,14 @@ hyphenated. Not all languages are supported by all browsers, unfortunately.
 This method works only with Lua\LaTeX\ at the moment. It uses a node callback to
 replace all characters with HTML entities, which are later translated back to
 unicode values by \texttt{tex4ht}. I don't know about any easy solution for
-Xe\LaTeX, other than providing huge file with \verb|\DeclareUnicodeCharacter| for all possible characters. This doesn't sound right to me, so I am open to any more realistic ideas.
+Xe\LaTeX, other than providing huge file with \verb|\DeclareUnicodeCharacter|
+for all possible characters. This doesn't sound right to me, so I am open to
+any more realistic ideas.
 
 I provided definitions only for most basic commands, if you find any undefined
-commands in your documents, please let me know and I will try to provide reasonable definition for them\footnote{You can provide definitions as well, of course :)}.
+commands in your documents, please let me know and I will try to provide
+reasonable definition for them\footnote{You can provide definitions as well, of
+course :-)}.
 
 \end{document}
 
