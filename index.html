@@ -1,27 +1,31 @@
----
-layout: default
-title: Blog
----
- 
-<section class="content">
-  <h2>Blog</h2>
- 
-</section>
- 
-<ul class="entries">
-  {% for post in site.posts %}
- 
-  <li>
-    <a href="{{ post.url }}"> <img src="{{ post.image }}" /></a>
-    <div class="entry-info">
-    <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-    <div class="abstract">
-    {{ post.pokus}}
-    {{ post.abstract }}
-    </div>
-    <div>
-    </a>
-  </li>
- 
-  {% endfor %}
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home | Kodymirus</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <menu>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+        </menu>
+      </nav>
+      <h1 id="home">Kodymirus.cz</h1>
+    </header>
+    <main>
+      <h2 id="projects">Projects</h2>
+      <h2 id="about">About</h2>
+
+    </main>
+    <footer>
+      <p>Copyright © 2022 Michal Hoftich. <a href="https://github.com/michal-h21" rel="me">GitHub</a> | <a href="https://twitter.com/michalh21" rel="me">Twitter</a></p>
+      <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p>
+    </footer>
+  </body>
+
+</html>
