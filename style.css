@@ -30,23 +30,37 @@ body{
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: calc(1rem + 0.15vw);
 }
-pre, code, kbd {font-family: monospace,monospace;}
+pre, code, kbd {font-family: monospace,monospace; }
 
 /* Colors */
 
+
+
 body {
+  --foreground-color: #0c0c0c;
   background-color: #fcfcfc;
-  color: #0c0c0c;
+  color: var(--foreground-color);
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid var(--foreground-color);
+}
+
+h2{
+  border-top: 1px solid var(--foreground-color);
+  padding-top: 1rem;
+}
+
+.project{
+  border-top:1px dotted var(--foreground-color);
+  padding-top:0.8rem;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1c1c1c;
-    color: #ececec;
+    --foreground-color: #ececec;
+    /* color: #ececec; */
 
   }
   a {
@@ -68,7 +82,7 @@ footer {
   }
   
   li::marker {
-      color: #ececec;
+      color: var(--foreground-color);
   }
 
   footer {
