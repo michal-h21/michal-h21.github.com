@@ -1,0 +1,1142 @@
+<!DOCTYPE html> 
+<html lang='en' xml:lang='en'> 
+<head><title>Web Page to PDF Conversion with Rmodepdf: Leveraging LuaLaTeX for
+E-book Reader-friendly Documents</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='responsive_handout.css' rel='stylesheet' type='text/css' /> 
+<meta content='responsive_handout.tex' name='src' /> 
+</head><body>
+<div class='maketitle'>
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+
+<h2 class='titleHead'>Web Page to PDF Conversion with Rmodepdf:
+Leveraging LuaLaTeX for E-book
+Reader-friendly Documents</h2>
+ <div class='author'><span class='ec-lmr-12x-x-104'>Michal Hoftich</span></div><br />
+<div class='date'><span class='ec-lmr-12x-x-104'>July 17, 2024</span></div>
+</div>   
+<h3 class='sectionHead' id='introduction'><span class='titlemark'>1   </span> <a id='x1-10001'></a>Introduction</h3>
+<p><a id='x1-1001r1'></a>
+</p><!-- l. 8 --><p class='noindent'><span class='likeparagraphHead' id='whad-do-we-want-to-achieve'><a id='x1-2000'></a>Whad Do We Want to Achieve?</span>
+ 
+</p><!-- l. 8 --><p class='noindent'>
+</p><!-- l. 8 --><p class='indent'>   From various sources (HTML, ePub) create PDF suitable for various outputs:
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>e-book readers
+</li>
+<li class='itemize'>smartphones or tablets
+</li>
+<li class='itemize'>various print page formats</li></ul>
+<p><a id='x1-2001r2'></a>
+                                                                  
+
+                                                                  
+</p><!-- l. 18 --><p class='noindent'><span class='likeparagraphHead' id='why'><a id='x1-3000'></a>Why?</span>
+ 
+</p><!-- l. 18 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>comfortable reading
+</li>
+<li class='itemize'>archiving
+</li>
+<li class='itemize'>because we can</li></ul>
+<p><a id='x1-3001r3'></a>
+</p><!-- l. 30 --><p class='noindent'><span class='likeparagraphHead' id='what-will-i-show'><a id='x1-4000'></a>What Will I Show?</span>
+ 
+</p><!-- l. 30 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>usage and configuration of the Rmodepdf command
+</li>
+<li class='itemize'>HTML processing using LuaXML
+</li>
+<li class='itemize'>     
+<!-- l. 33 --><p class='noindent'>Two packages that simplify automatic typesetting </p>
+<ul class='itemize2'>         
+<li class='itemize'>responsive design in LaTeX with the package Responsive
+                                                                  
+
+                                                                  
+</li>
+<li class='itemize'>prevention of overflow boxes in narrow lines with the package
+Linebreaker</li></ul>
+</li></ul>
+<!-- l. 44 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='how-do-we-convert-html-to-pdf-for-an-ereader'><span class='titlemark'>2   </span> <a id='x1-50002'></a>How Do We Convert HTML to PDF for an E-reader?</h3>
+<p><a id='x1-5001r4'></a>
+</p><!-- l. 48 --><p class='noindent'><span class='likeparagraphHead' id='rmodepdf'><a id='x1-6000'></a>Rmodepdf</span>
+ 
+</p><!-- l. 48 --><p class='noindent'>
+</p><!-- l. 49 --><p class='indent'>   A script that converts web pages to PDF.
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>extracts clean text from articles, without ads and navigation elements
+on the pages
+</li>
+<li class='itemize'>allows configuration for individual websites or e-book editions (e.g.,
+Municipal Library in Prague)
+</li>
+<li class='itemize'>configurable output</li></ul>
+<!-- l. 60 --><p class='indent'>   <a class='url' href='https://github.com/michal-h21/rmodepdf/'><span class='ec-lmtt-10x-x-105'>https://github.com/michal-h21/rmodepdf/</span></a>
+<a id='x1-6001r5'></a>
+                                                                  
+
+                                                                  
+</p>
+<!-- l. 65 --><p class='noindent'><span class='likeparagraphHead' id='page-with-control-elements-and-ads'><a id='x1-7000'></a>Page with Control Elements and Ads</span>
+ 
+</p><!-- l. 65 --><p class='noindent'>
+</p>
+<div class='center'>
+<!-- l. 65 --><p class='noindent'>
+</p><!-- l. 66 --><p class='noindent'><img alt='PIC' height='390' src='img/root-balast.png' width='457' /></p></div>
+<p><a id='x1-7001r6'></a>
+</p><!-- l. 72 --><p class='noindent'><span class='likeparagraphHead' id='page-in-reader-mode-in-firefox'><a id='x1-8000'></a>Page in Reader Mode in Firefox</span>
+ 
+</p><!-- l. 72 --><p class='noindent'>
+</p>
+<div class='center'>
+<!-- l. 72 --><p class='noindent'>
+</p><!-- l. 73 --><p class='noindent'><img alt='PIC' height='390' src='img/root-čtečka.png' width='457' /></p></div>
+<p><a id='x1-8001r7'></a>
+</p><!-- l. 79 --><p class='noindent'><span class='likeparagraphHead' id='reader-mode-for-scripts'><a id='x1-9000'></a>Reader Mode for Scripts</span>
+ 
+</p><!-- l. 79 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>Reader  mode  is  a  feature  in  web  browsers  that  removes  control
+elements from the page and displays only the article text.
+</li>
+<li class='itemize'>The projects listed below enable the use of reader mode in scripts.</li></ul>
+                                                                  
+
+                                                                  
+<div class='tabular'> <table class='tabular' id='TBL-2'><colgroup id='TBL-2-1g'><col id='TBL-2-1' /><col id='TBL-2-2' /></colgroup><tr id='TBL-2-1-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-1-1' style='white-space:nowrap; text-align:left;'> Readability.js        </td>
+                     <td class='td11' id='TBL-2-1-2' style='white-space:nowrap; text-align:left;'> <a class='url' href='https://github.com/mozilla/readability'><span class='ec-lmtt-10x-x-105'>https://github.com/mozilla/readability</span></a>      </td>
+</tr><tr id='TBL-2-2-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-2-1' style='white-space:nowrap; text-align:left;'> Python-readability  </td><td class='td11' id='TBL-2-2-2' style='white-space:nowrap; text-align:left;'> <a class='url' href='https://github.com/buriy/python-readability'><span class='ec-lmtt-10x-x-105'>https://github.com/buriy/python-readability</span></a> </td>
+</tr><tr id='TBL-2-3-' style='vertical-align:baseline;'><td class='td11' id='TBL-2-3-1' style='white-space:nowrap; text-align:left;'> Rdrview:               </td><td class='td11' id='TBL-2-3-2' style='white-space:nowrap; text-align:left;'> <a class='url' href='https://github.com/eafer/rdrview'><span class='ec-lmtt-10x-x-105'>https://github.com/eafer/rdrview</span></a>            </td>
+</tr></table>                                                                      </div>
+<!-- l. 94 --><p class='noindent'>For our purpose, Rdrview is the most suitable of these projects because it is a
+simple C program that is fast and does not require installing additional
+dependencies.
+<a id='x1-9001r8'></a>
+</p>
+<!-- l. 102 --><p class='noindent'><span class='likeparagraphHead' id='how-do-we-load-and-transform-html-files'><a id='x1-10000'></a>How Do We Load and Transform HTML Files?</span>
+ 
+</p><!-- l. 102 --><p class='noindent'>
+</p><!-- l. 102 --><p class='indent'>   LuaXML contains two libraries for HTML processing and transforming
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>     
+<!-- l. 104 --><p class='noindent'>the <span class='obeylines-h'><code class='verb'>luaxml-transform</code></span> library for converting XML to other formats, such
+as TeX</p>
+<ul class='itemize2'>         
+<li class='itemize'>allows rules for specific elements selected using CSS selectors</li></ul>
+</li>     
+<li class='itemize'>the <span class='obeylines-h'><code class='verb'>luaxml-domobject</code></span> library can now load HTML files</li></ul>
+<!-- l. 112 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='rmodepdf-usage'><span class='titlemark'>3   </span> <a id='x1-110003'></a>Rmodepdf usage</h3>
+<p><a id='x1-11001r9'></a>
+</p><!-- l. 116 --><p class='noindent'><span class='likeparagraphHead' id='basic-usage'><a id='x1-12000'></a>Basic Usage</span>
+ 
+</p><!-- l. 116 --><p class='noindent'>
+</p><!-- l. 117 --><p class='indent'>   Rmodepdf accepts multiple URL or filenames as an argument:
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-1'>
+# process url1 and url2
+$ rmodepdf &lt;url1&gt; &lt;url2&gt;
+</pre>
+<!-- l. 122 --><p class='nopar'>
+<a id='x1-12001r10'></a>
+</p>
+<!-- l. 127 --><p class='noindent'><span class='likeparagraphHead' id='basic-usage1'><a id='x1-13000'></a>Basic Usage</span>
+ 
+</p><!-- l. 127 --><p class='noindent'>
+</p><!-- l. 127 --><p class='indent'>   It can also read from the standard input:
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-2'>
+# process local foo.html passed from the standard input
+# "-" will tell rmodepdf to read from stdin
+$ cat foo.html | rmodepdf --baseurl foo -
+</pre>
+<!-- l. 133 --><p class='nopar'>
+</p><!-- l. 136 --><p class='noindent'>The <span class='obeylines-h'><code class='verb'>--baseurl</code></span> option is necessary for downloading of images. If the
+document don’t contain any external images, use a bogus value for the base
+URL.
+</p><!-- l. 139 --><p class='indent'>   Rmodepdf merges downloaded pages into a single output TeX document,
+which is then immediately compiled.
+<a id='x1-13001r11'></a>
+</p>
+<!-- l. 144 --><p class='noindent'><span class='likeparagraphHead' id='example-output'><a id='x1-14000'></a>Example Output</span>
+ 
+</p><!-- l. 144 --><p class='noindent'>
+</p>   
+<figure class='figure'> 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<div class='center'>
+<!-- l. 145 --><p class='noindent'>
+</p><!-- l. 146 --><p class='noindent'><img alt='PIC' height='390' src='img/rmodepdf-article.png' width='390' /></p></div>
+                                                                  
+
+                                                                  
+</figure>
+<!-- l. 153 --><p class='indent'>   For each page, it displays a header with basic document information and a
+table of contents. This is followed by the text of the document.
+<a id='x1-14001r12'></a>
+</p>
+<!-- l. 160 --><p class='noindent'><span class='likeparagraphHead' id='print-transformed-latex-code'><a id='x1-15000'></a>Print Transformed LaTeX Code</span>
+ 
+</p><!-- l. 160 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-3'>
+# pipe the generated TeX code to foo.tex
+$ rmodepdf -p &lt;url&gt; &gt; foo.tex
+</pre>
+<!-- l. 163 --><p class='nopar'>
+</p><!-- l. 166 --><p class='indent'>   If we print the page using the <span class='obeylines-h'><code class='verb'>-p</code></span> option, the generated TeX code is output to
+the standard output, and no compilation occurs.
+<a id='x1-15001r13'></a>
+</p>
+<!-- l. 172 --><p class='noindent'><span class='likeparagraphHead' id='output-file-name'><a id='x1-16000'></a>Output File Name</span>
+ 
+</p><!-- l. 172 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-4'>
+# save as foo.pdf
+$ rmodepdf -o foo.pdf &lt;url&gt;
+  
+</pre>
+<!-- l. 175 --><p class='nopar'>
+</p><!-- l. 179 --><p class='indent'>   The output file name is based on the first page title. If no title was detected
+on the page, the output file name is named using the following template:
+<span class='obeylines-h'><code class='verb'>rmodepdf-%Y%m%d-%H-%M</code></span>. You can choose another name using the <span class='obeylines-h'><code class='verb'>-o</code></span> or
+<span class='obeylines-h'><code class='verb'>--output</code></span> option.
+<a id='x1-16001r14'></a>
+</p>
+<!-- l. 185 --><p class='noindent'><span class='likeparagraphHead' id='choose-page-format-and-style'><a id='x1-17000'></a>Choose Page Format and Style</span>
+ 
+</p><!-- l. 185 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-5'>
+# use A4 format for the paper size
+# use plain page style
+$ rmodepdf -P a4paper -s plain &lt;url&gt;
+</pre>
+<!-- l. 189 --><p class='nopar'>
+</p><!-- l. 193 --><p class='indent'>   You can choose a different page size using the <span class='ec-lmtt-10x-x-105'>-P </span>option. By default, the page
+size and margins are set for e-book readers, but you can also select other sizes,
+such as A4 paper size. The page style is currently set to empty (<i>blank</i>), but you
+can change it using the <span class='ec-lmtt-10x-x-105'>-s </span>option.
+<a id='x1-17001r15'></a>
+</p>
+<!-- l. 200 --><p class='noindent'><span class='likeparagraphHead' id='change-image-directory'><a id='x1-18000'></a>Change Image Directory</span>
+ 
+</p><!-- l. 200 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-6'>
+# save the document as foo.pdf and
+# save images in the temp dir
+$ rmodepdf -o foo.pdf -i /tmp/img &lt;url&gt;
+</pre>
+<!-- l. 204 --><p class='nopar'>
+</p><!-- l. 209 --><p class='indent'>   To enhance speed, images are stored in a local directory. By default, this is
+the <span class='ec-lmtt-10x-x-105'>img/ </span>subdirectory within the current directory, but you can specify a
+different directory using the <span class='ec-lmtt-10x-x-105'>-i </span>option.
+<a id='x1-18001r16'></a>
+</p>
+<!-- l. 215 --><p class='noindent'><span class='likeparagraphHead' id='other-options'><a id='x1-19000'></a>Other Options</span>
+ 
+</p><!-- l. 215 --><p class='noindent'>
+</p><!-- l. 216 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmbx-10x-x-105'>-n</span> 
+</dt><dd class='description'>  
+<!-- l. 216 --><p class='noindent'>don’t download images
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>-N</span> 
+</dt><dd class='description'> 
+<!-- l. 217 --><p class='noindent'>don’t process LaTeX math in pages
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>-R</span> 
+</dt><dd class='description'> 
+<!-- l. 218 --><p class='noindent'>don’t run Rdrview
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>-l</span> 
+</dt><dd class='description'>  
+<!-- l. 219 --><p class='noindent'>debug messages log level</p></dd></dl>
+<!-- l. 224 --><p class='indent'>   You can disable image downloading entirely with the <span class='ec-lmtt-10x-x-105'>-n </span>option. The
+Rmodepdf also detects and displays LaTeX mathematical commands
+embedded in web pages that use MathJax or KaTeX for rendering. This
+default behavior can be disabled using the <span class='ec-lmtt-10x-x-105'>-N </span>option. Additionally, the
+removal of page elements using Rdrview can be disabled with the <span class='ec-lmtt-10x-x-105'>-R</span>
+option.
+                                                                  
+
+                                                                  
+</p><!-- l. 232 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='configuration'><span class='titlemark'>4   </span> <a id='x1-200004'></a>Configuration</h3>
+<p><a id='x1-20001r17'></a>
+</p><!-- l. 236 --><p class='noindent'><span class='likeparagraphHead' id='loading-of-the-configuration-file'><a id='x1-21000'></a>Loading of the Configuration File</span>
+ 
+</p><!-- l. 236 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-7'>
+# load script.lua as the configuration file
+$ rmodepdf -c script.lua &lt;url&gt;
+</pre>
+<!-- l. 240 --><p class='nopar'>
+</p><!-- l. 243 --><p class='noindent'>Using a configuration file, we can declare custom rules for transforming HTML
+to LaTeX, change the document template, load extra packages, or modify the
+processed page before transformation.
+<a id='x1-21001r18'></a>
+</p>
+<!-- l. 250 --><p class='noindent'><span class='likeparagraphHead' id='change-settings'><a id='x1-22000'></a>Change Settings</span>
+ 
+</p><!-- l. 250 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-8'>
+add_to_config {
+  document = {
+    preamble_extras = [[
+    \setmainfont{Linux Libertine O}
+    ]],
+  },
+  img_convert = {
+    -- modify the command used for
+    -- conversion of SVG images to PDF
+    svg = "cairosvg -o ${dest} -",
+  },
+}
+</pre>
+<!-- l. 263 --><p class='nopar'>
+</p><!-- l. 268 --><p class='indent'>   This example uses the command <span class='ec-lmtt-10x-x-105'>add_to_config</span>, which safely copies new
+configuration values into the original configuration. If you only want to set a
+single configuration value, you can also directly write to the <span class='ec-lmtt-10x-x-105'>config</span>
+table:
+<a id='x1-22001r19'></a>
+</p>
+<!-- l. 275 --><p class='noindent'><span class='likeparagraphHead' id='direct-settings'><a id='x1-23000'></a>Direct Settings</span>
+ 
+</p><!-- l. 275 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-9'>
+# change settings for the Geometry package
+config.document.geometry = "a6paper"
+</pre>
+<!-- l. 278 --><p class='nopar'>
+</p><!-- l. 281 --><p class='indent'>   Note that settings for Geometry are automatically generated by selecting the
+<span class='obeylines-h'><code class='verb'>-p</code></span> or <span class='obeylines-h'><code class='verb'>--pageformat</code></span> option. You can overwrite these setting using this
+variable.
+</p><!-- l. 285 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='callbacks'><span class='titlemark'>5   </span> <a id='x1-240005'></a>Callbacks</h3>
+<!-- l. 287 --><p class='noindent'>The configuration script is executed before the actual conversion, so it cannot
+directly influence the conversion process. However, we can define several callback
+functions that allow us to affect the conversion. These functions are as
+follows:
+<a id='x1-24001r20'></a>
+</p>
+<!-- l. 294 --><p class='noindent'><span class='likeparagraphHead' id='available-callbacks'><a id='x1-25000'></a>Available Callbacks</span>
+ 
+</p><!-- l. 294 --><p class='noindent'>
+</p><!-- l. 295 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmtk-10x-x-105'>preprocess_content</span> 
+</dt><dd class='description'>
+<!-- l. 295 --><p class='noindent'>modify  string  with  the  raw  HTML  before  readability  and  DOM
+parsing.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>preprocess_dom</span> 
+</dt><dd class='description'>
+<!-- l. 297 --><p class='noindent'>modify  DOM  object  before  fetchching  of  images  or  handling  of
+MathJax.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>postprocess_dom</span> 
+</dt><dd class='description'>
+                                                                  
+
+                                                                  
+<!-- l. 299 --><p class='noindent'>modify DOM after all processing by Rmodepdf.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>postprocess</span> 
+</dt><dd class='description'>
+<!-- l. 300 --><p class='noindent'>late post-processing of the config table.</p></dd></dl>
+<!-- l. 305 --><p class='indent'>   In the following text, we will introduce some new features provided by
+LuaXML, namely DOM processing and transforming to other formats.
+<a id='x1-25001r21'></a>
+</p>
+<!-- l. 310 --><p class='noindent'><span class='likeparagraphHead' id='example-print-the-html-code'><a id='x1-26000'></a>Example: Print the HTML Code</span>
+ 
+</p><!-- l. 310 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-10'>
+function postprocess_dom(dom)
+  print(dom:serialize())
+  return dom
+end
+</pre>
+<!-- l. 317 --><p class='nopar'>
+</p><!-- l. 320 --><p class='indent'>   This example is useful in that it allows you to view the DOM serialized back
+into HTML. You can see all the elements that were transferred from the original
+HTML document after being processed by Rdrview and the functions of
+Rmodepdf. It is important to return the DOM at the end of the function, this
+ensures that any modifications made to the DOM are preserved and applied to
+the final document.
+</p><!-- l. 327 --><p class='indent'>   Here’s a slightly more complex example. Let’s assume that Rdrview did not
+remove a menu that might look like this:
+<a id='x1-26001r22'></a>
+</p>
+<!-- l. 332 --><p class='noindent'><span class='likeparagraphHead' id='example-remove-html-elements'><a id='x1-27000'></a>Example: Remove HTML Elements</span>
+ 
+</p><!-- l. 332 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-11'>
+&lt;div class="menu"&gt;
+... menu contents ...
+&lt;/div&gt;
+</pre>
+<!-- l. 336 --><p class='nopar'>
+</p><!-- l. 340 --><p class='indent'>   We can use the <span class='ec-lmtt-10x-x-105'>postprocess_dom </span>function to remove this menu:
+<a id='x1-27001r23'></a>
+</p>
+<!-- l. 344 --><p class='noindent'><span class='likeparagraphHead' id='example-remove-html-elements1'><a id='x1-28000'></a>Example: Remove HTML Elements</span>
+ 
+</p><!-- l. 344 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-12'>
+function postprocess_dom(dom)
+  -- Find the menu using a CSS selector
+  local menu = dom:query_selector(".menu")
+
+  -- Iterate over the menu elements
+  -- and remove each one
+  for _, el in ipairs(menu) do
+    el:remove_node()
+  end
+
+  -- Return the modified DOM
+  return dom
+end
+</pre>
+<!-- l. 358 --><p class='nopar'>
+</p><!-- l. 361 --><p class='indent'>   In this example:
+</p><!-- l. 364 --><p class='indent'>     
+</p>
+<dl class='enumerate'><dt class='enumerate'>  
+1. 
+</dt><dd class='enumerate'>
+<!-- l. 364 --><p class='noindent'>We use the <span class='ec-lmtt-10x-x-105'>query_selector </span>method to find all elements with the class
+<span class='ec-lmtt-10x-x-105'>menu</span>.
+</p>     
+</dd>
+<dt class='enumerate'>
+2. 
+</dt><dd class='enumerate'>
+<!-- l. 366 --><p class='noindent'>Iterate over each element retrieved in the previous step using a <span class='ec-lmtt-10x-x-105'>for</span>
+loop.
+</p>     
+</dd>
+<dt class='enumerate'>
+3. 
+</dt><dd class='enumerate'>
+<!-- l. 368 --><p class='noindent'>Remove each menu element using the <span class='ec-lmtt-10x-x-105'>remove_node </span>method.
+</p>     
+</dd>
+<dt class='enumerate'>
+4. 
+</dt><dd class='enumerate'>
+<!-- l. 369 --><p class='noindent'>Return the modified DOM at the end of the function.</p></dd></dl>
+<!-- l. 372 --><p class='indent'>   This ensures that any remaining menus are removed from the final
+document.
+                                                                  
+
+                                                                  
+<a id='x1-28005r24'></a>
+</p>
+<!-- l. 390 --><p class='noindent'><span class='likeparagraphHead' id='other-useful-luaxml-dom-functions'><a id='x1-29000'></a>Other Useful LuaXML DOM Functions</span>
+ 
+</p><!-- l. 390 --><p class='noindent'>
+</p><!-- l. 391 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmtk-10x-x-105'>el:get_attribute</span> 
+</dt><dd class='description'>
+<!-- l. 391 --><p class='noindent'>get element attribute
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>el:set_attribute</span> 
+</dt><dd class='description'>
+<!-- l. 392 --><p class='noindent'>set element text
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>el:get_text</span> 
+</dt><dd class='description'>
+<!-- l. 393 --><p class='noindent'>get text content of the element
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>el:get_element_name</span> 
+</dt><dd class='description'>
+<!-- l. 394 --><p class='noindent'>get element name
+</p>     
+</dd></dl>
+<!-- l. 400 --><p class='indent'>   There are many more functions: </p>
+<ul class='itemize1'>     
+<li class='itemize'>for traversing the element tree
+</li>
+<li class='itemize'>for creating new elements</li></ul>
+<!-- l. 409 --><p class='indent'>   See the LuaXML documentation for the API docs and examples of
+use.
+                                                                  
+
+                                                                  
+</p><!-- l. 412 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='transformation-rules'><span class='titlemark'>6   </span> <a id='x1-300006'></a>Transformation rules</h3>
+<!-- l. 415 --><p class='noindent'>LuaXML allows us to create rules for transforming the DOM into various
+formats. Rmodepdf includes rules for transforming basic HTML elements into
+LaTeX.
+<a id='x1-30001r25'></a>
+</p>
+<!-- l. 422 --><p class='noindent'><span class='likeparagraphHead' id='luaxml-dom-tranformations'><a id='x1-31000'></a>LuaXML DOM Tranformations</span>
+ 
+</p><!-- l. 422 --><p class='noindent'>
+</p><!-- l. 423 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmtk-10x-x-105'>htmlprocess.add_action</span> 
+</dt><dd class='description'>
+<!-- l. 423 --><p class='noindent'>add a new rule
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>htmlprocess.add_custom_action</span> 
+</dt><dd class='description'>
+<!-- l. 424 --><p class='noindent'>process element using Lua
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>htmlprocess.reset_actions</span> 
+</dt><dd class='description'>
+<!-- l. 425 --><p class='noindent'>remove rules for the given selector
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>%s</span> 
+</dt><dd class='description'>  
+<!-- l. 426 --><p class='noindent'>insert transformed contents of the element
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmtk-10x-x-105'>@{&lt;attribute name&gt;}</span> 
+</dt><dd class='description'>
+<!-- l. 427 --><p class='noindent'>insert value of an attribute</p></dd></dl>
+<!-- l. 431 --><p class='indent'>   In the configuration file, the variable <span class='ec-lmtt-10x-x-105'>htmlprocess </span>contains an object with
+rules for converting HTML elements. It provides two main functions:
+<span class='ec-lmtt-10x-x-105'>htmlprocess.reset_actions</span>, which clears all rules for a given selector, and
+<span class='ec-lmtt-10x-x-105'>htmlprocess.add_action</span>, which adds new rules.
+</p><!-- l. 436 --><p class='indent'>   A more powerful tool is the <span class='obeylines-h'><code class='verb'>htmlprocess.add_custom_action</code></span> function,
+which enables processing of elements in Lua. For an example of its usage, consult
+the LuaXML documentation.
+                                                                  
+
+                                                                  
+</p><!-- l. 440 --><p class='indent'>   The following code displays some basic usage of the transformation
+library:
+<a id='x1-31001r26'></a>
+</p>
+<!-- l. 444 --><p class='noindent'><span class='likeparagraphHead' id='rules-example'><a id='x1-32000'></a>Rules Example</span>
+ 
+</p><!-- l. 444 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-13'>
+htmlprocess.reset_actions("figure")
+htmlprocess.reset_actions("img")
+htmlprocess.add_action("img",
+  [[\includegraphics[max width=\textwidth]{@{src}}]])
+htmlprocess.add_action("figure", "\n\n \\noindent %s")
+</pre>
+<!-- l. 451 --><p class='nopar'>
+</p><!-- l. 454 --><p class='indent'>   In this example, we change the default formatting for the <span class='obeylines-h'><code class='verb'>&lt;figure&gt;</code></span> element
+and include the text that is contained inside using the <span class='obeylines-h'><code class='verb'>%s</code></span> instruction. For the
+<span class='obeylines-h'><code class='verb'>&lt;img&gt;</code></span> element, we use the <span class='obeylines-h'><code class='verb'>src</code></span> attribute to get the image file name. As this
+element cannot contain any child elements, we don’t need to use <span class='obeylines-h'><code class='verb'>%s</code></span> in this
+action.
+</p><!-- l. 459 --><p class='indent'>   Using Lua’s string syntax <span class='obeylines-h'><code class='verb'>[[ ... ]]</code></span> allows for easy insertion of
+LaTeX commands without the need for backslash doubling. When using regular
+quotes, as you can see in the rule declaration for <span class='obeylines-h'><code class='verb'>figure</code></span>, backslashes must be
+doubled.
+</p><!-- l. 464 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='templates'><span class='titlemark'>7   </span> <a id='x1-330007'></a>Templates</h3>
+<p><a id='x1-33001r27'></a>
+</p><!-- l. 468 --><p class='noindent'><span class='likeparagraphHead' id='template-basics'><a id='x1-34000'></a>Template Basics</span>
+ 
+</p><!-- l. 468 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>Templates can access variables from the configuration.
+</li>
+<li class='itemize'>Simple custom syntax</li></ul>
+                                                                  
+
+                                                                  
+<pre class='verbatim' id='verbatim-14'>
+# require template
+$ rmodepdf -t mytemplate.tex &lt;url&gt;
+</pre>
+<!-- l. 477 --><p class='nopar'>
+<a id='x1-34001r28'></a>
+</p>
+<!-- l. 484 --><p class='noindent'><span class='likeparagraphHead' id='template-syntax'><a id='x1-35000'></a>Template Syntax</span>
+ 
+</p><!-- l. 484 --><p class='noindent'>
+</p><!-- l. 485 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmbx-10x-x-105'>Variable Printing</span> 
+</dt><dd class='description'>
+<!-- l. 485 --><p class='noindent'><span class='obeylines-h'><code class='verb'>@{variablename}</code></span>:  Prints  a  variable  from  the  <span class='obeylines-h'><code class='verb'>config</code></span> table  or  its
+sub-tables.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>Loops</span> 
+</dt><dd class='description'>
+<!-- l. 487 --><p class='noindent'><span class='obeylines-h'><code class='verb'>_{variablename}loop code/{separator}</code></span>:
+Iterates over array variables, using <span class='obeylines-h'><code class='verb'>%s</code></span> placeholders or accessing fields
+directly.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>Conditions</span> 
+</dt><dd class='description'>
+<!-- l. 489 --><p class='noindent'><span class='obeylines-h'><code class='verb'>?{variablename}{true}{false}</code></span>:  Evaluates  a  condition  to  insert
+content based on the presence of variables.</p></dd></dl>
+<p><a id='x1-35001r29'></a>
+</p><!-- l. 496 --><p class='noindent'><span class='likeparagraphHead' id='sample-template-snippet'><a id='x1-36000'></a>Sample Template Snippet</span>
+ 
+</p><!-- l. 496 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-15'>
+% loop over languages
+\usepackage[_{document.languages}%s/{,}]{babel}
+% use geometry settings
+\usepackage[@{document.geometry}]{geometry}
+@{document.preamble_extras}
+\begin{document}
+% loop over documents
+_{pages}
+\selectlanguage{@{language}}
+% conditionaly print title
+?{title}{Title: @{title}}\par}{}
+% document contents
+@{content}
+/{\clearpage}
+\end{document}
+</pre>
+<!-- l. 512 --><p class='nopar'>
+</p><!-- l. 515 --><p class='noindent'>Although this example is not complete, it demonstrates the available syntax in
+templates. Note that when processing an array, we must distinguish whether it
+contains strings or tables. Strings are displayed using <span class='obeylines-h'><code class='verb'>%s</code></span>. If it is a table, its
+elements become active variables and can be displayed using <span class='obeylines-h'><code class='verb'>@{variablename}</code></span>.
+You can see the difference in processing the array <span class='obeylines-h'><code class='verb'>document.languages</code></span>, which
+contains languages as strings, and <span class='obeylines-h'><code class='verb'>pages</code></span>, which contains tables with metadata
+from processed pages.
+</p><!-- l. 525 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='responsive-design-in-latex'><span class='titlemark'>8   </span> <a id='x1-370008'></a>Responsive Design in LaTeX</h3>
+<!-- l. 528 --><p class='noindent'>So far, we have explored the features of Rmodepdf and LuaXML. Now, we will
+focus on additional packages that can be used independently to facilitate
+automated typesetting of documents.
+<a id='x1-37001r30'></a>
+</p>
+                                                                  
+
+                                                                  
+<!-- l. 540 --><p class='noindent'><span class='likeparagraphHead' id='what-is-responsive-design'><a id='x1-38000'></a>What is Responsive Design</span>
+ 
+</p><!-- l. 540 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>flexible structure - adjusting the size of elements on the page to the
+display device
+</li>
+<li class='itemize'>media queries - rules applied based on the properties of the display
+device (screen size, type of display, etc.)</li></ul>
+<!-- l. 545 --><p class='indent'>   Thanks to these features, the same page code can be well displayed both on a
+large monitor and on mobile devices.
+<a id='x1-38001r31'></a>
+</p>
+<!-- l. 550 --><p class='noindent'><span class='likeparagraphHead' id='page-example-on-a-large-monitor'><a id='x1-39000'></a>Page Example on a Large Monitor</span>
+ 
+</p><!-- l. 550 --><p class='noindent'>
+</p>
+<div class='center'>
+<!-- l. 550 --><p class='noindent'>
+</p><!-- l. 551 --><p class='noindent'><img alt='PIC' height='445' src='img/pedf-web-big.png' width='700' /></p></div>
+<p><a id='x1-39001r32'></a>
+</p><!-- l. 557 --><p class='noindent'><span class='likeparagraphHead' id='page-example-on-a-small-screen'><a id='x1-40000'></a>Page Example on a Small Screen</span>
+ 
+</p><!-- l. 557 --><p class='noindent'>
+</p>
+                                                                  
+
+                                                                  
+<div class='center'>
+<!-- l. 557 --><p class='noindent'>
+</p><!-- l. 558 --><p class='noindent'><img alt='PIC' height='445' src='img/pedf-web-small.png' width='210' /></p></div>
+<p><a id='x1-40001r33'></a>
+</p><!-- l. 564 --><p class='noindent'><span class='likeparagraphHead' id='the-responsive-package'><a id='x1-41000'></a>The <span class='ec-lmtt-10x-x-105'>responsive </span>Package</span>
+ 
+</p><!-- l. 564 --><p class='noindent'>
+</p><!-- l. 565 --><p class='indent'>   A package inspired by responsive design methods for web pages </p>
+<ul class='itemize1'>     
+<li class='itemize'>adjusting font size to match the display size
+</li>
+<li class='itemize'>sets basic document dimensions to match the new font size
+</li>
+<li class='itemize'>typographic scale for font sizes
+</li>
+<li class='itemize'>media queries</li></ul>
+<!-- l. 575 --><p class='indent'>   <a class='url' href='https://ctan.org/pkg/responsive'><span class='ec-lmtt-10x-x-105'>https://ctan.org/pkg/responsive</span></a>
+</p><!-- l. 580 --><p class='indent'>   Various sizes of spaces and other elements depend on the font size, so the
+Responsive package adjusts them with each font size change to match the new
+size.
+<a id='x1-41001r34'></a>
+</p>
+<!-- l. 588 --><p class='noindent'><span class='likeparagraphHead' id='setting-font-size-based-on-display-size'><a id='x1-42000'></a>Setting Font Size Based on Display Size</span>
+ 
+</p><!-- l. 588 --><p class='noindent'>
+</p><!-- l. 589 --><p class='indent'>   Font size can be set using the command <span class='obeylines-h'><code class='verb'>\setsizes{number of characters per line}</code></span>.
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-16'>
+\begin{minipage}{5cm}
+\setsizes{25}
+
+\lipsum[1]
+
+\end{minipage}
+</pre>
+<!-- l. 600 --><p class='nopar'>
+</p><!-- l. 617 --><p class='indent'>   <img alt='   Lorem   ipsum   dolor  sit
+amet,  consectetuer  adipisc-
+ing  elit.    Ut  purus  elit,
+vestibulum  ut, placerat ac,
+adipiscing vitae, felis.
+' src='responsive_handout0x.png' />
+<a id='x1-42001r35'></a>
+</p>
+<!-- l. 625 --><p class='noindent'><span class='likeparagraphHead' id='difference-in-font-size-based-on-number-of-characters'><a id='x1-43000'></a>Difference in Font Size Based on Number of Characters</span>
+ 
+</p><!-- l. 625 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-17'>
+\setsizes{55}
+</pre>
+<!-- l. 629 --><p class='nopar'>
+</p><!-- l. 637 --><p class='indent'>   <img alt='adLiopirescmingip esulimt. Udtol poru sruits eamliet,t, vescotnibseulctuetmu uert,
+ptularce draicttu amc,gr adaivipidascinmgau vritisa.e, N famelisa.rc Cuu lribaberi-o,
+nonummy eget, consectetuer id, vulputate a,
+mleangnteasq.u Deonhaebcitvanehticmuolarbaiutguriseteiquuenseqeunee.ctuPesl-et
+nMetausuriset mutalleeso.uadCara fsam veivse arrca t mureptuiss e rghesontacsus.
+seumlt.ric Neus.llaPethalseceltulussv euestteiblluluusm siutrn aamfetri tngoilrtlaor
+grina,vi pdreati pulamce qrautis., I vintveergerar a scap,ie nunn ec.st,P iraaceuselisnt
+eget sem vel leo ultrices bibendum. Aenean
+fapuulcivibunsar. a Mto,r mbiollisdoloacr, n nuullllaa,. m Caulerasbuaitdura a euuc-,
+toDruseism npibehrn muill,a. co Dnoguneec evua,ri acuscoumrsciaenge etleriifesunsd.,
+saorgcititidisgn quisiss,im diarumtr.umD.uis eget orci sit amet
+' src='responsive_handout1x.png' />
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-18'>
+\setsizes{25}
+</pre>
+<!-- l. 642 --><p class='nopar'>
+</p><!-- l. 657 --><p class='indent'>   <img alt='   Lorem   ipsum   dolor  sit
+amet,  consectetuer  adipisc-
+ing  elit.    Ut  purus  elit,
+vestibulum  ut, placerat ac,
+adipiscing vitae, felis.
+' src='responsive_handout2x.png' />
+<a id='x1-43001r36'></a>
+</p>
+<!-- l. 664 --><p class='noindent'><span class='likeparagraphHead' id='configuration1'><a id='x1-44000'></a>Configuration</span>
+ 
+</p><!-- l. 664 --><p class='noindent'>
+</p><!-- l. 664 --><p class='indent'>   Options can be set when calling the package or later using the command
+<span class='obeylines-h'><code class='verb'>\ResponsiveSetup</code></span>.
+</p><!-- l. 668 --><p class='indent'>   Important options:
+</p><!-- l. 671 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmbx-10x-x-105'>noautomatic</span> 
+</dt><dd class='description'>
+<!-- l. 671 --><p class='noindent'>do not set font size automatically at the beginning of the document
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>characters</span> 
+</dt><dd class='description'>
+<!-- l. 672 --><p class='noindent'>number of characters when automatically setting the font size
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>scale</span> 
+</dt><dd class='description'>
+<!-- l. 673 --><p class='noindent'>typographic scale used for font sizes
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>lineratio</span> 
+</dt><dd class='description'>
+<!-- l. 674 --><p class='noindent'>ratio used when calculating line height</p></dd></dl>
+                                                                  
+
+                                                                  
+<!-- l. 679 --><p class='indent'>   When the Responsive package changes the base font size, it automatically
+adjusts the sizes used for <span class='obeylines-h'><code class='verb'>\large</code></span>, <span class='obeylines-h'><code class='verb'>\small</code></span>, and other commands, as well as line
+height and other fundamental dimensions.
+<a id='x1-44001r37'></a>
+</p>
+<!-- l. 686 --><p class='noindent'><span class='likeparagraphHead' id='line-height'><a id='x1-45000'></a>Line Height</span>
+ 
+</p><!-- l. 686 --><p class='noindent'>
+</p><!-- l. 686 --><p class='indent'>   Line height can be influenced by the <span class='ec-lmtt-10x-x-105'>lineratio </span>option. The higher its value,
+the smaller the distance between lines.
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-19'>
+\ResponsiveSetup{lineratio=38}
+</pre>
+<!-- l. 693 --><p class='nopar'>
+</p><!-- l. 702 --><p class='indent'>   <img alt='elscLit.inor Ugemt viptaipsure,uu fmseelidolis.lot,rveCusistrataibbmulituetumr,c donuticts,uecplmteac gtuerraeratvidadaaipc, misaacidiurngpiis-.
+Npuamtatareacu,limbeagrona,.noDnuonmecmvyehegicetul,acoaunsgueceteeutunereqiud,e.vPulel--
+leetntmesaquleesu hadabaitfaanmtes maorcbitu trprisistiequgeest seasn.ec Mtuausri ets nutetleuso.
+Cstamraibesultvium tovertrrurorana gmefraturinvisgdarhill poalancultceusrirascet.ems.. PIn Nhateusegellllraus saetepileuenctte eusllustvs,esit ia--
+cuselimsivn,elplereoutiltumriqceusbisib,venivderumra.aAc,enneunanc.fa Puracibesuens.tMegoretbi
+doCriloursurabs.nuit Dlluruia,asmucnialtobhesrmuasei,damcepeonu,rgupnueulllaeuvi.,na Dacraoncut,ecmmvsaoarnlliiuelsaseic,orfencinduleg,slaeta.-
+girutttrisumqu.is,diam.Duisegetorcisitametorcidignissim
+' src='responsive_handout3x.png' />
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-20'>
+\ResponsiveSetup{lineratio=34}
+</pre>
+<!-- l. 707 --><p class='nopar'>
+</p><!-- l. 716 --><p class='indent'>   <img alt='elLit.or Uemtpipsuruumsedolilot,rvesisttaibmuletum,conuts,ecplteactuereratadaipc,isacidingpi-
+scNpuinamtgat viareatacu,e,lim fbeagelironas.,.noDCunuonramecbmvituyehregic detulict,aucoaumnsgu gecerateeuvidtunaereq miuad,e.urvPisulel.--
+leetntmesaquleesu hadabaitfaanmtes maorcbitu trprisistiequgeest seasn.ec Mtuausri ets nutetleuso.
+Cstraibsulviumverruranamefturinsgrhilloancultusrisceems.. P Nhausellllauseteleuctteuslluvsesit-
+amcuelitsi ton,rtporre gtiraumviqdau pisla,vceivraert.raaInc,tengeunrc. sa Ppiraenes eenstt,eg iaet-
+sedomlovrelnulelloua,ltmrialceessbuaibdaenedu,ump.ulAviennaeraant,famuociblliusas.c,Mnorulblai.
+Criursuabs.it Duruiasucnitobhrmsei,mcpeonrgunuellaeu., Daconcuecmvsaarniuelseiorfecindeg,seta-
+girutttrisumqu.is,diam.Duisegetorcisitametorcidignissim
+' src='responsive_handout4x.png' />
+</p><!-- l. 720 --><p class='indent'>   <a class='url' href='https://www.smashingmagazine.com/2020/07/css-techniques-legibility/'><span class='ec-lmtt-10x-x-105'>https://www.smashingmagazine.com/2020/07/css-techniques-legibility/</span></a>
+<a id='x1-45001r38'></a>
+</p>
+<!-- l. 819 --><p class='noindent'><span class='likeparagraphHead' id='css-media-query-example'><a id='x1-46000'></a>CSS Media Query Example</span>
+ 
+</p><!-- l. 819 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-21'>
+body {
+  color: green;
+}
+@media screen and (max-width: 600px) {
+    body {
+      color: blue;
+    }
+}
+</pre>
+<!-- l. 828 --><p class='nopar'>
+</p><!-- l. 831 --><p class='indent'>   This example sets a different text color for documents on screens with a
+maximum width of 600 pixels.
+<a id='x1-46001r39'></a>
+</p>
+<!-- l. 837 --><p class='noindent'><span class='likeparagraphHead' id='media-queries-in-latex'><a id='x1-47000'></a>Media Queries in LaTeX</span>
+ 
+</p><!-- l. 837 --><p class='noindent'>
+</p><!-- l. 837 --><p class='indent'>   Using the <span class='obeylines-h'><code class='verb'>\mediaquery</code></span> command, we can test various properties:
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>physical page size
+</li>
+<li class='itemize'>line length
+</li>
+<li class='itemize'>page orientation</li></ul>
+<!-- l. 845 --><p class='indent'>   Additional tests can be easily added.
+<a id='x1-47001r40'></a>
+                                                                  
+
+                                                                  
+</p>
+<!-- l. 853 --><p class='noindent'><span class='likeparagraphHead' id='media-query-example'><a id='x1-48000'></a>Media Query Example</span>
+ 
+</p><!-- l. 853 --><p class='noindent'>
+</p><!-- l. 854 --><p class='indent'>   This example displays fewer characters if the text width is less or equal to
+4 cm.
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-22'>
+\mediaquery{max-textwidth=4cm}
+{\setsizes{45}}{\setsizes{60}}
+</pre>
+<!-- l. 859 --><p class='nopar'>
+</p><!-- l. 871 --><p class='indent'>   <img alt='piLscoinregm e iplits.um Utd polurorus siteli at,m vetes,ti cobunsluecmtetutue,r pl adaci-e-
+ragrta avic,da amdiapiuscrisin.g N vamitaea,rc feulislib.e Crou,ranobnituumrm dyicetugmet,
+cocunlaseactuetguueereidu,nevquluepu.ta Petlleena,temsqaugneaha.Dboitnanectvmehori-bi
+trtuisrptiiquse egseesntaecs.tusMetaunreistu ustet lemo.aleCrsuaadsa vifveamrreas mace-
+tufrsinrhgiollancuulstrseicems..P Nuhlalaseellutlsecetuustevlluesstisbuitluammeutrtonar-
+toprregrtiuavmidqaupisla,vceivraetrr.Ianacte,genurnsac.pi Penraeestse,ntiaecugelitsseinm,
+vedolloleronulultrlaice,smbalibesenuadduma.eu A,enpuelvaninfaaurcatib,usm.ol Mlisorabci,
+nurilusla.orcCuiregabetitrurisuasu.ct Duorissnemibphemri,nucllona.g Dueoenu,ecavcca-u-
+msaneleifend,sagittisquis,diam. Duisegetorci
+sitametorcidignissim rutrum.
+' src='responsive_handout5x.png' />
+</p><!-- l. 883 --><p class='indent'>   <img alt=' Lorem ipsum dolor sit amet, con-
+seelcitte,tu veerstibaduipluimscuintg,p ellitac.eraUttac pu,r adusi-
+pgriscainvigdavmitaaeu,rifes.lis N.a Cmuararcbiutulirbderico,tunmo-
+ntaumtmey a,e mgaetg,ncoa.nseDctoneteucer veihd,icvulualp au-u-
+gue eu neque. Pellentesque habitant
+mmoarblesiu tradisati fquaem sesen aecct tusurpetis neteguessta ets.
+Mrhaourncisu ustse lmeo.. NulClaraest vleivcterusravemstetibusu-
+lueumuterllunasfsriitngaimllaetutltorrtoicresg.ra Phvaidseallplusa-
+ceprreatti.um Intquegiser,visavpierenraaesc,t,n iuacncu.lis P irane-,
+sednumt. egetAenseeman velfa lueocibuuls.tricMeso brbibie dn-o-
+lomronlliulsla a,c,m nalueslluaa.daCeuu,rapbiutulvrin aaruacttor,
+sempernulla. Donecvariusorcieget
+ricusums.sanDuielsei nfeibndh, m saig,citotingsu queis e,u, di aac-m.
+Druuitsruegme.torcisitametorcidignissim
+' src='responsive_handout6x.png' />
+<a id='x1-48001r41'></a>
+</p>
+<!-- l. 891 --><p class='noindent'><span class='likeparagraphHead' id='do-media-queries-make-sense-in-latex'><a id='x1-49000'></a>Do Media Queries Make Sense in LaTeX?</span>
+ 
+</p><!-- l. 891 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+                                                                  
+
+                                                                  
+<li class='itemize'>possibly in universal packages
+</li>
+<li class='itemize'>using different templates for different sizes is easier</li></ul>
+<!-- l. 897 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='the-linebreaker-package'><span class='titlemark'>9   </span> <a id='x1-500009'></a>The <span class='ec-lmtt-10x-x-105'>linebreaker </span>Package</h3>
+<p><a id='x1-50001r42'></a>
+</p><!-- l. 925 --><p class='noindent'><span class='likeparagraphHead' id='the-linebreaker-package1'><a id='x1-51000'></a>The <span class='ec-lmtt-10x-x-105'>linebreaker </span>Package</span>
+ 
+</p><!-- l. 925 --><p class='noindent'>
+</p><!-- l. 925 --><p class='indent'>   Prevents the occurrence of overfull lines </p>
+<ul class='itemize1'>     
+<li class='itemize'>Affects only the typesetting of paragraphs where such a line occurs
+</li>
+<li class='itemize'>If it detects an overfull line in a paragraph, it retypesets it with larger
+values for <span class='obeylines-h'><code class='verb'>tolerance</code></span> and <span class='obeylines-h'><code class='verb'>emergencystretch</code></span>.</li></ul>
+<!-- l. 934 --><p class='indent'>   <a class='url' href='https://ctan.org/pkg/linebreaker'><span class='ec-lmtt-10x-x-105'>https://ctan.org/pkg/linebreaker</span></a>
+<a id='x1-51001r43'></a>
+</p>
+<!-- l. 939 --><p class='noindent'><span class='likeparagraphHead' id='example'><a id='x1-52000'></a>Example</span>
+ 
+</p><!-- l. 939 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p><!-- l. 945 --><p class='noindent'>   The example document given
+below creates two pages by using Lua
+code  alone.  You  will  learn  how
+to access TeX’s boxes and counters
+from the Lua side, shipout a page into
+the  PDF  file,  create  horizontal
+and vertical boxes (hbox and vbox),
+create new nodes and manipulate the
+nodes links structure.
+<strong>Without Linebreaker</strong>           The example document given
+                                    below creates two pages by using Lua
+                                    code  alone.  You  will  learn  how
+                                    to access TeX’s boxes and counters
+                                    from the Lua side, shipout a page into
+                                    the  PDF  file,  create  horizontal
+and vertical boxes (hbox and vbox),
+create new nodes and manipulate the
+nodes links structure.
+<strong>With Linebreaker</strong>
+<a id='x1-52001r44'></a>
+</p>
+<!-- l. 950 --><p class='noindent'><span class='likeparagraphHead' id='configuration2'><a id='x1-53000'></a>Configuration</span>
+ 
+</p><!-- l. 950 --><p class='noindent'>
+</p><!-- l. 950 --><p class='indent'>   Linebreaker can be configured using the <span class='obeylines-h'><code class='verb'>\linebreakersetup</code></span> command:
+</p><!-- l. 955 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmbx-10x-x-105'>maxcycles</span> 
+</dt><dd class='description'>
+<!-- l. 955 --><p class='noindent'>number of attempts to retypeset a paragraph
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>maxemergencystretch</span> 
+</dt><dd class='description'>
+<!-- l. 956 --><p class='noindent'>maximum value of <span class='obeylines-h'><code class='verb'>\emergencystretch</code></span>
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>maxtolerance</span> 
+</dt><dd class='description'>
+<!-- l. 957 --><p class='noindent'>maximum value of <span class='obeylines-h'><code class='verb'>tolerance</code></span></p></dd></dl>
+                                                                  
+
+                                                                  
+<pre class='verbatim' id='verbatim-23'>
+\linebreakersetup{
+maxtolerance = 90,         % default 9999
+maxemergencystretch = 1em, % default 3em
+maxcycles = 4              % default 30
+}
+</pre>
+<!-- l. 968 --><p class='nopar'>
+</p><!-- l. 972 --><p class='noindent'>When Linebreaker detects paragraph overflow, it attempts to typeset it
+again with increasing <span class='obeylines-h'><code class='verb'>\tolerance</code></span> and <span class='obeylines-h'><code class='verb'>\emergencystretch</code></span> values. These
+values are incremented by a specified number of steps until they reach the
+maximum values configured in Linebreaker. If a value is found where the
+paragraph no longer overflows, processing stops, and those values are
+used.
+</p><!-- l. 978 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='conclusion'><span class='titlemark'>10   </span> <a id='x1-5400010'></a>Conclusion</h3>
+<p><a id='x1-54001r45'></a>
+</p><!-- l. 983 --><p class='noindent'><span class='likeparagraphHead' id='rmodepdf-status'><a id='x1-55000'></a>Rmodepdf status</span>
+ 
+</p><!-- l. 983 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>It is still work in progress, so features can change.
+</li>
+<li class='itemize'>Even if it isn’t useful to you, it led to the development of the HTML
+parser for LuaXML, Linebreaker, and Responsive packages, each of
+which can be useful independently.</li></ul>
+<p><a id='x1-55001r46'></a>
+                                                                  
+
+                                                                  
+</p><!-- l. 993 --><p class='noindent'><span class='likeparagraphHead' id='other-useful-packages-for-automatic-typesetting'><a id='x1-56000'></a>Other useful packages for automatic typesetting</span>
+ 
+</p><!-- l. 993 --><p class='noindent'>
+</p><!-- l. 994 --><p class='indent'>     
+</p>
+<dl class='description'><dt class='description'>
+<span class='ec-lmbx-10x-x-105'>lua-widow-control</span> 
+</dt><dd class='description'>
+<!-- l. 994 --><p class='noindent'>prevents widows and orphans.
+</p>     
+</dd>
+<dt class='description'>
+<span class='ec-lmbx-10x-x-105'>luavlna</span> 
+</dt><dd class='description'>
+<!-- l. 995 --><p class='noindent'>prevents single chars at end of lines for Czech and Slovak, prevents
+line breaks in SI units and academic titles.</p></dd></dl>
+<p><a id='x1-56001r47'></a>
+</p><!-- l. 1005 --><p class='noindent'>Thank you for your attention!
+</p><!-- l. 1007 --><p class='indent'>   <a class='url' href='michal.h21@gmail.com'><span class='ec-lmtt-10x-x-105'>michal.h21@gmail.com</span></a>
+</p><!-- l. 1009 --><p class='indent'>   <a class='url' href='www.kodymirus.cz'><span class='ec-lmtt-10x-x-105'>www.kodymirus.cz</span></a>
+</p>   
+ 
+</body> 
+</html>
