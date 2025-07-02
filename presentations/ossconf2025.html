@@ -64,8 +64,8 @@ aktuální.</span>
 <br />   <span class='sectionToc'>3 <a href='#vyuziti-sablon-na-githubu' id='QQ2-1-21'>Využití šablon na GitHubu</a></span>
 <br />   <span class='sectionToc'>4 <a href='#sablona-pro-webove-verze-knih' id='QQ2-1-25'>Šablona pro webové verze knih</a></span>
 <br />   <span class='sectionToc'>5 <a href='#sablona-pro-blogy' id='QQ2-1-35'>Šablona pro blogy</a></span>
-<br />   <span class='sectionToc'>6 <a href='#sablona-pro-prezentace' id='QQ2-1-38'>Šablona pro prezentace</a></span>
-<br />   <span class='sectionToc'>7 <a href='#zaver' id='QQ2-1-48'>Závěr</a></span>
+<br />   <span class='sectionToc'>6 <a href='#sablona-pro-prezentace' id='QQ2-1-44'>Šablona pro prezentace</a></span>
+<br />   <span class='sectionToc'>7 <a href='#zaver' id='QQ2-1-54'>Závěr</a></span>
 </div>
 <p><a id='x1-1001r1'></a>
 <!-- l. 38 --></p><p class='noindent'><span class='likeparagraphHead' id='co-si-ukazeme'><a id='x1-2000'></a>Co si ukážeme?</span>
@@ -202,7 +202,7 @@ $ tex4ebook -f epub3 soubor.tex
                                                                   
 </p>   
 <pre class='verbatim' id='verbatim-5'>
-\Preamble{xhtml}
+\Preamble{xhtml,mathml,mathjax}
 \Configure{textit}{\HCode{&lt;i&gt;}\NoFonts}{\EndNoFonts\HCode{&lt;/i&gt;}}
 \begin{document}
 \EndPreamble
@@ -380,73 +380,74 @@ process)</span>.
 <pre class='verbatim' id='verbatim-14'>
 Make:htlatex {}
 Make:xindex {}
+Make:xindex {idxfile = "names.idx"}
 Make:autohtlatex {}
 </pre>
-<!-- l. 273 --><p class='nopar'>
-</p><!-- l. 278 --><p class='indent'>   V build souborech můžeme také volat další programy, které se mají spustit. V
+<!-- l. 274 --><p class='nopar'>
+</p><!-- l. 279 --><p class='indent'>   V build souborech můžeme také volat další programy, které se mají spustit. V
 <span class='ec-lmtt-10'>make4ht </span>jsou definovány různé funkce, které je spouští. Například <span class='ec-lmtt-10'>Make:htlatex</span>
 spustí jednu kompilaci pomocí LaTeXu, <span class='ec-lmtt-10'>Make:xindex </span>spustí program <span class='ec-lmtt-10'>xindex </span>a
 <span class='ec-lmtt-10'>Make:autohtlatex </span>spustí kompilaci LaTeXem s automatickou detekcí počtu
 kompilací nutných k tomu, aby správně fungovaly křížové odkazy nebo
 tabulky. Ty totiž potřebují více než jednu kompilaci, k tomu aby se správně
 vytvořily.
-</p><!-- l. 287 --><p class='indent'>   GitHub, ale i další repozitáře, jako GitLab nebo Bitbucket, umožňuje spouštět
+</p><!-- l. 286 --><p class='indent'>   Ve složených závorkách můžeme umístit různé parametry pro daný příkaz.
+Například <span class='obeylines-h'><code class='verb'>Make:xindex {}</code></span> bez parametrů zpracuje <span class='ec-lmtt-10'>.idx </span>soubor se stejným
+základem, jako je název výstupního souboru. Pokud v dokumentu použijeme více
+rejstříků, například pomocí balíčku <span class='ec-lmtt-10'>imakeidx</span>, můžeme jejich název specifikovat
+pomocí parametru <span class='ec-lmtt-10'>idxfile</span>.
+</p><!-- l. 296 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='automaticke-generovani-html-vystupu-pomoci-github-actions'><span class='titlemark'>2   </span> <a id='x1-130002'></a>Automatické generování HTML výstupu pomocí GitHub Actions</h3>
+<!-- l. 297 --><p class='noindent'>GitHub, ale i další repozitáře, jako GitLab nebo Bitbucket, umožňuje spouštět
 definované workflow (např. build, testy nebo deploy) v reakci na události
 v repozitáři (push, pull request apod.).
-</p><!-- l. 291 --><p class='indent'>   Tato funkce se nazývá <span class='ec-lmbx-10'>GitHub Actions </span>a dále si ukážeme, jak jí využít pro
+</p><!-- l. 301 --><p class='indent'>   Tato funkce se nazývá  <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> a dále si ukážeme, jak jí využít pro
 automatizovanou kompilaci dokumentů pomocí TeX4ht a jejich publikování na
 webu.
-</p><!-- l. 294 --><p class='indent'>   Šablony pro TeX4ht, které dále představím, jsou navrženy tak, aby
+</p><!-- l. 304 --><p class='indent'>   Šablony pro TeX4ht, které dále představím, jsou navrženy tak, aby
 fungovaly v rámci GitHub Actions. To znamená, že dokumenty mohou být
 automaticky zkompilovány a publikovány online pokaždé, když dojde ke změně
 v repozitáři. Tento přístup zajišťuje, že je webová verze dokumentu vždy
 aktuální.
-</p><!-- l. 301 --><p class='noindent'>
-</p>   
-<h3 class='sectionHead' id='automaticke-generovani-html-vystupu-pomoci-github-actions'><span class='titlemark'>2   </span> <a id='x1-130002'></a>Automatické generování HTML výstupu pomocí GitHub Actions</h3>
-<!-- l. 303 --><p class='noindent'>Tato část vysvětluje, jak se používají  <a href='https://docs.github.com/en/actions/writing-workflows/quickstart'>GitHub Actions</a> k automatickému
-generování a publikování HTML verze materiálů při každém pushnutí změn do
-větve <span class='ec-lmtt-10'>main</span>.
-</p><!-- l. 308 --><p class='indent'>   Výstup je vytvářen pomocí <span class='ec-lmtt-10'>make4ht </span>a publikován do větve <span class='ec-lmtt-10'>gh-pages</span>, což
-usnadňuje sdílení webové verze prezentace.
 <a id='x1-13001r11'></a>
 </p>
 <!-- l. 311 --><p class='noindent'><span class='likeparagraphHead' id='priklad-worflow-souboru'><a id='x1-14000'></a>Příklad worflow souboru</span>
  
-</p><!-- l. 311 --><p class='noindent'>
                                                                   
 
                                                                   
+</p><!-- l. 311 --><p class='noindent'>
 </p><!-- l. 312 --><p class='indent'>   <img alt='PIC' src='img/workflow.png' />
+</p><!-- l. 316 --><p class='indent'>   Workflow je definován v souboru <span class='ec-lmtt-10'>.github/workflows/main.yml</span>. Tento soubor
+můžete upravit pro přizpůsobení procesu sestavení, například změnou parametrů
+pro <span class='ec-lmtt-10'>make4ht</span>.
 <a id='x1-14001r12'></a>
 </p>
-<!-- l. 318 --><p class='noindent'><span class='likeparagraphHead' id='prehled-github-actions'><a id='x1-15000'></a>Přehled GitHub Actions</span>
+<!-- l. 320 --><p class='noindent'><span class='likeparagraphHead' id='prehled-github-actions'><a id='x1-15000'></a>Přehled GitHub Actions</span>
  
-</p><!-- l. 318 --><p class='noindent'>
-</p><!-- l. 319 --><p class='noindent'><span class='ec-lmbx-10'>Klíčové části workflow pro sestavení a publikování HTML:</span>
-</p><!-- l. 319 --><p class='noindent'>
+</p><!-- l. 320 --><p class='noindent'>
+</p><!-- l. 321 --><p class='noindent'><span class='ec-lmbx-10'>Klíčové části workflow pro sestavení a publikování HTML:</span>
+</p><!-- l. 321 --><p class='noindent'>
                                                                   
 
                                                                   
 </p>   
 <pre class='verbatim' id='verbatim-15'>
 
-    name: Spuštění make4ht
+  - name: Spuštění make4ht
     uses: xu-cheng/texlive-action/full@v1
     with:
       run: |
         make4ht -lj index -a debug -d out handout.tex
 
-    name: Publikování webových stránek
+  - name: Publikování webových stránek
     uses: peaceiris/actions-gh-pages@v3
     with:
       github_token: ${{ secrets.GITHUB_TOKEN }}
       publish_dir: ./out
 </pre>
-<!-- l. 334 --><p class='nopar'>
-</p><!-- l. 339 --><p class='indent'>   Workflow je definován v souboru <span class='ec-lmtt-10'>.github/workflows/main.yml</span>. Tento soubor
-můžete upravit pro přizpůsobení procesu sestavení, například změnou parametrů
-pro <span class='ec-lmtt-10'>make4ht</span>.
+<!-- l. 336 --><p class='nopar'>
 </p><!-- l. 342 --><p class='indent'>   Používají se dvě GitHub Actions:  <a href='https://github.com/xu-cheng/texlive-action'>xu-cheng/texlive-action</a> a  <a href='https://github.com/peaceiris/actions-gh-pages'>peaceiris/actions-gh-pages</a>.
 První umožňuje používat libovolný příkaz dostupný v TeX Live instalaci, jako
 <span class='ec-lmtt-10'>make4ht </span>nebo <span class='ec-lmtt-10'>lualatex</span>. Druhá publikuje obsah zadaného adresáře do větve
@@ -464,9 +465,6 @@ statického obsahu.
 <li class='itemize'>Zkompiluje <span class='ec-lmtt-10'>handout.tex </span>do HTML pomocí <span class='ec-lmtt-10'>make4ht</span>
 </li>
 <li class='itemize'>Publikuje výstup do větve <span class='ec-lmtt-10'>gh-pages</span></li></ul>
-                                                                  
-
-                                                                  
 <!-- l. 358 --><p class='noindent'><span class='ec-lmbx-10'>Použitý příkaz je:</span>
 </p><!-- l. 358 --><p class='noindent'>
                                                                   
@@ -847,84 +845,252 @@ prosím její  <a href='https://www.kodymirus.cz/tex4ht-booksite/'>dokumentaci</
 </p>   
 <h3 class='sectionHead' id='sablona-pro-blogy'><span class='titlemark'>5   </span> <a id='x1-350005'></a>Šablona pro blogy</h3>
 <p><a id='x1-35001r30'></a>
-<!-- l. 646 --></p><p class='noindent'><span class='likeparagraphHead' id='sablona-testblog'><a id='x1-36000'></a>Šablona <span class='ec-lmtt-10'>testblog</span></span>
+<!-- l. 646 --></p><p class='noindent'><span class='likeparagraphHead' id='jak-muzeme-blogovat-s-latexem'><a id='x1-36000'></a>Jak můžeme blogovat s LaTeXem?</span>
  
 </p><!-- l. 646 --><p class='noindent'>
-</p><!-- l. 647 --><p class='noindent'><span class='ec-lmbx-10'>Adresa:</span>
-</p><!-- l. 647 --><p class='noindent'><a class='url' href='https://github.com/michal-h21/testblog/tree/main'><span class='ec-lmtt-10'>https://github.com/michal-h21/testblog/tree/main</span></a>
 </p>     
 <ul class='itemize1'>
 <li class='itemize'>Blogování s využitím generátorů statických webů
+</li>
+<li class='itemize'>Každý článek je samostatný TeXový dokument v samostatném adresáři
                                                                   
 
                                                                   
-</li>
-<li class='itemize'>Každý článek je samostatný TeXový dokument v samostatném adresáři
 </li>
 <li class='itemize'>Automatická kompilace změněných článků</li></ul>
 <p><a id='x1-36001r31'></a>
-<!-- l. 660 --></p><p class='noindent'><span class='likeparagraphHead' id='jak-blog-vypada'><a id='x1-37000'></a>Jak blog vypadá?</span>
+<!-- l. 658 --></p><p class='noindent'><span class='likeparagraphHead' id='co-je-staticky-generator-webu'><a id='x1-37000'></a>Co je statický generátor webu?</span>
  
-</p><!-- l. 660 --><p class='noindent'>
-</p><!-- l. 661 --><p class='indent'>   <img alt='PIC' src='img/blog.png' />
-</p><!-- l. 665 --><p class='noindent'>Tento projekt je poměrně komplikovaný a stále funguje spíše jako ukázka
-funkčnosti. Stále se mi nepodařilo vyřešit některé problémy s konflikty lokálních
-a vzdálených verzí souborů. Přesto si myslím, že může být zajímavé jej představit.
-Doufám, že aktuální problémy se mi brzy podaří vyřešit.
-</p><!-- l. 674 --><p class='noindent'>
-</p>   
-<h3 class='sectionHead' id='sablona-pro-prezentace'><span class='titlemark'>6   </span> <a id='x1-380006'></a>Šablona pro prezentace</h3>
-<!-- l. 676 --><p class='noindent'>Tato šablona je určena pro prezentace, které potřebují víc než jen snímky.
-Umožňuje vytvořit jak samotnou prezentaci, tak podrobný handout s poznámkami
-a komentáři. Všechny materiály tak lze generovat z jednoho zdrojového souboru –
-jak pro živou prezentaci, tak pro lidi, kteří se prezentace neúčastnili.
-<a id='x1-38001r32'></a>
-</p>
-<!-- l. 682 --><p class='noindent'><span class='likeparagraphHead' id='sablona-tex4htpresentation'><a id='x1-39000'></a>Šablona <span class='ec-lmtt-10'>tex4ht-presentation</span></span>
- 
-</p><!-- l. 682 --><p class='noindent'>
-</p><!-- l. 683 --><p class='noindent'><span class='ec-lmbx-10'>Adresa:</span>
-</p><!-- l. 683 --><p class='noindent'><a class='url' href='https://github.com/michal-h21/tex4ht-presentation'><span class='ec-lmtt-10'>https://github.com/michal-h21/tex4ht-presentation</span></a>
-</p><!-- l. 687 --><p class='noindent'><span class='ec-lmbx-10'>Hlavní vlastnosti</span>
-</p><!-- l. 687 --><p class='noindent'></p>     
+</p><!-- l. 658 --><p class='noindent'>
+</p><!-- l. 659 --><p class='noindent'><span class='ec-lmbx-10'>Hlavní vlastnosti</span>
+</p><!-- l. 659 --><p class='noindent'></p>     
 <ul class='itemize1'>
-<li class='itemize'>Vytváří slidy a handout prezentací ze stejného zdrojového souboru</li></ul>
+<li class='itemize'>ze vstupních souborů kompiluje webové stránky, například blogy
+</li>
+<li class='itemize'>soubory se generují pouze při aktualizaci webu
+</li>
+<li class='itemize'>většinou aplikují šablony na zdrojové soubory
+</li>
+<li class='itemize'>vytváří seznamy článků, RSS a podobně
+</li>
+<li class='itemize'>můžeme je spouštět v prostředí GitHub Actions
+</li>
+<li class='itemize'>GitHub obsahuje vestavěný generátor Jekyll</li></ul>
+<!-- l. 671 --><p class='noindent'>Výhodou je, že takový web můžeme umístit na téměř libovolný webový server,
+nemusíme řešit, zda podporuje například PHP nebo jiný systém pro dynamické
+zobrazování stránek. Například GitHub nabízí GitHub Pages, kde můžeme
+umístit stránky zdarma. V rámci GitHub Actions také můžeme spouštět
+generátory automaticky, nebo můžeme využít vestavěnou podporu pro generátor
+Jekyll.
+<a id='x1-37001r32'></a>
                                                                   
 
                                                                   
-<p><a id='x1-39001r33'></a>
-<!-- l. 696 --></p><p class='noindent'><span class='likeparagraphHead' id='co-je-cilem'><a id='x1-40000'></a>Co je cílem?</span>
- 
-</p><!-- l. 696 --><p class='noindent'>
-</p><!-- l. 696 --><p class='noindent'><span class='ec-lmbx-10'>HTML handout</span>
-</p><!-- l. 696 --><p class='noindent'><img alt='PIC' src='img/handout.png' />
-</p><!-- l. 703 --><p class='indent'>   Šablona obshuje několik hlavních zdrojových souborů, každý s konkrétním
-účelem:
-<a id='x1-40001r34'></a>
 </p>
-<!-- l. 706 --><p class='noindent'><span class='likeparagraphHead' id='prehled-souboru'><a id='x1-41000'></a>Přehled souborů</span>
+<!-- l. 679 --><p class='noindent'><span class='likeparagraphHead' id='obecna-struktura-vstupniho-souboru'><a id='x1-38000'></a>Obecná struktura vstupního souboru</span>
  
-</p><!-- l. 706 --><p class='noindent'>
-</p><!-- l. 706 --><p class='noindent'><span class='ec-lmbx-10'>Soubory ke kompilaci</span>
-</p><!-- l. 706 --><p class='noindent'></p>     
+</p><!-- l. 679 --><p class='noindent'>
+</p><!-- l. 680 --><p class='noindent'><span class='ec-lmbx-10'>Příklad pro Markdown</span>
+</p><!-- l. 680 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-26'>
+---
+title: Titulek dokumentu
+---
+# Úvod
+Text dokumentu
+</pre>
+<!-- l. 687 --><p class='nopar'>
+</p><!-- l. 692 --><p class='indent'>   Na začátku souboru je umístěný blok s metadaty dokumentu ve formátu
+YAML. Z obou stran je obklopený řádky obsahujícími pouze tři spojovníky. Za
+blokem metadat pak následuje text dokumentu.
+</p><!-- l. 696 --><p class='indent'>   V tomto příkladě používáme Markdown, ovšem stejný princip můžeme použít
+i pro HTML soubory produkované pomocí TeX4ht. Místo Markdownu totiž
+můžeme použít i HTML, které získáme z obsahu elementu <span class='obeylines-h'><code class='verb'>&lt;body&gt;</code></span>
+<a id='x1-38001r33'></a>
+</p>
+<!-- l. 702 --><p class='noindent'><span class='likeparagraphHead' id='ukazka-s-tex4ht'><a id='x1-39000'></a>Ukázka s TeX4ht</span>
+ 
+</p><!-- l. 702 --><p class='noindent'>
+</p><!-- l. 702 --><p class='noindent'><span class='ec-lmbx-10'>LaTeXový dokument:</span>
+</p><!-- l. 702 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-27'>
+
+\documentclass{article}
+\begin{document}
+\title{Hello world test}
+\author{Michal}
+\maketitle
+
+This is my test post.
+\end{document}
+</pre>
+<!-- l. 713 --><p class='nopar'>
+</p><!-- l. 716 --><p class='noindent'><span class='ec-lmbx-10'>Kompilujeme pomocí</span>
+</p><!-- l. 716 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-28'>
+$ make4ht -f html5+staticsite filename.tex
+</pre>
+<!-- l. 719 --><p class='nopar'>
+</p><!-- l. 723 --><p class='indent'>   V tomto případě musíme zapnout rozšíření <span class='ec-lmtt-10'>staticsite</span>, které jsme připojili
+za formát souboru ve volbě <span class='ec-lmtt-10'>-f</span>. Toto rozšíření vytvoří HTML soubor ve formátu
+vhodném pro statické generátory. Soubor bude pojmenován ve formátu
+<span class='obeylines-h'><code class='verb'>YYYY-MM-DD-&lt;filename&gt;</code></span>.
+<a id='x1-39001r34'></a>
+</p>
+<!-- l. 728 --><p class='noindent'><span class='likeparagraphHead' id='vygenerovany-soubor'><a id='x1-40000'></a>Vygenerovaný soubor</span>
+ 
+</p><!-- l. 728 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-29'>
+---
+meta:
+- charset: ’utf-8’
+- name: ’viewport’
+  content: ’width=device-width,initial-scale=1’
+time: 1626619562
+updated: 1627244699
+styles:
+- ’2021-07-18-hello-world.css’
+title: ’Hello world test’
+---
+&lt;!--  l. 7  --&gt;&lt;p class=’indent’&gt;   This is my test post.
+&lt;/p&gt;
+  
+</pre>
+<!-- l. 742 --><p class='nopar'>
+</p><!-- l. 745 --><p class='indent'>   Soubor obsahuje různá metadata získaná z HTML souboru. Jednak se jedná
+o obsah elementů <span class='obeylines-h'><code class='verb'>&lt;meta&gt;</code></span>, dále časy vytvoření souboru a poslední aktualizace
+v číselné formě, seznam použitých stylů, titulek atd. Tato metadata můžeme
+používat v šablonách použitého generátoru webů.
+<a id='x1-40001r35'></a>
+</p>
+<!-- l. 753 --><p class='noindent'><span class='likeparagraphHead' id='sablona-pro-blog-s-generatorem-jekyll'><a id='x1-41000'></a>Šablona pro blog s generátorem Jekyll</span>
+ 
+</p><!-- l. 753 --><p class='noindent'>
+</p><!-- l. 754 --><p class='noindent'><span class='ec-lmbx-10'>Adresa:</span>
+</p><!-- l. 754 --><p class='noindent'><a class='url' href='https://github.com/michal-h21/testblog/'><span class='ec-lmtt-10'>https://github.com/michal-h21/testblog/</span></a>
+</p><!-- l. 758 --><p class='noindent'><span class='ec-lmbx-10'>Ukázka hlavní stránky blogu</span>
+</p><!-- l. 758 --><p class='noindent'><img alt='PIC' src='img/blog.png' />
+<a id='x1-41001r36'></a>
+</p>
+<!-- l. 765 --><p class='noindent'><span class='likeparagraphHead' id='struktura-adresaru'><a id='x1-42000'></a>Struktura adresářů</span>
+ 
+</p><!-- l. 765 --><p class='noindent'>
+                                                                  
+
+                                                                  
+</p>   
+<pre class='verbatim' id='verbatim-30'>
+blog/
+.. texposts/
+.... first_post/
+...... first_post.tex
+.... second_post/
+...... second_post.tex
+.. docs/
+.... _posts/
+.... css
+</pre>
+<!-- l. 775 --><p class='nopar'>
+</p><!-- l. 778 --><p class='indent'>   Každý příspěvek na blogu má vlastní podadresář v adrsáři <span class='ec-lmtt-10'>texposts</span>.
+Vygenerované soubory se poté zkopírují do různých podadresářů v adresáři <span class='ec-lmtt-10'>docs</span>.
+Například HTML soubory pro blog se umístí do podadresáře <span class='obeylines-h'><code class='verb'>_posts</code></span> a kaskádové
+style do podadresáře <span class='ec-lmtt-10'>css</span>.
+<a id='x1-42001r37'></a>
+</p>
+<!-- l. 784 --><p class='noindent'><span class='likeparagraphHead' id='postup-zpracovani-v-sablone'><a id='x1-43000'></a>Postup zpracování v šabloně</span>
+ 
+</p><!-- l. 784 --><p class='noindent'>
+</p>     
+<ul class='itemize1'>
+<li class='itemize'>detekujeme změněné TeXové soubory a zkompilujeme je
+</li>
+<li class='itemize'>zkopírujeme vygenerované soubory do adresářů, kde je bude hledat Jekyll
+</li>
+<li class='itemize'>vygenerované soubory uložíme do repozitáře
+</li>
+<li class='itemize'>poté je zpracuje statický generátor Jekyll, který vytvoří blog</li></ul>
+                                                                  
+
+                                                                  
+<!-- l. 792 --><p class='indent'>   Vygenerované soubory ukládáme proto, abychom v příštích kompilacích
+mohli porovnat datumy změn HTML a TeX souborů. Kompilujeme poté
+pouze soubory, které nemají vygenerovaný HTML soubor, nebo je tento
+soubor starší. Tím zrychlujeme kompilaci a šetříme výpočetní čas GitHub
+Actions.
+</p><!-- l. 797 --><p class='indent'>   Tento projekt je poměrně komplikovaný a stále funguje spíše jako ukázka
+funkčnosti. Stále se mi nepodařilo vyřešit některé problémy s konflikty lokálních
+a vzdálených verzí souborů. Přesto si myslím, že může být zajímavé jej představit.
+Doufám, že aktuální problémy se mi brzy podaří vyřešit.
+</p><!-- l. 805 --><p class='noindent'>
+</p>   
+<h3 class='sectionHead' id='sablona-pro-prezentace'><span class='titlemark'>6   </span> <a id='x1-440006'></a>Šablona pro prezentace</h3>
+<!-- l. 807 --><p class='noindent'>Tato šablona je určena pro prezentace, které potřebují víc než jen snímky.
+Umožňuje vytvořit jak samotnou prezentaci, tak podrobný handout s poznámkami
+a komentáři. Všechny materiály tak lze generovat z jednoho zdrojového souboru –
+jak pro živou prezentaci, tak pro lidi, kteří se prezentace neúčastnili.
+<a id='x1-44001r38'></a>
+</p>
+<!-- l. 813 --><p class='noindent'><span class='likeparagraphHead' id='sablona-tex4htpresentation'><a id='x1-45000'></a>Šablona <span class='ec-lmtt-10'>tex4ht-presentation</span></span>
+ 
+</p><!-- l. 813 --><p class='noindent'>
+</p><!-- l. 814 --><p class='noindent'><span class='ec-lmbx-10'>Adresa:</span>
+</p><!-- l. 814 --><p class='noindent'><a class='url' href='https://github.com/michal-h21/tex4ht-presentation'><span class='ec-lmtt-10'>https://github.com/michal-h21/tex4ht-presentation</span></a>
+</p><!-- l. 818 --><p class='noindent'><span class='ec-lmbx-10'>Hlavní vlastnosti</span>
+</p><!-- l. 818 --><p class='noindent'></p>     
+<ul class='itemize1'>
+<li class='itemize'>Vytváří slidy a handout prezentací ze stejného zdrojového souboru</li></ul>
+<p><a id='x1-45001r39'></a>
+<!-- l. 827 --></p><p class='noindent'><span class='likeparagraphHead' id='co-je-cilem'><a id='x1-46000'></a>Co je cílem?</span>
+ 
+</p><!-- l. 827 --><p class='noindent'>
+</p><!-- l. 827 --><p class='noindent'><span class='ec-lmbx-10'>HTML handout</span>
+</p><!-- l. 827 --><p class='noindent'><img alt='PIC' src='img/handout.png' />
+                                                                  
+
+                                                                  
+</p><!-- l. 834 --><p class='indent'>   Šablona obshuje několik hlavních zdrojových souborů, každý s konkrétním
+účelem:
+<a id='x1-46001r40'></a>
+</p>
+<!-- l. 837 --><p class='noindent'><span class='likeparagraphHead' id='prehled-souboru'><a id='x1-47000'></a>Přehled souborů</span>
+ 
+</p><!-- l. 837 --><p class='noindent'>
+</p><!-- l. 837 --><p class='noindent'><span class='ec-lmbx-10'>Soubory ke kompilaci</span>
+</p><!-- l. 837 --><p class='noindent'></p>     
 <ul class='itemize1'>
 <li class='itemize'><span class='ec-lmtk-10'>slides.tex</span>
 </li>
 <li class='itemize'><span class='ec-lmtk-10'>handout.tex</span></li></ul>
-<!-- l. 712 --><p class='noindent'><span class='ec-lmbx-10'>Text prezentace</span>
-</p><!-- l. 712 --><p class='noindent'></p>     
+<!-- l. 843 --><p class='noindent'><span class='ec-lmbx-10'>Text prezentace</span>
+</p><!-- l. 843 --><p class='noindent'></p>     
 <ul class='itemize1'>
 <li class='itemize'><span class='ec-lmtk-10'>presentation.tex</span></li></ul>
-<!-- l. 717 --><p class='noindent'><span class='ec-lmbx-10'>Konfigurační soubory</span>
-</p><!-- l. 717 --><p class='noindent'></p>     
+<!-- l. 848 --><p class='noindent'><span class='ec-lmbx-10'>Konfigurační soubory</span>
+</p><!-- l. 848 --><p class='noindent'></p>     
 <ul class='itemize1'>
 <li class='itemize'><span class='ec-lmtk-10'>preamble.tex</span>
+</li>
+<li class='itemize'><span class='ec-lmtk-10'>config.cfg</span></li></ul>
                                                                   
 
                                                                   
-</li>
-<li class='itemize'><span class='ec-lmtk-10'>config.cfg</span></li></ul>
-<!-- l. 727 --><p class='noindent'><span class='paragraphHead' id='popis-souboru'><a id='x1-42000'></a><span class='ec-lmbx-10'>Popis souborů</span></span>
+<!-- l. 858 --><p class='noindent'><span class='paragraphHead' id='popis-souboru'><a id='x1-48000'></a><span class='ec-lmbx-10'>Popis souborů</span></span>
 </p>     
 <ul class='itemize1'>
 <li class='itemize'><span class='ec-lmtk-10'>slides.tex </span>– Tento soubor slouží ke generování hlavní prezentace ve
@@ -949,18 +1115,15 @@ v prezentaci.
 <li class='itemize'><span class='ec-lmbx-10'>config.cfg </span>– Konfigurační soubor pro TeX4ht. Například zde můžete
 upravit CSS styly použité ve webové verzi dokumentu nebo redefinice
 LaTeXových příkazů.</li></ul>
-<p><a id='x1-42001r35'></a>
-                                                                  
-
-                                                                  
-<!-- l. 752 --></p><p class='noindent'><span class='likeparagraphHead' id='hlavni-soubor-pro-slidy'><a id='x1-43000'></a>Hlavní soubor pro slidy</span>
+<p><a id='x1-48001r41'></a>
+<!-- l. 883 --></p><p class='noindent'><span class='likeparagraphHead' id='hlavni-soubor-pro-slidy'><a id='x1-49000'></a>Hlavní soubor pro slidy</span>
  
-</p><!-- l. 752 --><p class='noindent'>
+</p><!-- l. 883 --><p class='noindent'>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-26'>
+<pre class='verbatim' id='verbatim-31'>
 \documentclass[ignorenonframetext]{beamer}
 \input{preamble} % sdílené nastavení preamble
 \begin{document}
@@ -969,23 +1132,23 @@ LaTeXových příkazů.</li></ul>
 }
 \end{document}
 </pre>
-<!-- l. 760 --><p class='nopar'>
-</p><!-- l. 763 --><p class='indent'>   Volba <span class='ec-lmtt-10'>ignorenonframetext </span>má za následek, že veškerý text mimo prostředí
+<!-- l. 891 --><p class='nopar'>
+</p><!-- l. 894 --><p class='indent'>   Volba <span class='ec-lmtt-10'>ignorenonframetext </span>má za následek, že veškerý text mimo prostředí
 <span class='ec-lmtt-10'>frame </span>se ignoruje. Díky tomu můžeme psát komentáře mimo slidy, které se zobrazí
 pouze v handoutu. Problém je, že se ignoruje i příkaz <span class='obeylines-h'><code class='verb'>\input</code></span>, který používáme pro
 vložení textu prezentace z externího souboru. Musíme proto použít příkaz <span class='obeylines-h'><code class='verb'>\</code></span><span class='obeylines-h'><code class='verb'>mode</code></span>,
 který umí lokálně přepnout mód. Pro vložení obsahu do prezentace využijeme mód
 <span class='obeylines-h'><code class='verb'>&lt;beamer&gt;</code></span>.
-<a id='x1-43001r36'></a>
+<a id='x1-49001r42'></a>
 </p>
-<!-- l. 769 --><p class='noindent'><span class='likeparagraphHead' id='hlavni-soubor-pro-handout'><a id='x1-44000'></a>Hlavní soubor pro handout</span>
+<!-- l. 900 --><p class='noindent'><span class='likeparagraphHead' id='hlavni-soubor-pro-handout'><a id='x1-50000'></a>Hlavní soubor pro handout</span>
  
-</p><!-- l. 769 --><p class='noindent'>
+</p><!-- l. 900 --><p class='noindent'>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-27'>
+<pre class='verbatim' id='verbatim-32'>
 \documentclass{article}
 \usepackage{beamerarticle}
 \input{preamble}
@@ -993,41 +1156,41 @@ který umí lokálně přepnout mód. Pro vložení obsahu do prezentace využij
 \input{presentation.tex}
 \end{document}
 </pre>
-<!-- l. 776 --><p class='nopar'>
-</p><!-- l. 781 --><p class='indent'>   V handoutu můžeme pouít libovolnou třídu dokumentu spolu s balíčkem
+<!-- l. 907 --><p class='nopar'>
+</p><!-- l. 912 --><p class='indent'>   V handoutu můžeme pouít libovolnou třídu dokumentu spolu s balíčkem
 <span class='ec-lmtt-10'>beamerarticle</span>. Text prezentace můžeme vložit pomocí příkazu <span class='obeylines-h'><code class='verb'>\input</code></span>.
-<a id='x1-44001r37'></a>
+<a id='x1-50001r43'></a>
 </p>
-<!-- l. 785 --><p class='noindent'><span class='likeparagraphHead' id='soubor-preambletex'><a id='x1-45000'></a>Soubor <span class='ec-lmtt-10'>preamble.tex</span></span>
+<!-- l. 916 --><p class='noindent'><span class='likeparagraphHead' id='soubor-preambletex'><a id='x1-51000'></a>Soubor <span class='ec-lmtt-10'>preamble.tex</span></span>
  
-</p><!-- l. 785 --><p class='noindent'>
+</p><!-- l. 916 --><p class='noindent'>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-28'>
+<pre class='verbatim' id='verbatim-33'>
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[czech]{babel}
 ...
 + další balíčky a vlastní příkazy
 </pre>
-<!-- l. 791 --><p class='nopar'>
-<a id='x1-45001r38'></a>
+<!-- l. 922 --><p class='nopar'>
+<a id='x1-51001r44'></a>
 </p>
-<!-- l. 796 --><p class='noindent'><span class='likeparagraphHead' id='pouziti-prostredi-frame-a-komentare-v-handoutu'><a id='x1-46000'></a>Použití prostředí frame a komentáře v handoutu</span>
+<!-- l. 927 --><p class='noindent'><span class='likeparagraphHead' id='pouziti-prostredi-frame-a-komentare-v-handoutu'><a id='x1-52000'></a>Použití prostředí frame a komentáře v handoutu</span>
  
-</p><!-- l. 796 --><p class='noindent'>
-</p><!-- l. 797 --><p class='noindent'><span class='ec-lmbx-10'>Základní syntaxe dokumentu používaného v souboru </span><span class='ec-lmtk-10'>presentation.tex</span><span class='ec-lmbx-10'>:</span>
-</p><!-- l. 797 --><p class='noindent'></p><pre class='likeverbatim'><span class='obeylines-h'><code class='verb'>\begin{frame}{Název snímku}</code></span> <span class='obeylines-h'><code class='verb'>obsah snímku...</code></span> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
+</p><!-- l. 927 --><p class='noindent'>
+</p><!-- l. 928 --><p class='noindent'><span class='ec-lmbx-10'>Základní syntaxe dokumentu používaného v souboru </span><span class='ec-lmtk-10'>presentation.tex</span><span class='ec-lmbx-10'>:</span>
+</p><!-- l. 928 --><p class='noindent'></p><pre class='likeverbatim'><span class='obeylines-h'><code class='verb'>\begin{frame}{Název snímku}</code></span> <span class='obeylines-h'><code class='verb'>obsah snímku...</code></span> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
 <span class='obeylines-h'><code class='verb'>Komentář, který bude zahrnut pouze v handoutu</code></span> </pre>
-<!-- l. 808 --><p class='indent'>   Například zdrojový kód jednoho z předchozích snímků vypadá takto:
-</p><!-- l. 810 --><p class='indent'>   <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}[fragile]{Přehled souborů}</code></span>
+<!-- l. 939 --><p class='indent'>   Například zdrojový kód jednoho z předchozích snímků vypadá takto:
+</p><!-- l. 941 --><p class='indent'>   <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}[fragile]{Přehled souborů}</code></span>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-29'>
+<pre class='verbatim' id='verbatim-34'>
 \begin{itemize}
 \item \textbf{\texttt{slides.tex}}
 \item \textbf{\texttt{handout.tex}}
@@ -1035,52 +1198,52 @@ který umí lokálně přepnout mód. Pro vložení obsahu do prezentace využij
 \item \textbf{\texttt{preamble.tex}}
 \end{itemize}
 </pre>
-<!-- l. 818 --><p class='nopar'> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
+<!-- l. 949 --><p class='nopar'> <span class='obeylines-h'><code class='verb'>\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-30'>
+<pre class='verbatim' id='verbatim-35'>
 \begin{itemize}
 \item \textbf{\texttt{slides.tex}} – Tento soubor slouží ke generování hlavní
 prezentace ve formátu Beamer. Obsahuje to, co se zobrazuje během přednášky.
 \end{itemize}
 </pre>
-<!-- l. 826 --><p class='nopar'>
-</p><!-- l. 828 --><p class='indent'>   Obsah uvnitř bloku <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}...\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span> se zahrne do prezentace
+<!-- l. 957 --><p class='nopar'>
+</p><!-- l. 959 --><p class='indent'>   Obsah uvnitř bloku <span class='obeylines-h'><code class='verb'>\begin</code></span><span class='obeylines-h'><code class='verb'>{frame}...\end</code></span><span class='obeylines-h'><code class='verb'>{frame}</code></span> se zahrne do prezentace
 i handoutu, ale prostředí <span class='ec-lmtt-10'>itemize</span>, které následuje za ním, se zobrazí pouze
 v handoutu.
-<a id='x1-46001r39'></a>
+<a id='x1-52001r45'></a>
 </p>
-<!-- l. 833 --><p class='noindent'><span class='likeparagraphHead' id='sdileny-obsah-mimo-prostredi-frame'><a id='x1-47000'></a>Sdílený obsah mimo prostředí frame</span>
+<!-- l. 964 --><p class='noindent'><span class='likeparagraphHead' id='sdileny-obsah-mimo-prostredi-frame'><a id='x1-53000'></a>Sdílený obsah mimo prostředí frame</span>
  
-</p><!-- l. 833 --><p class='noindent'>
+</p><!-- l. 964 --><p class='noindent'>
                                                                   
 
                                                                   
 </p>   
-<pre class='verbatim' id='verbatim-31'>
+<pre class='verbatim' id='verbatim-36'>
 \mode&lt;beamer|article&gt;{
 \title{Strukturovaná šablona prezentace}
 \author{Michal Hoftich}
 \maketitle
 }
 </pre>
-<!-- l. 840 --><p class='nopar'>
-</p><!-- l. 843 --><p class='indent'>   Příkaz <span class='obeylines-h'><code class='verb'>\</code></span><span class='obeylines-h'><code class='verb'>mode&lt;beamer|article&gt;{...}</code></span> umožňuje zahrnout obsah, který se má
+<!-- l. 971 --><p class='nopar'>
+</p><!-- l. 974 --><p class='indent'>   Příkaz <span class='obeylines-h'><code class='verb'>\</code></span><span class='obeylines-h'><code class='verb'>mode&lt;beamer|article&gt;{...}</code></span> umožňuje zahrnout obsah, který se má
 zobrazit jak v prezentaci, tak v handoutu. To se může hodit například pro název
 nebo obsah prezentace.
-</p><!-- l. 847 --><p class='noindent'>
+</p><!-- l. 978 --><p class='noindent'>
 </p>   
-<h3 class='sectionHead' id='zaver'><span class='titlemark'>7   </span> <a id='x1-480007'></a>Závěr</h3>
-<p><a id='x1-48001r40'></a>
-<!-- l. 850 --></p><p class='noindent'><span class='likeparagraphHead' id='_'><a id='x1-49000'></a></span>   
+<h3 class='sectionHead' id='zaver'><span class='titlemark'>7   </span> <a id='x1-540007'></a>Závěr</h3>
+<p><a id='x1-54001r46'></a>
+<!-- l. 981 --></p><p class='noindent'><span class='likeparagraphHead' id='_'><a id='x1-55000'></a></span>   
  
-</p><!-- l. 850 --><p class='noindent'>
-</p><!-- l. 850 --><p class='noindent'>
-</p><!-- l. 850 --><p class='noindent'>Děkuji za pozornost!
-</p><!-- l. 853 --><p class='noindent'>
-</p><!-- l. 853 --><p class='noindent'><a class='url' href='https://www.kodymirus.cz/presentations/ossconf2025.html'><span class='ec-lmtt-9'>https://www.kodymirus.cz/presentations/ossconf2025.html</span></a>
+</p><!-- l. 981 --><p class='noindent'>
+</p><!-- l. 981 --><p class='noindent'>
+</p><!-- l. 981 --><p class='noindent'>Děkuji za pozornost!
+</p><!-- l. 984 --><p class='noindent'>
+</p><!-- l. 984 --><p class='noindent'><a class='url' href='https://www.kodymirus.cz/presentations/ossconf2025.html'><span class='ec-lmtt-9'>https://www.kodymirus.cz/presentations/ossconf2025.html</span></a>
 </p>   
  
 </body> 
