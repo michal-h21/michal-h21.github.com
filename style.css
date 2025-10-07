@@ -1,6 +1,6 @@
 /* Basic styles */
 
-h1,h2,h3,menu{margin:0;}
+h1,h2,h3,nav ul{margin:0;}
 
 body{
   max-width:72ch;
@@ -9,7 +9,7 @@ body{
   line-height: calc(1ex / 0.34);
 }
 
-menu {
+nav ul {
   border-top: 1px solid var(--foreground-color);
   padding: 0;
   padding-top: 0.3rem;
@@ -17,7 +17,7 @@ menu {
   list-style: none;
 }
 
-menu li {
+nav ul li {
   display: inline;
   flex-grow: 1;
   align-items: flex-start;
@@ -26,8 +26,8 @@ menu li {
 
 
 
-menu li:before{content:"|";margin-right:0.5rem;}
-menu li:first-child:before{content:"";margin-right:0rem;}
+nav ul li:before{content:"|";margin-right:0.5rem;}
+nav ul li:first-child:before{content:"";margin-right:0rem;}
 
 .article-list h2{ margin-bottom: 0.5ex;}
 .article-list h2 + p{margin-top: 0;}
