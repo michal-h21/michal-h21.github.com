@@ -3,6 +3,7 @@
 \usepackage[fencedDivs=true]{markdown}
 \usepackage{tcolorbox}
 \usepackage{minted}
+\fvset{breaklines=true}
 \usepackage{hyperref}
 \usepackage{linebreaker}
 \usepackage{responsive}
@@ -115,8 +116,10 @@ names. For each markdown feature, the \texttt{Markdown} package uses several com
 which can be redefined to customize the behavior. 
 
 For fenced divs, we can redefine
-the commands \Verb|\markdownRendererFencedDivAttributeContextBegin| and
-\Verb|\markdownRendererFencedDivAttributeContextEnd| to specify what happens at the start and end of a fenced div.
+the commands \mintinline[breaklines,breakanywhere]{latex}{\markdownRendererFencedDivAttributeContextBegin} and
+\mintinline[breaklines,breakanywhere]{latex}{\markdownRendererFencedDivAttributeContextEnd}
+to specify what happens at the start and end of a fenced div.
+
 The problem is that we need to know the class name specified in the fenced div (e.g., \texttt{warning} or \texttt{info}),
 and this class name is passed to a macro called \Verb|\markdownRendererAttributeClassName|, which we need to redefine 
 locally to start the appropriate environment:
@@ -133,7 +136,7 @@ locally to start the appropriate environment:
 % set up the context for fenced divs
 \def\markdownRendererFencedDivAttributeContextBegin{
   \begingroup
-  % redefine the macro that will be called with the class name to use our 
+  % redefine the macro that will be called with the class name 
   \let\markdownRendererAttributeClassName\fenceddivclass
   % if there is no class name, we just define \endfence to do nothing
   \def\endfence{}
@@ -192,7 +195,7 @@ Here is the complete \LaTeX{} code that demonstrates this approach:
 % set up the context for fenced divs
 \def\markdownRendererFencedDivAttributeContextBegin{
   \begingroup
-  % redefine the macro that will be called with the class name to use our 
+  % redefine the macro that will be called with the class name 
   \let\markdownRendererAttributeClassName\fenceddivclass
   % if there is no class name, we just define \endfence to do nothing
   \def\endfence{}
