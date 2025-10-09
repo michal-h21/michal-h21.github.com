@@ -1,0 +1,238 @@
+\documentclass[]{article}
+
+\usepackage[fencedDivs=true]{markdown}
+\usepackage{tcolorbox}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{linebreaker}
+\usepackage{responsive}
+\usepackage{fontspec}
+\setmainfont{Linux Libertine O}
+
+
+\ExplSyntaxOn
+
+% the idea is to use fenced divs with classes to call custom environments with
+% the class as an environment name
+
+% define custom tcolorbox environments for warning and info
+\newtcolorbox{warning}{colback=red!5!white, colframe=red!75!black,fonttitle=\bfseries, title={Warning}}
+\newtcolorbox{info}{colback=blue!5!white, colframe=blue!75!black,fonttitle=\bfseries, title={info}}
+
+% this macro will be called with the class name as argument 
+% it will start the environment with that name
+\def\fenceddivclass#1{
+  \begin{#1}
+  % we also define \endfence to end the environment
+  \def\endfence{\end{#1}}
+}
+
+% set up the context for fenced divs
+\def\markdownRendererFencedDivAttributeContextBegin{
+  \begingroup
+  % redefine the macro that will be called with the class name to use our 
+  \let\markdownRendererAttributeClassName\fenceddivclass
+  % if there is no class name, we just define \endfence to do nothing
+  \def\endfence{}
+}
+% end the context by ending the environment and the group
+\def\markdownRendererFencedDivAttributeContextEnd{\endfence\endgroup}
+\ExplSyntaxOff
+
+\title{Markdown Fenced Divs with Tcolorbox}
+\author{Michal Hoftich}
+
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+
+Recently, I came across a question on \href{https://tex.stackexchange.com/q/752194/2891}{TeX.SX}, asking how to create Markdown-style boxes for warnings or informational notes.  
+The OP wanted to use a custom Lua filter for Pandoc, but my idea was to
+experiment with this idea using the \LaTeX{} \href{https://ctan.org/pkg/markdown?lang=en}{Markdown} package, which
+supports the \texttt{fencedDivs} feature.  
+
+This feature allows you to use a class name right after three colons (e.g., \texttt{::: warning}) to trigger custom behavior.  
+I thought it might be interesting to connect these fenced divs to custom \texttt{tcolorbox} environments, so that  
+writing a Markdown block like
+
+\begin{minted}{markdown}
+::: warning
+Some important message here.
+:::
+\end{minted}
+
+would produce a nice colored box with a warning message in the final PDF, like this:
+
+\begin{warning}
+Some important message here.
+\end{warning}
+
+
+As the OP doesn't want to change his Pandoc based workflow, I haven't posted
+the code below as an answer. But I thought it might be useful for others who
+use the \texttt{Markdown} package in \LaTeX{}, so here it is on my blog.
+
+
+\section*{Code Example}
+
+The \texttt{Markdown} package enables us to write markdown directly in a \LaTeX{} document. 
+It supports basic markdown syntax out of the box, but it supports extensions, which  
+enable additional features. One of these extensions is \Verb|fencedDivs|, 
+which allow us to create custom blocks with specific classes. 
+
+We can require the \texttt{Markdown} package with the option \texttt{fencedDivs=true} to enable this feature:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+\usepackage[fencedDivs=true]{markdown}
+\end{minted}
+
+Then, we can define custom environments using the \href{https://ctan.org/pkg/tcolorbox?lang=en}{Tcolorbox} package to style our boxes using the \Verb|newtcolorbox|:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+\newtcolorbox{warning}{colback=red!5!white, colframe=red!75!black,fonttitle=\bfseries, title={Warning}}
+\newtcolorbox{info}{colback=blue!5!white, colframe=blue!75!black,fonttitle=\bfseries, title={info}}
+\end{minted}
+
+These two commands declared environments \texttt{warning} and \texttt{info}. These two envrionments will print the enclosed text
+in colored boxes with titles ``Warning`` and ``Info'', respectively:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+\begin{info}
+  this is an info box
+\end{info}
+\end{minted}
+
+\begin{info}
+  this is an info box
+\end{info}
+
+
+With these environments defined, we can now set up the \texttt{Markdown}
+package to use them when it encounters fenced divs with the corresponding class
+names. For each markdown feature, the \texttt{Markdown} package uses several commands
+which can be redefined to customize the behavior. 
+
+For fenced divs, we can redefine
+the commands \Verb|\markdownRendererFencedDivAttributeContextBegin| and
+\Verb|\markdownRendererFencedDivAttributeContextEnd| to specify what happens at the start and end of a fenced div.
+The problem is that we need to know the class name specified in the fenced div (e.g., \texttt{warning} or \texttt{info}),
+and this class name is passed to a macro called \Verb|\markdownRendererAttributeClassName|, which we need to redefine 
+locally to start the appropriate environment:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+% this macro will be called with the class name as argument 
+% it will start the environment with that name
+\def\fenceddivclass#1{
+  \begin{#1}
+  % we also define \endfence to end the environment
+  \def\endfence{\end{#1}}
+}
+
+% set up the context for fenced divs
+\def\markdownRendererFencedDivAttributeContextBegin{
+  \begingroup
+  % redefine the macro that will be called with the class name to use our 
+  \let\markdownRendererAttributeClassName\fenceddivclass
+  % if there is no class name, we just define \endfence to do nothing
+  \def\endfence{}
+}
+% end the context by ending the environment and the group
+\def\markdownRendererFencedDivAttributeContextEnd{\endfence\endgroup}
+\end{minted}
+
+
+To achieve this, we create a custom macro --- in this case,
+\Verb|\fenceddivclass| --- that takes the class name as its argument and begins
+the corresponding environment (for example, \Verb|\begin{warning}|).  
+
+Inside this macro, we also define another helper command \Verb|\endfence|,
+which stores the corresponding \Verb|\end{warning}| (or any other environment
+name).  
+
+By redefining \Verb|\markdownRendererAttributeClassName| to point to
+\Verb|\fenceddivclass| inside the fenced div context, we make sure that each
+fenced div with a class name automatically opens the correct environment when
+encountered.  
+
+At the end of the fenced div, the macro
+\Verb|\markdownRendererFencedDivAttributeContextEnd| simply calls
+\Verb|\endfence| and ends the current group, thus properly closing the
+environment and restoring the original settings.
+
+
+\section{Full Source Code}
+
+Here is the complete \LaTeX{} code that demonstrates this approach:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+\documentclass[draft]{article}
+
+\usepackage[fencedDivs=true]{markdown}
+\usepackage{tcolorbox}
+
+\ExplSyntaxOn
+
+% the idea is to use fenced divs with classes to call custom environments with
+% the class as an environment name
+
+% define custom tcolorbox environments for warning and info
+\newtcolorbox{warning}{colback=red!5!white, colframe=red!75!black,fonttitle=\bfseries, title={Warning}}
+\newtcolorbox{info}{colback=blue!5!white, colframe=blue!75!black,fonttitle=\bfseries, title={info}}
+
+% this macro will be called with the class name as argument 
+% it will start the environment with that name
+\def\fenceddivclass#1{
+  \begin{#1}
+  % we also define \endfence to end the environment
+  \def\endfence{\end{#1}}
+}
+
+% set up the context for fenced divs
+\def\markdownRendererFencedDivAttributeContextBegin{
+  \begingroup
+  % redefine the macro that will be called with the class name to use our 
+  \let\markdownRendererAttributeClassName\fenceddivclass
+  % if there is no class name, we just define \endfence to do nothing
+  \def\endfence{}
+}
+% end the context by ending the environment and the group
+\def\markdownRendererFencedDivAttributeContextEnd{\endfence\endgroup}
+\ExplSyntaxOff
+
+\begin{document}
+
+\begin{markdown}
+
+::: warning
+hello
+:::
+
+::: info
+this is an info box
+:::
+
+
+\end{markdown}
+\end{document}
+\end{minted}
+
+Compiling this document will render the Markdown text with two nicely styled boxes --
+one red warning box and one blue info box:
+
+\begin{markdown}
+
+::: warning
+hello
+:::
+
+::: info
+this is an info box
+:::
+
+
+\end{markdown}
+
+
+\end{document}
