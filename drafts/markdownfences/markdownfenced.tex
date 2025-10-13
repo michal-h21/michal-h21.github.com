@@ -4,6 +4,7 @@
 \usepackage{tcolorbox}
 \usepackage{minted}
 \fvset{breaklines=true}
+% \setminted{breaklines, breakanywhere, breaksymbolleft=\tiny\ensuremath{\hookrightarrow}}
 \usepackage{hyperref}
 \usepackage{linebreaker}
 \usepackage{responsive}
@@ -37,6 +38,23 @@
 }
 % end the context by ending the environment and the group
 \def\markdownRendererFencedDivAttributeContextEnd{\endfence\endgroup}
+
+% \markdownSetup{
+%   renderers = {
+%     fencedDivAttributeContextBegin = {%
+%       \begingroup
+%       % redefine the macro that will be called with the class name to use our 
+%       \let\markdownRendererAttributeClassName\fenceddivclass
+%       % if there is no class name, we just define \endfence to do nothing
+%       \def\endfence{}
+%     },
+%     fencedDivAttributeContextEnd = {%
+%       \endfence\endgroup
+%     },
+%   },
+% }
+
+
 \ExplSyntaxOff
 
 \title{Markdown Fenced Divs with Tcolorbox}
@@ -45,15 +63,15 @@
 \begin{document}
 \maketitle
 
-\section*{Introduction}
+\section{Introduction}
 
 Recently, I came across a question on \href{https://tex.stackexchange.com/q/752194/2891}{TeX.SX} asking how to create Markdown-style boxes for warnings or informational notes.  
-The original poster wanted to use a custom Lua filter for Pandoc, but I decided to explore how the same idea could be implemented directly in \LaTeX{} using the \href{https://ctan.org/pkg/markdown?lang=en}{\texttt{markdown}} package. This package supports the \texttt{fencedDivs} feature, which makes such customization possible.  
+The original poster wanted to use a custom Lua filter for Pandoc, but I decided to explore how the same idea could be implemented directly in \LaTeX{} using the \href{https://ctan.org/pkg/markdown?lang=en}{\texttt{Markdown}} package. This package supports the \texttt{fenced divs} feature, which makes such customization possible.  
 
 The \texttt{fencedDivs} extension allows you to specify a class name right after three colons (for example, \texttt{::: warning}) to trigger a custom block.  
-I thought it would be interesting to connect these fenced divs to custom \texttt{tcolorbox} environments, so that writing a Markdown block like this:
+I thought it would be interesting to connect these fenced divs to custom \texttt{Tcolorbox} environments, so that writing a Markdown block like this:
 
-\begin{minted}{markdown}
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{markdown}
 ::: warning
 Some important message here.
 :::
@@ -65,11 +83,11 @@ would produce a nicely formatted box with a warning message in the final PDF, li
 Some important message here.
 \end{warning}
 
-Since the original question focused on a Pandoc workflow, I didn’t post my code there, but I thought it might be useful for others who work directly with the \texttt{markdown} package in \LaTeX{}. So I’m sharing it here.
+Since the original question focused on a Pandoc workflow, I didn’t post my code there, but I thought it might be useful for others who work directly with the \texttt{Markdown} package in \LaTeX{}. So I’m sharing it here.
 
-\section*{Code Example}
+\section{Code Example}
 
-The \texttt{markdown} package allows us to write Markdown syntax directly inside a \LaTeX{} document.  
+The \texttt{Markdown} package allows us to write Markdown syntax directly inside a \LaTeX{} document.  
 By default, it supports basic Markdown features, but it can also be extended with options that enable more advanced behavior. One such option is \mintinline[breaklines,breakanywhere]{latex}{fencedDivs}, which allows us to define custom blocks with specific classes.
 
 We can enable this feature by loading the package with:
@@ -78,7 +96,10 @@ We can enable this feature by loading the package with:
 \usepackage[fencedDivs=true]{markdown}
 \end{minted}
 
-Next, we can define custom environments using the \href{https://ctan.org/pkg/tcolorbox?lang=en}{tcolorbox} package. These environments will provide the styled boxes that correspond to fenced divs in Markdown:
+Next, we can define custom environments using the
+\href{https://ctan.org/pkg/tcolorbox?lang=en}{Tcolorbox} package. These
+environments will provide the styled boxes that correspond to fenced divs in
+Markdown:
 
 \begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
 \newtcolorbox{warning}{colback=red!5!white, colframe=red!75!black,fonttitle=\bfseries, title={Warning}}
@@ -98,16 +119,49 @@ They print their contents inside colored boxes labeled “Warning” and “Info
   This is an info box.
 \end{info}
 
-Now that we have the \texttt{tcolorbox} environments defined, we can configure the \texttt{markdown} package to use them whenever it encounters fenced divs with matching class names.  
-For each Markdown feature, the \texttt{markdown} package defines several macros that can be redefined to customize how the content is rendered.
+Now that we have the \texttt{Tcolorbox} environments defined, we can configure the \texttt{Markdown} package to use them whenever it encounters fenced divs with matching class names.  
 
-For fenced divs, we can redefine  
-\mintinline[breaklines,breakanywhere]{latex}{\markdownRendererFencedDivAttributeContextBegin} and  
-\mintinline[breaklines,breakanywhere]{latex}{\markdownRendererFencedDivAttributeContextEnd}  
-to control what happens at the start and end of a fenced div.
 
-The challenge is that we need to know the class name specified in the fenced div (for example, \texttt{warning} or \texttt{info}).  
-This class name is passed to a macro called \mintinline[breaklines,breakanywhere]{latex}{\markdownRendererAttributeClassName}, which we can locally redefine to start the appropriate environment:
+% For each Markdown feature, the \texttt{Markdown} package defines several macros that can be redefined to customize how the content is rendered.
+
+There are two main ways to redefine the behavior of the \texttt{Markdown} package.  
+One approach is to use the \verb|\markdownSetup| command, for example:
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
+\markdownSetup{
+  renderers = {
+    fencedDivAttributeContextBegin = {%
+      \par
+      \emph{(The beginning of a fenced div attribute context)}
+      \par
+    },
+    fencedDivAttributeContextEnd = {%
+      \par
+      \emph{(The end of a fenced div attribute context)}
+      \par
+    },
+  },
+}
+\end{minted}
+
+
+However, in our case we only want to modify how the \texttt{class} attribute is
+processed \emph{inside} a fenced div.  For that reason, it is simpler to
+directly redefine the macros that are called at the beginning and at the end of
+a fenced div context.  
+The challenge is that we also need to know the class name specified in the
+fenced div (for example, \texttt{warning} or \texttt{info}).  This class name
+is passed to a macro called
+\mintinline[breaklines,
+breakanywhere]{latex}{\markdownRendererAttributeClassName}, which we can
+locally redefine to start the appropriate environment.  To make this work, we
+define a custom macro -- in this case, \mintinline[breaklines,
+breakanywhere]{latex}{\fenceddivclass} -- that takes the class name as its
+argument and begins the corresponding environment (for example,
+\mintinline[breaklines,breakanywhere]{latex}{\begin{warning}}).  
+Inside this macro, we also define another helper command
+\mintinline[breaklines, breakanywhere]{latex}{\endfence}, which stores the
+matching \mintinline[breaklines, breakanywhere]{latex}{\end{warning}} (or any
+other environment name).  The relevant code looks like this:
 
 \begin{minted}[fontsize=\small,breaklines,frame=lines]{latex}
 % this macro will be called with the class name as argument 
@@ -130,15 +184,14 @@ This class name is passed to a macro called \mintinline[breaklines,breakanywhere
 \def\markdownRendererFencedDivAttributeContextEnd{\endfence\endgroup}
 \end{minted}
 
-To achieve this, we define a custom macro — in this case, \mintinline[breaklines,breakanywhere]{latex}{\fenceddivclass} — that takes the class name as its argument and begins the corresponding environment (for example, \mintinline[breaklines,breakanywhere]{latex}{\begin{warning}}).  
 
-Inside this macro, we also define another helper command \mintinline[breaklines,breakanywhere]{latex}{\endfence}, which stores the corresponding \mintinline[breaklines,breakanywhere]{latex}{\end{warning}} (or any other environment name).  
+By redefining \mintinline[breaklines,
+breakanywhere]{latex}{\markdownRendererAttributeClassName} to point to
+\mintinline[breaklines,breakanywhere]{latex}{\fenceddivclass} inside the fenced
+div context, each fenced div with a class name automatically opens and closes
+the correct environment when encountered.
 
-By redefining \mintinline[breaklines,breakanywhere]{latex}{\markdownRendererAttributeClassName} to point to \mintinline[breaklines,breakanywhere]{latex}{\fenceddivclass} inside the fenced div context, we ensure that each fenced div with a class name automatically opens the correct environment when encountered.  
-
-At the end of the fenced div, the macro \mintinline[breaklines,breakanywhere]{latex}{\markdownRendererFencedDivAttributeContextEnd} simply calls \mintinline[breaklines,breakanywhere]{latex}{\endfence} and ends the current group, properly closing the environment and restoring the original settings.
-
-\section*{Full Source Code}
+\section{Full Source Code}
 
 Here is the complete \LaTeX{} code that demonstrates this approach:
 
@@ -193,8 +246,22 @@ this is an info box
 \end{document}
 \end{minted}
 
-Compiling this document will render the Markdown content with two nicely styled boxes —  
-one red warning box and one blue info box:
+Compiling this document will render the Markdown content with two nicely styled boxes --
+a red warning box and a blue info box.  
+You can compile the code to PDF using Lua\LaTeX{} to see the result:
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{bash}
+$ lualatex markdownfenced.tex
+\end{minted}
+
+If you want to generate an HTML document instead, you can use \href{https://tug.org/tex4ht/}{\TeX4ht},
+as it supports both the \texttt{Tcolorbox} and the \texttt{Markdown} packages.
+
+\begin{minted}[fontsize=\small,breaklines,frame=lines]{bash}
+$ make4ht -l markdownfenced.tex
+\end{minted}
+
+This will produce a file named \texttt{markdownfenced.html} with the following rendered content:
 
 \begin{markdown}
 
@@ -207,5 +274,13 @@ this is an info box
 :::
 
 \end{markdown}
+
+\section{Conclusion}
+
+
+I hope some of you find this approach useful for integrating Markdown-style
+fenced divs with custom \texttt{Tcolorbox} environments in your \LaTeX{}
+documents, or at least as an interesting exercise in customizing the
+\texttt{Markdown} package to produce specific output.
 
 \end{document}
